@@ -1,0 +1,1910 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>lvs - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#lvs_keepalived" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                lvs
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        lvs
+      </label>
+    
+    <a href="./" title="lvs" class="md-nav__link md-nav__link--active">
+      lvs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lvs_keepalived" class="md-nav__link">
+    lvs_keepalived
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    模式
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lvs_keepalived" class="md-nav__link">
+    lvs_keepalived
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    模式
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>lvs</h1>
+                
+                <h2 id="lvs_keepalived">lvs_keepalived</h2>
+<div class="codehilite"><pre><span></span><span class="nv">LAN客户端判定哪个路由器应该为其到达目标主机的下一跳网关的方式有动态及静态决策两种方式</span><span class="s s-Atom">，其中，觉的动态路由发现方式有如下几种：</span>
+<span class="mi">1</span><span class="s s-Atom">、</span><span class="nv">Proxy</span> <span class="nv">ARP</span> <span class="s s-Atom">——</span> <span class="s s-Atom">客户端使用ARP协议获取其想要到达的目标，而后，由某路由以其MAC地址响应此ARP请求；</span>
+<span class="mi">2</span><span class="s s-Atom">、</span><span class="nv">Routing</span> <span class="nv">Protocol</span> <span class="s s-Atom">——</span> <span class="nf">客户端监听动态路由更新</span><span class="p">(</span><span class="s s-Atom">如通过RIP或OSPF协议</span><span class="p">)</span><span class="s s-Atom">并以之重建自己的路由表；</span>
+<span class="mi">3</span><span class="s s-Atom">、</span><span class="nv">ICMP</span> <span class="nv">IRDP</span> <span class="p">(</span><span class="nv">Router</span> <span class="nv">Discovery</span> <span class="nv">Protocol</span><span class="p">)</span> <span class="s s-Atom">客户端</span> <span class="s s-Atom">——</span> <span class="s s-Atom">客户端主机运行一个ICMP路由发现客户端程序；</span>
+
+<span class="s s-Atom">动态路由发现协议的不足之处在于它会导致在客户端引起一定的配置和处理方面的开销，并且，如果路由器故障，切换至其它路由器的过程</span>
+<span class="s s-Atom">会比较慢。解决此类问题的一个方案是为客户端静态配置默认路由设备，这大大简化了客户端的处理过程，但也会带来单点故障类的问题。</span>
+<span class="s s-Atom">默认网关故障时，LAN客户端仅能实现本地通信。</span>
+
+<span class="nv">VRRP可以通过在一组路由器</span><span class="p">(</span><span class="s s-Atom">一个VRRP组</span><span class="p">)</span><span class="nf">之间共享一个虚拟IP</span><span class="p">(</span><span class="nv">VIP</span><span class="p">)</span><span class="s s-Atom">解决静态配置的问题，此时仅需要客户端以VIP作为其默认网关即可。</span>
+
+<span class="s s-Atom">图1显示了一个基本的VLAN拓扑，其中，Router</span> <span class="nv">A</span><span class="s s-Atom">、</span><span class="nv">B</span><span class="s s-Atom">、</span><span class="nv">C共同组成一个VRRP组</span><span class="s s-Atom">，其VIP为10</span><span class="mf">.0.0.1</span><span class="s s-Atom">，配置在路由器A的物理接口上，因此A为</span>
+<span class="s s-Atom">master路由器，B和C为backup路由器。</span><span class="nv">VRRP组中</span><span class="nf">，master</span><span class="p">(</span><span class="s s-Atom">路由器A</span><span class="p">)</span><span class="s s-Atom">负责负责转发发往VIP地址的报文，客户端1、</span><span class="mi">2</span><span class="s s-Atom">、</span><span class="mi">3</span><span class="s s-Atom">都以此VIP作为其</span>
+<span class="s s-Atom">默认网关。一旦master故障，backup路由器B和C中具有最高优先级的路由器将成为master并接管VIP地址，而当原来的master路由器A重新</span>
+<span class="s s-Atom">上线时，其将重新成为master路由器。</span>
+
+<span class="nv">VRRP是一个</span><span class="s s-Atom">“选举”协议，它能够动态地将一个虚拟路由器的责任指定至同一个VRRP组中的其它路由器上，从而消除了静态路由配置的单点故障。</span>
+
+
+
+<span class="nv">VRRP术语</span><span class="s s-Atom">：</span>
+
+<span class="nv">VRRP虚拟路由</span><span class="p">(</span><span class="nv">VRRP</span> <span class="s s-Atom">router</span><span class="p">)</span><span class="s s-Atom">：</span>
+
+
+
+<span class="nv">VRRP的优势</span><span class="s s-Atom">：</span>
+
+<span class="s s-Atom">冗余：可以使用多个路由器设备作为LAN客户端的默认网关，大大降低了默认网关成为单点故障的可能性；</span>
+<span class="s s-Atom">负载共享：允许来自LAN客户端的流量由多个路由器设备所共享；</span>
+<span class="s s-Atom">多VRRP组：在一个路由器物理接口上可配置多达255个VRRP组；</span>
+<span class="s s-Atom">多IP地址：基于接口别名在同一个物理接口上配置多个IP地址，从而支持在同一个物理接口上接入多个子网；</span>
+<span class="s s-Atom">抢占：在master故障时允许优先级更高的backup成为master；</span>
+<span class="s s-Atom">通告协议：使用IANA所指定的组播地址224</span><span class="mf">.0.0.18</span><span class="s s-Atom">进行VRRP通告；</span>
+<span class="nv">VRRP追踪</span><span class="s s-Atom">：基于接口状态来改变其VRRP优先级来确定最佳的VRRP路由器成为master；</span>
+
+
+
+
+
+<span class="s s-Atom">配置keepalived为实现haproxy高可用的配置文件示例：</span>
+
+<span class="p">!</span> <span class="nv">Configuration</span> <span class="nv">File</span> <span class="s s-Atom">for</span> <span class="s s-Atom">keepalived</span>
+
+<span class="s s-Atom">global_defs</span> <span class="p">{</span>  
+   <span class="s s-Atom">notification_email</span> <span class="p">{</span>  
+         <span class="s s-Atom">linuxedu@foxmail</span><span class="p">.</span><span class="s s-Atom">com</span>
+         <span class="s s-Atom">mageedu@</span><span class="mf">126.</span><span class="s s-Atom">com</span>  
+   <span class="p">}</span>  
+   <span class="s s-Atom">notification_email_from</span> <span class="s s-Atom">kanotify@magedu</span><span class="p">.</span><span class="s s-Atom">com</span> 
+   <span class="s s-Atom">smtp_connect_timeout</span> <span class="mi">3</span>  
+   <span class="s s-Atom">smtp_server</span> <span class="mf">127.0.0.1</span>  
+   <span class="s s-Atom">router_id</span> <span class="nv">LVS_DEVEL</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_script</span> <span class="s s-Atom">chk_haproxy</span> <span class="p">{</span>  
+    <span class="s s-Atom">script</span> <span class="s2">&quot;killall -0 haproxy&quot;</span>  
+    <span class="s s-Atom">interval</span> <span class="mi">1</span>  
+    <span class="s s-Atom">weight</span> <span class="mi">2</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_script</span> <span class="s s-Atom">chk_mantaince_down</span> <span class="p">{</span>
+   <span class="s s-Atom">script</span> <span class="s2">&quot;[[ -f /etc/keepalived/down ]] &amp;&amp; exit 1 || exit 0&quot;</span>
+   <span class="s s-Atom">interval</span> <span class="mi">1</span>
+   <span class="s s-Atom">weight</span> <span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_instance</span> <span class="nv">VI_1</span> <span class="p">{</span>  
+    <span class="s s-Atom">interface</span> <span class="s s-Atom">eth0</span>  
+    <span class="s s-Atom">state</span> <span class="nv">MASTER</span>  <span class="s s-Atom">#</span> <span class="nv">BACKUP</span> <span class="s s-Atom">for</span> <span class="s s-Atom">slave</span> <span class="s s-Atom">routers</span>
+    <span class="s s-Atom">priority</span> <span class="mi">101</span>  <span class="s s-Atom">#</span> <span class="mi">100</span> <span class="s s-Atom">for</span> <span class="nv">BACKUP</span>
+    <span class="s s-Atom">virtual_router_id</span> <span class="mi">51</span> 
+    <span class="s s-Atom">garp_master_delay</span> <span class="mi">1</span>
+
+    <span class="s s-Atom">authentication</span> <span class="p">{</span>  
+        <span class="s s-Atom">auth_type</span> <span class="nv">PASS</span>  
+        <span class="s s-Atom">auth_pass</span> <span class="s s-Atom">password</span>  
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_interface</span> <span class="p">{</span>  
+       <span class="s s-Atom">eth0</span>    
+    <span class="p">}</span>  
+    <span class="s s-Atom">virtual_ipaddress</span> <span class="p">{</span>  
+        <span class="mf">172.16.100.1</span><span class="o">/</span><span class="mi">16</span> <span class="s s-Atom">dev</span> <span class="s s-Atom">eth0</span> <span class="s s-Atom">label</span> <span class="s s-Atom">eth0:</span><span class="mi">0</span> 
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_script</span> <span class="p">{</span>  
+        <span class="s s-Atom">chk_haproxy</span>  
+        <span class="s s-Atom">chk_mantaince_down</span>
+    <span class="p">}</span>
+
+
+    <span class="s s-Atom">notify_master</span> <span class="s2">&quot;/etc/keepalived/notify.sh master&quot;</span>  
+    <span class="s s-Atom">notify_backup</span> <span class="s2">&quot;/etc/keepalived/notify.sh backup&quot;</span>  
+    <span class="s s-Atom">notify_fault</span> <span class="s2">&quot;/etc/keepalived/notify.sh fault&quot;</span>  
+<span class="p">}</span>
+
+
+<span class="s s-Atom">注意：</span>
+<span class="mi">1</span><span class="s s-Atom">、上面的state为当前节点的起始状态，通常在master</span><span class="o">/</span><span class="s s-Atom">slave的双节点模型中，其一个默认为MASTER，而别一个默认为BACKUP。</span>
+<span class="mi">2</span><span class="s s-Atom">、priority为当关节点在当前虚拟路由器中的优先级，master的优先级应该大于slave的；</span>
+
+
+<span class="s s-Atom">下面是一个notify</span><span class="p">.</span><span class="s s-Atom">sh脚本的简单示例：</span>
+<span class="s s-Atom">#</span><span class="p">!</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">bash</span>
+<span class="s s-Atom">#</span> <span class="nv">Author</span><span class="s s-Atom">:</span> <span class="nv">MageEdu</span> <span class="o">&lt;</span><span class="s s-Atom">linuxedu@foxmail</span><span class="p">.</span><span class="s s-Atom">com</span><span class="o">&gt;</span>
+<span class="s s-Atom">#</span> <span class="nn">description</span><span class="p">:</span> <span class="nv">An</span> <span class="s s-Atom">example</span> <span class="s s-Atom">of</span> <span class="s s-Atom">notify</span> <span class="s s-Atom">script</span>
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">vip</span><span class="o">=</span><span class="mf">172.16.100.1</span>
+<span class="s s-Atom">contact=&#39;root@localhost&#39;</span>
+
+<span class="nv">Notify</span><span class="p">()</span> <span class="p">{</span>
+    <span class="s s-Atom">mailsubject=</span><span class="s2">&quot;`hostname` to be $1: $vip floating&quot;</span>
+    <span class="s s-Atom">mailbody=</span><span class="s2">&quot;`date &#39;+%F %H:%M:%S&#39;`: vrrp transition, `hostname` changed to be $1&quot;</span>
+    <span class="s s-Atom">echo</span> <span class="err">$</span><span class="s s-Atom">mailbody</span> <span class="p">|</span> <span class="s s-Atom">mail</span> <span class="o">-</span><span class="s s-Atom">s</span> <span class="s2">&quot;$mailsubject&quot;</span> <span class="err">$</span><span class="s s-Atom">contact</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">case</span> <span class="s2">&quot;$1&quot;</span> <span class="s s-Atom">in</span>
+    <span class="s s-Atom">master</span><span class="p">)</span>
+        <span class="s s-Atom">notify</span> <span class="s s-Atom">master</span>
+        <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">haproxy</span> <span class="s s-Atom">start</span>
+        <span class="s s-Atom">exit</span> <span class="mi">0</span>
+    <span class="p">;;</span>
+    <span class="s s-Atom">backup</span><span class="p">)</span>
+        <span class="s s-Atom">notify</span> <span class="s s-Atom">backup</span>
+        <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">haproxy</span> <span class="s s-Atom">restart</span>
+        <span class="s s-Atom">exit</span> <span class="mi">0</span>
+    <span class="p">;;</span>
+    <span class="s s-Atom">fault</span><span class="p">)</span>
+        <span class="s s-Atom">notify</span> <span class="s s-Atom">fault</span>
+        <span class="s s-Atom">exit</span> <span class="mi">0</span>
+    <span class="p">;;</span>
+    <span class="s s-Atom">*</span><span class="p">)</span>
+        <span class="s s-Atom">echo</span> <span class="s s-Atom">&#39;Usage: `basename $0` {master|backup|fault}&#39;</span>
+        <span class="s s-Atom">exit</span> <span class="mi">1</span>
+    <span class="p">;;</span>
+<span class="s s-Atom">esac</span>
+
+
+
+
+<span class="s s-Atom">配置keepalived为实现haproxy高可用的双主模型配置文件示例：</span>
+
+<span class="s s-Atom">说明：其基本实现思想为创建两个虚拟路由器，并以两个节点互为主从。</span>
+
+<span class="p">!</span> <span class="nv">Configuration</span> <span class="nv">File</span> <span class="s s-Atom">for</span> <span class="s s-Atom">keepalived</span>
+
+<span class="s s-Atom">global_defs</span> <span class="p">{</span>  
+   <span class="s s-Atom">notification_email</span> <span class="p">{</span>  
+         <span class="s s-Atom">linuxedu@foxmail</span><span class="p">.</span><span class="s s-Atom">com</span>
+         <span class="s s-Atom">mageedu@</span><span class="mf">126.</span><span class="s s-Atom">com</span>  
+   <span class="p">}</span>  
+   <span class="s s-Atom">notification_email_from</span> <span class="s s-Atom">kanotify@magedu</span><span class="p">.</span><span class="s s-Atom">com</span> 
+   <span class="s s-Atom">smtp_connect_timeout</span> <span class="mi">3</span>  
+   <span class="s s-Atom">smtp_server</span> <span class="mf">127.0.0.1</span>  
+   <span class="s s-Atom">router_id</span> <span class="nv">LVS_DEVEL</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_script</span> <span class="s s-Atom">chk_haproxy</span> <span class="p">{</span>  
+    <span class="s s-Atom">script</span> <span class="s2">&quot;killall -0 haproxy&quot;</span>  
+    <span class="s s-Atom">interval</span> <span class="mi">1</span>  
+    <span class="s s-Atom">weight</span> <span class="mi">2</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_script</span> <span class="s s-Atom">chk_mantaince_down</span> <span class="p">{</span>
+   <span class="s s-Atom">script</span> <span class="s2">&quot;[[ -f /etc/keepalived/down ]] &amp;&amp; exit 1 || exit 0&quot;</span>
+   <span class="s s-Atom">interval</span> <span class="mi">1</span>
+   <span class="s s-Atom">weight</span> <span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_instance</span> <span class="nv">VI_1</span> <span class="p">{</span>  
+    <span class="s s-Atom">interface</span> <span class="s s-Atom">eth0</span>  
+    <span class="s s-Atom">state</span> <span class="nv">MASTER</span>  <span class="s s-Atom">#</span> <span class="nv">BACKUP</span> <span class="s s-Atom">for</span> <span class="s s-Atom">slave</span> <span class="s s-Atom">routers</span>
+    <span class="s s-Atom">priority</span> <span class="mi">101</span>  <span class="s s-Atom">#</span> <span class="mi">100</span> <span class="s s-Atom">for</span> <span class="nv">BACKUP</span>
+    <span class="s s-Atom">virtual_router_id</span> <span class="mi">51</span> 
+    <span class="s s-Atom">garp_master_delay</span> <span class="mi">1</span>
+
+    <span class="s s-Atom">authentication</span> <span class="p">{</span>  
+        <span class="s s-Atom">auth_type</span> <span class="nv">PASS</span>  
+        <span class="s s-Atom">auth_pass</span> <span class="s s-Atom">password</span>  
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_interface</span> <span class="p">{</span>  
+       <span class="s s-Atom">eth0</span>    
+    <span class="p">}</span>  
+    <span class="s s-Atom">virtual_ipaddress</span> <span class="p">{</span>  
+        <span class="mf">172.16.100.1</span><span class="o">/</span><span class="mi">16</span> <span class="s s-Atom">dev</span> <span class="s s-Atom">eth0</span> <span class="s s-Atom">label</span> <span class="s s-Atom">eth0:</span><span class="mi">0</span> 
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_script</span> <span class="p">{</span>  
+        <span class="s s-Atom">chk_haproxy</span>  
+        <span class="s s-Atom">chk_mantaince_down</span>
+    <span class="p">}</span>
+
+
+    <span class="s s-Atom">notify_master</span> <span class="s2">&quot;/etc/keepalived/notify.sh master&quot;</span>  
+    <span class="s s-Atom">notify_backup</span> <span class="s2">&quot;/etc/keepalived/notify.sh backup&quot;</span>  
+    <span class="s s-Atom">notify_fault</span> <span class="s2">&quot;/etc/keepalived/notify.sh fault&quot;</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_instance</span> <span class="nv">VI_2</span> <span class="p">{</span>  
+    <span class="s s-Atom">interface</span> <span class="s s-Atom">eth0</span>  
+    <span class="s s-Atom">state</span> <span class="nv">BACKUP</span>  <span class="s s-Atom">#</span> <span class="nv">BACKUP</span> <span class="s s-Atom">for</span> <span class="s s-Atom">slave</span> <span class="s s-Atom">routers</span>
+    <span class="s s-Atom">priority</span> <span class="mi">100</span>  <span class="s s-Atom">#</span> <span class="mi">100</span> <span class="s s-Atom">for</span> <span class="nv">BACKUP</span>
+    <span class="s s-Atom">virtual_router_id</span> <span class="mi">52</span>
+    <span class="s s-Atom">garp_master_delay</span> <span class="mi">1</span>
+
+    <span class="s s-Atom">authentication</span> <span class="p">{</span>  
+        <span class="s s-Atom">auth_type</span> <span class="nv">PASS</span>  
+        <span class="s s-Atom">auth_pass</span> <span class="s s-Atom">password</span>  
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_interface</span> <span class="p">{</span>  
+       <span class="s s-Atom">eth0</span>    
+    <span class="p">}</span>  
+    <span class="s s-Atom">virtual_ipaddress</span> <span class="p">{</span>  
+        <span class="mf">172.16.100.2</span><span class="o">/</span><span class="mi">16</span> <span class="s s-Atom">dev</span> <span class="s s-Atom">eth0</span> <span class="s s-Atom">label</span> <span class="s s-Atom">eth0:</span><span class="mi">1</span>
+    <span class="p">}</span>  
+    <span class="s s-Atom">track_script</span> <span class="p">{</span>  
+        <span class="s s-Atom">chk_haproxy</span>  
+        <span class="s s-Atom">chk_mantaince_down</span>
+    <span class="p">}</span>    
+<span class="p">}</span>
+
+
+<span class="s s-Atom">说明：</span>
+<span class="mi">1</span><span class="s s-Atom">、对于VI_1和VI_2来说，两个节点要互为主从关系；</span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="nv">LVS</span> <span class="o">+</span> <span class="s s-Atom">keepalived的实现：</span>
+
+<span class="p">!</span> <span class="nv">Configuration</span> <span class="nv">File</span> <span class="s s-Atom">for</span> <span class="s s-Atom">keepalived</span>
+
+<span class="s s-Atom">global_defs</span> <span class="p">{</span>  
+   <span class="s s-Atom">notification_email</span> <span class="p">{</span>  
+         <span class="s s-Atom">linuxedu@foxmail</span><span class="p">.</span><span class="s s-Atom">com</span>
+         <span class="s s-Atom">mageedu@</span><span class="mf">126.</span><span class="s s-Atom">com</span>  
+   <span class="p">}</span>  
+   <span class="s s-Atom">notification_email_from</span> <span class="s s-Atom">kanotify@magedu</span><span class="p">.</span><span class="s s-Atom">com</span> 
+   <span class="s s-Atom">smtp_connect_timeout</span> <span class="mi">3</span>  
+   <span class="s s-Atom">smtp_server</span> <span class="mf">127.0.0.1</span>  
+   <span class="s s-Atom">router_id</span> <span class="nv">LVS_DEVEL</span>  
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_script</span> <span class="s s-Atom">chk_schedown</span> <span class="p">{</span>
+   <span class="s s-Atom">script</span> <span class="s2">&quot;[[ -f /etc/keepalived/down ]] &amp;&amp; exit 1 || exit 0&quot;</span>
+   <span class="s s-Atom">interval</span> <span class="mi">2</span>
+   <span class="s s-Atom">weight</span> <span class="o">-</span><span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">vrrp_instance</span> <span class="nv">VI_1</span> <span class="p">{</span>  
+    <span class="s s-Atom">interface</span> <span class="s s-Atom">eth0</span>  
+    <span class="s s-Atom">state</span> <span class="nv">MASTER</span>  
+    <span class="s s-Atom">priority</span> <span class="mi">101</span>
+    <span class="s s-Atom">virtual_router_id</span> <span class="mi">51</span> 
+    <span class="s s-Atom">garp_master_delay</span> <span class="mi">1</span>
+
+    <span class="s s-Atom">authentication</span> <span class="p">{</span>  
+        <span class="s s-Atom">auth_type</span> <span class="nv">PASS</span>  
+        <span class="s s-Atom">auth_pass</span> <span class="s s-Atom">password</span>  
+    <span class="p">}</span>
+
+    <span class="s s-Atom">track_interface</span> <span class="p">{</span>  
+       <span class="s s-Atom">eth0</span>    
+    <span class="p">}</span>
+
+    <span class="s s-Atom">virtual_ipaddress</span> <span class="p">{</span>  
+        <span class="mf">172.16.100.1</span><span class="o">/</span><span class="mi">16</span> <span class="s s-Atom">dev</span> <span class="s s-Atom">eth0</span> <span class="s s-Atom">label</span> <span class="s s-Atom">eth0:</span><span class="mi">0</span>
+    <span class="p">}</span>
+
+    <span class="s s-Atom">track_script</span> <span class="p">{</span>  
+        <span class="s s-Atom">chk_schedown</span>
+    <span class="p">}</span>    
+<span class="p">}</span>
+
+
+<span class="s s-Atom">virtual_server</span> <span class="mf">172.16.100.1</span> <span class="mi">80</span> <span class="p">{</span>
+    <span class="s s-Atom">delay_loop</span> <span class="mi">6</span>
+    <span class="s s-Atom">lb_algo</span> <span class="s s-Atom">rr</span> 
+    <span class="s s-Atom">lb_kind</span> <span class="nv">DR</span>
+    <span class="s s-Atom">persistence_timeout</span> <span class="mi">50</span>
+    <span class="s s-Atom">protocol</span> <span class="nv">TCP</span>
+
+<span class="s s-Atom">#</span>    <span class="s s-Atom">sorry_server</span> <span class="mf">192.168.200.200</span> <span class="mi">1358</span>
+
+    <span class="s s-Atom">real_server</span> <span class="mf">172.16.100.11</span> <span class="mi">80</span> <span class="p">{</span>
+        <span class="s s-Atom">weight</span> <span class="mi">1</span>
+        <span class="nv">HTTP_GET</span> <span class="p">{</span>
+            <span class="s s-Atom">url</span> <span class="p">{</span> 
+              <span class="s s-Atom">path</span> <span class="o">/</span>
+              <span class="s s-Atom">status_code</span> <span class="mi">200</span>
+            <span class="p">}</span>
+            <span class="s s-Atom">connect_timeout</span> <span class="mi">3</span>
+            <span class="s s-Atom">nb_get_retry</span> <span class="mi">3</span>
+            <span class="s s-Atom">delay_before_retry</span> <span class="mi">3</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="s s-Atom">real_server</span> <span class="mf">172.16.100.12</span> <span class="mi">80</span> <span class="p">{</span>
+        <span class="s s-Atom">weight</span> <span class="mi">1</span>
+        <span class="nv">HTTP_GET</span> <span class="p">{</span>
+            <span class="s s-Atom">url</span> <span class="p">{</span> 
+              <span class="s s-Atom">path</span> <span class="o">/</span>
+              <span class="s s-Atom">status_code</span> <span class="mi">200</span>
+            <span class="p">}</span>
+            <span class="s s-Atom">connect_timeout</span> <span class="mi">3</span>
+            <span class="s s-Atom">nb_get_retry</span> <span class="mi">3</span>
+            <span class="s s-Atom">delay_before_retry</span> <span class="mi">3</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="s s-Atom">如果要使用TCP_CHECK检测各realserver的健康状态，那么，上面关于realserver部分的定义也可以替换为如下内容：</span>
+<span class="s s-Atom">virtual_server</span> <span class="mf">172.16.100.1</span> <span class="mi">80</span> <span class="p">{</span>
+    <span class="s s-Atom">delay_loop</span> <span class="mi">6</span>
+    <span class="s s-Atom">lb_algo</span> <span class="s s-Atom">rr</span> 
+    <span class="s s-Atom">lb_kind</span> <span class="nv">DR</span>
+    <span class="s s-Atom">persistence_timeout</span> <span class="mi">300</span>
+    <span class="s s-Atom">protocol</span> <span class="nv">TCP</span>
+
+    <span class="s s-Atom">sorry_server</span> <span class="mf">127.0.0.1</span> <span class="mi">80</span>
+
+    <span class="s s-Atom">real_server</span> <span class="mf">172.16.100.11</span> <span class="mi">80</span> <span class="p">{</span>
+        <span class="s s-Atom">weight</span> <span class="mi">1</span>
+        <span class="nv">TCP_CHECK</span> <span class="p">{</span>
+            <span class="s s-Atom">tcp_port</span> <span class="mi">80</span>
+            <span class="s s-Atom">connect_timeout</span> <span class="mi">3</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="s s-Atom">real_server</span> <span class="mf">172.16.100.12</span> <span class="mi">80</span> <span class="p">{</span>
+        <span class="s s-Atom">weight</span> <span class="mi">1</span>
+        <span class="nv">TCP_CHECK</span> <span class="p">{</span>
+            <span class="s s-Atom">connect_port</span> <span class="mi">80</span>
+            <span class="s s-Atom">connect_timeout</span> <span class="mi">3</span>
+          <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">说明：其中的sorry_server是用于定义所有realserver均出现故障时所用的服务器。</span>
+
+
+
+
+
+
+
+
+
+
+<span class="s s-Atom">keepalived通知脚本进阶示例：</span>
+
+<span class="s s-Atom">下面的脚本可以接受选项，其中：</span>
+<span class="o">-</span><span class="s s-Atom">s</span><span class="p">,</span> <span class="s s-Atom">--service</span> <span class="nv">SERVICE</span><span class="p">,...</span><span class="s s-Atom">：指定服务脚本名称，当状态切换时可自动启动、重启或关闭此服务；</span>
+<span class="o">-</span><span class="s s-Atom">a</span><span class="p">,</span> <span class="s s-Atom">--address</span> <span class="nv">VIP</span><span class="s s-Atom">:</span> <span class="s s-Atom">指定相关虚拟路由器的VIP地址；</span>
+<span class="o">-</span><span class="s s-Atom">m</span><span class="p">,</span> <span class="s s-Atom">--mode</span> <span class="p">{</span><span class="s s-Atom">mm</span><span class="p">|</span><span class="s s-Atom">mb</span><span class="p">}</span><span class="s s-Atom">：指定虚拟路由的模型，mm表示主主，mb表示主备；它们表示相对于同一种服务而方，其VIP的工作类型；</span>
+<span class="o">-</span><span class="s s-Atom">n</span><span class="p">,</span> <span class="s s-Atom">--notify</span> <span class="p">{</span><span class="s s-Atom">master</span><span class="p">|</span><span class="s s-Atom">backup</span><span class="p">|</span><span class="s s-Atom">fault</span><span class="p">}</span><span class="s s-Atom">：指定通知的类型，即vrrp角色切换的目标角色；</span>
+<span class="o">-</span><span class="s s-Atom">h</span><span class="p">,</span> <span class="s s-Atom">--help：获取脚本的使用帮助；</span>
+
+<span class="s s-Atom">#</span><span class="p">!</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">bash</span>
+<span class="s s-Atom">#</span> <span class="nv">Author</span><span class="s s-Atom">:</span> <span class="nv">MageEdu</span> <span class="o">&lt;</span><span class="s s-Atom">linuxedu@foxmail</span><span class="p">.</span><span class="s s-Atom">com</span><span class="o">&gt;</span>
+<span class="s s-Atom">#</span> <span class="nn">description</span><span class="p">:</span> <span class="nv">An</span> <span class="s s-Atom">example</span> <span class="s s-Atom">of</span> <span class="s s-Atom">notify</span> <span class="s s-Atom">script</span>
+<span class="s s-Atom">#</span> <span class="nv">Usage</span><span class="s s-Atom">:</span> <span class="s s-Atom">notify</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="o">-</span><span class="s s-Atom">m</span><span class="p">|</span><span class="s s-Atom">--mode</span> <span class="p">{</span><span class="s s-Atom">mm</span><span class="p">|</span><span class="s s-Atom">mb</span><span class="p">}</span> <span class="o">-</span><span class="s s-Atom">s</span><span class="p">|</span><span class="s s-Atom">--service</span> <span class="nv">SERVICE1</span><span class="p">,...</span> <span class="o">-</span><span class="s s-Atom">a</span><span class="p">|</span><span class="s s-Atom">--address</span> <span class="nv">VIP</span>  <span class="o">-</span><span class="s s-Atom">n</span><span class="p">|</span><span class="s s-Atom">--notify</span> <span class="p">{</span><span class="s s-Atom">master</span><span class="p">|</span><span class="s s-Atom">backup</span><span class="p">|</span>
+<span class="s s-Atom">falut</span><span class="p">}</span> <span class="o">-</span><span class="s s-Atom">h</span><span class="p">|</span><span class="s s-Atom">--help</span>
+
+<span class="s s-Atom">#contact=&#39;linuxedu@foxmail.com&#39;</span>
+<span class="s s-Atom">helpflag</span><span class="o">=</span><span class="mi">0</span>
+<span class="s s-Atom">serviceflag</span><span class="o">=</span><span class="mi">0</span>
+<span class="s s-Atom">modeflag</span><span class="o">=</span><span class="mi">0</span>
+<span class="s s-Atom">addressflag</span><span class="o">=</span><span class="mi">0</span>
+<span class="s s-Atom">notifyflag</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="s s-Atom">contact=&#39;root@localhost&#39;</span>
+
+<span class="nv">Usage</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s s-Atom">echo</span> <span class="s2">&quot;Usage: notify.sh [-m|--mode {mm|mb}] [-s|--service SERVICE1,...] &lt;-a|--address VIP&gt;  &lt;-n|--notify {master|</span>
+<span class="s2">  backup|falut}&gt;&quot;</span> 
+  <span class="s s-Atom">echo</span> <span class="s2">&quot;Usage: notify.sh -h|--help&quot;</span>
+<span class="p">}</span>
+
+<span class="nv">ParseOptions</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s s-Atom">local</span> <span class="nv">I</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+  <span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="o">-</span><span class="s s-Atom">gt</span> <span class="mi">0</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+    <span class="s s-Atom">while</span> <span class="p">[</span> <span class="err">$</span><span class="nv">I</span> <span class="o">-</span><span class="s s-Atom">le</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="p">];</span> <span class="s s-Atom">do</span>
+      <span class="s s-Atom">case</span> <span class="err">$</span><span class="mi">1</span> <span class="s s-Atom">in</span>
+      <span class="o">-</span><span class="s s-Atom">s</span><span class="p">|</span><span class="s s-Atom">--service</span><span class="p">)</span>
+        <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="o">-</span><span class="s s-Atom">lt</span> <span class="mi">2</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">return</span> <span class="mi">3</span>
+         <span class="s s-Atom">serviceflag</span><span class="o">=</span><span class="mi">1</span>
+         <span class="s s-Atom">services=</span><span class="p">(</span><span class="err">`</span><span class="s s-Atom">echo</span> <span class="err">$</span><span class="mi">2</span><span class="p">|</span><span class="s s-Atom">awk</span> <span class="o">-</span><span class="nv">F</span><span class="s2">&quot;,&quot;</span> <span class="s s-Atom">&#39;{for(i=1;i&lt;=NF;i++) print $i}&#39;</span><span class="err">`</span><span class="p">)</span>
+        <span class="s s-Atom">shift</span> <span class="mi">2</span> <span class="p">;;</span>
+      <span class="o">-</span><span class="s s-Atom">h</span><span class="p">|</span><span class="s s-Atom">--help</span><span class="p">)</span>
+         <span class="s s-Atom">helpflag</span><span class="o">=</span><span class="mi">1</span>
+        <span class="s s-Atom">return</span> <span class="mi">0</span>
+        <span class="s s-Atom">shift</span>
+        <span class="p">;;</span>
+      <span class="o">-</span><span class="s s-Atom">a</span><span class="p">|</span><span class="s s-Atom">--address</span><span class="p">)</span>
+        <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="o">-</span><span class="s s-Atom">lt</span> <span class="mi">2</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">return</span> <span class="mi">3</span>
+        <span class="s s-Atom">addressflag</span><span class="o">=</span><span class="mi">1</span>
+        <span class="s s-Atom">vip=</span><span class="err">$</span><span class="mi">2</span>
+        <span class="s s-Atom">shift</span> <span class="mi">2</span>
+        <span class="p">;;</span>
+      <span class="o">-</span><span class="s s-Atom">m</span><span class="p">|</span><span class="s s-Atom">--mode</span><span class="p">)</span>
+        <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="o">-</span><span class="s s-Atom">lt</span> <span class="mi">2</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">return</span> <span class="mi">3</span>
+        <span class="s s-Atom">mode=</span><span class="err">$</span><span class="mi">2</span>
+        <span class="s s-Atom">shift</span> <span class="mi">2</span>
+        <span class="p">;;</span>
+      <span class="o">-</span><span class="s s-Atom">n</span><span class="p">|</span><span class="s s-Atom">--notify</span><span class="p">)</span>
+        <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">#</span> <span class="o">-</span><span class="s s-Atom">lt</span> <span class="mi">2</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">return</span> <span class="mi">3</span>
+        <span class="s s-Atom">notifyflag</span><span class="o">=</span><span class="mi">1</span>
+        <span class="s s-Atom">notify=</span><span class="err">$</span><span class="mi">2</span>
+        <span class="s s-Atom">shift</span> <span class="mi">2</span>
+        <span class="p">;;</span>
+      <span class="s s-Atom">*</span><span class="p">)</span>
+        <span class="s s-Atom">echo</span> <span class="s2">&quot;Wrong options...&quot;</span>
+        <span class="nv">Usage</span>
+        <span class="s s-Atom">return</span> <span class="mi">7</span>
+        <span class="p">;;</span>
+       <span class="s s-Atom">esac</span>
+    <span class="s s-Atom">done</span>
+    <span class="s s-Atom">return</span> <span class="mi">0</span>
+  <span class="s s-Atom">fi</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">#workspace=</span><span class="err">$</span><span class="p">(</span><span class="s s-Atom">dirname</span> <span class="err">$</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nv">RestartService</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="p">{</span><span class="s s-Atom">#@</span><span class="p">}</span> <span class="o">-</span><span class="s s-Atom">gt</span> <span class="mi">0</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+    <span class="s s-Atom">for</span> <span class="nv">I</span> <span class="s s-Atom">in</span> <span class="err">$</span><span class="s s-Atom">@</span><span class="p">;</span> <span class="s s-Atom">do</span>
+      <span class="s s-Atom">if</span> <span class="p">[</span> <span class="o">-</span><span class="s s-Atom">x</span> <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d/</span><span class="err">$</span><span class="nv">I</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+        <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d/</span><span class="err">$</span><span class="nv">I</span> <span class="s s-Atom">restart</span>
+      <span class="s s-Atom">else</span>
+        <span class="s s-Atom">echo</span> <span class="s2">&quot;$I is not a valid service...&quot;</span>
+      <span class="s s-Atom">fi</span>
+    <span class="s s-Atom">done</span>
+  <span class="s s-Atom">fi</span>
+<span class="p">}</span>
+
+<span class="nv">StopService</span><span class="p">()</span> <span class="p">{</span>
+  <span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="p">{</span><span class="s s-Atom">#@</span><span class="p">}</span> <span class="o">-</span><span class="s s-Atom">gt</span> <span class="mi">0</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+    <span class="s s-Atom">for</span> <span class="nv">I</span> <span class="s s-Atom">in</span> <span class="err">$</span><span class="s s-Atom">@</span><span class="p">;</span> <span class="s s-Atom">do</span>
+      <span class="s s-Atom">if</span> <span class="p">[</span> <span class="o">-</span><span class="s s-Atom">x</span> <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d/</span><span class="err">$</span><span class="nv">I</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+        <span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">rc</span><span class="p">.</span><span class="s s-Atom">d</span><span class="o">/</span><span class="s s-Atom">init</span><span class="p">.</span><span class="s s-Atom">d/</span><span class="err">$</span><span class="nv">I</span> <span class="s s-Atom">stop</span>
+      <span class="s s-Atom">else</span>
+        <span class="s s-Atom">echo</span> <span class="s2">&quot;$I is not a valid service...&quot;</span>
+      <span class="s s-Atom">fi</span>
+    <span class="s s-Atom">done</span>
+  <span class="s s-Atom">fi</span>
+<span class="p">}</span>
+
+
+<span class="nv">Notify</span><span class="p">()</span> <span class="p">{</span>
+    <span class="s s-Atom">mailsubject=</span><span class="s2">&quot;`hostname` to be $1: $vip floating&quot;</span>
+    <span class="s s-Atom">mailbody=</span><span class="s2">&quot;`date &#39;+%F %H:%M:%S&#39;`, vrrp transition, `hostname` changed to be $1.&quot;</span>
+    <span class="s s-Atom">echo</span> <span class="err">$</span><span class="s s-Atom">mailbody</span> <span class="p">|</span> <span class="s s-Atom">mail</span> <span class="o">-</span><span class="s s-Atom">s</span> <span class="s2">&quot;$mailsubject&quot;</span> <span class="err">$</span><span class="s s-Atom">contact</span>
+<span class="p">}</span>
+
+
+<span class="s s-Atom">#</span> <span class="nv">Main</span> <span class="nv">Function</span>
+<span class="nv">ParseOptions</span> <span class="err">$</span><span class="s s-Atom">@</span>
+<span class="p">[</span> <span class="err">$</span><span class="s s-Atom">?</span> <span class="o">-</span><span class="s s-Atom">ne</span> <span class="mi">0</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="nv">Usage</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">exit</span> <span class="mi">5</span>
+
+<span class="p">[</span> <span class="err">$</span><span class="s s-Atom">helpflag</span> <span class="o">-</span><span class="s s-Atom">eq</span> <span class="mi">1</span> <span class="p">]</span> <span class="s s-Atom">&amp;&amp;</span> <span class="nv">Usage</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">exit</span> <span class="mi">0</span>
+
+<span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">addressflag</span> <span class="o">-</span><span class="s s-Atom">ne</span> <span class="mi">1</span> <span class="o">-</span><span class="s s-Atom">o</span> <span class="err">$</span><span class="s s-Atom">notifyflag</span> <span class="o">-</span><span class="s s-Atom">ne</span> <span class="mi">1</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+  <span class="nv">Usage</span>
+  <span class="s s-Atom">exit</span> <span class="mi">2</span>
+<span class="s s-Atom">fi</span>
+
+<span class="s s-Atom">mode=</span><span class="err">$</span><span class="p">{</span><span class="nn">mode</span><span class="p">:</span><span class="o">-</span><span class="s s-Atom">mb</span><span class="p">}</span>
+
+<span class="s s-Atom">case</span> <span class="err">$</span><span class="s s-Atom">notify</span> <span class="s s-Atom">in</span>
+<span class="s s-Atom">&#39;master&#39;</span><span class="p">)</span>
+  <span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">serviceflag</span> <span class="o">-</span><span class="s s-Atom">eq</span> <span class="mi">1</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+      <span class="nv">RestartService</span> <span class="err">$</span><span class="p">{</span><span class="s s-Atom">services</span><span class="p">[</span><span class="s s-Atom">*</span><span class="p">]}</span>
+  <span class="s s-Atom">fi</span>
+  <span class="nv">Notify</span> <span class="s s-Atom">master</span>
+  <span class="p">;;</span>
+<span class="s s-Atom">&#39;backup&#39;</span><span class="p">)</span>
+  <span class="s s-Atom">if</span> <span class="p">[</span> <span class="err">$</span><span class="s s-Atom">serviceflag</span> <span class="o">-</span><span class="s s-Atom">eq</span> <span class="mi">1</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+    <span class="s s-Atom">if</span> <span class="p">[</span> <span class="s2">&quot;$mode&quot;</span> <span class="o">==</span> <span class="s s-Atom">&#39;mb&#39;</span> <span class="p">];</span> <span class="s s-Atom">then</span>
+      <span class="nv">StopService</span> <span class="err">$</span><span class="p">{</span><span class="s s-Atom">services</span><span class="p">[</span><span class="s s-Atom">*</span><span class="p">]}</span>
+    <span class="s s-Atom">else</span>
+      <span class="nv">RestartService</span> <span class="err">$</span><span class="p">{</span><span class="s s-Atom">services</span><span class="p">[</span><span class="s s-Atom">*</span><span class="p">]}</span>
+    <span class="s s-Atom">fi</span>
+  <span class="s s-Atom">fi</span>
+  <span class="nv">Notify</span> <span class="s s-Atom">backup</span>
+  <span class="p">;;</span>
+<span class="s s-Atom">&#39;fault&#39;</span><span class="p">)</span>
+  <span class="nv">Notify</span> <span class="s s-Atom">fault</span>
+  <span class="p">;;</span>
+<span class="s s-Atom">*</span><span class="p">)</span>
+  <span class="nv">Usage</span>
+  <span class="s s-Atom">exit</span> <span class="mi">4</span>
+  <span class="p">;;</span>
+<span class="s s-Atom">esac</span>
+
+
+
+<span class="s s-Atom">在keepalived</span><span class="p">.</span><span class="s s-Atom">conf配置文件中，其调用方法如下所示：</span>
+    <span class="s s-Atom">notify_master</span> <span class="s2">&quot;/etc/keepalived/notify.sh -n master -a 172.16.100.1&quot;</span>  
+    <span class="s s-Atom">notify_backup</span> <span class="s2">&quot;/etc/keepalived/notify.sh -n backup -a 172.16.100.1&quot;</span>  
+    <span class="s s-Atom">notify_fault</span> <span class="s2">&quot;/etc/keepalived/notify.sh -n fault -a 172.16.100.1&quot;</span>
+</pre></div>
+
+
+<h2 id="_1">配置</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">httpd</span> 的方式安装好<span class="nv">httpd</span>服务。
+分别在<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">103</span>和<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">104</span>上做如下操作：
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="o">~</span>]# <span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">httpd</span>
+<span class="nv">echo</span> <span class="mi">103</span> <span class="o">&gt;/</span><span class="nv">var</span><span class="o">/</span><span class="nv">www</span><span class="o">/</span><span class="nv">html</span><span class="o">/</span><span class="nv">index</span>.<span class="nv">html</span>   #（<span class="mi">104</span>上的要把 <span class="mi">103</span>字段改成 <span class="mi">104</span>）
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="o">~</span>]# <span class="nv">setenforce</span> <span class="mi">0</span>   #关闭<span class="nv">SELinux</span>
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="o">~</span>]# <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">rc</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">iptables</span> <span class="nv">stop</span>   #关闭防火墙
+
+<span class="mi">4</span>、开始安装<span class="nv">LVS</span>
+下载相关软件包：
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="o">~</span>]# <span class="nv">mkdir</span> <span class="nv">download</span>
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="o">~</span>]# <span class="nv">cd</span> <span class="nv">download</span><span class="o">/</span>
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">download</span>]# <span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">linuxvirtualserver</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">software</span><span class="o">/</span><span class="nv">kernel</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>.<span class="nv">tar</span>.<span class="nv">gz</span>  
+<span class="mi">5</span>、安装命令
+注：以下安装需要在<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">101</span>和<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">104</span>上面操作：
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">download</span>]# <span class="nv">uname</span> <span class="o">-</span><span class="nv">r</span>   #查看<span class="nv">linux</span>内核版本  
+<span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">32</span><span class="o">-</span><span class="mi">220</span>.<span class="nv">el6</span>.<span class="nv">x86_64</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">download</span>]# <span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">kernels</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">32</span><span class="o">-</span><span class="mi">220</span>.<span class="nv">el6</span>.<span class="nv">x86_64</span><span class="o">/</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">linux</span> #不做此步骤，安装会报错 
+注：此<span class="nv">ln</span>命令的路径要和<span class="nv">uname</span> <span class="o">-</span><span class="nv">r</span>输出内核版本一致,如果没有 <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">kernels</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">6</span>.<span class="mi">32</span><span class="o">-</span><span class="mi">220</span>.<span class="nv">el6</span>.<span class="nv">x86_64</span><span class="o">/</span> 需要安装 <span class="nv">kernel</span><span class="o">-</span><span class="nv">devel</span>软件包。 
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">download</span>]# <span class="nv">tar</span> <span class="nv">zxvf</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>.<span class="nv">tar</span>.<span class="nv">gz</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">download</span>]# <span class="nv">cd</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>]# <span class="nv">make</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>]# <span class="nv">make</span> <span class="nv">install</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>]# <span class="nv">ipvsadm</span>  #执行<span class="nv">ipvsadm</span>命令，把<span class="nv">LVS</span>添加到<span class="nv">linux</span>内核中  
+<span class="nv">IP</span> <span class="nv">Virtual</span> <span class="nv">Server</span> <span class="nv">version</span> <span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">1</span> <span class="ss">(</span><span class="nv">size</span><span class="o">=</span><span class="mi">4096</span><span class="ss">)</span>  
+<span class="nv">Prot</span> <span class="nv">LocalAddress</span>:<span class="nv">Port</span> <span class="nv">Scheduler</span> <span class="nv">Flags</span>  
+  <span class="o">-&gt;</span> <span class="nv">RemoteAddress</span>:<span class="nv">Port</span>       <span class="nv">Forward</span> <span class="nv">Weight</span> <span class="nv">ActiveConn</span> <span class="nv">InActConn</span>  
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">ipvsadm</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">24</span>]# <span class="nv">lsmod</span> <span class="o">|</span> <span class="nv">grep</span> <span class="nv">ip_vs</span>  #查看<span class="nv">LVS</span>是否已经添加到<span class="nv">linux</span>内核了，如果有如下输出表示已经成功。  
+<span class="nv">ip_vs</span>                 <span class="mi">108133</span>  <span class="mi">0</span>   
+<span class="nv">ipv6</span>                  <span class="mi">322029</span>  <span class="mi">154</span> <span class="nv">ip_vs</span>,<span class="nv">ip6t_REJECT</span>,<span class="nv">nf_conntrack_ipv6</span>,<span class="nv">nf_defrag_ipv6</span>  
+<span class="mi">6</span>配置<span class="nv">LVS</span> 服务端
+在<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">101</span>和<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">114</span>上分别配置<span class="nv">LVS</span> <span class="nv">DR</span>模式
+<span class="mi">1</span>）、配置<span class="nv">LVS</span>，建立一个脚本配置<span class="nv">LVS</span>
+注：<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">101</span>和<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">114</span>上配置都是一样的
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">bin</span>]# <span class="nv">vim</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span>
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span> 
+. <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">functions</span> 
+<span class="nv">vim</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span> 
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span> 
+<span class="nv">GW</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">1</span> 
+# <span class="nv">website</span> <span class="nv">director</span> <span class="nv">vip</span>. 
+<span class="nv">SNS_VIP</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">181</span> 
+<span class="nv">SNS_RIP1</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">103</span> 
+<span class="nv">SNS_RIP2</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">104</span> 
+
+<span class="nv">logger</span> <span class="mh">$0</span> <span class="nv">called</span> <span class="nv">with</span> <span class="mh">$1</span> 
+<span class="nv">case</span> <span class="s2">&quot;</span><span class="s">$1</span><span class="s2">&quot;</span> <span class="nv">in</span> 
+<span class="nv">start</span><span class="ss">)</span> 
+  # <span class="nv">set</span> <span class="nv">squid</span> <span class="nv">vip</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">--</span><span class="nv">set</span> <span class="mi">30</span> <span class="mi">5</span> <span class="mi">60</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ifconfig</span> <span class="nv">eth0</span>:<span class="mi">0</span> $<span class="nv">SNS_VIP</span> <span class="nv">broadcast</span> $<span class="nv">SNS_VIP</span> <span class="nv">netmask</span> <span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span> <span class="nv">up</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">route</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">host</span> $<span class="nv">SNS_VIP</span> <span class="nv">dev</span> <span class="nv">eth0</span>:<span class="mi">0</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">A</span> <span class="o">-</span><span class="nv">t</span> $<span class="nv">SNS_VIP</span>:<span class="mi">80</span> <span class="o">-</span><span class="nv">s</span> <span class="nv">wrr</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">3</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">a</span> <span class="o">-</span><span class="nv">t</span> $<span class="nv">SNS_VIP</span>:<span class="mi">80</span> <span class="o">-</span><span class="nv">r</span> $<span class="nv">SNS_RIP1</span>:<span class="mi">80</span> <span class="o">-</span><span class="nv">g</span> <span class="o">-</span><span class="nv">w</span> <span class="mi">1</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">a</span> <span class="o">-</span><span class="nv">t</span> $<span class="nv">SNS_VIP</span>:<span class="mi">80</span> <span class="o">-</span><span class="nv">r</span> $<span class="nv">SNS_RIP2</span>:<span class="mi">80</span> <span class="o">-</span><span class="nv">g</span> <span class="o">-</span><span class="nv">w</span> <span class="mi">1</span> 
+  <span class="nv">touch</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lock</span><span class="o">/</span><span class="nv">subsys</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">&gt;/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> 
+  <span class="c1">;; </span>
+<span class="nv">stop</span><span class="ss">)</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">C</span> 
+  <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">Z</span> 
+  <span class="nv">ifconfig</span> <span class="nv">eth0</span>:<span class="mi">0</span> <span class="nv">down</span> 
+  <span class="nv">ifconfig</span> <span class="nv">eth0</span>:<span class="mi">1</span> <span class="nv">down</span> 
+  <span class="nv">route</span> <span class="nv">del</span> $<span class="nv">SNS_VIP</span> 
+  <span class="nv">route</span> <span class="nv">del</span> $<span class="nv">SS_VIP</span> 
+  <span class="nv">rm</span> <span class="o">-</span><span class="nv">rf</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lock</span><span class="o">/</span><span class="nv">subsys</span><span class="o">/</span><span class="nv">ipvsadm</span> <span class="o">&gt;/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> 
+  <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">ipvsadm stoped</span><span class="s2">&quot;</span> 
+  <span class="c1">;; </span>
+<span class="nv">status</span><span class="ss">)</span> 
+  <span class="k">if</span> [ <span class="o">!</span> <span class="o">-</span><span class="nv">e</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lock</span><span class="o">/</span><span class="nv">subsys</span><span class="o">/</span><span class="nv">ipvsadm</span> ]<span class="c1">;then </span>
+  <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">ipvsadm stoped</span><span class="s2">&quot;</span> 
+  <span class="k">exit</span> <span class="mi">1</span> 
+  <span class="k">else</span> 
+  <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">ipvsadm OK</span><span class="s2">&quot;</span> 
+  <span class="nv">fi</span> 
+  <span class="c1">;; </span>
+<span class="o">*</span><span class="ss">)</span> 
+ <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">Usage: $0 {start|stop|status}</span><span class="s2">&quot;</span> 
+ <span class="k">exit</span> <span class="mi">1</span> 
+<span class="nv">esac</span> 
+ <span class="k">exit</span> <span class="mi">0</span> 
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">bin</span>]# <span class="nv">chmod</span> <span class="o">+</span><span class="nv">x</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span>
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">bin</span>]# <span class="nv">cp</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">rc</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span>   #方便启动
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">bin</span>]# <span class="nv">service</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span> <span class="nv">start</span>   #启动<span class="nv">lvs</span>服务
+用<span class="nv">ipvsadm</span> <span class="o">-</span><span class="nv">Ln</span> 命令查看是否有如下输出，如有证明<span class="nv">LVS</span>配置成功
+[<span class="nv">root</span>@<span class="nv">centos1</span> <span class="nv">bin</span>]# <span class="nv">ipvsadm</span>
+<span class="nv">IP</span> <span class="nv">Virtual</span> <span class="nv">Server</span> <span class="nv">version</span> <span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">1</span> <span class="ss">(</span><span class="nv">size</span><span class="o">=</span><span class="mi">4096</span><span class="ss">)</span>
+<span class="nv">Prot</span> <span class="nv">LocalAddress</span>:<span class="nv">Port</span> <span class="nv">Scheduler</span> <span class="nv">Flags</span>
+  <span class="o">-&gt;</span> <span class="nv">RemoteAddress</span>:<span class="nv">Port</span>           <span class="nv">Forward</span> <span class="nv">Weight</span> <span class="nv">ActiveConn</span> <span class="nv">InActConn</span>
+<span class="nv">TCP</span>  <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">181</span>:<span class="nv">http</span> <span class="nv">wrr</span> <span class="nv">persistent</span> <span class="mi">3</span>
+  <span class="o">-&gt;</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">104</span>:<span class="nv">http</span>           <span class="nv">Route</span>   <span class="mi">1</span>      <span class="mi">0</span>          <span class="mi">0</span>         
+  <span class="o">-&gt;</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">103</span>:<span class="nv">http</span>           <span class="nv">Route</span>   <span class="mi">1</span>      <span class="mi">0</span>          <span class="mi">0</span>         
+<span class="mi">7</span>、配置<span class="nv">LVS</span> <span class="nv">RS</span>服务器
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="nv">bin</span>]# <span class="nv">vim</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span>
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span>
+. <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">functions</span>
+<span class="nv">SNS_VIP</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">181</span>
+
+<span class="nv">case</span> <span class="s2">&quot;</span><span class="s">$1</span><span class="s2">&quot;</span> <span class="nv">in</span>
+<span class="nv">start</span><span class="ss">)</span>
+      <span class="nv">ifconfig</span> <span class="nv">lo</span>:<span class="mi">0</span> $<span class="nv">SNS_VIP</span> <span class="nv">netmask</span> <span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span> <span class="nv">broadcast</span> $<span class="nv">SNS_VIP</span>
+      <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">route</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">host</span> $<span class="nv">SNS_VIP</span> <span class="nv">dev</span> <span class="nv">lo</span>:<span class="mi">0</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">1</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">lo</span><span class="o">/</span><span class="nv">arp_ignore</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">2</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">lo</span><span class="o">/</span><span class="nv">arp_announce</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">1</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">all</span><span class="o">/</span><span class="nv">arp_ignore</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">2</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">all</span><span class="o">/</span><span class="nv">arp_announce</span>
+      <span class="nv">sysctl</span> <span class="o">-</span><span class="nv">p</span> <span class="o">&gt;/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">RealServer Start OK</span><span class="s2">&quot;</span>
+      <span class="c1">;;</span>
+<span class="nv">stop</span><span class="ss">)</span>
+     <span class="nv">ifconfig</span> <span class="nv">lo</span>:<span class="mi">0</span> <span class="nv">down</span>
+      <span class="nv">route</span> <span class="nv">del</span> $<span class="nv">SNS_VIP</span> <span class="o">&gt;/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">0</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">lo</span><span class="o">/</span><span class="nv">arp_ignore</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">0</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">lo</span><span class="o">/</span><span class="nv">arp_announce</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">0</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">all</span><span class="o">/</span><span class="nv">arp_ignore</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">0</span><span class="s2">&quot;</span> <span class="o">&gt;/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">all</span><span class="o">/</span><span class="nv">arp_announce</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">RealServer Stoped</span><span class="s2">&quot;</span>
+      <span class="c1">;;</span>
+<span class="o">*</span><span class="ss">)</span>
+      <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">Usage: $0 {start|stop}</span><span class="s2">&quot;</span>
+      <span class="k">exit</span> <span class="mi">1</span>
+<span class="nv">esac</span>
+<span class="k">exit</span> <span class="mi">0</span>
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="nv">bin</span>]# <span class="nv">cp</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">rc</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span>
+[<span class="nv">root</span>@<span class="nv">centos</span> <span class="nv">bin</span>]# <span class="nv">service</span> <span class="nv">lvs_dr</span>.<span class="nv">sh</span> <span class="nv">start</span>  #启动<span class="nv">lvs</span> <span class="nv">RS</span>服务器
+<span class="nv">RealServer</span> <span class="nv">Start</span> <span class="nv">OK</span> 
+
+<span class="nv">yum</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">keepalived</span>
+<span class="nv">global_defs</span> { 
+   <span class="nv">notification_email</span> { 
+         <span class="nv">edisonchou</span>@<span class="nv">hotmail</span>.<span class="nv">com</span> 
+   } 
+   <span class="nv">notification_email_from</span> <span class="nv">sns</span><span class="o">-</span><span class="nv">lvs</span>@<span class="nv">gmail</span>.<span class="nv">com</span> 
+   <span class="nv">smtp_server</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">1</span> 
+   <span class="nv">smtp_connection_timeout</span> <span class="mi">30</span>
+   <span class="nv">router_id</span> <span class="nv">LVS_DEVEL</span>  # 设置<span class="nv">lvs</span>的<span class="nv">id</span>，在一个网络内应该是唯一的
+} 
+<span class="nv">vrrp_instance</span> <span class="nv">VI_1</span> { 
+    <span class="nv">state</span> <span class="nv">MASTER</span>   #指定<span class="nv">Keepalived</span>的角色，<span class="nv">MASTER</span>为主，<span class="nv">BACKUP</span>为备         
+    <span class="nv">interface</span> <span class="nv">eth1</span>  #指定<span class="nv">Keepalived</span>的角色，<span class="nv">MASTER</span>为主，<span class="nv">BACKUP</span>为备
+    <span class="nv">virtual_router_id</span> <span class="mi">51</span>  #虚拟路由编号，主备要一致
+    <span class="nv">priority</span> <span class="mi">100</span>  #定义优先级，数字越大，优先级越高，主<span class="nv">DR</span>必须大于备用<span class="nv">DR</span>   
+    <span class="nv">advert_int</span> <span class="mi">1</span>  #检查间隔，默认为<span class="mi">1</span><span class="nv">s</span>
+    <span class="nv">authentication</span> { 
+        <span class="nv">auth_type</span> <span class="nv">PASS</span> 
+        <span class="nv">auth_pass</span> <span class="mi">1111</span> 
+    } 
+    <span class="nv">virtual_ipaddress</span> { 
+        <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">200</span>  #定义虚拟<span class="nv">IP</span><span class="ss">(</span><span class="nv">VIP</span><span class="ss">)</span>为<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">2</span>.<span class="mi">33</span>，可多设，每行一个
+    } 
+} 
+# 定义对外提供服务的<span class="nv">LVS</span>的<span class="nv">VIP</span>以及<span class="nv">port</span>
+<span class="nv">virtual_server</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">200</span> <span class="mi">80</span> { 
+    <span class="nv">delay_loop</span> <span class="mi">6</span> # 设置健康检查时间，单位是秒                   
+    <span class="nv">lb_algo</span> <span class="nv">wrr</span> # 设置负载调度的算法为<span class="nv">wlc</span>                  
+    <span class="nv">lb_kind</span> <span class="nv">DR</span> # 设置<span class="nv">LVS</span>实现负载的机制，有<span class="nv">NAT</span>、<span class="nv">TUN</span>、<span class="nv">DR</span>三个模式  
+    <span class="nv">nat_mask</span> <span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">0</span>               
+    <span class="nv">persistence_timeout</span> <span class="mi">0</span>         
+    <span class="nv">protocol</span> <span class="nv">TCP</span>                 
+    <span class="nv">real_server</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">102</span> <span class="mi">80</span> {  # 指定<span class="nv">real</span> <span class="nv">server1</span>的<span class="nv">IP</span>地址
+        <span class="nv">weight</span> <span class="mi">3</span>   # 配置节点权值，数字越大权重越高             
+        <span class="nv">TCP_CHECK</span> { 
+        <span class="nv">connect_timeout</span> <span class="mi">10</span>        
+        <span class="nv">nb_get_retry</span> <span class="mi">3</span> 
+        <span class="nv">delay_before_retry</span> <span class="mi">3</span> 
+        <span class="nv">connect_port</span> <span class="mi">80</span> 
+        } 
+    } 
+    <span class="nv">real_server</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">103</span> <span class="mi">80</span> {  # 指定<span class="nv">real</span> <span class="nv">server2</span>的<span class="nv">IP</span>地址
+        <span class="nv">weight</span> <span class="mi">3</span>  # 配置节点权值，数字越大权重越高 
+        <span class="nv">TCP_CHECK</span> { 
+        <span class="nv">connect_timeout</span> <span class="mi">10</span> 
+        <span class="nv">nb_get_retry</span> <span class="mi">3</span> 
+        <span class="nv">delay_before_retry</span> <span class="mi">3</span> 
+        <span class="nv">connect_port</span> <span class="mi">80</span> 
+        } 
+     } 
+}
+
+<span class="mi">3</span>.<span class="mi">5</span> 配置从负载服务器
+
+从负载服务器与主负载服务器大致相同，只是在<span class="nv">keepalived</span>的配置文件中需要改以下两处：
+
+（<span class="mi">1</span>）将<span class="nv">state</span>由<span class="nv">MASTER</span>改为<span class="nv">BACKUP</span>
+
+（<span class="mi">2</span>）将<span class="nv">priority</span>由<span class="mi">100</span>改为<span class="mi">99</span>
+
+<span class="nv">vrrp_instance</span> <span class="nv">VI_1</span> { 
+    <span class="nv">state</span> <span class="nv">BACKUP</span> # 这里改为<span class="nv">BACKUP</span>
+    <span class="nv">interface</span> <span class="nv">eth1</span> 
+    <span class="nv">virtual_router_id</span> <span class="mi">51</span> 
+    <span class="nv">priority</span> <span class="mi">99</span> # 这里改为<span class="mi">99</span>，<span class="nv">master</span>优先级是<span class="mi">100</span>
+    <span class="nv">advert_int</span> <span class="mi">1</span> 
+    <span class="nv">authentication</span> { 
+        <span class="nv">auth_type</span> <span class="nv">PASS</span> 
+        <span class="nv">auth_pass</span> <span class="mi">1111</span> 
+    } 
+    <span class="nv">virtual_ipaddress</span> { 
+        <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">80</span>.<span class="mi">200</span> 
+    } 
+} 
+</pre></div>
+
+
+<h2 id="_2">模式</h2>
+<div class="codehilite"><pre><span></span><span class="n">LVS</span> <span class="err">简介</span>
+         <span class="n">LVS</span> <span class="err">是</span> <span class="n">Linux</span>  <span class="n">Virtual</span> <span class="n">Server</span> <span class="err">，</span><span class="n">Linux</span> <span class="err">虚拟服务器；是一个虚拟的服务器集群【多台机器</span> <span class="n">LB</span> <span class="n">IP</span><span class="err">】。</span><span class="n">LVS</span> <span class="err">集群分为三层结构</span><span class="o">:</span>
+<span class="err">·负载调度器</span><span class="p">(</span><span class="n">load</span> <span class="n">balancer</span><span class="p">)</span><span class="err">：它是整个</span><span class="n">LVS</span> <span class="err">集群对外的前端机器，负责将</span><span class="n">client</span><span class="err">请求发送到一组服务器</span><span class="p">[</span><span class="err">多台</span><span class="n">LB</span> <span class="n">IP</span><span class="p">]</span><span class="err">上执行，而</span><span class="n">client</span><span class="err">端</span>
+<span class="err">认为是返回来一个同一个</span><span class="n">IP</span><span class="err">【通常把这个</span><span class="n">IP</span> <span class="err">称为虚拟</span><span class="n">IP</span><span class="o">/</span><span class="n">VIP</span><span class="err">】</span>
+<span class="err">·服务器池</span><span class="p">(</span><span class="n">server</span> <span class="n">pool</span><span class="p">)</span><span class="err">：一组真正执行</span><span class="n">client</span> <span class="err">请求的服务器，一般是我们的</span><span class="n">web</span><span class="err">服务器；除了</span><span class="n">web</span><span class="err">，还有</span><span class="n">FTP</span><span class="err">，</span><span class="n">MAIL</span><span class="err">，</span><span class="n">DNS</span>
+<span class="err">·共享存储</span><span class="p">(</span><span class="n">shared</span> <span class="n">stored</span><span class="p">)</span><span class="err">：它为</span> <span class="n">server</span> <span class="n">pool</span> <span class="err">提供了一个共享的存储区，很容易让服务器池拥有相同的内容，提供相同的服务</span><span class="p">[</span><span class="err">不是很理解</span><span class="p">]</span>
+<span class="n">LVS</span> <span class="err">有</span><span class="mi">4</span><span class="err">中常用的模式，分别讲一下</span><span class="mi">4</span><span class="err">中模式的区别：</span>
+<span class="n">LVS</span>  <span class="n">DR</span> <span class="err">模式</span>
+<span class="mf">1.</span>   <span class="n">DR</span><span class="p">(</span><span class="n">Direct</span>  <span class="n">Routing</span><span class="p">)</span><span class="err">模式的网络结构：</span>
+
+        <span class="mf">2.</span>  <span class="err">工作的基本原理：</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">).</span> <span class="n">client</span> <span class="err">发送一个</span><span class="n">pv</span><span class="err">请求给</span><span class="n">VIP</span><span class="err">；</span><span class="n">VIP</span> <span class="err">收到这请求后会跟</span><span class="n">LVS</span><span class="err">设置的</span><span class="n">LB</span><span class="err">算法选择一个</span><span class="n">LB</span> <span class="err">比较合理的</span><span class="n">realserver</span><span class="err">，然后把此请求的</span>
+        <span class="n">package</span> <span class="err">的</span><span class="n">MAC</span><span class="err">地址修改为</span><span class="n">realserver</span><span class="err">的</span><span class="n">MAC</span><span class="err">地址；下面是我们通信的</span><span class="n">package</span><span class="err">的基本格式：</span>
+
+
+<span class="err">在这个通信的</span><span class="n">Package</span> <span class="err">有六个主要的字段：</span><span class="n">src</span> <span class="n">mac</span> <span class="err">、</span> <span class="n">dst</span> <span class="n">mac</span> <span class="err">、</span> <span class="n">src</span> <span class="n">ip</span> <span class="err">、</span> <span class="n">src</span> <span class="n">prot</span> <span class="err">、</span>  <span class="n">dst</span> <span class="n">ip</span> <span class="err">、</span> <span class="n">dst</span> <span class="n">ip</span> <span class="err">；</span>  <span class="err">现在这个包里面的</span> 
+<span class="n">dst</span> <span class="n">mac</span> <span class="err">是</span><span class="n">LVS</span> <span class="n">VIP</span><span class="err">的网卡</span><span class="n">MAC</span> <span class="p">[</span><span class="err">在</span><span class="n">TCP</span> <span class="err">三次握手完成时就只知道</span><span class="n">dsp</span> <span class="n">ip</span> <span class="err">和</span><span class="n">dsp</span> <span class="n">mac</span><span class="err">了</span><span class="p">]</span>
+<span class="err">·</span> <span class="n">DR</span> <span class="err">模式会把</span><span class="n">packet</span> <span class="err">里面的</span><span class="n">dst</span> <span class="n">mac</span>  <span class="err">改成</span> <span class="n">realserver</span><span class="err">的</span><span class="n">MAC</span> <span class="err">地址；然后</span><span class="n">VIP</span><span class="err">会把这个包广播到当前的这个</span><span class="n">LAN</span><span class="err">里面；所以，要提前保证</span><span class="n">VIP</span>
+ <span class="err">和</span> <span class="err">所有的</span><span class="n">realserver</span> <span class="err">在同一个网段，也就是在用过</span><span class="n">LAN</span><span class="err">里面。</span>
+<span class="err">同一个网段：用子网掩码来实现的，我们知道我们的网络中有局域网，一个局域网有很多台机器，这些</span><span class="n">LAN</span><span class="err">里面的所有机器都公用一个外网</span><span class="n">IP</span><span class="err">；我</span>
+<span class="err">们是怎样界定这个</span><span class="n">LAN</span><span class="err">的呢？用的就是网段号；</span><span class="n">IP</span><span class="err">只是是</span><span class="mi">32</span><span class="err">位二进制数表示，这</span><span class="mi">32</span><span class="err">位分为：网络位</span> <span class="o">+</span> <span class="err">主机位；表现在子网掩码是就是：网络位是</span><span class="mi">1</span><span class="err">，</span>
+<span class="err">主机位是</span><span class="mi">0</span><span class="err">；这样网络位</span> <span class="o">=</span> <span class="n">IP</span>  <span class="err">按位</span> <span class="err">与</span>  <span class="err">子网掩码；所以，我们在把</span><span class="n">realserver</span> <span class="err">挂到</span><span class="n">LVS</span><span class="err">上前，需要确认</span><span class="n">DR</span><span class="err">模式，且</span><span class="n">IP</span> <span class="err">在同一个网段内。</span>
+<span class="err">·</span><span class="n">ARP</span><span class="err">协议会把这个包发送给真正的</span><span class="n">realserver</span><span class="err">【根据</span><span class="n">MAC</span> <span class="err">找到机器】</span>
+<span class="err">·把这个</span><span class="n">src</span> <span class="n">ip</span><span class="o">-----&gt;</span><span class="n">realserver</span> <span class="err">的</span><span class="n">mac</span> <span class="err">地址建立一个</span><span class="n">hash</span><span class="err">表；这此次连接未断开前，同一个</span><span class="n">client</span><span class="err">发送的请求通过查询</span><span class="n">hash</span><span class="err">表，在次发送到</span>
+<span class="err">这台</span><span class="n">realserver</span><span class="err">上面；</span>
+<span class="err">·</span><span class="n">realserver</span> <span class="err">收到这个</span><span class="n">pachet</span><span class="err">后，首先判断</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">是否是自己的</span><span class="n">IP</span><span class="err">地址；如果不是就丢掉包；如果是就处理这个包。所以，</span><span class="n">DR</span><span class="err">模式还要在所有</span>
+<span class="err">的</span><span class="n">realserver</span> <span class="err">的机器上面绑定</span><span class="n">VIP</span><span class="err">的</span><span class="n">ip</span><span class="err">地址：</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ifconfig</span> <span class="nl">lo</span><span class="p">:</span><span class="mi">0</span> <span class="n">inet</span> <span class="n">VIP</span> <span class="n">netmask</span> <span class="mf">255.255.255.255</span>   <span class="o">-----&gt;</span> <span class="err">这个要注意！</span>  
+<span class="err">·</span> <span class="err">这样</span><span class="n">realserver</span> <span class="err">发现</span><span class="n">package</span> <span class="err">的</span><span class="n">dst</span> <span class="err">自己能识别【绑定了</span><span class="mi">2</span><span class="err">个</span><span class="n">IP</span><span class="err">】，会处理这个包，处理完后把</span><span class="n">package</span><span class="err">的</span><span class="n">src</span>  <span class="n">mac</span>  <span class="n">dst</span> <span class="n">mac</span>  <span class="n">src</span> <span class="n">ip</span> 
+  <span class="n">dst</span> <span class="n">ip</span> <span class="err">都修改后再通过</span><span class="n">ARP</span> <span class="err">发送给</span><span class="n">VIP</span><span class="err">，通过</span><span class="n">VIP</span> <span class="err">发送给</span><span class="n">client</span><span class="err">。</span>   <span class="n">realserver</span> <span class="err">发送给</span> <span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">的格式：</span>
+
+<span class="err">·</span> <span class="n">realserver</span> <span class="err">处理这个包后，会跟</span><span class="n">dst</span> <span class="err">为</span><span class="n">client</span> <span class="n">ip</span> <span class="err">直接发送给</span> <span class="n">client</span> <span class="n">ip</span><span class="err">；不经过</span><span class="n">lvs</span> <span class="err">；这样虽然效率比较高，但是有安全漏洞。</span> 
+
+                  <span class="n">LVS</span> <span class="n">DR</span> <span class="err">工作的基本原理</span><span class="n">package</span> <span class="err">的详细信息：</span><span class="nl">http</span><span class="p">:</span><span class="c1">//os.51cto.com/art/201105/264303.htm</span>
+         <span class="mf">3.</span>  <span class="n">LVS</span> <span class="n">DR</span><span class="err">模式的注意情况：</span>
+<span class="err">·</span>  <span class="n">LVS</span> <span class="err">的</span><span class="n">VIP</span> <span class="err">和</span> <span class="n">realserver</span> <span class="err">必须在同一个网段，不然广播后所有的包都会丢掉：</span> <span class="err">提前确认</span><span class="n">LVS</span><span class="o">/</span><span class="err">硬件</span><span class="n">LB</span> <span class="err">是什么模式，是否需要在同一个网段</span>
+<span class="err">·</span>  <span class="err">所有的</span><span class="n">realserver</span> <span class="err">都必须绑定</span><span class="n">VIP</span><span class="err">的</span><span class="n">IP</span><span class="err">地址，否则</span><span class="n">realserver</span> <span class="err">收到</span><span class="n">package</span><span class="err">后发现</span><span class="n">dst</span> <span class="err">不是自己的</span><span class="n">I</span><span class="err">怕，所有包都会丢掉。</span>
+<span class="err">·</span>  <span class="n">realserver</span><span class="err">·处理完包后直接把</span><span class="n">package</span> <span class="err">通过</span><span class="n">dst</span> <span class="n">IP</span> <span class="err">发送给</span> <span class="n">client</span> <span class="err">，不通过</span><span class="n">LVS</span><span class="o">/</span><span class="err">迎接</span><span class="n">IP</span> <span class="err">了这样的</span><span class="n">LVS</span> <span class="o">/</span><span class="n">VIP</span> <span class="err">效率会更高一点。</span>
+<span class="err">【通过把</span><span class="n">realserver</span><span class="err">的</span><span class="n">ip</span><span class="err">暴漏给外界，不是很安全】</span>
+<span class="n">LVS</span>  <span class="n">NAT</span> <span class="err">模式</span>
+<span class="mf">1.</span>    <span class="n">LVS</span> <span class="n">NAT</span> <span class="err">模式的网络结构：</span>
+
+            <span class="mf">2.</span>   <span class="n">NAT</span> <span class="err">模式的基本原理：</span>
+<span class="err">·</span>   <span class="n">NAT</span> <span class="err">模式工作原理的模拟图：</span>
+
+<span class="err">·</span>   <span class="n">client</span><span class="err">：</span><span class="mf">202.100.1.2</span> 
+    <span class="nl">VIP</span><span class="p">:</span>     <span class="mf">202.103.106.5</span>    
+                  <span class="nl">realserver</span> <span class="p">:</span> <span class="mf">172.16.0.2</span>  <span class="mf">172.16.0.3</span>  <span class="err">分别提供</span><span class="n">http</span> <span class="err">和</span><span class="n">ftp</span><span class="err">服务</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">).</span> <span class="err">首先</span><span class="n">client</span> <span class="err">发送请求</span><span class="p">[</span><span class="n">package</span><span class="p">]</span> <span class="err">给</span><span class="n">VIP</span><span class="err">；</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span><span class="n">client</span> <span class="err">发送给</span><span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span><span class="n">SOURCE</span> <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  <span class="n">EDST</span>   <span class="mf">202.103.106.5</span><span class="o">:</span><span class="mi">80</span>  
+        <span class="p">(</span><span class="mi">2</span><span class="p">).</span> <span class="n">VIP</span> <span class="err">收到</span><span class="n">package</span><span class="err">后，会根据</span><span class="n">LVS</span><span class="err">设置的</span><span class="n">LB</span><span class="err">算法选择一个合适的</span><span class="n">realserver</span><span class="err">，然后把</span><span class="n">package</span> <span class="err">的</span><span class="n">DST</span> <span class="n">IP</span> <span class="err">修改为</span><span class="n">realserver</span><span class="err">：</span>   
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">VIP</span> <span class="err">发送给</span><span class="n">realserver</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span> <span class="n">SOURCE</span>   <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  <span class="n">EDST</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span>  
+        <span class="p">(</span><span class="mi">3</span><span class="p">).</span> <span class="n">realserver</span> <span class="err">收到这个</span><span class="n">package</span><span class="err">后判断</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">是自己，就处理这个</span><span class="n">package</span> <span class="err">，处理完后把这个包发送给</span><span class="n">LVS</span> <span class="n">VIP</span><span class="err">：</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">realserver</span> <span class="err">处理完成后发送给</span><span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span>   <span class="n">SOURCE</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span>  <span class="n">EDST</span>     <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>    <span class="err">#</span> <span class="n">lvs</span> <span class="err">收到这个</span><span class="n">package</span> <span class="err">后发现</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">不是自己的会不会</span>
+<span class="err">丢掉？感觉有错误</span>  
+       <span class="p">(</span><span class="mi">4</span><span class="p">).</span> <span class="n">LVS</span> <span class="err">收到这个</span><span class="n">package</span> <span class="err">后把</span><span class="n">sorce</span> <span class="n">ip</span><span class="err">改成</span><span class="n">VIP</span><span class="err">的</span><span class="n">IP</span><span class="err">，</span><span class="n">dst</span> <span class="n">ip</span><span class="err">改成</span> <span class="n">client</span> <span class="n">ip</span><span class="err">然后发送给</span><span class="n">client</span><span class="err">：</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span><span class="n">VIP</span><span class="err">收到</span><span class="n">package</span> <span class="err">后修改</span><span class="n">sourceip</span> <span class="err">发送给</span><span class="n">client</span><span class="err">的包：</span>  
+<span class="mf">2.</span>  <span class="n">SOURCE</span>   <span class="mf">202.103.106.5.80</span><span class="err">：</span><span class="mi">80</span>  <span class="n">EDST</span>   <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  
+           <span class="mf">3.</span> <span class="n">NAT</span> <span class="err">模式的注意事项：</span>
+<span class="err">·</span> <span class="n">NAT</span> <span class="err">模式修改的是</span><span class="n">dst</span> <span class="n">IP</span><span class="err">，直接走</span> <span class="k">switch</span> <span class="err">或</span><span class="n">pub</span> <span class="err">不需要修改</span><span class="n">MAC</span> <span class="err">所以，不需要</span><span class="n">VIP</span> <span class="err">和</span><span class="n">realserver</span> <span class="err">同在一个网段内。</span>
+<span class="err">·</span> <span class="n">NAT</span> <span class="err">模式</span> <span class="n">package</span> <span class="k">in</span>  <span class="err">和</span><span class="n">package</span> <span class="k">out</span> <span class="err">都需要经过</span><span class="n">LVS</span> <span class="err">；因此</span><span class="n">LVS</span> <span class="err">的可能会成为一个系统瓶颈问题。</span>
+<span class="n">LVS</span>  <span class="n">FULL</span> <span class="n">NAT</span> <span class="err">模式</span>
+<span class="mf">1.</span>     <span class="n">FULL</span> <span class="n">NATT</span><span class="err">的基本原理：</span>
+              <span class="n">FULL</span> <span class="n">NAT</span>  <span class="err">在</span><span class="n">client</span><span class="err">请求</span><span class="n">VIP</span> <span class="err">时，不仅替换了</span><span class="n">package</span> <span class="err">的</span><span class="n">dst</span> <span class="n">ip</span><span class="err">，还替换了</span><span class="n">package</span><span class="err">的</span> <span class="n">src</span> <span class="n">ip</span><span class="err">；但</span><span class="n">VIP</span> <span class="err">返回给</span>
+              <span class="n">client</span><span class="err">时也替换了</span><span class="n">src</span> <span class="n">ip</span><span class="err">；还是通过上面</span><span class="n">NAT</span> <span class="err">模式的工作原因的图进行分析</span> <span class="n">FULL</span> <span class="n">NAT</span> <span class="err">的工作原理：</span>
+         <span class="p">(</span><span class="mi">1</span><span class="p">).</span> <span class="err">首先</span><span class="n">client</span> <span class="err">发送请求</span><span class="p">[</span><span class="n">package</span><span class="p">]</span> <span class="err">给</span><span class="n">VIP</span><span class="err">；</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span><span class="n">client</span> <span class="err">发送给</span><span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span><span class="n">SOURCE</span> <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  <span class="n">EDST</span>   <span class="mf">202.103.106.5</span><span class="o">:</span><span class="mi">80</span>  
+        <span class="p">(</span><span class="mi">2</span><span class="p">).</span> <span class="n">VIP</span> <span class="err">收到</span><span class="n">package</span><span class="err">后，会根据</span><span class="n">LVS</span><span class="err">设置的</span><span class="n">LB</span><span class="err">算法选择一个合适的</span><span class="n">realserver</span><span class="err">，然后把</span><span class="n">package</span> <span class="err">的</span><span class="n">DST</span> <span class="n">IP</span> <span class="err">修改为</span>
+        <span class="n">realserver</span><span class="err">；把</span><span class="n">sorce</span> <span class="n">ip</span> <span class="err">改成</span> <span class="n">lvs</span> <span class="err">集群的</span><span class="n">LB</span> <span class="n">IP</span>   
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">VIP</span> <span class="err">发送给</span><span class="n">realserver</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span> <span class="n">SOURCE</span>   <span class="mf">172.24.101.135</span><span class="p">[</span><span class="n">lb</span> <span class="n">ip</span><span class="p">]</span>  <span class="n">EDST</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span>  
+        <span class="p">(</span><span class="mi">3</span><span class="p">).</span> <span class="n">realserver</span> <span class="err">收到这个</span><span class="n">package</span><span class="err">后判断</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">是自己，就处理这个</span><span class="n">package</span> <span class="err">，处理完后把这个包发送给</span><span class="n">LVS</span> <span class="n">VIP</span><span class="err">：</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">realserver</span> <span class="err">处理完成后发送给</span><span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span>   <span class="n">SOURCE</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span>  <span class="n">EDST</span>     <span class="mf">172.24.101.135</span><span class="p">[</span><span class="err">这个</span><span class="n">ip</span><span class="err">是</span> <span class="n">LVS</span> <span class="n">VIP</span> <span class="err">集群的一太机器</span><span class="p">]</span>     
+       <span class="p">(</span><span class="mi">4</span><span class="p">).</span> <span class="n">LVS</span> <span class="err">收到这个</span><span class="n">package</span> <span class="err">后把</span><span class="n">sorce</span> <span class="n">ip</span><span class="err">改成</span><span class="n">VIP</span><span class="err">的</span><span class="n">IP</span><span class="err">，</span><span class="n">dst</span> <span class="n">ip</span><span class="err">改成</span> <span class="n">client</span> <span class="n">ip</span><span class="err">然后发送给</span><span class="n">client</span><span class="err">：</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span><span class="n">VIP</span><span class="err">收到</span><span class="n">package</span> <span class="err">后修改</span><span class="n">sourceip</span> <span class="err">发送给</span><span class="n">client</span><span class="err">的包：</span>  
+<span class="mf">2.</span><span class="n">SOURCE</span>   <span class="mf">202.103.106.5.80</span><span class="err">：</span><span class="mi">80</span>  <span class="n">EDST</span>   <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  
+      <span class="mf">2.</span> <span class="n">FULL</span> <span class="n">NAT</span> <span class="err">模式的注意事项：</span>
+<span class="err">·</span><span class="n">FULL</span> <span class="n">NAT</span> <span class="err">模式也不需要</span> <span class="n">LBIP</span> <span class="err">和</span><span class="n">realserver</span> <span class="n">ip</span> <span class="err">在同一个网段；</span>
+<span class="err">·</span><span class="n">full</span> <span class="n">nat</span> <span class="err">跟</span><span class="n">nat</span> <span class="err">相比的优点是：保证</span><span class="n">RS</span><span class="err">回包一定能够回到</span><span class="n">LVS</span><span class="err">；因为源地址就是</span><span class="n">LVS</span><span class="o">--&gt;</span> <span class="err">不确定</span>
+<span class="err">·</span><span class="n">full</span> <span class="n">nat</span>  <span class="err">因为要更新</span><span class="n">sorce</span> <span class="n">ip</span> <span class="err">所以性能正常比</span><span class="n">nat</span> <span class="err">模式下降</span> <span class="mi">10</span><span class="o">%</span>
+<span class="n">LVS</span>  <span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式</span>
+<span class="mf">1.</span><span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式的网络结构图：</span>
+
+
+       <span class="mf">2.</span> <span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式的基本原理：</span>
+<span class="err">还是按</span><span class="n">NAT</span> <span class="err">模式的基本框架来说明</span><span class="n">TUNNEL</span> <span class="err">模式的基本原理：</span>
+        <span class="p">(</span><span class="mi">1</span><span class="p">).</span> <span class="err">首先</span><span class="n">client</span> <span class="err">发送请求</span><span class="p">[</span><span class="n">package</span><span class="p">]</span> <span class="err">给</span><span class="n">VIP</span><span class="err">；</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span><span class="n">client</span> <span class="err">发送给</span><span class="n">VIP</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span><span class="n">SOURCE</span> <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  <span class="n">DST</span>   <span class="mf">202.103.106.5</span><span class="o">:</span><span class="mi">80</span>  
+        <span class="p">(</span><span class="mi">2</span><span class="p">).</span> <span class="n">VIP</span> <span class="err">收到</span><span class="n">package</span><span class="err">后，会根据</span><span class="n">LVS</span><span class="err">设置的</span><span class="n">LB</span><span class="err">算法选择一个合适的</span><span class="n">realserver</span><span class="err">；并把</span><span class="n">client</span><span class="err">发送的</span><span class="n">package</span> <span class="err">包装到一个</span>
+        <span class="err">新的</span><span class="n">IP</span><span class="err">包里面；新的</span><span class="n">IP</span><span class="err">包的</span><span class="n">dst</span><span class="err">是</span><span class="n">realserver</span><span class="err">的</span><span class="n">IP</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">VIP</span> <span class="err">发送给</span><span class="n">realserver</span><span class="err">的</span><span class="n">package</span><span class="err">：</span>  
+<span class="mf">2.</span> <span class="n">client</span> <span class="err">发送的包</span>  <span class="o">&lt;</span><span class="k">strong</span><span class="o">&gt;</span><span class="n">DST</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span><span class="o">&lt;/</span><span class="k">strong</span><span class="o">&gt;</span>  
+        <span class="p">(</span><span class="mi">3</span><span class="p">).</span> <span class="n">realserver</span> <span class="err">收到这个</span><span class="n">package</span><span class="err">后判断</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">是自己，然后解析出来的</span><span class="n">package</span><span class="err">的</span><span class="n">dst</span><span class="err">是</span><span class="n">VIP</span><span class="err">；会检测我们的网卡上是否</span>
+        <span class="err">帮了</span><span class="n">VIP</span><span class="err">的</span><span class="n">ip</span><span class="err">地址；如果帮了就会处理这个包，如果没有直接丢掉。</span> <span class="err">我们一般在</span><span class="n">realserver</span><span class="err">上面</span> <span class="nl">lo</span><span class="p">:</span><span class="mi">0</span> <span class="err">绑定了</span><span class="n">VIP</span><span class="err">的</span><span class="n">ip</span><span class="err">地址，</span>
+        <span class="err">就可以处理</span>
+<span class="p">[</span><span class="n">html</span><span class="p">]</span> <span class="n">view</span> <span class="n">plain</span> <span class="k">copy</span>
+<span class="mf">1.</span>  <span class="err">#</span> <span class="n">realserver</span> <span class="err">处理完成后直接发送给</span><span class="n">client</span><span class="err">响应包：</span>  
+<span class="mf">2.</span> <span class="n">SOURCE</span>   <span class="mf">172.16.0.3</span><span class="err">：</span><span class="mi">8000</span>  <span class="n">DST</span>      <span class="mf">202.100.1.2</span><span class="o">:</span><span class="mi">3478</span>  <span class="err">【</span><span class="n">client</span> <span class="n">ip</span><span class="err">】</span>  
+      <span class="mf">3.</span> <span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式的注意：</span>
+<span class="err">·</span><span class="n">TUNNEL</span> <span class="err">模式必须在所有的</span><span class="n">realserver</span> <span class="err">机器上面绑定</span><span class="n">VIP</span><span class="err">的</span><span class="n">IP</span><span class="err">地址</span>
+<span class="err">·</span><span class="n">TUNNEL</span> <span class="err">模式的</span><span class="n">vip</span> <span class="o">------&gt;</span><span class="n">realserver</span> <span class="err">的包通信通过</span><span class="n">TUNNEL</span> <span class="err">模式，不管是内网和外网都能通信，所以不需要</span><span class="n">lvs</span> <span class="n">vip</span><span class="err">跟</span><span class="n">realserver</span> 
+<span class="err">在同一个网段内</span>
+<span class="err">·</span><span class="n">TUNNEL</span> <span class="err">模式</span> <span class="n">realserver</span><span class="err">会把</span><span class="n">packet</span> <span class="err">直接发给</span><span class="n">client</span> <span class="err">不会给</span><span class="n">lvs</span><span class="err">了</span>
+<span class="err">·</span><span class="n">TUNNEL</span> <span class="err">模式走的隧道模式，所以运维起来比较难，所以一般不用</span>
+
+  <span class="n">LVS</span>  <span class="n">DR</span><span class="err">、</span><span class="n">NAT</span><span class="err">、</span><span class="n">FULL</span> <span class="n">NAT</span><span class="err">、</span><span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式的区别：</span>
+<span class="mf">1.</span>    <span class="err">是否需要</span><span class="n">lvs</span> <span class="n">vip</span><span class="err">跟</span><span class="n">realserver</span> <span class="err">在同一个网段：</span>
+             <span class="n">DR</span> <span class="err">模式因为只修改</span> <span class="n">package</span><span class="err">的</span> <span class="n">MAC</span><span class="err">地址通过</span><span class="n">ARP</span><span class="err">广播的形势找到</span><span class="n">realserver</span><span class="err">，所以</span> <span class="err">要求</span><span class="n">LVS</span> <span class="err">的</span><span class="n">VIP</span> <span class="err">和</span><span class="n">realserver</span><span class="err">的</span><span class="n">IP</span>
+              <span class="err">必须在同一个网段内，也就是在挂载</span><span class="n">VIP</span> <span class="err">时先确认</span><span class="n">LVS</span><span class="err">的工作模式，如果是</span><span class="n">DR</span><span class="err">模式需要先确认这个</span><span class="n">IP</span> <span class="err">只是否能挂在这个</span><span class="n">LVS</span><span class="err">下面。</span>
+<span class="err">其他模式因为都会修改</span><span class="n">DST</span> <span class="n">ip</span> <span class="err">为</span> <span class="n">realserver</span><span class="err">的</span><span class="n">IP</span> <span class="err">地址，所以不需要在同一个网段内</span>
+        <span class="mf">2.</span>   <span class="err">是否需要在</span><span class="n">realserver</span> <span class="err">绑定</span><span class="n">LVS</span> <span class="n">vip</span> <span class="err">的</span><span class="n">IP</span> <span class="err">地址：</span>
+              <span class="n">realserver</span> <span class="err">收到</span><span class="n">package</span><span class="err">后会判断</span><span class="n">dst</span> <span class="n">ip</span> <span class="err">是否是自己的</span><span class="n">ip</span><span class="err">，如果不是就直接丢掉包；因为</span><span class="n">DR</span><span class="err">模式</span><span class="n">dst</span> <span class="err">没有修改还是</span><span class="n">LVS</span>
+              <span class="err">的</span><span class="n">VIP</span><span class="err">；所以需要在</span><span class="n">realserver</span><span class="err">上面绑定</span><span class="n">VIP</span><span class="err">；</span><span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">模式只是对</span><span class="n">package</span> <span class="err">重新包装一层，</span><span class="n">realserver</span><span class="err">解析后的</span><span class="n">IP</span><span class="err">包</span>
+              <span class="err">的</span><span class="n">DST</span>  <span class="err">仍然是</span> <span class="n">LVS</span><span class="err">的</span><span class="n">VIP</span> <span class="err">；也需要在</span><span class="n">realserver</span><span class="err">上面绑定</span><span class="n">VIP</span><span class="err">；其他的都不需要</span>
+        <span class="mf">3.</span>   <span class="err">四种模式的性能比较：</span>
+<span class="err">因为</span><span class="n">DR</span><span class="err">模式</span>   <span class="n">TP</span> <span class="n">TUNELL</span> <span class="err">模式都是在</span><span class="n">package</span> <span class="k">in</span> <span class="err">时经过</span><span class="n">LVS</span> <span class="err">；在</span><span class="n">package</span> <span class="k">out</span><span class="err">是直接返回给</span><span class="n">client</span><span class="err">；所以二者的性能比</span><span class="n">NAT</span> <span class="err">模式高；</span>
+<span class="err">但</span><span class="n">IP</span> <span class="n">TUNNEL</span> <span class="err">因为是</span><span class="n">TUNNEL</span> <span class="err">模式比较复杂，其性能不如</span><span class="n">DR</span><span class="err">模式；</span><span class="n">FULL</span> <span class="n">NAT</span> <span class="err">模式因为不仅要更换</span> <span class="n">DST</span> <span class="n">IP</span> <span class="err">还更换</span> <span class="n">SOURCE</span> <span class="n">IP</span>  <span class="err">所以性能比</span>
+<span class="n">NAT</span> <span class="err">下降</span><span class="mi">10</span><span class="o">%</span>
+<span class="err">所以，</span><span class="mi">4</span><span class="err">中模式的性能如下：</span><span class="n">DR</span>  <span class="o">--&gt;</span> <span class="n">IP</span> <span class="n">TUNNEL</span>  <span class="o">---&gt;</span><span class="n">NAT</span> <span class="o">-----&gt;</span><span class="n">FULL</span> <span class="n">NAT</span>
+ <span class="n">LVS</span> <span class="err">实践中的积累</span>
+<span class="mf">1.</span> <span class="n">lvs</span> <span class="err">不会主动断开连接</span>
+<span class="err">比如</span> <span class="n">client</span> <span class="err">通过</span><span class="n">LVS</span> <span class="n">VIP</span> <span class="err">采用长链接方式访问</span><span class="n">server</span><span class="err">，即使我们把</span><span class="n">LVS</span><span class="err">下面的</span><span class="n">realserver</span><span class="err">的</span><span class="n">status</span><span class="p">.</span><span class="n">html</span><span class="err">文件删除了；本来通过</span><span class="n">LVS</span> <span class="err">跟</span>
+<span class="err">这台</span><span class="n">realserver</span> <span class="err">链接的请求也不会被</span><span class="n">LVS</span>
+<span class="err">强制断开；要等到</span><span class="n">client</span><span class="err">自己断开连接；【在</span><span class="n">client</span><span class="err">主动断开期间；</span><span class="n">client</span><span class="err">可以跟这台</span><span class="n">realserver</span> <span class="err">正常通信】；这样有个好处时在网络</span>
+<span class="err">抖动时；</span><span class="n">LVS</span><span class="err">不会频繁的流量截断，到不同的</span><span class="n">RS</span><span class="err">上面</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bind/" title="bind" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                bind
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../log-analysis/" title="log-analysis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                log-analysis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

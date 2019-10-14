@@ -1,0 +1,1972 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>docker - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                docker
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        docker
+      </label>
+    
+    <a href="./" title="docker" class="md-nav__link md-nav__link--active">
+      docker
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    时区问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-regisrty" class="md-nav__link">
+    docker-regisrty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    dockerfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    国内镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos6" class="md-nav__link">
+    centos6安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harbor" class="md-nav__link">
+    harbor仓库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc_docker" class="md-nav__link">
+    bashrc_docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesos_marathon" class="md-nav__link">
+    mesos_marathon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据持久化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piddocker" class="md-nav__link">
+    pid定位docker
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    时区问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-regisrty" class="md-nav__link">
+    docker-regisrty
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    dockerfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    国内镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos6" class="md-nav__link">
+    centos6安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harbor" class="md-nav__link">
+    harbor仓库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bashrc_docker" class="md-nav__link">
+    bashrc_docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesos_marathon" class="md-nav__link">
+    mesos_marathon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    数据持久化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piddocker" class="md-nav__link">
+    pid定位docker
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>docker</h1>
+                
+                <h2 id="_1">时区问题</h2>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span>  <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">localtime</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">localtime</span><span class="p">:</span><span class="n">ro</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">clock</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">clock</span><span class="p">:</span><span class="n">ro</span>
+
+<span class="err">挂在宿主机的时区文件</span>
+
+<span class="err">由于共享内核，无法单独修改</span><span class="n">docker</span><span class="err">容器的时间</span>
+</pre></div>
+
+
+<h2 id="_2">命令</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">docker</span>
+<span class="n">systemctl</span> <span class="k">start</span> <span class="n">docker</span>
+
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="c1">--hostname wwwtest --name wwwtest -p 28080:8080 </span>
+<span class="c1">--add-host=mlivetest.dachuizichan.com:127.0.0.1 </span>
+<span class="c1">--add-host=db.dachuizichan.com:192.168.1.18 </span>
+<span class="c1">--add-host=atlastest.dachuizichan.com:192.168.1.16 </span>
+<span class="c1">--add-host=hprpt2livetest.eucp.b2m.cn:127.0.0.1 </span>
+<span class="c1">--add-host=smtplivetest.exmail.qq.com:183.232.93.197 </span>
+<span class="c1">--add-host=redis.dachuizichan.com:172.17.0.168 -v /dachui:/dachui </span>
+<span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">war</span><span class="o">/</span><span class="n">wwwtest</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">webapps</span><span class="o">/</span><span class="n">DaChui</span> <span class="o">-</span><span class="n">v</span> 
+<span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">wwwtest</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">tomcat</span><span class="o">/</span><span class="n">log</span> 
+<span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">localtime</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">localtime</span><span class="p">:</span><span class="n">ro</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">clock</span><span class="p">:</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">clock</span><span class="p">:</span><span class="n">ro</span> 
+<span class="n">tomcat</span><span class="p">:</span><span class="n">v6</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">supervisord</span>
+
+<span class="err">镜像</span>
+<span class="n">docker</span> <span class="n">pull</span> <span class="n">centos6</span><span class="p">.</span><span class="mi">6</span>  <span class="err">拉取镜像</span>
+<span class="n">docker</span> <span class="n">images</span>         <span class="err">查看镜像</span>
+<span class="n">docker</span> <span class="n">save</span> <span class="o">-</span><span class="n">o</span> <span class="n">ubuntu_14</span><span class="p">.</span><span class="mi">04</span><span class="p">.</span><span class="n">tar</span> <span class="n">ubuntu</span><span class="p">:</span><span class="mi">14</span><span class="p">.</span><span class="mi">04</span>      <span class="err">存出镜像</span>
+<span class="n">docker</span> <span class="k">load</span> <span class="c1">--input ubuntu_14.04.tar                 载入镜像</span>
+<span class="n">docker</span> <span class="k">commit</span>  <span class="mi">0</span><span class="n">b2616b0e5a8</span> <span class="n">ouruser</span> <span class="err">提交镜像</span>
+<span class="n">docker</span> <span class="n">rmi</span> <span class="n">training</span><span class="o">/</span><span class="n">sinatra</span>        <span class="err">移除本地镜像</span>
+
+<span class="err">实例</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8000</span><span class="p">:</span><span class="mi">80</span> <span class="n">centos6</span><span class="p">.</span><span class="mi">6</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>  <span class="err">运行实例，映射端口</span>
+<span class="n">docker</span> <span class="n">ps</span>   <span class="err">查看实例</span>
+<span class="n">docekr</span> <span class="n">status</span> <span class="n">id</span>  <span class="err">实例状态</span>
+<span class="n">docker</span> <span class="n">stop</span>  <span class="n">id</span> <span class="err">停止实例</span>
+<span class="n">docker</span> <span class="k">restart</span> <span class="n">id</span>  <span class="err">重启实例</span>
+<span class="n">docker</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="n">id</span>  <span class="err">删除实例</span>
+<span class="n">docker</span> <span class="n">export</span> <span class="mi">7691</span><span class="n">a814370e</span> <span class="o">&gt;</span> <span class="n">ubuntu</span><span class="p">.</span><span class="n">tar</span>  <span class="err">导出实例</span>
+<span class="n">cat</span> <span class="n">ubuntu</span><span class="p">.</span><span class="n">tar</span> <span class="o">|</span> <span class="n">sudo</span> <span class="n">docker</span> <span class="n">import</span> <span class="o">-</span> <span class="n">test</span><span class="o">/</span><span class="n">ubuntu</span><span class="p">:</span><span class="n">v1</span><span class="p">.</span><span class="mi">0</span>  <span class="err">倒入实例</span>
+
+<span class="n">docker</span> <span class="n">logs</span> <span class="o">-</span><span class="n">f</span> <span class="c1">--tail=10 wwwtest  查看日志  </span>
+<span class="o">#</span><span class="n">ENTRYPOINT</span> <span class="p">[</span><span class="ss">&quot;/usr/local/tomcat/bin/catalina.sh&quot;</span><span class="p">,</span> <span class="ss">&quot;run&quot;</span><span class="p">]</span>  <span class="err">类似这种把日志打印到前台</span>
+
+<span class="err">慎用</span>
+<span class="k">Delete</span> <span class="k">all</span> <span class="n">containers</span>
+
+<span class="n">docker</span> <span class="n">rm</span> <span class="err">$</span><span class="p">(</span><span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">q</span><span class="p">)</span>
+<span class="k">Delete</span> <span class="k">all</span> <span class="n">images</span>
+
+<span class="n">docker</span> <span class="n">rmi</span> <span class="err">$</span><span class="p">(</span><span class="n">docker</span> <span class="n">images</span> <span class="o">-</span><span class="n">q</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="docker-regisrty">docker-regisrty</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">python</span><span class="o">-</span><span class="nv">devel</span> <span class="nv">libevent</span><span class="o">-</span><span class="nv">devel</span> <span class="nv">python</span><span class="o">-</span><span class="nv">pip</span> <span class="nv">gcc</span> <span class="nv">xz</span><span class="o">-</span><span class="nv">devel</span>  <span class="nv">swig</span> <span class="nv">openssl</span><span class="o">-</span><span class="nv">devel</span>
+<span class="nv">pip</span> <span class="nv">install</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">registry</span>
+<span class="nv">cd</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">python2</span>.<span class="mi">6</span><span class="o">/</span><span class="nv">site</span><span class="o">-</span><span class="nv">packages</span><span class="o">/</span><span class="nv">config</span>
+<span class="nv">cp</span> <span class="nv">config_sample</span>.<span class="nv">yml</span> <span class="nv">config</span>.<span class="nv">yml</span>
+
+存储位置 <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">registry</span>
+启动：
+<span class="nv">gunicorn</span> <span class="o">-</span><span class="nv">b</span> <span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>:<span class="mi">5000</span>  <span class="nv">docker_registry</span>.<span class="nv">wsgi</span>:<span class="nv">application</span>
+<span class="nv">or</span>
+<span class="nv">gunicorn</span> <span class="o">--</span><span class="nv">access</span><span class="o">-</span><span class="nv">logfile</span> <span class="o">-</span> <span class="o">--</span><span class="nv">error</span><span class="o">-</span><span class="nv">logfile</span> <span class="o">-</span> <span class="o">-</span><span class="nv">k</span> <span class="nv">gevent</span> <span class="o">-</span><span class="nv">b</span> <span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>:<span class="mi">5000</span> <span class="o">-</span><span class="nv">w</span> <span class="mi">4</span> 
+<span class="o">--</span><span class="nv">max</span><span class="o">-</span><span class="nv">requests</span> 
+<span class="mi">100</span> <span class="nv">docker_registry</span>.<span class="nv">wsgi</span>:<span class="nv">application</span>
+
+<span class="nv">docker</span> <span class="nv">tag</span> <span class="nv">a4e2366f858c</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">10</span>.<span class="mi">49</span>:<span class="mi">5000</span><span class="o">/</span><span class="nv">pingtai</span><span class="o">-</span><span class="mi">0508</span>  <span class="nv">a4e2366f858c</span> 为<span class="nv">imageid</span>
+
+
+
+注意 需要<span class="nv">https</span>验证：修改<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysconfig</span><span class="o">/</span><span class="nv">docker</span>
+ 增加：
+<span class="nv">DOCKER_OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">--insecure-registry 192.168.10.49:5000</span><span class="s2">&quot;</span>
+  将 <span class="mh">$e</span><span class="nv">xec</span> <span class="o">-</span><span class="nv">d</span> $<span class="nv">other_args</span> <span class="o">&amp;&gt;&gt;</span> $<span class="nv">logfile</span> <span class="o">&amp;</span>改成<span class="mh">$e</span><span class="nv">xec</span> <span class="o">-</span><span class="nv">d</span> <span class="mh">$D</span><span class="nv">OCKER_OPTS</span> <span class="o">&amp;&gt;&gt;</span> $<span class="nv">logfile</span> <span class="o">&amp;</span>
+  重新启动<span class="nv">docker</span>，再次<span class="nv">push</span>就<span class="nv">OK</span>了
+  <span class="nv">service</span> <span class="nv">docker</span> <span class="nv">restart</span>
+</pre></div>
+
+
+<h2 id="dockerfile">dockerfile</h2>
+<div class="codehilite"><pre><span></span><span class="k">FROM</span> <span class="n">ubuntu</span><span class="p">:</span><span class="n">trusty</span>
+
+<span class="n">ENV</span> <span class="n">DEBIAN_FRONTEND</span> <span class="n">noninteractive</span>
+<span class="n">ENV</span> <span class="n">PATH</span> <span class="err">$</span><span class="n">PATH</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sbin</span>
+
+<span class="n">EXPOSE</span> <span class="mi">1935</span>
+<span class="n">EXPOSE</span> <span class="mi">80</span>
+
+<span class="o">#</span> <span class="k">create</span> <span class="n">directories</span>
+<span class="n">RUN</span> <span class="n">mkdir</span> <span class="o">/</span><span class="n">src</span> <span class="o">/</span><span class="n">config</span> <span class="o">/</span><span class="n">logs</span> <span class="o">/</span><span class="k">data</span> <span class="o">/</span><span class="k">static</span>
+
+<span class="o">#</span> <span class="k">update</span> <span class="k">and</span> <span class="n">upgrade</span> <span class="n">packages</span>
+<span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="k">update</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">upgrade</span> <span class="o">-</span><span class="n">y</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">clean</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="c1">--no-install-recommends build-essential \</span>
+  <span class="n">wget</span> <span class="n">software</span><span class="o">-</span><span class="n">properties</span><span class="o">-</span><span class="n">common</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+<span class="o">#</span> <span class="n">ffmpeg</span>
+  <span class="k">add</span><span class="o">-</span><span class="n">apt</span><span class="o">-</span><span class="n">repository</span> <span class="n">ppa</span><span class="p">:</span><span class="n">mc3man</span><span class="o">/</span><span class="n">trusty</span><span class="o">-</span><span class="n">media</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="k">update</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="c1">--no-install-recommends ffmpeg &amp;&amp; \</span>
+<span class="o">#</span> <span class="n">nginx</span> <span class="n">dependencies</span>
+  <span class="n">apt</span><span class="o">-</span><span class="k">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="c1">--no-install-recommends libpcre3-dev \</span>
+  <span class="n">zlib1g</span><span class="o">-</span><span class="n">dev</span> <span class="n">libssl</span><span class="o">-</span><span class="n">dev</span> <span class="n">wget</span> <span class="o">&amp;&amp;</span> <span class="err">\</span>
+  <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apt</span><span class="o">/</span><span class="n">lists</span><span class="cm">/*</span>
+
+<span class="cm"># get nginx source</span>
+<span class="cm">WORKDIR /src</span>
+<span class="cm">RUN wget http://nginx.org/download/nginx-1.6.2.tar.gz &amp;&amp; \</span>
+<span class="cm">  tar zxf nginx-1.6.2.tar.gz &amp;&amp; \</span>
+<span class="cm">  rm nginx-1.6.2.tar.gz &amp;&amp; \</span>
+<span class="cm"># get nginx-rtmp module</span>
+<span class="cm">  wget https://github.com/arut/nginx-rtmp-module/archive/v1.1.6.tar.gz &amp;&amp; \</span>
+<span class="cm">  tar zxf v1.1.6.tar.gz &amp;&amp; \</span>
+<span class="cm">  rm v1.1.6.tar.gz</span>
+
+<span class="cm"># compile nginx</span>
+<span class="cm">WORKDIR /src/nginx-1.6.2</span>
+<span class="cm">RUN ./configure --add-module=/src/nginx-rtmp-module-1.1.6 \</span>
+<span class="cm">  --conf-path=/config/nginx.conf \</span>
+<span class="cm">  --error-log-path=/logs/error.log \</span>
+<span class="cm">  --http-log-path=/logs/access.log &amp;&amp; \</span>
+<span class="cm">  make &amp;&amp; \</span>
+<span class="cm">  make install</span>
+
+<span class="cm">ADD nginx.conf /config/nginx.conf</span>
+<span class="cm">ADD static /static</span>
+
+<span class="cm">WORKDIR /</span>
+<span class="cm">CMD &quot;nginx&quot;</span>
+</pre></div>
+
+
+<h2 id="_3">国内镜像</h2>
+<div class="codehilite"><pre><span></span><span class="n">docker</span> <span class="n">pull</span> <span class="n">daocloud</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">centos</span><span class="p">:</span><span class="mi">6</span>
+<span class="n">docker</span> <span class="n">pull</span> <span class="n">daocloud</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">centos</span><span class="p">:</span><span class="mi">7</span>
+
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="n">daocloud</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">centos</span><span class="p">:</span><span class="mi">6</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>  <span class="err">拉取</span><span class="n">images</span><span class="err">并运行</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dashboard</span><span class="p">.</span><span class="n">daocloud</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">packages</span>
+</pre></div>
+
+
+<h2 id="centos6">centos6安装</h2>
+<div class="codehilite"><pre><span></span><span class="n">CentOS</span> <span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="p">(</span><span class="mi">64</span><span class="err">位</span><span class="p">)</span><span class="err">及以后</span>
+<span class="err">在运行</span><span class="n">CentOS</span> <span class="mi">6</span><span class="p">.</span><span class="mi">5</span><span class="err">及以后版本时，需要内核版本</span><span class="o">&gt;=</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">32</span><span class="o">-</span><span class="mi">431</span><span class="err">，因为这些内核包含了运行</span><span class="n">Docker</span>
+<span class="err">的一些特定修改。</span>
+<span class="err">$</span> <span class="n">uname</span> <span class="o">-</span><span class="n">r</span>
+<span class="mi">2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">32</span><span class="o">-</span><span class="mi">431</span><span class="p">.</span><span class="mi">17</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="n">el6</span><span class="p">.</span><span class="n">x86_64</span>
+
+
+<span class="n">Device</span> <span class="n">Mapper</span>
+<span class="n">Docker</span><span class="err">默认使用</span><span class="n">AUFS</span><span class="err">作为存储驱动，但是</span><span class="n">AUFS</span><span class="err">并没有被包括在</span><span class="n">Linux</span><span class="err">的主线内核中。</span><span class="n">CentOS</span><span class="err">中可以</span>
+<span class="err">使用</span><span class="n">Device</span> <span class="n">Mapper</span><span class="err">作为存储驱动，</span>
+<span class="err">这是在</span><span class="mi">2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">9</span><span class="err">内核版本引入的新功能。我们需要先确认是否启用该功能</span><span class="p">:</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="k">class</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">device</span><span class="o">-</span><span class="n">mapper</span>
+<span class="n">lrwxrwxrwx</span> <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">0</span> <span class="n">May</span>  <span class="mi">1</span> <span class="mi">20</span><span class="p">:</span><span class="mi">55</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="k">class</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">device</span><span class="o">-</span><span class="n">mapper</span> <span class="o">-&gt;</span> 
+<span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="n">devices</span><span class="o">/</span><span class="n">virtual</span><span class="o">/</span><span class="n">misc</span><span class="o">/</span><span class="n">device</span><span class="o">-</span><span class="n">mapper</span>
+<span class="err">如果没有检测到</span><span class="n">Device</span> <span class="n">Mapper</span><span class="err">，需要安装</span><span class="n">device</span><span class="o">-</span><span class="n">mapper</span><span class="err">软件包</span><span class="p">:</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">device</span><span class="o">-</span><span class="n">mapper</span>
+<span class="err">然后重新加载</span><span class="n">dm_mod</span><span class="err">内核模块</span><span class="p">:</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">modprobe</span> <span class="n">dm_mod</span>
+
+<span class="err">配置</span><span class="n">epel</span><span class="err">源</span>
+<span class="err">需要注意的是，</span><span class="n">CentOS6</span><span class="p">.</span><span class="mi">5</span><span class="err">中，已经有一个同名</span><span class="n">docker</span><span class="err">的可执行系统程序包。所以</span><span class="n">Docker</span> <span class="n">RPM</span><span class="err">包</span>
+<span class="err">命名为</span><span class="n">docker</span><span class="o">-</span><span class="n">io</span><span class="err">，我们先卸掉</span><span class="n">docker</span><span class="err">。</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">remove</span> <span class="n">docker</span>
+<span class="err">第三步</span> <span class="n">Install</span> <span class="n">Docker</span><span class="o">-</span><span class="n">IO</span>
+<span class="err">最后需要安装</span><span class="n">docker</span><span class="o">-</span><span class="n">io</span><span class="err">的</span><span class="n">RPM</span><span class="err">包。</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">docker</span><span class="o">-</span><span class="n">io</span>
+</pre></div>
+
+
+<h2 id="harbor">harbor仓库</h2>
+<div class="codehilite"><pre><span></span><span class="n">用过Docker的知道拥有一个Docker</span><span class="w"> </span><span class="n">Registry是多么的重要</span><span class="err">，</span><span class="n">但是官方自带的免费的Docker</span><span class="w"> </span><span class="n">Registry</span><span class="w"></span>
+<span class="n">除了没有管理页面</span><span class="err">，</span><span class="w"></span>
+<span class="n">甚至连一些运维必备的功能都是缺失的</span><span class="err">，</span><span class="n">所以一直在寻找一个Registry的管理工具</span><span class="err">，</span><span class="n">直到看到了Harbor</span><span class="err">。</span><span class="w"></span>
+
+
+<span class="n">Harbor简介</span><span class="w"></span>
+
+<span class="n">Harbor是一个用于存储和分发Docker镜像的企业级Registry服务器</span><span class="err">，</span><span class="n">通过添加一些企业必需的</span><span class="w"></span>
+<span class="n">功能特性</span><span class="err">，</span><span class="n">例如安全</span><span class="err">、</span><span class="n">标识和管理等</span><span class="err">，</span><span class="w"></span>
+<span class="n">扩展了开源Docker</span><span class="w"> </span><span class="n">Distribution</span><span class="err">。</span><span class="n">作为一个企业级私有Registry服务器</span><span class="err">，</span><span class="n">Harbor提供了</span><span class="w"></span>
+<span class="n">更好的性能和安全</span><span class="err">。</span><span class="w"></span>
+<span class="n">提升用户使用Registry构建和运行环境传输镜像的效率</span><span class="err">。</span><span class="n">Harbor支持安装在多个Registry节点的</span><span class="w"></span>
+<span class="n">镜像资源复制</span><span class="err">，</span><span class="w"></span>
+<span class="n">镜像全部保存在私有Registry中</span><span class="err">，</span><span class="n">确保数据和知识产权在公司内部网络中管控</span><span class="err">。</span><span class="n">另外</span><span class="err">，</span><span class="n">Harbor也</span><span class="w"></span>
+<span class="n">提供了高级的安全特性</span><span class="err">，</span><span class="n">诸如用户管理</span><span class="err">，</span><span class="w"></span>
+<span class="n">访问控制和活动审计等</span><span class="err">。</span><span class="w"></span>
+<span class="n">Harbor官方网站</span><span class="err">：</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">vmware</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">harbor</span><span class="o">/</span><span class="w"></span>
+
+<span class="n">Harbor部署实战</span><span class="w"></span>
+
+<span class="n">Harbor是由Vmware中国研发团队负责开发的开源企业级Docker</span><span class="w"> </span><span class="n">Registry</span><span class="err">，</span><span class="n">不仅仅解决了我们直接使用</span><span class="w"></span>
+<span class="n">Docker</span><span class="w"> </span><span class="n">Registry的功能确实</span><span class="err">，</span><span class="w"></span>
+<span class="n">更解决了我们在生产使用Docker</span><span class="w"> </span><span class="n">Registry面临的高可用</span><span class="err">、</span><span class="n">镜像仓库直接复制</span><span class="err">、</span><span class="n">镜像仓库性能等运维痛点</span><span class="err">。</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">vmware</span><span class="o">/</span><span class="n">harbor</span><span class="w"></span>
+
+<span class="n">部署目录</span><span class="w"></span>
+<span class="w">    </span><span class="n">harbor部署的所有文件均在Deploy目录下</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">harbor</span><span class="o">/</span><span class="n">Deploy</span><span class="o">/</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">ls</span><span class="w"></span>
+<span class="n">config</span><span class="w"></span>
+<span class="n">db</span><span class="w"></span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">yml</span><span class="w"> </span><span class="n">#docker</span><span class="w"> </span><span class="n">compose模板</span><span class="w"></span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">yml</span><span class="p">.</span><span class="n">photon</span><span class="w"></span>
+<span class="n">harbor</span><span class="p">.</span><span class="n">cfg</span><span class="w">   </span><span class="n">#harbor配置文件</span><span class="w"></span>
+<span class="err">（</span><span class="n">省略部分输出</span><span class="err">）</span><span class="w"> </span>
+<span class="n">Harbor的每个组件都是以Docker容器的形式构建的</span><span class="err">，</span><span class="n">使用Docker</span><span class="w"> </span><span class="n">Compose来对它进行部署</span><span class="err">。</span><span class="n">你可以查看</span><span class="w"></span>
+<span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="p">.</span><span class="n">yml文件</span><span class="err">，</span><span class="w"></span>
+<span class="n">可以发现Harbor有6个容器组成</span><span class="err">：</span><span class="w"></span>
+<span class="n">harbor_ui</span><span class="err">：</span><span class="n">harbor的核心服务</span><span class="err">。</span><span class="w"></span>
+<span class="n">harbor_log</span><span class="err">：</span><span class="n">运行着rsyslog的容器</span><span class="err">，</span><span class="n">进行日志收集</span><span class="err">。</span><span class="w"></span>
+<span class="n">harbor_mysql</span><span class="err">：</span><span class="n">由官方mysql镜像构成的数据库容器</span><span class="w"></span>
+<span class="n">nginx</span><span class="err">：</span><span class="n">使用Nginx做反向代理</span><span class="w"></span>
+<span class="n">registry</span><span class="err">：</span><span class="n">官方的Docker</span><span class="w"> </span><span class="n">registry</span><span class="w"></span>
+<span class="n">harbor_jobservice</span><span class="err">：</span><span class="n">Harbor的任务管理服务</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">为Harbor配置https访问</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">默认情况下Harbor是使用http进行访问</span><span class="err">，</span><span class="n">官方提供了自签名证书的方法</span><span class="err">，</span><span class="n">不过生产环境还是</span><span class="w"></span>
+<span class="w">    </span><span class="n">建议购买SSL证书</span><span class="err">。</span><span class="w"></span>
+<span class="mf">1.</span><span class="n">配置证书</span><span class="w"></span>
+<span class="n">如果你没有SSL证书</span><span class="err">，</span><span class="n">那么也不要使用网上复杂的自签名证书的步骤了</span><span class="err">。</span><span class="n">可以来这里申请一个</span><span class="w"></span>
+<span class="n">免费的SSL证书</span><span class="err">。</span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">buy</span><span class="p">.</span><span class="n">wosign</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">free</span><span class="o">/</span><span class="n">#ssl</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@mysql-yxpopoDeploy</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">config</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="w"></span>
+<span class="n">将两个证书文件放置到cert目录下</span><span class="err">。</span><span class="w"></span>
+<span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="n">crt</span><span class="err">（</span><span class="n">证书公钥</span><span class="err">）</span><span class="w"></span>
+<span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="k">key</span><span class="err">（</span><span class="n">证书私钥</span><span class="err">）</span><span class="w"></span>
+
+<span class="mf">2.</span><span class="n">修改Nginx配置文件</span><span class="w"></span>
+<span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">wosign</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Docdownload</span><span class="o">/</span><span class="n">Nginx</span><span class="o">%</span><span class="mi">20</span><span class="n">SSL</span><span class="o">%</span><span class="n">E8</span><span class="o">%</span><span class="n">AF</span><span class="o">%</span><span class="mi">81</span><span class="o">%</span><span class="n">E4</span><span class="o">%</span><span class="n">B9</span><span class="o">%</span><span class="n">A6</span><span class="o">%</span><span class="n">E9</span><span class="o">%</span><span class="mi">83</span><span class="o">%</span><span class="n">A8</span><span class="o">%</span><span class="n">E7</span><span class="o">%</span><span class="n">BD</span><span class="o">%</span><span class="n">B2</span><span class="o">%</span><span class="n">E6</span><span class="o">%</span><span class="mi">8</span><span class="n">C</span><span class="o">%</span><span class="mi">87</span><span class="o">%</span><span class="n">E5</span><span class="o">%</span><span class="mi">8</span><span class="n">D</span><span class="o">%</span><span class="mf">97.</span><span class="n">pdf</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="n">nginx</span><span class="p">.</span><span class="n">https</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+<span class="n">server</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">listen443</span><span class="w"> </span><span class="n">ssl</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">server_name</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="p">;</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">SSL</span><span class="w"></span>
+<span class="w">    </span><span class="n">ssl_certificate</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="mi">1</span><span class="n">_registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com_bundle</span><span class="p">.</span><span class="n">crt</span><span class="p">;</span><span class="w"></span>
+<span class="n">ssl_certificate_key</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">cert</span><span class="o">/</span><span class="mi">2</span><span class="n">_registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="k">key</span><span class="p">;</span><span class="w"></span>
+<span class="n">ssl_protocols</span><span class="w"> </span><span class="n">TLSv1</span><span class="mf">.1</span><span class="w"> </span><span class="n">TLSv1</span><span class="mf">.2</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="nl">ssl_ciphersAESGCM</span><span class="p">:</span><span class="ow">ALL</span><span class="err">:!</span><span class="nl">DH</span><span class="p">:</span><span class="err">!</span><span class="nl">EXPORT</span><span class="p">:</span><span class="err">!</span><span class="nl">RC4</span><span class="p">:</span><span class="o">+</span><span class="nl">HIGH</span><span class="p">:</span><span class="err">!</span><span class="nl">MEDIUM</span><span class="p">:</span><span class="err">!</span><span class="nl">LOW</span><span class="p">:</span><span class="err">!</span><span class="nl">aNULL</span><span class="p">:</span><span class="err">!</span><span class="n">eNULL</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ssl_prefer_server_ciphers</span><span class="w"> </span><span class="k">on</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="n">ssl_session_cache</span><span class="w"> </span><span class="nl">shared</span><span class="p">:</span><span class="nl">SSL</span><span class="p">:</span><span class="mi">10</span><span class="n">m</span><span class="p">;</span><span class="w"></span>
+<span class="n">#配置访问80端口的请求</span><span class="err">，</span><span class="n">转到443端口</span><span class="w"></span>
+<span class="n">server</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">listen80</span><span class="p">;</span><span class="w"></span>
+<span class="w">     </span><span class="n">server_name</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">rewrite</span><span class="o">^/</span><span class="p">(.</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="nl">server_name</span><span class="p">:</span><span class="mi">443</span><span class="o">/</span><span class="err">$</span><span class="mi">1</span><span class="w"> </span><span class="n">permanent</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="err">}</span><span class="w"></span>
+
+<span class="n">#配置ACL</span><span class="err">，</span><span class="n">限制访问</span><span class="err">（</span><span class="n">如果你准备放置在外围</span><span class="err">，</span><span class="n">又想限制IP访问</span><span class="err">）</span><span class="w"></span>
+<span class="w">  </span><span class="n">allow127</span><span class="mf">.0.0.1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">allow192</span><span class="mf">.168.0.0</span><span class="o">/</span><span class="mi">16</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">deny</span><span class="w"> </span><span class="ow">all</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">Harbor配置</span><span class="w"></span>
+<span class="n">Harbor的配置项比较少</span><span class="err">，</span><span class="n">在harbor</span><span class="p">.</span><span class="n">cfg里面</span><span class="err">。</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@mysql-yxpopo Deploy</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">vim</span><span class="w"> </span><span class="n">harbor</span><span class="p">.</span><span class="n">cfg</span><span class="w"></span>
+<span class="n">hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+<span class="n">ui_url_protocol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">https</span><span class="w"></span>
+<span class="n">harbor_admin_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+
+<span class="n">构建并启动Harbor</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@mysql-yxpopo Deploy</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="k">prepare</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">env</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">app</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">config</span><span class="p">.</span><span class="n">yml</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">db</span><span class="o">/</span><span class="n">env</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">jobservice</span><span class="o">/</span><span class="n">env</span><span class="w"></span>
+<span class="n">Clearing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">private_key</span><span class="p">.</span><span class="n">pem</span><span class="w"></span>
+<span class="n">Clearing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">root</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">ui</span><span class="o">/</span><span class="n">private_key</span><span class="p">.</span><span class="n">pem</span><span class="w"></span>
+<span class="n">Generated</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="p">.</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">root</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="n">The</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">ready</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">usedocker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">service</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">使用DockerCompose启动服务</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@mysql-yxpopo Deploy</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"></span>
+<span class="nl">现在你就可以访问https</span><span class="p">:</span><span class="o">//</span><span class="n">xxx</span><span class="p">.</span><span class="n">xxx</span><span class="p">.</span><span class="n">com</span><span class="err">，</span><span class="n">打开Harbor的管理界面</span><span class="err">。</span><span class="n">使用默认的账号admin</span><span class="o">/</span><span class="n">你</span><span class="w"></span>
+<span class="n">设置的密码</span><span class="err">，</span><span class="n">进行登录</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">登录后的第一件事情永远都是修改默认密码</span><span class="err">。</span><span class="n">然后你就可以在项目管理中</span><span class="err">，</span><span class="n">新建和管理项目了</span><span class="err">。</span><span class="w"></span>
+<span class="n">不过默认情况下创建的项目library是公开的</span><span class="err">，</span><span class="w"></span>
+<span class="n">如果你要使用这个项目</span><span class="err">，</span><span class="n">而且域名放在公网上</span><span class="err">，</span><span class="n">请取消公开</span><span class="err">。</span><span class="w"></span>
+<span class="n">现在</span><span class="err">，</span><span class="n">你就可以登录Harbor快乐的玩耍了</span><span class="err">。</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">docker</span><span class="w"> </span><span class="n">login</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">unixhot</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+<span class="nl">Username</span><span class="p">:</span><span class="w"> </span><span class="k">admin</span><span class="w"></span>
+<span class="nl">Password</span><span class="p">:</span><span class="w"></span>
+<span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="k">admin</span><span class="nv">@unixhot</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+<span class="nl">WARNING</span><span class="p">:</span><span class="w"> </span><span class="n">login</span><span class="w"> </span><span class="n">credentials</span><span class="w"> </span><span class="n">saved</span><span class="w"> </span><span class="ow">in</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="p">.</span><span class="n">docker</span><span class="o">/</span><span class="n">config</span><span class="p">.</span><span class="n">json</span><span class="w"></span>
+<span class="n">Login</span><span class="w"> </span><span class="n">Succeeded</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="kubernetes">kubernetes</h2>
+<div class="codehilite"><pre><span></span><span class="nv">kubernetes</span>
+
+<span class="nv">rc</span>           <span class="nv">replication</span> <span class="nv">controller</span>
+<span class="nv">pod</span>       <span class="k">pause</span>
+<span class="nv">proxy</span>
+<span class="nv">service</span>
+<span class="nv">labels</span>
+
+<span class="nv">master</span>
+<span class="nv">node</span>
+
+<span class="nv">etcd</span>              存储
+
+<span class="nv">kube</span><span class="o">-</span><span class="nv">apiserver</span>
+<span class="nv">kube</span><span class="o">-</span><span class="nv">scheduler</span>
+<span class="nv">kube</span><span class="o">-</span><span class="nv">controller</span><span class="o">-</span><span class="nv">manager</span>
+
+<span class="nv">kubelet</span>
+<span class="nv">kube</span><span class="o">-</span><span class="nv">proxy</span>
+<span class="nv">docker</span>
+
+
+<span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">kubernetes</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">0</span> <span class="nv">docker</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">2</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">selinux</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">2</span>
+
+<span class="nv">lvs</span> <span class="nv">fullnat</span>
+<span class="nv">nginx</span>
+
+<span class="nv">docker</span> <span class="nv">logs</span>
+<span class="nv">fluentd</span>
+<span class="nv">glusterfs</span>
+
+<span class="nv">hostPath</span>
+<span class="nv">emptyDir</span>
+
+<span class="nv">cAdvisor</span>
+<span class="nv">heapster</span><span class="o">+</span><span class="nv">influxdb</span><span class="o">+</span><span class="nv">grafana</span>
+<span class="nv">flannel</span>  <span class="nv">host</span><span class="o">-</span><span class="nv">gw</span>
+
+<span class="nv">calico</span>      网络解决方案
+<span class="nv">fluentd</span>     日志收集
+<span class="nv">nginx</span>转发，使用<span class="nv">Python</span>实现<span class="nv">rolling</span><span class="o">-</span><span class="nv">update</span>，并更新<span class="nv">nginx</span>配置
+<span class="nv">heapster</span>    监控
+<span class="nv">calico</span>    
+环境    
+<span class="nv">kubernetes</span>:    <span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">0</span>
+<span class="nv">docker</span>:        <span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">2</span>
+<span class="nv">centos</span>:        <span class="mi">7</span>.<span class="mi">2</span>.<span class="mi">1503</span>
+<span class="nv">calico</span>:        <span class="mi">0</span>.<span class="mi">20</span>.<span class="mi">0</span>
+<span class="nv">Master</span>安装    
+<span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">kubernetes</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">0</span>
+<span class="nv">wget</span> 
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">containers</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v0</span>.<span class="mi">20</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">calicoctl</span>
+<span class="nv">chmod</span> <span class="o">+</span><span class="nv">x</span> <span class="nv">calicoctl</span>
+<span class="nv">mv</span> <span class="nv">calicoctl</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span>
+<span class="nv">docker</span> <span class="nv">pull</span> <span class="nv">calico</span><span class="o">/</span><span class="nv">node</span>:<span class="nv">v0</span>.<span class="mi">20</span>.<span class="mi">0</span> 
+<span class="nv">cat</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">network</span><span class="o">-</span><span class="nv">environment</span> <span class="o">&lt;&lt;</span> <span class="nv">EOF</span>
+# <span class="nv">This</span> <span class="nv">host</span><span class="s1">&#39;</span><span class="s">s IPv4 address (the source IP address used to reach other nodes</span>
+# <span class="nv">in</span> <span class="nv">the</span> <span class="nv">Kubernetes</span> <span class="nv">cluster</span><span class="ss">)</span>.
+<span class="nv">DEFAULT_IPV4</span><span class="o">=&lt;</span><span class="nv">KUBERNETES_MASTER</span><span class="o">&gt;</span> 
+# <span class="nv">IP</span> <span class="nv">and</span> <span class="nv">port</span> <span class="nv">of</span> <span class="nv">etcd</span> <span class="nv">instance</span> <span class="nv">used</span> <span class="nv">by</span> <span class="nv">Calico</span>
+<span class="nv">ETCD_AUTHORITY</span><span class="o">=&lt;</span><span class="nv">KUBERNETES_MASTER</span><span class="o">&gt;</span>:<span class="mi">6666</span>
+<span class="nv">EOF</span>
+<span class="nv">wget</span> <span class="o">-</span><span class="nv">N</span> <span class="o">-</span><span class="nv">P</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">systemd</span> 
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">raw</span>.<span class="nv">githubusercontent</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">cni</span><span class="o">/</span><span class="nv">k8s</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">docs</span><span class="o">/</span><span class="nv">samples</span><span class="o">/</span><span class="nv">kub</span>
+<span class="nv">ernetes</span><span class="o">/</span><span class="nv">common</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">systemctl</span> <span class="nv">enable</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">systemd</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">Node</span>安装
+<span class="nv">wget</span> 
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">containers</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v0</span>.<span class="mi">20</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">calicoctl</span>
+<span class="nv">chmod</span> <span class="o">+</span><span class="nv">x</span> <span class="nv">calicoctl</span>
+<span class="nv">mv</span> <span class="nv">calicoctl</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span>
+<span class="nv">docker</span> <span class="nv">pull</span> <span class="nv">calico</span><span class="o">/</span><span class="nv">node</span>:<span class="nv">v0</span>.<span class="mi">20</span>.<span class="mi">0</span>
+<span class="nv">cat</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">network</span><span class="o">-</span><span class="nv">environment</span> <span class="o">&lt;&lt;</span> <span class="nv">EOF</span>
+# <span class="nv">This</span> <span class="nv">host</span><span class="s1">&#39;</span><span class="s">s IPv4 address (the source IP address used to reach other nodes</span>
+# <span class="nv">in</span> <span class="nv">the</span> <span class="nv">Kubernetes</span> <span class="nv">cluster</span><span class="ss">)</span>.
+<span class="nv">DEFAULT_IPV4</span><span class="o">=&lt;</span><span class="nv">KUBERNETES_MASTER</span><span class="o">&gt;</span> 
+# <span class="nv">IP</span> <span class="nv">and</span> <span class="nv">port</span> <span class="nv">of</span> <span class="nv">etcd</span> <span class="nv">instance</span> <span class="nv">used</span> <span class="nv">by</span> <span class="nv">Calico</span>
+<span class="nv">ETCD_AUTHORITY</span><span class="o">=&lt;</span><span class="nv">KUBERNETES_MASTER</span><span class="o">&gt;</span>:<span class="mi">6666</span> 
+<span class="nv">EOF</span>
+<span class="nv">wget</span> <span class="o">-</span><span class="nv">N</span> <span class="o">-</span><span class="nv">P</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">systemd</span> 
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">raw</span>.<span class="nv">githubusercontent</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">cni</span><span class="o">/</span><span class="nv">k8s</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">docs</span><span class="o">/</span><span class="nv">samples</span><span class="o">/</span><span class="nv">kubernetes</span><span class="o">/</span><span class="nv">co</span>
+<span class="nv">mmon</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">systemctl</span> <span class="nv">enable</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">systemd</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">calico</span><span class="o">-</span><span class="nv">node</span>.<span class="nv">service</span>
+<span class="nv">mkdir</span> <span class="o">-</span><span class="nv">p</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span>
+<span class="nv">wget</span> <span class="o">-</span><span class="nv">N</span> <span class="o">-</span><span class="nv">P</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">cni</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v1</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">calico</span>
+<span class="nv">wget</span> <span class="o">-</span><span class="nv">N</span> <span class="o">-</span><span class="nv">P</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">projectcalico</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">cni</span><span class="o">/</span><span class="nv">releases</span><span class="o">/</span><span class="nv">download</span><span class="o">/</span><span class="nv">v1</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">ipam</span>
+<span class="nv">chmod</span> <span class="o">+</span><span class="nv">x</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">calico</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">calico</span><span class="o">-</span><span class="nv">ipam</span>
+# <span class="nv">Make</span> <span class="nv">the</span> <span class="nv">directory</span> <span class="nv">structure</span>.
+<span class="nv">mkdir</span> <span class="o">-</span><span class="nv">p</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">net</span>.<span class="nv">d</span> 
+# <span class="nv">Make</span> <span class="nv">the</span> <span class="nv">network</span> <span class="nv">configuration</span> <span class="nv">file</span> 
+<span class="nv">cat</span> <span class="o">&gt;/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">cni</span><span class="o">/</span><span class="nv">net</span>.<span class="nv">d</span><span class="o">/</span><span class="mi">10</span><span class="o">-</span><span class="nv">calico</span>.<span class="nv">conf</span> <span class="o">&lt;&lt;</span><span class="nv">EOF</span>
+{
+    <span class="s2">&quot;</span><span class="s">name</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">calico-k8s-network</span><span class="s2">&quot;</span>,
+    <span class="s2">&quot;</span><span class="s">type</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">calico</span><span class="s2">&quot;</span>, 
+    <span class="s2">&quot;</span><span class="s">etcd_authority</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">&lt;KUBERNETES_MASTER&gt;:6666</span><span class="s2">&quot;</span>,
+    <span class="s2">&quot;</span><span class="s">log_level</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">info</span><span class="s2">&quot;</span>,
+    <span class="s2">&quot;</span><span class="s">ipam</span><span class="s2">&quot;</span>: { 
+       <span class="s2">&quot;</span><span class="s">type</span><span class="s2">&quot;</span>: <span class="s2">&quot;</span><span class="s">calico-ipam</span><span class="s2">&quot;</span>
+    } 
+}
+<span class="nv">EOF</span>
+配置<span class="nv">kubelet</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">kubernetes</span><span class="o">/</span><span class="nv">kubelet</span>
+# <span class="nv">Add</span> <span class="nv">your</span> <span class="nv">own</span><span class="o">!</span>
+<span class="nv">KUBELET_ARGS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">--network-plugin=cni --network-plugin-dir=/etc/cni/net.d</span><span class="s2">&quot;</span>
+<span class="nv">calico</span>配置访问外网 
+[<span class="nv">root</span>@<span class="nv">vm</span><span class="o">-</span><span class="nv">docker</span><span class="o">-</span><span class="nv">c7</span><span class="o">-</span><span class="mi">80</span> <span class="o">~</span>]# <span class="nv">calicoctl</span> <span class="nv">pool</span> <span class="k">show</span>
+ <span class="o">+----------------+---------+</span>
+  <span class="o">|</span>   <span class="nv">IPv4</span> <span class="nv">CIDR</span>    <span class="o">|</span> <span class="nv">Options</span> <span class="o">|</span>
+ <span class="o">+----------------+---------+</span>
+  <span class="o">|</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="mi">16</span> <span class="o">|</span>         <span class="o">|</span>
+ <span class="o">+----------------+---------+</span>
+ <span class="o">+--------------------------+---------+</span>
+  <span class="o">|</span>        <span class="nv">IPv6</span> <span class="nv">CIDR</span>         <span class="o">|</span> <span class="nv">Options</span> <span class="o">|</span>
+ <span class="o">+--------------------------+---------+</span>
+  <span class="o">|</span> <span class="nv">fd80</span>:<span class="mi">24</span><span class="nv">e2</span>:<span class="nv">f998</span>:<span class="mi">72</span><span class="nv">d6</span>::<span class="o">/</span><span class="mi">64</span> <span class="o">|</span>         <span class="o">|</span>
+ <span class="o">+--------------------------+---------+</span>
+ [<span class="nv">root</span>@<span class="nv">vm</span><span class="o">-</span><span class="nv">docker</span><span class="o">-</span><span class="nv">c7</span><span class="o">-</span><span class="mi">80</span> <span class="o">~</span>]# <span class="nv">calicoctl</span> <span class="nv">pool</span> <span class="nv">add</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="mi">16</span> <span class="o">--</span><span class="nv">nat</span><span class="o">-</span><span class="nv">outgoing</span>
+ [<span class="nv">root</span>@<span class="nv">vm</span><span class="o">-</span><span class="nv">docker</span><span class="o">-</span><span class="nv">c7</span><span class="o">-</span><span class="mi">80</span> <span class="o">~</span>]# <span class="nv">calicoctl</span> <span class="nv">pool</span> <span class="k">show</span>
+  <span class="o">+----------------+--------------+</span>
+   <span class="o">|</span>   <span class="nv">IPv4</span> <span class="nv">CIDR</span>    <span class="o">|</span>   <span class="nv">Options</span>    <span class="o">|</span>
+  <span class="o">+----------------+--------------+</span>
+   <span class="o">|</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="mi">16</span> <span class="o">|</span> <span class="nv">nat</span><span class="o">-</span><span class="nv">outgoing</span> <span class="o">|</span>
+  <span class="o">+----------------+--------------+</span>
+  <span class="o">+--------------------------+---------+</span>
+   <span class="o">|</span>        <span class="nv">IPv6</span> <span class="nv">CIDR</span>         <span class="o">|</span> <span class="nv">Options</span> <span class="o">|</span>
+  <span class="o">+--------------------------+---------+</span>
+   <span class="o">|</span> <span class="nv">fd80</span>:<span class="mi">24</span><span class="nv">e2</span>:<span class="nv">f998</span>:<span class="mi">72</span><span class="nv">d6</span>::<span class="o">/</span><span class="mi">64</span> <span class="o">|</span>         <span class="o">|</span>
+  <span class="o">+--------------------------+---------+</span>
+[<span class="nv">root</span>@<span class="nv">vm</span><span class="o">-</span><span class="nv">docker</span><span class="o">-</span><span class="nv">c7</span><span class="o">-</span><span class="mi">80</span> <span class="o">~</span>]# <span class="nv">kubectl</span> <span class="nv">get</span> <span class="nv">pods</span>
+<span class="nv">NAME</span>      <span class="nv">READY</span>   <span class="nv">STATUS</span>    <span class="nv">RESTARTSAGE</span>
+ <span class="nv">test1</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>       <span class="nv">Running</span>   <span class="mi">0</span>          <span class="mi">3</span><span class="nv">h</span>
+<span class="nv">test2</span>     <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>       <span class="nv">Running</span>   <span class="mi">0</span>          <span class="mi">3</span><span class="nv">h</span>
+[<span class="nv">root</span>@<span class="nv">vm</span><span class="o">-</span><span class="nv">docker</span><span class="o">-</span><span class="nv">c7</span><span class="o">-</span><span class="mi">80</span> <span class="o">~</span>]# <span class="nv">kubectl</span> <span class="k">exec</span> <span class="o">-</span><span class="nv">it</span> <span class="nv">test1</span> <span class="nv">ping</span> <span class="nv">www</span>.<span class="nv">baidu</span>.<span class="nv">com</span>
+ <span class="nv">PING</span> <span class="nv">www</span>.<span class="nv">baidu</span>.<span class="nv">com</span> <span class="ss">(</span><span class="mi">61</span>.<span class="mi">135</span>.<span class="mi">169</span>.<span class="mi">125</span><span class="ss">)</span>: <span class="mi">56</span> <span class="nv">data</span> <span class="nv">bytes</span>
+<span class="mi">64</span> <span class="nv">bytes</span> <span class="nv">from</span> <span class="mi">61</span>.<span class="mi">135</span>.<span class="mi">169</span>.<span class="mi">125</span>: <span class="nv">seq</span><span class="o">=</span><span class="mi">0</span> <span class="nv">ttl</span><span class="o">=</span><span class="mi">54</span> <span class="nv">time</span><span class="o">=</span><span class="mi">2</span>.<span class="mi">535</span> <span class="nv">ms</span>
+ <span class="mi">64</span> <span class="nv">bytes</span> <span class="nv">from</span> <span class="mi">61</span>.<span class="mi">135</span>.<span class="mi">169</span>.<span class="mi">125</span>: <span class="nv">seq</span><span class="o">=</span><span class="mi">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="mi">54</span> <span class="nv">time</span><span class="o">=</span><span class="mi">2</span>.<span class="mi">309</span> <span class="nv">ms</span>
+ <span class="o">^</span><span class="nv">C</span>
+ <span class="o">---</span> <span class="nv">www</span>.<span class="nv">baidu</span>.<span class="nv">com</span> <span class="nv">ping</span> <span class="nv">statistics</span> <span class="o">---</span>
+<span class="mi">2</span> <span class="nv">packets</span> <span class="nv">transmitted</span>, <span class="mi">2</span> <span class="nv">packets</span> <span class="nv">received</span>, <span class="mi">0</span><span class="o">%</span> <span class="nv">packet</span> <span class="nv">loss</span>
+ <span class="nv">round</span><span class="o">-</span><span class="nv">trip</span> <span class="nv">min</span><span class="o">/</span><span class="nv">avg</span><span class="o">/</span><span class="nv">max</span> <span class="o">=</span> <span class="mi">2</span>.<span class="mi">309</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">422</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">535</span> <span class="nv">ms</span>
+
+<span class="nv">flannel</span> 
+环境： 
+<span class="nv">kubernetes</span>      <span class="nv">v1</span>.<span class="mi">2</span>.<span class="mi">0</span>
+<span class="nv">flannel</span>         <span class="mi">0</span>.<span class="mi">5</span>.<span class="mi">3</span>
+<span class="nv">centos</span>          <span class="mi">7</span>.<span class="mi">1</span>
+<span class="nv">kernel</span>          <span class="mi">4</span>.<span class="mi">2</span>.<span class="mi">3</span>
+<span class="nv">docker</span>          <span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">2</span>
+安装：    
+<span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">flanneld</span> <span class="nv">etcd</span> <span class="nv">kubernetes</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">etcd</span><span class="o">/</span><span class="nv">etcd</span>.<span class="nv">conf</span>
+<span class="nv">ETCD_LISTEN_CLIENT_URLS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://0.0.0.0:2379</span><span class="s2">&quot;</span>
+<span class="nv">ETCD_ADVERTISE_CLIENT_URLS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://0.0.0.0:2379</span><span class="s2">&quot;</span> 
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysconfig</span><span class="o">/</span><span class="nv">flanneld</span>
+<span class="nv">FLANNEL_ETCD</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">http://127.0.0.1:2379</span><span class="s2">&quot;</span>
+<span class="nv">FLANNEL_ETCD_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">/flannel/network</span><span class="s2">&quot;</span>
+<span class="nv">FLANNEL_OPTIONS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">-iface=br1</span><span class="s2">&quot;</span>
+
+设置<span class="nv">flannel</span>所提供的网段，并写入<span class="nv">etcd</span>：
+<span class="nv">etcdctl</span> <span class="nv">set</span> <span class="o">/</span><span class="nv">flanneld</span><span class="o">/</span><span class="nv">network</span><span class="o">/</span><span class="nv">config</span> <span class="s1">&#39;</span><span class="s">{&quot;Network&quot;: &quot;10.0.0.0/22&quot;, &quot;Backend&quot;: {&quot;Type&quot;: “host-gw”}}’</span>
+</pre></div>
+
+
+<h2 id="bashrc_docker">bashrc_docker</h2>
+<div class="codehilite"><pre><span></span><span class="nv">wget</span> <span class="o">-</span><span class="nv">P</span> <span class="o">~</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">yeasy</span><span class="o">/</span><span class="nv">docker_practice</span><span class="o">/</span><span class="nv">raw</span><span class="o">/</span><span class="nv">master</span><span class="o">/</span>
+<span class="nv">_local</span><span class="o">/</span>.<span class="nv">bashrc_docker</span><span class="c1">;</span>
+$ <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">[ -f ~/.bashrc_docker ] &amp;&amp; . ~/.bashrc_docker</span><span class="s2">&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span>.<span class="nv">bashrc</span><span class="c1">; source ~/.bashrc</span>
+这个文件中定义了很多方便使用 <span class="nv">Docker</span> 的命令，例如  <span class="nv">docker</span><span class="o">-</span><span class="nv">pid</span>  可以获取某
+个容器的 <span class="nv">PID</span>；而  <span class="nv">docker</span><span class="o">-</span><span class="nv">enter</span>  可以进入容器或直接在容器内执行命令。
+
+<span class="nv">cd</span> <span class="o">/</span><span class="nv">root</span><span class="o">/</span>
+<span class="nv">vim</span> .<span class="nv">bashrc_docker</span>
+# <span class="nv">Some</span> <span class="nv">useful</span> <span class="nv">commands</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">docker</span>.
+# <span class="nv">Author</span>: <span class="nv">yeasy</span>@<span class="nv">github</span>
+# <span class="nv">Created</span>:<span class="mi">2014</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">25</span>
+
+<span class="nv">alias</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">pid</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">sudo docker inspect --format &#39;{{.State.Pid}}&#39;</span><span class="s2">&quot;</span>
+<span class="nv">alias</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">ip</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">sudo docker inspect --format &#39;{{ .NetworkSettings.IPAddress }}&#39;</span><span class="s2">&quot;</span>
+
+#<span class="nv">the</span> <span class="nv">implementation</span> <span class="nv">refs</span> <span class="nv">from</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">jpetazzo</span><span class="o">/</span><span class="nv">nsenter</span><span class="o">/</span><span class="nv">blob</span><span class="o">/</span><span class="nv">master</span><span class="o">/</span><span class="nv">docker</span><span class="o">-</span><span class="nv">enter</span>
+<span class="nv">function</span> <span class="nv">docker</span><span class="o">-</span><span class="nv">enter</span><span class="ss">()</span> {
+    #<span class="k">if</span> [ <span class="o">-</span><span class="nv">e</span> $<span class="ss">(</span><span class="k">dirname</span> <span class="s2">&quot;</span><span class="s">$0</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">/</span><span class="nv">nsenter</span> ]<span class="c1">; then</span>
+    #<span class="nv">Change</span> <span class="k">for</span> <span class="nv">centos</span> <span class="nv">bash</span> <span class="nv">running</span>
+    <span class="k">if</span> [ <span class="o">-</span><span class="nv">e</span> $<span class="ss">(</span><span class="k">dirname</span> <span class="s1">&#39;</span><span class="s">$0</span><span class="s1">&#39;</span><span class="ss">)</span><span class="o">/</span><span class="nv">nsenter</span> ]<span class="c1">; then</span>
+        # <span class="nv">with</span> <span class="nv">boot2docker</span>, <span class="nv">nsenter</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">PATH</span> <span class="nv">but</span> <span class="nv">it</span> <span class="nv">is</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">folder</span>
+        <span class="nv">NSENTER</span><span class="o">=</span>$<span class="ss">(</span><span class="k">dirname</span> <span class="s2">&quot;</span><span class="s">$0</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">/</span><span class="nv">nsenter</span>
+    <span class="k">else</span>
+        # <span class="k">if</span> <span class="nv">nsenter</span> <span class="nv">has</span> <span class="nv">already</span> <span class="nv">been</span> <span class="nv">installed</span> <span class="nv">with</span> <span class="nv">path</span> <span class="nv">notified</span>, <span class="nv">here</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">clarified</span>
+        <span class="nv">NSENTER</span><span class="o">=</span>$<span class="ss">(</span><span class="nv">which</span> <span class="nv">nsenter</span><span class="ss">)</span>
+        #<span class="nv">NSENTER</span><span class="o">=</span><span class="nv">nsenter</span>
+    <span class="nv">fi</span>
+    [ <span class="o">-</span><span class="nv">z</span> <span class="s2">&quot;</span><span class="s">$NSENTER</span><span class="s2">&quot;</span> ] <span class="o">&amp;&amp;</span> <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">WARN Cannot find nsenter</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> <span class="k">return</span>
+
+    <span class="k">if</span> [ <span class="o">-</span><span class="nv">z</span> <span class="s2">&quot;</span><span class="s">$1</span><span class="s2">&quot;</span> ]<span class="c1">; then</span>
+        <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">Usage: `basename </span><span class="s2">&quot;</span><span class="mh">$0</span><span class="s2">&quot;</span><span class="s">` CONTAINER [COMMAND [ARG]...]</span><span class="s2">&quot;</span>
+        <span class="nv">echo</span> <span class="s2">&quot;&quot;</span>
+        <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">Enters the Docker CONTAINER and executes the specified COMMAND.</span><span class="s2">&quot;</span>
+        <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">If COMMAND is not specified, runs an interactive shell in CONTAINER.</span><span class="s2">&quot;</span>
+    <span class="k">else</span>
+        <span class="nv">PID</span><span class="o">=</span>$<span class="ss">(</span><span class="nv">sudo</span> <span class="nv">docker</span> <span class="nv">inspect</span> <span class="o">--</span><span class="nv">format</span> <span class="s2">&quot;</span><span class="s">{{.State.Pid}}</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="s">$1</span><span class="s2">&quot;</span><span class="ss">)</span>
+        <span class="k">if</span> [ <span class="o">-</span><span class="nv">z</span> <span class="s2">&quot;</span><span class="s">$PID</span><span class="s2">&quot;</span> ]<span class="c1">; then</span>
+            <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">WARN Cannot find the given container</span><span class="s2">&quot;</span>
+            <span class="k">return</span>
+        <span class="nv">fi</span>
+        <span class="nv">shift</span>
+
+        <span class="nv">OPTS</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">--target $PID --mount --uts --ipc --net --pid</span><span class="s2">&quot;</span>
+
+        <span class="k">if</span> [ <span class="o">-</span><span class="nv">z</span> <span class="s2">&quot;</span><span class="s">$1</span><span class="s2">&quot;</span> ]<span class="c1">; then</span>
+            # <span class="nv">No</span> <span class="nv">command</span> <span class="nv">given</span>.
+            # <span class="nv">Use</span> <span class="nv">su</span> <span class="nv">to</span> <span class="nv">clear</span> <span class="nv">all</span> <span class="nv">host</span> <span class="nv">environment</span> <span class="nv">variables</span> <span class="nv">except</span> <span class="k">for</span> <span class="nv">TERM</span>,
+            # <span class="nv">initialize</span> <span class="nv">the</span> <span class="nv">environment</span> <span class="nv">variables</span> <span class="nv">HOME</span>, <span class="nv">SHELL</span>, <span class="nv">USER</span>, <span class="nv">LOGNAME</span>, <span class="nv">PATH</span>,
+            # <span class="nv">and</span> <span class="nv">start</span> <span class="nv">a</span> <span class="nv">login</span> <span class="nv">shell</span>.
+            #<span class="nv">sudo</span> $<span class="nv">NSENTER</span> <span class="s2">&quot;</span><span class="s">$OPTS</span><span class="s2">&quot;</span> <span class="nv">su</span> <span class="o">-</span> <span class="nv">root</span>
+            <span class="nv">sudo</span> $<span class="nv">NSENTER</span> <span class="o">--</span><span class="nv">target</span> $<span class="nv">PID</span> <span class="o">--</span><span class="nv">mount</span> <span class="o">--</span><span class="nv">uts</span> <span class="o">--</span><span class="nv">ipc</span> <span class="o">--</span><span class="nv">net</span> <span class="o">--</span><span class="nv">pid</span> <span class="nv">su</span> <span class="o">-</span> <span class="nv">root</span>
+        <span class="k">else</span>
+            # <span class="nv">Use</span> <span class="nv">env</span> <span class="nv">to</span> <span class="nv">clear</span> <span class="nv">all</span> <span class="nv">host</span> <span class="nv">environment</span> <span class="nv">variables</span>.
+            <span class="nv">sudo</span> $<span class="nv">NSENTER</span> <span class="o">--</span><span class="nv">target</span> $<span class="nv">PID</span> <span class="o">--</span><span class="nv">mount</span> <span class="o">--</span><span class="nv">uts</span> <span class="o">--</span><span class="nv">ipc</span> <span class="o">--</span><span class="nv">net</span> <span class="o">--</span><span class="nv">pid</span> <span class="nv">env</span> <span class="o">-</span><span class="nv">i</span> $@
+        <span class="nv">fi</span>
+    <span class="nv">fi</span>
+}
+
+<span class="o">--------------------------------------------</span>
+# 执行生效  <span class="nv">echo</span> <span class="s2">&quot;</span><span class="s">[ -f ~/.bashrc_docker ] &amp;&amp; . ~/.bashrc_docker</span><span class="s2">&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span>.<span class="nv">bashrc</span><span class="c1">; source ~/.bashrc</span>
+
+#  <span class="nv">docker</span> <span class="nv">ps</span>
+#  <span class="nv">docker</span><span class="o">-</span><span class="nv">enter</span>  <span class="nv">id</span>
+#  <span class="nv">docker</span><span class="o">-</span><span class="nv">pid</span> <span class="nv">id</span>
+</pre></div>
+
+
+<h2 id="mesos_marathon">mesos_marathon</h2>
+<div class="codehilite"><pre><span></span>Mesos：Mesos采用与Linux Kernel相同的机制，只是运行在不同的抽象层次上。Mesos Kernel利用资源管理和调度的API在整个数据
+中心或云环境中运行和提供引用（例如，Hadoop、Spark、Kafaka、ElasticSearch）。
+
+    ZooKeeper：ZooKeeper是一个分布式的，开放源码的分布式应用程序协调服务，是Google的Chubby一个开源的实现，是Hadoop
+    和HBase的重要组件。它是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、名字服务、分布式同步、组服务等。
+
+    Marathon：Marathon是一个Mesos框架，能够支持运行长服务，比如Web应用等。它是集群的分布式Init.d，能够原样运行任何
+    Linux二进制发布版本，如Tomcat、Play等等。它也是一种私有的PaSS，实现服务的发现，为部署提供提供REST API服务，有授权
+    和SSL、配置约束，通过HAProxy实现服务发现和负载平衡。
+ 好的，架构图看起来像这样。
+无标题1.png
+
+
+下面我们就准备开始实战部署了。首先要说明下实验环境：
+
+index.png
+
+
+Zookeeper伪集群部署
+在部署mesos集群之前，我们必须先部署一个可用的zookeeper集群，后面mesos会连接到zookeeper上。
+[root@linux-node1 ~]# cd /usr/local/src
+[root@linux-node1 src]# wget http://mirrors.cnnic.cn/apache ... ar.gz
+[root@linux-node1 src]# tar zxf zookeeper-3.4.6.tar.gz
+[root@linux-node1 src]# mv zookeeper-3.4.6 /usr/local/zookeeper
+[root@linux-node1 src]# ln -s /usr/local/zookeeper-3.4.6/ /usr/local/zookeeper
+[root@linux-node1 ~]# cd /usr/local/zookeeper/conf/
+[root@linux-node1 conf]# mv zoo_sample.cfg zoo.cfg
+
+
+zookeeper配置文件详解
+
+下面就是zoo.cfg配置文件的修改了。那么我们首先要熟悉下zookeeper配置文件。
+
+[root@linux-node1 ~]# cat/usr/local/zookeeper/conf/zoo.cfg
+
+dataDir：数据目录
+dataLogDir：日志目录
+clientPort：客户端连接端口
+tickTime：Zookeeper 服务器之间或客户端与服务器之间维持心跳的时间间隔，也就是每个 tickTime 时间就会发送一个心跳。
+initLimit：Zookeeper的Leader 接受客户端（Follower）初始化连接时最长能忍受多少个心跳时间间隔数。当已经超过
+ 5个心跳的时间（也就是tickTime）长度后 Zookeeper 服务器还没有收到客户端的返回信息，那么表明这个客户端连接失败。
+ 总的时间长度就是 5*2000=10 秒
+syncLimit：表示 Leader 与 Follower 之间发送消息时请求和应答时间长度，最长不能超过多少个tickTime 的时间长度，
+总的时间长度就是 2*2000=4 秒。
+server.A=B：C：D：
+A 是一个数字，表示这个是第几号服务器；
+B 是这个服务器的 ip 地址；
+C 表示的是这个服务器与集群中的 Leader 服务器交换信息的端口；
+D 表示的是万一集群中的 Leader 服务器挂了，需要一个端口来重新进行选举，选出一个新的 Leader，而这个端口就是用来执行
+选举时服务器相互通信的端口。
+
+Zookeeper配置文件修改
+    如果是伪集群的配置方式，由于 B 都是一样，所以不同的 Zookeeper 实例通信端口号不能一样，所以要给它们分配不同的端口号。
+[root@linux-node1 conf]# grep &#39;^[a-z]&#39; zoo.cfg
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/data/zk1
+clientPort=2181
+server.1=192.168.56.11:3181:4181
+server.2=192.168.56.11:3182:4182
+server.3=192.168.56.11:3183:4183
+创建三个目录用来存放zookeeper数据
+[root@linux-node1 ~]# mkdir -p /data/zk1 /data/zk2/data/zk3
+[root@linux-node1 ~]# echo &quot;1&quot; &gt;/data/zk1/myid
+[root@linux-node1 ~]# echo &quot;2&quot; &gt;/data/zk2/myid
+[root@linux-node1 ~]# echo &quot;3&quot; &gt;/data/zk3/myid
+生成三份zookeeper配置文件
+[root@linux-node1 conf]# cp zoo.cfg zk1.cfg
+[root@linux-node1 conf]# cp zoo.cfg zk2.cfg
+[root@linux-node1 conf]# cp zoo.cfg zk3.cfg
+修改zk2和zk3的配置，使用对应的数据目录和端口。
+[root@linux-node1 conf]# sed -i &#39;s/zk1/zk2/g&#39;zk2.cfg
+[root@linux-node1 conf]# sed -i &#39;s/2181/2182/g&#39;zk2.cfg
+[root@linux-node1 conf]# sed -i &#39;s/zk1/zk3/g&#39;zk3.cfg
+[root@linux-node1 conf]# sed -i &#39;s/2181/2183/g&#39;zk3.cfg
+启动Zookeeper
+/usr/local/zookeeper/bin/zkServer.sh start /usr/local/zookeeper/conf/zk1.cfg
+/usr/local/zookeeper/bin/zkServer.sh start /usr/local/zookeeper/conf/zk2.cfg
+/usr/local/zookeeper/bin/zkServer.sh start /usr/local/zookeeper/conf/zk3.cfg
+查看Zookeeper角色
+[root@linux-node1 ~]#/usr/local/zookeeper/bin/zkServer.sh status /usr/local/zookeeper/conf/zk1.cfg
+JMX enabled by default
+Using config: /usr/local/zookeeper/conf/zk1.cfg
+Mode: follower
+
+[root@linux-node1 ~]#/usr/local/zookeeper/bin/zkServer.sh status /usr/local/zookeeper/conf/zk2.cfg
+JMX enabled by default
+Using config: /usr/local/zookeeper/conf/zk2.cfg
+Mode: follower
+
+[root@linux-node1 ~]#/usr/local/zookeeper/bin/zkServer.sh status /usr/local/zookeeper/conf/zk3.cfg
+JMX enabled by default
+Using config: /usr/local/zookeeper/conf/zk3.cfg
+Mode: leader
+
+
+
+
+
+连接Zookeeper
+[root@linux-node1 ~]#  /usr/local/zookeeper/bin/zkCli.sh -server192.168.56.11:2181
+通过上面的例子可以看到，目前zk3是leader,其它两个节点是follower。本文由于实验环境局限使用的是伪分布式，注意生产环境不建议使用。
+
+Mesos 集群部署
+Mesos集群有MesosMaster和Mesos Slave两个角色。
+
+安装mesosphere仓库
+需要在Mesos Master和MesosSlave节点均安装：
+# rpm -Uvh http://repos.mesosphere.com/el ... h.rpm
+
+Mesos Master部署
+[root@linux-node1 ~]# yum -y install mesos marathon
+安装完毕后，增加zookeeper配置
+[root@linux-node1 ~]# vim /etc/mesos/zk
+zk://192.168.56.11:2181,192.168.56.11:2182,192.168.56.11:2183/mesos
+[root@linux-node1 ~]# systemctl start mesos-master mesos-slave
+[root@linux-node1 ~]# systemctl start marathon
+
+Mesos Slave部署
+[root@linux-node2 ~]# yum -y install mesos marathon
+[root@linux-node2 ~]# systemctl start mesos-slave
+
+
+Mesos的Web管理界面
+  Mesos安装完毕后，Mesos Master会启动一个Web服务，监听在5050端口。
+http://<span class="cp">${</span><span class="n">HOST_IP</span><span class="cp">}</span>:5050
+这时候你将得到一个像这样的页面但可能在‘Tasks’表格没有任何的条目。
+
+无标题2.png
+
+
+下面我们来运行第一mesos任务，注意刷新查看Mesos的Web界面，你会在Active Tasks看到我们测试的任务。
+[root@linux-node1~]# MASTER=$(mesos-resolve `cat /etc/mesos/zk`)
+[root@linux-node1~]# mesos-execute --master=<span class="nv">$MASTER</span> --name=&quot;cluster-test&quot;--command=&quot;sleep 60&quot;
+
+无标题3.png
+
+
+使用Marathon调用Mesos 运行Docker容器
+
+    配置Mesos运行Docker容器
+
+[root@linux-node1 ~]# yum install -y docker
+[root@linux-node1 ~]# systemctl start docker
+
+首先先测试下，保证手动创建Docker容器没问题。
+
+[root@linux-node1 ~]# docker pull nginx
+
+再所有mesos-slave上增加配置参数，并重启
+linux-node1:
+[root@linux-node1 ~]# echo &#39;docker,mesos&#39; | tee/etc/mesos-slave/containerizers
+docker,mesos
+[root@linux-node1 ~]# systemctl restart mesos-slave
+
+linux-node2:
+[root@linux-node2 ~]# echo &#39;docker,mesos&#39; | tee/etc/mesos-slave/containerizers
+docker,mesos
+[root@linux-node2 ~]# systemctl restart mesos-slave
+
+  接下来，我们要使用我们marathon来创建一个nginx的Docker容器，通过Mesos进行调度。   我们上面安装mesos-master的时候，
+  已经安装了marathon。默认监听在8080端口，通过使用http://{HOST}:8080/来打开marathon。如下图所示：
+无标题4.png
+
+
+我相信读者会有疑问，我们并没有对marathon做任何的配置，它是怎么知道Mesos在哪里的呢？答案是通过zookeeper,marathon启动的时候
+会读取/etc/mesos/zk配置文件，通过Zookeeper来找到Mesos Master。marathon有自己的REST API，我们通过API的方式来创建一个
+nginx的docker容器：
+
+首先创建如下的配置文件nginx.json：
+[root@linux-node1 ~]# cat nginx.json
+{
+  &quot;id&quot;:&quot;nginx&quot;,
+  &quot;cpus&quot;:0.2,
+  &quot;mem&quot;:20.0,
+ &quot;instances&quot;: 1,
+ &quot;constraints&quot;: [[&quot;hostname&quot;, &quot;UNIQUE&quot;,&quot;&quot;]],
+ &quot;container&quot;: {
+    &quot;type&quot;:&quot;DOCKER&quot;,
+   &quot;docker&quot;: {
+     &quot;image&quot;: &quot;nginx&quot;,
+     &quot;network&quot;: &quot;BRIDGE&quot;,
+     &quot;portMappings&quot;: [
+        {&quot;containerPort&quot;: 80, &quot;hostPort&quot;: 0,&quot;servicePort&quot;: 0, &quot;protocol&quot;: &quot;tcp&quot; }
+      ]
+    }
+  }
+}
+然后调用
+# curl -X POST http://192.168.56.11:8080/v2/apps-d @nginx.json \
+-H &quot;Content-type: application/json&quot;
+
+无标题4.png
+
+
+现在你就可以通过31984来访问到nginx了。当然了，你也可以在mesos-slave上来寻找一下这个容器：
+[root@linux-node1 ~]# docker ps -a
+
+
+
+
+  如果你想创建同样的容器，可以点击上图中德Scale Application来体验一下。同样的，你也可以通过marathon的Web界面来进行容器
+  的创建、扩展和销毁。
+
+无标题5.png
+
+来源： https://www.unixhot.com/article/32
+</pre></div>
+
+
+<h2 id="_4">数据持久化</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="err">、</span>    <span class="n">Docker</span> <span class="n">Volume</span>
+<span class="n">Docker</span><span class="err">镜像是由多个文件系统（只读层）叠加而成。当我们启动一个容器的时候，</span><span class="n">Docker</span><span class="err">会加载只读镜像层并在其上、</span>
+<span class="err">添加一个读写层。如果运行中的容器修改了现有的一个已经存在的文件，那该文件将会从读写层下面的只读层复制到读写层，</span>
+<span class="err">该文件的只读版本仍然存在，只是已经被读写层中该文件的副本所隐藏。当删除</span><span class="n">Docker</span><span class="err">容器，并通过该镜像重新启动时，</span>
+<span class="err">之前的更改将会丢失。在</span><span class="n">Docker</span><span class="err">中，只读层及在顶部的读写层的组合被称为</span><span class="k">Union</span> <span class="n">File</span> <span class="k">System</span><span class="err">（联合文件系统）。</span>
+
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">data</span> <span class="n">centos</span><span class="p">:</span><span class="mi">6</span><span class="p">.</span><span class="mi">6</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>
+
+<span class="err">数据在宿主机的位置</span>
+<span class="n">docker</span> <span class="n">ps</span>
+<span class="n">docker</span> <span class="n">inspect</span> <span class="err">”</span><span class="n">CONTAINER</span> <span class="n">ID</span><span class="err">“</span>
+
+<span class="mi">2</span><span class="err">、</span>    <span class="err">提交镜像</span>
+<span class="n">docker</span> <span class="n">ps</span>
+<span class="n">docker</span> <span class="k">commit</span> <span class="err">”</span><span class="n">CONTAINER</span> <span class="n">ID</span><span class="err">“</span> <span class="n">centos</span><span class="p">:</span><span class="mi">6</span><span class="p">.</span><span class="mi">6</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="k">data</span> <span class="n">centos</span><span class="p">:</span><span class="mi">6</span><span class="p">.</span><span class="mi">6</span><span class="o">-</span><span class="mi">1</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">bash</span>
+</pre></div>
+
+
+<h2 id="piddocker">pid定位docker</h2>
+<div class="codehilite"><pre><span></span><span class="x">例如，top显示存在如下进程:</span>
+<span class="x">5400 nobody 20 0 73260 30620 2284 S 8.3 0.4 0:20.63 nginx</span>
+<span class="x">对于这样一个进程，我们如何快速定位到它是运行于哪一个docker中呢 (特别是当ecs上运行了超过10个</span>
+<span class="x">docker的时候)？</span>
+
+<span class="x">先通过</span>
+<span class="x">$ pstree -p | grep -n5 5400</span>
+<span class="x">找到它的最上层的父进程pid:</span>
+<span class="x">...</span>
+<span class="x">114- | |-my_init(5248)-+-nginx(5398)-+-nginx(5399)</span>
+<span class="x">115: | | | |-nginx(5400)</span>
+<span class="x">116- | | | |-nginx(5401)</span>
+<span class="x">...</span>
+<span class="x">得到父进程pid=5248, 然后遍历所有容器的init进程进行匹配:</span>
+<span class="x">$ docker ps | awk &#39;{print $1}&#39; | grep -v CONTAINER | xargs docker inspect -f &#39;</span><span class="cp">{{</span><span class="nv">.State.Pid</span><span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span><span class="nv">.Config.Hostname</span><span class="cp">}}</span><span class="x">&#39; |</span>
+<span class="x"> grep 5248</span>
+
+<span class="x">5248 bd939dc98684</span>
+<span class="x">利用上面输出的container id, </span>
+<span class="x">$ docker ps | grep bd939dc98684</span>
+<span class="x">即可得到该容器的其余关键信息。</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../haproxy/" title="haproxy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                haproxy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../varnish/" title="varnish" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                varnish
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

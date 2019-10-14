@@ -1,0 +1,1649 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>varnish - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#varnish" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                varnish
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        varnish
+      </label>
+    
+    <a href="./" title="varnish" class="md-nav__link md-nav__link--active">
+      varnish
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#varnish" class="md-nav__link">
+    varnish
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#varnish" class="md-nav__link">
+    varnish
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>varnish</h1>
+                
+                <h2 id="varnish">varnish</h2>
+<div class="codehilite"><pre><span></span><span class="s s-Atom">一、关于Varnish</span>
+
+<span class="mi">1</span><span class="s s-Atom">、varnish系统架构</span>
+
+<span class="nf">varnish主要运行两个进程：Management进程和Child进程</span><span class="p">(</span><span class="s s-Atom">也叫Cache进程</span><span class="p">)</span><span class="s s-Atom">。</span>
+
+<span class="nv">Management进程主要实现应用新的配置</span><span class="s s-Atom">、编译VCL、监控varnish、初始化varnish以及提供一个命令行接口等。</span><span class="nv">Management进程会每隔几秒钟探测</span>
+<span class="s s-Atom">一下Child进程以判断其是否正常运行，如果在指定的时长内未得到Child进程的回应，Management将会重启此Child进程。</span>
+
+<span class="nv">Child进程包含多种类型的线程</span><span class="s s-Atom">，常见的如：</span>
+<span class="nv">Acceptor线程</span><span class="s s-Atom">：接收新的连接请求并响应；</span>
+<span class="nv">Worker线程</span><span class="s s-Atom">：child进程会为每个会话启动一个worker线程，因此，在高并发的场景中可能会出现数百个worker线程甚至更多；</span>
+<span class="nv">Expiry线程</span><span class="s s-Atom">：从缓存中清理过期内容；</span>
+
+<span class="nv">Varnish依赖</span><span class="s s-Atom">“</span><span class="nf">工作区</span><span class="p">(</span><span class="s s-Atom">workspace</span><span class="p">)</span><span class="s s-Atom">”以降低线程在申请或修改内存时出现竞争的可能性。在varnish内部有多种不同的工作区，其中最关键的当属用于</span>
+<span class="s s-Atom">管理会话数据的session工作区。</span>
+
+<span class="mi">2</span><span class="s s-Atom">、varnish日志</span>
+
+<span class="nf">为了与系统的其它部分进行交互，Child进程使用了可以通过文件系统接口进行访问的共享内存日志</span><span class="p">(</span><span class="s s-Atom">shared</span> <span class="s s-Atom">memory</span> <span class="s s-Atom">log</span><span class="p">)</span><span class="s s-Atom">，因此，如果某线程需要</span>
+<span class="s s-Atom">记录信息，其仅需要持有一个锁，而后向共享内存中的某内存区域写入数据，再释放持有的锁即可。而为了减少竞争，每个worker线程都使用了日志</span>
+<span class="s s-Atom">数据缓存。</span>
+
+<span class="s s-Atom">共享内存日志大小一般为90M，其分为两部分，前一部分为计数器，后半部分为客户端请求的数据。varnish提供了多个不同的工具如varnishlog、</span>
+<span class="s s-Atom">varnishncsa或varnishstat等来分析共享内存日志中的信息并能够以指定的方式进行显示。</span>
+
+<span class="mi">3</span><span class="s s-Atom">、</span><span class="nv">VCL</span>
+
+<span class="nv">Varnish</span> <span class="nv">Configuration</span> <span class="nv">Language</span> <span class="p">(</span><span class="nv">VCL</span><span class="p">)</span><span class="s s-Atom">是varnish配置缓存策略的工具，它是一种基于“域”</span><span class="p">(</span><span class="s s-Atom">domain</span> <span class="s s-Atom">specific</span><span class="p">)</span><span class="s s-Atom">的简单编程语言，它支持</span>
+<span class="s s-Atom">有限的算术运算和逻辑运算操作、允许使用正则表达式进行字符串匹配、允许用户使用set自定义变量、支持if判断语句，也有内置的函数和</span>
+<span class="s s-Atom">变量等。使用VCL编写的缓存策略通常保存至</span><span class="p">.</span><span class="s s-Atom">vcl文件中，其需要编译成二进制的格式后才能由varnish调用。事实上，整个缓存策略就是由几个</span>
+<span class="s s-Atom">特定的子例程如vcl_recv、</span><span class="nf">vcl_fetch等组成，它们分别在不同的位置</span><span class="p">(</span><span class="s s-Atom">或时间</span><span class="p">)</span><span class="s s-Atom">执行，如果没有事先为某个位置自定义子例程，varnish将会执</span>
+<span class="s s-Atom">行默认的定义。</span>
+
+<span class="nv">VCL策略在启用前</span><span class="s s-Atom">，会由management进程将其转换为C代码，而后再由gcc编译器将C代码编译成二进制程序。编译完成后，management负责将其</span>
+<span class="s s-Atom">连接至varnish实例，即child进程。正是由于编译工作在child进程之外完成，它避免了装载错误格式VCL的风险。因此，varnish修改配置的开销</span>
+<span class="s s-Atom">非常小，其可以同时保有几份尚在引用的旧版本配置，也能够让新的配置即刻生效。编译后的旧版本配置通常在varnish重启时才会被丢弃，如果</span>
+<span class="s s-Atom">需要手动清理，则可以使用varnishadm的vcl</span><span class="p">.</span><span class="s s-Atom">discard命令完成。</span>
+
+<span class="mi">4</span><span class="s s-Atom">、varnish的后端存储</span>
+
+<span class="s s-Atom">varnish支持多种不同类型的后端存储，这可以在varnishd启动时使用</span><span class="o">-</span><span class="s s-Atom">s选项指定。</span><span class="nf">后端存储的类型包括：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nf">file：使用特定的文件存储全部的缓存数据，并通过操作系统的mmap</span><span class="p">()</span><span class="nf">系统调用将整个缓存文件映射至内存区域</span><span class="p">(</span><span class="s s-Atom">如果条件允许</span><span class="p">)</span><span class="nf">；</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="nf">malloc：使用malloc</span><span class="p">()</span><span class="nf">库调用在varnish启动时向操作系统申请指定大小的内存空间以存储缓存对象；</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nf">persistent</span><span class="p">(</span><span class="s s-Atom">experimental</span><span class="p">)</span><span class="nf">：与file的功能相同，但可以持久存储数据</span><span class="p">(</span><span class="s s-Atom">即重启varnish数据时不会被清除</span><span class="p">)</span><span class="s s-Atom">；仍处于测试期；</span>
+
+<span class="s s-Atom">varnish无法追踪某缓存对象是否存入了缓存文件，从而也就无从得知磁盘上的缓存文件是否可用，因此，file存储方法在varnish停止或重启时</span>
+<span class="s s-Atom">会清除数据。而persistent方法的出现对此有了一个弥补，但persistent仍处于测试阶段，例如目前尚无法有效处理要缓存对象总体大小超出</span>
+<span class="s s-Atom">缓存空间的情况，所以，其仅适用于有着巨大缓存空间的场景。</span>
+
+<span class="s s-Atom">选择使用合适的存储方式有助于提升系统性，从经验的角度来看，建议在内存空间足以存储所有的缓存对象时使用malloc的方法，反之，file存储</span>
+<span class="s s-Atom">将有着更好的性能的表现。然而，需要注意的是，varnishd实际上使用的空间比使用</span><span class="o">-</span><span class="s s-Atom">s选项指定的缓存空间更大，一般说来，其需要为每个缓存</span>
+<span class="s s-Atom">对象多使用差不多1K左右的存储空间，这意味着，对于100万个缓存对象的场景来说，其使用的缓存空间将超出指定大小1G左右。另外，为了保存</span>
+<span class="s s-Atom">数据结构等，varnish自身也会占去不小的内存空间。</span>
+
+<span class="s s-Atom">为varnishd指定使用的缓存类型时，</span><span class="o">-</span><span class="s s-Atom">s选项可接受的参数格式如下：</span>
+    <span class="s s-Atom">malloc</span><span class="p">[,</span><span class="s s-Atom">size</span><span class="p">]</span> <span class="s s-Atom">或</span>
+    <span class="s s-Atom">file</span><span class="p">[,</span><span class="s s-Atom">path</span><span class="p">[,</span><span class="s s-Atom">size</span><span class="p">[,</span><span class="s s-Atom">granularity</span><span class="p">]]]</span> <span class="s s-Atom">或</span>
+    <span class="s s-Atom">persistent</span><span class="p">,</span><span class="s s-Atom">path</span><span class="p">,</span><span class="s s-Atom">size</span> <span class="p">{</span><span class="s s-Atom">experimental</span><span class="p">}</span>
+
+<span class="s s-Atom">file中的granularity用于设定缓存空间分配单位，默认单位是字节，所有其它的大小都会被圆整。</span>
+
+<span class="s s-Atom">二、安装varnish</span>
+
+
+
+<span class="s s-Atom">三、</span><span class="nv">HTTP协议与varnish</span>
+
+<span class="mi">1</span><span class="s s-Atom">、缓存相关的HTTP首部</span>
+
+<span class="nv">HTTP协议提供了多个首部用以实现页面缓存及缓存失效的相关功能</span><span class="nf">，这其中最常用的有：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nv">Expires</span><span class="s s-Atom">：用于指定某web对象的过期日期/时间，通常为GMT格式；一般不应该将此设定的未来过长的时间，一年的长度对大多场景来说足矣；</span>
+<span class="nf">其常用于为纯静态内容如JavaScripts样式表或图片指定缓存周期；</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span><span class="s s-Atom">：用于定义所有的缓存机制都必须遵循的缓存指示，这些指示是一些特定的指令，包括public、private、</span>
+<span class="s s-Atom">no</span><span class="o">-</span><span class="nf">cache</span><span class="p">(</span><span class="s s-Atom">表示可以存储，但在重新验正其有效性之前不能用于响应客户端请求</span><span class="p">)</span><span class="s s-Atom">、no</span><span class="o">-</span><span class="s s-Atom">store、max</span><span class="o">-</span><span class="s s-Atom">age、s</span><span class="o">-</span><span class="s s-Atom">maxage以及must</span><span class="o">-</span><span class="s s-Atom">revalidate等；</span>
+<span class="nv">Cache</span><span class="o">-</span><span class="nv">Control中设定的时间会覆盖Expires中指定的时间</span><span class="nf">；</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nv">Etag</span><span class="nf">：响应首部，用于在响应报文中为某web资源定义版本标识符；</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="nv">Last</span><span class="o">-</span><span class="nv">Mofified</span><span class="s s-Atom">：响应首部，用于回应客户端关于Last</span><span class="o">-</span><span class="nv">Modified</span><span class="o">-</span><span class="nv">Since或If</span><span class="o">-</span><span class="nv">None</span><span class="o">-</span><span class="nv">Match首部的请求</span><span class="s s-Atom">，以通知客户端其请求的web对象最</span>
+<span class="nf">近的修改时间；</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="nv">If</span><span class="o">-</span><span class="nv">Modified</span><span class="o">-</span><span class="nv">Since</span><span class="s s-Atom">：条件式请求首部，如果在此首部指定的时间后其请求的web内容发生了更改，则服务器响应更改后的内容，否则，</span>
+<span class="nf">则响应304</span><span class="p">(</span><span class="o">not</span> <span class="s s-Atom">modified</span><span class="p">)</span><span class="nf">；</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="nv">If</span><span class="o">-</span><span class="nv">None</span><span class="o">-</span><span class="nv">Match</span><span class="nf">：条件式请求首部；web服务器为某web内容定义了Etag首部，客户端请求时能获取并保存这个首部的值</span><span class="p">(</span><span class="s s-Atom">即标签</span><span class="p">)</span><span class="s s-Atom">；而后在</span>
+<span class="s s-Atom">后续的请求中会通过If</span><span class="o">-</span><span class="nv">None</span><span class="o">-</span><span class="nv">Match首部附加其认可的标签列表并让服务器端检验其原始内容是否有可以与此列表中的某标签匹配的标签</span><span class="s s-Atom">；</span>
+<span class="nf">如果有，则响应304，否则，则返回原始内容；</span>
+<span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="nv">Vary</span><span class="s s-Atom">：响应首部，原始服务器根据请求来源的不同响应的可能会有所不同的首部，最常用的是Vary:</span> <span class="nv">Accept</span><span class="o">-</span><span class="nv">Encoding</span><span class="s s-Atom">，用于通知缓存</span>
+<span class="s s-Atom">机制其内容看起来可能不同于用户请求时Accept</span><span class="o">-</span><span class="nv">Encoding</span><span class="o">-</span><span class="nf">header首部标识的编码格式；</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="nv">Age</span><span class="s s-Atom">：缓存服务器可以发送的一个额外的响应首部，用于指定响应的有效期限；浏览器通常根据此首部决定内容的缓存时长；如果响应报文</span>
+<span class="s s-Atom">首部还使用了max</span><span class="o">-</span><span class="s s-Atom">age指令，那么缓存的有效时长为“max</span><span class="o">-</span><span class="s s-Atom">age减去Age”的结果；</span>
+
+<span class="s s-Atom">四、</span><span class="nv">Varnish状态引擎</span><span class="p">(</span><span class="s s-Atom">state</span> <span class="s s-Atom">engine</span><span class="p">)</span>
+
+<span class="nv">VCL用于让管理员定义缓存策略</span><span class="s s-Atom">，而定义好的策略将由varnish的management进程分析、转换成C代码、编译成二进制程序并连接至child进程。</span>
+
+<span class="nf">varnish内部有几个所谓的状态</span><span class="p">(</span><span class="s s-Atom">state</span><span class="p">)</span><span class="s s-Atom">，在这些状态上可以附加通过VCL定义的策略以完成相应的缓存处理机制，因此VCL也经常被称作“域专用”</span>
+<span class="s s-Atom">语言或状态引擎，“域专用”指的是有些数据仅出现于特定的状态中。</span>
+
+<span class="mi">1</span><span class="s s-Atom">、</span><span class="nv">VCL状态引擎</span>
+
+<span class="nf">在VCL状态引擎中，状态之间具有相关性，但彼此间互相隔离，每个引擎使用return</span><span class="p">(</span><span class="s s-Atom">x</span><span class="p">)</span><span class="s s-Atom">来退出当前状态并指示varnish进入下一个状态。</span>
+
+<span class="s s-Atom">varnish开始处理一个请求时，首先需要分析HTTP请求本身，比如从首部获取请求方法、验正其是否为一个合法的HTT请求等。当这些基本分析</span>
+<span class="s s-Atom">结束后就需要做出第一个决策，即varnish是否从缓存中查找请求的资源。这个决定的实现则需要由VCL来完成，简单来说，要由vcl_recv方法</span>
+<span class="s s-Atom">来完成。如果管理员没有自定义vcl_recv函数，varnish将会执行默认的vcl_recv函数。然而，即便管理员自定义了vcl_recv，但如果没有为</span>
+<span class="nf">自定义的vcl_recv函数指定其终止操作</span><span class="p">(</span><span class="s s-Atom">terminating</span><span class="p">)</span><span class="s s-Atom">，其仍将执行默认的vcl_recv函数。事实上，varnish官方强烈建议让varnish执行默认</span>
+<span class="s s-Atom">的vcl_recv以便处理自定义vcl_recv函数中的可能出现的漏洞。</span>
+
+<span class="mi">2</span><span class="s s-Atom">、</span><span class="nv">VCL语法</span>
+
+<span class="nv">VCL的设计参考了C和Perl语言</span><span class="s s-Atom">，因此，对有着C或Perl编程经验者来说，其非常易于理解。</span><span class="nf">其基本语法说明如下：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="s s-Atom">//、#或</span><span class="cm">/* comment */</span><span class="nf">用于注释</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="s s-Atom">sub</span> <span class="err">$</span><span class="s s-Atom">name</span> <span class="nf">定义函数</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nf">不支持循环，有内置变量</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="nf">使用终止语句，没有返回值</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="nf">域专用</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="s s-Atom">操作符：=</span><span class="p">(</span><span class="s s-Atom">赋值</span><span class="p">)</span><span class="s s-Atom">、==</span><span class="p">(</span><span class="s s-Atom">等值比较</span><span class="p">)</span><span class="s s-Atom">、~</span><span class="p">(</span><span class="s s-Atom">模式匹配</span><span class="p">)</span><span class="s s-Atom">、</span><span class="p">!(</span><span class="s s-Atom">取反</span><span class="p">)</span><span class="s s-Atom">、&amp;&amp;</span><span class="p">(</span><span class="s s-Atom">逻辑与</span><span class="p">)</span><span class="s s-Atom">、</span><span class="p">||(</span><span class="s s-Atom">逻辑或</span><span class="p">)</span>
+
+<span class="nv">VCL的函数不接受参数并且没有返回值</span><span class="s s-Atom">，因此，其并非真正意义上的函数，这也限定了VCL内部的数据传递只能隐藏在HTTP首部内部进行。</span><span class="nv">VCL的</span>
+<span class="s s-Atom">return语句用于将控制权从VCL状态引擎返回给Varnish，而非默认函数，这就是为什么VCL只有终止语句而没有返回值的原因。同时，</span>
+<span class="s s-Atom">对于每个“域”来说，可以定义一个或多个终止语句，以告诉Varnish下一步采取何种操作，如查询缓存或不查询缓存等。</span>
+
+<span class="mi">3</span><span class="s s-Atom">、</span><span class="nv">VCL的内置函数</span>
+
+<span class="nv">VCL提供了几个函数来实现字符串的修改</span><span class="s s-Atom">，添加bans，重启VCL状态引擎以及将控制权转回Varnish等。</span>
+
+<span class="nf">regsub</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">,</span><span class="s s-Atom">regex</span><span class="p">,</span><span class="s s-Atom">sub</span><span class="p">)</span>
+<span class="nf">regsuball</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">,</span><span class="s s-Atom">regex</span><span class="p">,</span><span class="s s-Atom">sub</span><span class="p">)</span><span class="nf">：这两个用于基于正则表达式搜索指定的字符串并将其替换为指定的字符串；但regsuball</span><span class="p">()</span><span class="s s-Atom">可以将str中能够</span>
+<span class="nf">被regex匹配到的字符串统统替换为sub，regsub</span><span class="p">()</span><span class="s s-Atom">只替换一次；</span>
+<span class="nf">ban</span><span class="p">(</span><span class="s s-Atom">expression</span><span class="p">)</span><span class="s s-Atom">：</span>
+<span class="nf">ban_url</span><span class="p">(</span><span class="s s-Atom">regex</span><span class="p">)</span><span class="s s-Atom">：Bans所有其URL能够由regex匹配的缓存对象；</span>
+<span class="s s-Atom">purge：从缓存中挑选出某对象以及其相关变种一并删除，这可以通过HTTP协议的PURGE方法完成；</span>
+<span class="nf">hash_data</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">)</span><span class="s s-Atom">：</span>
+<span class="nf">return</span><span class="p">()</span><span class="s s-Atom">：当某VCL域运行结束时将控制权返回给Varnish，并指示Varnish如何进行后续的动作；其可以返回的指令包括：lookup、pass、</span>
+<span class="s s-Atom">pipe、hit_for_pass、fetch、deliver和hash等；但某特定域可能仅能返回某些特定的指令，而非前面列出的全部指令；</span>
+<span class="nf">return</span><span class="p">(</span><span class="s s-Atom">restart</span><span class="p">)</span><span class="s s-Atom">：重新运行整个VCL，即重新从vcl_recv开始进行处理；每一次重启都会增加req</span><span class="p">.</span><span class="s s-Atom">restarts变量中的值，而max_restarts</span>
+<span class="s s-Atom">参数则用于限定最大重启次数。</span>
+
+<span class="mi">4</span><span class="s s-Atom">、vcl_recv</span>
+
+<span class="nf">vcl_recv是在Varnish完成对请求报文的解码为基本数据结构后第一个要执行的子例程，它通常有四个主要用途：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="s s-Atom">修改客户端数据以减少缓存对象差异性；比如删除URL中的www</span><span class="p">.</span><span class="nf">等字符；</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="s s-Atom">基于客户端数据选用缓存策略；比如仅缓存特定的URL请求、</span><span class="nf">不缓存POST请求等；</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nf">为某web应用程序执行URL重写规则；</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="s s-Atom">挑选合适的后端Web服务器；</span>
+
+<span class="nf">可以使用下面的终止语句，即通过return</span><span class="p">()</span><span class="s s-Atom">向Varnish返回的指示操作：</span>
+<span class="s s-Atom">pass：绕过缓存，即不从缓存中查询内容或不将内容存储至缓存中；</span>
+<span class="s s-Atom">pipe：不对客户端进行检查或做出任何操作，而是在客户端与后端服务器之间建立专用“管道”，并直接将数据在二者之间进行传送；此时，</span>
+<span class="s s-Atom">keep</span><span class="o">-</span><span class="s s-Atom">alive连接中后续传送的数据也都将通过此管道进行直接传送，并不会出现在任何日志中；</span>
+<span class="s s-Atom">lookup：在缓存中查找用户请求的对象，如果缓存中没有其请求的对象，后续操作很可能会将其请求的对象进行缓存；</span>
+<span class="s s-Atom">error：由Varnish自己合成一个响应报文，一般是响应一个错误类信息、重定向类信息或负载均衡器返回的后端web服务器健康状态检查类信息；</span>
+
+<span class="s s-Atom">vcl_recv也可以通过精巧的策略完成一定意义上的安全功能，以将某些特定的攻击扼杀于摇篮中。同时，它也可以检查出一些拼写类的错误并将</span>
+<span class="s s-Atom">其进行修正等。</span>
+
+<span class="nv">Varnish默认的vcl_recv专门设计用来实现安全的缓存策略</span><span class="nf">，它主要完成两种功能：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nf">仅处理可以识别的HTTP方法，并且只缓存GET和HEAD方法；</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="s s-Atom">不缓存任何用户特有的数据；</span>
+
+<span class="nf">安全起见，一般在自定义的vcl_recv中不要使用return</span><span class="p">()</span><span class="s s-Atom">终止语句，而是再由默认vcl_recv进行处理，并由其做出相应的处理决策。</span>
+
+<span class="s s-Atom">下面是一个自定义的使用示例：</span>
+
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_recv</span> <span class="p">{</span>
+    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span> <span class="s s-Atom">~</span> <span class="s2">&quot;iPad&quot;</span> <span class="p">||</span>
+        <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span> <span class="s s-Atom">~</span> <span class="s2">&quot;iPhone&quot;</span> <span class="p">||</span>
+        <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span> <span class="s s-Atom">~</span> <span class="s2">&quot;Android&quot;</span><span class="p">)</span> <span class="p">{</span>
+            <span class="s s-Atom">set</span> <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">X</span><span class="o">-</span><span class="nv">Device</span> <span class="o">=</span> <span class="s2">&quot;mobile&quot;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="s s-Atom">else</span> <span class="p">{</span>
+            <span class="s s-Atom">set</span> <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">X</span><span class="o">-</span><span class="nv">Device</span> <span class="o">=</span> <span class="s2">&quot;desktop&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">此例中的VCL创建一个X</span><span class="o">-</span><span class="nv">Device请求首部</span><span class="s s-Atom">，其值可能为mobile或desktop，于是web服务器可以基于此完成不同类型的响应，以提高用户体验。</span>
+
+<span class="mi">5</span><span class="s s-Atom">、vcl_fetch</span>
+
+<span class="s s-Atom">如前面所述，相对于vcl_recv是根据客户端的请求作出缓存决策来说，vcl_fetch则是根据服务器端的响应作出缓存决策。在任何VCL状态引擎</span>
+<span class="s s-Atom">中返回的pass操作都将由vcl_fetch进行后续处理。vcl_fetch中有许多可用的内置变量，比如最常用的用于定义某对象缓存时长的beresp</span><span class="p">.</span><span class="s s-Atom">ttl</span>
+<span class="s s-Atom">变量。</span><span class="nf">通过return</span><span class="p">()</span><span class="nf">返回给arnish的操作指示有：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nf">deliver：缓存此对象，并将其发送给客户端</span><span class="p">(</span><span class="s s-Atom">经由vcl_deliver</span><span class="p">)</span><span class="nf">；</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="nf">hit_for_pass：不缓存此对象，但可以导致后续对此对象的请求直接送达到vcl_pass进行处理；</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nf">restart：重启整个VCL，并增加重启计数；超出max_restarts限定的最大重启次数后将会返回错误信息；</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="s s-Atom">error</span> <span class="s s-Atom">code</span> <span class="p">[</span><span class="s s-Atom">reason</span><span class="p">]</span><span class="s s-Atom">：返回指定的错误代码给客户端并丢弃此请求；</span>
+
+<span class="s s-Atom">默认的vcl_fetch放弃了缓存任何使用了Set</span><span class="o">-</span><span class="nv">Cookie首部的响应</span><span class="s s-Atom">。</span>
+
+<span class="s s-Atom">五、修剪缓存对象</span>
+
+<span class="mi">1</span><span class="s s-Atom">、缓存内容修剪</span>
+
+<span class="nf">提高缓存命中率的最有效途径之一是增加缓存对象的生存时间</span><span class="p">(</span><span class="nv">TTL</span><span class="p">)</span><span class="s s-Atom">，但是这也可能会带来副作用，比如缓存的内容在到达为其指定的有效期之间</span>
+<span class="s s-Atom">已经失效。因此，手动检验缓存对象的有效性或者刷新缓存是缓存很有可能成为服务器管理员的日常工作之一，相应地，Varnish为完成这类的任</span>
+<span class="s s-Atom">务提供了三种途径：HTTP</span> <span class="nf">修剪</span><span class="p">(</span><span class="nv">HTTP</span> <span class="s s-Atom">purging</span><span class="p">)</span><span class="s s-Atom">、</span><span class="nf">禁用某类缓存对象</span><span class="p">(</span><span class="s s-Atom">banning</span><span class="p">)</span><span class="nf">和强制缓存未命令</span><span class="p">(</span><span class="s s-Atom">forced</span> <span class="s s-Atom">cache</span> <span class="s s-Atom">misses</span><span class="p">)</span><span class="s s-Atom">。</span>
+
+<span class="s s-Atom">这里需要特殊说明的是，Varnish</span> <span class="mi">2</span><span class="nf">中的purge</span><span class="p">()</span><span class="s s-Atom">操作在Varnish</span> <span class="mi">3</span><span class="nf">中被替换为了ban</span><span class="p">()</span><span class="s s-Atom">操作，而Varnish</span> <span class="mi">3</span><span class="s s-Atom">也使用了purge操作，但为其赋予了</span>
+<span class="s s-Atom">新的功能，且只能用于vcl_hit或vcl_miss中替换Varnish</span> <span class="mi">2</span><span class="s s-Atom">中常用的set</span> <span class="s s-Atom">obj</span><span class="p">.</span><span class="s s-Atom">ttl</span><span class="o">=</span><span class="mi">0</span><span class="s s-Atom">s。</span>
+
+
+
+<span class="nf">在具体执行某清理工作时，需要事先确定如下问题：</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nf">仅需要检验一个特定的缓存对象，还是多个？</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="nf">目的是释放内存空间，还是仅替换缓存的内容？</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="nf">是不是需要很长时间才能完成内容替换？</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="s s-Atom">这类操作是个日常工作，还是仅此一次的特殊需求？</span>
+
+<span class="mi">2</span><span class="s s-Atom">、移除单个缓存对象</span>
+
+<span class="nf">purge用于清理缓存中的某特定对象及其变种</span><span class="p">(</span><span class="s s-Atom">variants</span><span class="p">)</span><span class="s s-Atom">，因此，在有着明确要修剪的缓存对象时可以使用此种方式。</span><span class="nv">HTTP协议的PURGE方法可</span>
+<span class="nf">以实现purge功能，不过，其仅能用于vcl_hit和vcl_miss中，它会释放内存工作并移除指定缓存对象的所有Vary</span><span class="o">:-</span><span class="s s-Atom">变种，并等待下一个针对此</span>
+<span class="s s-Atom">内容的客户端请求到达时刷新此内容。</span><span class="nf">另外，其一般要与return</span><span class="p">(</span><span class="s s-Atom">restart</span><span class="p">)</span><span class="s s-Atom">一起使用。下面是个在VCL中配置的示例。</span>
+
+<span class="s s-Atom">acl</span> <span class="s s-Atom">purgers</span> <span class="p">{</span>
+    <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">;</span>
+    <span class="s2">&quot;192.168.0.0&quot;</span><span class="o">/</span><span class="mi">24</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_recv</span> <span class="p">{</span>
+    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s2">&quot;PURGE&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(!</span><span class="s s-Atom">client</span><span class="p">.</span><span class="s s-Atom">ip</span> <span class="s s-Atom">~</span> <span class="s s-Atom">purgers</span><span class="p">)</span> <span class="p">{</span>
+            <span class="s s-Atom">error</span> <span class="mi">405</span> <span class="s2">&quot;Method not allowed&quot;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nf">return</span> <span class="p">(</span><span class="s s-Atom">lookup</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_hit</span> <span class="p">{</span>
+    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s2">&quot;PURGE&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="s s-Atom">purge</span><span class="p">;</span>
+        <span class="s s-Atom">error</span> <span class="mi">200</span> <span class="s2">&quot;Purged&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_miss</span> <span class="p">{</span>
+    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s2">&quot;PURGE&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="s s-Atom">purge</span><span class="p">;</span>
+        <span class="s s-Atom">error</span> <span class="mi">404</span> <span class="s2">&quot;Not in cache&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_pass</span> <span class="p">{</span>
+    <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s2">&quot;PURGE&quot;</span><span class="p">)</span> <span class="p">{</span>
+        <span class="s s-Atom">error</span> <span class="mi">502</span> <span class="s2">&quot;PURGE on a passed object&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">客户端在发起HTTP请求时，只需要为所请求的URL使用PURGE方法即可，其命令使用方式如下：</span>
+<span class="s s-Atom">#</span> <span class="s s-Atom">curl</span> <span class="o">-</span><span class="nv">I</span> <span class="nv">PURGE</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">varniship</span><span class="o">/</span><span class="s s-Atom">path</span><span class="o">/</span><span class="s s-Atom">to</span><span class="o">/</span><span class="s s-Atom">someurl</span>
+
+<span class="mi">3</span><span class="s s-Atom">、强制缓存未命中</span>
+
+<span class="nf">在vcl_recv中使用return</span><span class="p">(</span><span class="s s-Atom">pass</span><span class="p">)</span><span class="s s-Atom">能够强制到上游服务器取得请求的内容，但这也会导致无法将其缓存。使用purge会移除旧的缓存对象，</span>
+<span class="s s-Atom">但如果上游服务器宕机而无法取得新版本的内容时，此内容将无法再响应给客户端。使用req</span><span class="p">.</span><span class="s s-Atom">has_always_miss</span><span class="o">=</span><span class="s s-Atom">ture，可以让Varnish在缓存</span>
+<span class="s s-Atom">中搜寻相应的内容但却总是回应“未命中”，于是vcl_miss将后续地负责启动vcl_fetch从上游服务器取得新内容，并以新内容缓存覆盖旧内容。</span>
+<span class="s s-Atom">此时，如果上游服务器宕机或未响应，旧的内容将保持原状，并能够继续服务于那些未使用req</span><span class="p">.</span><span class="s s-Atom">has_always_miss</span><span class="o">=</span><span class="s s-Atom">true的客户端，直到其过期</span>
+<span class="s s-Atom">失效或由其它方法移除。</span>
+
+<span class="mi">4</span><span class="s s-Atom">、</span><span class="nv">Banning</span>
+
+<span class="nf">ban</span><span class="p">()</span><span class="nf">是一种从已缓存对象中过滤</span><span class="p">(</span><span class="s s-Atom">filter</span><span class="p">)</span><span class="s s-Atom">出某此特定的对象并将其移除的缓存内容刷新机制，不过，它并不阻止新的内容进入缓存或响应于</span>
+<span class="s s-Atom">请求。</span><span class="nf">在Varnish中，ban的实现是指将一个ban添加至ban列表</span><span class="p">(</span><span class="s s-Atom">ban</span><span class="o">-</span><span class="s s-Atom">list</span><span class="p">)</span><span class="s s-Atom">中，这可以通过命令行接口或VCL实现，它们的使用语法是</span>
+<span class="s s-Atom">相同的。</span><span class="nf">ban本身就是一个或多个VCL风格的语句，它会在Varnish从缓存哈希</span><span class="p">(</span><span class="s s-Atom">cache</span> <span class="s s-Atom">hash</span><span class="p">)</span><span class="s s-Atom">中查找某缓存对象时对搜寻的对象进行比较测试，</span>
+<span class="s s-Atom">因此，一个ban语句就是类似匹配所有“以</span><span class="o">/</span><span class="s s-Atom">downloads开头的URL”，或“响应首部中包含nginx的对象”。例如：</span>
+    <span class="s s-Atom">ban</span> <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="s s-Atom">host</span> <span class="o">==</span> <span class="s2">&quot;magedu.com&quot;</span> <span class="s s-Atom">&amp;&amp;</span> <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">url</span> <span class="s s-Atom">~</span> <span class="err">&quot;</span><span class="s s-Atom">\.gif$</span><span class="s2">&quot;</span>
+
+<span class="s2">定义好的所有ban语句会生成一个ban列表(ban-list)，新添加的ban语句会被放置在列表的首部。缓存中的所有对象在响应给客户端之前都会</span>
+<span class="s2">被ban列表检查至少一次，检查完成后将会为每个缓存创建一个指向与其匹配的ban语句的指针。Varnish在从缓存中获取对象时，总是会检查此</span>
+<span class="s2">缓存对象的指针是否指向了ban列表的首部。如果没有指向ban列表的首部，其将对使用所有的新添加的ban语句对此缓存对象进行测试，如果没</span>
+<span class="s2">有任何ban语句能够匹配，则更新ban列表。</span>
+
+<span class="s2">对ban这种实现方式持反对意见有有之，持赞成意见者亦有之。反对意见主要有两种，一是ban不会释放内存，缓存对象仅在有客户端访问时被</span>
+<span class="s2">测试一次；二是如果缓存对象曾经被访问到，但却很少被再次访问时ban列表将会变得非常大。赞成的意见则主要集中在ban可以让Varnish在</span>
+<span class="s2">恒定的时间内完成向ban列表添加ban的操作，例如在有着数百万个缓存对象的场景中，添加一个ban也只需要在恒定的时间内即可完成。其实现</span>
+<span class="s2">方法本处不再详细说明。</span>
+
+<span class="s2">六、Varnish检测后端主机的健康状态</span>
+
+<span class="s2">Varnish可以检测后端主机的健康状态，在判定后端主机失效时能自动将其从可用后端主机列表中移除，而一旦其重新变得可用还可以自动将其设</span>
+
+<span class="s2">定为可用。为了避免误判，Varnish在探测后端主机的健康状态发生转变时(比如某次探测时某后端主机突然成为不可用状态)，通常需要连续执行</span>
+<span class="s2">几次探测均为新状态才将其标记为转换后的状态。</span>
+
+<span class="s2">每个后端服务器当前探测的健康状态探测方法通过.probe进行设定，其结果可由req.backend.healthy变量获取，也可通过varnishlog中</span>
+<span class="s2">的Backend_health查看或varnishadm的debug.health查看。</span>
+
+<span class="s2">backend web1 {</span>
+<span class="s2">    .host = &quot;</span><span class="s s-Atom">www</span><span class="p">.</span><span class="s s-Atom">magedu</span><span class="p">.</span><span class="s s-Atom">com</span><span class="s2">&quot;;</span>
+<span class="s2">    .probe = {</span>
+<span class="s2">        .url = &quot;</span><span class="s s-Atom">/.healthtest</span><span class="p">.</span><span class="s s-Atom">html</span><span class="s2">&quot;;</span>
+<span class="s2">        .interval = 1s;</span>
+<span class="s2">        .window = 5;</span>
+<span class="s2">        .threshold = 2;</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+
+<span class="s2">.probe中的探测指令常用的有：</span>
+<span class="s2">(1) .url：探测后端主机健康状态时请求的URL，默认为“/”；</span>
+<span class="s2">(2) .request: 探测后端主机健康状态时所请求内容的详细格式，定义后，它会替换.url指定的探测方式；比如：</span>
+<span class="s2">    .request =</span>
+<span class="s2">        &quot;</span><span class="nv">GET</span> <span class="s s-Atom">/.healthtest</span><span class="p">.</span><span class="s s-Atom">html</span> <span class="nv">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="s2">&quot;</span>
+<span class="s2">        &quot;</span><span class="nv">Host</span><span class="s s-Atom">:</span> <span class="s s-Atom">www</span><span class="p">.</span><span class="s s-Atom">magedu</span><span class="p">.</span><span class="s s-Atom">com</span><span class="s2">&quot;</span>
+<span class="s2">        &quot;</span><span class="nv">Connection</span><span class="s s-Atom">:</span> <span class="s s-Atom">close</span><span class="s2">&quot;;</span>
+<span class="s2">(3) .window：设定在判定后端主机健康状态时基于最近多少次的探测进行，默认是8；</span>
+<span class="s2">(4) .threshold：在.window中指定的次数中，至少有多少次是成功的才判定后端主机正健康运行；默认是3；</span>
+<span class="s2">(5) .initial：Varnish启动时对后端主机至少需要多少次的成功探测，默认同.threshold；</span>
+<span class="s2">(6) .expected_response：期望后端主机响应的状态码，默认为200；</span>
+<span class="s2">(7) .interval：探测请求的发送周期，默认为5秒；</span>
+<span class="s2">(8) .timeout：每次探测请求的过期时长，默认为2秒；</span>
+
+<span class="s2">因此，如上示例中表示每隔1秒对此后端主机www.magedu.com探测一次，请求的URL为http://www.magedu.com/.healthtest.html，在最近5次</span>
+<span class="s2">的探测请求中至少有2次是成功的(响应码为200)就判定此后端主机为正常工作状态。</span>
+
+<span class="s2">如果Varnish在某时刻没有任何可用的后端主机，它将尝试使用缓存对象的“宽容副本”(graced copy)，当然，此时VCL中的各种规则依然有效。因</span>
+<span class="s2">此，更好的办法是在VCL规则中判断req.backend.healthy变量显示某后端主机不可用时，为此后端主机增大req.grace变量的值以设定适用的宽</span>
+<span class="s2">容期限长度。</span>
+
+<span class="s2">七、Varnish使用多台后端主机</span>
+
+<span class="s2">Varnish中可以使用director指令将一个或多个近似的后端主机定义为一个逻辑组，并可以指定的调度方式(也叫挑选方法)来轮流将请求发送至这</span>
+<span class="s2">些主机上。不同的director可以使用同一个后端主机，而某director也可以使用“匿名”后端主机(在director中直接进行定义)。每个director</span>
+<span class="s2">都必须有其专用名，且在定义后必须在VCL中进行调用，VCL中任何可以指定后端主机的位置均可以按需将其替换为调用某已定义的director。</span>
+
+<span class="s2">backend web1 {</span>
+<span class="s2">    .host = &quot;</span><span class="s s-Atom">backweb1</span><span class="p">.</span><span class="s s-Atom">magedu</span><span class="p">.</span><span class="s s-Atom">com</span><span class="s2">&quot;;</span>
+<span class="s2">    .port = &quot;</span><span class="mi">80</span><span class="s2">&quot;;</span>
+<span class="s2">}</span>
+
+<span class="s2">director webservers random {</span>
+<span class="s2">  .retries = 5;</span>
+<span class="s2">  {</span>
+<span class="s2">    .backend = web1;</span>
+<span class="s2">    .weight  = 2;</span>
+<span class="s2">  }</span>
+<span class="s2">  {</span>
+<span class="s2">    .backend  = {</span>
+<span class="s2">      .host = &quot;</span><span class="s s-Atom">backweb2</span><span class="p">.</span><span class="s s-Atom">magedu</span><span class="p">.</span><span class="s s-Atom">com</span><span class="s2">&quot;;</span>
+<span class="s2">      .port = &quot;</span><span class="mi">80</span><span class="s2">&quot;;</span>
+<span class="s2">    }</span>
+<span class="s2">  .weight         = 3;</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">如上示例中，web1为显式定义的后端主机，而webservers这个directors还包含了一个“匿名”后端主机(backweb2.magedu.com)。webservers</span>
+<span class="s2">从这两个后端主机中挑选一个主机的方法为random，即以随机方式挑选。</span>
+
+<span class="s2">Varnish的director支持的挑选方法中比较简单的有round-robin和random两种。其中，round-robin类型没有任何参数，只需要为其指定各后</span>
+<span class="s2">端主机即可，挑选方式为“轮叫”，并在某后端主机故障时不再将其视作挑选对象；random方法随机从可用后端主机中进行挑选，每一个后端主机</span>
+<span class="s2">都需要一个.weight参数以指定其权重，同时还可以director级别使用.retires参数来设定查找一个健康后端主机时的尝试次数。</span>
+
+
+<span class="s2">Varnish 2.1.0后，random挑选方法又多了两种变化形式client和hash。client类型的director使用client.identity作为挑选因子，这意</span>
+<span class="s2">味着client.identity相同的请求都将被发送至同一个后端主机。client.identity默认为cliet.ip，但也可以在VCL中将其修改为所需要的标</span>
+<span class="s2">识符。类似地，hash类型的director使用hash数据作为挑选因子，这意味着对同一个URL的请求将被发往同一个后端主机，其常用于多级缓存的</span>
+<span class="s2">场景中。然而，无论是client还hash，当其倾向于使用后端主机不可用时将会重新挑选新的后端其机。</span>
+
+<span class="s2">八、varnish管理进阶</span>
+
+<span class="s2">1、可调参数</span>
+
+<span class="s2">Varnish有许多参数，虽然大多数场景中这些参数的默认值都可以工作得很好，然而特定的工作场景中要想有着更好的性能的表现，则需要调整</span>
+<span class="s2">某些参数。可以在管理接口中使用param.show命令查看这些参数，而使用param.set则能修改这些参数的值。然而，在命令行接口中进行的修改</span>
+<span class="s2">不会保存至任何位置，因此，重启varnish后这些设定会消失。此时，可以通过启动脚本使用-p选项在varnishd启动时为其设定参数的值。然而，</span>
+<span class="s2">除非特别需要对其进行修改，保持这些参数为默认值可以有效降低管理复杂度。</span>
+
+<span class="s2">2、共享内存日志</span>
+
+<span class="s2">共享内存日志(shared memory log)通常被简称为shm-log，它用于记录日志相关的数据，大小为80M。varnish以轮转(round-robin)的方式</span>
+<span class="s2">使用其存储空间。一般不需要对shm-log做出更多的设定，但应该避免其产生I/O，这可以使用tmpfs实现，其方法为在/etc/fstab中设定一个</span>
+<span class="s2">挂载至/var/lib/varnish目录(或其它自定义的位置)临时文件系统即可。</span>
+
+<span class="s2">3、线程模型(Trheading model)</span>
+
+<span class="s2">varnish的child进程由多种不同的线程组成，分别用于完成不同的工作。例如：</span>
+<span class="s2">    cache-worker线程：每连接一个，用于处理请求；</span>
+<span class="s2">    cache-main线程：全局只有一个，用于启动cache；</span>
+<span class="s2">    ban lurker线程：一个，用于清理bans；</span>
+<span class="s2">    acceptor线程：一个，用于接收新的连接请求；</span>
+<span class="s2">    epoll/kqueue线程：数量可配置，默认为2，用于管理线程池；</span>
+<span class="s2">    expire线程：一个，用于移除老化的内容；</span>
+<span class="s2">    backend poll线程：每个后端服务器一个，用于检测后端服务器的健康状况；</span>
+
+<span class="s2">在配置varnish时，一般只需为关注cache-worker线程，而且也只能配置其线程池的数量，而除此之外的其它均非可配置参数。与此同时，线程池</span>
+<span class="s2">的数量也只能在流量较大的场景下才需要增加，而且经验表明其多于2个对提升性能并无益处。</span>
+
+<span class="s2">4、线程相关的参数(Threading parameters)</span>
+
+<span class="s2">varnish为每个连接使用一个线程，因此，其worker线程的最大数决定了varnish的并发响应能力。下面是线程池相关的各参数及其配置：</span>
+
+<span class="s2">thread_pool_add_delay      2 [milliseconds]</span>
+<span class="s2">thread_pool_add_threshold  2 [requests]</span>
+<span class="s2">thread_pool_fail_delay     200 [milliseconds]</span>
+<span class="s2">thread_pool_max            500 [threads]</span>
+<span class="s2">thread_pool_min            5 [threads]</span>
+<span class="s2">thread_pool_purge_delay    1000 [milliseconds]</span>
+<span class="s2">thread_pool_stack          65536 [bytes]</span>
+<span class="s2">thread_pool_timeout        120 [seconds]</span>
+<span class="s2">thread_pool_workspace      16384 [bytes]</span>
+<span class="s2">thread_pools               2 [pools]</span>
+<span class="s2">thread_stats_rate          10 [requests]</span>
+
+<span class="s2">其中最关键的当属thread_pool_max和thread_pool_min，它们分别用于定义每个线程池中的最大线程数和最少线程数。因此，在某个时刻，至</span>
+<span class="s2">少有thread_pool_min*thread_pools个worker线程在运行，但至多不能超出thread_pool_max*thread_pools个。根据需要，这两个参数的数</span>
+<span class="s2">量可以进行调整，varnishstat命令的n_wrk_queued可以显示当前varnish的线程数量是否足够，如果队列中始终有不少的线程等待运行，则可以</span>
+<span class="s2">适当调大thread_pool_max参数的值。但一般建议每台varnish服务器上最多运行的worker线程数不要超出5000个。</span>
+
+
+<span class="s2">当某连接请求到达时，varnish选择一个线程池负责处理此请求。而如果此线程池中的线程数量已经达到最大值，新的请求将会被放置于队列</span>
+<span class="s2">中或被直接丢弃。默认线程池的数量为2，这对最繁忙的varnish服务器来说也已经足够。</span>
+
+<span class="s2">5、</span>
+
+<span class="s2">九、Varnish的命令行工具</span>
+
+<span class="s2">1、varnishadm命令</span>
+
+<span class="s2">命令语法：varnishadm [-t timeout] [-S secret_file] [-T address:port] [-n name] [command [...]]</span>
+
+<span class="s2">通过命令行的方式连接至varnishd进行管理操作的工具，指定要连接的varnish实例的方法有两种：</span>
+<span class="s2">-n name —— 连接至名称为“name”的实例；</span>
+<span class="s2">-T address:port —— 连接至指定套接字上的实例；</span>
+
+<span class="s2">其运行模式有两种，当不在命令行中给出要执行的&quot;</span><span class="s s-Atom">command</span><span class="s2">&quot;时，其将进入交互式模式；否则，varnishadm将执行指定的&quot;</span><span class="s s-Atom">command</span><span class="s2">&quot;并退出。</span>
+<span class="s2">要查看本地启用的缓存，可使用如下命令进行。</span>
+<span class="s2"># varnishadm -S /etc/varnish/secret -T 127.0.0.1:6082 storage.list</span>
+
+
+
+
+
+
+<span class="s2">sub vcl_deliver {</span>
+
+<span class="s2">  if (obj.hits &gt; 0) {</span>
+<span class="s2">    set resp.http.X-Cache = &quot;</span><span class="nv">HIT</span><span class="s2">&quot;;</span>
+<span class="s2">  } else {</span>
+<span class="s2">    set resp.http.X-Cache = &quot;</span><span class="nv">MISS</span><span class="s2">&quot;;</span>
+<span class="s2">  }</span>
+<span class="s2">}</span>
+
+<span class="s2">sub vcl_deliver {</span>
+<span class="s2">        if (obj.hits &gt; 0) {</span>
+<span class="s2">                set resp.http.X-Cache = &quot;</span><span class="nv">HIT</span> <span class="s s-Atom">via</span><span class="s2">&quot; + &quot;</span> <span class="s2">&quot; + server.hostname;</span>
+<span class="s2">        } else {</span>
+<span class="s2">                set resp.http.X-Cache = &quot;</span><span class="nv">MISS</span> <span class="s s-Atom">via</span><span class="s2">&quot; + &quot;</span> <span class="s2">&quot; + server.hostname;</span>
+<span class="s2">        }</span>
+<span class="s2">}</span>
+
+
+
+<span class="s2">sub vcl_recv {</span>
+<span class="s2">        if (req.url ~ &quot;</span><span class="s s-Atom">^/test</span><span class="p">.</span><span class="s s-Atom">html$</span><span class="s2">&quot;) {</span>
+<span class="s2">                return(pass);</span>
+<span class="s2">        }</span>
+<span class="s2">}</span>
+
+<span class="s2">sub vcl_fetch {</span>
+
+<span class="s2">        if (req.request == &quot;</span><span class="nv">GET</span><span class="s2">&quot; &amp;&amp; req.url ~ &quot;</span><span class="s s-Atom">\.</span><span class="p">(</span><span class="s s-Atom">html</span><span class="p">|</span><span class="s s-Atom">jpg</span><span class="p">|</span><span class="s s-Atom">jpeg</span><span class="p">)</span><span class="err">$</span><span class="s2">&quot;) {</span>
+<span class="s2">                set beresp.ttl = 3600s;</span>
+<span class="s2">        }</span>
+<span class="s2">}</span>
+
+
+
+<span class="s2">sub vcl_fetch {</span>
+<span class="s2">    if (beresp.http.cache-control !~ &quot;</span><span class="s s-Atom">s</span><span class="o">-</span><span class="s s-Atom">maxage</span><span class="s2">&quot;) {</span>
+<span class="s2">        if (req.url ~ &quot;</span><span class="s s-Atom">\.</span><span class="nf">jpg</span><span class="p">(</span><span class="s s-Atom">\?</span><span class="p">|</span><span class="err">$</span><span class="p">)</span><span class="s2">&quot;) {</span>
+<span class="s2">            set beresp.ttl = 30s;</span>
+<span class="s2">            unset beresp.http.Set-Cookie;</span>
+<span class="s2">        }</span>
+<span class="s2">        if (req.url ~ &quot;</span><span class="s s-Atom">\.</span><span class="nf">html</span><span class="p">(</span><span class="s s-Atom">\?</span><span class="p">|</span><span class="err">$</span><span class="p">)</span><span class="s2">&quot;) {</span>
+<span class="s2">            set beresp.ttl = 10s;</span>
+<span class="s2">            unset beresp.http.Set-Cookie;</span>
+<span class="s2">        }</span>
+<span class="s2">    } else {</span>
+<span class="s2">        if (beresp.ttl &gt; 0s) {</span>
+<span class="s2">            unset beresp.http.Set-Cookie;</span>
+<span class="s2">        }</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+
+
+
+<span class="s2">sub vcl_error {</span>
+<span class="s2">    synthetic &quot;</span><span class="o">&lt;</span><span class="s s-Atom">html&gt;&lt;body&gt;&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nv">Something</span> <span class="s s-Atom">was</span> <span class="s s-Atom">wrong</span><span class="p">!</span> <span class="p">--&gt;</span><span class="s s-Atom">&lt;/body&gt;&lt;/html&gt;</span><span class="s2">&quot;;</span>
+<span class="s2">    set obj.status = 200;</span>
+<span class="s2">    return (deliver);</span>
+<span class="s2">}</span>
+
+
+
+
+
+
+<span class="s2">Cache-Control   = &quot;</span><span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span><span class="s2">&quot; &quot;</span><span class="s s-Atom">:</span><span class="s2">&quot; 1#cache-directive</span>
+<span class="s2">    cache-directive = cache-request-directive</span>
+<span class="s2">         | cache-response-directive</span>
+<span class="s2">    cache-request-directive =</span>
+<span class="s2">           &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">cache</span><span class="s2">&quot;                          </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">store</span><span class="s2">&quot; (backup)                          </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">max</span><span class="o">-</span><span class="s s-Atom">age</span><span class="s2">&quot; &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; delta-seconds         </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">max</span><span class="o">-</span><span class="s s-Atom">stale</span><span class="s2">&quot; [ &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; delta-seconds ]  </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">min</span><span class="o">-</span><span class="s s-Atom">fresh</span><span class="s2">&quot; &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; delta-seconds      </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">transform</span><span class="s2">&quot;                      </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">only</span><span class="o">-</span><span class="s s-Atom">if</span><span class="o">-</span><span class="s s-Atom">cached</span><span class="s2">&quot;                   </span>
+<span class="s2">         | cache-extension                   </span>
+<span class="s2">     cache-response-directive =</span>
+<span class="s2">           &quot;</span><span class="s s-Atom">public</span><span class="s2">&quot;                               </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">private</span><span class="s2">&quot; [ &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; &lt;&quot;</span><span class="o">&gt;</span> <span class="mi">1</span><span class="s s-Atom">#field</span><span class="o">-</span><span class="s s-Atom">name</span> <span class="s s-Atom">&lt;</span><span class="s2">&quot;&gt; ] </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">cache</span><span class="s2">&quot; [ &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; &lt;&quot;</span><span class="o">&gt;</span> <span class="mi">1</span><span class="s s-Atom">#field</span><span class="o">-</span><span class="s s-Atom">name</span> <span class="s s-Atom">&lt;</span><span class="s2">&quot;&gt; ]</span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">store</span><span class="s2">&quot;                            </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">no</span><span class="o">-</span><span class="s s-Atom">transform</span><span class="s2">&quot;                         </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">must</span><span class="o">-</span><span class="s s-Atom">revalidate</span><span class="s2">&quot;                     </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">proxy</span><span class="o">-</span><span class="s s-Atom">revalidate</span><span class="s2">&quot;                    </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">max</span><span class="o">-</span><span class="s s-Atom">age</span><span class="s2">&quot; &quot;</span><span class="s s-Atom">=</span><span class="s2">&quot; delta-seconds            </span>
+<span class="s2">         | &quot;</span><span class="s s-Atom">s</span><span class="o">-</span><span class="s s-Atom">maxage</span><span class="s2">&quot; &quot;</span><span class="s s-Atom">=</span><span class="err">&quot;</span> <span class="s s-Atom">delta</span><span class="o">-</span><span class="s s-Atom">seconds</span>           
+         <span class="p">|</span> <span class="s s-Atom">cache</span><span class="o">-</span><span class="s s-Atom">extension</span>                        
+
+
+
+
+
+
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_deliver</span> <span class="p">{</span>
+        <span class="s s-Atom">set</span> <span class="s s-Atom">resp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">X</span><span class="o">-</span><span class="nv">Age</span> <span class="o">=</span> <span class="s s-Atom">resp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">Age</span><span class="p">;</span>
+        <span class="s s-Atom">unset</span> <span class="s s-Atom">resp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">Age</span><span class="p">;</span>
+
+        <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">obj</span><span class="p">.</span><span class="s s-Atom">hits</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="s s-Atom">set</span> <span class="s s-Atom">resp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">X</span><span class="o">-</span><span class="nv">Cache</span> <span class="o">=</span> <span class="s s-Atom">“</span><span class="nv">HIT</span><span class="s s-Atom">”</span><span class="p">;</span>
+        <span class="p">}</span> <span class="s s-Atom">else</span> <span class="p">{</span>
+                <span class="s s-Atom">set</span> <span class="s s-Atom">resp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="nv">X</span><span class="o">-</span><span class="nv">Cache</span> <span class="o">=</span> <span class="s s-Atom">“</span><span class="nv">MISS</span><span class="s s-Atom">”</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+
+
+
+
+
+
+
+<span class="s s-Atom">acl</span> <span class="s s-Atom">purgers</span> <span class="p">{</span>
+        <span class="s s-Atom">“</span><span class="mf">127.0.0.1</span><span class="s s-Atom">”</span><span class="p">;</span>
+        <span class="s s-Atom">“</span><span class="mf">192.168.0.0</span><span class="s s-Atom">”/</span><span class="mi">24</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_recv</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s s-Atom">“</span><span class="nv">PURGE</span><span class="s s-Atom">”</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">if</span> <span class="p">(!</span><span class="s s-Atom">client</span><span class="p">.</span><span class="s s-Atom">ip</span> <span class="s s-Atom">~</span> <span class="s s-Atom">purgers</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="s s-Atom">error</span> <span class="mi">405</span> <span class="s s-Atom">“</span><span class="nv">Method</span> <span class="o">not</span> <span class="s s-Atom">allowed”</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="nf">return</span> <span class="p">(</span><span class="s s-Atom">lookup</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_hit</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s s-Atom">“</span><span class="nv">PURGE</span><span class="s s-Atom">”</span><span class="p">)</span> <span class="p">{</span>
+                <span class="s s-Atom">purge</span><span class="p">;</span>
+                <span class="s s-Atom">error</span> <span class="mi">200</span> <span class="s s-Atom">“</span><span class="nv">Purged</span><span class="s s-Atom">”</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_miss</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s s-Atom">“</span><span class="nv">PURGE</span><span class="s s-Atom">”</span><span class="p">)</span> <span class="p">{</span> 
+                <span class="s s-Atom">purge</span><span class="p">;</span>
+                <span class="s s-Atom">error</span> <span class="mi">404</span> <span class="s s-Atom">“</span><span class="nv">Not</span> <span class="s s-Atom">in</span> <span class="s s-Atom">cache”</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+<span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_pass</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">request</span> <span class="o">==</span> <span class="s s-Atom">“</span><span class="nv">PURGE</span><span class="s s-Atom">”</span><span class="p">)</span> <span class="p">{</span>
+                <span class="s s-Atom">error</span> <span class="mi">502</span> <span class="s s-Atom">“</span><span class="nv">PURGE</span> <span class="s s-Atom">on</span> <span class="s s-Atom">a</span> <span class="s s-Atom">passed</span> <span class="s s-Atom">object”</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+
+
+<span class="s s-Atom">sed</span> <span class="o">/</span><span class="s s-Atom">pattern</span><span class="o">/</span><span class="s s-Atom">string</span><span class="o">/</span><span class="s s-Atom">g</span>
+
+<span class="s s-Atom">在请求的时候使用curl</span> <span class="o">-</span><span class="nv">H</span> <span class="nv">PURGE</span> <span class="nv">URL</span>
+
+
+
+<span class="nf">regsub</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">,</span> <span class="s s-Atom">regex</span><span class="p">,</span> <span class="s s-Atom">sub</span><span class="p">)</span>
+<span class="nf">regsub</span><span class="p">(</span><span class="err">$</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">url</span><span class="p">,</span> <span class="s s-Atom">www\.maged\.com</span><span class="p">,</span> <span class="s s-Atom">www</span><span class="p">.</span><span class="s s-Atom">mageedu</span><span class="p">.</span><span class="s s-Atom">com</span><span class="p">)</span>
+
+
+<span class="nn">purge</span><span class="p">:</span> <span class="s s-Atom">让缓存失效的；</span>
+<span class="nf">ban</span><span class="p">()</span>
+
+<span class="nv">URL</span> <span class="s s-Atom">rewrite</span>
+
+<span class="nv">VCL</span> <span class="o">-</span> <span class="s s-Atom">functions</span>
+  <span class="nf">regsub</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">,</span> <span class="s s-Atom">regex</span><span class="p">,</span> <span class="s s-Atom">sub</span><span class="p">)</span>
+  <span class="nf">regsuball</span><span class="p">(</span><span class="s s-Atom">str</span><span class="p">,</span> <span class="s s-Atom">regex</span><span class="p">,</span> <span class="s s-Atom">sub</span><span class="p">)</span>
+  <span class="nf">ban_url</span><span class="p">(</span><span class="s s-Atom">regex</span><span class="p">)</span>
+  <span class="nf">ban</span><span class="p">(</span><span class="s s-Atom">expression</span><span class="p">)</span>
+  <span class="s s-Atom">purge</span><span class="p">;</span>
+  <span class="nf">return</span><span class="p">(</span><span class="s s-Atom">restart</span><span class="p">)</span>
+  <span class="nf">return</span><span class="p">()</span>
+  <span class="nf">hash_data</span><span class="p">()</span>
+
+
+
+
+<span class="s s-Atom">子例程</span>
+
+<span class="s s-Atom">vcl_recv</span> <span class="p">{</span>
+
+<span class="p">}</span>
+
+
+
+
+<span class="s s-Atom">cookie</span>
+
+<span class="s s-Atom">#</span> <span class="nv">Drop</span> <span class="s s-Atom">any</span> <span class="s s-Atom">cookies</span> <span class="s s-Atom">sent</span> <span class="s s-Atom">to</span> <span class="nv">Wordpress</span><span class="p">.</span>
+    <span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_recv</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(!(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">url</span> <span class="s s-Atom">~</span> <span class="s2">&quot;wp-(login|admin)&quot;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="s s-Atom">unset</span> <span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="s s-Atom">cookie</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="s s-Atom">#</span> <span class="nv">Drop</span> <span class="s s-Atom">any</span> <span class="s s-Atom">cookies</span> <span class="nv">Wordpress</span> <span class="s s-Atom">tries</span> <span class="s s-Atom">to</span> <span class="s s-Atom">send</span> <span class="s s-Atom">back</span> <span class="s s-Atom">to</span> <span class="s s-Atom">the</span> <span class="s s-Atom">client</span><span class="p">.</span>
+    <span class="s s-Atom">sub</span> <span class="s s-Atom">vcl_fetch</span> <span class="p">{</span>
+        <span class="nf">if</span> <span class="p">(!(</span><span class="s s-Atom">req</span><span class="p">.</span><span class="s s-Atom">url</span> <span class="s s-Atom">~</span> <span class="s2">&quot;wp-(login|admin)&quot;</span><span class="p">))</span> <span class="p">{</span>
+            <span class="s s-Atom">unset</span> <span class="s s-Atom">beresp</span><span class="p">.</span><span class="s s-Atom">http</span><span class="p">.</span><span class="s s-Atom">set</span><span class="o">-</span><span class="s s-Atom">cookie</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../docker/" title="docker" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                docker
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../bind/" title="bind" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                bind
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

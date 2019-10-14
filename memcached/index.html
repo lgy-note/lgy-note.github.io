@@ -1,0 +1,1393 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>memcached - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#memcache" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                memcached
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link md-tabs__link--active">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        memcached
+      </label>
+    
+    <a href="./" title="memcached" class="md-nav__link md-nav__link--active">
+      memcached
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#memcache" class="md-nav__link">
+    memcache状态
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magent" class="md-nav__link">
+    magent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    清除数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    key操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memcache_1" class="md-nav__link">
+    memcache安装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#memcache" class="md-nav__link">
+    memcache状态
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#magent" class="md-nav__link">
+    magent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    清除数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    key操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memcache_1" class="md-nav__link">
+    memcache安装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>memcached</h1>
+                
+                <h2 id="memcache">memcache状态</h2>
+<div class="codehilite"><pre><span></span><span class="nv">telnet</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span> <span class="mi">11211</span>
+<span class="nv">stats</span>
+或者
+获取运行状态
+<span class="nv">echo</span> <span class="nv">stats</span> <span class="o">|</span> <span class="nv">nc</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">123</span> <span class="mi">11200</span>
+<span class="nv">watch</span> <span class="s2">&quot;</span><span class="s">echo stats | nc 192.168.1.123 11200</span><span class="s2">&quot;</span> <span class="ss">(</span>实时状态<span class="ss">)</span>
+
+<span class="nv">memcache</span> <span class="nv">stats</span>命令
+
+<span class="nv">stats</span> 命令的功能正如其名：转储所连接的 <span class="nv">memcached</span> 实例的当前统计数据。在下例中，执行<span class="nv">stats</span>命令显示了关于当前 <span class="nv">memcached</span> 实例的信息：
+
+<span class="nv">STAT</span> <span class="nv">pid</span> <span class="mi">22459</span>                                     进程<span class="nv">ID</span>
+
+<span class="nv">STAT</span> <span class="k">uptime</span> <span class="mi">1027046</span>                         服务器运行秒数
+
+<span class="nv">STAT</span> <span class="nv">time</span> <span class="mi">1273043062</span>                       服务器当前<span class="nv">unix</span>时间戳
+
+<span class="nv">STAT</span> <span class="nv">version</span> <span class="mi">1</span>.<span class="mi">4</span>.<span class="mi">4</span>                                服务器版本
+
+<span class="nv">STAT</span> <span class="nv">pointer_size</span> <span class="mi">64</span>                           操作系统<span class="ss">(</span>这台服务器是<span class="mi">64</span>位的<span class="ss">)</span>
+
+<span class="nv">STAT</span> <span class="nv">rusage_user</span> <span class="mi">0</span>.<span class="mi">040000</span>             进程累计用户时间
+
+<span class="nv">STAT</span> <span class="nv">rusage_system</span> <span class="mi">0</span>.<span class="mi">260000</span>        进程累计系统时间
+
+<span class="nv">STAT</span> <span class="nv">curr_connections</span> <span class="mi">10</span>                  当前打开连接数
+
+<span class="nv">STAT</span> <span class="nv">total_connections</span> <span class="mi">82</span>                 曾打开的连接总数
+
+<span class="nv">STAT</span> <span class="nv">connection_structures</span> <span class="mi">13</span>          服务器分配的连接结构数
+
+<span class="nv">STAT</span> <span class="nv">cmd_get</span> <span class="mi">54</span>                            执行<span class="nv">get</span>命令总数
+
+<span class="nv">STAT</span> <span class="nv">cmd_set</span> <span class="mi">34</span>                            执行<span class="nv">set</span>命令总数
+
+<span class="nv">STAT</span> <span class="nv">cmd_flush</span> <span class="mi">3</span>                           指向<span class="nv">flush_all</span>命令总数
+
+<span class="nv">STAT</span> <span class="nv">get_hits</span> <span class="mi">9</span>                            <span class="nv">get</span>命中次数
+
+<span class="nv">STAT</span> <span class="nv">get_misses</span> <span class="mi">45</span>                         <span class="nv">get</span>未命中次数
+
+<span class="nv">STAT</span> <span class="nv">delete_misses</span> <span class="mi">5</span>                       <span class="nv">delete</span>未命中次数
+
+<span class="nv">STAT</span> <span class="nv">delete_hits</span> <span class="mi">1</span>                         <span class="nv">delete</span>命中次数
+
+<span class="nv">STAT</span> <span class="nv">incr_misses</span> <span class="mi">0</span>                         <span class="nv">incr</span>未命中次数
+
+<span class="nv">STAT</span> <span class="nv">incr_hits</span> <span class="mi">0</span>                           <span class="nv">incr</span>命中次数
+
+<span class="nv">STAT</span> <span class="nv">decr_misses</span> <span class="mi">0</span>                         <span class="nv">decr</span>未命中次数
+
+<span class="nv">STAT</span> <span class="nv">decr_hits</span> <span class="mi">0</span>                           <span class="nv">decr</span>命中次数
+
+<span class="nv">STAT</span> <span class="nv">cas_misses</span> <span class="mi">0</span>                     <span class="nv">cas</span>未命中次数
+
+<span class="nv">STAT</span> <span class="nv">cas_hits</span> <span class="mi">0</span>                            <span class="nv">cas</span>命中次数
+
+<span class="nv">STAT</span> <span class="nv">cas_badval</span> <span class="mi">0</span>                          使用擦拭次数
+
+<span class="nv">STAT</span> <span class="nv">auth_cmds</span> <span class="mi">0</span>
+
+<span class="nv">STAT</span> <span class="nv">auth_errors</span> <span class="mi">0</span>
+
+<span class="nv">STAT</span> <span class="nv">bytes_read</span> <span class="mi">15785</span>                      读取字节总数
+
+<span class="nv">STAT</span> <span class="nv">bytes_written</span> <span class="mi">15222</span>                   写入字节总数
+
+<span class="nv">STAT</span> <span class="nv">limit_maxbytes</span> <span class="mi">1048576</span>                分配的内存数（字节）
+
+<span class="nv">STAT</span> <span class="nv">accepting_conns</span> <span class="mi">1</span>                     目前接受的链接数
+
+<span class="nv">STAT</span> <span class="nv">listen_disabled_num</span> <span class="mi">0</span>
+
+<span class="nv">STAT</span> <span class="nv">threads</span> <span class="mi">4</span>                             线程数
+
+<span class="nv">STAT</span> <span class="nv">conn_yields</span> <span class="mi">0</span>
+
+<span class="nv">STAT</span> <span class="nv">bytes</span> <span class="mi">0</span>                               存储<span class="nv">item</span>字节数
+
+<span class="nv">STAT</span> <span class="nv">curr_items</span> <span class="mi">0</span>                          <span class="nv">item</span>个数
+
+<span class="nv">STAT</span> <span class="nv">total_items</span> <span class="mi">34</span>                        <span class="nv">item</span>总数
+
+<span class="nv">STAT</span> <span class="nv">evictions</span> <span class="mi">0</span>                           为获取空间删除<span class="nv">item</span>的总数
+</pre></div>
+
+
+<h2 id="magent">magent</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span>.<span class="nv">mkdir</span> <span class="nv">magent</span>  
+<span class="mi">2</span>.<span class="nv">cd</span> <span class="nv">magent</span><span class="o">/</span>  
+<span class="mi">3</span>.<span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">memagent</span>.<span class="nv">googlecode</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">files</span><span class="o">/</span><span class="nv">magent</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">5</span>.<span class="nv">tar</span>.<span class="nv">gz</span>  （笔记附件）
+<span class="mi">4</span>.<span class="nv">tar</span> <span class="nv">zxvf</span> <span class="nv">magent</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">5</span>.<span class="nv">tar</span>.<span class="nv">gz</span>  
+<span class="mi">5</span>. <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ldconfig</span>  
+<span class="mi">6</span>.<span class="nv">sed</span> <span class="o">-</span><span class="nv">i</span> <span class="s2">&quot;</span><span class="s">s#LIBS = -levent#LIBS = -levent -lm#g</span><span class="s2">&quot;</span> <span class="nv">Makefile</span>  
+<span class="mi">7</span>.<span class="nv">vi</span> <span class="nv">magent</span>.<span class="nv">c</span> 添加
+    #<span class="k">include</span> <span class="o">&lt;</span><span class="nv">limits</span>.<span class="nv">h</span><span class="o">&gt;</span>
+<span class="mi">8</span>. <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">libevent</span><span class="o">-</span><span class="nv">devel</span> <span class="nv">libevent</span>
+<span class="mi">9</span>.<span class="nv">make</span>  
+<span class="mi">10</span>.<span class="nv">cp</span> <span class="nv">magent</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">magent</span>  
+
+
+
+<span class="mi">2</span>. <span class="nv">magent</span>  命令参数说明：
+<span class="mi">1</span>.<span class="o">-</span><span class="nv">h</span> <span class="nv">this</span> <span class="nv">message</span>  
+<span class="mi">2</span>.<span class="o">-</span><span class="nv">u</span> <span class="nv">uid</span>  
+<span class="mi">3</span>.<span class="o">-</span><span class="nv">g</span> <span class="nv">gid</span>  
+<span class="mi">4</span>.<span class="o">-</span><span class="nv">p</span> <span class="nv">port</span>, <span class="nv">default</span> <span class="nv">is</span> <span class="mi">11211</span>. <span class="ss">(</span><span class="mi">0</span> <span class="nv">to</span> <span class="nv">disable</span> <span class="nv">tcp</span> <span class="nv">support</span><span class="ss">)</span>  
+<span class="mi">5</span>.<span class="o">-</span><span class="nv">s</span> <span class="nv">ip</span>:<span class="nv">port</span>, <span class="nv">set</span> <span class="nv">memcached</span> <span class="nv">server</span> <span class="nv">ip</span> <span class="nv">and</span> <span class="nv">port</span>  
+<span class="mi">6</span>.<span class="o">-</span><span class="nv">b</span> <span class="nv">ip</span>:<span class="nv">port</span>, <span class="nv">set</span> <span class="nv">backup</span> <span class="nv">memcached</span> <span class="nv">server</span> <span class="nv">ip</span> <span class="nv">and</span> <span class="nv">port</span>  
+<span class="mi">7</span>.<span class="o">-</span><span class="nv">l</span> <span class="nv">ip</span>, <span class="nv">local</span> <span class="nv">bind</span> <span class="nv">ip</span> <span class="nv">address</span>, <span class="nv">default</span> <span class="nv">is</span> <span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span> 
+<span class="mi">8</span>.<span class="o">-</span><span class="nv">n</span> <span class="nv">number</span>, <span class="nv">set</span> <span class="nv">max</span> <span class="nv">connections</span>, <span class="nv">default</span> <span class="nv">is</span> <span class="mi">4096</span> 
+<span class="mi">9</span>.<span class="o">-</span><span class="nv">D</span> <span class="k">do</span> <span class="nv">not</span> <span class="nv">go</span> <span class="nv">to</span> <span class="nv">background</span>  
+<span class="mi">10</span>.<span class="o">-</span><span class="nv">k</span> <span class="nv">use</span> <span class="nv">ketama</span> <span class="nv">key</span> <span class="nv">allocation</span> <span class="nv">algorithm</span>  
+<span class="mi">11</span>.<span class="o">-</span><span class="nv">f</span> <span class="nv">file</span>, <span class="nv">unix</span> <span class="nv">socket</span> <span class="nv">path</span> <span class="nv">to</span> <span class="nv">listen</span> <span class="nv">on</span>. <span class="nv">default</span> <span class="nv">is</span> <span class="nv">off</span>  
+<span class="mi">12</span>.<span class="o">-</span><span class="nv">i</span> <span class="nv">number</span>, <span class="nv">max</span> <span class="nv">keep</span> <span class="nv">alive</span> <span class="nv">connections</span> <span class="k">for</span> <span class="nv">one</span> <span class="nv">memcached</span> <span class="nv">server</span>, <span class="nv">default</span> <span class="nv">is</span> <span class="mi">20</span> 
+<span class="mi">13</span>.<span class="o">-</span><span class="nv">v</span> <span class="nv">verbose</span> 
+
+
+<span class="nv">memcached</span> <span class="o">-</span><span class="nv">m</span> <span class="mi">1</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">l</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">11211</span>
+<span class="nv">memcached</span> <span class="o">-</span><span class="nv">m</span> <span class="mi">1</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">l</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">11212</span>
+<span class="nv">memcached</span> <span class="o">-</span><span class="nv">m</span> <span class="mi">1</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">l</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">11213</span>
+
+<span class="nv">magent</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">51200</span> <span class="o">-</span><span class="nv">l</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">12000</span> <span class="o">-</span><span class="nv">s</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>:<span class="mi">11211</span> <span class="o">-</span><span class="nv">s</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>:<span class="mi">11212</span> <span class="o">-</span><span class="nv">b</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>:<span class="mi">11213</span>
+<span class="mi">1</span>、分别在<span class="mi">11211</span>、<span class="mi">11212</span>、<span class="mi">11213</span>端口启动<span class="mi">3</span>个<span class="nv">Memcached</span>进程，在<span class="mi">12000</span>端口开启<span class="nv">magent</span>代理程序；
+<span class="mi">2</span>、<span class="mi">11211</span>、<span class="mi">11212</span>端口为主<span class="nv">Memcached</span>，<span class="mi">11213</span>端口为备份<span class="nv">Memcached</span>；
+<span class="mi">3</span>、连接上<span class="mi">12000</span>的<span class="nv">magent</span>，<span class="nv">set</span> <span class="nv">key1</span>和<span class="nv">set</span> <span class="nv">key2</span>，根据哈希算法，<span class="nv">key1</span>被写入<span class="mi">11212</span>和<span class="mi">11213</span>端口的<span class="nv">Memcached</span>，<span class="nv">key2</span>被写入<span class="mi">11212</span>
+和<span class="mi">11213</span>端口的<span class="nv">Memcached</span>；
+<span class="mi">4</span>、当<span class="mi">11211</span>、<span class="mi">11212</span>端口的<span class="nv">Memcached</span>死掉，连接到<span class="mi">12000</span>端口的<span class="nv">magent</span>取数据，数据会从<span class="mi">11213</span>端口的<span class="nv">Memcached</span>取出。
+
+测试流程：
+# <span class="nv">telnet</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="mi">12000</span>
+<span class="nv">Trying</span> <span class="mi">1192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>...
+<span class="nv">Connected</span> <span class="nv">to</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>。<span class="mi">219</span>.
+<span class="nv">Escape</span> <span class="nv">character</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">^]</span><span class="s1">&#39;</span>.
+<span class="nv">stats</span>
+<span class="nv">memcached</span> <span class="nv">agent</span> <span class="nv">v0</span>.<span class="mi">4</span>
+<span class="nv">matrix</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>:<span class="mi">11211</span>, <span class="nv">pool</span> <span class="nv">size</span> <span class="mi">0</span>
+<span class="nv">matrix</span> <span class="mi">2</span> <span class="o">-&gt;</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>:<span class="mi">11212</span>, <span class="nv">pool</span> <span class="nv">size</span> <span class="mi">0</span>
+<span class="k">END</span>
+<span class="nv">set</span> <span class="nv">key1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span>
+<span class="nv">reesu</span>                 长度为<span class="mi">5</span>
+<span class="nv">STORED</span>
+<span class="nv">set</span> <span class="nv">key2</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">6</span>
+<span class="nv">reesu1</span>             长度为<span class="mi">5</span>
+<span class="nv">STORED</span>
+<span class="nv">quit</span>
+<span class="nv">Connection</span> <span class="nv">closed</span> <span class="nv">by</span> <span class="nv">foreign</span> <span class="nv">host</span>.
+
+
+# <span class="nv">telnet</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="mi">11211</span>
+<span class="nv">Trying</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>...
+<span class="nv">Connected</span> <span class="nv">to</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>.
+<span class="nv">Escape</span> <span class="nv">character</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">^]</span><span class="s1">&#39;</span>.
+<span class="nv">get</span> <span class="nv">key1</span>
+<span class="k">END</span>
+<span class="nv">get</span> <span class="nv">key2</span>
+<span class="nv">VALUE</span> <span class="nv">key2</span> <span class="mi">0</span> <span class="mi">6</span>
+<span class="nv">reesun1</span>
+<span class="k">END</span>
+<span class="nv">quit</span>
+<span class="nv">Connection</span> <span class="nv">closed</span> <span class="nv">by</span> <span class="nv">foreign</span> <span class="nv">host</span>.
+
+
+# <span class="nv">telnet</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="mi">11212</span>
+<span class="nv">Trying</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>...
+<span class="nv">Connected</span> <span class="nv">to</span> <span class="mi">1192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>.
+<span class="nv">Escape</span> <span class="nv">character</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">^]</span><span class="s1">&#39;</span>.
+<span class="nv">get</span> <span class="nv">key1</span>
+<span class="nv">VALUE</span> <span class="nv">key1</span> <span class="mi">0</span> <span class="mi">5</span>
+<span class="nv">reesun</span>
+<span class="k">END</span>
+<span class="nv">get</span> <span class="nv">key2</span>
+<span class="k">END</span>
+<span class="nv">quit</span>
+<span class="nv">Connection</span> <span class="nv">closed</span> <span class="nv">by</span> <span class="nv">foreign</span> <span class="nv">host</span>.
+
+
+# <span class="nv">telnet</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="mi">11213</span>
+<span class="nv">Trying</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>...
+<span class="nv">Connected</span> <span class="nv">to</span> <span class="mi">1192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span>.
+<span class="nv">Escape</span> <span class="nv">character</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">^]</span><span class="s1">&#39;</span>.
+<span class="nv">get</span> <span class="nv">key1</span>
+<span class="nv">VALUE</span> <span class="nv">key1</span> <span class="mi">0</span> <span class="mi">5</span><span class="ss">(</span><span class="nv">key</span>长度<span class="ss">)</span>
+<span class="nv">hello</span>
+<span class="k">END</span>
+<span class="nv">get</span> <span class="nv">key2</span>
+<span class="nv">VALUE</span> <span class="nv">key2</span> <span class="mi">0</span> <span class="mi">6</span>
+<span class="nv">reesun</span>
+<span class="k">END</span>
+<span class="nv">quit</span>
+<span class="nv">Connection</span> <span class="nv">closed</span> <span class="nv">by</span> <span class="nv">foreign</span> <span class="nv">host</span>.
+</pre></div>
+
+
+<h2 id="_1">清除数据</h2>
+<div class="codehilite"><pre><span></span><span class="err">危险命令</span>
+<span class="n">flush_all</span>                                            <span class="err">这个最简单的命令仅用于清理缓存中的所有名称</span><span class="o">/</span><span class="err">值对。</span>
+<span class="err">调用</span><span class="n">flush_all</span><span class="err">的时刻，数据所占的内存并不会被释放，但会被标记为过期，是不能再被取得了，你后来添加的值，</span>
+<span class="err">会根据需要逐渐占用掉之前的空间，所以，实际应用场景里，不需要做特殊处理。</span>
+</pre></div>
+
+
+<h2 id="key">key操作</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span>. <span class="nv">cmd</span>上登录<span class="nv">memcache</span>
+
+<span class="o">&gt;</span> <span class="nv">telnet</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span> <span class="mi">11211</span>
+
+<span class="mi">2</span>. 列出所有<span class="nv">keys</span>
+
+<span class="nv">stats</span> <span class="nv">items</span> <span class="o">//</span> 这条是命令
+<span class="nv">STAT</span> <span class="nv">items</span>:<span class="mi">7</span>:<span class="nv">number</span> <span class="mi">1</span> 
+ <span class="nv">STAT</span> <span class="nv">items</span>:<span class="mi">7</span>:<span class="nv">age</span> <span class="mi">188</span>
+ <span class="k">END</span>
+
+<span class="mi">3</span>. 通过<span class="nv">itemid</span>获取<span class="nv">key</span>
+接下来基于列出的<span class="nv">items</span> <span class="nv">id</span>，本例中为<span class="mi">7</span>，第<span class="mi">2</span>个参数为列出的长度，<span class="mi">0</span>为全部列出
+
+ <span class="nv">stats</span> <span class="nv">cachedump</span> <span class="mi">7</span> <span class="mi">0</span> <span class="o">//</span> 这条是命令
+ <span class="nv">ITEM</span> <span class="nv">Sess_sidsvpc1473t1np08qnkvhf6j2</span> [<span class="mi">183</span> <span class="nv">b</span><span class="c1">; 1394527347 s]</span>
+ <span class="k">END</span>
+
+<span class="mi">4</span>. 通过<span class="nv">get</span>获取<span class="nv">key</span>值
+上面的<span class="nv">stats</span> <span class="nv">cachedump</span>命令列出了我的<span class="nv">session</span> <span class="nv">key</span>，接下来就用<span class="nv">get</span>命令查找对应的<span class="nv">session</span>值
+
+<span class="nv">get</span> <span class="nv">Sess_sidsvpc1473t1np08qnkvhf6j2</span> <span class="o">//</span>这条是命令
+<span class="nv">VALUE</span>
+<span class="nv">Sess_sidsvpc1473t1np08qnkvhf6j2</span> <span class="mi">1440</span> <span class="mi">1</span>
+ <span class="mi">83</span>
+ <span class="nv">Sess_</span><span class="o">|</span><span class="nv">a</span>:<span class="mi">5</span>:{<span class="nv">s</span>:<span class="mi">6</span>:<span class="s2">&quot;</span><span class="s">verify</span><span class="s2">&quot;</span><span class="c1">;s:32:&quot;e70981fd305170c41a5632b2a24bbcaa&quot;;s:3:&quot;uid&quot;;s:1:&quot;1</span>
+ <span class="s2">&quot;</span><span class="s">;s:8:</span><span class="s2">&quot;</span><span class="nv">username</span><span class="s2">&quot;</span><span class="s">;s:5:</span><span class="s2">&quot;</span><span class="nv">admin</span><span class="s2">&quot;</span><span class="s">;s:9:</span><span class="s2">&quot;</span><span class="nv">logintime</span><span class="s2">&quot;</span><span class="s">;s:19:</span><span class="s2">&quot;</span><span class="mi">2014</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">11</span> <span class="mi">16</span>:<span class="mi">24</span>:<span class="mi">25</span><span class="s2">&quot;</span><span class="s">;s:7:</span><span class="s2">&quot;</span><span class="nv">log</span>
+ <span class="nv">inip</span><span class="s2">&quot;</span><span class="s">;s:9:</span><span class="s2">&quot;</span><span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span><span class="s2">&quot;</span><span class="s">;}</span>
+</pre></div>
+
+
+<h2 id="memcache_1">memcache安装</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span>安装
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">memcached</span> <span class="nv">memcached</span><span class="o">-</span><span class="nv">devel</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysconfig</span><span class="o">/</span><span class="nv">memcached</span> 
+<span class="nv">PORT</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">11211</span><span class="s2">&quot;</span>
+<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">memcached</span><span class="s2">&quot;</span>
+<span class="nv">MAXCONN</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">1024</span><span class="s2">&quot;</span>   最大连接数
+<span class="nv">CACHESIZE</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">128</span><span class="s2">&quot;</span>  最大内存使用 （<span class="nv">M</span>）
+<span class="nv">OPTIONS</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">memcached</span> <span class="nv">start</span>
+
+源码
+<span class="nv">Memcached</span>：
+<span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">memcached</span>.<span class="nv">googlecode</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">files</span><span class="o">/</span><span class="nv">memcached</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">4</span>.<span class="mi">4</span>.<span class="nv">tar</span>.<span class="nv">gz</span>
+<span class="nv">tar</span> <span class="o">-</span><span class="nv">xzvf</span> <span class="nv">memcached</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">4</span>.<span class="mi">4</span>.<span class="nv">tar</span>.<span class="nv">gz</span>
+<span class="nv">cd</span> <span class="nv">memcached</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">4</span>.<span class="mi">4</span>
+.<span class="o">/</span><span class="nv">configure</span> <span class="o">--</span><span class="nv">prefix</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">memcached</span> <span class="o">--</span><span class="nv">with</span><span class="o">-</span><span class="nv">libevent</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">libevent</span>
+<span class="nv">make</span>
+<span class="nv">make</span> <span class="nv">install</span>
+<span class="nv">ln</span> <span class="o">-</span><span class="nv">s</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">libevent</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">libevent</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">4</span>.<span class="nv">so</span>.<span class="mi">2</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span>
+
+<span class="nv">memcached</span> <span class="o">-</span><span class="nv">m</span> <span class="mi">500</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">l</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">219</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">11211</span>
+<span class="nv">memcached</span>常用启动参数描述:
+<span class="o">-</span><span class="nv">d</span>：启动一个守护进程，
+<span class="o">-</span><span class="nv">m</span>：分配给<span class="nv">Memcache</span>使用的内存数量，单位是<span class="nv">MB</span>，默认是<span class="mi">64</span><span class="nv">MB</span>，
+<span class="o">-</span><span class="nv">u</span>：运行<span class="nv">Memcache</span>的用户
+<span class="o">-</span><span class="nv">l</span>：监听的服务器<span class="nv">IP</span>地址
+<span class="o">-</span><span class="nv">p</span>：设置<span class="nv">Memcache</span>监听的端口，默认是<span class="mi">11211</span>注：<span class="o">-</span><span class="nv">p</span><span class="ss">(</span><span class="nv">p</span>为小写<span class="ss">)</span>
+<span class="o">-</span><span class="nv">c</span>：设置最大并发连接数，默认是<span class="mi">1024</span>
+<span class="o">-</span><span class="nv">P</span>：设置保存<span class="nv">Memcache</span>的<span class="nv">pid</span>文件注：<span class="o">-</span><span class="nv">P</span><span class="ss">(</span><span class="nv">P</span>为大写<span class="ss">)</span>
+<span class="o">-</span><span class="nv">h</span> 显示帮助
+
+连接到 <span class="nv">memcached</span>：
+<span class="nv">telnet</span> <span class="nv">ip</span> 端口，如<span class="nv">telnet</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">100</span>.<span class="mi">11</span> <span class="mi">11211</span>
+<span class="nv">stats</span>查看状态，<span class="nv">flush_all</span>:清楚缓存
+查看<span class="nv">memcached</span>状态的基本命令，通过这个命令可以看到如下信息：
+<span class="nv">STAT</span> <span class="nv">pid</span> <span class="mi">22459</span>                             进程<span class="nv">ID</span>
+<span class="nv">STAT</span> <span class="k">uptime</span> <span class="mi">1027046</span>                        服务器运行秒数
+<span class="nv">STAT</span> <span class="nv">time</span> <span class="mi">1273043062</span>                       服务器当前<span class="nv">unix</span>时间戳
+<span class="nv">STAT</span> <span class="nv">version</span> <span class="mi">1</span>.<span class="mi">4</span>.<span class="mi">4</span>                         服务器版本
+<span class="nv">STAT</span> <span class="nv">pointer_size</span> <span class="mi">64</span>                       操作系统字大小<span class="ss">(</span>这台服务器是<span class="mi">64</span>位的<span class="ss">)</span>
+<span class="nv">STAT</span> <span class="nv">rusage_user</span> <span class="mi">0</span>.<span class="mi">040000</span>                  进程累计用户时间
+<span class="nv">STAT</span> <span class="nv">rusage_system</span> <span class="mi">0</span>.<span class="mi">260000</span>                进程累计系统时间
+<span class="nv">STAT</span> <span class="nv">curr_connections</span> <span class="mi">10</span>                   当前打开连接数
+<span class="nv">STAT</span> <span class="nv">total_connections</span> <span class="mi">82</span>                  曾打开的连接总数
+<span class="nv">STAT</span> <span class="nv">connection_structures</span> <span class="mi">13</span>              服务器分配的连接结构数
+<span class="nv">STAT</span> <span class="nv">cmd_get</span> <span class="mi">54</span>                            执行<span class="nv">get</span>命令总数
+<span class="nv">STAT</span> <span class="nv">cmd_set</span> <span class="mi">34</span>                            执行<span class="nv">set</span>命令总数
+<span class="nv">STAT</span> <span class="nv">cmd_flush</span> <span class="mi">3</span>                           指向<span class="nv">flush_all</span>命令总数
+<span class="nv">STAT</span> <span class="nv">get_hits</span> <span class="mi">9</span>                            <span class="nv">get</span>命中次数
+<span class="nv">STAT</span> <span class="nv">get_misses</span> <span class="mi">45</span>                         <span class="nv">get</span>未命中次数
+<span class="nv">STAT</span> <span class="nv">delete_misses</span> <span class="mi">5</span>                       <span class="nv">delete</span>未命中次数
+<span class="nv">STAT</span> <span class="nv">delete_hits</span> <span class="mi">1</span>                         <span class="nv">delete</span>命中次数
+<span class="nv">STAT</span> <span class="nv">incr_misses</span> <span class="mi">0</span>                         <span class="nv">incr</span>未命中次数
+<span class="nv">STAT</span> <span class="nv">incr_hits</span> <span class="mi">0</span>                           <span class="nv">incr</span>命中次数
+<span class="nv">STAT</span> <span class="nv">decr_misses</span> <span class="mi">0</span>                         <span class="nv">decr</span>未命中次数
+<span class="nv">STAT</span> <span class="nv">decr_hits</span> <span class="mi">0</span>                           <span class="nv">decr</span>命中次数
+<span class="nv">STAT</span> <span class="nv">cas_misses</span> <span class="mi">0</span>                          <span class="nv">cas</span>未命中次数
+<span class="nv">STAT</span> <span class="nv">cas_hits</span> <span class="mi">0</span>                            <span class="nv">cas</span>命中次数
+<span class="nv">STAT</span> <span class="nv">cas_badval</span> <span class="mi">0</span>                          使用擦拭次数
+<span class="nv">STAT</span> <span class="nv">auth_cmds</span> <span class="mi">0</span>
+<span class="nv">STAT</span> <span class="nv">auth_errors</span> <span class="mi">0</span>
+<span class="nv">STAT</span> <span class="nv">bytes_read</span> <span class="mi">15785</span>                      读取字节总数
+<span class="nv">STAT</span> <span class="nv">bytes_written</span> <span class="mi">15222</span>                   写入字节总数
+<span class="nv">STAT</span> <span class="nv">limit_maxbytes</span> <span class="mi">1048576</span>                分配的内存数（字节）
+<span class="nv">STAT</span> <span class="nv">accepting_conns</span> <span class="mi">1</span>                     目前接受的链接数
+<span class="nv">STAT</span> <span class="nv">listen_disabled_num</span> <span class="mi">0</span>               
+<span class="nv">STAT</span> <span class="nv">threads</span> <span class="mi">4</span>                             线程数
+<span class="nv">STAT</span> <span class="nv">conn_yields</span> <span class="mi">0</span>
+<span class="nv">STAT</span> <span class="nv">bytes</span> <span class="mi">0</span>                               存储<span class="nv">item</span>字节数
+<span class="nv">STAT</span> <span class="nv">curr_items</span> <span class="mi">0</span>                          <span class="nv">item</span>个数
+<span class="nv">STAT</span> <span class="nv">total_items</span> <span class="mi">34</span>                        <span class="nv">item</span>总数
+<span class="nv">STAT</span> <span class="nv">evictions</span> <span class="mi">0</span>                           为获取空间删除<span class="nv">item</span>的总数
+
+获取运行状态
+<span class="nv">echo</span> <span class="nv">stats</span> <span class="o">|</span> <span class="nv">nc</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">123</span> <span class="mi">11200</span>
+<span class="nv">watch</span> <span class="s2">&quot;</span><span class="s">echo stats | nc 192.168.1.123 11200</span><span class="s2">&quot;</span> <span class="ss">(</span>实时状态<span class="ss">)</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../mysql2/" title="mysql2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                mysql2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../redis/" title="redis" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                redis
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

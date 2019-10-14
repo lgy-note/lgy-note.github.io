@@ -1,0 +1,2405 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>linux-base - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#glibc-214" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                linux-base
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link md-tabs__link--active">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        linux-base
+      </label>
+    
+    <a href="./" title="linux-base" class="md-nav__link md-nav__link--active">
+      linux-base
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glibc-214" class="md-nav__link">
+    升级glibc-2.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phantomjs" class="md-nav__link">
+    phantomjs网页截图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doxygen" class="md-nav__link">
+    doxygen生成代码文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dell-omsa" class="md-nav__link">
+    dell omsa安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot" class="md-nav__link">
+    boot分区损坏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-head" class="md-nav__link">
+    http head头
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令历史记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    监测系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-dump" class="md-nav__link">
+    core dump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idrac" class="md-nav__link">
+    idrac管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idrac-ssh" class="md-nav__link">
+    idrac ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    dns解析慢
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos" class="md-nav__link">
+    centos网卡休眠
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel-panic" class="md-nav__link">
+    kernel panic自动重启
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#srcrpm" class="md-nav__link">
+    安装src.rpm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ab" class="md-nav__link">
+    ab测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bond" class="md-nav__link">
+    网卡bond
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snoopy" class="md-nav__link">
+    snoopy命令记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    连接跟踪表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos_1" class="md-nav__link">
+    centos系统升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web管理系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    crontab注意点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos_2" class="md-nav__link">
+    centos改网卡名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-tag" class="md-nav__link">
+    查询service tag
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glibc-214" class="md-nav__link">
+    升级glibc-2.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phantomjs" class="md-nav__link">
+    phantomjs网页截图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doxygen" class="md-nav__link">
+    doxygen生成代码文档
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dell-omsa" class="md-nav__link">
+    dell omsa安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot" class="md-nav__link">
+    boot分区损坏
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-head" class="md-nav__link">
+    http head头
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    命令历史记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    监测系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-dump" class="md-nav__link">
+    core dump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idrac" class="md-nav__link">
+    idrac管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idrac-ssh" class="md-nav__link">
+    idrac ssh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    dns解析慢
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos" class="md-nav__link">
+    centos网卡休眠
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernel-panic" class="md-nav__link">
+    kernel panic自动重启
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#srcrpm" class="md-nav__link">
+    安装src.rpm
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ab" class="md-nav__link">
+    ab测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bond" class="md-nav__link">
+    网卡bond
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snoopy" class="md-nav__link">
+    snoopy命令记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    连接跟踪表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos_1" class="md-nav__link">
+    centos系统升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web管理系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crontab" class="md-nav__link">
+    crontab注意点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centos_2" class="md-nav__link">
+    centos改网卡名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-tag" class="md-nav__link">
+    查询service tag
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>linux-base</h1>
+                
+                <h2 id="glibc-214">升级glibc-2.14</h2>
+<div class="codehilite"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="p">.</span><span class="n">gnu</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">gnu</span><span class="o">/</span><span class="n">glibc</span><span class="o">/</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+
+<span class="n">tar</span> <span class="o">-</span><span class="n">xzf</span> <span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="n">mkdir</span> <span class="n">build</span> <span class="o">//</span> <span class="err">在</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="err">目录下建立</span><span class="n">build</span><span class="err">文件夹</span>
+<span class="n">cd</span> <span class="n">build</span> <span class="o">//</span> <span class="err">进入</span><span class="n">build</span><span class="err">目录</span>
+<span class="p">..</span><span class="o">/</span><span class="n">configure</span> <span class="c1">--prefix=/opt/glibc-2.14 // 配置glibc并设置当前glibc-2.14安装目录</span>
+<span class="n">make</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">install</span> <span class="o">//</span> <span class="err">编译安装</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="err">库</span>
+<span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ld</span><span class="p">.</span><span class="n">so</span><span class="p">.</span><span class="n">conf</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span> <span class="err">（</span><span class="n">ld</span><span class="p">.</span><span class="n">so</span><span class="p">.</span><span class="n">conf</span> <span class="k">not</span> <span class="k">found</span><span class="err">报错时）</span>
+
+<span class="err">当前环境生效</span>
+<span class="n">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="p">:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
+
+<span class="err">修改系统（尽量不修改）</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libc</span><span class="p">.</span><span class="n">so</span><span class="p">.</span><span class="mi">6</span> <span class="o">//</span> <span class="err">先删除先前的</span><span class="n">libc</span><span class="p">.</span><span class="n">so</span><span class="p">.</span><span class="mi">6</span><span class="err">软链</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="p">.</span><span class="n">so</span> <span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libc</span><span class="p">.</span><span class="n">so</span><span class="p">.</span><span class="mi">6</span>
+</pre></div>
+
+
+<h2 id="phantomjs">phantomjs网页截图</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">bitmap</span><span class="o">-</span><span class="nv">fonts</span> <span class="nv">bitmap</span><span class="o">-</span><span class="nv">fonts</span><span class="o">-</span><span class="nv">cjk</span> <span class="nv">mkfontscale</span> <span class="nv">fontconfig</span> <span class="nv">cjkuni</span><span class="o">-</span><span class="nv">fonts</span><span class="o">*</span>  中文字体
+
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">phantomjs</span>.<span class="nv">org</span><span class="o">/</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">bitbucket</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">ariya</span><span class="o">/</span><span class="nv">phantomjs</span><span class="o">/</span><span class="nv">downloads</span><span class="o">/</span><span class="nv">phantomjs</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">1</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">linux</span><span class="o">-</span><span class="nv">x86_64</span>.<span class="nv">tar</span>.<span class="nv">bz2</span>
+
+<span class="nv">rander</span>.<span class="nv">js</span>：
+<span class="nv">var</span> <span class="nv">page</span> <span class="o">=</span> <span class="nv">require</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">webpage</span><span class="s1">&#39;</span><span class="ss">)</span>.<span class="nv">create</span><span class="ss">()</span>,
+    <span class="nv">system</span> <span class="o">=</span> <span class="nv">require</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">system</span><span class="s1">&#39;</span><span class="ss">)</span>,
+    <span class="nv">address</span>, <span class="nv">output</span>, <span class="nv">size</span><span class="c1">;</span>
+
+<span class="k">if</span> <span class="ss">(</span><span class="nv">system</span>.<span class="nv">args</span>.<span class="nv">length</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="o">||</span> <span class="nv">system</span>.<span class="nv">args</span>.<span class="nv">length</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="ss">)</span> {
+    <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">Usage: rasterize.js URL filename</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+    <span class="nv">phantom</span>.<span class="k">exit</span><span class="ss">(</span><span class="mi">1</span><span class="ss">)</span><span class="c1">;</span>
+} <span class="k">else</span> {
+    <span class="nv">address</span> <span class="o">=</span> <span class="nv">system</span>.<span class="nv">args</span>[<span class="mi">1</span>]<span class="c1">;</span>
+    <span class="nv">output</span> <span class="o">=</span> <span class="nv">system</span>.<span class="nv">args</span>[<span class="mi">2</span>]<span class="c1">;</span>
+    <span class="nv">page</span>.<span class="nv">viewportSize</span> <span class="o">=</span> { <span class="nv">width</span>: <span class="mi">1280</span>, <span class="nv">height</span>: <span class="mi">1580</span> }<span class="c1">;     设定默认大小</span>
+    <span class="nv">page</span>.<span class="nv">open</span><span class="ss">(</span><span class="nv">address</span>, <span class="nv">function</span> <span class="ss">(</span><span class="nv">status</span><span class="ss">)</span> {
+      <span class="o">//</span> 通过在页面上执行脚本获取页面的渲染高度
+      <span class="nv">var</span> <span class="nv">bb</span> <span class="o">=</span> <span class="nv">page</span>.<span class="nv">evaluate</span><span class="ss">(</span><span class="nv">function</span> <span class="ss">()</span> { 
+        <span class="k">return</span> <span class="nv">document</span>.<span class="nv">getElementsByTagName</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">html</span><span class="s1">&#39;</span><span class="ss">)</span>[<span class="mi">0</span>].<span class="nv">getBoundingClientRect</span><span class="ss">()</span><span class="c1">; </span>
+      }<span class="ss">)</span><span class="c1">;</span>
+      <span class="o">//</span> 按照实际页面的高度，设定渲染的宽高
+      <span class="nv">page</span>.<span class="nv">clipRect</span> <span class="o">=</span> {
+        <span class="nv">top</span>:    <span class="nv">bb</span>.<span class="nv">top</span>,
+        <span class="nv">left</span>:   <span class="nv">bb</span>.<span class="nv">left</span>,
+        <span class="nv">width</span>:  <span class="nv">bb</span>.<span class="nv">width</span>,
+        <span class="nv">height</span>: <span class="nv">bb</span>.<span class="nv">height</span>
+      }<span class="c1">;</span>
+      <span class="o">//</span> 预留一定的渲染时间
+      <span class="nv">window</span>.<span class="nv">setTimeout</span><span class="ss">(</span><span class="nv">function</span> <span class="ss">()</span> {
+        <span class="nv">page</span>.<span class="nv">render</span><span class="ss">(</span><span class="nv">output</span><span class="ss">)</span><span class="c1">;</span>
+        <span class="nv">page</span>.<span class="nv">close</span><span class="ss">()</span><span class="c1">;</span>
+        <span class="nv">console</span>.<span class="nv">log</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">render ok</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+        <span class="nv">phantom</span>.<span class="k">exit</span><span class="ss">()</span><span class="c1">;</span>
+      }, <span class="mi">1000</span><span class="ss">)</span><span class="c1">;</span>
+    }<span class="ss">)</span><span class="c1">;</span>
+}
+
+截图命令 ： 
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">phantomjs</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">1</span>.<span class="mi">1</span><span class="o">-</span><span class="nv">linux</span><span class="o">-</span><span class="nv">x86_64</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">phantomjs</span> <span class="nv">rander</span>.<span class="nv">js</span> 
+<span class="nv">http</span>:<span class="o">//</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span>:<span class="mi">9380</span><span class="o">/</span><span class="nv">DaChuibus</span><span class="o">/</span><span class="nv">manage</span><span class="o">/</span><span class="nv">statistics</span><span class="o">/</span><span class="nv">allstatistics</span><span class="o">/</span><span class="nv">quanjutongji</span>.<span class="k">do</span> <span class="mi">1</span>.<span class="nv">png</span>
+</pre></div>
+
+
+<h2 id="doxygen">doxygen生成代码文档</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">doxygen</span>  <span class="n">graphviz</span>
+<span class="err">进入项目目录</span>
+<span class="n">cd</span> <span class="n">cuishouv1</span><span class="o">/</span>
+<span class="n">doxygen</span> <span class="o">-</span><span class="k">g</span>  <span class="err">生成一个模板配置文件</span>
+<span class="n">doxygen</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="k">g</span>  <span class="err">生成一个模板配置文件无注释</span>
+
+<span class="err">修改</span><span class="n">Doxyfile</span>
+<span class="n">PROJECT_NAME</span>           <span class="o">=</span> <span class="ss">&quot;cuishou&quot;</span>   <span class="err">项目名称</span>
+<span class="n">PROJECT_NUMBER</span>         <span class="o">=</span> <span class="ss">&quot;1.0.0&quot;</span>     <span class="err">版本信息</span>
+<span class="n">OUTPUT_DIRECTORY</span>       <span class="o">=</span> <span class="n">doc</span><span class="o">/</span>       <span class="err">输出文件到的目录</span>
+<span class="k">INPUT</span>                  <span class="o">=</span> <span class="n">src</span><span class="o">/</span><span class="n">java</span>                  <span class="err">代码所在目录，使用空格分割</span>
+<span class="n">FILE_PATTERNS</span>          <span class="o">=</span> <span class="o">*</span><span class="p">.</span><span class="n">java</span>            <span class="err">指定</span><span class="k">INPUT</span><span class="err">的目录中特定文件</span>
+<span class="k">RECURSIVE</span>              <span class="o">=</span> <span class="n">YES</span>                  <span class="err">是否递归</span><span class="k">INPUT</span><span class="err">中目录</span>
+<span class="n">INCLUDE_FILE_PATTERNS</span>  <span class="o">=</span> <span class="o">*</span><span class="p">.</span><span class="n">java</span>   <span class="err">指定分析的文件的类型</span>
+<span class="n">GENERATE_LATEX</span>         <span class="o">=</span> <span class="k">NO</span>                <span class="err">不产生</span><span class="n">LaTeX</span> <span class="err">的文件</span>
+<span class="n">HAVE_DOT</span>               <span class="o">=</span> <span class="n">YES</span>                     <span class="err">使用</span> <span class="n">dot</span> <span class="err">工具生成更强大的图形</span>
+
+
+<span class="err">生成文档</span>
+<span class="n">doxygen</span> <span class="n">Doxyfile</span>  
+</pre></div>
+
+
+<h2 id="dell-omsa">dell omsa安装</h2>
+<div class="codehilite"><pre><span></span><span class="n">dell</span><span class="err">服务器使用</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">en</span><span class="p">.</span><span class="n">community</span><span class="p">.</span><span class="n">dell</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">techcenter</span><span class="o">/</span><span class="n">systems</span><span class="o">-</span><span class="n">management</span><span class="o">/</span><span class="n">w</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="mi">1760</span><span class="p">.</span><span class="n">openma</span>
+<span class="n">nage</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">administrator</span><span class="o">-</span><span class="n">omsa</span><span class="o">#</span><span class="n">Download_OMSA</span>
+
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">dell</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">support</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">us</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="mi">19</span><span class="o">/</span><span class="n">Drivers</span><span class="o">/</span><span class="n">DriversDetails</span><span class="o">?</span><span class="n">driverId</span><span class="o">=</span><span class="n">K37MM</span>
+<span class="err">下载后解压</span>
+<span class="n">mv</span> <span class="n">OM</span><span class="o">-</span><span class="n">SrvAdmin</span><span class="o">-</span><span class="n">Dell</span><span class="o">-</span><span class="n">Web</span><span class="o">-</span><span class="n">LX</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">2372</span><span class="p">.</span><span class="n">RHEL6</span><span class="p">.</span><span class="n">x86_64_A00</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="n">omsa</span><span class="o">/</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">zxf</span> <span class="n">OM</span><span class="o">-</span><span class="n">SrvAdmin</span><span class="o">-</span><span class="n">Dell</span><span class="o">-</span><span class="n">Web</span><span class="o">-</span><span class="n">LX</span><span class="o">-</span><span class="mi">8</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">2372</span><span class="p">.</span><span class="n">RHEL6</span><span class="p">.</span><span class="n">x86_64_A00</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+
+<span class="n">vim</span> <span class="n">linux</span><span class="o">/</span><span class="n">supportscripts</span><span class="o">/</span><span class="n">srvadmin</span><span class="o">-</span><span class="n">install</span><span class="p">.</span><span class="n">sh</span>  <span class="n">centos</span><span class="err">系统修改，</span><span class="n">rhel</span><span class="err">系统不需要</span>
+<span class="n">grep</span> <span class="o">-</span><span class="k">c</span> <span class="ss">&quot;Santiago&quot;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redhat</span><span class="o">-</span><span class="n">release</span>
+<span class="err">修改为</span> <span class="n">grep</span> <span class="o">-</span><span class="k">c</span> <span class="ss">&quot;CentOS&quot;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redhat</span><span class="o">-</span><span class="n">release</span>  
+
+<span class="err">安装依赖：</span>
+<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">libcmpi</span> <span class="n">CppImpl0</span> <span class="n">openwsman</span><span class="o">-</span><span class="n">server</span> <span class="n">sblim</span><span class="o">-</span><span class="n">sfcb</span> <span class="n">sblim</span><span class="o">-</span><span class="n">sfcc</span> <span class="n">libwsman1</span> <span class="n">net</span><span class="o">-</span><span class="n">snmp</span><span class="o">-</span><span class="n">utils</span>
+ <span class="n">openwsman</span><span class="o">-</span><span class="n">client</span> <span class="n">libcmpiCppImpl0</span>
+
+<span class="p">.</span><span class="o">/</span><span class="n">setup</span><span class="p">.</span><span class="n">sh</span> <span class="err">安装</span> 
+<span class="err">访问</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">ip</span><span class="p">:</span><span class="mi">1311</span>  <span class="err">账号为服务器</span><span class="n">root</span><span class="err">登陆账号</span>
+
+<span class="n">iptables</span> <span class="o">-</span><span class="n">I</span> <span class="k">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">-</span><span class="n">s</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span> <span class="c1">--dport 1311 -j ACCEPT</span>
+</pre></div>
+
+
+<h2 id="boot">boot分区损坏</h2>
+<div class="codehilite"><pre><span></span><span class="err">挂载</span> <span class="o">/</span><span class="n">boot</span><span class="o">/</span>
+<span class="err">从别的机器复制</span><span class="n">boot</span><span class="err">分区</span>
+
+<span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">grub</span><span class="o">/</span><span class="n">grub</span><span class="p">.</span><span class="n">conf</span>  <span class="err">修改里面的</span> <span class="n">root</span><span class="err">分区的</span>  <span class="n">uuid</span><span class="p">,</span> <span class="err">别的地方复制的会和本机不一致</span>
+<span class="err">查看</span><span class="n">uuid</span><span class="err">命令</span>   <span class="n">blkid</span>
+<span class="err">并修改</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">fstab</span> <span class="err">文件的</span><span class="n">uuid</span><span class="err">，格式化后</span><span class="n">uuid</span><span class="err">就会修改</span>
+
+<span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">grub</span><span class="o">/</span><span class="n">menu</span><span class="p">.</span><span class="n">lst</span>  <span class="err">为软连接，注意修改，确定其他还有没有软连接</span>
+<span class="n">menu</span><span class="p">.</span><span class="n">lst</span> <span class="o">-&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">grub</span><span class="p">.</span><span class="n">conf</span> 
+
+<span class="n">yum</span> <span class="n">install</span> <span class="n">kernel</span>  <span class="err">（可选）</span>
+
+
+<span class="n">grub</span><span class="o">-</span><span class="n">install</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span>  <span class="err">（</span><span class="n">boot</span> <span class="err">所在分区的磁盘，不是分区）</span>
+</pre></div>
+
+
+<h2 id="http-head">http head头</h2>
+<div class="codehilite"><pre><span></span><span class="nv">Requests</span>部分
+<span class="nv">Header</span>    解释    示例
+<span class="nv">Accept</span>    指定客户端能够接收的内容类型    <span class="nv">Accept</span>: <span class="nv">text</span><span class="o">/</span><span class="nv">plain</span>, <span class="nv">text</span><span class="o">/</span><span class="nv">html</span>
+<span class="nv">Accept</span><span class="o">-</span><span class="nv">Charset</span>    浏览器可以接受的字符编码集。    <span class="nv">Accept</span><span class="o">-</span><span class="nv">Charset</span>: <span class="nv">iso</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">5</span>
+<span class="nv">Accept</span><span class="o">-</span><span class="nv">Encoding</span>    指定浏览器可以支持的<span class="nv">web</span>服务器返回内容压缩编码类型。    <span class="nv">Accept</span><span class="o">-</span><span class="nv">Encoding</span>: <span class="nv">compress</span>, <span class="nv">gzip</span>
+<span class="nv">Accept</span><span class="o">-</span><span class="nv">Language</span>    浏览器可接受的语言    <span class="nv">Accept</span><span class="o">-</span><span class="nv">Language</span>: <span class="nv">en</span>,<span class="nv">zh</span>
+<span class="nv">Accept</span><span class="o">-</span><span class="nv">Ranges</span>    可以请求网页实体的一个或者多个子范围字段    <span class="nv">Accept</span><span class="o">-</span><span class="nv">Ranges</span>: <span class="nv">bytes</span>
+<span class="nv">Authorization</span>    <span class="nv">HTTP</span>授权的授权证书    <span class="nv">Authorization</span>: <span class="nv">Basic</span> <span class="nv">QWxhZGRpbjpvcGVuIHNlc2FtZQ</span><span class="o">==</span>
+<span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span>    指定请求和响应遵循的缓存机制    <span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span>: <span class="nv">no</span><span class="o">-</span><span class="nv">cache</span>
+<span class="nv">Connection</span>    表示是否需要持久连接。（<span class="nv">HTTP</span> <span class="mi">1</span>.<span class="mi">1</span>默认进行持久连接）    <span class="nv">Connection</span>: <span class="nv">close</span>
+<span class="nv">Cookie</span>    <span class="nv">HTTP</span>请求发送时，会把保存在该请求域名下的所有<span class="nv">cookie</span>值一起发送给<span class="nv">web</span>服务器。    <span class="nv">Cookie</span>: $<span class="nv">Version</span><span class="o">=</span><span class="mi">1</span><span class="c1">; Skin=new;</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Length</span>    请求的内容长度    <span class="nv">Content</span><span class="o">-</span><span class="nv">Length</span>: <span class="mi">348</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Type</span>    请求的与实体对应的<span class="nv">MIME</span>信息    <span class="nv">Content</span><span class="o">-</span><span class="nv">Type</span>: <span class="nv">application</span><span class="o">/</span><span class="nv">x</span><span class="o">-</span><span class="nv">www</span><span class="o">-</span><span class="nv">form</span><span class="o">-</span><span class="nv">urlencoded</span>
+<span class="nv">Date</span>    请求发送的日期和时间    <span class="nv">Date</span>: <span class="nv">Tue</span>, <span class="mi">15</span> <span class="nv">Nov</span> <span class="mi">2010</span> <span class="mi">08</span>:<span class="mi">12</span>:<span class="mi">31</span> <span class="nv">GMT</span>
+<span class="nv">Expect</span>    请求的特定的服务器行为    <span class="nv">Expect</span>: <span class="mi">100</span><span class="o">-</span><span class="k">continue</span>
+<span class="nv">From</span>    发出请求的用户的<span class="nv">Email</span>    <span class="nv">From</span>: <span class="nv">user</span>@<span class="nv">email</span>.<span class="nv">com</span>
+<span class="nv">Host</span>    指定请求的服务器的域名和端口号    <span class="nv">Host</span>: <span class="nv">www</span>.<span class="nv">zcmhi</span>.<span class="nv">com</span>
+<span class="k">If</span><span class="o">-</span><span class="nv">Match</span>    只有请求内容与实体相匹配才有效    <span class="k">If</span><span class="o">-</span><span class="nv">Match</span>: “<span class="mi">737060</span><span class="nv">cd8c284d8af7ad3082f209582d</span>”
+<span class="k">If</span><span class="o">-</span><span class="nv">Modified</span><span class="o">-</span><span class="nv">Since</span>    如果请求的部分在指定时间之后被修改则请求成功，未被修改则返回<span class="mi">304</span>代码   
+<span class="k">If</span><span class="o">-</span><span class="nv">None</span><span class="o">-</span><span class="nv">Match</span>    如果内容未改变返回<span class="mi">304</span>代码，参数为服务器先前发送的<span class="nv">Etag</span>，与服务器回应的<span class="nv">Etag</span>比较判断是否改变 
+<span class="k">If</span><span class="o">-</span><span class="nv">Range</span>    如果实体未改变，服务器发送客户端丢失的部分，否则发送整个实体。参数也为<span class="nv">Etag</span>  
+<span class="k">If</span><span class="o">-</span><span class="nv">Unmodified</span><span class="o">-</span><span class="nv">Since</span>    只在实体在指定时间之后未被修改才请求成功    <span class="k">If</span><span class="o">-</span><span class="nv">Unmodified</span><span class="o">-</span><span class="nv">Since</span>: <span class="nv">Sat</span>, <span class="mi">29</span> <span class="nv">Oct</span> <span class="mi">2010</span> <span class="mi">19</span>:<span class="mi">43</span>:<span class="mi">31</span> <span class="nv">GMT</span>
+<span class="nv">Max</span><span class="o">-</span><span class="nv">Forwards</span>    限制信息通过代理和网关传送的时间    <span class="nv">Max</span><span class="o">-</span><span class="nv">Forwards</span>: <span class="mi">10</span>
+<span class="nv">Pragma</span>    用来包含实现特定的指令    <span class="nv">Pragma</span>: <span class="nv">no</span><span class="o">-</span><span class="nv">cache</span>
+<span class="nv">Proxy</span><span class="o">-</span><span class="nv">Authorization</span>    连接到代理的授权证书    <span class="nv">Proxy</span><span class="o">-</span><span class="nv">Authorization</span>: <span class="nv">Basic</span> <span class="nv">QWxhZGRpbjpvcGVuIHNlc2FtZQ</span><span class="o">==</span>
+<span class="nv">Range</span>    只请求实体的一部分，指定范围    <span class="nv">Range</span>: <span class="nv">bytes</span><span class="o">=</span><span class="mi">500</span><span class="o">-</span><span class="mi">999</span>
+<span class="nv">Referer</span>    先前网页的地址，当前请求网页紧随其后,即来路    <span class="nv">Referer</span>: <span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">zcmhi</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">archives</span><span class="o">/</span><span class="mi">71</span>.<span class="nv">html</span>
+<span class="nv">TE</span>    客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息    <span class="nv">TE</span>: <span class="nv">trailers</span>,<span class="nv">deflate</span><span class="c1">;q=0.5</span>
+<span class="nv">Upgrade</span>    向服务器指定某种传输协议以便服务器进行转换（如果支持）    <span class="nv">Upgrade</span>: <span class="nv">HTTP</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">0</span>, <span class="nv">SHTTP</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">3</span>, <span class="nv">IRC</span><span class="o">/</span><span class="mi">6</span>.<span class="mi">9</span>, <span class="nv">RTA</span><span class="o">/</span><span class="nv">x11</span>
+<span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span>    <span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span>的内容包含发出请求的用户信息    <span class="nv">User</span><span class="o">-</span><span class="nv">Agent</span>: <span class="nv">Mozilla</span><span class="o">/</span><span class="mi">5</span>.<span class="mi">0</span> <span class="ss">(</span><span class="nv">Linux</span><span class="c1">; X11)</span>
+<span class="nv">Via</span>    通知中间网关或代理服务器地址，通信协议    <span class="nv">Via</span>: <span class="mi">1</span>.<span class="mi">0</span> <span class="nv">fred</span>, <span class="mi">1</span>.<span class="mi">1</span> <span class="nv">nowhere</span>.<span class="nv">com</span> <span class="ss">(</span><span class="nv">Apache</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">1</span><span class="ss">)</span>
+<span class="nv">Warning</span>    关于消息实体的警告信息    <span class="nv">Warn</span>: <span class="mi">199</span> <span class="nv">Miscellaneous</span> <span class="nv">warning</span>
+<span class="nv">Responses</span> 部分 
+<span class="nv">Header</span>    解释    示例
+<span class="nv">Accept</span><span class="o">-</span><span class="nv">Ranges</span>    表明服务器是否支持指定范围请求及哪种类型的分段请求    <span class="nv">Accept</span><span class="o">-</span><span class="nv">Ranges</span>: <span class="nv">bytes</span>
+<span class="nv">Age</span>    从原始服务器到代理缓存形成的估算时间（以秒计，非负）    <span class="nv">Age</span>: <span class="mi">12</span>
+<span class="nv">Allow</span>    对某网络资源的有效的请求行为，不允许则返回<span class="mi">405</span>    <span class="nv">Allow</span>: <span class="nv">GET</span>, <span class="nv">HEAD</span>
+<span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span>    告诉所有的缓存机制是否可以缓存及哪种类型    <span class="nv">Cache</span><span class="o">-</span><span class="nv">Control</span>: <span class="nv">no</span><span class="o">-</span><span class="nv">cache</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Encoding</span>    <span class="nv">web</span>服务器支持的返回内容压缩编码类型。    <span class="nv">Content</span><span class="o">-</span><span class="nv">Encoding</span>: <span class="nv">gzip</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Language</span>    响应体的语言    <span class="nv">Content</span><span class="o">-</span><span class="nv">Language</span>: <span class="nv">en</span>,<span class="nv">zh</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Length</span>    响应体的长度    <span class="nv">Content</span><span class="o">-</span><span class="nv">Length</span>: <span class="mi">348</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Location</span>    请求资源可替代的备用的另一地址    <span class="nv">Content</span><span class="o">-</span><span class="nv">Location</span>: <span class="o">/</span><span class="nv">index</span>.<span class="nv">htm</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">MD5</span>    返回资源的<span class="nv">MD5</span>校验值    <span class="nv">Content</span><span class="o">-</span><span class="nv">MD5</span>: <span class="nv">Q2hlY2sgSW50ZWdyaXR5IQ</span><span class="o">==</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Range</span>    在整个返回体中本部分的字节位置    <span class="nv">Content</span><span class="o">-</span><span class="nv">Range</span>: <span class="nv">bytes</span> <span class="mi">21010</span><span class="o">-</span><span class="mi">47021</span><span class="o">/</span><span class="mi">47022</span>
+<span class="nv">Content</span><span class="o">-</span><span class="nv">Type</span>    返回内容的<span class="nv">MIME</span>类型    <span class="nv">Content</span><span class="o">-</span><span class="nv">Type</span>: <span class="nv">text</span><span class="o">/</span><span class="nv">html</span><span class="c1">; charset=utf-8</span>
+<span class="nv">Date</span>    原始服务器消息发出的时间    <span class="nv">Date</span>: <span class="nv">Tue</span>, <span class="mi">15</span> <span class="nv">Nov</span> <span class="mi">2010</span> <span class="mi">08</span>:<span class="mi">12</span>:<span class="mi">31</span> <span class="nv">GMT</span>
+<span class="nv">ETag</span>    请求变量的实体标签的当前值    <span class="nv">ETag</span>: “<span class="mi">737060</span><span class="nv">cd8c284d8af7ad3082f209582d</span>”
+<span class="nv">Expires</span>    响应过期的日期和时间    <span class="nv">Expires</span>: <span class="nv">Thu</span>, <span class="mi">01</span> <span class="nv">Dec</span> <span class="mi">2010</span> <span class="mi">16</span>:<span class="mi">00</span>:<span class="mi">00</span> <span class="nv">GMT</span>
+<span class="nv">Last</span><span class="o">-</span><span class="nv">Modified</span>    请求资源的最后修改时间    <span class="nv">Last</span><span class="o">-</span><span class="nv">Modified</span>: <span class="nv">Tue</span>, <span class="mi">15</span> <span class="nv">Nov</span> <span class="mi">2010</span> <span class="mi">12</span>:<span class="mi">45</span>:<span class="mi">26</span> <span class="nv">GMT</span>
+<span class="nv">Location</span>    用来重定向接收方到非请求<span class="nv">URL</span>的位置来完成请求或标识新的资源    <span class="nv">Location</span>: <span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">zcmhi</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">archives</span><span class="o">/</span><span class="mi">94</span>.<span class="nv">html</span>
+<span class="nv">Pragma</span>    包括实现特定的指令，它可应用到响应链上的任何接收方    <span class="nv">Pragma</span>: <span class="nv">no</span><span class="o">-</span><span class="nv">cache</span>
+<span class="nv">Proxy</span><span class="o">-</span><span class="nv">Authenticate</span>    它指出认证方案和可应用到代理的该<span class="nv">URL</span>上的参数    <span class="nv">Proxy</span><span class="o">-</span><span class="nv">Authenticate</span>: <span class="nv">Basic</span>
+<span class="nv">refresh</span>    应用于重定向或一个新的资源被创造，在<span class="mi">5</span>秒之后重定向（由网景提出，被大部分浏览器支持）    
+<span class="nv">Refresh</span>: <span class="mi">5</span><span class="c1">; url=</span>
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">zcmhi</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">archives</span><span class="o">/</span><span class="mi">94</span>.<span class="nv">html</span>
+<span class="nv">Retry</span><span class="o">-</span><span class="nv">After</span>    如果实体暂时不可取，通知客户端在指定时间之后再次尝试    <span class="nv">Retry</span><span class="o">-</span><span class="nv">After</span>: <span class="mi">120</span>
+<span class="nv">Server</span>    <span class="nv">web</span>服务器软件名称    <span class="nv">Server</span>: <span class="nv">Apache</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">3</span>.<span class="mi">27</span> <span class="ss">(</span><span class="nv">Unix</span><span class="ss">)</span> <span class="ss">(</span><span class="nv">Red</span><span class="o">-</span><span class="nv">Hat</span><span class="o">/</span><span class="nv">Linux</span><span class="ss">)</span>
+<span class="nv">Set</span><span class="o">-</span><span class="nv">Cookie</span>    设置<span class="nv">Http</span> <span class="nv">Cookie</span>    <span class="nv">Set</span><span class="o">-</span><span class="nv">Cookie</span>: <span class="nv">UserID</span><span class="o">=</span><span class="nv">JohnDoe</span><span class="c1">; Max-Age=3600; Version=1</span>
+<span class="nv">Trailer</span>    指出头域在分块传输编码的尾部存在    <span class="nv">Trailer</span>: <span class="nv">Max</span><span class="o">-</span><span class="nv">Forwards</span>
+<span class="nv">Transfer</span><span class="o">-</span><span class="nv">Encoding</span>    文件传输编码    <span class="nv">Transfer</span><span class="o">-</span><span class="nv">Encoding</span>:<span class="nv">chunked</span>
+<span class="nv">Vary</span>    告诉下游代理是使用缓存响应还是从原始服务器请求    <span class="nv">Vary</span>: <span class="o">*</span>
+<span class="nv">Via</span>    告知代理客户端响应是通过哪里发送的    <span class="nv">Via</span>: <span class="mi">1</span>.<span class="mi">0</span> <span class="nv">fred</span>, <span class="mi">1</span>.<span class="mi">1</span> <span class="nv">nowhere</span>.<span class="nv">com</span> <span class="ss">(</span><span class="nv">Apache</span><span class="o">/</span><span class="mi">1</span>.<span class="mi">1</span><span class="ss">)</span>
+<span class="nv">Warning</span>    警告实体可能存在的问题    <span class="nv">Warning</span>: <span class="mi">199</span> <span class="nv">Miscellaneous</span> <span class="nv">warning</span>
+<span class="nv">WWW</span><span class="o">-</span><span class="nv">Authenticate</span>    表明客户端请求实体应该使用的授权方案    <span class="nv">WWW</span><span class="o">-</span><span class="nv">Authenticate</span>: <span class="nv">Basic</span>
+</pre></div>
+
+
+<h2 id="_1">命令历史记录</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="err">、</span><span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">bashrc</span>
+<span class="n">export</span> <span class="n">HISTORY_FILE</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="ss">`whoami`</span><span class="n">_</span><span class="ss">`date &#39;+%y-%m-%d&#39;`</span><span class="p">.</span><span class="n">log</span>
+<span class="n">readonly</span> <span class="n">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">&#39;{ date &quot;+%y-%m-%d %T ### $(who am i |awk &quot;{print $1&quot; &quot;$2&quot; &quot;$5}&quot;) ### </span>
+<span class="s1">$(history 1 | { read x cmd; echo &quot;$cmd&quot;; })&quot;; } &gt;&gt; $HISTORY_FILE&#39;</span>
+<span class="err">或者</span>
+<span class="n">export</span> <span class="n">HISTORY_FILE</span><span class="o">=/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="ss">`whoami`</span><span class="n">_</span><span class="ss">`date &#39;+%y-%m-%d&#39;`</span><span class="p">.</span><span class="n">log</span>
+<span class="n">readonly</span> <span class="n">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">&#39;{ msg=$(history 1 | { read x y; echo $y; }); echo $(who am i):[`pwd`]&quot;$msg&quot;; } &gt;&gt; </span>
+<span class="s1">$HISTORY_FILE&#39;</span>
+
+
+<span class="mi">2</span><span class="err">、</span><span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span>
+<span class="n">export</span> <span class="n">HISTTIMEFORMAT</span><span class="o">=</span><span class="s2">&quot;%F %T `whoami` &quot;</span>
+
+<span class="mi">1</span><span class="err">和</span><span class="mi">2</span><span class="err">一起用格式会重复</span>
+</pre></div>
+
+
+<h2 id="_2">监测系统</h2>
+<div class="codehilite"><pre><span></span><span class="n">awk</span> <span class="o">-</span><span class="n">F</span><span class="p">:</span> <span class="s1">&#39;$3==0 {print $1}&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">passwd</span><span class="err">（查看是否存在特权用户）</span>
+<span class="n">awk</span> <span class="o">-</span><span class="n">F</span><span class="p">:</span> <span class="s1">&#39;length($2)==0 {print $1}&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">shadow</span><span class="err">（查看是否存在空口令帐户）</span>
+<span class="n">lsof</span> <span class="o">-</span><span class="n">p</span> <span class="n">pid</span><span class="err">（察看该进程所打开端口和文件）</span>
+<span class="n">top</span> <span class="n">ps</span><span class="err">等一起用，有时只用一个会不准</span>
+<span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">crontab</span>
+<span class="n">ls</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">cron</span><span class="p">.</span><span class="o">*</span>
+<span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">rc</span><span class="p">.</span><span class="k">local</span>
+
+<span class="n">yum</span> <span class="n">install</span> <span class="n">rkhunter</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">rkhunter</span> <span class="o">-</span><span class="k">c</span>   <span class="err">检测系统</span>
+
+<span class="mi">1</span><span class="p">.</span> <span class="n">MD5</span><span class="err">校验测试</span><span class="p">,</span> <span class="err">检测任何文件是否改动</span><span class="p">.</span>
+<span class="mi">2</span><span class="p">.</span> <span class="err">检测</span><span class="n">rootkits</span><span class="err">使用的二进制和系统工具文件</span><span class="p">.</span>
+<span class="mi">3</span><span class="p">.</span> <span class="err">检测特洛伊木马程序的特征码</span><span class="p">.</span>
+<span class="mi">4</span><span class="p">.</span> <span class="err">检测大多常用程序的文件异常属性</span><span class="p">.</span>
+<span class="mi">5</span><span class="p">.</span> <span class="err">执行一些系统相关的测试</span> <span class="o">-</span> <span class="err">因为</span><span class="n">rootkit</span> <span class="n">hunter</span><span class="err">可支持多个系统平台</span><span class="p">.</span>
+<span class="mi">6</span><span class="p">.</span> <span class="err">扫描任何混杂模式下的接口和后门程序常用的端口</span><span class="p">.</span>
+<span class="mi">7</span><span class="p">.</span> <span class="err">检测如</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="err">目录下的所有配置文件</span><span class="p">,</span> <span class="err">日志文件</span><span class="p">,</span> <span class="err">任何异常的隐藏文件等等</span><span class="p">.</span> <span class="err">例如</span><span class="p">,</span> <span class="err">在检测</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="p">.</span><span class="n">udev</span><span class="err">和</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="p">.</span><span class="n">pwd</span><span class="p">.</span><span class="k">lock</span><span class="err">文件时候</span><span class="p">,</span> 
+<span class="err">我的系统被警告</span><span class="p">.</span>
+<span class="mi">8</span><span class="p">.</span> <span class="err">对一些使用常用端口的应用程序进行版本测试</span><span class="p">.</span> <span class="err">如</span><span class="p">:</span> <span class="n">Apache</span> <span class="n">Web</span> <span class="n">Server</span><span class="p">,</span> <span class="n">Procmail</span><span class="err">等</span><span class="p">.</span>
+
+    <span class="err">完成上面检测后</span><span class="p">,</span> <span class="err">你的屏幕会显示扫描结果</span><span class="p">:</span> <span class="err">可能被感染的文件</span><span class="p">,</span> <span class="err">不正确的</span><span class="n">MD5</span><span class="err">校验文件和已被感染的应用程序</span><span class="p">.</span>
+
+
+    <span class="n">rkhunter</span><span class="err">是通过一个含有</span><span class="n">rootkit</span><span class="err">名字的数据库来检测系统的</span><span class="n">rootkits</span><span class="err">漏洞</span><span class="p">,</span> <span class="err">所以经常更新该数据库非常重要</span><span class="p">,</span> <span class="err">你可以通过下面命令来</span>
+    <span class="err">更新该数据库</span><span class="p">:</span>
+
+<span class="o">#</span> <span class="n">rkhunter</span> <span class="c1">--update</span>
+
+<span class="err">当然最好是通过</span><span class="n">cron</span> <span class="n">job</span><span class="err">定期执行上面的命令</span><span class="p">,</span> <span class="err">你需要用</span><span class="n">root</span><span class="err">用户添加下面命令到</span><span class="n">crontab</span><span class="err">文件</span><span class="p">:</span>
+
+<span class="mi">59</span> <span class="mi">23</span> <span class="mi">1</span> <span class="o">*</span> <span class="o">*</span> <span class="n">echo</span> <span class="err">“</span><span class="n">Rkhunter</span> <span class="k">update</span> <span class="k">check</span> <span class="k">in</span> <span class="n">progress</span><span class="err">”</span><span class="p">;</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">rkhunter</span> <span class="c1">--update</span>
+</pre></div>
+
+
+<h2 id="core-dump">core dump</h2>
+<div class="codehilite"><pre><span></span><span class="err">在</span><span class="n">Linux</span><span class="err">下产生并调试</span><span class="n">core</span><span class="err">文件</span> <span class="err">先看看我用的是个什么机器：</span>
+
+<span class="err">$</span> <span class="n">uname</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">Linux</span> <span class="n">dev</span> <span class="mf">2.4.21</span><span class="o">-</span><span class="mf">9.30</span><span class="n">AXsmp</span> <span class="err">#</span><span class="mi">1</span> <span class="n">SMP</span> <span class="n">Wed</span> <span class="n">May</span> <span class="mi">26</span> <span class="mi">23</span><span class="o">:</span><span class="mi">37</span><span class="o">:</span><span class="mi">09</span> <span class="n">EDT</span> <span class="mi">2004</span> <span class="n">i686</span> <span class="n">i686</span> <span class="n">i386</span> <span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+
+<span class="err">再看看默认的一些参数，注意</span><span class="n">core</span> <span class="n">file</span> <span class="n">size</span><span class="err">是个</span><span class="mi">0</span><span class="err">，程序出错时不会产生</span><span class="n">core</span><span class="err">文件了。</span>
+
+
+<span class="err">$</span> <span class="n">ulimit</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">core</span> <span class="n">file</span> <span class="n">size</span> <span class="p">(</span><span class="n">blocks</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span><span class="p">)</span> <span class="mi">0</span>
+<span class="n">data</span> <span class="n">seg</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">file</span> <span class="n">size</span> <span class="p">(</span><span class="n">blocks</span><span class="p">,</span> <span class="o">-</span><span class="n">f</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">max</span> <span class="n">locked</span> <span class="n">memory</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">l</span><span class="p">)</span> <span class="mi">4</span>
+<span class="n">max</span> <span class="n">memory</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">m</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">open</span> <span class="n">files</span> <span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">)</span> <span class="mi">2048</span>
+<span class="n">pipe</span> <span class="n">size</span> <span class="p">(</span><span class="mi">512</span> <span class="n">bytes</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="mi">8</span>
+<span class="n">stack</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">)</span> <span class="mi">10240</span>
+<span class="n">cpu</span> <span class="n">time</span> <span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">max</span> <span class="n">user</span> <span class="n">processes</span> <span class="p">(</span><span class="o">-</span><span class="n">u</span><span class="p">)</span> <span class="mi">7168</span>
+<span class="k">virtual</span> <span class="n">memory</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span><span class="p">)</span> <span class="n">unlimited</span>
+
+<span class="err">写个简单的程序，看看</span><span class="n">core</span><span class="err">文件是不是会被产生。</span>
+
+<span class="err">$</span> <span class="n">more</span> <span class="n">foo</span><span class="p">.</span><span class="n">c</span>
+
+<span class="cp">#include</span>
+
+<span class="cpf">static void sub(void);</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="n">sub</span><span class="p">();</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">static</span> <span class="kt">void</span> <span class="n">sub</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+<span class="cm">/* derefernce a null pointer, expect core dump. */</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="err">$</span> <span class="n">gcc</span> <span class="o">-</span><span class="n">Wall</span> <span class="o">-</span><span class="n">g</span> <span class="n">foo</span><span class="p">.</span><span class="n">c</span>
+<span class="err">$</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">Segmentation</span> <span class="n">fault</span>
+
+<span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">core</span><span class="p">.</span><span class="o">*</span>
+<span class="nl">ls</span><span class="p">:</span> <span class="n">core</span><span class="p">.</span><span class="o">*:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="n">or</span> <span class="n">directory</span>
+
+<span class="err">没有找到</span><span class="n">core</span><span class="err">文件，我们改改</span><span class="n">ulimit</span><span class="err">的设置，让它产生。</span><span class="mi">1024</span><span class="err">是随便取的</span>
+
+<span class="err">$</span> <span class="n">ulimit</span> <span class="o">-</span><span class="n">c</span> <span class="mi">655355</span>
+
+<span class="err">$</span> <span class="n">ulimit</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">core</span> <span class="n">file</span> <span class="n">size</span> <span class="p">(</span><span class="n">blocks</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span><span class="p">)</span> <span class="mi">1024</span>
+<span class="n">data</span> <span class="n">seg</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">file</span> <span class="n">size</span> <span class="p">(</span><span class="n">blocks</span><span class="p">,</span> <span class="o">-</span><span class="n">f</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">max</span> <span class="n">locked</span> <span class="n">memory</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">l</span><span class="p">)</span> <span class="mi">4</span>
+<span class="n">max</span> <span class="n">memory</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">m</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">open</span> <span class="n">files</span> <span class="p">(</span><span class="o">-</span><span class="n">n</span><span class="p">)</span> <span class="mi">2048</span>
+<span class="n">pipe</span> <span class="n">size</span> <span class="p">(</span><span class="mi">512</span> <span class="n">bytes</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span><span class="p">)</span> <span class="mi">8</span>
+<span class="n">stack</span> <span class="n">size</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">)</span> <span class="mi">10240</span>
+<span class="n">cpu</span> <span class="n">time</span> <span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span><span class="p">)</span> <span class="n">unlimited</span>
+<span class="n">max</span> <span class="n">user</span> <span class="n">processes</span> <span class="p">(</span><span class="o">-</span><span class="n">u</span><span class="p">)</span> <span class="mi">7168</span>
+<span class="k">virtual</span> <span class="n">memory</span> <span class="p">(</span><span class="n">kbytes</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span><span class="p">)</span> <span class="n">unlimited</span>
+
+<span class="err">$</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">Segmentation</span> <span class="n">fault</span> <span class="p">(</span><span class="n">core</span> <span class="n">dumped</span><span class="p">)</span>
+<span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">core</span><span class="p">.</span><span class="o">*</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-------</span> <span class="mi">1</span> <span class="n">uniware</span> <span class="n">uniware</span> <span class="mi">53248</span> <span class="n">Jun</span> <span class="mi">30</span> <span class="mi">17</span><span class="o">:</span><span class="mi">10</span> <span class="n">core</span><span class="mf">.9128</span>
+
+<span class="err">注意看上述的输出信息，多了个</span><span class="p">(</span><span class="n">core</span> <span class="n">dumped</span><span class="p">)</span><span class="err">。确实产生了一个</span><span class="n">core</span><span class="err">文件，</span><span class="mi">9128</span><span class="err">是该进程的</span><span class="n">PID</span><span class="err">。我们用</span><span class="n">GDB</span><span class="err">来看看这个</span><span class="n">core</span><span class="err">。</span>
+
+<span class="err">$</span> <span class="n">gdb</span> <span class="o">--</span><span class="n">core</span><span class="o">=</span><span class="n">core</span><span class="mf">.9128</span>
+<span class="n">GNU</span> <span class="n">gdb</span> <span class="n">Asianux</span> <span class="p">(</span><span class="mf">6.0</span><span class="n">post</span><span class="o">-</span><span class="mf">0.20040223.17.1</span><span class="n">AX</span><span class="p">)</span>
+<span class="n">Copyright</span> <span class="mi">2004</span> <span class="n">Free</span> <span class="n">Software</span> <span class="n">Foundation</span><span class="p">,</span> <span class="n">Inc</span><span class="p">.</span>
+<span class="n">GDB</span> <span class="n">is</span> <span class="n">free</span> <span class="n">software</span><span class="p">,</span> <span class="n">covered</span> <span class="n">by</span> <span class="n">the</span> <span class="n">GNU</span> <span class="n">General</span> <span class="n">Public</span> <span class="n">License</span><span class="p">,</span> <span class="n">and</span> <span class="n">you</span> <span class="n">are</span>
+<span class="n">welcome</span> <span class="n">to</span> <span class="n">change</span> <span class="n">it</span> <span class="n">and</span><span class="o">/</span><span class="n">or</span> <span class="n">distribute</span> <span class="n">copies</span> <span class="n">of</span> <span class="n">it</span> <span class="n">under</span> <span class="n">certain</span> <span class="n">conditions</span><span class="p">.</span>
+<span class="n">Type</span> <span class="s">&quot;show copying&quot;</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">conditions</span><span class="p">.</span>
+<span class="n">There</span> <span class="n">is</span> <span class="n">absolutely</span> <span class="n">no</span> <span class="n">warranty</span> <span class="k">for</span> <span class="n">GDB</span><span class="p">.</span> <span class="n">Type</span> <span class="s">&quot;show warranty&quot;</span> <span class="k">for</span> <span class="n">details</span><span class="p">.</span>
+<span class="n">This</span> <span class="n">GDB</span> <span class="n">was</span> <span class="n">configured</span> <span class="n">as</span> <span class="s">&quot;i386-asianux-linux-gnu&quot;</span><span class="p">.</span>
+<span class="n">Core</span> <span class="n">was</span> <span class="n">generated</span> <span class="n">by</span> <span class="err">`</span><span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span><span class="err">&#39;</span><span class="p">.</span>
+<span class="n">Program</span> <span class="n">terminated</span> <span class="n">with</span> <span class="n">signal</span> <span class="mi">11</span><span class="p">,</span> <span class="n">Segmentation</span> <span class="n">fault</span><span class="p">.</span>
+<span class="cp">#0 0x08048373 in ?? ()</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">bt</span>
+<span class="cp">#0 0x08048373 in ?? ()</span>
+<span class="cp">#1 0xbfffd8f8 in ?? ()</span>
+<span class="cp">#2 0x0804839e in ?? ()</span>
+<span class="cp">#3 0xb74cc6b3 in ?? ()</span>
+<span class="cp">#4 0x00000000 in ?? ()</span>
+
+<span class="err">此时用</span><span class="n">bt</span><span class="err">看不到</span><span class="n">backtrace</span><span class="err">，也就是调用堆栈，原来</span><span class="n">GDB</span><span class="err">还不知道符号信息在哪里。我们告诉它一下：</span>
+
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">file</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">Reading</span> <span class="n">symbols</span> <span class="n">from</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span><span class="p">...</span><span class="n">done</span><span class="p">.</span>
+<span class="n">Using</span> <span class="n">host</span> <span class="n">libthread_db</span> <span class="n">library</span> <span class="s">&quot;/lib/tls/libthread_db.so.1&quot;</span><span class="p">.</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">bt</span>
+<span class="cp">#0 0x08048373 in sub () at foo.c:17</span>
+<span class="cp">#1 0x08048359 in main () at foo.c:8</span>
+
+<span class="err">此时</span><span class="n">backtrace</span><span class="err">出来了。</span>
+
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span> <span class="n">l</span>
+<span class="mi">8</span> <span class="n">sub</span><span class="p">();</span>
+<span class="mi">9</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="mi">10</span> <span class="p">}</span>
+<span class="mi">11</span>
+<span class="mi">12</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">sub</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="mi">13</span> <span class="p">{</span>
+<span class="mi">14</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="mi">15</span>
+<span class="mi">16</span> <span class="cm">/* derefernce a null pointer, expect core dump. */</span>
+<span class="mi">17</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+<span class="p">(</span><span class="n">gdb</span><span class="p">)</span>
+
+<span class="err">在程序不寻常退出时，内核会在当前工作目录下生成一个</span><span class="n">core</span><span class="err">文件（是一个内存映像，同时加上调试信息）。使用</span><span class="n">gdb</span><span class="err">来查看</span><span class="n">core</span><span class="err">文件，</span>
+<span class="err">可以指示出导致程序出错的代码所在文件和行数。</span>
+
+<span class="mf">1.</span><span class="n">core</span><span class="err">文件的生成开关和大小限制</span>
+<span class="o">---------------------------------</span>
+<span class="mi">1</span><span class="err">）使用</span><span class="n">ulimit</span> <span class="o">-</span><span class="n">c</span><span class="err">命令可查看</span><span class="n">core</span><span class="err">文件的生成开关。若结果为</span><span class="mi">0</span><span class="err">，则表示关闭了此功能，不会生成</span><span class="n">core</span><span class="err">文件。</span>
+<span class="mi">2</span><span class="err">）使用</span><span class="n">ulimit</span> <span class="o">-</span><span class="n">c</span> <span class="n">filesize</span><span class="err">命令，可以限制</span><span class="n">core</span><span class="err">文件的大小（</span><span class="n">filesize</span><span class="err">的单位为</span><span class="n">kbyte</span><span class="err">）。若</span><span class="n">ulimit</span> <span class="o">-</span><span class="n">c</span> <span class="n">unlimited</span><span class="err">，则表示</span>
+<span class="n">core</span><span class="err">文件的大小不受限制。如果生成的信息超过此大小，将会被裁剪，最终生成一个不完整的</span><span class="n">core</span><span class="err">文件。在调试此</span><span class="n">core</span><span class="err">文件的时候，</span><span class="n">gdb</span><span class="err">会提示错误。</span>
+
+<span class="mf">2.</span><span class="n">core</span><span class="err">文件的名称和生成路径</span>
+<span class="o">----------------------------</span>
+<span class="n">core</span><span class="err">文件生成路径</span><span class="o">:</span>
+<span class="err">输入可执行文件运行命令的同一路径下。</span>
+<span class="err">若系统生成的</span><span class="n">core</span><span class="err">文件不带其他任何扩展名称，则全部命名为</span><span class="n">core</span><span class="err">。新的</span><span class="n">core</span><span class="err">文件生成将覆盖原来的</span><span class="n">core</span><span class="err">文件。</span>
+
+<span class="mi">1</span><span class="err">）</span><span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">core_uses_pid</span><span class="err">可以控制</span><span class="n">core</span><span class="err">文件的文件名中是否添加</span><span class="n">pid</span><span class="err">作为扩展。文件内容为</span><span class="mi">1</span><span class="err">，表示添加</span><span class="n">pid</span><span class="err">作为扩展名，</span>
+<span class="err">生成的</span><span class="n">core</span><span class="err">文件格式为</span><span class="n">core</span><span class="p">.</span><span class="n">xxxx</span><span class="err">；为</span><span class="mi">0</span><span class="err">则表示生成的</span><span class="n">core</span><span class="err">文件同一命名为</span><span class="n">core</span><span class="err">。</span>
+<span class="err">可通过以下命令修改此文件：</span>
+<span class="n">echo</span> <span class="s">&quot;1&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">core_uses_pid</span>
+
+<span class="mi">2</span><span class="err">）</span><span class="n">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">core_pattern</span><span class="err">可以控制</span><span class="n">core</span><span class="err">文件保存位置和文件名格式。</span>
+<span class="err">可通过以下命令修改此文件：</span>
+<span class="n">echo</span> <span class="s">&quot;/corefile/core-%e-%p-%t&quot;</span> <span class="o">&gt;</span> <span class="n">core_pattern</span><span class="err">，可以将</span><span class="n">core</span><span class="err">文件统一生成到</span><span class="o">/</span><span class="n">corefile</span><span class="err">目录下，产生的文件名为</span><span class="n">core</span><span class="o">-</span><span class="err">命令名</span><span class="o">-</span><span class="n">pid</span><span class="o">-</span><span class="err">时间戳</span>
+<span class="err">以下是参数列表</span><span class="o">:</span>
+<span class="nf">%p</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">pid</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加</span><span class="n">pid</span>
+<span class="nf">%u</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">current</span> <span class="n">uid</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加当前</span><span class="n">uid</span>
+<span class="nf">%g</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">current</span> <span class="n">gid</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加当前</span><span class="n">gid</span>
+<span class="nf">%s</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">signal</span> <span class="n">that</span> <span class="n">caused</span> <span class="n">the</span> <span class="n">coredump</span> <span class="n">into</span> <span class="n">the</span> <span class="n">filename</span> <span class="err">添加导致产生</span><span class="n">core</span><span class="err">的信号</span>
+<span class="nf">%t</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">UNIX</span> <span class="n">time</span> <span class="n">that</span> <span class="n">the</span> <span class="n">coredump</span> <span class="n">occurred</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加</span><span class="n">core</span><span class="err">文件生成时的</span><span class="n">unix</span><span class="err">时间</span>
+<span class="nf">%h</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">hostname</span> <span class="n">where</span> <span class="n">the</span> <span class="n">coredump</span> <span class="n">happened</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加主机名</span>
+<span class="nf">%e</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">coredumping</span> <span class="n">executable</span> <span class="n">name</span> <span class="n">into</span> <span class="n">filename</span> <span class="err">添加命令名</span>
+
+<span class="mf">3.</span><span class="n">core</span><span class="err">文件的查看</span>
+<span class="o">-----------------</span>
+<span class="n">core</span><span class="err">文件需要使用</span><span class="n">gdb</span><span class="err">来查看。</span>
+<span class="n">gdb</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">core</span><span class="o">-</span><span class="n">file</span> <span class="n">core</span><span class="p">.</span><span class="n">xxxx</span>
+<span class="err">使用</span><span class="n">bt</span><span class="err">命令即可看到程序出错的地方。</span>
+<span class="err">以下两种命令方式具有相同的效果，但是在有些环境下不生效，所以推荐使用上面的命令。</span>
+<span class="mi">1</span><span class="err">）</span><span class="n">gdb</span> <span class="o">-</span><span class="n">core</span><span class="o">=</span><span class="n">core</span><span class="p">.</span><span class="n">xxxx</span>
+<span class="n">file</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">bt</span>
+<span class="mi">2</span><span class="err">）</span><span class="n">gdb</span> <span class="o">-</span><span class="n">c</span> <span class="n">core</span><span class="p">.</span><span class="n">xxxx</span>
+<span class="n">file</span> <span class="p">.</span><span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">out</span>
+<span class="n">bt</span>
+
+<span class="mf">4.</span><span class="err">开发板上使用</span><span class="n">core</span><span class="err">文件调试</span>
+<span class="o">-----------------------------</span>
+<span class="err">如果开发板的操作系统也是</span><span class="n">linux</span><span class="err">，</span><span class="n">core</span><span class="err">调试方法依然适用。如果开发板上不支持</span><span class="n">gdb</span><span class="err">，可将开发板的环境（依赖库）、可执行文件和</span><span class="n">core</span>
+<span class="err">文件拷贝到</span><span class="n">PC</span><span class="err">的</span><span class="n">linux</span><span class="err">下。</span>
+<span class="err">在</span> <span class="n">PC</span><span class="err">上调试开发板上产生的</span><span class="n">core</span><span class="err">文件，需要使用交叉编译器自带的</span><span class="n">gdb</span><span class="err">，并且需要在</span><span class="n">gdb</span><span class="err">中指定</span><span class="n">solib</span><span class="o">-</span><span class="n">absolute</span><span class="o">-</span><span class="n">prefix</span><span class="err">和</span> 
+<span class="n">solib</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">path</span><span class="err">两个变量以保证</span><span class="n">gdb</span><span class="err">能够找到可执行程序的依赖库路径。有一种建立配置文件的方法，不需要每次启动</span><span class="n">gdb</span><span class="err">都配置以上变量，</span>
+<span class="err">即：在待运行</span><span class="n">gdb</span><span class="err">的路径下建立</span><span class="p">.</span><span class="n">gdbinit</span><span class="err">。</span>
+<span class="err">配置文件内容：</span>
+<span class="n">set</span> <span class="n">solib</span><span class="o">-</span><span class="n">absolute</span><span class="o">-</span><span class="n">prefix</span> <span class="n">YOUR_CROSS_COMPILE_PATH</span>
+<span class="n">set</span> <span class="n">solib</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">path</span> <span class="n">YOUR_CROSS_COMPILE_PATH</span>
+<span class="n">set</span> <span class="n">solib</span><span class="o">-</span><span class="n">search</span><span class="o">-</span><span class="n">path</span> <span class="n">YOUR_DEVELOPER_TOOLS_LIB_PATH</span>
+<span class="n">handle</span> <span class="n">SIG32</span> <span class="n">nostop</span> <span class="n">noprint</span> <span class="n">pass</span>
+</pre></div>
+
+
+<h2 id="idrac">idrac管理</h2>
+<div class="codehilite"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">linux</span><span class="p">.</span><span class="n">dell</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">repo</span><span class="o">/</span><span class="n">hardware</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">bootstrap</span><span class="p">.</span><span class="n">cgi</span> <span class="o">|</span> <span class="n">bash</span>
+<span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">srvadmin</span><span class="o">-</span><span class="n">idrac7</span>
+
+<span class="n">racadm</span> <span class="n">closessn</span> <span class="o">-</span><span class="n">a</span> <span class="err">关闭所有</span><span class="k">session</span>
+<span class="n">racadm</span> <span class="n">racreset</span>    <span class="err">重启</span><span class="n">idrac</span>
+
+<span class="mi">1</span><span class="err">、</span><span class="n">RHEL</span> <span class="err">系统环境</span><span class="n">iDRAC</span> <span class="err">命令工具包：</span>
+
+<span class="n">Dell</span> <span class="n">EMC</span> <span class="n">OpenManage</span> <span class="n">Linux</span> <span class="n">Remote</span> <span class="k">Access</span> <span class="n">Utilities</span> <span class="p">:</span>
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">dell</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">support</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cn</span><span class="o">/</span><span class="n">zh</span><span class="o">/</span><span class="n">cndhs1</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">driversdetails</span><span class="o">?</span><span class="n">driverId</span><span class="o">=</span><span class="mi">49</span><span class="n">T1M</span>
+<span class="err">下载后，需解决</span><span class="n">net</span><span class="o">-</span><span class="n">snmp</span><span class="o">-</span><span class="n">utils</span><span class="err">包的依赖关系在执行此目录下的</span><span class="n">rpm</span><span class="err">包安装</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">rac</span><span class="o">/</span><span class="n">RHEL7</span><span class="o">/</span><span class="n">x86_64</span><span class="err">，然后软链接</span>
+<span class="err">物理机环境的安装和虚拟机环境安装区别：</span>
+<span class="err">物理机环境：安装在物理机环境后，可直接</span> <span class="o">#</span> <span class="n">racadm</span> <span class="n">command</span><span class="err">查看和修改</span><span class="n">iDRAC</span><span class="err">配置</span>
+<span class="err">虚拟机环境：安装在虚拟机环境后，需</span> <span class="o">-</span><span class="n">r</span> <span class="n">IP</span> <span class="o">#</span><span class="n">racadm</span> <span class="o">-</span><span class="n">r</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span> <span class="o">-</span><span class="n">u</span> <span class="k">User</span> <span class="o">-</span><span class="n">p</span> <span class="s1">&#39;Password&#39;</span> <span class="n">command</span> <span class="err">查看和修改</span><span class="n">iDRAC</span><span class="err">配置</span>
+<span class="mi">2</span><span class="err">、</span><span class="n">iDRAC</span> <span class="err">命令手册：</span>
+
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">topics</span><span class="o">-</span><span class="n">cdn</span><span class="p">.</span><span class="n">dell</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">pdf</span><span class="o">/</span><span class="n">idrac7</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">lifecycle</span><span class="o">-</span><span class="n">controller</span><span class="o">-</span><span class="n">v2</span><span class="p">.</span><span class="mi">50</span><span class="p">.</span><span class="mi">50</span><span class="p">.</span><span class="mi">50</span><span class="n">_reference</span><span class="o">-</span><span class="n">guide_en</span><span class="o">-</span><span class="n">us</span><span class="p">.</span><span class="n">pdf</span>
+<span class="mi">3</span><span class="err">、</span><span class="n">iDRAC</span> <span class="err">常用命令</span>
+
+<span class="err">创建、删除、赋权用户的操作</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">config</span> <span class="o">-</span><span class="k">g</span> <span class="n">cfgUserAdmin</span> <span class="o">-</span><span class="n">o</span> <span class="n">cfgUserAdminUserName</span> <span class="o">-</span><span class="n">i</span> <span class="mi">10</span> <span class="n">User01</span>           <span class="err">创建索引</span><span class="mi">10</span><span class="err">的用户</span><span class="n">User01</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">config</span> <span class="o">-</span><span class="k">g</span> <span class="n">cfgUserAdmin</span> <span class="o">-</span><span class="n">o</span> <span class="n">cfgUserAdminPassword</span> <span class="o">-</span><span class="n">i</span> <span class="mi">10</span> <span class="s1">&#39;Password&#39;</span>      <span class="err">给创建的用户设置密码</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="k">set</span> <span class="n">iDRAC</span><span class="p">.</span><span class="n">Users</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="n">Password</span> <span class="s1">&#39;NewPassword&#39;</span>                                         <span class="err">更改用户密码</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">config</span> <span class="o">-</span><span class="k">g</span> <span class="n">cfgUserAdmin</span> <span class="o">-</span><span class="n">i</span> <span class="mi">10</span> <span class="o">-</span><span class="n">o</span> <span class="n">cfgUserAdminEnable</span> <span class="mi">1</span>                           <span class="err">启用用户</span><span class="o">&lt;</span><span class="mi">1</span><span class="err">表示启用，</span><span class="mi">0</span><span class="err">表示禁用</span><span class="o">&gt;</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">config</span> <span class="o">-</span><span class="k">g</span> <span class="n">cfgUserAdmin</span> <span class="o">-</span><span class="n">o</span> <span class="n">cfgUserAdminUserName</span> <span class="o">-</span><span class="n">i</span> <span class="mi">10</span>                        <span class="err">删除用户</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">config</span> <span class="o">-</span><span class="k">g</span> <span class="n">cfgUserAdmin</span> <span class="o">-</span><span class="n">o</span> <span class="n">cfgUserAdminPrivilege</span> <span class="o">-</span><span class="n">i</span> <span class="mi">10</span> <span class="mi">4</span>                         <span class="err">赋予</span><span class="n">User01</span><span class="err">用户超级管理员权限</span>
+<span class="err">物理机重启、关机等操作</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">serveraction</span> <span class="n">powerup</span>                                               <span class="err">开启服务器</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">serveraction</span> <span class="n">powerdown</span>                                          <span class="err">关闭服务器</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">serveraction</span> <span class="n">powercycle</span>                                           <span class="err">关机后再开启服务器</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">serveraction</span> <span class="n">powerstatus</span>                                         <span class="err">查看服务器状态</span>
+<span class="n">iDRAC</span> <span class="err">重启操作</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">racreset</span> <span class="n">soft</span>                                                             <span class="err">软重启</span><span class="n">iDRAC</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">racreset</span> <span class="n">hard</span>                                                            <span class="err">硬重启</span><span class="n">iDRAC</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">racreset</span> <span class="n">soft</span> <span class="o">-</span><span class="n">f</span>                                                          <span class="err">强制软重启</span><span class="n">iDRAC</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="n">racreset</span> <span class="n">hard</span> <span class="o">-</span><span class="n">f</span>                                                         <span class="err">强制硬重启</span><span class="n">iDRAC</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="k">set</span> <span class="n">iDRAC</span><span class="p">.</span><span class="n">IPv4</span><span class="p">.</span><span class="n">Address</span> <span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span>                              <span class="err">修改</span><span class="n">IP</span><span class="err">地址</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="k">set</span> <span class="n">iDRAC</span><span class="p">.</span><span class="n">IPv4</span><span class="p">.</span><span class="n">Netmask</span> <span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span>                             <span class="err">修改子网掩码</span>
+<span class="o">#</span> <span class="n">racadm</span> <span class="k">set</span> <span class="n">iDRAC</span><span class="p">.</span><span class="n">IPv4</span><span class="p">.</span><span class="n">Gateway</span> <span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span><span class="p">.</span><span class="n">x</span>                             <span class="err">修改默认网关</span><span class="o">&lt;</span><span class="err">无需重启</span><span class="n">idrac</span><span class="err">，配置即生效</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h2 id="idrac-ssh">idrac ssh</h2>
+<div class="codehilite"><pre><span></span><span class="nv">ssh</span> <span class="nv">idrac</span>的<span class="nv">IP</span> 进入<span class="nv">ssh</span>模式
+<span class="o">/</span><span class="nv">admin1</span><span class="o">-&gt;</span> <span class="nv">racadm</span>  <span class="nv">config</span>...  可以使用<span class="nv">racadm</span>命令
+
+修改网关
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicGateway</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">63</span>.<span class="mi">155</span>
+
+
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">all</span> <span class="nv">iDRAC</span> <span class="nv">settings</span> <span class="nv">in</span> <span class="nv">a</span> <span class="nv">file</span>
+
+<span class="nv">racadm</span> <span class="nv">get</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">config</span>.<span class="nv">txt</span>
+
+<span class="k">If</span> <span class="nv">you</span> <span class="nv">like</span> <span class="nv">you</span> <span class="nv">can</span> <span class="nv">change</span> <span class="nv">the</span> <span class="nv">contents</span> <span class="nv">of</span> <span class="nv">config</span>.<span class="nv">txt</span> <span class="nv">and</span> <span class="nv">apply</span> <span class="nv">it</span> <span class="nv">back</span> <span class="nv">to</span> <span class="nv">iDRAC</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">config</span>.<span class="nv">txt</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">password</span> <span class="k">for</span> <span class="nv">root</span> <span class="nv">user</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">Users</span>.<span class="mi">2</span>.<span class="nv">Password</span> <span class="nv">PASSWORD</span><span class="s2">&quot;</span>
+
+<span class="o">%</span> <span class="nv">List</span> <span class="nv">all</span> <span class="nv">ssh</span> <span class="nv">keys</span> <span class="k">for</span> <span class="nv">root</span> <span class="nv">user</span>
+<span class="nv">racadm</span> <span class="nv">sshpkauth</span> <span class="o">-</span><span class="nv">i</span> <span class="mi">2</span> <span class="o">-</span><span class="nv">v</span> <span class="o">-</span><span class="nv">k</span> <span class="nv">all</span>
+
+<span class="o">%</span> <span class="nv">Add</span> <span class="nv">ssh</span> <span class="nv">key</span> <span class="nv">to</span> <span class="nv">root</span> <span class="nv">user</span>
+<span class="nv">racadm</span> <span class="nv">sshpkauth</span> <span class="o">-</span><span class="nv">i</span> <span class="mi">2</span> <span class="o">-</span><span class="nv">k</span> <span class="mi">1</span> <span class="s2">&quot;</span><span class="s">CONTENTS OF PUBLIC KEY</span><span class="s2">&quot;</span>
+
+<span class="o">%</span> <span class="nv">Delete</span> <span class="nv">ssh</span> <span class="nv">key</span> <span class="k">for</span> <span class="nv">root</span> <span class="nv">user</span>
+<span class="nv">racadm</span> <span class="nv">sshpkauth</span> <span class="o">-</span><span class="nv">i</span> <span class="mi">2</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">k</span> <span class="mi">1</span>
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">iDRAC</span> <span class="nv">IP</span> <span class="nv">config</span>
+
+<span class="nv">racadm</span> <span class="nv">getniccfg</span>
+<span class="nv">racadm</span> <span class="nv">get</span> <span class="nv">iDRAC</span>.<span class="nv">NIC</span>
+
+<span class="o">%</span> <span class="nv">set</span> <span class="nv">iDRAC</span> <span class="nv">IP</span>
+
+<span class="nv">Using</span> <span class="nv">config</span> <span class="nv">command</span>:
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicEnable</span> <span class="mi">1</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicIpAddress</span> <span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicNetmask</span> <span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicGateway</span> <span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgNicUseDHCP</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgDNSServersFromDHCP</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgDNSServer1</span> <span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgDNSServer2</span> <span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>
+• <span class="nv">Using</span> <span class="nv">set</span> <span class="nv">command</span>:
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">Nic</span>.<span class="nv">Enable</span> <span class="mi">1</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">Address</span> <span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">Netmask</span> <span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">255</span>.<span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">Gateway</span> <span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">DHCPEnable</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">DNSFromDHCP</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">DNS1</span> <span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">IPv4</span>.<span class="nv">DNS2</span> <span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">iDRAC</span> <span class="nv">DNS</span> <span class="nv">Name</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">NIC</span>.<span class="nv">DNSRacName</span> <span class="nv">iDRACNAME</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">iDRAC</span> <span class="nv">domain</span> <span class="nv">name</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">NIC</span>.<span class="nv">DNSDomainName</span> <span class="nv">DOMAIN</span>.<span class="nv">NAME</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">iDRAC</span> <span class="nv">DNS</span> <span class="nv">Server</span>
+
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgDNSServer1</span> <span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>.<span class="nv">x</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgLanNetworking</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgDNSServer2</span> <span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>.<span class="nv">y</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">Front</span> <span class="nv">LCD</span> <span class="nv">to</span> <span class="nv">hostname</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">System</span>.<span class="nv">LCD</span>.<span class="nv">Configuration</span> <span class="mi">16</span>
+
+<span class="o">%</span> <span class="nv">Reset</span> <span class="nv">iDRAC</span> <span class="nv">to</span> <span class="nv">factory</span> <span class="nv">defaults</span>
+<span class="nv">racadm</span> <span class="nv">racresetcfg</span>
+
+<span class="o">%</span> <span class="nv">Reset</span><span class="o">/</span><span class="nv">Reboot</span> <span class="nv">iDRAC</span>
+
+<span class="nv">racadm</span> <span class="nv">racreset</span> <span class="nv">OPTIONS</span>
+
+<span class="nv">Options</span> : <span class="nv">soft</span>, <span class="nv">hard</span>, <span class="nv">cold</span>
+<span class="nv">or</span>
+<span class="nv">racadm</span> <span class="nv">serveraction</span> <span class="nv">powercycle</span>
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">Serial</span> <span class="nv">number</span> <span class="ss">(</span><span class="nv">service</span> <span class="nv">tag</span><span class="ss">)</span>
+<span class="nv">racadm</span> <span class="nv">getsvctag</span>
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">current</span> <span class="nv">system</span> <span class="nv">information</span>
+<span class="nv">racadm</span> <span class="nv">getsysinfo</span>
+
+<span class="o">%</span> <span class="nv">Configure</span> <span class="nv">one</span><span class="o">-</span><span class="nv">time</span><span class="o">-</span><span class="nv">boot</span> <span class="nv">to</span> <span class="nv">PXE</span>
+
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">OneTimeBoot</span>.<span class="nv">OneTimeBootMode</span> <span class="nv">OneTimeBootSeq</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">OneTimeBoot</span>.<span class="nv">OneTimeBootSeqDev</span> <span class="nv">NIC</span>.<span class="nv">Integrated</span>.<span class="mi">1</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">1</span>
+
+<span class="o">%</span> <span class="nv">Configure</span> <span class="nv">persistent</span> <span class="nv">Boot</span> <span class="nv">Device</span>
+
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgServerInfo</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgServerBootOnce</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgServerInfo</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">cfgServerFirstBootDevice</span> <span class="nv">HDD</span>
+
+<span class="o">%</span> <span class="nv">Check</span> <span class="nv">boot</span> <span class="nv">order</span> <span class="nv">list</span>
+<span class="nv">racadm</span> <span class="nv">get</span> <span class="nv">BIOS</span>.<span class="nv">BiosBootSettings</span>.<span class="nv">bootseq</span>
+
+<span class="o">%</span> <span class="nv">Disable</span> <span class="nv">HyperThreading</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">ProcSettings</span>.<span class="nv">LogicalProc</span> <span class="nv">Disabled</span>
+
+<span class="o">%</span> <span class="nv">Disable</span> <span class="nv">OS</span> <span class="nv">to</span> <span class="nv">iDRAC</span> <span class="nv">pass</span><span class="o">-</span><span class="nv">thru</span> <span class="k">for</span> <span class="nv">iDRAC</span> <span class="nv">service</span> <span class="nv">module</span> <span class="ss">(</span><span class="nv">automatically</span> <span class="nv">create</span> <span class="nv">a</span> <span class="nv">pseudo</span> <span class="nv">NIC</span> <span class="nv">in</span> <span class="nv">OS</span><span class="ss">)</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">OS</span><span class="o">-</span><span class="nv">BMC</span>.<span class="nv">AdminState</span> <span class="nv">Disabled</span>
+
+<span class="o">%</span> <span class="nv">Change</span> <span class="nv">SNMP</span> <span class="nv">public</span> <span class="nv">community</span> <span class="nv">string</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">iDRAC</span>.<span class="nv">SNMP</span>.<span class="nv">AgentCommunity</span> <span class="nv">NEW</span> <span class="nv">STRING</span>
+
+<span class="o">%</span> <span class="nv">Disable</span> <span class="nv">ASR</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgRacTuning</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgRacTuneAsrEnable</span> <span class="mi">0</span>
+
+<span class="o">%</span> <span class="nv">Configure</span> <span class="nv">Serial</span> <span class="nv">redirection</span>
+
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgSerial</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgSerialConsoleEnable</span> <span class="mi">1</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgSerial</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgSerialBaudRate</span> <span class="mi">115200</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgSerial</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgSerialCom2RedirEnable</span> <span class="mi">1</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgSerial</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgSerialTelnetEnable</span> <span class="mi">0</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgSerial</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgSerialSshEnable</span> <span class="mi">1</span>
+
+<span class="nv">to</span> <span class="nv">access</span> <span class="nv">console</span> <span class="nv">via</span> <span class="nv">ssh</span> <span class="nv">console</span> <span class="nv">com2</span>
+
+<span class="o">%</span> <span class="nv">Disable</span> <span class="nv">Serial</span> <span class="nv">On</span> <span class="nv">Lan</span>
+<span class="nv">racadm</span> <span class="nv">config</span> <span class="o">-</span><span class="nv">g</span> <span class="nv">cfgImpiSol</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">cfgIpmiSolEnable</span> <span class="mi">0</span>
+
+<span class="o">%</span> <span class="nv">Change</span> <span class="nv">Power</span> <span class="nv">Profile</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">SysProfileSettings</span> <span class="nv">PerfPerWattOptimizedOs</span>
+
+<span class="o">%</span> <span class="nv">Set</span> <span class="nv">AC</span> <span class="nv">Power</span> <span class="nv">Recovery</span>
+
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">SysSecurity</span>.<span class="nv">AcPwdRcvry</span> <span class="nv">Last</span>
+<span class="nv">racadm</span> <span class="nv">set</span> <span class="nv">BIOS</span>.<span class="nv">SysSecurity</span>.<span class="nv">AcPwdRcvryDelay</span> <span class="nv">Immediate</span>
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">RAID</span> <span class="nv">physical</span> <span class="nv">Disk</span> <span class="nv">information</span>
+
+<span class="nv">racadm</span> <span class="nv">raid</span> <span class="nv">get</span> <span class="nv">pdisks</span>
+<span class="nv">racadm</span> <span class="nv">raid</span> <span class="nv">get</span> <span class="nv">pdisks</span> <span class="o">-</span><span class="nv">o</span> <span class="ss">(</span><span class="nv">all</span> <span class="nv">information</span><span class="ss">)</span>
+<span class="nv">racadm</span> <span class="nv">raid</span> <span class="nv">get</span> <span class="nv">pdisks</span> <span class="o">-</span><span class="nv">o</span> <span class="o">-</span><span class="nv">p</span> <span class="nv">state</span>,<span class="nv">size</span> <span class="ss">(</span><span class="nv">specific</span> <span class="nv">information</span><span class="ss">)</span>
+
+<span class="o">%</span> <span class="nv">Get</span> <span class="nv">RAID</span> <span class="nv">Virtual</span> <span class="nv">Disk</span> <span class="nv">Information</span>
+<span class="nv">Racadm</span> <span class="nv">raid</span> <span class="nv">get</span> <span class="nv">vdisks</span>
+</pre></div>
+
+
+<h2 id="dns">dns解析慢</h2>
+<div class="codehilite"><pre><span></span><span class="err">添加超时</span>
+<span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="p">.</span><span class="n">conf</span>
+<span class="n">nameserver</span> <span class="mi">223</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">5</span>
+<span class="k">options</span> <span class="n">timeout</span><span class="p">:</span><span class="mi">1</span> <span class="n">attempts</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+
+
+<h2 id="centos">centos网卡休眠</h2>
+<div class="codehilite"><pre><span></span><span class="n">修改启动引导参数</span><span class="w"></span>
+<span class="n">vim</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">grub</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+<span class="n">quiet</span><span class="w">    </span><span class="n">后面添加</span><span class="w">    </span><span class="n">pcie_aspm</span><span class="o">=</span><span class="k">off</span><span class="w"></span>
+<span class="n">重启后</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">dmesg</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">grep</span><span class="w"> </span><span class="n">PCIe</span><span class="w"></span>
+<span class="o">[</span><span class="n">    0.000000</span><span class="o">]</span><span class="w"> </span><span class="n">PCIe</span><span class="w"> </span><span class="n">ASPM</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">disabled</span><span class="w"></span>
+
+<span class="n">关闭tuned</span><span class="w"></span>
+<span class="n">systemctl</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">tuned</span><span class="w"></span>
+<span class="n">systemctl</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">tuned</span><span class="w"></span>
+
+<span class="n">配置</span><span class="w"> </span><span class="n">xorg</span><span class="p">.</span><span class="n">conf</span><span class="err">，</span><span class="n">且不能出错</span><span class="err">，</span><span class="n">否则系统可能会起不来</span><span class="err">，</span><span class="n">所以配置时要格外小心</span><span class="err">。</span><span class="w"></span>
+<span class="n">vi</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">X11</span><span class="o">/</span><span class="n">xorg</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+<span class="w">       </span><span class="n">添加以下内容</span><span class="w"></span>
+<span class="k">Section</span><span class="w"> </span><span class="ss">&quot;ServerFlags&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="k">Option</span><span class="w"> </span><span class="ss">&quot;BlankTime&quot;</span><span class="w"> </span><span class="ss">&quot;0&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="k">Option</span><span class="w"> </span><span class="ss">&quot;StandbyTime&quot;</span><span class="w"> </span><span class="ss">&quot;0&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="k">Option</span><span class="w"> </span><span class="ss">&quot;SuspendTime&quot;</span><span class="w"> </span><span class="ss">&quot;0&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="k">Option</span><span class="w"> </span><span class="ss">&quot;OffTime&quot;</span><span class="w"> </span><span class="ss">&quot;0&quot;</span><span class="w"></span>
+<span class="n">EndSection</span><span class="w"></span>
+<span class="k">Section</span><span class="w"> </span><span class="ss">&quot;Monitor&quot;</span><span class="w"></span>
+<span class="w">       </span><span class="k">Option</span><span class="w"> </span><span class="ss">&quot;DPMS&quot;</span><span class="w"> </span><span class="ss">&quot;false&quot;</span><span class="w"></span>
+<span class="n">EndSection</span><span class="w"></span>
+<span class="n">重启CentOS系统即可</span><span class="err">！</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="kernel-panic">kernel panic自动重启</h2>
+<div class="codehilite"><pre><span></span><span class="err">编辑</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="p">.</span><span class="n">conf</span> <span class="err">文件，并定义遇到</span> <span class="n">kernel</span> <span class="n">panic</span> <span class="mi">20</span><span class="err">秒后自动重启</span> <span class="n">Linux</span><span class="err">：</span>
+<span class="o">#</span> <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="p">.</span><span class="n">conf</span>
+<span class="n">kernel</span><span class="p">.</span><span class="n">panic</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+
+
+<h2 id="srcrpm">安装src.rpm</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">rpm</span><span class="o">-</span><span class="n">build</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span>     <span class="c1">--xxx--.src.rpm</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">SPECS</span>
+<span class="n">rpmbuild</span> <span class="o">-</span><span class="n">bb</span> <span class="n">xxx</span><span class="p">.</span><span class="n">spec</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">RPMS</span><span class="o">/</span><span class="n">i386</span><span class="o">/</span>
+<span class="n">rpm</span> <span class="o">-</span><span class="n">ivh</span> <span class="n">xxxx</span><span class="p">.</span><span class="n">rpm</span>
+</pre></div>
+
+
+<h2 id="ab">ab测试</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span> <span class="nv">install</span> <span class="nv">gcc</span> <span class="nv">apr</span><span class="o">-</span><span class="nv">devel</span> <span class="nv">apr</span><span class="o">-</span><span class="nv">util</span><span class="o">-</span><span class="nv">devel</span> <span class="nv">pcre</span><span class="o">-</span><span class="nv">devel</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">apache</span><span class="o">/</span><span class="nv">httpd</span><span class="o">/</span><span class="nv">httpd</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">2</span>.<span class="mi">32</span>.<span class="nv">tar</span>.<span class="nv">gz</span>
+
+解压源码<span class="nv">http</span>，修改<span class="nv">support</span><span class="o">/</span><span class="nv">ab</span>.<span class="nv">c</span> <span class="mi">1395</span>行左右
+             } <span class="k">else</span> {
+<span class="mi">1395</span>                 <span class="o">//</span><span class="nv">apr_err</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">apr_socket_recv</span><span class="s2">&quot;</span>, <span class="nv">status</span><span class="ss">)</span><span class="c1">;</span>
+<span class="mi">1396</span>                 <span class="nv">bad</span><span class="o">++</span><span class="c1">;</span>
+<span class="mi">1397</span>                 <span class="nv">close_connection</span><span class="ss">(</span><span class="nv">c</span><span class="ss">)</span><span class="c1">;</span>
+<span class="mi">1398</span>                 <span class="k">return</span><span class="c1">;</span>
+<span class="mi">1399</span>             }
+<span class="mi">1400</span>         }
+
+.<span class="o">/</span><span class="nv">configure</span> <span class="o">--</span><span class="nv">prefix</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">apache</span>
+<span class="nv">make</span> 
+
+<span class="nv">make</span>完成后<span class="nv">ab</span>在边缘目录下：
+.<span class="o">/</span><span class="nv">support</span><span class="o">/</span><span class="nv">ab</span> （或者 <span class="nv">make</span> <span class="nv">install</span>）
+
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">apache</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">ab</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">10000</span> <span class="o">-</span><span class="nv">c</span> <span class="mi">1000</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">baidu</span>.<span class="nv">com</span><span class="o">/</span>
+
+
+
+<span class="nv">Server</span> <span class="nv">Software</span>:        <span class="nv">web</span>服务器软件及版本
+<span class="nv">Server</span> <span class="nv">Hostname</span>:        请求的地址
+<span class="nv">Server</span> <span class="nv">Port</span>:            请求的端口
+
+<span class="nv">Document</span> <span class="nv">Path</span>:          请求的页面路径
+<span class="nv">Document</span> <span class="nv">Length</span>:        页面大小
+
+<span class="nv">Concurrency</span> <span class="nv">Level</span>:      并发数
+<span class="nv">Time</span> <span class="nv">taken</span> <span class="k">for</span> <span class="nv">tests</span>:   测试总共花费的时间
+<span class="nv">Complete</span> <span class="nv">requests</span>:      完成的请求数
+<span class="nv">Failed</span> <span class="nv">requests</span>:        失败的请求数
+<span class="nv">Write</span> <span class="nv">errors</span>:           写入错误
+<span class="nv">Total</span> <span class="nv">transferred</span>:      总共传输字节数，包含<span class="nv">http</span>的头信息等
+<span class="nv">HTML</span> <span class="nv">transferred</span>:       <span class="nv">html</span>字节数，实际的页面传递字节数
+<span class="nv">Requests</span> <span class="nv">per</span> <span class="nv">second</span>:    每秒处理的请求数，服务器的吞吐量（重要）
+<span class="nv">Time</span> <span class="nv">per</span> <span class="nv">request</span>:       平均数，用户平均请求等待时间
+<span class="nv">Time</span> <span class="nv">per</span> <span class="nv">request</span>:       服务器平均处理时间
+<span class="nv">Transfer</span> <span class="nv">rate</span>:          平均传输速率（每秒收到的速率）
+
+测试时出现的<span class="nv">Failed</span> <span class="nv">requests</span>原因分析：
+<span class="nv">Failed</span> <span class="nv">requests</span>: <span class="mi">2303</span>
+<span class="ss">(</span><span class="k">Connect</span>: <span class="mi">0</span>, <span class="nv">Length</span>: <span class="mi">2303</span>, <span class="nv">Exceptions</span>: <span class="mi">0</span><span class="ss">)</span>
+只要出现<span class="nv">Failed</span> <span class="nv">requests</span>就会多一行数据来统计失败的原因，分别有<span class="k">Connect</span>、<span class="nv">Length</span>、<span class="nv">Exceptions</span>。
+<span class="k">Connect</span> 无法送出要求、目标主机连接失败、要求的过程中被中断。
+<span class="nv">Length</span> 响应的内容长度不一致 <span class="ss">(</span> 以 <span class="nv">Content</span><span class="o">-</span><span class="nv">Length</span> 头值为判断依据 <span class="ss">)</span>。
+<span class="nv">Exception</span> 发生无法预期的错误。
+</pre></div>
+
+
+<h2 id="bond">网卡bond</h2>
+<div class="codehilite"><pre><span></span><span class="n">cat</span> <span class="n">ifcfg</span><span class="o">-</span><span class="n">eth0</span> 
+<span class="n">DEVICE</span><span class="o">=</span><span class="ss">&quot;eth0&quot;</span>
+<span class="n">BOOTPROTO</span><span class="o">=</span><span class="k">none</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span>
+<span class="k">TYPE</span><span class="o">=</span><span class="n">Ethernet</span>
+<span class="n">MASTER</span><span class="o">=</span><span class="n">bond1</span>
+<span class="n">SLAVE</span><span class="o">=</span><span class="n">yes</span>
+
+<span class="n">cat</span> <span class="n">ifcfg</span><span class="o">-</span><span class="n">eth1</span>
+<span class="n">DEVICE</span><span class="o">=</span><span class="ss">&quot;eth1&quot;</span>
+<span class="n">BOOTPROTO</span><span class="o">=</span><span class="k">none</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="ss">&quot;yes&quot;</span>
+<span class="k">TYPE</span><span class="o">=</span><span class="n">Ethernet</span>
+<span class="n">MASTER</span><span class="o">=</span><span class="n">bond1</span>
+<span class="n">SLAVE</span><span class="o">=</span><span class="n">yes</span>
+
+<span class="n">cat</span> <span class="n">ifcfg</span><span class="o">-</span><span class="n">bond1</span> 
+<span class="n">DEVICE</span><span class="o">=</span><span class="n">bond1</span>
+<span class="n">NAME</span><span class="o">=</span><span class="n">bond1</span>
+<span class="n">BOOTPROTO</span><span class="o">=</span><span class="k">none</span>
+<span class="n">ONBOOT</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">IPADDR</span><span class="o">=</span><span class="mi">10</span><span class="p">.</span><span class="mi">21</span><span class="p">.</span><span class="mi">20</span><span class="p">.</span><span class="mi">210</span>
+<span class="n">NETMASK</span><span class="o">=</span><span class="mi">255</span><span class="p">.</span><span class="mi">255</span><span class="p">.</span><span class="mi">255</span><span class="p">.</span><span class="mi">0</span>
+<span class="n">GATEWAY</span><span class="o">=</span><span class="mi">10</span><span class="p">.</span><span class="mi">21</span><span class="p">.</span><span class="mi">20</span><span class="p">.</span><span class="mi">1</span>
+<span class="k">TYPE</span><span class="o">=</span><span class="n">Bond</span>
+<span class="n">BONDING_MASTER</span><span class="o">=</span><span class="n">yes</span>
+<span class="n">BONDING_OPTS</span><span class="o">=</span><span class="ss">&quot;mode=1 miimon=100&quot;</span>
+
+<span class="err">删除</span><span class="n">bond</span><span class="err">网卡：</span>
+<span class="mi">1</span><span class="err">、</span><span class="o">#</span> <span class="n">ls</span> <span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="k">class</span><span class="o">/</span><span class="n">net</span>
+<span class="n">bond0</span>  <span class="n">bond1</span>  <span class="n">bonding_masters</span>  <span class="n">br0</span>  <span class="n">eth0</span>  <span class="n">eth1</span>  <span class="n">lo</span>
+<span class="err">注意：直接删除</span><span class="n">bond0</span><span class="err">目录会提示权限问题</span>
+<span class="mi">2</span><span class="err">、</span><span class="o">#</span> <span class="n">cat</span> <span class="n">bonding_masters</span>
+<span class="n">bond0</span>  <span class="n">bond1</span>
+<span class="err">注意：直接编辑此文件也会提示权限问题</span>
+<span class="err">方法如下：</span>
+<span class="o">#</span> <span class="n">echo</span> <span class="o">-</span><span class="n">bond0</span> <span class="o">&gt;</span> <span class="n">bonding_masters</span>
+<span class="err">备注：</span><span class="n">echo</span><span class="err">后的</span> <span class="o">-</span> <span class="err">号表示删除设备，</span> <span class="o">+</span> <span class="err">号表示添加设备</span>
+</pre></div>
+
+
+<h2 id="snoopy">snoopy命令记录</h2>
+<div class="codehilite"><pre><span></span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">a2o</span><span class="o">/</span><span class="n">snoopy</span><span class="w"></span>
+
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">gcc</span><span class="w"> </span><span class="n">socat</span><span class="w"></span>
+
+<span class="n">wget</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">source</span><span class="p">.</span><span class="n">a2o</span><span class="p">.</span><span class="n">si</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">snoopy</span><span class="o">/</span><span class="n">snoopy</span><span class="o">-</span><span class="mf">2.4.6</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span><span class="w"></span>
+
+<span class="n">tar</span><span class="w"> </span><span class="o">-</span><span class="n">zxf</span><span class="w"> </span><span class="n">snoopy</span><span class="o">-</span><span class="mf">2.4.6</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span><span class="w"></span>
+
+<span class="n">cd</span><span class="w"> </span><span class="n">snoopy</span><span class="o">-</span><span class="mf">2.4.6</span><span class="w"></span>
+
+<span class="p">.</span><span class="o">/</span><span class="n">configure</span><span class="w"></span>
+
+<span class="n">make</span><span class="w"></span>
+
+<span class="n">make</span><span class="w"> </span><span class="n">install</span><span class="w"></span>
+
+<span class="n">make</span><span class="w"> </span><span class="n">enable</span><span class="w"></span>
+
+<span class="c1">--</span>
+
+<span class="n">vim</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">snoopy</span><span class="p">.</span><span class="n">ini</span><span class="p">(</span><span class="n">#不是注释</span><span class="p">)</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">snoopy</span><span class="o">]</span><span class="w"></span>
+
+<span class="n">message_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;%{datetime} %{hostname} %{pid} %{eusername} %{tty_username} %{tty} %{cwd} %{filename} # %{cmdline}&quot;</span><span class="w"></span>
+
+<span class="n">filter_chain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;exclude_spawns_of:cron&quot;</span><span class="w"></span>
+
+<span class="k">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="p">.</span><span class="n">snoopy</span><span class="p">.</span><span class="nf">log</span><span class="w"></span>
+
+<span class="c1">--</span>
+
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">snoopy</span><span class="o">-</span><span class="n">disable</span><span class="w">  </span><span class="n">关闭snoopy</span><span class="w"></span>
+
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">snoopy</span><span class="o">-</span><span class="n">enable</span><span class="w">   </span><span class="n">开启snoopy</span><span class="w"></span>
+
+<span class="n">重新登陆后即可记录操作日志</span><span class="w"></span>
+
+<span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="p">.</span><span class="n">snoopy</span><span class="p">.</span><span class="nf">log</span><span class="w">  </span><span class="n">进行logstash</span><span class="w"> </span><span class="n">grok匹配</span><span class="w"></span>
+
+<span class="n">SNOOPYLOG</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">TIMESTAMP_ISO8601</span><span class="p">:</span><span class="nc">datetime</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">USERNAME</span><span class="p">:</span><span class="n">hostname</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nc">INT</span><span class="err">:</span><span class="n">pid</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="k">USER</span><span class="err">:</span><span class="n">eusername</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="k">USER</span><span class="err">:</span><span class="n">tty_username</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">NOTSPACE</span><span class="p">:</span><span class="n">tty</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">UNIXPATH</span><span class="p">:</span><span class="n">pwd</span><span class="err">}</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">UNIXPATH</span><span class="p">:</span><span class="n">cmd_name</span><span class="err">}</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="nl">GREEDYDATA</span><span class="p">:</span><span class="n">cmdline</span><span class="err">}</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="_3">连接跟踪表</h2>
+<div class="codehilite"><pre><span></span><span class="n">LVS</span> <span class="err">或</span> <span class="k">Cache</span><span class="err">在请求频繁的情况下，可能会导致系统丢包，不能正常提供服务。并且在</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">messages</span><span class="err">会有如下报警</span>
+
+<span class="n">nf_conntrack</span><span class="p">:</span> <span class="k">table</span> <span class="k">full</span><span class="p">,</span> <span class="n">dropping</span> <span class="n">packet</span><span class="p">.</span>
+
+<span class="err">解决方法：</span> <span class="err">关闭防火墙</span>
+
+<span class="o">#</span> <span class="n">chkconfig</span> <span class="n">iptables</span> <span class="k">off</span>
+
+<span class="o">#</span> <span class="n">chkconfig</span> <span class="n">ip6tables</span> <span class="k">off</span>
+
+<span class="o">#</span> <span class="n">service</span> <span class="n">iptables</span> <span class="n">stop</span>
+
+<span class="o">#</span> <span class="n">service</span> <span class="n">ip6tables</span> <span class="n">stop</span>
+
+<span class="err">在防火墙关闭状态下，不要通过</span><span class="n">iptables</span><span class="err">指令（比如</span> <span class="n">iptables</span> <span class="o">-</span><span class="n">nL</span><span class="err">）来查看当前状态！因为这样会导致防火墙被启动，而且规则为空。虽然不会有任何拦截效果，但所有连接状态都会被记录，浪费资源且影响性能并可能导致防火墙主动丢包！</span>
+
+<span class="err">移除相关模块</span>
+
+<span class="o">#</span> <span class="n">lsmod</span> <span class="o">|</span><span class="n">grep</span> <span class="n">nf</span>
+
+
+<span class="n">nf_nat</span>                 <span class="mi">22759</span>  <span class="mi">0</span> 
+
+<span class="n">nf_conntrack_ipv4</span>       <span class="mi">9506</span>  <span class="mi">2</span> <span class="n">nf_nat</span>
+
+<span class="n">nf_conntrack</span>           <span class="mi">79645</span>  <span class="mi">2</span> <span class="n">nf_nat</span><span class="p">,</span><span class="n">nf_conntrack_ipv4</span>
+
+<span class="n">nf_defrag_ipv4</span>          <span class="mi">1483</span>  <span class="mi">1</span> <span class="n">nf_conntrack_ipv4</span>
+
+
+<span class="o">#</span> <span class="n">rmmod</span> <span class="n">nf_nat</span>
+
+<span class="o">#</span> <span class="n">rmmod</span> <span class="n">nf_conntrack_ipv4</span>
+
+<span class="o">#</span> <span class="n">rmmod</span> <span class="n">nf_conntrack</span>
+
+<span class="err">之后重启系统</span>
+</pre></div>
+
+
+<h2 id="centos_1">centos系统升级</h2>
+<div class="codehilite"><pre><span></span><span class="n">Centos6</span><span class="o">.</span><span class="mi">6</span><span class="err">升级到</span><span class="n">Centos7</span><span class="o">.</span><span class="mi">2</span><span class="err">：</span> <span class="err">新版的</span><span class="mf">7.4</span><span class="err">不支持直接升级</span>
+<span class="err">如想使用最新的</span><span class="mf">7.</span><span class="n">x</span><span class="err">系统，可以在升级</span><span class="mf">7.2</span><span class="err">完成后使用</span><span class="n">update</span><span class="err">升级</span>
+
+<span class="err">从</span><span class="n">Centos6</span><span class="o">.</span><span class="mi">9</span><span class="err">更新到</span><span class="mf">7.2</span><span class="err">会出现一些问题</span>
+<span class="err">例如</span><span class="n">ssh</span> <span class="n">yum</span> <span class="err">无法正常使用所以，再重启之前，先做好准备</span><span class="p">,</span><span class="err">升级完成后清理掉</span>
+
+<span class="n">vi</span> <span class="n">start</span><span class="o">.</span><span class="n">sh</span> <span class="c1">#在root目录创建start.sh文件</span>
+<span class="c1">#!/bin/bash</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libsasl2</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libsasl2</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">2</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libpcre</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib64</span><span class="o">/</span><span class="n">libpcre</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">0</span>
+<span class="n">service</span> <span class="n">sshd</span> <span class="n">restart</span>
+
+<span class="c1">#执行以下命令</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">start</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">local</span>
+<span class="n">cp</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">local</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">local</span><span class="o">.</span><span class="n">bak</span> <span class="c1">#创建备份</span>
+<span class="n">echo</span> <span class="s1">&#39;bash /root/start.sh&#39;</span> <span class="o">&gt;&gt;/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">rc</span><span class="o">.</span><span class="n">local</span> <span class="c1">#添加脚本为开机自启动</span>
+
+
+<span class="n">step</span> <span class="mi">1</span><span class="err">：</span>
+
+<span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">upgrade</span><span class="o">.</span><span class="n">repo</span>
+<span class="p">[</span><span class="n">upgrade</span><span class="p">]</span>
+<span class="n">name</span><span class="o">=</span><span class="n">upgrade</span>
+<span class="n">baseurl</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dev</span><span class="o">.</span><span class="n">centos</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">centos</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">upg</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span>
+<span class="n">enable</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">gpgcheck</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="n">step</span> <span class="mi">2</span><span class="err">：</span>
+
+<span class="n">yum</span> <span class="n">erase</span> <span class="n">openscap</span>
+
+<span class="n">yum</span> <span class="n">install</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dev</span><span class="o">.</span><span class="n">centos</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">centos</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">upg</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">Packages</span><span class="o">/</span><span class="n">openscap</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">8</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mf">1.</span><span class="n">el6</span><span class="o">.</span><span class="n">centos</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>
+
+<span class="n">yum</span> <span class="n">install</span> <span class="n">openscap</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">8</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># yum install preupgrade-assistant-contents redhat-upgrade-tool preupgrade-assistant</span>
+
+<span class="n">step</span> <span class="mi">3</span><span class="p">:</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># preupg</span>
+
+<span class="n">step</span> <span class="mi">4</span><span class="err">：</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># rpm --import http://vault.centos.org/centos/7.2.1511/os/x86_64/RPM-GPG-KEY-CentOS-7</span>
+
+<span class="p">[</span><span class="n">root</span><span class="nd">@localhost</span> <span class="o">~</span><span class="p">]</span><span class="c1"># redhat-upgrade-tool --network 7 --instrepo http://vault.centos.org/centos/7.2.1511/os/x86_64/</span>
+
+<span class="p">(</span><span class="mi">265</span><span class="o">/</span><span class="mi">266</span><span class="p">):</span> <span class="n">zlib</span><span class="o">-</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="mf">13.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>                                                                       <span class="o">|</span>  <span class="mi">89</span> <span class="n">kB</span>     <span class="mo">00</span><span class="p">:</span><span class="mo">00</span>
+
+<span class="p">(</span><span class="mi">266</span><span class="o">/</span><span class="mi">266</span><span class="p">):</span> <span class="n">zlib</span><span class="o">-</span><span class="n">devel</span><span class="o">-</span><span class="mf">1.2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="mf">13.</span><span class="n">el7</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>                                                             <span class="o">|</span>  <span class="mi">49</span> <span class="n">kB</span>     <span class="mo">00</span><span class="p">:</span><span class="mo">00</span>
+
+<span class="n">testing</span> <span class="n">upgrade</span> <span class="n">transaction</span> <span class="n">rpm</span> <span class="n">transaction</span> <span class="mi">100</span><span class="o">%</span>
+
+<span class="p">[</span><span class="o">===========================================</span><span class="p">]</span> <span class="n">rpm</span> <span class="n">install</span> <span class="mi">100</span><span class="o">%</span>
+
+<span class="p">[</span><span class="o">===========================================</span><span class="p">]</span> <span class="n">setting</span> <span class="n">up</span> <span class="n">system</span> <span class="k">for</span> <span class="n">upgrade</span> <span class="n">Finished</span><span class="o">.</span> <span class="n">Reboot</span> <span class="n">to</span> <span class="n">start</span> <span class="n">upgrade</span><span class="o">.</span>
+
+<span class="err">升级完成后卸载</span><span class="n">el6</span><span class="err">的</span><span class="n">rpm</span><span class="err">包</span>
+</pre></div>
+
+
+<h2 id="web">web管理系统</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span>、<span class="nv">webmin</span>
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">webmin</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">rpm</span>.<span class="nv">html</span>
+
+<span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">prdownloads</span>.<span class="nv">sourceforge</span>.<span class="nv">net</span><span class="o">/</span><span class="nv">webadmin</span><span class="o">/</span><span class="nv">webmin</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">881</span><span class="o">-</span><span class="mi">1</span>.<span class="nv">noarch</span>.<span class="nv">rpm</span>
+<span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">perl</span> <span class="nv">perl</span><span class="o">-</span><span class="nv">Net</span><span class="o">-</span><span class="nv">SSLeay</span> <span class="nv">openssl</span> <span class="nv">perl</span><span class="o">-</span><span class="nv">IO</span><span class="o">-</span><span class="nv">Tty</span> <span class="nv">perl</span><span class="o">-</span><span class="nv">Encode</span><span class="o">-</span><span class="nv">Detect</span>
+<span class="nv">rpm</span> <span class="o">-</span><span class="nv">U</span> <span class="nv">webmin</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">881</span><span class="o">-</span><span class="mi">1</span>.<span class="nv">noarch</span>.<span class="nv">rpm</span>
+
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">ip</span>:<span class="mi">10000</span><span class="o">/</span>  登陆账号和系统一致
+
+
+<span class="mi">2</span>、<span class="nv">redhat</span>的一个项目
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">cockpit</span><span class="o">-</span><span class="nv">project</span>.<span class="nv">org</span>
+
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">cockpit</span><span class="o">-</span><span class="nv">ws</span> <span class="nv">cockpit</span><span class="o">-</span><span class="nv">system</span> <span class="nv">cockpit</span><span class="o">-</span><span class="nv">bridge</span>
+# <span class="nv">cockpit</span><span class="o">-</span><span class="nv">docker</span> <span class="nv">docker</span>管理，需要安装<span class="nv">docker</span>
+<span class="nv">systemctl</span> <span class="nv">restart</span> <span class="nv">cockpit</span>
+<span class="nv">systemctl</span> <span class="nv">enable</span> <span class="nv">cockpit</span>
+
+
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">cockpit</span><span class="o">/</span><span class="nv">cockpit</span>.<span class="nv">conf</span>  新增文件
+[<span class="nv">Log</span>]
+<span class="nv">Fatal</span> <span class="o">=</span> <span class="nv">criticals</span>
+
+[<span class="nv">WebService</span>]
+<span class="nv">AllowUnencrypted</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">UrlRoot</span><span class="o">=/</span><span class="nv">co</span><span class="o">/</span>
+
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">systemd</span><span class="o">/</span><span class="nv">system</span><span class="o">/</span><span class="nv">cockpit</span>.<span class="nv">socket</span>
+<span class="nv">ListenStream</span><span class="o">=</span><span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>:<span class="mi">9090</span> 监听本地
+
+<span class="nv">systemctl</span> <span class="nv">daemon</span><span class="o">-</span><span class="nv">reload</span>
+<span class="nv">systemctl</span> <span class="nv">restart</span> <span class="nv">cockpit</span>.<span class="nv">socket</span>
+
+
+<span class="nv">nginx</span>代理
+
+<span class="nv">map</span> $<span class="nv">http_upgrade</span> <span class="mh">$c</span><span class="nv">onnection_upgrade</span> {
+<span class="nv">default</span> <span class="nv">upgrade</span><span class="c1">;</span>
+<span class="s1">&#39;&#39;</span> <span class="nv">close</span><span class="c1">;</span>
+}
+
+<span class="nv">upstream</span> <span class="nv">websocket</span> {
+<span class="nv">server</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>:<span class="mi">9090</span><span class="c1">;</span>
+}
+
+<span class="nv">server</span> {
+       <span class="nv">listen</span>         <span class="mi">80</span><span class="c1">;</span>
+       <span class="nv">server_name</span>    <span class="nv">cockpit</span>.<span class="nv">domain</span>.<span class="nv">tld</span> <span class="nv">www</span>.<span class="nv">cockpit</span>.<span class="nv">domain</span>.<span class="nv">tld</span><span class="c1">;</span>
+       <span class="k">return</span>         <span class="mi">301</span> <span class="nv">https</span>:<span class="o">//</span>$<span class="nv">server_name</span>$<span class="nv">request_uri</span><span class="c1">;</span>
+}
+
+<span class="nv">server</span> {
+    <span class="nv">listen</span> <span class="mi">443</span><span class="c1">;</span>
+    <span class="nv">server_name</span> <span class="nv">www</span>.<span class="nv">cockpit</span>.<span class="nv">domain</span>.<span class="nv">tld</span> <span class="nv">cockpit</span>.<span class="nv">domain</span>.<span class="nv">tld</span><span class="c1">;</span>
+
+        <span class="nv">ssl</span> <span class="nv">on</span><span class="c1">;</span>
+        <span class="nv">ssl_certificate</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">certificate</span><span class="c1">;</span>
+        <span class="nv">ssl_certificate_key</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">key</span><span class="c1">;</span>
+
+    <span class="nv">location</span> <span class="o">/</span><span class="nv">co</span><span class="o">/</span> {  # 对应<span class="nv">cockpit</span>.<span class="nv">conf</span>的<span class="nv">uri</span>
+        <span class="nv">proxy_pass</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">websocket</span><span class="c1">;</span>
+        <span class="nv">proxy_http_version</span> <span class="mi">1</span>.<span class="mi">1</span><span class="c1">;</span>
+        <span class="nv">proxy_buffering</span> <span class="nv">off</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">X</span><span class="o">-</span><span class="nv">Real</span><span class="o">-</span><span class="nv">IP</span>  $<span class="nv">remote_addr</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">Host</span> $<span class="nv">host</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">X</span><span class="o">-</span><span class="nv">Forwarded</span><span class="o">-</span><span class="k">For</span> $<span class="nv">remote_addr</span><span class="c1">;</span>
+        # <span class="nv">needed</span> <span class="k">for</span> <span class="nv">websocket</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">Upgrade</span> $<span class="nv">http_upgrade</span><span class="c1">;</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">Connection</span> <span class="mh">$c</span><span class="nv">onnection_upgrade</span><span class="c1">;</span>
+        # <span class="nv">change</span> <span class="nv">scheme</span> <span class="nv">of</span> <span class="s2">&quot;</span><span class="s">Origin</span><span class="s2">&quot;</span> <span class="nv">to</span> <span class="nv">http</span>
+        <span class="nv">proxy_set_header</span> <span class="nv">Origin</span> <span class="nv">http</span>:<span class="o">//</span>$<span class="nv">host</span><span class="c1">;</span>
+
+        # <span class="nv">Pass</span> <span class="nv">ETag</span> <span class="nv">header</span> <span class="nv">from</span> <span class="nv">cockpit</span> <span class="nv">to</span> <span class="nv">clients</span>.
+        # <span class="nv">See</span>: <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">cockpit</span><span class="o">-</span><span class="nv">project</span><span class="o">/</span><span class="nv">cockpit</span><span class="o">/</span><span class="nv">issues</span><span class="o">/</span><span class="mi">5239</span>
+        # <span class="nv">gzip</span> <span class="nv">off</span><span class="c1">;</span>
+    }
+}
+</pre></div>
+
+
+<h2 id="crontab">crontab注意点</h2>
+<div class="codehilite"><pre><span></span><span class="err">今天遇见一个问题，</span><span class="n">crontab</span><span class="err">的定时任务不能自动执行，但是手动执行脚本一直能成功。查到最后，发现是脚本里用了系统的环境变量。下面开始解释：</span>
+<span class="mi">1</span><span class="p">.</span><span class="n">crontab</span><span class="err">与环境变量</span>
+<span class="err">不要假定</span><span class="n">cron</span><span class="err">知道所需要的特殊环境，它其实并不知道。所以你要保证在</span><span class="n">shelll</span><span class="err">脚本中提供所有必要的路径和环境变量，除了一些自动</span>
+<span class="err">设置的全局变量。所以注意如下</span><span class="mi">3</span><span class="err">点：</span>
+<span class="mi">1</span><span class="err">）脚本中涉及文件路径时写全局路径；</span>
+<span class="mi">2</span><span class="err">）脚本执行要用到</span><span class="n">java</span><span class="err">或其他环境变量时，通过</span><span class="k">source</span><span class="err">命令引入环境变量，如：</span>
+<span class="n">cat</span> <span class="n">start_cbp</span><span class="p">.</span><span class="n">sh</span>
+<span class="o">#!/</span><span class="n">bin</span><span class="o">/</span><span class="n">sh</span>
+<span class="k">source</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span>
+<span class="n">export</span> <span class="n">RUN_CONF</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">d139</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">platform</span><span class="o">/</span><span class="n">cbp</span><span class="o">/</span><span class="n">cbp_jboss</span><span class="p">.</span><span class="n">conf</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">run</span><span class="p">.</span><span class="n">sh</span> <span class="o">-</span><span class="k">c</span> <span class="n">mev</span> <span class="o">&amp;</span>
+<span class="mi">3</span><span class="err">）当手动执行脚本</span><span class="n">OK</span><span class="err">，但是</span><span class="n">crontab</span><span class="err">死活不执行时。这时必须大胆怀疑是环境变量惹的祸，并可以尝试在</span><span class="n">crontab</span><span class="err">中直接引入环境变量解决问题。如：</span>
+<span class="mi">0</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="p">.</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">profile</span><span class="p">;</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">sh</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">audit_no_count</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">restart_audit</span><span class="p">.</span><span class="n">sh</span>
+<span class="mi">2</span><span class="p">.</span><span class="err">其他应该注意的问题</span>
+<span class="mi">1</span><span class="err">）新创建的</span><span class="n">cron</span> <span class="n">job</span><span class="err">，不会马上执行，至少要过</span><span class="mi">2</span><span class="err">分钟才执行。如果重启</span><span class="n">cron</span><span class="err">则马上执行。</span>
+<span class="mi">2</span><span class="err">）每条</span> <span class="n">JOB</span> <span class="err">执行完毕之后，系统会自动将输出发送邮件给当前系统用户。日积月累，非常的多，甚至会撑爆整个系统。所以每条</span> <span class="n">JOB</span> <span class="err">命令</span>
+<span class="err">后面进行重定向处理是非常必要的：</span> <span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="k">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="err">。前提是对</span> <span class="n">Job</span> <span class="err">中的命令需要正常输出已经作了一定的处理</span><span class="p">,</span> <span class="err">比如追加到某个特定日志文件。</span>
+<span class="mi">3</span><span class="err">）当</span><span class="n">crontab</span><span class="err">突然失效时，可以尝试</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">crond</span> <span class="k">restart</span><span class="err">解决问题。或者查看日志看某个</span><span class="n">job</span><span class="err">有没有执行</span><span class="o">/</span><span class="err">报错</span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">cron</span><span class="err">。</span>
+<span class="mi">4</span><span class="err">）千万别乱运行</span><span class="n">crontab</span> <span class="o">-</span><span class="n">r</span><span class="err">。它从</span><span class="n">Crontab</span><span class="err">目录（</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">spool</span><span class="o">/</span><span class="n">cron</span><span class="err">）中删除用户的</span><span class="n">Crontab</span><span class="err">文件。删除了该用户的所有</span><span class="n">crontab</span><span class="err">都没了。</span>
+<span class="mi">5</span><span class="err">）在</span><span class="n">crontab</span><span class="err">中</span><span class="o">%</span><span class="err">是有特殊含义的，表示换行的意思。如果要用的话必须进行转义</span><span class="o">%</span><span class="err">，如经常用的</span><span class="nb">date</span> <span class="err">‘</span><span class="o">+%</span><span class="n">Y</span><span class="o">%</span><span class="n">m</span><span class="o">%</span><span class="n">d</span><span class="err">’在</span><span class="n">crontab</span><span class="err">里是不会执行的，</span>
+<span class="err">应该换成</span><span class="nb">date</span> <span class="err">‘</span><span class="o">+%</span><span class="n">Y</span><span class="o">%</span><span class="n">m</span><span class="o">%</span><span class="n">d</span><span class="err">’</span><span class="o">`</span><span class="err">。</span>
+
+<span class="mi">3</span><span class="p">.</span><span class="n">crontab</span><span class="err">中的输出配置</span>
+<span class="n">crontab</span><span class="err">中经常配置运行脚本输出为：</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="k">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">，来避免</span><span class="n">crontab</span><span class="err">运行中有内容输出。</span>
+<span class="n">shell</span><span class="err">命令的结果可以通过‘</span><span class="o">&gt;</span> <span class="err">’的形式来定义输出</span>
+<span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="k">null</span> <span class="err">代表空设备文件　　</span>
+<span class="o">&gt;</span> <span class="err">代表重定向到哪里，例如：</span><span class="n">echo</span> <span class="ss">&quot;123&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="mi">123</span><span class="p">.</span><span class="n">txt</span><span class="err">　</span>
+<span class="mi">1</span> <span class="err">表示</span><span class="k">stdout</span><span class="err">标准输出，系统默认值是</span><span class="mi">1</span><span class="err">，所以</span><span class="ss">&quot;&gt;/dev/null&quot;</span><span class="err">等同于</span><span class="ss">&quot;1&gt;/dev/null&quot;</span>
+<span class="mi">2</span> <span class="err">表示</span><span class="n">stderr</span><span class="err">标准错误</span>
+<span class="err">　</span> <span class="o">&amp;</span> <span class="err">表示等同于的意思，</span><span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="err">，表示</span><span class="mi">2</span><span class="err">的输出重定向等同于</span><span class="mi">1</span><span class="err">　</span>
+<span class="err">那么重定向输出语句的含义：</span>
+<span class="mi">1</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="k">null</span> <span class="err">首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，不显示任何信息。</span>
+<span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="err">表示标准错误输出重定向等同于标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</span>
+</pre></div>
+
+
+<h2 id="centos_2">centos改网卡名</h2>
+<div class="codehilite"><pre><span></span><span class="n">centos6</span><span class="w"></span>
+
+<span class="n">新增文件</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">modprobe</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span>
+<span class="k">alias</span><span class="w"> </span><span class="n">em2</span><span class="w"> </span><span class="n">bond0</span><span class="w"></span>
+
+<span class="n">mv</span><span class="w"> </span><span class="n">ifcfg</span><span class="o">-</span><span class="n">em2</span><span class="w"> </span><span class="n">ifcfg</span><span class="o">-</span><span class="n">bond0</span><span class="w">  </span><span class="n">还有配置里面的名字</span><span class="err">，</span><span class="n">之后重启</span><span class="w"></span>
+
+
+<span class="n">centos7</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@localhost ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">vi</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">udev</span><span class="o">/</span><span class="n">rules</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="mi">60</span><span class="o">-</span><span class="n">net</span><span class="p">.</span><span class="n">rules</span><span class="w">  </span><span class="n">需要重启</span><span class="w"></span>
+<span class="n">#将第一行注释掉</span><span class="w"></span>
+<span class="n">#ACTION</span><span class="o">==</span><span class="ss">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSYSTEM</span><span class="o">==</span><span class="ss">&quot;net&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DRIVERS</span><span class="o">==</span><span class="ss">&quot;?*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ATTR</span><span class="err">{</span><span class="n">type</span><span class="err">}</span><span class="o">==</span><span class="ss">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">PROGRAM</span><span class="o">=</span><span class="ss">&quot;/lib/udev/rename_device&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">RESULT</span><span class="o">==</span><span class="ss">&quot;?*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="o">=</span><span class="ss">&quot;$result&quot;</span><span class="w"></span>
+<span class="k">ACTION</span><span class="o">==</span><span class="ss">&quot;add&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SUBSYSTEM</span><span class="o">==</span><span class="ss">&quot;net&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">DRIVERS</span><span class="o">==</span><span class="ss">&quot;?*&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ATTR</span><span class="err">{</span><span class="n">type</span><span class="err">}</span><span class="o">==</span><span class="ss">&quot;1&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ATTR</span><span class="err">{</span><span class="n">address</span><span class="err">}</span><span class="o">==</span><span class="ss">&quot;d8:9e:*:10:*11&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="o">=</span><span class="ss">&quot;eth0&quot;</span><span class="w"></span>
+
+<span class="n">ip</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="n">eth0</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">eth1</span><span class="w"> </span><span class="n">临时</span><span class="err">，</span><span class="n">重启失效</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="service-tag">查询service tag</h2>
+<div class="codehilite"><pre><span></span><span class="n">linux</span><span class="o">:</span> <span class="n">dmidecode</span> <span class="o">-</span><span class="n">s</span> <span class="n">system</span><span class="o">-</span><span class="n">serial</span><span class="o">-</span><span class="n">number</span>
+
+
+<span class="n">windows</span><span class="o">:</span>
+<span class="err">打开</span><span class="n">cmd</span><span class="err">界面，输入：</span><span class="n">wmic</span> 
+<span class="err">再输入：</span><span class="n">bios</span>  <span class="kd">get</span>  <span class="n">serialnumber</span><span class="err">即可看到</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../command/" title="command" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                command
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../linux-soft/" title="linux-soft" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                linux-soft
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

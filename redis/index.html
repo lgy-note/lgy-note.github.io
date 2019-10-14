@@ -1,0 +1,2092 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>redis - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#redis-dump" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                redis
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link md-tabs__link--active">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        redis
+      </label>
+    
+    <a href="./" title="redis" class="md-nav__link md-nav__link--active">
+      redis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-dump" class="md-nav__link">
+    redis-dump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codis" class="md-nav__link">
+    codis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twemproxy" class="md-nav__link">
+    twemproxy代理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentinel" class="md-nav__link">
+    sentinel哨兵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    redis命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-cluster" class="md-nav__link">
+    redis cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-monitor" class="md-nav__link">
+    redis-monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdbaof" class="md-nav__link">
+    RDB和AOF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis_1" class="md-nav__link">
+    Redis的复制及集群搭建
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redis-dump" class="md-nav__link">
+    redis-dump
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codis" class="md-nav__link">
+    codis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#twemproxy" class="md-nav__link">
+    twemproxy代理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sentinel" class="md-nav__link">
+    sentinel哨兵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    redis命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-cluster" class="md-nav__link">
+    redis cluster
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis-monitor" class="md-nav__link">
+    redis-monitor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdbaof" class="md-nav__link">
+    RDB和AOF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redis_1" class="md-nav__link">
+    Redis的复制及集群搭建
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>redis</h1>
+                
+                <h2 id="redis-dump">redis-dump</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">ruby</span> <span class="n">rubygems</span> <span class="n">ruby</span><span class="o">-</span><span class="n">devel</span>
+<span class="n">gem</span> <span class="n">sources</span> <span class="c1">--add http://gems.ruby-china.org/ --remove http://rubygems.org/</span>
+<span class="n">gem</span> <span class="n">sources</span> <span class="o">-</span><span class="n">l</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">redis</span><span class="o">-</span><span class="n">dump</span>
+
+<span class="n">redis</span><span class="o">-</span><span class="n">dump</span> <span class="o">-</span><span class="n">u</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">6379</span> <span class="o">&gt;</span> <span class="k">data</span><span class="p">.</span><span class="n">json</span> <span class="p">(</span><span class="err">导出</span><span class="n">redis</span> <span class="err">默认数据库的数据，默认数据库为</span><span class="mi">0</span><span class="p">)</span> 
+<span class="err">如果指定</span><span class="mi">15</span><span class="err">数据库的数据：</span> 
+<span class="n">redis</span><span class="o">-</span><span class="n">dump</span> <span class="o">-</span><span class="n">u</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">6379</span> <span class="o">-</span><span class="n">d</span> <span class="mi">15</span> <span class="o">&gt;</span> <span class="k">data</span><span class="p">.</span><span class="n">json</span>
+<span class="n">redis</span><span class="o">-</span><span class="k">load</span> <span class="o">-</span><span class="n">u</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">:</span><span class="mi">19000</span> <span class="o">&lt;</span> <span class="k">data</span><span class="p">.</span><span class="n">json</span>
+
+
+<span class="n">aof</span><span class="err">导出</span>
+<span class="err">开启现有</span> <span class="n">Redis</span> <span class="err">实例的</span> <span class="n">AOF</span> <span class="err">功能（如果实例已经启用</span> <span class="n">AOF</span> <span class="err">功能则忽略此步骤）</span>
+<span class="o">#</span> <span class="n">redis</span><span class="o">-</span><span class="n">cli</span> <span class="o">-</span><span class="n">h</span> <span class="n">ip</span> <span class="o">-</span><span class="n">p</span> <span class="n">port</span> <span class="n">config</span> <span class="k">set</span> <span class="n">appendonly</span> <span class="n">yes</span> 
+
+<span class="err">通过</span><span class="n">AOF</span><span class="err">文件将数据导入到新的</span> <span class="n">Redis</span> <span class="err">实例</span> <span class="p">(</span><span class="err">假定生成的</span> <span class="n">AOF</span> <span class="err">文件名为</span> <span class="n">append</span><span class="p">.</span><span class="n">aof</span><span class="p">)</span>
+<span class="o">#</span> <span class="n">redis</span><span class="o">-</span><span class="n">cli</span> <span class="o">-</span><span class="n">h</span> <span class="n">ip</span> <span class="o">-</span><span class="n">p</span> <span class="mi">6379</span> <span class="o">-</span><span class="n">a</span> <span class="n">pass</span> <span class="c1">--pipe &lt; appendonly.aof</span>
+</pre></div>
+
+
+<h2 id="codis">codis</h2>
+<div class="codehilite"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">CodisLabs</span><span class="o">/</span><span class="n">codis</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="n">codis3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">go1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">5</span><span class="o">-</span><span class="n">linux</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>   <span class="p">(</span><span class="err">二进制可执行文件</span><span class="p">)</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">CodisLabs</span><span class="o">/</span><span class="n">codis</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">release3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="n">zip</span> <span class="p">(</span><span class="err">源码，包含脚本，配置文件</span><span class="p">)</span>
+
+<span class="err">需要升级</span><span class="n">glibc2</span><span class="p">.</span><span class="mi">14</span>
+
+<span class="n">export</span> <span class="n">LD_LIBRARY_PATH</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">glibc</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="p">:</span><span class="err">$</span><span class="n">LD_LIBRARY_PATH</span>
+</pre></div>
+
+
+<h2 id="twemproxy">twemproxy代理</h2>
+<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">twitter</span><span class="o">/</span><span class="n">twemproxy</span>
+
+
+<span class="err">需要高版本的</span><span class="n">autoconf</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="p">.</span><span class="n">gnu</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">gnu</span><span class="o">/</span><span class="n">autoconf</span><span class="o">/</span><span class="n">autoconf</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">69</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">zxf</span> <span class="n">autoconf</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">69</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> 
+<span class="n">cd</span> <span class="n">autoconf</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">69</span>
+<span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="c1">--prefix=/usr/local/autoconf</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">twitter</span><span class="o">/</span><span class="n">twemproxy</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="p">.</span><span class="n">zip</span>
+<span class="n">cd</span> <span class="n">twemproxy</span><span class="o">-</span><span class="n">master</span><span class="o">/</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">autoconf</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">autoreconf</span> <span class="o">-</span><span class="n">fvi</span>
+<span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="c1">--prefix=/usr/local/twemproxy </span>
+<span class="n">make</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span>
+<span class="n">make</span> <span class="n">install</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">twemproxy</span>
+<span class="n">mkdir</span> <span class="n">run</span> <span class="n">conf</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">twemproxy</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">nutcracker</span><span class="p">.</span><span class="n">yml</span>  <span class="err">参考官方配置</span>
+<span class="n">alpha</span><span class="p">:</span>
+  <span class="k">listen</span><span class="p">:</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">22121</span>
+  <span class="n">hash</span><span class="p">:</span> <span class="n">fnv1a_64</span>
+  <span class="n">distribution</span><span class="p">:</span> <span class="n">ketama</span>
+  <span class="n">auto_eject_hosts</span><span class="p">:</span> <span class="k">true</span>
+  <span class="n">redis</span><span class="p">:</span> <span class="k">true</span>
+  <span class="n">server_retry_timeout</span><span class="p">:</span> <span class="mi">2000</span>
+  <span class="n">server_failure_limit</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="n">servers</span><span class="p">:</span>
+   <span class="o">-</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">7000</span><span class="p">:</span><span class="mi">1</span>
+   <span class="o">-</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">:</span><span class="mi">7001</span><span class="p">:</span><span class="mi">1</span>
+
+<span class="err">检查配置</span>  <span class="p">.</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nutcracker</span> <span class="o">-</span><span class="n">t</span>
+
+<span class="err">启动</span>  <span class="n">nutcracker</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="k">c</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">twemproxy</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">nutcracker</span><span class="p">.</span><span class="n">yml</span> <span class="o">-</span><span class="n">p</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">twemproxy</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">redisproxy</span><span class="p">.</span><span class="n">pid</span> 
+<span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">twemproxy</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">redisproxy</span><span class="p">.</span><span class="n">log</span>
+</pre></div>
+
+
+<h2 id="sentinel">sentinel哨兵</h2>
+<div class="codehilite"><pre><span></span>配置<span class="nv">redis</span>主从
+#从的<span class="nv">redis</span>配置文件，需要添加
+<span class="nv">vim</span> <span class="nv">redis</span>.<span class="nv">conf</span>
+<span class="nv">slaveof</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span> <span class="mi">6379</span>
+
+分别启动主从  <span class="nv">nohup</span> .<span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="nv">redis</span>.<span class="nv">conf</span> <span class="o">&amp;</span>
+
+<span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="o">-</span><span class="nv">h</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span> <span class="nv">info</span> <span class="nv">Replication</span>   主从信息
+# <span class="nv">Replication</span>
+<span class="nv">role</span>:<span class="nv">master</span> #代表<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">9</span>.<span class="mi">18</span>:<span class="mi">6379</span> 这台<span class="nv">redis</span>是主
+<span class="nv">connected_slaves</span>:<span class="mi">1</span>
+<span class="nv">slave0</span>:<span class="nv">ip</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">6</span>,<span class="nv">port</span><span class="o">=</span><span class="mi">6379</span>,<span class="nv">state</span><span class="o">=</span><span class="nv">online</span>,<span class="nv">offset</span><span class="o">=</span><span class="mi">29</span>,<span class="nv">lag</span><span class="o">=</span><span class="mi">0</span>
+
+<span class="nv">sentinel</span>.<span class="nv">conf</span> 配置   （<span class="nv">sentinel</span>集群中各个<span class="nv">sentinel</span>也有互相通信，通过<span class="nv">gossip</span>协议）
+<span class="nv">port</span> <span class="mi">26379</span>
+<span class="nv">dir</span> <span class="o">/</span><span class="nv">tmp</span>
+#<span class="nv">master1</span> 
+<span class="nv">sentinel</span> <span class="nv">monitor</span> <span class="nv">master1</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span> <span class="mi">6379</span> <span class="mi">2</span>
+#末尾的<span class="mi">2</span>代表，当集群中有<span class="mi">2</span>个<span class="nv">sentinel</span>认为<span class="nv">master</span>死了时，才能真正认为该<span class="nv">master</span>已经不可用了，多个<span class="nv">sentinel</span>使用，单个<span class="nv">sentinel</span>配置为<span class="mi">1</span> 
+<span class="nv">sentinel</span> <span class="nv">down</span><span class="o">-</span><span class="nv">after</span><span class="o">-</span><span class="nv">milliseconds</span> <span class="nv">master1</span> <span class="mi">10000</span>
+#<span class="nv">sentinel</span>会向<span class="nv">master</span>发送心跳<span class="nv">PING</span>来确认<span class="nv">master</span>是否存活   单位是毫秒
+<span class="nv">sentinel</span> <span class="nv">parallel</span><span class="o">-</span><span class="nv">syncs</span> <span class="nv">master1</span> <span class="mi">1</span>
+#在发生<span class="nv">failover</span>主备切换时，这个选项指定了最多可以有多少个<span class="nv">slave</span>同时对新的<span class="nv">master</span>进行同步，这个数字越小，
+完成<span class="nv">failover</span>所需的时间就越长，但是如果这个数字越大，就意味着越多的<span class="nv">slave</span>因为<span class="nv">replication</span>而不可用。可以通过将这个值设为
+ <span class="mi">1</span> 来保证每次只有一个<span class="nv">slave</span>处于不能处理命令请求的状态。
+<span class="nv">sentinel</span> <span class="nv">failover</span><span class="o">-</span><span class="nb">timeout</span> <span class="nv">master1</span> <span class="mi">180000</span>
+#<span class="nv">failover</span>超时时间，单位毫秒
+
+#<span class="nv">master2</span>   可以添加多组主从的<span class="nv">redis</span>监听
+....
+
+.<span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">sentinel</span> <span class="nv">sentinel</span>.<span class="nv">conf</span>  启动
+.<span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="o">-</span><span class="nv">h</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">6</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">26379</span> <span class="nv">info</span> <span class="nv">Sentinel</span>   相关信息
+# <span class="nv">Sentinel</span>
+<span class="nv">sentinel_masters</span>:<span class="mi">1</span>
+<span class="nv">sentinel_tilt</span>:<span class="mi">0</span>
+<span class="nv">sentinel_running_scripts</span>:<span class="mi">0</span>
+<span class="nv">sentinel_scripts_queue_length</span>:<span class="mi">0</span>
+<span class="nv">master0</span>:<span class="nv">name</span><span class="o">=</span><span class="nv">master1</span>,<span class="nv">status</span><span class="o">=</span><span class="nv">ok</span>,<span class="nv">address</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span>:<span class="mi">6379</span>,<span class="nv">slaves</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">sentinels</span><span class="o">=</span><span class="mi">1</span>
+
+当主的<span class="nv">redis</span> 服务器岩机了，<span class="nv">sentinel</span>自动把从的<span class="nv">redis</span>切换到主
+当之前的主<span class="nv">redis</span>回复后，<span class="nv">sentinel</span> 会把上次主<span class="nv">redis</span>重新加入服务中，但是他再以不是主的<span class="nv">redis</span>了，变成从的<span class="nv">reids</span>  
+：相关信息可以从<span class="nv">redis</span> <span class="nv">Sentinel</span>   的 <span class="nv">info</span> <span class="nv">Sentinel</span> 信息和日志查看
+
+<span class="nv">VIP</span>漂移
+<span class="nv">VIP</span>设置脚本
+
+这个是在<span class="nv">failover</span>时执行的脚本。 
+如下所示的参数会传递给脚本<span class="nv">client</span><span class="o">-</span><span class="nv">reconfig</span><span class="o">-</span><span class="nv">script</span>。
+# <span class="nv">The</span> <span class="nv">following</span> <span class="nv">arguments</span> <span class="nv">are</span> <span class="nv">passed</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">script</span>:
+#
+# <span class="o">&lt;</span><span class="nv">master</span><span class="o">-</span><span class="nv">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">role</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">state</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">from</span><span class="o">-</span><span class="nv">ip</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">from</span><span class="o">-</span><span class="nv">port</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">to</span><span class="o">-</span><span class="nv">ip</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">to</span><span class="o">-</span><span class="nv">port</span><span class="o">&gt;</span>
+第<span class="mi">6</span>个增加<span class="nv">VIP</span>，将成为一个<span class="nv">Master</span>，其它的则删除<span class="nv">VIP</span>。在<span class="nv">failover</span>时，仅仅使用<span class="nv">ip</span>命令可能会产生<span class="nv">arp</span>问题，
+因此使用<span class="nv">arping</span>命令来抛出<span class="nv">GRAP</span>。在使用<span class="nv">ip</span>、<span class="nv">arping</span>命令时需要<span class="nv">root</span>权限，这里使用<span class="nv">sudo</span>来执行命令。
+
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">failover</span>.<span class="nv">sh</span>
+<span class="nv">chmod</span> <span class="mi">755</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">failover</span>.<span class="nv">sh</span>
+<span class="nv">chown</span> <span class="nv">redis</span>: <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">failover</span>.<span class="nv">sh</span>
+<span class="nv">echo</span> <span class="o">-</span><span class="nv">e</span> <span class="s2">&quot;</span><span class="s">redis</span><span class="se">\t</span><span class="s">ALL=(ALL)</span><span class="se">\t</span><span class="s">NOPASSWD:/sbin/ip,NOPASSWD:/sbin/arping</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sudoers</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">redis</span>
+<span class="nv">sed</span> <span class="o">-</span><span class="nv">i</span> <span class="s2">&quot;</span><span class="s">s|Defaults.*requiretty|#Defaults</span><span class="se">\t</span><span class="s">requiretty|</span><span class="s2">&quot;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sudoers</span>
+<span class="nv">chmod</span> <span class="mi">440</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sudoers</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">redis</span>
+
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span>
+<span class="nv">MASTER_IP</span><span class="o">=</span>${<span class="mi">6</span>}
+<span class="nv">MY_IP</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">192.168.0.1</span><span class="s1">&#39;</span>   # 每个<span class="nv">Server</span>本身的<span class="nv">IP</span>
+<span class="nv">VIP</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">192.168.0.4</span><span class="s1">&#39;</span>     # <span class="nv">VIP</span>
+<span class="nv">NETMASK</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">24</span><span class="s1">&#39;</span>          # <span class="nv">Netmask</span>
+<span class="nv">INTERFACE</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">eth0</span><span class="s1">&#39;</span>      # 接口
+
+<span class="k">if</span> [ ${<span class="nv">MASTER_IP</span>} <span class="o">=</span> ${<span class="nv">MY_IP</span>} ]<span class="c1">; then</span>
+        <span class="nv">sudo</span> <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ip</span> <span class="nv">addr</span> <span class="nv">add</span> ${<span class="nv">VIP</span>}<span class="o">/</span>${<span class="nv">NETMASK</span>} <span class="nv">dev</span> ${<span class="nv">INTERFACE</span>}
+        <span class="nv">sudo</span> <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">arping</span> <span class="o">-</span><span class="nv">q</span> <span class="o">-</span><span class="nv">c</span> <span class="mi">3</span> <span class="o">-</span><span class="nv">A</span> ${<span class="nv">VIP</span>} <span class="o">-</span><span class="nv">I</span> ${<span class="nv">INTERFACE</span>}
+        <span class="k">exit</span> <span class="mi">0</span>
+<span class="k">else</span>
+        <span class="nv">sudo</span> <span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">ip</span> <span class="nv">addr</span> <span class="nv">del</span> ${<span class="nv">VIP</span>}<span class="o">/</span>${<span class="nv">NETMASK</span>} <span class="nv">dev</span> ${<span class="nv">INTERFACE</span>}
+        <span class="k">exit</span> <span class="mi">0</span>
+<span class="nv">fi</span>
+<span class="k">exit</span> <span class="mi">1</span>
+
+<span class="nv">Redis</span><span class="o">-</span><span class="nv">Sentinel</span>设置
+开始设置<span class="nv">redis</span><span class="o">-</span><span class="nv">sentonel</span>。 
+你只需在第一次手工设置<span class="nv">VIP</span>。
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">sentinel</span>.<span class="nv">conf</span>
+<span class="nv">service</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">sentinel</span> <span class="nv">start</span>
+<span class="nv">chkconfig</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">sentinel</span> <span class="nv">on</span>
+<span class="nv">ip</span> <span class="nv">addr</span> <span class="nv">add</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">4</span><span class="o">/</span><span class="mi">24</span> <span class="nv">dev</span> <span class="nv">eth0</span>
+
+# <span class="nv">sentinel</span>.<span class="nv">conf</span>
+<span class="nv">port</span> <span class="mi">26379</span>
+<span class="nv">logfile</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">sentinel</span>.<span class="nv">log</span>
+<span class="nv">sentinel</span> <span class="nv">monitor</span> <span class="nv">mymaster</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">0</span>.<span class="mi">1</span> <span class="mi">6379</span> <span class="mi">2</span>
+<span class="nv">sentinel</span> <span class="nv">down</span><span class="o">-</span><span class="nv">after</span><span class="o">-</span><span class="nv">milliseconds</span> <span class="nv">mymaster</span> <span class="mi">3000</span>
+<span class="nv">sentinel</span> <span class="nv">parallel</span><span class="o">-</span><span class="nv">syncs</span> <span class="nv">mymaster</span> <span class="mi">1</span>
+<span class="nv">sentinel</span> <span class="nv">failover</span><span class="o">-</span><span class="nb">timeout</span> <span class="nv">mymaster</span> <span class="mi">60000</span>
+<span class="nv">sentinel</span> <span class="nv">client</span><span class="o">-</span><span class="nv">reconfig</span><span class="o">-</span><span class="nv">script</span> <span class="nv">mymaster</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">failover</span>.<span class="nv">sh</span>
+
+结论
+之后你可以尝试<span class="nv">kill</span> <span class="nv">master</span>而不是宕机来测试<span class="nv">failover</span>，我认为这是个比较好且容易实现的方法。 
+<span class="nv">sentinel</span> <span class="nv">down</span><span class="o">-</span><span class="nv">after</span><span class="o">-</span><span class="nv">milliseconds</span> <span class="nv">mymaster</span> <span class="mi">3000</span> 
+大约在<span class="mi">3</span>秒左右会检测到<span class="nv">redis</span>的宕机。在更恶劣的环境，可以尝试减小这个值。
+</pre></div>
+
+
+<h2 id="redis">redis命令</h2>
+<div class="codehilite"><pre><span></span><span class="nv">tar</span> <span class="nv">zxf</span> <span class="nv">redis</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">0</span>.<span class="mi">2</span>.<span class="nv">tar</span>.<span class="nv">gz</span>
+<span class="nv">cd</span> <span class="nv">redis</span><span class="o">-</span><span class="mi">3</span>.<span class="mi">0</span>.<span class="mi">2</span>
+<span class="nv">make</span>
+<span class="nv">cd</span> <span class="nv">src</span> <span class="o">&amp;&amp;</span> <span class="nv">make</span> <span class="nv">install</span>
+<span class="nv">cp</span> ..<span class="o">/</span><span class="nv">redis</span>.<span class="nv">conf</span> <span class="o">/</span><span class="nv">etc</span>
+
+启动
+<span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span> <span class="o">&amp;</span> 或者 <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="nv">redis</span>.<span class="nv">conf</span> 或者 <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">redis</span>.<span class="nv">conf</span> <span class="mi">1</span><span class="o">&gt;</span><span class="nv">log</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;</span><span class="nv">errlog</span>.<span class="nv">log</span> 
+（<span class="mi">1</span>为标准输出，<span class="mi">2</span>为错误输出）
+停止 <span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="nv">shutdown</span>
+
+客户端连接 <span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span>
+
+存值：
+<span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="nv">set</span> <span class="nv">hx</span> <span class="nv">value</span>
+取值：
+<span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="nv">get</span> <span class="nv">hx</span>
+
+<span class="o">&gt;</span> <span class="nv">quit</span>
+退出连接
+
+<span class="o">&gt;</span> <span class="nv">dbsize</span>
+<span class="ss">(</span><span class="nv">integer</span><span class="ss">)</span> <span class="mi">12</span>
+
+当前数据库中<span class="nv">key</span>的数量
+
+<span class="o">&gt;</span> <span class="nv">info</span>
+服务器基本信息
+
+<span class="nv">monitor</span>
+
+实时转储收到的请求
+
+<span class="nv">config</span> <span class="nv">get</span>
+获取服务器的参数配置
+
+<span class="nv">flushdb</span>
+清空当前数据库
+
+<span class="nv">flushall</span>
+清除所有数据库
+
+
+
+常规操作命令 
+
+<span class="mi">01</span>  <span class="nv">exits</span> <span class="nv">key</span>              <span class="o">//</span>测试指定<span class="nv">key</span>是否存在，返回<span class="mi">1</span>表示存在，<span class="mi">0</span>不存在 
+<span class="mi">02</span>  <span class="nv">del</span> <span class="nv">key1</span> <span class="nv">key2</span> ....<span class="nv">keyN</span> <span class="o">//</span>删除给定<span class="nv">key</span>,返回删除<span class="nv">key</span>的数目，<span class="mi">0</span>表示给定<span class="nv">key</span>都不存在 
+<span class="mi">03</span>  <span class="nv">type</span> <span class="nv">key</span>               <span class="o">//</span>返回给定<span class="nv">key</span>的<span class="nv">value</span>类型。返回 <span class="nv">none</span> 表示不存在<span class="nv">key</span>,<span class="nv">string</span>字符类型，<span class="nv">list</span> 链表类型 <span class="nv">set</span> 无序集合类型... 
+<span class="mi">04</span>  <span class="nv">keys</span> <span class="nv">pattern</span>           <span class="o">//</span>返回匹配指定模式的所有<span class="nv">key</span>,下面给个例子 
+<span class="mi">05</span>  <span class="nv">randomkey</span>              <span class="o">//</span>返回从当前数据库中随机选择的一个<span class="nv">key</span>,如果当前数据库是空的，返回空串 
+<span class="mi">06</span>  <span class="nv">rename</span> <span class="nv">oldkey</span> <span class="nv">newkey</span>   <span class="o">//</span>原子的重命名一个<span class="nv">key</span>,如果<span class="nv">newkey</span>存在，将会被覆盖，返回<span class="mi">1</span>表示成功，<span class="mi">0</span>失败。可能是<span class="nv">oldkey</span>不存在
+或者和<span class="nv">newkey</span>相同 
+<span class="mi">07</span>  <span class="nv">renamenx</span> <span class="nv">oldkey</span> <span class="nv">newkey</span> <span class="o">//</span>同上，但是如果<span class="nv">newkey</span>存在返回失败 
+<span class="mi">08</span>  <span class="nv">dbsize</span>                 <span class="o">//</span>返回当前数据库的<span class="nv">key</span>数量 
+<span class="mi">09</span>  <span class="nv">expire</span> <span class="nv">key</span> <span class="nv">seconds</span>     <span class="o">//</span>为<span class="nv">key</span>指定过期时间，单位是秒。返回<span class="mi">1</span>成功，<span class="mi">0</span>表示<span class="nv">key</span>已经设置过过期时间或者不存在 
+<span class="mi">10</span>  <span class="nv">ttl</span> <span class="nv">key</span>                <span class="o">//</span>返回设置过过期时间的<span class="nv">key</span>的剩余过期秒数 <span class="o">-</span><span class="mi">1</span>表示<span class="nv">key</span>不存在或者没有设置过过期时间 
+<span class="mi">11</span>  <span class="nv">select</span> <span class="nv">db</span><span class="o">-</span><span class="nv">index</span>        <span class="o">//</span>通过索引选择数据库，默认连接的数据库所有是<span class="mi">0</span>,默认数据库数是<span class="mi">16</span>个。返回<span class="mi">1</span>表示成功，<span class="mi">0</span>失败 
+<span class="mi">12</span>  <span class="nv">move</span> <span class="nv">key</span> <span class="nv">db</span><span class="o">-</span><span class="nv">index</span>      <span class="o">//</span>将<span class="nv">key</span>从当前数据库移动到指定数据库。返回<span class="mi">1</span>成功。<span class="mi">0</span> 如果<span class="nv">key</span>不存在，或者已经在指定数据库中 
+<span class="mi">13</span>  <span class="nv">flushdb</span>                <span class="o">//</span>删除当前数据库中所有<span class="nv">key</span>,此方法不会失败。慎用 
+<span class="mi">14</span>  <span class="nv">flushall</span>               <span class="o">//</span>删除所有数据库中的所有<span class="nv">key</span>，此方法不会失败。更加慎用 
+<span class="nv">string</span> 类型数据操作命令 
+
+<span class="mi">01</span>  <span class="nv">set</span> <span class="nv">key</span> <span class="nv">value</span>         <span class="o">//</span>设置<span class="nv">key</span>对应的值为<span class="nv">string</span>类型的<span class="nv">value</span>,返回<span class="mi">1</span>表示成功，<span class="mi">0</span>失败 
+<span class="mi">02</span>  <span class="nv">setnx</span> <span class="nv">key</span> <span class="nv">value</span>       <span class="o">//</span>同上，如果<span class="nv">key</span>已经存在，返回<span class="mi">0</span> 。<span class="nv">nx</span> 是<span class="nv">not</span> <span class="nv">exist</span>的意思 
+<span class="mi">03</span>  <span class="nv">get</span> <span class="nv">key</span>               <span class="o">//</span>获取<span class="nv">key</span>对应的<span class="nv">string</span>值,如果<span class="nv">key</span>不存在返回<span class="nv">nil</span> 
+<span class="mi">04</span>  <span class="nv">getset</span> <span class="nv">key</span> <span class="nv">value</span>      <span class="o">//</span>原子的设置<span class="nv">key</span>的值，并返回<span class="nv">key</span>的旧值。如果<span class="nv">key</span>不存在返回<span class="nv">nil</span> 
+<span class="mi">05</span>  <span class="nv">mget</span> <span class="nv">key1</span> <span class="nv">key2</span> ... <span class="nv">keyN</span>            <span class="o">//</span>一次获取多个<span class="nv">key</span>的值，如果对应<span class="nv">key</span>不存在，则对应返回<span class="nv">nil</span>。下面是个实验,首先清空当
+前数据库，然后设置<span class="nv">k1</span>,<span class="nv">k2</span>.获取时<span class="nv">k3</span>对应返回<span class="nv">nil</span> 
+<span class="mi">06</span>  <span class="nv">mset</span> <span class="nv">key1</span> <span class="nv">value1</span> ... <span class="nv">keyN</span> <span class="nv">valueN</span>   <span class="o">//</span>一次设置多个<span class="nv">key</span>的值，成功返回<span class="mi">1</span>表示所有的值都设置了，失败返回<span class="mi">0</span>表示没有任何值被设置 
+<span class="mi">07</span>  <span class="nv">msetnx</span> <span class="nv">key1</span> <span class="nv">value1</span> ... <span class="nv">keyN</span> <span class="nv">valueN</span> <span class="o">//</span>同上，但是不会覆盖已经存在的<span class="nv">key</span> 
+<span class="mi">08</span>  <span class="nv">incr</span> <span class="nv">key</span>              <span class="o">//</span>对<span class="nv">key</span>的值做加加操作,并返回新的值。注意<span class="nv">incr</span>一个不是<span class="nv">int</span>的<span class="nv">value</span>会返回错误，<span class="nv">incr</span>一个不存在的
+<span class="nv">key</span>，则设置<span class="nv">key</span>为<span class="mi">1</span> 
+<span class="mi">09</span>  <span class="nv">decr</span> <span class="nv">key</span>              <span class="o">//</span>同上，但是做的是减减操作，<span class="nv">decr</span>一个不存在<span class="nv">key</span>，则设置<span class="nv">key</span>为<span class="o">-</span><span class="mi">1</span> 
+<span class="mi">10</span>  <span class="nv">incrby</span> <span class="nv">key</span> <span class="nv">integer</span>    <span class="o">//</span>同<span class="nv">incr</span>，加指定值 ，<span class="nv">key</span>不存在时候会设置<span class="nv">key</span>，并认为原来的<span class="nv">value</span>是 <span class="mi">0</span> 
+<span class="mi">11</span>  <span class="nv">decrby</span> <span class="nv">key</span> <span class="nv">integer</span>    <span class="o">//</span>同<span class="nv">decr</span>，减指定值。<span class="nv">decrby</span>完全是为了可读性，我们完全可以通过<span class="nv">incrby</span>一个负值来实现同样效果，反之一样。 
+<span class="mi">12</span>  <span class="nv">append</span> <span class="nv">key</span> <span class="nv">value</span>      <span class="o">//</span>给指定<span class="nv">key</span>的字符串值追加<span class="nv">value</span>,返回新字符串值的长度。下面给个例子 
+<span class="mi">13</span>  <span class="nv">substr</span> <span class="nv">key</span> <span class="nv">start</span> <span class="k">end</span>  <span class="o">//</span>返回截取过的<span class="nv">key</span>的字符串值,注意并不修改<span class="nv">key</span>的值。下标是从<span class="mi">0</span>开始的，接着上面例子 
+<span class="nv">list</span> 类型数据操作命令 
+
+<span class="mi">01</span>  <span class="nv">lpush</span> <span class="nv">key</span> <span class="nv">string</span>          <span class="o">//</span>在<span class="nv">key</span>对应<span class="nv">list</span>的头部添加字符串元素，返回<span class="mi">1</span>表示成功，<span class="mi">0</span>表示<span class="nv">key</span>存在且不是<span class="nv">list</span>类型 
+<span class="mi">02</span>  <span class="nv">rpush</span> <span class="nv">key</span> <span class="nv">string</span>          <span class="o">//</span>同上，在尾部添加 
+<span class="mi">03</span>  <span class="nv">llen</span> <span class="nv">key</span>                  <span class="o">//</span>返回<span class="nv">key</span>对应<span class="nv">list</span>的长度，<span class="nv">key</span>不存在返回<span class="mi">0</span>,如果<span class="nv">key</span>对应类型不是<span class="nv">list</span>返回错误 
+<span class="mi">04</span>  <span class="nv">lrange</span> <span class="nv">key</span> <span class="nv">start</span> <span class="k">end</span>      <span class="o">//</span>返回指定区间内的元素，下标从<span class="mi">0</span>开始，负值表示从后面计算，<span class="o">-</span><span class="mi">1</span>表示倒数第一个元素 ，<span class="nv">key</span>不存在返回空列表 
+<span class="mi">05</span>  <span class="nv">ltrim</span> <span class="nv">key</span> <span class="nv">start</span> <span class="k">end</span>       <span class="o">//</span>截取<span class="nv">list</span>，保留指定区间内元素，成功返回<span class="mi">1</span>，<span class="nv">key</span>不存在返回错误 
+<span class="mi">06</span>  <span class="nv">lset</span> <span class="nv">key</span> <span class="nv">index</span> <span class="nv">value</span>      <span class="o">//</span>设置<span class="nv">list</span>中指定下标的元素值，成功返回<span class="mi">1</span>，<span class="nv">key</span>或者下标不存在返回错误 
+<span class="mi">07</span>  <span class="nv">lrem</span> <span class="nv">key</span> <span class="nv">count</span> <span class="nv">value</span>      <span class="o">//</span>从<span class="nv">key</span>对应<span class="nv">list</span>中删除<span class="nv">count</span>个和<span class="nv">value</span>相同的元素。<span class="nv">count</span>为<span class="mi">0</span>时候删除全部 
+<span class="mi">08</span>  <span class="nv">lpop</span> <span class="nv">key</span>                  <span class="o">//</span>从<span class="nv">list</span>的头部删除元素，并返回删除元素。如果<span class="nv">key</span>对应<span class="nv">list</span>不存在或者是空返回<span class="nv">nil</span>，如果<span class="nv">key</span>对
+应值不是<span class="nv">list</span>返回错误 
+<span class="mi">09</span>  <span class="nv">rpop</span>                      <span class="o">//</span>同上，但是从尾部删除 
+<span class="mi">10</span>  <span class="nv">blpop</span> <span class="nv">key1</span>...<span class="nv">keyN</span> <span class="nb">timeout</span> <span class="o">//</span>从左到右扫描返回对第一个非空<span class="nv">list</span>进行<span class="nv">lpop</span>操作并返回，比如<span class="nv">blpop</span> <span class="nv">list1</span> <span class="nv">list2</span> <span class="nv">list3</span> <span class="mi">0</span> ,
+如果<span class="nv">list</span>不存在<span class="nv">list2</span>,<span class="nv">list3</span>都是非空则对<span class="nv">list2</span>做<span class="nv">lpop</span>并返回从<span class="nv">list2</span>中删除的元素。如果所有的<span class="nv">list</span>都是空或不存在，则会阻塞<span class="nb">timeout</span>秒，
+<span class="nb">timeout</span>为<span class="mi">0</span>表示一直阻塞。当阻塞时，如果有<span class="nv">client</span>对<span class="nv">key1</span>...<span class="nv">keyN</span>中的任意<span class="nv">key</span>进行<span class="nv">push</span>操作，则第一在这个<span class="nv">key</span>上被阻塞的<span class="nv">client</span>会立即返回。
+如果超时发生，则返回<span class="nv">nil</span>。有点像<span class="nv">unix</span>的<span class="nv">select</span>或者<span class="nv">poll</span> 
+<span class="mi">11</span>  <span class="nv">brpop</span>                     <span class="o">//</span>同<span class="nv">blpop</span>，一个是从头部删除一个是从尾部删除 
+<span class="mi">12</span>  <span class="nv">rpoplpush</span> <span class="nv">srckey</span> <span class="nv">destkey</span>  <span class="o">//</span>从<span class="nv">srckey</span>对应<span class="nv">list</span>的尾部移除元素并添加到<span class="nv">destkey</span>对应<span class="nv">list</span>的头部,最后返回被移除的元素值，
+整个操作是原子的.如果<span class="nv">srckey</span>是空或者不存在返回<span class="nv">nil</span> 
+<span class="nv">set</span> 类型数据操作命令 
+
+<span class="mi">01</span>  <span class="nv">sadd</span> <span class="nv">key</span> <span class="nv">member</span>                <span class="o">//</span>添加一个<span class="nv">string</span>元素到,<span class="nv">key</span>对应的<span class="nv">set</span>集合中，成功返回<span class="mi">1</span>,如果元素以及在集合中返回<span class="mi">0</span>,<span class="nv">key</span>
+对应的<span class="nv">set</span>不存在返回错误 
+<span class="mi">02</span>  <span class="nv">srem</span> <span class="nv">key</span> <span class="nv">member</span>                <span class="o">//</span>从<span class="nv">key</span>对应<span class="nv">set</span>中移除给定元素，成功返回<span class="mi">1</span>，如果<span class="nv">member</span>在集合中不存在或者<span class="nv">key</span>不存在返回<span class="mi">0</span>，
+如果<span class="nv">key</span>对应的不是<span class="nv">set</span>类型的值返回错误 
+<span class="mi">03</span>  <span class="nv">spop</span> <span class="nv">key</span>                       <span class="o">//</span>删除并返回<span class="nv">key</span>对应<span class="nv">set</span>中随机的一个元素,如果<span class="nv">set</span>是空或者<span class="nv">key</span>不存在返回<span class="nv">nil</span> 
+<span class="mi">04</span>  <span class="nv">srandmember</span> <span class="nv">key</span>                <span class="o">//</span>同<span class="nv">spop</span>，随机取<span class="nv">set</span>中的一个元素，但是不删除元素 
+<span class="mi">05</span>  <span class="nv">smove</span> <span class="nv">srckey</span> <span class="nv">dstkey</span> <span class="nv">member</span>     <span class="o">//</span>从<span class="nv">srckey</span>对应<span class="nv">set</span>中移除<span class="nv">member</span>并添加到<span class="nv">dstkey</span>对应<span class="nv">set</span>中，整个操作是原子的。成功返回<span class="mi">1</span>,
+如果<span class="nv">member</span>在<span class="nv">srckey</span>中不存在返回<span class="mi">0</span>，如果<span class="nv">key</span>不是<span class="nv">set</span>类型返回错误 
+<span class="mi">06</span>  <span class="nv">scard</span> <span class="nv">key</span>                      <span class="o">//</span>返回<span class="nv">set</span>的元素个数，如果<span class="nv">set</span>是空或者<span class="nv">key</span>不存在返回<span class="mi">0</span> 
+<span class="mi">07</span>  <span class="nv">sismember</span> <span class="nv">key</span> <span class="nv">member</span>           <span class="o">//</span>判断<span class="nv">member</span>是否在<span class="nv">set</span>中，存在返回<span class="mi">1</span>，<span class="mi">0</span>表示不存在或者<span class="nv">key</span>不存在 
+<span class="mi">08</span>  <span class="nv">sinter</span> <span class="nv">key1</span> <span class="nv">key2</span>...<span class="nv">keyN</span>        <span class="o">//</span>返回所有给定<span class="nv">key</span>的交集 
+<span class="mi">09</span>  <span class="nv">sinterstore</span> <span class="nv">dstkey</span> <span class="nv">key1</span>...<span class="nv">keyN</span> <span class="o">//</span>同<span class="nv">sinter</span>，但是会同时将交集存到<span class="nv">dstkey</span>下 
+<span class="mi">10</span>  <span class="nv">sunion</span> <span class="nv">key1</span> <span class="nv">key2</span>...<span class="nv">keyN</span>        <span class="o">//</span>返回所有给定<span class="nv">key</span>的并集 
+<span class="mi">11</span>  <span class="nv">sunionstore</span> <span class="nv">dstkey</span> <span class="nv">key1</span>...<span class="nv">keyN</span> <span class="o">//</span>同<span class="nv">sunion</span>，并同时保存并集到<span class="nv">dstkey</span>下 
+<span class="mi">12</span>  <span class="nv">sdiff</span> <span class="nv">key1</span> <span class="nv">key2</span>...<span class="nv">keyN</span>         <span class="o">//</span>返回所有给定<span class="nv">key</span>的差集 
+<span class="mi">13</span>  <span class="nv">sdiffstore</span> <span class="nv">dstkey</span> <span class="nv">key1</span>...<span class="nv">keyN</span>  <span class="o">//</span>同<span class="nv">sdiff</span>，并同时保存差集到<span class="nv">dstkey</span>下 
+<span class="mi">14</span>  <span class="nv">smembers</span> <span class="nv">key</span>                   <span class="o">//</span>返回<span class="nv">key</span>对应<span class="nv">set</span>的所有元素，结果是无序的 
+<span class="nv">sorted</span> <span class="nv">set</span> 类型数据操作命令 
+
+<span class="mi">01</span>  <span class="nv">zadd</span> <span class="nv">key</span> <span class="nv">score</span> <span class="nv">member</span>        <span class="o">//</span>添加元素到集合，元素在集合中存在则更新对应<span class="nv">score</span> 
+<span class="mi">02</span>  <span class="nv">zrem</span> <span class="nv">key</span> <span class="nv">member</span>              <span class="o">//</span>删除指定元素，<span class="mi">1</span>表示成功，如果元素不存在返回<span class="mi">0</span> 
+<span class="mi">03</span>  <span class="nv">zincrby</span> <span class="nv">key</span> <span class="nv">incr</span> <span class="nv">member</span>      <span class="o">//</span>增加对应<span class="nv">member</span>的<span class="nv">score</span>值，然后移动元素并保持<span class="nv">skip</span> <span class="nv">list</span>保持有序。返回更新后的<span class="nv">score</span>值 
+<span class="mi">04</span>  <span class="nv">zrank</span> <span class="nv">key</span> <span class="nv">member</span>             <span class="o">//</span>返回指定元素在集合中的排名（下标）,集合中元素是按<span class="nv">score</span>从小到大排序的 
+<span class="mi">05</span>  <span class="nv">zrevrank</span> <span class="nv">key</span> <span class="nv">member</span>          <span class="o">//</span>同上,但是集合中元素是按<span class="nv">score</span>从大到小排序 
+<span class="mi">06</span>  <span class="nv">zrange</span> <span class="nv">key</span> <span class="nv">start</span> <span class="k">end</span>         <span class="o">//</span>类似<span class="nv">lrange</span>操作从集合中去指定区间的元素。返回的是有序结果 
+<span class="mi">07</span>  <span class="nv">zrevrange</span> <span class="nv">key</span> <span class="nv">start</span> <span class="k">end</span>      <span class="o">//</span>同上，返回结果是按<span class="nv">score</span>逆序的 
+<span class="mi">08</span>  <span class="nv">zrangebyscore</span> <span class="nv">key</span> <span class="nv">min</span> <span class="nv">max</span>    <span class="o">//</span>返回集合中<span class="nv">score</span>在给定区间的元素 
+<span class="mi">09</span>  <span class="nv">zcount</span> <span class="nv">key</span> <span class="nv">min</span> <span class="nv">max</span>           <span class="o">//</span>返回集合中<span class="nv">score</span>在给定区间的数量 
+<span class="mi">10</span>  <span class="nv">zcard</span> <span class="nv">key</span>                    <span class="o">//</span>返回集合中元素个数 
+<span class="mi">11</span>  <span class="nv">zscore</span> <span class="nv">key</span> <span class="nv">element</span>           <span class="o">//</span>返回给定元素对应的<span class="nv">score</span> 
+<span class="mi">12</span>  <span class="nv">zremrangebyrank</span> <span class="nv">key</span> <span class="nv">min</span> <span class="nv">max</span>  <span class="o">//</span>删除集合中排名在给定区间的元素 
+<span class="mi">13</span>  <span class="nv">zremrangebyscore</span> <span class="nv">key</span> <span class="nv">min</span> <span class="nv">max</span> <span class="o">//</span>删除集合中<span class="nv">score</span>在给定区间的元素 
+<span class="nv">hash</span> 类型数据操作命令 
+
+<span class="mi">01</span>  <span class="nv">hset</span> <span class="nv">key</span> <span class="nv">field</span> <span class="nv">value</span>       <span class="o">//</span>设置<span class="nv">hash</span> <span class="nv">field</span>为指定值，如果<span class="nv">key</span>不存在，则先创建 
+<span class="mi">02</span>  <span class="nv">hget</span> <span class="nv">key</span> <span class="nv">field</span>             <span class="o">//</span>获取指定的<span class="nv">hash</span> <span class="nv">field</span> 
+<span class="mi">03</span>  <span class="nv">hmget</span> <span class="nv">key</span> <span class="nv">filed1</span>....<span class="nv">fieldN</span> <span class="o">//</span>获取全部指定的<span class="nv">hash</span> <span class="nv">filed</span> 
+<span class="mi">04</span>  <span class="nv">hmset</span> <span class="nv">key</span> <span class="nv">filed1</span> <span class="nv">value1</span> ... <span class="nv">filedN</span> <span class="nv">valueN</span> <span class="o">//</span>同时设置<span class="nv">hash</span>的多个<span class="nv">field</span> 
+<span class="mi">05</span>  <span class="nv">hincrby</span> <span class="nv">key</span> <span class="nv">field</span> <span class="nv">integer</span>  <span class="o">//</span>将指定的<span class="nv">hash</span> <span class="nv">filed</span> 加上给定值 
+<span class="mi">06</span>  <span class="nv">hexists</span> <span class="nv">key</span> <span class="nv">field</span>          <span class="o">//</span>测试指定<span class="nv">field</span>是否存在 
+<span class="mi">07</span>  <span class="nv">hdel</span> <span class="nv">key</span> <span class="nv">field</span>             <span class="o">//</span>删除指定的<span class="nv">hash</span> <span class="nv">field</span> 
+<span class="mi">08</span>  <span class="nv">hlen</span> <span class="nv">key</span>                   <span class="o">//</span>返回指定<span class="nv">hash</span>的<span class="nv">field</span>数量 
+<span class="mi">09</span>  <span class="nv">hkeys</span> <span class="nv">key</span>                  <span class="o">//</span>返回<span class="nv">hash</span>的所有<span class="nv">field</span> 
+<span class="mi">10</span>  <span class="nv">hvals</span> <span class="nv">key</span>                  <span class="o">//</span>返回<span class="nv">hash</span>的所有<span class="nv">value</span> 
+<span class="mi">11</span>  <span class="nv">hgetall</span>                    <span class="o">//</span>返回<span class="nv">hash</span>的所有<span class="nv">filed</span>和<span class="nv">value</span> 
+
+
+<span class="nv">redis</span>.<span class="nv">conf</span>配置文件：
+引用
+#是否作为守护进程运行
+<span class="nv">daemonize</span> <span class="nv">yes</span>
+#配置<span class="nv">pid</span>的存放路径及文件名，默认为当前路径下
+<span class="nv">pidfile</span> <span class="nv">redis</span>.<span class="nv">pid</span>
+#<span class="nv">Redis</span>默认监听端口
+<span class="nv">port</span> <span class="mi">6379</span>
+#客户端闲置多少秒后，断开连接
+<span class="nb">timeout</span> <span class="mi">300</span>
+#日志显示级别
+<span class="nv">loglevel</span> <span class="nv">verbose</span>
+#指定日志输出的文件名，也可指定到标准输出端口
+<span class="nv">logfile</span> <span class="nv">stdout</span>
+#设置数据库的数量，默认连接的数据库是<span class="mi">0</span>，可以通过<span class="nv">select</span> <span class="nv">N</span>来连接不同的数据库
+<span class="nv">databases</span> <span class="mi">16</span>
+#保存数据到<span class="nv">disk</span>的策略
+#当有一条<span class="nv">Keys</span>数据被改变是，<span class="mi">900</span>秒刷新到<span class="nv">disk</span>一次
+<span class="nv">save</span> <span class="mi">900</span> <span class="mi">1</span>
+#当有<span class="mi">10</span>条<span class="nv">Keys</span>数据被改变时，<span class="mi">300</span>秒刷新到<span class="nv">disk</span>一次
+<span class="nv">save</span> <span class="mi">300</span> <span class="mi">10</span>
+#当有<span class="mi">1</span><span class="nv">w</span>条<span class="nv">keys</span>数据被改变时，<span class="mi">60</span>秒刷新到<span class="nv">disk</span>一次
+<span class="nv">save</span> <span class="mi">60</span> <span class="mi">10000</span>
+#当<span class="nv">dump</span>  .<span class="nv">rdb</span>数据库的时候是否压缩数据对象
+<span class="nv">rdbcompression</span> <span class="nv">yes</span>
+#<span class="nv">dump</span>数据库的数据保存的文件名
+<span class="nv">dbfilename</span> <span class="nv">dump</span>.<span class="nv">rdb</span>
+#<span class="nv">Redis</span>的工作目录
+<span class="nv">dir</span> <span class="o">/</span><span class="nv">home</span><span class="o">/</span><span class="nv">falcon</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span>
+###########  <span class="nv">Replication</span> #####################
+#<span class="nv">Redis</span>的复制配置
+# <span class="nv">slaveof</span> <span class="o">&lt;</span><span class="nv">masterip</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">masterport</span><span class="o">&gt;</span>
+# <span class="nv">masterauth</span> <span class="o">&lt;</span><span class="nv">master</span><span class="o">-</span><span class="nv">password</span><span class="o">&gt;</span>
+
+############## <span class="nv">SECURITY</span> ###########
+# <span class="nv">requirepass</span> <span class="nv">foobared</span>
+
+############### <span class="nv">LIMITS</span> ##############
+#最大客户端连接数
+# <span class="nv">maxclients</span> <span class="mi">128</span>
+#最大内存使用率
+# <span class="nv">maxmemory</span> <span class="o">&lt;</span><span class="nv">bytes</span><span class="o">&gt;</span>
+
+########## <span class="nv">APPEND</span> <span class="nv">ONLY</span> <span class="nv">MODE</span> #########
+#是否开启日志功能
+<span class="nv">appendonly</span> <span class="nv">no</span>
+# 刷新日志到<span class="nv">disk</span>的规则
+# <span class="nv">appendfsync</span> <span class="nv">always</span>
+<span class="nv">appendfsync</span> <span class="nv">everysec</span>
+# <span class="nv">appendfsync</span> <span class="nv">no</span>
+################ <span class="nv">VIRTUAL</span> <span class="nv">MEMORY</span> ###########
+#是否开启<span class="nv">VM</span>功能
+<span class="nv">vm</span><span class="o">-</span><span class="nv">enabled</span> <span class="nv">no</span>
+# <span class="nv">vm</span><span class="o">-</span><span class="nv">enabled</span> <span class="nv">yes</span>
+<span class="nv">vm</span><span class="o">-</span><span class="nv">swap</span><span class="o">-</span><span class="nv">file</span> <span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span>.<span class="nv">swap</span>
+<span class="nv">vm</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">memory</span> <span class="mi">0</span>
+<span class="nv">vm</span><span class="o">-</span><span class="nv">page</span><span class="o">-</span><span class="nv">size</span> <span class="mi">32</span>
+<span class="nv">vm</span><span class="o">-</span><span class="nv">pages</span> <span class="mi">134217728</span>
+<span class="nv">vm</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">threads</span> <span class="mi">4</span>
+############# <span class="nv">ADVANCED</span> <span class="nv">CONFIG</span> ###############
+<span class="nv">glueoutputbuf</span> <span class="nv">yes</span>
+<span class="nv">hash</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">zipmap</span><span class="o">-</span><span class="nv">entries</span> <span class="mi">64</span>
+<span class="nv">hash</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">zipmap</span><span class="o">-</span><span class="nv">value</span> <span class="mi">512</span>
+#是否重置<span class="nv">Hash</span>表
+<span class="nv">activerehashing</span> <span class="nv">yes</span>
+
+
+<span class="nv">spring</span>中整合<span class="nv">redis</span>
+看了<span class="nv">java</span> <span class="nv">Clients</span>，<span class="nv">redis</span>官网比较推荐<span class="nv">Jedis</span>，而<span class="nv">spring</span>对<span class="nv">redis</span>的客服端做了一个统一封装，支持<span class="ss">(</span><span class="nv">Jedis</span>,  <span class="nv">JRedis</span>, <span class="nv">and</span> <span class="nv">RJC</span><span class="ss">)</span>，
+这里对说下<span class="nv">SPRING</span> <span class="nv">DATA</span> <span class="o">-</span> <span class="nv">REDIS</span>。
+
+<span class="mi">1</span>、使用<span class="nv">maven</span>的话那就很简单了，直接加入依赖。
+
+<span class="mi">2</span>、编辑<span class="nv">pom</span>.<span class="nv">xml</span>
+<span class="o">&lt;</span><span class="nv">repository</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">id</span><span class="o">&gt;</span><span class="nv">spring</span><span class="o">-</span><span class="nv">milestone</span><span class="o">&lt;/</span><span class="nv">id</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">name</span><span class="o">&gt;</span><span class="nv">Spring</span> <span class="nv">Maven</span> <span class="nv">MILESTONE</span> <span class="nv">Repository</span><span class="o">&lt;/</span><span class="nv">name</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">url</span><span class="o">&gt;</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">maven</span>.<span class="nv">springframework</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">milestone</span><span class="o">&lt;/</span><span class="nv">url</span><span class="o">&gt;</span>   
+<span class="o">&lt;/</span><span class="nv">repository</span><span class="o">&gt;</span>   
+
+<span class="o">&lt;</span><span class="nv">dependency</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">groupId</span><span class="o">&gt;</span><span class="nv">org</span>.<span class="nv">springframework</span>.<span class="nv">data</span><span class="o">&lt;/</span><span class="nv">groupId</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">artifactId</span><span class="o">&gt;</span><span class="nv">spring</span><span class="o">-</span><span class="nv">data</span><span class="o">-</span><span class="nv">redis</span><span class="o">&lt;/</span><span class="nv">artifactId</span><span class="o">&gt;</span>   
+ <span class="o">&lt;</span><span class="nv">version</span><span class="o">&gt;</span><span class="mi">1</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="nv">RC1</span><span class="o">&lt;/</span><span class="nv">version</span><span class="o">&gt;</span>   
+<span class="o">&lt;/</span><span class="nv">dependency</span><span class="o">&gt;</span>
+
+<span class="nv">spring</span>配置文件里添加
+<span class="o">&lt;</span><span class="nv">bean</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">jedisConnectionFactory</span><span class="s2">&quot;</span> <span class="nv">class</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">org.springframework.data.redis.connection.jedis.JedisConnectionFactory</span><span class="s2">&quot;</span><span class="o">&gt;</span>   
+        <span class="o">&lt;</span><span class="nv">property</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">hostName</span><span class="s2">&quot;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">localhost</span><span class="s2">&quot;</span><span class="o">/&gt;</span>   
+        <span class="o">&lt;</span><span class="nv">property</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">port</span><span class="s2">&quot;</span> <span class="nv">value</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">6636</span><span class="s2">&quot;</span><span class="o">/&gt;</span>   
+<span class="o">&lt;/</span><span class="nv">bean</span><span class="o">&gt;</span>   
+
+<span class="o">&lt;</span><span class="nv">bean</span> <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">redisTemplate</span><span class="s2">&quot;</span> <span class="nv">class</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">org.springframework.data.redis.core.RedisTemplate</span><span class="s2">&quot;</span><span class="o">&gt;</span>   
+        <span class="o">&lt;</span><span class="nv">property</span> <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">connectionFactory</span><span class="s2">&quot;</span> <span class="nv">ref</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">jedisConnectionFactory</span><span class="s2">&quot;</span><span class="o">/&gt;</span>   
+<span class="o">&lt;/</span><span class="nv">bean</span><span class="o">&gt;</span>   
+
+<span class="nv">Java</span>代码
+@<span class="nv">Service</span>   
+<span class="nv">public</span> <span class="nv">class</span> <span class="nv">RedisService</span> {   
+    @<span class="nv">Resource</span>   
+    <span class="nv">private</span> <span class="nv">RedisTemplate</span><span class="o">&lt;</span><span class="nv">Serializable</span>, <span class="nv">Serializable</span><span class="o">&gt;</span> <span class="nv">template</span><span class="c1">;   </span>
+
+ <span class="cm">/**  </span>
+<span class="cm">     * 向redis里面添加key-value格式的数据  </span>
+<span class="cm">     *  </span>
+<span class="cm">     * @param key   key  </span>
+<span class="cm">     * @param value value  </span>
+<span class="cm">     */</span>   
+
+    <span class="nv">public</span> <span class="nv">void</span> <span class="nv">set</span><span class="ss">(</span><span class="nv">final</span> <span class="nv">Serializable</span> <span class="nv">key</span>, <span class="nv">final</span> <span class="nv">Serializable</span> <span class="nv">value</span><span class="ss">)</span> {   
+        <span class="nv">template</span>.<span class="nv">execute</span><span class="ss">(</span><span class="nv">new</span> <span class="nv">RedisCallback</span><span class="o">&lt;</span><span class="nv">Object</span><span class="o">&gt;</span><span class="ss">()</span> {   
+            @<span class="nv">Override</span>   
+            <span class="nv">public</span> <span class="nv">Object</span> <span class="nv">doInRedis</span><span class="ss">(</span><span class="nv">RedisConnection</span> <span class="nv">connection</span><span class="ss">)</span> <span class="nv">throws</span> <span class="nv">DataAccessException</span> {   
+                <span class="nv">byte</span>[] <span class="nv">key_</span> <span class="o">=</span> <span class="nv">RedisUtil</span>.<span class="nv">getBytesFromObject</span><span class="ss">(</span><span class="nv">key</span><span class="ss">)</span><span class="c1">;   </span>
+                <span class="nv">byte</span>[] <span class="nv">value_</span> <span class="o">=</span> <span class="nv">RedisUtil</span>.<span class="nv">getBytesFromObject</span><span class="ss">(</span><span class="nv">value</span><span class="ss">)</span><span class="c1">;   </span>
+                <span class="nv">connection</span>.<span class="nv">set</span><span class="ss">(</span><span class="nv">key_</span>, <span class="nv">value_</span><span class="ss">)</span><span class="c1">;   </span>
+                <span class="k">return</span> <span class="nv">true</span><span class="c1">;   </span>
+            }   
+        }<span class="ss">)</span><span class="c1">;   </span>
+    }   
+
+ <span class="cm">/**  </span>
+<span class="cm">     * 根据key从redis里面取出value  </span>
+<span class="cm">     *  </span>
+<span class="cm">     * @param key   key  </span>
+<span class="cm">     */</span>   
+ <span class="nv">public</span> <span class="nv">Serializable</span> <span class="nv">get</span><span class="ss">(</span><span class="nv">final</span> <span class="nv">Serializable</span> <span class="nv">key</span><span class="ss">)</span> {   
+        <span class="k">return</span> <span class="nv">template</span>.<span class="nv">execute</span><span class="ss">(</span><span class="nv">new</span> <span class="nv">RedisCallback</span><span class="o">&lt;</span><span class="nv">Serializable</span><span class="o">&gt;</span><span class="ss">()</span> {   
+            @<span class="nv">Override</span>   
+            <span class="nv">public</span> <span class="nv">Serializable</span> <span class="nv">doInRedis</span><span class="ss">(</span><span class="nv">RedisConnection</span> <span class="nv">connection</span><span class="ss">)</span> <span class="nv">throws</span> <span class="nv">DataAccessException</span> {   
+
+                <span class="nv">byte</span>[] <span class="nv">keyBytes</span> <span class="o">=</span> <span class="nv">RedisUtil</span>.<span class="nv">getBytesFromObject</span><span class="ss">(</span><span class="nv">key</span><span class="ss">)</span><span class="c1">;   </span>
+                <span class="nv">byte</span>[] <span class="nv">bytes</span> <span class="o">=</span> <span class="nv">connection</span>.<span class="nv">get</span><span class="ss">(</span><span class="nv">keyBytes</span><span class="ss">)</span><span class="c1">;   </span>
+                <span class="k">return</span> <span class="ss">(</span><span class="nv">Serializable</span><span class="ss">)</span> <span class="nv">RedisUtil</span>.<span class="nv">getObjectFromBytes</span><span class="ss">(</span><span class="nv">bytes</span><span class="ss">)</span><span class="c1">;   </span>
+            }   
+        }<span class="ss">)</span><span class="c1">;   </span>
+    }   
+}   
+
+看了一点<span class="nv">JedisConnectionFactory</span>，之际上它只是对<span class="nv">Jedis</span>做了下简单了封装，再加上自己的连接池实现。
+</pre></div>
+
+
+<h2 id="web">web管理</h2>
+<div class="codehilite"><pre><span></span><span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">erikdubbelboer</span><span class="o">/</span><span class="nv">phpRedisAdmin</span>
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">nrk</span><span class="o">/</span><span class="nv">predis</span>
+
+<span class="nv">cd</span>  <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">www</span><span class="o">/</span><span class="nv">html</span><span class="o">/</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">erikdubbelboer</span><span class="o">/</span><span class="nv">phpRedisAdmin</span><span class="o">/</span><span class="nv">archive</span><span class="o">/</span><span class="nv">master</span>.<span class="nv">zip</span>
+<span class="nv">unzip</span> <span class="nv">master</span>.<span class="nv">zip</span>
+<span class="nv">rm</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">master</span>.<span class="nv">zip</span>
+<span class="nv">cd</span> <span class="nv">phpRedisAdmin</span>
+<span class="nv">wget</span>  <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">nrk</span><span class="o">/</span><span class="nv">predis</span><span class="o">/</span><span class="nv">archive</span><span class="o">/</span><span class="nv">v1</span>.<span class="mi">1</span>.<span class="nv">zip</span>   解压放到上面包里，重命名为<span class="nv">vendor</span>
+<span class="nv">unzip</span> <span class="nv">v1</span>.<span class="mi">1</span>.<span class="nv">zip</span>
+<span class="nv">rm</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">v1</span>.<span class="mi">1</span>.<span class="nv">zip</span>
+<span class="nv">mv</span> <span class="nv">predis</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">1</span>  <span class="nv">vendor</span>
+
+<span class="nv">vim</span>  <span class="nv">phpRedisAdmin</span><span class="o">/</span><span class="nv">includes</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">sample</span>.<span class="nv">inc</span>.<span class="nv">php</span>   配置连接的<span class="nv">redis</span>地址,（可以配置从库，这样就是个只读的<span class="nv">redis</span>）
+
+如果确少<span class="nv">php</span>驱动，可以安装
+<span class="nv">yum</span> <span class="nv">search</span> <span class="nv">redis</span> <span class="o">|</span> <span class="nv">grep</span> <span class="nv">php</span>
+<span class="nv">php</span><span class="o">-</span><span class="nv">nrk</span><span class="o">-</span><span class="nv">Predis</span>.<span class="nv">noarch</span> : <span class="nv">PHP</span> <span class="nv">client</span> <span class="nv">library</span> <span class="k">for</span> <span class="nv">Redis</span>
+<span class="nv">php</span><span class="o">-</span><span class="nv">pecl</span><span class="o">-</span><span class="nv">redis</span>.<span class="nv">x86_64</span> : <span class="nv">Extension</span> <span class="k">for</span> <span class="nv">communicating</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">Redis</span> <span class="nv">key</span><span class="o">-</span><span class="nv">value</span>
+<span class="nv">php</span><span class="o">-</span><span class="nv">redis</span>.<span class="nv">x86_64</span> : <span class="nv">Extension</span> <span class="k">for</span> <span class="nv">communicating</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">Redis</span> <span class="nv">key</span><span class="o">-</span><span class="nv">value</span> <span class="nv">store</span>
+
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">ip</span><span class="o">/</span><span class="nv">phpredis</span><span class="o">/</span> 
+</pre></div>
+
+
+<h2 id="redis-cluster">redis cluster</h2>
+<div class="codehilite"><pre><span></span>一:关于<span class="nv">redis</span> <span class="nv">cluster</span>
+<span class="mi">1</span>:<span class="nv">redis</span> <span class="nv">cluster</span>的现状
+<span class="nv">reids</span><span class="o">-</span><span class="nv">cluster</span>计划在<span class="nv">redis3</span>.<span class="mi">0</span>中推出，可以看作者<span class="nv">antirez</span>的声明:<span class="nv">http</span>:<span class="o">//</span><span class="nv">antirez</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">news</span><span class="o">/</span><span class="mi">49</span> <span class="ss">(</span><span class="nv">ps</span>:跳票了好久，今年貌似加快速度了<span class="ss">)</span>,
+目前的最新版本是<span class="nv">redis3</span> <span class="nv">beta2</span><span class="ss">(</span><span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">51</span><span class="ss">)</span>.
+作者的目标:<span class="nv">Redis</span> <span class="nv">Cluster</span> <span class="nv">will</span> <span class="nv">support</span> <span class="nv">up</span> <span class="nv">to</span> <span class="o">~</span><span class="mi">1000</span> <span class="nv">nodes</span>. 赞...
+目前<span class="nv">redis</span>支持的<span class="nv">cluster</span>特性<span class="ss">(</span>已亲测<span class="ss">)</span>:
+<span class="mi">1</span><span class="ss">)</span>:节点自动发现
+<span class="mi">2</span><span class="ss">)</span>:<span class="nv">slave</span><span class="o">-&gt;</span><span class="nv">master</span> 选举,集群容错
+<span class="mi">3</span><span class="ss">)</span>:<span class="nv">Hot</span> <span class="nv">resharding</span>:在线分片
+<span class="mi">4</span><span class="ss">)</span>:进群管理:<span class="nv">cluster</span> <span class="nv">xxx</span>
+<span class="mi">5</span><span class="ss">)</span>:基于配置<span class="ss">(</span><span class="nv">nodes</span><span class="o">-</span><span class="nv">port</span>.<span class="nv">conf</span><span class="ss">)</span>的集群管理
+<span class="mi">6</span><span class="ss">)</span>:<span class="nv">ASK</span> 转向<span class="o">/</span><span class="nv">MOVED</span> 转向机制.
+<span class="mi">2</span>:<span class="nv">redis</span> <span class="nv">cluster</span> 架构
+<span class="mi">1</span><span class="ss">)</span><span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>架构图
+
+架构细节:
+<span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>所有的<span class="nv">redis</span>节点彼此互联<span class="ss">(</span><span class="nv">PING</span><span class="o">-</span><span class="nv">PONG</span>机制<span class="ss">)</span>,内部使用二进制协议优化传输速度和带宽.
+<span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>节点的<span class="nv">fail</span>是通过集群中超过半数的节点检测失效时才生效.
+<span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>客户端与<span class="nv">redis</span>节点直连,不需要中间<span class="nv">proxy</span>层.客户端不需要连接集群所有节点,连接集群中任何一个可用节点即可
+<span class="ss">(</span><span class="mi">4</span><span class="ss">)</span><span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>把所有的物理节点映射到[<span class="mi">0</span><span class="o">-</span><span class="mi">16383</span>]<span class="nv">slot</span>上,<span class="nv">cluster</span> 负责维护<span class="nv">node</span><span class="o">&lt;-&gt;</span><span class="nv">slot</span><span class="o">&lt;-&gt;</span><span class="nv">value</span>
+<span class="mi">2</span><span class="ss">)</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>选举:容错
+
+<span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>领着选举过程是集群中所有<span class="nv">master</span>参与,如果半数以上<span class="nv">master</span>节点与<span class="nv">master</span>节点通信超过<span class="ss">(</span><span class="nv">cluster</span><span class="o">-</span><span class="nv">node</span><span class="o">-</span><span class="nb">timeout</span><span class="ss">)</span>,认为当前<span class="nv">master</span>节点挂掉.
+<span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>:什么时候整个集群不可用<span class="ss">(</span><span class="nv">cluster_state</span>:<span class="nv">fail</span><span class="ss">)</span>,当集群不可用时,所有对集群的操作做都不可用，收到<span class="ss">((</span><span class="nv">error</span><span class="ss">)</span> <span class="nv">CLUSTERDOWN</span>
+ <span class="nv">The</span> <span class="nv">cluster</span> <span class="nv">is</span> <span class="nv">down</span><span class="ss">)</span>错误
+    <span class="nv">a</span>:如果集群任意<span class="nv">master</span>挂掉,且当前<span class="nv">master</span>没有<span class="nv">slave</span>.集群进入<span class="nv">fail</span>状态,也可以理解成进群的<span class="nv">slot</span>映射[<span class="mi">0</span><span class="o">-</span><span class="mi">16383</span>]不完成时进入<span class="nv">fail</span>状态.
+    <span class="nv">b</span>:如果进群超过半数以上<span class="nv">master</span>挂掉，无论是否有<span class="nv">slave</span>集群进入<span class="nv">fail</span>状态.
+二:<span class="nv">redis</span> <span class="nv">cluster</span>的使用
+<span class="mi">1</span>:安装<span class="nv">redis</span> <span class="nv">cluster</span>
+<span class="mi">1</span><span class="ss">)</span>:安装<span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>依赖:<span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>的依赖库在使用时有兼容问题,在<span class="nv">reshard</span>时会遇到各种错误,请按指定版本安装.
+<span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>确保系统安装<span class="nv">zlib</span>,否则<span class="nv">gem</span> <span class="nv">install</span>会报<span class="ss">(</span><span class="nv">no</span> <span class="nv">such</span> <span class="nv">file</span> <span class="nv">to</span> <span class="nv">load</span> <span class="o">--</span> <span class="nv">zlib</span><span class="ss">)</span>
+
+#<span class="nv">download</span>:<span class="nv">zlib</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">2</span>.<span class="mi">6</span>.<span class="nv">tar</span>  .<span class="o">/</span><span class="nv">configure</span>  <span class="nv">make</span>  <span class="nv">make</span> <span class="nv">install</span>
+
+
+ <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>安装<span class="nv">ruby</span>:<span class="nv">version</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">9</span>.<span class="mi">2</span><span class="ss">)</span>
+# <span class="nv">ruby1</span>.<span class="mi">9</span>.<span class="mi">2</span>   <span class="nv">cd</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">ruby</span>  .<span class="o">/</span><span class="nv">configure</span> <span class="o">-</span><span class="nv">prefix</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">ruby</span>  <span class="nv">make</span>  <span class="nv">make</span> <span class="nv">install</span>  <span class="nv">sudo</span> <span class="nv">cp</span> <span class="nv">ruby</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>
+<span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>安装<span class="nv">rubygem</span>:<span class="nv">version</span><span class="ss">(</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">16</span><span class="ss">)</span>
+
+# <span class="nv">rubygems</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">16</span>.<span class="nv">tgz</span>  <span class="nv">cd</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">gem</span>  <span class="nv">sudo</span> <span class="nv">ruby</span> <span class="nv">setup</span>.<span class="nv">rb</span>  <span class="nv">sudo</span> <span class="nv">cp</span> <span class="nv">bin</span><span class="o">/</span><span class="nv">gem</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>
+<span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>安装<span class="nv">gem</span><span class="o">-</span><span class="nv">redis</span>:<span class="nv">version</span><span class="ss">(</span><span class="mi">3</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="ss">)</span>
+
+<span class="nv">gem</span> <span class="nv">install</span> <span class="nv">redis</span> <span class="o">--</span><span class="nv">version</span> <span class="mi">3</span>.<span class="mi">0</span>.<span class="mi">0</span>  #由于源的原因，换成阿里的源<span class="nv">https</span>:<span class="o">//</span><span class="nv">ruby</span>.<span class="nv">taobao</span>.<span class="nv">org</span><span class="o">/</span> $ <span class="nv">gem</span> <span class="nv">sources</span> <span class="o">--</span><span class="nv">add</span> 
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">ruby</span>.<span class="nv">taobao</span>.<span class="nv">org</span><span class="o">/</span> <span class="o">--</span><span class="nv">remove</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">rubygems</span>.<span class="nv">org</span><span class="o">/</span>$ <span class="nv">gem</span> <span class="nv">sources</span> <span class="o">-</span><span class="nv">l</span><span class="o">***</span> <span class="nv">CURRENT</span> <span class="nv">SOURCES</span> <span class="o">***</span>
+ <span class="nv">https</span>:<span class="o">//</span><span class="nv">ruby</span>.<span class="nv">taobao</span>.<span class="nv">org</span># 请确保只有 <span class="nv">ruby</span>.<span class="nv">taobao</span>.<span class="nv">org</span>$ <span class="nv">gem</span> <span class="nv">install</span> <span class="nv">rails</span>
+<span class="mi">2</span><span class="ss">)</span>安装<span class="nv">redis</span><span class="o">-</span><span class="nv">cluster</span>
+<span class="nv">cd</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">redis</span>  <span class="nv">make</span>  <span class="nv">sudo</span> <span class="nv">cp</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>  <span class="nv">sudo</span> <span class="nv">cp</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> 
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>  <span class="nv">sudo</span> <span class="nv">cp</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">src</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span>
+<span class="mi">2</span>:配置<span class="nv">redis</span> <span class="nv">cluster</span>
+<span class="mi">1</span><span class="ss">)</span><span class="nv">redis</span>配置文件结构:
+
+ 使用包含<span class="ss">(</span><span class="k">include</span><span class="ss">)</span>把通用配置和特殊配置分离,方便维护.
+<span class="mi">2</span><span class="ss">)</span><span class="nv">redis</span>通用配置.
+
+#<span class="nv">GENERAL</span>  <span class="nv">daemonize</span> <span class="nv">no</span>  <span class="nv">tcp</span><span class="o">-</span><span class="nv">backlog</span> <span class="mi">511</span>  <span class="nb">timeout</span> <span class="mi">0</span>  <span class="nv">tcp</span><span class="o">-</span><span class="nv">keepalive</span> <span class="mi">0</span>  <span class="nv">loglevel</span> <span class="nv">notice</span>  <span class="nv">databases</span> <span class="mi">16</span>  
+<span class="nv">dir</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">data</span>  <span class="nv">slave</span><span class="o">-</span><span class="nv">serve</span><span class="o">-</span><span class="nv">stale</span><span class="o">-</span><span class="nv">data</span> <span class="nv">yes</span>  #<span class="nv">slave</span>只读  <span class="nv">slave</span><span class="o">-</span><span class="nv">read</span><span class="o">-</span><span class="nv">only</span> <span class="nv">yes</span>  #<span class="nv">not</span> <span class="nv">use</span> <span class="nv">default</span>  
+<span class="nv">repl</span><span class="o">-</span><span class="nv">disable</span><span class="o">-</span><span class="nv">tcp</span><span class="o">-</span><span class="nv">nodelay</span> <span class="nv">yes</span>  <span class="nv">slave</span><span class="o">-</span><span class="nv">priority</span> <span class="mi">100</span>  #打开<span class="nv">aof</span>持久化  <span class="nv">appendonly</span> <span class="nv">yes</span>  #每秒一次<span class="nv">aof</span>写  
+<span class="nv">appendfsync</span> <span class="nv">everysec</span>  #关闭在<span class="nv">aof</span> <span class="nv">rewrite</span>的时候对新的写操作进行<span class="nv">fsync</span>  <span class="nv">no</span><span class="o">-</span><span class="nv">appendfsync</span><span class="o">-</span><span class="nv">on</span><span class="o">-</span><span class="nv">rewrite</span> <span class="nv">yes</span>  
+<span class="nv">auto</span><span class="o">-</span><span class="nv">aof</span><span class="o">-</span><span class="nv">rewrite</span><span class="o">-</span><span class="nv">min</span><span class="o">-</span><span class="nv">size</span> <span class="mi">64</span><span class="nv">mb</span>  <span class="nv">lua</span><span class="o">-</span><span class="nv">time</span><span class="o">-</span><span class="nv">limit</span> <span class="mi">5000</span>  #打开<span class="nv">redis</span>集群  <span class="nv">cluster</span><span class="o">-</span><span class="nv">enabled</span> <span class="nv">yes</span>  
+#节点互连超时的阀值  <span class="nv">cluster</span><span class="o">-</span><span class="nv">node</span><span class="o">-</span><span class="nb">timeout</span> <span class="mi">15000</span>  <span class="nv">cluster</span><span class="o">-</span><span class="nv">migration</span><span class="o">-</span><span class="nv">barrier</span> <span class="mi">1</span>  <span class="nv">slowlog</span><span class="o">-</span><span class="nv">log</span><span class="o">-</span><span class="nv">slower</span><span class="o">-</span><span class="nv">than</span> <span class="mi">10000</span>  
+<span class="nv">slowlog</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">len</span> <span class="mi">128</span>  <span class="nv">notify</span><span class="o">-</span><span class="nv">keyspace</span><span class="o">-</span><span class="nv">events</span> <span class="s2">&quot;&quot;</span>  <span class="nv">hash</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">entries</span> <span class="mi">512</span>  <span class="nv">hash</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">value</span> <span class="mi">64</span> 
+ <span class="nv">list</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">entries</span> <span class="mi">512</span>  <span class="nv">list</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">value</span> <span class="mi">64</span>  <span class="nv">set</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">intset</span><span class="o">-</span><span class="nv">entries</span> <span class="mi">512</span>  <span class="nv">zset</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">entries</span> <span class="mi">128</span> 
+  <span class="nv">zset</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">ziplist</span><span class="o">-</span><span class="nv">value</span> <span class="mi">64</span>  <span class="nv">activerehashing</span> <span class="nv">yes</span>  <span class="nv">client</span><span class="o">-</span><span class="nv">output</span><span class="o">-</span><span class="nv">buffer</span><span class="o">-</span><span class="nv">limit</span> <span class="nv">normal</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> 
+   <span class="nv">client</span><span class="o">-</span><span class="nv">output</span><span class="o">-</span><span class="nv">buffer</span><span class="o">-</span><span class="nv">limit</span> <span class="nv">slave</span> <span class="mi">256</span><span class="nv">mb</span> <span class="mi">64</span><span class="nv">mb</span> <span class="mi">60</span>  <span class="nv">client</span><span class="o">-</span><span class="nv">output</span><span class="o">-</span><span class="nv">buffer</span><span class="o">-</span><span class="nv">limit</span> <span class="nv">pubsub</span> <span class="mi">32</span><span class="nv">mb</span> <span class="mi">8</span><span class="nv">mb</span> <span class="mi">60</span> 
+    <span class="nv">hz</span> <span class="mi">10</span>  <span class="nv">aof</span><span class="o">-</span><span class="nv">rewrite</span><span class="o">-</span><span class="nv">incremental</span><span class="o">-</span><span class="nv">fsync</span> <span class="nv">yes</span>
+<span class="mi">3</span><span class="ss">)</span><span class="nv">redis</span>特殊配置.
+
+#包含通用配置  <span class="k">include</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="nv">common</span>.<span class="nv">conf</span>  #监听<span class="nv">tcp</span>端口  <span class="nv">port</span> <span class="mi">6379</span>  #最大可用内存  <span class="nv">maxmemory</span> <span class="mi">100</span><span class="nv">m</span>  
+#内存耗尽时采用的淘汰策略:  # <span class="nv">volatile</span><span class="o">-</span><span class="nv">lru</span> <span class="o">-&gt;</span> <span class="nv">remove</span> <span class="nv">the</span> <span class="nv">key</span> <span class="nv">with</span> <span class="nv">an</span> <span class="nv">expire</span> <span class="nv">set</span> <span class="nv">using</span> <span class="nv">an</span> <span class="nv">LRU</span> <span class="nv">algorithm</span>  
+# <span class="nv">allkeys</span><span class="o">-</span><span class="nv">lru</span> <span class="o">-&gt;</span> <span class="nv">remove</span> <span class="nv">any</span> <span class="nv">key</span> <span class="nv">accordingly</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">LRU</span> <span class="nv">algorithm</span>  # <span class="nv">volatile</span><span class="o">-</span><span class="k">random</span> <span class="o">-&gt;</span> <span class="nv">remove</span> <span class="nv">a</span> <span class="k">random</span> 
+<span class="nv">key</span> <span class="nv">with</span> <span class="nv">an</span> <span class="nv">expire</span> <span class="nv">set</span>  # <span class="nv">allkeys</span><span class="o">-</span><span class="k">random</span> <span class="o">-&gt;</span> <span class="nv">remove</span> <span class="nv">a</span> <span class="k">random</span> <span class="nv">key</span>, <span class="nv">any</span> <span class="nv">key</span>  # <span class="nv">volatile</span><span class="o">-</span><span class="nv">ttl</span> <span class="o">-&gt;</span> <span class="nv">remove</span> <span class="nv">the</span> <span class="nv">key</span>
+ <span class="nv">with</span> <span class="nv">the</span> <span class="nv">nearest</span> <span class="nv">expire</span> <span class="nv">time</span> <span class="ss">(</span><span class="nv">minor</span> <span class="nv">TTL</span><span class="ss">)</span>  # <span class="nv">noeviction</span> <span class="o">-&gt;</span> <span class="nv">don</span><span class="s1">&#39;</span><span class="s">t expire at all, just return an error on</span>
+  <span class="nv">write</span> <span class="nv">operations</span>  <span class="nv">maxmemory</span><span class="o">-</span><span class="nv">policy</span> <span class="nv">allkeys</span><span class="o">-</span><span class="nv">lru</span>  #<span class="nv">aof</span>存储文件  <span class="nv">appendfilename</span> <span class="s2">&quot;</span><span class="s">appendonly-6379.aof</span><span class="s2">&quot;</span>  
+  #<span class="nv">rdb</span>文件,只用于动态添加<span class="nv">slave</span>过程  <span class="nv">dbfilename</span> <span class="nv">dump</span><span class="o">-</span><span class="mi">6379</span>.<span class="nv">rdb</span>  #<span class="nv">cluster</span>配置文件<span class="ss">(</span>启动自动生成<span class="ss">)</span>  
+  <span class="nv">cluster</span><span class="o">-</span><span class="nv">config</span><span class="o">-</span><span class="nv">file</span> <span class="nv">nodes</span><span class="o">-</span><span class="mi">6379</span>.<span class="nv">conf</span>  #部署在同一机器的<span class="nv">redis</span>实例，把<span class="o">&lt;</span><span class="nv">span</span> <span class="nv">style</span><span class="o">=</span><span class="s2">&quot;</span><span class="s">font-size: 1em; </span>
+  <span class="nv">line</span><span class="o">-</span><span class="nv">height</span>: <span class="mi">1</span>.<span class="mi">5</span><span class="c1">;&quot;&gt;auto-aof-rewrite搓开，防止瞬间fork所有redis进程做rewrite,占用大量内存&lt;/span&gt;  </span>
+  <span class="nv">auto</span><span class="o">-</span><span class="nv">aof</span><span class="o">-</span><span class="nv">rewrite</span><span class="o">-</span><span class="nv">percentage</span> <span class="mi">80</span><span class="o">-</span><span class="mi">100</span>
+<span class="mi">3</span>:<span class="nv">cluster</span> 操作
+<span class="nv">cluster</span>集群相关命令,更多<span class="nv">redis</span>相关命令见文档:<span class="nv">http</span>:<span class="o">//</span><span class="nv">redis</span>.<span class="nv">readthedocs</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">en</span><span class="o">/</span><span class="nv">latest</span><span class="o">/</span>
+集群  <span class="nv">CLUSTER</span> <span class="nv">INFO</span> 打印集群的信息  <span class="nv">CLUSTER</span> <span class="nv">NODES</span> 列出集群当前已知的所有节点（<span class="nv">node</span>），以及这些节点的相关信息。  
+节点  <span class="nv">CLUSTER</span> <span class="nv">MEET</span> <span class="o">&lt;</span><span class="nv">ip</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">port</span><span class="o">&gt;</span> 将 <span class="nv">ip</span> 和 <span class="nv">port</span> 所指定的节点添加到集群当中，让它成为集群的一份子。  <span class="nv">CLUSTER</span> <span class="nv">FORGET</span> <span class="o">&lt;</span><span class="nv">node_id</span><span class="o">&gt;</span> 
+从集群中移除 <span class="nv">node_id</span> 指定的节点。  <span class="nv">CLUSTER</span> <span class="nv">REPLICATE</span> <span class="o">&lt;</span><span class="nv">node_id</span><span class="o">&gt;</span> 将当前节点设置为 <span class="nv">node_id</span> 指定的节点的从节点。 
+ <span class="nv">CLUSTER</span> <span class="nv">SAVECONFIG</span> 将节点的配置文件保存到硬盘里面。  槽<span class="ss">(</span><span class="nv">slot</span><span class="ss">)</span>  <span class="nv">CLUSTER</span> <span class="nv">ADDSLOTS</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> [<span class="nv">slot</span> ...] 将一个或多
+ 个槽（<span class="nv">slot</span>）指派（<span class="nv">assign</span>）给当前节点。  <span class="nv">CLUSTER</span> <span class="nv">DELSLOTS</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> [<span class="nv">slot</span> ...] 移除一个或多个槽对当前节点的指派。
+   <span class="nv">CLUSTER</span> <span class="nv">FLUSHSLOTS</span> 移除指派给当前节点的所有槽，让当前节点变成一个没有指派任何槽的节点。 
+    <span class="nv">CLUSTER</span> <span class="nv">SETSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> <span class="nv">NODE</span> <span class="o">&lt;</span><span class="nv">node_id</span><span class="o">&gt;</span> 将槽 <span class="nv">slot</span> 指派给 <span class="nv">node_id</span> 指定的节点，如果槽已经指派给另一个节点，
+    那么先让另一个节点删除该槽<span class="o">&gt;</span>，然后再进行指派。  <span class="nv">CLUSTER</span> <span class="nv">SETSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> <span class="nv">MIGRATING</span> <span class="o">&lt;</span><span class="nv">node_id</span><span class="o">&gt;</span> 将本节点的槽
+     <span class="nv">slot</span> 迁移到 <span class="nv">node_id</span> 指定的节点中。  <span class="nv">CLUSTER</span> <span class="nv">SETSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> <span class="nv">IMPORTING</span> <span class="o">&lt;</span><span class="nv">node_id</span><span class="o">&gt;</span> 从 <span class="nv">node_id</span> 指定的节点
+     中导入槽 <span class="nv">slot</span> 到本节点。  <span class="nv">CLUSTER</span> <span class="nv">SETSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> <span class="nv">STABLE</span> 取消对槽 <span class="nv">slot</span> 的导入（<span class="nv">import</span>）或者迁移（<span class="nv">migrate</span>）。  
+     键  <span class="nv">CLUSTER</span> <span class="nv">KEYSLOT</span> <span class="o">&lt;</span><span class="nv">key</span><span class="o">&gt;</span> 计算键 <span class="nv">key</span> 应该被放置在哪个槽上。  <span class="nv">CLUSTER</span> <span class="nv">COUNTKEYSINSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> 
+     返回槽 <span class="nv">slot</span> 目前包含的键值对数量。  <span class="nv">CLUSTER</span> <span class="nv">GETKEYSINSLOT</span> <span class="o">&lt;</span><span class="nv">slot</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nv">count</span><span class="o">&gt;</span> 返回 <span class="nv">count</span> 个 <span class="nv">slot</span> 槽中的键。
+<span class="mi">4</span>:<span class="nv">redis</span> <span class="nv">cluster</span> 运维操作
+<span class="mi">1</span><span class="ss">)</span>初始化并构建集群
+<span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>#启动集群相关节点（必须是空节点）,指定配置文件和输出日志
+
+<span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6380</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6380</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span>
+ <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6381</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6381</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6382</span>.<span class="nv">conf</span>
+<span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6382</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7380</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7380</span>.<span class="nv">log</span>
+   <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7381</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7381</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> 
+   <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7382</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">7382</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span>
+<span class="ss">(</span><span class="mi">2</span><span class="ss">)</span>:使用自带的<span class="nv">ruby</span>工具<span class="ss">(</span><span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span><span class="ss">)</span>构建集群
+
+#<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span>的<span class="nv">create</span>子命令构建  #<span class="o">--</span><span class="nv">replicas</span> 则指定了为<span class="nv">Redis</span> <span class="nv">Cluster</span>中的每个<span class="nv">Master</span>节点配备几个<span class="nv">Slave</span>节点  
+#节点角色由顺序决定,先<span class="nv">master</span>之后是<span class="nv">slave</span><span class="ss">(</span>为方便辨认,<span class="nv">slave</span>的端口比<span class="nv">master</span>大<span class="mi">1000</span><span class="ss">)</span>  <span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">create</span> <span class="o">--</span><span class="nv">replicas</span> 
+<span class="mi">1</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6381</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6382</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">7380</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">7381</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">7382</span>
+<span class="ss">(</span><span class="mi">3</span><span class="ss">)</span>:检查集群状态,
+
+#<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span>的<span class="nv">check</span>子命令构建  #<span class="nv">ip</span>:<span class="nv">port</span>可以是集群的任意节点  <span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">check</span> <span class="mi">1</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span>
+最后输出如下信息,没有任何警告或错误，表示集群启动成功并处于<span class="nv">ok</span>状态
+ [<span class="nv">OK</span>] <span class="nv">All</span> <span class="nv">nodes</span> <span class="nv">agree</span> <span class="nv">about</span> <span class="nv">slots</span> <span class="nv">configuration</span>. 
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">Check</span> <span class="k">for</span> <span class="nv">open</span> <span class="nv">slots</span>... 
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">Check</span> <span class="nv">slots</span> <span class="nv">coverage</span>... 
+[<span class="nv">OK</span>] <span class="nv">All</span> <span class="mi">16384</span> <span class="nv">slots</span> <span class="nv">covered</span>. 
+
+<span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span> <span class="o">-</span><span class="nv">c</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">6379</span>  <span class="ss">(</span> <span class="o">-</span><span class="nv">c</span>  集群模式<span class="ss">)</span>
+
+<span class="mi">2</span><span class="ss">)</span>:添加新<span class="nv">master</span>节点
+<span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>添加一个<span class="nv">master</span>节点:创建一个空节点（<span class="nv">empty</span> <span class="nv">node</span>），然后将某些<span class="nv">slot</span>移动到这个空节点上,这个过程目前需要人工干预
+<span class="nv">a</span><span class="ss">)</span>:根据端口生成配置文件<span class="ss">(</span><span class="nv">ps</span>:<span class="nv">establish_config</span>.<span class="nv">sh</span>是我自己写的输出配置脚本<span class="ss">)</span>
+ <span class="nv">sh</span> <span class="nv">establish_config</span>.<span class="nv">sh</span> <span class="mi">6386</span> <span class="o">&gt;</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6386</span>.<span class="nv">conf</span>  
+<span class="nv">b</span><span class="ss">)</span>:启动节点
+ <span class="nv">nohup</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">server</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6386</span>.<span class="nv">conf</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">redis</span><span class="o">/</span><span class="nv">logs</span><span class="o">/</span><span class="nv">redis</span><span class="o">-</span><span class="mi">6386</span>.<span class="nv">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span> 
+<span class="nv">c</span><span class="ss">)</span>:加入空节点到集群
+<span class="nv">add</span><span class="o">-</span><span class="nv">node</span>  将一个节点添加到集群里面， 第一个是新节点<span class="nv">ip</span>:<span class="nv">port</span>, 第二个是任意一个已存在节点<span class="nv">ip</span>:<span class="nv">port</span>
+<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">add</span><span class="o">-</span><span class="nv">node</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6386</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6381</span>   
+<span class="nv">node</span>:新节点没有包含任何数据， 因为它没有包含任何<span class="nv">slot</span>。新加入的加点是一个主节点， 当集群需要将某个从节点升级为新的主节点时，
+ 这个新节点不会被选中
+<span class="nv">d</span><span class="ss">)</span>:为新节点分配<span class="nv">slot</span>
+<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">reshard</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6386</span>  #根据提示选择要迁移的<span class="nv">slot</span>数量<span class="ss">(</span><span class="nv">ps</span>:这里选择<span class="mi">500</span><span class="ss">)</span>  <span class="nv">How</span> <span class="nv">many</span> <span class="nv">slots</span> 
+<span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">move</span> <span class="ss">(</span><span class="nv">from</span> <span class="mi">1</span> <span class="nv">to</span> <span class="mi">16384</span><span class="ss">)</span>? <span class="mi">500</span>  #选择要接受这些<span class="nv">slot</span>的<span class="nv">node</span><span class="o">-</span><span class="nv">id</span>  <span class="nv">What</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">receiving</span> <span class="nv">node</span> <span class="nv">ID</span>?
+ <span class="nv">f51e26b5d5ff74f85341f06f28f125b7254e61bf</span>  #选择<span class="nv">slot</span>来源:  #<span class="nv">all</span>表示从所有的<span class="nv">master</span>重新分配，  #或者数据要提取
+ <span class="nv">slot</span>的<span class="nv">master</span>节点<span class="nv">id</span>,最后用<span class="nv">done</span>结束  <span class="nv">Please</span> <span class="nv">enter</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">source</span> <span class="nv">node</span> <span class="nv">IDs</span>.    <span class="nv">Type</span> <span class="s1">&#39;</span><span class="s">all</span><span class="s1">&#39;</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">all</span> <span class="nv">the</span> 
+ <span class="nv">nodes</span> <span class="nv">as</span> <span class="nv">source</span> <span class="nv">nodes</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">hash</span> <span class="nv">slots</span>.    <span class="nv">Type</span> <span class="s1">&#39;</span><span class="s">done</span><span class="s1">&#39;</span> <span class="nv">once</span> <span class="nv">you</span> <span class="nv">entered</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">source</span> <span class="nv">nodes</span> <span class="nv">IDs</span>. 
+  <span class="nv">Source</span> <span class="nv">node</span> <span class="sc">#1</span>:<span class="nv">all</span>  #打印被移动的<span class="nv">slot</span>后，输入<span class="nv">yes</span>开始移动<span class="nv">slot</span>以及对应的数据.  #<span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">proceed</span> <span class="nv">with</span>
+   <span class="nv">the</span> <span class="nv">proposed</span> <span class="nv">reshard</span> <span class="nv">plan</span> <span class="ss">(</span><span class="nv">yes</span><span class="o">/</span><span class="nv">no</span><span class="ss">)</span>? <span class="nv">yes</span>  #结束
+<span class="mi">3</span><span class="ss">)</span>:添加新的<span class="nv">slave</span>节点
+<span class="nv">a</span><span class="ss">)</span>:前三步操作同添加<span class="nv">master</span>一样
+<span class="nv">b</span><span class="ss">)</span>第四步:<span class="nv">redis</span><span class="o">-</span><span class="nv">cli</span>连接上新节点<span class="nv">shell</span>,输入命令:<span class="nv">cluster</span> <span class="nv">replicate</span> 对应<span class="nv">master</span>的<span class="nv">node</span><span class="o">-</span><span class="nv">id</span>
+ <span class="nv">cluster</span> <span class="nv">replicate</span> <span class="mi">2</span><span class="nv">b9ebcbd627ff0fd7a7bbcc5332fb09e72788835</span>  
+<span class="nv">note</span>:在线添加<span class="nv">slave</span> 时，需要<span class="nv">dump</span>整个<span class="nv">master</span>进程，并传递到<span class="nv">slave</span>，再由 <span class="nv">slave</span>加载<span class="nv">rdb</span>文件到内存，<span class="nv">rdb</span>传输过程中<span class="nv">Master</span>
+可能无法提供服务,整个过程消耗大量<span class="nv">io</span>,小心操作.
+例如本次添加<span class="nv">slave</span>操作产生的<span class="nv">rdb</span>文件
+ <span class="o">-</span><span class="nv">rw</span><span class="o">-</span><span class="nv">r</span><span class="o">--</span><span class="nv">r</span><span class="o">--</span> <span class="mi">1</span> <span class="nv">root</span> <span class="nv">root</span>  <span class="mi">34946</span> <span class="nv">Apr</span> <span class="mi">17</span> <span class="mi">18</span>:<span class="mi">23</span> <span class="nv">dump</span><span class="o">-</span><span class="mi">6386</span>.<span class="nv">rdb</span> 
+<span class="o">-</span><span class="nv">rw</span><span class="o">-</span><span class="nv">r</span><span class="o">--</span><span class="nv">r</span><span class="o">--</span> <span class="mi">1</span> <span class="nv">root</span> <span class="nv">root</span>  <span class="mi">34946</span> <span class="nv">Apr</span> <span class="mi">17</span> <span class="mi">18</span>:<span class="mi">23</span> <span class="nv">dump</span><span class="o">-</span><span class="mi">7386</span>.<span class="nv">rdb</span> 
+<span class="mi">4</span><span class="ss">)</span>:在线<span class="nv">reshard</span> 数据:
+对于负载<span class="o">/</span>数据均匀的情况，可以在线<span class="nv">reshard</span> <span class="nv">slot</span>来解决,方法与添加新<span class="nv">master</span>的<span class="nv">reshard</span>一样，只是需要<span class="nv">reshard</span>的<span class="nv">master</span>节点是老节点.
+<span class="mi">5</span><span class="ss">)</span>:删除一个<span class="nv">slave</span>节点
+
+#<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span> <span class="nv">del</span><span class="o">-</span><span class="nv">node</span> <span class="nv">ip</span>:<span class="nv">port</span> <span class="s1">&#39;</span><span class="s">&lt;node-id&gt;</span><span class="s1">&#39;</span> <span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">del</span><span class="o">-</span><span class="nv">node</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">7386</span> 
+<span class="s1">&#39;</span><span class="s">c7ee2fca17cb79fe3c9822ced1d4f6c5e169e378</span><span class="s1">&#39;</span>
+
+<span class="nv">a</span><span class="ss">)</span>:删除<span class="nv">master</span>节点之前首先要使用<span class="nv">reshard</span>移除<span class="nv">master</span>的全部<span class="nv">slot</span>,然后再删除当前节点<span class="ss">(</span>目前只能把被删除
+<span class="nv">master</span>的<span class="nv">slot</span>迁移到一个节点上<span class="ss">)</span>
+#把<span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6386</span>当前<span class="nv">master</span>迁移到<span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span>上  <span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">reshard</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span>  
+#根据提示选择要迁移的<span class="nv">slot</span>数量<span class="ss">(</span><span class="nv">ps</span>:这里选择<span class="mi">500</span><span class="ss">)</span>  <span class="nv">How</span> <span class="nv">many</span> <span class="nv">slots</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">move</span> <span class="ss">(</span><span class="nv">from</span> <span class="mi">1</span> <span class="nv">to</span> <span class="mi">16384</span><span class="ss">)</span>? 
+<span class="mi">500</span><span class="ss">(</span>被删除<span class="nv">master</span>的所有<span class="nv">slot</span>数量<span class="ss">)</span>  #选择要接受这些<span class="nv">slot</span>的<span class="nv">node</span><span class="o">-</span><span class="nv">id</span><span class="ss">(</span><span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span><span class="ss">)</span>  <span class="nv">What</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">receiving</span> 
+<span class="nv">node</span> <span class="nv">ID</span>? <span class="nv">c4a31c852f81686f6ed8bcd6d1b13accdc947fd2</span> <span class="ss">(</span><span class="nv">ps</span>:<span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6380</span>的<span class="nv">node</span><span class="o">-</span><span class="nv">id</span><span class="ss">)</span>  <span class="nv">Please</span> <span class="nv">enter</span> <span class="nv">all</span> <span class="nv">the</span>
+ <span class="nv">source</span> <span class="nv">node</span> <span class="nv">IDs</span>.    <span class="nv">Type</span> <span class="s1">&#39;</span><span class="s">all</span><span class="s1">&#39;</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">nodes</span> <span class="nv">as</span> <span class="nv">source</span> <span class="nv">nodes</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">hash</span> <span class="nv">slots</span>.    <span class="nv">Type</span> <span class="s1">&#39;</span><span class="s">done</span><span class="s1">&#39;</span> 
+ <span class="nv">once</span> <span class="nv">you</span> <span class="nv">entered</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">source</span> <span class="nv">nodes</span> <span class="nv">IDs</span>.  <span class="nv">Source</span> <span class="nv">node</span> <span class="sc">#1</span>:<span class="nv">f51e26b5d5ff74f85341f06f28f125b7254e61bf</span>
+ <span class="ss">(</span>被删除<span class="nv">master</span>的<span class="nv">node</span><span class="o">-</span><span class="nv">id</span><span class="ss">)</span>  <span class="nv">Source</span> <span class="nv">node</span> <span class="sc">#2</span>:<span class="nv">done</span>  #打印被移动的<span class="nv">slot</span>后，输入<span class="nv">yes</span>开始移动<span class="nv">slot</span>以及对应的数据.  
+ #<span class="k">Do</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">proceed</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">proposed</span> <span class="nv">reshard</span> <span class="nv">plan</span> <span class="ss">(</span><span class="nv">yes</span><span class="o">/</span><span class="nv">no</span><span class="ss">)</span>? <span class="nv">yes</span>
+<span class="nv">b</span><span class="ss">)</span>:删除空<span class="nv">master</span>节点
+<span class="nv">redis</span><span class="o">-</span><span class="nv">trib</span>.<span class="nv">rb</span> <span class="nv">del</span><span class="o">-</span><span class="nv">node</span> <span class="mi">10</span>.<span class="mi">10</span>.<span class="mi">34</span>.<span class="mi">14</span>:<span class="mi">6386</span> <span class="s1">&#39;</span><span class="s">f51e26b5d5ff74f85341f06f28f125b7254e61bf</span><span class="s1">&#39;</span>   
+</pre></div>
+
+
+<h2 id="redis-monitor">redis-monitor</h2>
+<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">LittlePeng</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">monitor</span>
+</pre></div>
+
+
+<h2 id="rdbaof">RDB和AOF</h2>
+<div class="codehilite"><pre><span></span><span class="n">RDB和AOF</span><span class="w"></span>
+<span class="n">RDB方式按照一定的时间间隔对数据集创建基于时间点的快照</span><span class="err">。</span><span class="w"></span>
+<span class="n">AOF方式记录Server收到的写操作到日志文件</span><span class="err">，</span><span class="n">在Server重启时通过回放这些写操作来重建数据集</span><span class="err">。</span><span class="n">该方式类似于MySQL中基于语句格式的</span><span class="w"></span>
+<span class="n">binlog</span><span class="err">。</span><span class="n">当日志变大时Redis可在后台重写日志</span><span class="err">。</span><span class="w"></span>
+<span class="n">若仅期望数据在Server运行期间存在则可禁用两种持久化方案</span><span class="err">。</span><span class="n">在同一Redis实例中同时开启AOF和RDB方式的数据持久化方案也是可以的</span><span class="err">。</span><span class="w"></span>
+<span class="n">该情况下Redis重启时AOF文件将用于重建原始数据集</span><span class="err">，</span><span class="n">因为叫RDB方式而言</span><span class="err">，</span><span class="n">AOF方式能最大限度的保证数据完整性</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">两钟方案各自的优缺点</span><span class="w"></span>
+<span class="n">RDB优点</span><span class="w"></span>
+<span class="n">RDB是Redis数据集的基于时间点的紧凑的副本</span><span class="err">，</span><span class="n">非常适合于备份场景</span><span class="err">。</span><span class="n">比如每个小时对RDB文件做一次小的归档</span><span class="err">，</span><span class="n">每天对RDB文件做一次大的</span><span class="w"></span>
+<span class="n">归档</span><span class="err">，</span><span class="n">每月对RDB文件做一次更大的归档</span><span class="err">。</span><span class="n">这样可以在必要的时刻选择不同的备份版本进行数据恢复</span><span class="err">。</span><span class="w"></span>
+<span class="n">由于是一个紧凑的文件</span><span class="err">，</span><span class="n">易于传输到远程数据中心或Amazon</span><span class="w"> </span><span class="n">S3</span><span class="err">，</span><span class="n">因此RDB非常适合于灾难恢复</span><span class="err">。</span><span class="w"></span>
+<span class="n">RDB方式的开销较低</span><span class="err">，</span><span class="n">在该种方式下Redis父进程所要做的仅是开辟一个子进程来做剩下的事情</span><span class="err">。</span><span class="w"></span>
+<span class="n">与AOF相比RDB在数据集较大时能够以更快的速度恢复</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">RDB缺点</span><span class="w"></span>
+<span class="n">若需在Redis停止工作时</span><span class="err">（</span><span class="n">例如意外断电</span><span class="err">）</span><span class="n">尽可能保证数据不丢失</span><span class="err">，</span><span class="n">那么RDB不是最好的方案</span><span class="err">。</span><span class="n">例如</span><span class="err">，</span><span class="n">通常会每隔5分钟或者更长的时间来创建</span><span class="w"></span>
+<span class="n">一次快照</span><span class="err">，</span><span class="n">如若Redis没有被正确的关闭就可能丢失最近几分钟的数据</span><span class="err">。</span><span class="w"></span>
+<span class="n">RDB方式需经常调用fork</span><span class="p">()</span><span class="n">函数以开辟子进程来实现持久化</span><span class="err">。</span><span class="n">在数据集较大</span><span class="err">、</span><span class="n">CPU性能不够强悍时fork</span><span class="p">()</span><span class="n">调用可能很耗时从而会导致Re</span><span class="w"></span>
+<span class="n">dis在几毫秒甚至一秒中的时间内不能服务clients</span><span class="err">。</span><span class="n">AOF也需要调用fork</span><span class="p">()</span><span class="n">但却可以在不影响数据持久性的条件下调整重写logs的频率</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">AOF优点</span><span class="w"></span>
+<span class="n">使用AOF方式时Redis持久化更可靠</span><span class="err">：</span><span class="n">有三种不同的fsync策略供选择</span><span class="err">：</span><span class="k">no</span><span class="w"> </span><span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="ow">all</span><span class="err">、</span><span class="n">fsync</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="k">second</span><span class="err">、</span><span class="w"> </span><span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="n">query</span><span class="err">。</span><span class="w"></span>
+<span class="n">默认为fsync</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="n">second此时的写性能仍然很好</span><span class="err">，</span><span class="n">且最坏的情况下可能丢失一秒钟的写操作</span><span class="err">。</span><span class="w"></span>
+<span class="n">AOF日志是append</span><span class="w"> </span><span class="n">only方式产生的日志</span><span class="err">，</span><span class="n">因此不存在随机访问问题以及意外断电时造成的损毁问题</span><span class="err">。</span><span class="n">即使出于某种原因</span><span class="err">（</span><span class="n">如磁盘满</span><span class="err">）</span><span class="n">日志以一个</span><span class="w"></span>
+<span class="n">写了一半的命令结尾</span><span class="err">，</span><span class="n">仍可以使用redis</span><span class="o">-</span><span class="k">check</span><span class="o">-</span><span class="n">aof工具快速进行修复</span><span class="err">。</span><span class="w"></span>
+<span class="n">当AOF日志逐渐变大后</span><span class="err">，</span><span class="n">Redis可在后台自动的重写AOF日志</span><span class="err">。</span><span class="n">当Redis在继续追加旧的AOF日志文件时重写日志是完全安全的</span><span class="err">。</span><span class="n">Redis利用可以重</span><span class="w"></span>
+<span class="n">建当前数据集的最少的命令产生一个全新的日志文件</span><span class="err">，</span><span class="n">一旦新的日志文件创建完成Redis开始向新的日志文件追加日志</span><span class="err">。</span><span class="w"></span>
+<span class="n">AOF日志的格式易于理解易于解析</span><span class="err">。</span><span class="n">这在某些场景非常有用</span><span class="err">。</span><span class="n">比如</span><span class="err">，</span><span class="n">不下心使用FLUSHALL命令清空了所有的数据</span><span class="err">，</span><span class="n">同时AOF日志没有发生重写操作</span><span class="w"></span>
+<span class="err">，</span><span class="n">那么就可以简单的通过停止Redis</span><span class="w"> </span><span class="n">Server移除日志中的最后一条FLUSHALL命令重启Redis</span><span class="w"> </span><span class="n">Server来恢复数据</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">AOF缺点</span><span class="w"></span>
+<span class="n">同样的数据集AOF文件要比RDB文件大很多</span><span class="err">。</span><span class="w"></span>
+<span class="n">根据使用的fsync方式不同AOF可能比RDB慢很多</span><span class="err">。</span><span class="n">在使用no</span><span class="w"> </span><span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">all时AOF的性能基本与RDB持平</span><span class="err">，</span><span class="n">在使用fsync</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="n">second时性能有</span><span class="w"></span>
+<span class="n">所下降但仍然较高</span><span class="err">，</span><span class="n">在使用</span><span class="w"> </span><span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="n">query时性能较低</span><span class="err">。</span><span class="n">然而RDB方式却能在高负载的情况下保证延迟尽可能小</span><span class="err">。</span><span class="w"></span>
+<span class="n">一些特定的命令可能存在bug从而导致重载AOF日志时不能重建出完全一样的数据集</span><span class="err">。</span><span class="n">这样的bugs非常非常罕见</span><span class="err">，</span><span class="n">已经通过测试套件做了充分的测</span><span class="w"></span>
+<span class="n">试</span><span class="err">。</span><span class="n">这种类型的bugs对于RDB来说几乎是不可能的</span><span class="err">。</span><span class="n">说的更清晰一点</span><span class="err">：</span><span class="n">Redis</span><span class="w"> </span><span class="n">AOF增量的更新既存的状态而RDB快照每次都重新创建</span><span class="err">，</span><span class="n">从概念上讲</span><span class="w"></span>
+<span class="n">RDB方式更加健壮</span><span class="err">。</span><span class="n">然而</span><span class="err">，</span><span class="n">需要注意两点</span><span class="err">：</span><span class="n">每次AOF日志被Redis重写的时候日志由包含数据集的实际数据重新生成</span><span class="err">，</span><span class="n">与追加AOF文件的方式相比该</span><span class="w"></span>
+<span class="n">方式能有效减少bugs出现的概率</span><span class="err">；</span><span class="n">现实的应用场景中还未收到过任何用户关于AOF损毁的报告</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">如何选择持久化方式</span><span class="err">？</span><span class="w"></span>
+<span class="n">取决于具体的应用场景</span><span class="err">，</span><span class="n">通常</span><span class="err">，</span><span class="n">两种方式可同时使用</span><span class="err">。</span><span class="n">若比较关心数据但仍能忍受几分钟的数据丢失</span><span class="err">，</span><span class="n">那么可以简单的使用RDB方式</span><span class="err">。</span><span class="n">有许多用户</span><span class="w"></span>
+<span class="n">只使用AOF方式</span><span class="err">，</span><span class="n">不建议这种做法</span><span class="err">，</span><span class="n">一方面以一定时间间隔创建RDB快照是创建数据备份并快速恢复数据的极好的办法</span><span class="err">，</span><span class="n">一方面可以避免AOF方式</span><span class="w"></span>
+<span class="n">可能存在的bugs</span><span class="err">。</span><span class="n">出于上述原因</span><span class="err">，</span><span class="n">将来可能将AOF和RDB方式合二为一</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">RDB持久化设置</span><span class="w"></span>
+<span class="n">默认情况下Redis在磁盘上创建二进制格式的命名为dump</span><span class="p">.</span><span class="n">rdb的数据快照</span><span class="err">。</span><span class="n">可以通过配置文件配置每隔N秒且数据集上至少有M个变化时创建快照</span><span class="err">、</span><span class="w"></span>
+<span class="n">是否对数据进行压缩</span><span class="err">、</span><span class="n">快照名称</span><span class="err">、</span><span class="n">存放快照的工作目录</span><span class="err">。</span><span class="n">redis</span><span class="w"> </span><span class="mf">2.4.10</span><span class="n">的默认配置如下</span><span class="err">：</span><span class="w"></span>
+<span class="o">[</span><span class="n">plain</span><span class="o">]</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">plain</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">在CODE上查看代码片派生到我的代码片</span><span class="w"></span>
+<span class="n">#900秒后且至少1个key发生变化时创建快照</span><span class="w"> </span>
+<span class="k">save</span><span class="w"> </span><span class="mi">900</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span>
+<span class="n">#300秒后且至少10个key发生变化时创建快照</span><span class="w"> </span>
+<span class="k">save</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span>
+<span class="n">#60秒后且至少10000个key发生变化时创建快照</span><span class="w"> </span>
+<span class="k">save</span><span class="w"> </span><span class="mi">60</span><span class="w"> </span><span class="mi">10000</span><span class="w"> </span>
+<span class="n">#可通过注释所有save开头的行来禁用RDB持久化</span><span class="w"> </span>
+<span class="n">#创建快照时对数据进行压缩</span><span class="w"> </span>
+<span class="n">rdbcompression</span><span class="w"> </span><span class="n">yes</span><span class="w"> </span>
+<span class="n">#快照名称</span><span class="w"> </span>
+<span class="n">dbfilename</span><span class="w"> </span><span class="k">dump</span><span class="p">.</span><span class="n">rdb</span><span class="w"> </span>
+<span class="n">#存放快照的目录</span><span class="err">（</span><span class="n">AOF文件也会被存放在此目录</span><span class="err">）</span><span class="w"> </span>
+<span class="n">dir</span><span class="w"> </span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="w"> </span>
+<span class="n">关于配置参数的详细信息可参阅redis</span><span class="p">.</span><span class="n">conf中的说明</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">除了通过配置文件进行设置外也可以通过手工执行命令来创建快照</span><span class="w"></span>
+<span class="n">SAVE命令执行一个同步操作</span><span class="err">，</span><span class="n">以RDB文件的方式保存实例中所有数据的快照</span><span class="err">。</span><span class="n">一般不在生产环境直接使用SAVE</span><span class="w"> </span><span class="n">命令</span><span class="err">，</span><span class="n">因为会阻塞所有的</span><span class="w"></span>
+<span class="n">客户端的请求</span><span class="err">，</span><span class="n">可以使用BGSAVE命令代替</span><span class="err">。</span><span class="n">BGSAVE后台创建数据快照</span><span class="err">。</span><span class="n">命名执行结果的状态码会立即返回</span><span class="err">。</span><span class="n">Redis开辟一个子进程</span><span class="err">，</span><span class="n">父进程</span><span class="w"></span>
+<span class="n">继续相应客户端请求</span><span class="err">，</span><span class="n">子进程保存DB到磁盘后退出</span><span class="err">。</span><span class="n">客户端可通过执行LASTSAVE命令检查操作是否成功</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">创建RDB快照的工作流程</span><span class="w"></span>
+<span class="n">Redis需dump数据集到磁盘时会执行下列过程</span><span class="err">：</span><span class="w"></span>
+<span class="n">Redis</span><span class="w"> </span><span class="n">forks一个子进程</span><span class="err">；</span><span class="w"></span>
+<span class="n">子进程写数据集到临时的RDB文件</span><span class="err">；</span><span class="w"></span>
+<span class="n">子进程写完新的RDB文件后替换旧的RDB文件</span><span class="err">。</span><span class="w"></span>
+<span class="n">该方式使Redis可以利用copy</span><span class="o">-</span><span class="k">on</span><span class="o">-</span><span class="n">write机制的好处</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">AOF持久化设置</span><span class="w"></span>
+<span class="n">利用快照的持久化方式不是非常可靠</span><span class="err">，</span><span class="n">当运行Redis的计算机停止工作</span><span class="err">、</span><span class="n">意外掉电</span><span class="err">、</span><span class="n">意外杀掉了Redis进程那么最近写入Redis的数据将会</span><span class="w"></span>
+<span class="n">丢</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">对于某些应用这或许不成问题</span><span class="err">，</span><span class="n">但对于持久化要求非常高的应用场景快照方式不是理想的选择</span><span class="err">。</span><span class="n">AOF文件是一个替代方案</span><span class="err">，</span><span class="n">用以最大限度</span><span class="w"></span>
+<span class="n">的持久化数据</span><span class="err">。</span><span class="n">同样</span><span class="err">，</span><span class="n">可以通过配置文件来开闭AOF</span><span class="err">：</span><span class="w"></span>
+<span class="o">[</span><span class="n">plain</span><span class="o">]</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">plain</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">在CODE上查看代码片派生到我的代码片</span><span class="w"></span>
+<span class="n">#关闭AOF</span><span class="w"> </span>
+<span class="n">appendonly</span><span class="w"> </span><span class="k">no</span><span class="w"> </span>
+<span class="n">#打开AOF</span><span class="w"> </span>
+<span class="n">appendonly</span><span class="w"> </span><span class="n">yes</span><span class="w"> </span>
+<span class="n">当设置appendonly为yes后</span><span class="err">，</span><span class="n">每次Redis接收到的改变数据集的命令都会被追加到AOF文件</span><span class="err">。</span><span class="n">重启Redis后会重放AOF文件来重建数据</span><span class="err">。</span><span class="w"></span>
+<span class="n">还可以通过配置文件配置AOF文件名</span><span class="err">、</span><span class="n">调用fsync的频率</span><span class="err">、</span><span class="n">调用fsync的行为</span><span class="err">、</span><span class="n">重写AOF的条件</span><span class="err">。</span><span class="n">redis</span><span class="w"> </span><span class="mf">2.4.10</span><span class="n">的默认配置如下</span><span class="err">：</span><span class="w"></span>
+<span class="o">[</span><span class="n">plain</span><span class="o">]</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">plain</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="n">在CODE上查看代码片派生到我的代码片</span><span class="w"></span>
+<span class="n">#默认AOF文件名</span><span class="w"> </span>
+<span class="n">appendfilename</span><span class="w"> </span><span class="n">appendonly</span><span class="p">.</span><span class="n">aof</span><span class="w"> </span>
+<span class="n">#每秒调用一次fsync刷新数据到磁盘</span><span class="w"> </span>
+<span class="n">appendfsync</span><span class="w"> </span><span class="n">everysec</span><span class="w"> </span>
+<span class="n">#当进程中BGSAVE或BGREWRITEAOF命令正在执行时不阻止主进程中的fsync</span><span class="p">()</span><span class="n">调用</span><span class="err">（</span><span class="n">默认为no</span><span class="err">，</span><span class="n">当存在延迟问题时需调整为yes</span><span class="err">）</span><span class="w"> </span>
+<span class="k">no</span><span class="o">-</span><span class="n">appendfsync</span><span class="o">-</span><span class="k">on</span><span class="o">-</span><span class="n">rewrite</span><span class="w"> </span><span class="k">no</span><span class="w"> </span>
+<span class="n">#当AOF增长率为100</span><span class="o">%</span><span class="n">且达到了64mb时开始自动重写AOF</span><span class="w"> </span>
+<span class="n">auto</span><span class="o">-</span><span class="n">aof</span><span class="o">-</span><span class="n">rewrite</span><span class="o">-</span><span class="n">percentage</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span>
+<span class="n">auto</span><span class="o">-</span><span class="n">aof</span><span class="o">-</span><span class="n">rewrite</span><span class="o">-</span><span class="nf">min</span><span class="o">-</span><span class="k">size</span><span class="w"> </span><span class="mi">64</span><span class="n">mb</span><span class="w"> </span>
+<span class="n">各参数含义可参阅redis</span><span class="p">.</span><span class="n">conf中详细说明</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">几点说明</span><span class="w"></span>
+<span class="n">日志重写</span><span class="w"></span>
+<span class="n">随着Redis接收到的命令的增加AOF文件会变得越来越大</span><span class="err">。</span><span class="n">Redis支持日志重写特性</span><span class="err">，</span><span class="n">可以在不影响响应客户端的前提下在后台重构AOF文</span><span class="w"></span>
+<span class="n">件</span><span class="err">。</span><span class="n">当在Redis中执行BGREWRITEAOF后Redis将使用构建数据集所需的最少的命令来重构日志文件</span><span class="err">。</span><span class="n">Redis2</span><span class="mf">.2</span><span class="n">中需要经常手动运行</span><span class="w"></span>
+<span class="n">BGREWRITEAOF</span><span class="p">,</span><span class="n">Redis2</span><span class="mf">.2</span><span class="n">开始支持自动触发日志重写</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">日志重写同样使用copy</span><span class="o">-</span><span class="k">on</span><span class="o">-</span><span class="n">write机制</span><span class="err">，</span><span class="n">流程大致如下</span><span class="err">：</span><span class="w"></span>
+<span class="n">Redis开辟一个子进程</span><span class="err">；</span><span class="w"></span>
+<span class="n">子进程在临时文件中写新的AOF文件</span><span class="err">；</span><span class="w"></span>
+<span class="n">父进程将所有新的更改缓存在memory中</span><span class="err">（</span><span class="n">同时新更改被写入旧的AOF</span><span class="err">，</span><span class="n">这样即使重写操作失败了也是安全的</span><span class="err">）；</span><span class="w"></span>
+<span class="n">在子进程重写好临时AOF后父进程收到一个信号并追加memory中缓冲的更改到子进程产生的临时文件的末尾</span><span class="err">；</span><span class="w"></span>
+<span class="n">Redis进行文件重命名用新的文件替换旧的文件并开始追加新的数据到新文件</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">fsync调用模式</span><span class="w"></span>
+<span class="n">该模式决定了Redis刷新数据到磁盘的频率</span><span class="err">，</span><span class="n">有三个可选项</span><span class="err">：</span><span class="w"></span>
+<span class="k">no</span><span class="w"> </span><span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">全由操作系统决定刷数据的时机</span><span class="err">。</span><span class="n">最快但最不安全</span><span class="err">。</span><span class="w"></span>
+<span class="n">fsync</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="k">second</span><span class="w"> </span><span class="n">每秒一次刷新</span><span class="err">。</span><span class="n">足够快</span><span class="err">，</span><span class="n">最多可丢失一秒的数据</span><span class="err">。</span><span class="w"></span>
+<span class="n">fsync</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">每次记录一条新的命令到AOF便刷一次数据到磁盘</span><span class="err">。</span><span class="n">最慢但最安全</span><span class="err">。</span><span class="w"></span>
+<span class="n">默认策略</span><span class="err">（</span><span class="n">也是默认策略</span><span class="err">）</span><span class="n">为fsync</span><span class="w"> </span><span class="k">every</span><span class="w"> </span><span class="k">second</span><span class="w"></span>
+
+<span class="n">AOF损坏时的对策</span><span class="w"></span>
+<span class="n">若在写AOF文件时Server崩溃则可能导致AOF文件损坏而不能被Redis载入</span><span class="err">。</span><span class="n">可通过如下步骤修复</span><span class="err">：</span><span class="w"></span>
+<span class="n">创建一个AOF文件的备份</span><span class="err">；</span><span class="w"></span>
+<span class="n">使用redis</span><span class="o">-</span><span class="k">check</span><span class="o">-</span><span class="n">aof工具修复原始的AOF文件</span><span class="err">；</span><span class="w"></span>
+<span class="err">$</span><span class="w"> </span><span class="n">redis</span><span class="o">-</span><span class="k">check</span><span class="o">-</span><span class="n">aof</span><span class="w"> </span><span class="c1">--fix</span>
+<span class="n">使用diff</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">检查备份文件和修复后文件的异同</span><span class="err">（</span><span class="n">可选步骤</span><span class="err">）；</span><span class="w"></span>
+<span class="n">使用修复后的AOF文件重启Redis</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">如何由RDB持久化转换到AOF持久化</span><span class="err">？</span><span class="w"></span>
+<span class="n">Redis</span><span class="w"> </span><span class="o">&gt;=</span><span class="mf">2.2</span><span class="n">时</span><span class="w"></span>
+<span class="n">创建最近的RDB文件的备份</span><span class="err">；</span><span class="w"></span>
+<span class="n">将备份保存在安全的位置</span><span class="err">；</span><span class="w"></span>
+<span class="n">发起如下命令</span><span class="err">；</span><span class="w"></span>
+<span class="err">$</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">appendonly</span><span class="w"> </span><span class="n">yes</span><span class="w"></span>
+<span class="err">$</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="k">save</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="err">（</span><span class="n">可选</span><span class="err">，</span><span class="n">若不执行RDB和AOF方式将并存</span><span class="err">）</span><span class="w"></span>
+<span class="n">确认数据库包含相同的keys</span><span class="err">；</span><span class="w"></span>
+<span class="n">确认write操作被正确追加到了AOF文件</span><span class="err">。</span><span class="w"></span>
+<span class="n">注意事项</span><span class="err">：</span><span class="n">记得修改redis</span><span class="p">.</span><span class="n">conf中对应的配置以免Redis</span><span class="w"> </span><span class="n">Server重启后通过命令进行的配置更新丢失而重新使用旧的配置文件中配置</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">Redis2</span><span class="mf">.0</span><span class="n">时</span><span class="w"></span>
+<span class="n">创建最近的RDB文件的备份</span><span class="err">；</span><span class="w"></span>
+<span class="n">将备份存放在安全的位置</span><span class="err">；</span><span class="w"></span>
+<span class="n">停止数据库上的所有写操作</span><span class="err">；</span><span class="w"></span>
+<span class="n">发起</span><span class="w"> </span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="w"> </span><span class="n">bgrewriteaof命令创建AOF文件</span><span class="err">；</span><span class="w"></span>
+<span class="n">当AOF文件生成后停止Redis</span><span class="w"> </span><span class="n">Server</span><span class="err">；</span><span class="w"></span>
+<span class="n">编辑redis</span><span class="p">.</span><span class="n">conf开启AOF持久化</span><span class="err">；</span><span class="w"></span>
+<span class="n">重启Redis</span><span class="w"> </span><span class="n">Server</span><span class="err">；</span><span class="w"></span>
+<span class="n">确认数据库包含相同的keys</span><span class="err">；</span><span class="w"></span>
+<span class="n">确认write操作被正确追加到了AOF文件</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">AOF与RDB之间的相互影响</span><span class="w"></span>
+<span class="n">Redis2</span><span class="mf">.4</span><span class="n">以上的版本会确保在RDB快照创建时不触发AOF重写或者在AOF重写时不允许BGSAVE操作</span><span class="err">，</span><span class="n">以避免Redis后台进程同时做繁重</span><span class="w"></span>
+<span class="n">的磁盘I</span><span class="o">/</span><span class="n">O操作</span><span class="err">。</span><span class="w"></span>
+<span class="n">当创建RDB快照时对于用户使用BGREWRITEAOF明确发起的日志重写操作server会立刻回应一个ok状态码告知用户操作将回被执行</span><span class="err">，</span><span class="n">当且</span><span class="w"></span>
+<span class="n">仅当快照创建完成后重写操作开始被执行</span><span class="err">。</span><span class="w"></span>
+<span class="n">在同时使用了AOF和RDB方式的情况下</span><span class="err">，</span><span class="n">Redis重启后会优先使用AOF文件来重构原始数据集</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">备份Redis</span><span class="w"> </span><span class="n">数据</span><span class="w"></span>
+<span class="n">务必做好数据备份以防意外丢失</span><span class="err">。</span><span class="n">Redis是备份友好的</span><span class="err">，</span><span class="n">可在数据库运行时拷贝RDB文件</span><span class="err">。</span><span class="n">建议的备份方案</span><span class="err">：</span><span class="w"></span>
+<span class="n">创建一个cron作业在一个目录中每小时创建一次RDB快照在另一目录中每天创建一次RDB快照</span><span class="err">；</span><span class="w"></span>
+<span class="n">cron作业每次运行的时候使用find命令确保过时的RDB快照文件被清理掉</span><span class="err">（</span><span class="n">可以通过在快照命中包含数据和时间信息来进行标记</span><span class="err">）；</span><span class="w"></span>
+<span class="n">确保将RDB快照转移到外部的数据中心或者至少是运行Redis实例的物理机之外的机器</span><span class="err">（</span><span class="n">至少每天一次</span><span class="err">）。</span><span class="w"></span>
+
+<span class="n">灾难恢复</span><span class="w"></span>
+<span class="n">在Redis中灾难恢复和数据备份基本上是同样的过程</span><span class="err">。</span><span class="n">可考虑将备份分布到不同的远程数据中心以最大限度的避免数据丢失</span><span class="err">。</span><span class="n">几种低成</span><span class="w"></span>
+<span class="n">本的灾难恢复计划</span><span class="err">：</span><span class="w"></span>
+<span class="n">Amazon</span><span class="w"> </span><span class="n">S3或其它类似服务是很好的选择</span><span class="err">。</span><span class="n">可将每天会每小时的RDB快照以加密的方式</span><span class="err">（</span><span class="n">可使用gpg</span><span class="w"> </span><span class="o">-</span><span class="n">c加密</span><span class="err">）</span><span class="n">传输到S3</span><span class="err">。</span><span class="n">确保将密码存</span><span class="w"></span>
+<span class="n">储在不同的安全的地方</span><span class="err">。</span><span class="n">建议使用不同的存储服务以提高数据安全性</span><span class="err">。</span><span class="w"></span>
+<span class="n">使用SCP命令将快照传输到远程服务器</span><span class="err">。</span><span class="n">最简单和安全的方式</span><span class="err">：</span><span class="n">获取一个小的远程VPS</span><span class="err">，</span><span class="n">在其上安装ssh</span><span class="err">，</span><span class="n">生成无密码的ssh</span><span class="w"> </span><span class="n">client</span><span class="w"> </span>
+<span class="n">key添加到VPS的authorized_keys文件</span><span class="err">，</span><span class="n">此后便可使用SCP传输备份到VPS了</span><span class="err">。</span><span class="n">建议搞两个不同的VPS以提高安全性</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">需要注意的是</span><span class="err">，</span><span class="n">文件传输完成后一定要校验文件的完整性正确性</span><span class="err">。</span><span class="n">可通过MD5或SHA1进行验证</span><span class="err">。</span><span class="n">另外需要搭建一套告警系统</span><span class="err">，</span><span class="n">当</span><span class="w"></span>
+<span class="n">备份传输发生问题时能及时的告知</span><span class="err">。</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="redis_1">Redis的复制及集群搭建</h2>
+<div class="codehilite"><pre><span></span><span class="n">Redis</span><span class="err">的复制及</span><span class="n">Redis</span><span class="err">优缺点和集群搭建</span>
+<span class="n">Redis</span><span class="err">复制流程概述</span>
+<span class="n">Redis</span><span class="err">的复制功能是完全建立在之前我们讨论过的基于内存快照的持久化策略基础上的，也就是说无论你的持久化策略选择的是什么，</span>
+<span class="err">只要用到了</span> <span class="n">Redis</span><span class="err">的复制功能，就一定会有内存快照发生，那么首先要注意你的系统内存容量规划，原因可以参考我上一篇文章中提到</span>
+<span class="err">的</span><span class="n">Redis</span><span class="err">磁盘</span><span class="n">IO</span><span class="err">问题。</span>
+<span class="n">Redis</span><span class="err">复制流程在</span><span class="n">Slave</span><span class="err">和</span><span class="n">Master</span><span class="err">端各自是一套状态机流转，涉及的状态信息是：</span>
+<span class="n">Slave</span> <span class="err">端：</span>
+<span class="n">REDIS_REPL_NONE</span>
+<span class="n">REDIS_REPL_CONNECT</span>
+<span class="n">REDIS_REPL_CONNECTED</span> 
+<span class="n">Master</span><span class="err">端：</span>
+<span class="n">REDIS_REPL_WAIT_BGSAVE_START</span>
+<span class="n">REDIS_REPL_WAIT_BGSAVE_END</span>
+<span class="n">REDIS_REPL_SEND_BULK</span>
+<span class="n">REDIS_REPL_ONLINE</span>
+<span class="err">整个状态机流程过程如下：</span>
+<span class="n">Slave</span><span class="err">端在配置文件中添加了</span><span class="n">slave</span> <span class="k">of</span><span class="err">指令，于是</span><span class="n">Slave</span><span class="err">启动时读取配置文件，初始状态为</span><span class="n">REDIS_REPL_CONNECT</span><span class="err">。</span>
+<span class="n">Slave</span><span class="err">端在定时任务</span><span class="n">serverCron</span><span class="p">(</span><span class="n">Redis</span><span class="err">内部的定时器触发事件</span><span class="p">)</span><span class="err">中连接</span><span class="n">Master</span><span class="err">，发送</span><span class="n">sync</span><span class="err">命令，然后阻塞等待</span><span class="n">master</span><span class="err">发送回其内存</span>
+<span class="err">快照文件</span><span class="p">(</span><span class="err">最新版的</span><span class="n">Redis</span><span class="err">已经不需要让</span><span class="n">Slave</span><span class="err">阻塞</span><span class="p">)</span><span class="err">。</span>
+<span class="n">Master</span><span class="err">端收到</span><span class="n">sync</span><span class="err">命令简单判断是否有正在进行的内存快照子进程，没有则立即开始内存快照，有则等待其结束，当快照完成后会</span>
+<span class="err">将该文件发送给</span><span class="n">Slave</span><span class="err">端。</span>
+<span class="n">Slave</span><span class="err">端接收</span><span class="n">Master</span><span class="err">发来的内存快照文件，保存到本地，待接收完成后，清空内存表，重新读取</span><span class="n">Master</span><span class="err">发来的内存快照文件，重建整</span>
+<span class="err">个内存表数据结构，并最终状态置位为</span> <span class="n">REDIS_REPL_CONNECTED</span><span class="err">状态，</span><span class="n">Slave</span><span class="err">状态机流转完成。</span>
+<span class="n">Master</span><span class="err">端在发送快照文件过程中，接收的任何会改变数据集的命令都会暂时先保存在</span><span class="n">Slave</span><span class="err">网络连接的发送缓存队列里（</span><span class="n">list</span><span class="err">数据结构），</span>
+<span class="err">待快照完成后，依次发给</span><span class="n">Slave</span><span class="p">,</span><span class="err">之后收到的命令相同处理，并将状态置位为</span> <span class="n">REDIS_REPL_ONLINE</span><span class="err">。</span>
+<span class="err">整个复制过程完成，流程如下图所示：</span>
+
+
+
+<span class="n">Redis</span><span class="err">复制机制的缺陷</span>
+<span class="err">从上面的流程可以看出，</span><span class="n">Slave</span><span class="err">从库在连接</span><span class="n">Master</span><span class="err">主库时，</span><span class="n">Master</span><span class="err">会进行内存快照，然后把整个快照文件发给</span><span class="n">Slave</span><span class="err">，也就是没有象</span><span class="n">M</span>
+<span class="n">ySQL</span><span class="err">那样有复制位置的概念，即无增量复制，这会给整个集群搭建带来非常多的问题。</span>
+<span class="err">比如一台线上正在运行的</span><span class="n">Master</span><span class="err">主库配置了一台从库进行简单读写分离，这时</span><span class="n">Slave</span><span class="err">由于网络或者其它原因与</span><span class="n">Master</span><span class="err">断开了连接，那么</span>
+<span class="err">当</span> <span class="n">Slave</span><span class="err">进行重新连接时，需要重新获取整个</span><span class="n">Master</span><span class="err">的内存快照，</span><span class="n">Slave</span><span class="err">所有数据跟着全部清除，然后重新建立整个内存表，一方面</span><span class="n">S</span>
+<span class="n">lave</span><span class="err">恢复的</span> <span class="err">时间会非常慢，另一方面也会给主库带来压力。</span>
+<span class="err">所以基于上述原因，如果你的</span><span class="n">Redis</span><span class="err">集群需要主从复制，那么最好事先配置好所有的从库，避免中途再去增加从库。</span>
+<span class="k">Cache</span><span class="err">还是</span><span class="k">Storage</span>
+<span class="err">在我们分析过了</span><span class="n">Redis</span><span class="err">的复制与持久化功能后，我们不难得出一个结论，实际上</span><span class="n">Redis</span><span class="err">目前发布的版本还都是一个单机版的思路，主要的</span>
+<span class="err">问题集中在，持久化方式不够成熟，复制机制存在比较大的缺陷，这时我们又开始重新思考</span><span class="n">Redis</span><span class="err">的定位：</span><span class="k">Cache</span><span class="err">还是</span><span class="k">Storage</span><span class="err">？</span>
+<span class="err">如果作为</span><span class="k">Cache</span><span class="err">的话，似乎除了有些非常特殊的业务场景，必须要使用</span><span class="n">Redis</span><span class="err">的某种数据结构之外，我们使用</span><span class="n">Memcached</span><span class="err">可能更合适，毕</span>
+<span class="err">竟</span><span class="n">Memcached</span><span class="err">无论客户端包和服务器本身更久经考验。</span>
+<span class="err">如果是作为存储</span><span class="k">Storage</span><span class="err">的话，我们面临的最大的问题是无论是持久化还是复制都没有办法解决</span><span class="n">Redis</span><span class="err">单点问题，即一台</span><span class="n">Redis</span><span class="err">挂掉了，没</span>
+<span class="err">有太好的办法能够快速的恢复，通常几十</span><span class="k">G</span><span class="err">的持久化数据，</span><span class="n">Redis</span><span class="err">重启加载需要几个小时的时间，而复制又有缺陷，如何解决呢？</span>
+<span class="n">Redis</span><span class="err">可扩展集群搭建</span><span class="mi">1</span><span class="p">.</span> <span class="err">主动复制避开</span><span class="n">Redis</span><span class="err">复制缺陷。</span>
+<span class="err">既然</span><span class="n">Redis</span><span class="err">的复制功能有缺陷，那么我们不妨放弃</span><span class="n">Redis</span><span class="err">本身提供的复制功能，我们可以采用主动复制的方式来搭建我们的集群环境。</span>
+<span class="err">所谓主动复制是指由业务端或者通过代理中间件对</span><span class="n">Redis</span><span class="err">存储的数据进行双写或多写，通过数据的多份存储来达到与复制相同的目的，</span>
+<span class="err">主动复制不仅限于</span> <span class="err">用在</span><span class="n">Redis</span><span class="err">集群上，目前很多公司采用主动复制的技术来解决</span><span class="n">MySQL</span><span class="err">主从之间复制的延迟问题，比如</span><span class="n">Twitter</span><span class="err">还专门</span>
+<span class="err">开发了用于复制和分区的中间件</span> <span class="n">gizzard</span><span class="p">(</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">twitter</span><span class="o">/</span><span class="n">gizzard</span><span class="p">)</span> <span class="err">。</span>
+<span class="err">主动复制虽然解决了被动复制的延迟问题，但也带来了新的问题，就是数据的一致性问题，数据写</span><span class="mi">2</span><span class="err">次或多次，如何保证多份数据的一致</span>
+<span class="err">性呢？如果你的应用</span> <span class="err">对数据一致性要求不高，允许最终一致性的话，那么通常简单的解决方案是可以通过时间戳或者</span><span class="n">vector</span> <span class="n">clock</span><span class="err">等</span>
+<span class="err">方式，让客户端同时取到多份数据并进行校验，如果你的应用对数据一致性要求非常高，那么就需要引入一些复杂的一致性算法比如</span>
+<span class="n">Paxos</span><span class="err">来保证</span> <span class="err">数据的一致性，但是写入性能也会相应下降很多。</span>
+<span class="err">通过主动复制，数据多份存储我们也就不再担心</span><span class="n">Redis</span><span class="err">单点故障的问题了，如果一组</span><span class="n">Redis</span><span class="err">集群挂掉，我们可以让业务快速切换到另一</span>
+<span class="err">组</span><span class="n">Redis</span><span class="err">上，降低业务风险。</span>
+<span class="mi">2</span><span class="p">.</span> <span class="err">通过</span><span class="n">presharding</span><span class="err">进行</span><span class="n">Redis</span><span class="err">在线扩容。</span>
+<span class="err">通过主动复制我们解决了</span><span class="n">Redis</span><span class="err">单点故障问题，那么还有一个重要的问题需要解决：容量规划与在线扩容问题。</span>
+<span class="err">我们前面分析过</span><span class="n">Redis</span><span class="err">的适用场景是全部数据存储在内存中，而内存容量有限，那么首先需要根据业务数据量进行初步的容量规划，比</span>
+<span class="err">如你的业务数据需</span> <span class="err">要</span><span class="mi">100</span><span class="k">G</span><span class="err">存储空间，假设服务器内存是</span><span class="mi">48</span><span class="k">G</span><span class="err">，那么根据上一篇我们讨论的</span><span class="n">Redis</span><span class="err">磁盘</span><span class="n">IO</span><span class="err">的问题，我们大约需要</span><span class="mi">3</span><span class="o">~</span><span class="mi">4</span><span class="err">台服</span>
+<span class="err">务器来存储。这个实际是对现有</span> <span class="err">业务情况所做的一个容量规划，假如业务增长很快，很快就会发现当前的容量已经不够了，</span><span class="n">Redis</span><span class="err">里</span>
+<span class="err">面存储的数据很快就会超过物理内存大小，那么如何进行</span> <span class="n">Redis</span><span class="err">的在线扩容呢？</span>
+<span class="n">Redis</span><span class="err">的作者提出了一种叫做</span><span class="n">presharding</span><span class="err">的方案来解决动态扩容和数据分区的问题，实际就是在同一台机器上部署多个</span><span class="n">Redis</span><span class="err">实例的</span>
+<span class="err">方式，当容量不够时将多个实例拆分到不同的机器上，这样实际就达到了扩容的效果。</span>
+<span class="err">拆分过程如下：</span>
+<span class="err">在新机器上启动好对应端口的</span><span class="n">Redis</span><span class="err">实例。</span>
+<span class="err">配置新端口为待迁移端口的从库。</span>
+<span class="err">待复制完成，与主库完成同步后，切换所有客户端配置到新的从库的端口。</span>
+<span class="err">配置从库为新的主库。</span>
+<span class="err">移除老的端口实例。</span>
+<span class="err">重复上述过程迁移好所有的端口到指定服务器上。</span>
+<span class="err">以上拆分流程是</span><span class="n">Redis</span><span class="err">作者提出的一个平滑迁移的过程，不过该拆分方法还是很依赖</span><span class="n">Redis</span><span class="err">本身的复制功能的，如果主库快照数据文件</span>
+<span class="err">过大，这个复制的过程也会很久，同时会给主库带来压力。所以做这个拆分的过程最好选择为业务访问低峰时段进行。</span>
+<span class="n">Redis</span><span class="err">复制的改进思路</span>
+<span class="err">我们线上的系统使用了我们自己改进版的</span><span class="n">Redis</span><span class="p">,</span><span class="err">主要解决了</span><span class="n">Redis</span><span class="err">没有增量复制的缺陷，能够完成类似</span><span class="n">Mysql</span> <span class="n">Binlog</span><span class="err">那样可以通过从</span>
+<span class="err">库请求日志位置进行增量复制。</span>
+<span class="err">我们的持久化方案是首先写</span><span class="n">Redis</span><span class="err">的</span><span class="n">AOF</span><span class="err">文件，并对这个</span><span class="n">AOF</span><span class="err">文件按文件大小进行自动分割滚动，同时关闭</span><span class="n">Redis</span><span class="err">的</span><span class="n">Rewrite</span><span class="err">命令，然后</span>
+ <span class="err">会在业务低峰时间进行内存快照存储，并把当前的</span><span class="n">AOF</span><span class="err">文件位置一起写入到快照文件中，这样我们可以使快照文件与</span><span class="n">AOF</span><span class="err">文件的位置保持</span>
+ <span class="err">一致性，这样我们得到</span> <span class="err">了系统某一时刻的内存快照，并且同时也能知道这一时刻对应的</span><span class="n">AOF</span><span class="err">文件的位置，那么当从库发送同步命令时，</span>
+
+ <span class="err">我们首先会把快照文件发送给从库，然后从库会取</span> <span class="err">出该快照文件中存储的</span><span class="n">AOF</span><span class="err">文件位置，并将该位置发给主库，主库会随后发送该位置</span>
+ <span class="err">之后的所有命令，以后的复制就都是这个位置之后的增量信息了。</span>
+
+
+
+<span class="n">Redis</span><span class="err">与</span><span class="n">MySQL</span><span class="err">的结合</span>
+<span class="err">目前大部分互联网公司使用</span><span class="n">MySQL</span><span class="err">作为数据的主要持久化存储，那么如何让</span><span class="n">Redis</span><span class="err">与</span><span class="n">MySQL</span><span class="err">很好的结合在一起呢？我们主要使用了一种基</span>
+<span class="err">于</span><span class="n">MySQL</span><span class="err">作为主库，</span><span class="n">Redis</span><span class="err">作为高速数据查询从库的异构读写分离的方案。</span>
+<span class="err">为此我们专门开发了自己的</span><span class="n">MySQL</span><span class="err">复制工具，可以方便的实时同步</span><span class="n">MySQL</span><span class="err">中的数据到</span><span class="n">Redis</span><span class="err">上。</span>
+
+
+
+<span class="err">（</span><span class="n">MySQL</span><span class="o">-</span><span class="n">Redis</span> <span class="err">异构读写分离）</span>
+<span class="err">总结：</span>
+<span class="n">Redis</span><span class="err">的复制功能没有增量复制，每次重连都会把主库整个内存快照发给从库，所以需要避免向在线服务的压力较大的主库上增加从库。</span>
+<span class="n">Redis</span> <span class="err">的复制由于会使用快照持久化方式，所以如果你的</span><span class="n">Redis</span><span class="err">持久化方式选择的是日志追加方式</span><span class="p">(</span><span class="n">aof</span><span class="p">),</span><span class="err">那么系统有可能在同一时刻</span>
+<span class="err">既做</span><span class="n">aof</span><span class="err">日志文件的同步</span> <span class="err">刷写磁盘，又做快照写磁盘操作，这个时候</span><span class="n">Redis</span><span class="err">的响应能力会受到影响。所以如果选用</span><span class="n">aof</span><span class="err">持久化，则加从</span>
+<span class="err">库需要更加谨慎。</span>
+<span class="err">可以使用主动复制和</span><span class="n">presharding</span><span class="err">方法进行</span><span class="n">Redis</span><span class="err">集群搭建与在线扩容。</span>
+<span class="err">本文加上之前的</span><span class="mi">2</span><span class="err">篇文章基本将</span><span class="n">Redis</span><span class="err">的最常用功能和使用场景与优化进行了分析和讨论，实际</span><span class="n">Redis</span><span class="err">还有很多其它辅助的一些功能，</span>
+<span class="n">Redis</span><span class="err">的作者也在不断尝试新的思路，这里就不一一列举了，有兴趣的朋友可以研究下</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../memcached/" title="memcached" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                memcached
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../mongodb/" title="mongodb" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                mongodb
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1633 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>apache - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#apache" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                apache
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        apache
+      </label>
+    
+    <a href="./" title="apache" class="md-nav__link md-nav__link--active">
+      apache
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    apache反向代理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    代理跨域问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option" class="md-nav__link">
+    option指令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_1" class="md-nav__link">
+    apache用户认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache24" class="md-nav__link">
+    apache2.4语法变化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    php
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_2" class="md-nav__link">
+    apache虚拟主机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_3" class="md-nav__link">
+    apache安全
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_4" class="md-nav__link">
+    apache优化
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    apache反向代理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    代理跨域问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option" class="md-nav__link">
+    option指令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_1" class="md-nav__link">
+    apache用户认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache24" class="md-nav__link">
+    apache2.4语法变化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    php
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_2" class="md-nav__link">
+    apache虚拟主机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_3" class="md-nav__link">
+    apache安全
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache_4" class="md-nav__link">
+    apache优化
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>apache</h1>
+                
+                <h2 id="apache">apache反向代理</h2>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="n">VirtualHost</span> <span class="o">*:</span><span class="mi">80</span><span class="o">&gt;</span>
+    <span class="n">ServerAdmin</span> <span class="n">yunwei</span><span class="mi">@3</span><span class="n">mang</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">ServerName</span> <span class="n">log</span><span class="mf">.3</span><span class="n">mang</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">ProxyRequests</span> <span class="n">Off</span>
+    <span class="n">ProxyPreserveHost</span> <span class="n">On</span>
+    <span class="o">&lt;</span><span class="n">Proxy</span> <span class="o">*&gt;</span>
+        <span class="n">AuthType</span> <span class="n">Basic</span>
+        <span class="n">allowoverride</span> <span class="n">AuthConfig</span>
+        <span class="n">order</span> <span class="n">allow</span><span class="p">,</span><span class="n">deny</span>
+        <span class="n">allow</span> <span class="n">from</span> <span class="n">all</span>
+        <span class="n">AuthName</span> <span class="s">&quot;admin&quot;</span>
+        <span class="n">AuthUserFile</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">httpd</span><span class="o">/</span><span class="p">.</span><span class="n">htpassword</span>
+        <span class="n">require</span> <span class="n">valid</span><span class="o">-</span><span class="n">user</span>
+    <span class="o">&lt;/</span><span class="n">Proxy</span><span class="o">&gt;</span>
+    <span class="n">ProxyPass</span> <span class="o">/</span><span class="n">solr</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//127.0.0.1:8983/solr</span>
+    <span class="n">ProxyPass</span> <span class="o">/</span><span class="n">solr</span><span class="o">/</span><span class="n">admin</span><span class="o">/</span><span class="n">cores</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//127.0.0.1:8983/solr/admin/cores</span>
+    <span class="n">ProxyPassReverse</span> <span class="o">/</span><span class="n">solr</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//127.0.0.1:8983/solr</span>
+<span class="o">&lt;/</span><span class="n">VirtualHost</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<h2 id="_1">代理跨域问题</h2>
+<div class="codehilite"><pre><span></span><span class="n">http:</span>//<span class="n">www</span>.<span class="n">jianshu</span>.<span class="n">com</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="mi">699</span><span class="n">f158b218b</span>
+
+<span class="n">apache的配置</span>
+<span class="n">mod_proxy</span> <span class="n">支持转发代理和反向代理</span>，<span class="n">所以配置反向代理时首先需要关闭转发代理</span>，<span class="n">关闭方式见下面</span>
+<span class="n">配置示例备注</span>
+<span class="c1"># Put this after the other LoadModule directives</span>
+<span class="n">LoadModule</span> <span class="n">proxy_module</span> /<span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">mod_proxy</span>.<span class="o">so</span>
+<span class="n">LoadModule</span> <span class="n">proxy_http_module</span> /<span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">mod_proxy_http</span>.<span class="o">so</span>
+
+<span class="c1"># Put this in the main section of your configuration (or desired virtual host, if using </span>
+<span class="c1"># Apache virtual hosts)</span>
+<span class="c1"># 关闭转发代理</span>
+<span class="n">ProxyRequests</span> <span class="n">Off</span>
+<span class="c1"># 指定使用原始Http header的Host属性，在后端服务需要知道原始Host属性</span>
+<span class="c1"># 时会很有用，默认是关闭的</span>
+<span class="n">ProxyPreserveHost</span> <span class="n">On</span>
+<span class="n">Header</span> <span class="n">add</span> <span class="n">Access-Control-Allow-Origin</span> *
+<span class="n">Header</span> <span class="n">add</span> <span class="n">Access-Control-Allow-Methods</span> <span class="s">&quot;GET, POST, OPTIONS&quot;</span>
+<span class="n">Header</span> <span class="n">add</span> <span class="n">Access-Control-Allow-Headers</span> <span class="s">&quot;Content-Type&quot;</span>
+<span class="c1"># 对被代理资源的指令说明</span>
+<span class="s">&lt;Proxy *&gt;</span>
+    <span class="c1"># Order说明deny 和 allow的执行顺序</span>
+    <span class="c1"># 一般这个指令可以解释为默认应用xx规则除了yy规则之外</span>
+    <span class="c1"># xx和yy规则在Order下方指定</span>
+    <span class="n">Order</span> <span class="n">deny</span>,<span class="n">allow</span>
+    <span class="n">Allow</span> <span class="nb">from</span> <span class="nb">all</span>
+<span class="s">&lt;/Proxy&gt;</span>
+
+<span class="c1"># 激活针对特定地址的反向代理</span>
+<span class="n">ProxyPass</span> /<span class="n">confluence</span> <span class="n">http:</span>//<span class="n">app-server</span>.<span class="n">internal</span>.<span class="n">example</span>.<span class="n">com:8090</span><span class="o">/</span><span class="n">confluence</span>
+<span class="c1"># 这个指令会调整HTTP redirect response Header中的 Location, Content-Location 和 URI</span>
+ <span class="n">属性中的URL到代理服务器地址</span>
+<span class="c1"># 作为反向代理服务时强烈建议开启这个选项，避免透传请求到后端服务</span>
+<span class="n">ProxyPassReverse</span> /<span class="n">confluence</span> <span class="n">http:</span>//<span class="n">app-server</span>.<span class="n">internal</span>.<span class="n">example</span>.<span class="n">com:8090</span><span class="o">/</span><span class="n">confluence</span>
+<span class="c1"># 对新的url权限进行说明</span>
+<span class="s">&lt;Location /confluence&gt;</span>
+    <span class="n">Order</span> <span class="n">allow</span>,<span class="n">deny</span>
+    <span class="n">Allow</span> <span class="nb">from</span> <span class="nb">all</span>
+<span class="s">&lt;/Location&gt;</span>
+<span class="n">tomcat的配置</span>
+
+<span class="n">tomcat中的配置左右主要是告诉tomcat</span> <span class="n">redirect或者forward的时候使用代理地址</span>，<span class="n">而不是上一节点</span>
+<span class="n">所请求的实际服务器地址</span>，<span class="n">具体配置如下</span>
+
+<span class="s">&lt;Connector port=&quot;9080&quot; protocol=&quot;HTTP/1.1&quot;</span>
+<span class="s">               connectionTimeout=&quot;20000&quot;</span>
+<span class="s">               redirectPort=&quot;9443&quot;</span>
+<span class="s">    proxyName=&quot;sample.com&quot; proxyPort=&quot;80&quot;/&gt;</span>
+<span class="n">上面配置中的proxyName和proxyPort就是告诉tomcat代理服务器的地址和端口</span>。<span class="n">在servlet中可以通过</span>
+<span class="n">下面的代码获得这两个参数的值</span>
+
+<span class="n">request</span>.<span class="n">getServerName</span>();
+<span class="n">request</span>.<span class="n">getSreverPort</span>();
+</pre></div>
+
+
+<h2 id="option">option指令</h2>
+<div class="codehilite"><pre><span></span><span class="nv">Options</span>指令是<span class="nv">Apache</span>配置文件中一个比较常见也比较重要的指令，<span class="nv">Options</span>指令可以在<span class="nv">Apache</span>服务器
+核心配置<span class="ss">(</span><span class="nv">server</span> <span class="nv">config</span><span class="ss">)</span>、
+虚拟主机配置<span class="ss">(</span><span class="nv">virtual</span> <span class="nv">host</span><span class="ss">)</span>、特定目录配置<span class="ss">(</span><span class="nv">directory</span><span class="ss">)</span>以及.<span class="nv">htaccess</span>文件中使用。<span class="nv">Options</span>指令
+的主要作用是控制特定目录将
+启用哪些服务器特性。
+
+<span class="nv">Options</span>指令常见的配置示例代码如下：
+
+<span class="o">&lt;</span><span class="nv">Directory</span> <span class="o">/&gt;</span>
+#指定根目录<span class="s2">&quot;</span><span class="s">/</span><span class="s2">&quot;</span>启用<span class="nv">Indexes</span>、<span class="nv">FollowSymLinks</span>两种特性。
+    <span class="nv">Options</span> <span class="nv">Indexes</span> <span class="nv">FollowSymLinks</span>
+    <span class="nv">AllowOverride</span> <span class="nv">all</span>
+    <span class="nv">Order</span> <span class="nv">allow</span>,<span class="nv">deny</span>
+    <span class="nv">Allow</span> <span class="nv">from</span> <span class="nv">all</span>
+<span class="o">&lt;/</span><span class="nv">Directory</span><span class="o">&gt;</span>
+<span class="nv">Options</span>指令的完整语法为：<span class="nv">Options</span> [<span class="o">+|-</span>]<span class="nv">option</span> [[<span class="o">+|-</span>]<span class="nv">option</span>] ...。简而言之，<span class="nv">Options</span>指令
+后可以附加指定多种服务器特性，
+特性选项之间以空格分隔。下面我们来看看<span class="nv">Options</span>指令后可以附加的特性选项的具体作用及含义
+<span class="ss">(</span><span class="nv">Apache</span>配置中的内容均不区分大小写<span class="ss">)</span>：
+
+<span class="nv">All</span>
+表示除<span class="nv">MultiViews</span>之外的所有特性。这也是<span class="nv">Options</span>指令的默认设置。
+<span class="nv">None</span>
+表示不启用任何的服务器特性。
+<span class="nv">FollowSymLinks</span>
+服务器允许在此目录中使用符号连接。如果该配置选项位于<span class="o">&lt;</span><span class="nv">Location</span><span class="o">&gt;</span>配置段中，将会被忽略。
+<span class="nv">Indexes</span>
+如果输入的网址对应服务器上的一个文件目录，而此目录中又没有<span class="nv">DirectoryIndex</span>指令<span class="ss">(</span>例如：
+<span class="nv">DirectoryIndex</span> <span class="nv">index</span>.<span class="nv">html</span> <span class="nv">index</span>.<span class="nv">php</span><span class="ss">)</span>，
+那么服务器会返回由<span class="nv">mod_autoindex</span>模块生成的一个格式化后的目录列表，并列出该目录下的
+所有文件<span class="ss">(</span>如下图<span class="ss">)</span>。
+<span class="nv">Options</span> <span class="nv">Indexes</span>指令作用效果
+
+<span class="nv">MultiViews</span>
+允许使用<span class="nv">mod_negotiation</span>模块提供内容协商的<span class="s2">&quot;</span><span class="s">多重视图</span><span class="s2">&quot;</span>。简而言之，如果客户端请求的路径
+可能对应多种类型的文件，那么服务器将根据
+客户端请求的具体情况自动选择一个最匹配客户端要求的文件。例如，在服务器站点的<span class="nv">file</span>文件
+夹下中存在名为<span class="nv">hello</span>.<span class="nv">jpg</span>和<span class="nv">hello</span>.<span class="nv">html</span>的
+两个文件，此时用户输入<span class="nv">Http</span>:<span class="o">//</span><span class="nv">localhost</span><span class="o">/</span><span class="nv">file</span><span class="o">/</span><span class="nv">hello</span>，如果在<span class="nv">file</span>文件夹下并没有<span class="nv">hello</span>子
+目录，那么服务器将会尝试在<span class="nv">file</span>文件夹下
+查找形如<span class="nv">hello</span>.<span class="o">*</span>的文件，然后根据用户请求的具体情况返回最匹配要求的<span class="nv">hello</span>.<span class="nv">jpg</span>或者<span class="nv">hello</span>.<span class="nv">html</span>。
+<span class="nv">SymLinksIfOwnerMatch</span>
+服务器仅在符号连接与目标文件或目录的所有者具有相同的用户<span class="nv">ID</span>时才使用它。简而言之，只有当
+符号连接和符号连接指向的目标文件或目录的所有者是同一用户时，才会使用符号连接。如果该配置
+选项位于<span class="o">&lt;</span><span class="nv">Location</span><span class="o">&gt;</span>配置段中，将会被忽略。
+<span class="nv">ExecCGI</span>
+允许使用<span class="nv">mod_cgi</span>模块执行<span class="nv">CGI</span>脚本。
+<span class="nv">Includes</span>
+允许使用<span class="nv">mod_include</span>模块提供的服务器端包含功能。
+<span class="nv">IncludesNOEXEC</span>
+允许服务器端包含，但禁用<span class="s2">&quot;</span><span class="s">#exec cmd</span><span class="s2">&quot;</span>和<span class="s2">&quot;</span><span class="s">#exec cgi</span><span class="s2">&quot;</span>。但仍可以从<span class="nv">ScriptAlias</span>目录使用
+<span class="s2">&quot;</span><span class="s">#include virtual</span><span class="s2">&quot;</span>虚拟<span class="nv">CGI</span>脚本。
+</pre></div>
+
+
+<h2 id="apache_1">apache用户认证</h2>
+<div class="codehilite"><pre><span></span>alias /phpredis &quot;/var/www/html/phpredis&quot;
+<span class="nt">&lt;Directory</span> <span class="err">/var/www/html/phpredis</span><span class="nt">&gt;</span>
+    Options Indexes MultiViews
+    AuthType basic
+    AuthName &quot;welcome test&quot;
+    AuthUserFile /etc/httpd/.htpasswd
+    require valid-user = user test  #如有其它用户以此 列在 test 之后
+<span class="nt">&lt;/Directory&gt;</span>
+
+htpasswd -c /etc/httpd/.htpasswd 用户名
+#第一次创建用户要用到-c 参数 第2次添加用户，就不用-c参数
+htpasswd -m .htpasswd 用户名 更改密码
+htpasswd -D .htpasswd 用户名 删除用户
+重启apache
+
+==================================
+通过用户组方式访问
+alias /test01 &quot;/data/web/test01/&quot;
+<span class="nt">&lt;Directory</span> <span class="err">/data/web/test01</span><span class="nt">&gt;</span>
+　　Options Indexes MultiViews
+　　AuthType basic
+　　AuthName &quot;welcome test&quot;
+　　AuthUserFile /etc/httpd/httppwd
+　　AuthGroupFile /etc/httpd/httpgrp #用户组文件路径
+　　require group admin #admin 是用户组
+<span class="nt">&lt;/Directory&gt;</span>
+
+创建用户组配置文件
+
+vi /etc/httpd/httpgrp  #创建路径与配置文件中指定文件相同
+
+内容如下：admin:test #注意test 是已经创建好的用户，如果该组中有其它用户，一次排列以空格隔开
+</pre></div>
+
+
+<h2 id="apache24">apache2.4语法变化</h2>
+<div class="codehilite"><pre><span></span><span class="nv">http</span>:<span class="o">//</span><span class="nv">httpd</span>.<span class="nv">apache</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="mi">2</span>.<span class="mi">4</span><span class="o">/</span><span class="nv">upgrading</span>.<span class="nv">html</span>
+
+
+<span class="nv">In</span> <span class="nv">this</span> <span class="nv">example</span>, <span class="nv">all</span> <span class="nv">requests</span> <span class="nv">are</span> <span class="nv">denied</span>.
+
+<span class="mi">2</span>.<span class="mi">2</span> <span class="nv">configuration</span>:
+
+<span class="nv">Order</span> <span class="nv">deny</span>,<span class="nv">allow</span>
+<span class="nv">Deny</span> <span class="nv">from</span> <span class="nv">all</span>
+<span class="mi">2</span>.<span class="mi">4</span> <span class="nv">configuration</span>:
+
+<span class="nv">Require</span> <span class="nv">all</span> <span class="nv">denied</span>
+<span class="nv">In</span> <span class="nv">this</span> <span class="nv">example</span>, <span class="nv">all</span> <span class="nv">requests</span> <span class="nv">are</span> <span class="nv">allowed</span>.
+
+<span class="mi">2</span>.<span class="mi">2</span> <span class="nv">configuration</span>:
+
+<span class="nv">Order</span> <span class="nv">allow</span>,<span class="nv">deny</span>
+<span class="nv">Allow</span> <span class="nv">from</span> <span class="nv">all</span>
+<span class="mi">2</span>.<span class="mi">4</span> <span class="nv">configuration</span>:
+
+<span class="nv">Require</span> <span class="nv">all</span> <span class="nv">granted</span>
+<span class="nv">In</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">example</span>, <span class="nv">all</span> <span class="nv">hosts</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">example</span>.<span class="nv">org</span> <span class="nv">domain</span> <span class="nv">are</span> <span class="nv">allowed</span> <span class="nv">access</span><span class="c1">; all other hosts are denied access.</span>
+
+<span class="mi">2</span>.<span class="mi">2</span> <span class="nv">configuration</span>:
+
+<span class="nv">Order</span> <span class="nv">Deny</span>,<span class="nv">Allow</span>
+<span class="nv">Deny</span> <span class="nv">from</span> <span class="nv">all</span>
+<span class="nv">Allow</span> <span class="nv">from</span> <span class="nv">example</span>.<span class="nv">org</span>
+<span class="mi">2</span>.<span class="mi">4</span> <span class="nv">configuration</span>:
+
+<span class="nv">Require</span> <span class="nv">host</span> <span class="nv">example</span>.<span class="nv">org</span>
+<span class="nv">In</span> <span class="nv">the</span> <span class="nv">following</span> <span class="nv">example</span>, <span class="nv">mixing</span> <span class="nv">old</span> <span class="nv">and</span> <span class="nv">new</span> <span class="nv">directives</span> <span class="nv">leads</span> <span class="nv">to</span> <span class="nv">unexpected</span> <span class="nv">results</span>.
+
+<span class="nv">Mixing</span> <span class="nv">old</span> <span class="nv">and</span> <span class="nv">new</span> <span class="nv">directives</span>: <span class="nv">NOT</span> <span class="nv">WORKING</span> <span class="nv">AS</span> <span class="nv">EXPECTED</span>
+
+<span class="nv">DocumentRoot</span> <span class="s2">&quot;</span><span class="s">/var/www/html</span><span class="s2">&quot;</span>
+
+<span class="o">&lt;</span><span class="nv">Directory</span> <span class="s2">&quot;</span><span class="s">/</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    <span class="nv">AllowOverride</span> <span class="nv">None</span>
+    <span class="nv">Order</span> <span class="nv">deny</span>,<span class="nv">allow</span>
+    <span class="nv">Deny</span> <span class="nv">from</span> <span class="nv">all</span>
+<span class="o">&lt;/</span><span class="nv">Directory</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="nv">Location</span> <span class="s2">&quot;</span><span class="s">/server-status</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    <span class="nv">SetHandler</span> <span class="nv">server</span><span class="o">-</span><span class="nv">status</span>
+    <span class="nv">Require</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+<span class="o">&lt;/</span><span class="nv">Location</span><span class="o">&gt;</span>
+
+<span class="nv">access</span>.<span class="nv">log</span> <span class="o">-</span> <span class="nv">GET</span> <span class="o">/</span><span class="nv">server</span><span class="o">-</span><span class="nv">status</span> <span class="mi">403</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+<span class="nv">error</span>.<span class="nv">log</span> <span class="o">-</span> <span class="nv">AH01797</span>: <span class="nv">client</span> <span class="nv">denied</span> <span class="nv">by</span> <span class="nv">server</span> <span class="nv">configuration</span>: <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">www</span><span class="o">/</span><span class="nv">html</span><span class="o">/</span><span class="nv">server</span><span class="o">-</span><span class="nv">status</span>
+<span class="nv">Why</span> <span class="nv">httpd</span> <span class="nv">denies</span> <span class="nv">access</span> <span class="nv">to</span> <span class="nv">servers</span><span class="o">-</span><span class="nv">status</span> <span class="nv">even</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">configuration</span> <span class="nv">seems</span> <span class="nv">to</span> <span class="nv">allow</span> <span class="nv">it</span>? 
+<span class="nv">Because</span> <span class="nv">mod_access_compat</span> <span class="nv">directives</span> <span class="nv">take</span> <span class="nv">precedence</span> <span class="nv">over</span> <span class="nv">the</span> 
+<span class="nv">mod_authz_host</span> <span class="nv">one</span> <span class="nv">in</span> <span class="nv">this</span> <span class="nv">configuration</span> <span class="nv">merge</span> <span class="nv">scenario</span>.
+
+<span class="nv">This</span> <span class="nv">example</span> <span class="nv">conversely</span> <span class="nv">works</span> <span class="nv">as</span> <span class="nv">expected</span>:
+
+<span class="nv">Mixing</span> <span class="nv">old</span> <span class="nv">and</span> <span class="nv">new</span> <span class="nv">directives</span>: <span class="nv">WORKING</span> <span class="nv">AS</span> <span class="nv">EXPECTED</span>
+
+<span class="nv">DocumentRoot</span> <span class="s2">&quot;</span><span class="s">/var/www/html</span><span class="s2">&quot;</span>
+
+<span class="o">&lt;</span><span class="nv">Directory</span> <span class="s2">&quot;</span><span class="s">/</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    <span class="nv">AllowOverride</span> <span class="nv">None</span>
+    <span class="nv">Require</span> <span class="nv">all</span> <span class="nv">denied</span>
+<span class="o">&lt;/</span><span class="nv">Directory</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="nv">Location</span> <span class="s2">&quot;</span><span class="s">/server-status</span><span class="s2">&quot;</span><span class="o">&gt;</span>
+    <span class="nv">SetHandler</span> <span class="nv">server</span><span class="o">-</span><span class="nv">status</span>
+    <span class="nv">Order</span> <span class="nv">deny</span>,<span class="nv">allow</span>
+    <span class="nv">Deny</span> <span class="nv">from</span> <span class="nv">all</span>
+    <span class="nv">Allow</span> <span class="nv">From</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+<span class="o">&lt;/</span><span class="nv">Location</span><span class="o">&gt;</span>
+
+<span class="nv">access</span>.<span class="nv">log</span> <span class="o">-</span> <span class="nv">GET</span> <span class="o">/</span><span class="nv">server</span><span class="o">-</span><span class="nv">status</span> <span class="mi">200</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+<span class="nv">So</span> <span class="nv">even</span> <span class="k">if</span> <span class="nv">mixing</span> <span class="nv">configuration</span> <span class="nv">is</span> <span class="nv">still</span> <span class="nv">possible</span>, <span class="nv">please</span> <span class="nv">try</span> <span class="nv">to</span> <span class="nv">avoid</span> <span class="nv">it</span>
+ <span class="nv">when</span> <span class="nv">upgrading</span>: <span class="nv">either</span> <span class="nv">keep</span> <span class="nv">old</span> 
+<span class="nv">directives</span> <span class="nv">and</span> <span class="k">then</span> <span class="nv">migrate</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">new</span> <span class="nv">ones</span> <span class="nv">on</span> <span class="nv">a</span> <span class="nv">later</span> <span class="nv">stage</span> <span class="nv">or</span> <span class="nv">just</span> <span class="nv">migrate</span> 
+<span class="nv">everything</span> <span class="nv">in</span> <span class="nv">bulk</span>.
+</pre></div>
+
+
+<h2 id="php">php</h2>
+<div class="codehilite"><pre><span></span><span class="nx">apache</span><span class="o">+</span><span class="nx">php</span>
+<span class="nx">php</span><span class="p">.</span><span class="nx">ini</span> <span class="nx">的</span> <span class="nx">short_open_tag</span> <span class="o">=</span> <span class="nx">Off改为</span>
+<span class="nx">short_open_tag</span> <span class="o">=</span> <span class="nx">On</span>
+<span class="nx">否则php的页面不生效</span>
+
+<span class="nx">index</span><span class="p">.</span><span class="nx">php</span>
+<span class="cp">&lt;?php</span><span class="nb">phpinfo</span><span class="p">();</span><span class="cp">?&gt;</span>
+</pre></div>
+
+
+<h2 id="apache_2">apache虚拟主机</h2>
+<div class="codehilite"><pre><span></span>修改/etc/httpd/conf/httpd.conf
+
+基于ip静态
+<span class="nt">&lt;VirtualHost</span> <span class="err">192.168.1.11:80</span><span class="nt">&gt;</span>
+　　ServerName www.test1.com
+　　DocumentRoot /www/test1/
+　　<span class="nt">&lt;Directory</span> <span class="err">&quot;/www/test1&quot;</span><span class="nt">&gt;</span>
+　　　　Options Indexes FollowSymLinks
+　　　　 AllowOverride None
+　　　　 Order allow,deny
+　　 　　Allow From All
+　 <span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+
+<span class="nt">&lt;VirtualHost</span> <span class="err">192.168.1.12:80</span><span class="nt">&gt;</span>
+　　ServerName www.test1.com
+　　DocumentRoot /www/test2/
+　　<span class="nt">&lt;Directory</span> <span class="err">&quot;/www/test2&quot;</span><span class="nt">&gt;</span>
+　　　　Options Indexes FollowSymLinks
+　　　　 AllowOverride None
+　　　　 Order allow,deny
+　　 　　Allow From All
+　 <span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+
+基于域名静态
+NameVirtualHost *:80
+<span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span>
+　　ServerName www.test1.com
+　　DocumentRoot /www/test1/
+　　<span class="nt">&lt;Directory</span> <span class="err">&quot;/www/test1&quot;</span><span class="nt">&gt;</span>
+　　　　Options Indexes FollowSymLinks
+　　　　AllowOverride None
+　　　　Order allow,deny
+　　　　Allow from all
+　　<span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+
+<span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span> 
+　　ServerName www.test2.com
+　　DocumentRoot /www/test2/
+　　<span class="nt">&lt;Directory</span> <span class="err">&quot;/www/test2&quot;</span><span class="nt">&gt;</span>
+　　　　Options Indexes FollowSymLinks
+　　　　AllowOverride None
+　　　　Order allow,deny
+　　　　Allow from all
+　　<span class="nt">&lt;/Directory&gt;</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+
+
+基于ip动态
+192.168.1.11            www.163.com
+192.168.1.22            www.263.com
+%1  %2  %3 %4       %1     %2  %3
+VirtualDocumentRootIP   /tmp/www/%4
+/tmp/www/11
+/tmp/www/22
+
+基于域名动态
+www.163.com            192.168.1.11
+www.263.com            192.168.1.12
+VirtualDocumentRoot   /tmp/www/%2
+/tmp/www/163
+/tmp/www/263
+
+www.163.com            192.168.1.11
+www.263.com            192.168.1.12
+mail.163.com
+VirtualDocumentRoot   /tmp/a/%1/%2
+/tmp/a/www/163
+/tmp/a/www/263
+/tmp/a/mail
+</pre></div>
+
+
+<h2 id="apache_3">apache安全</h2>
+<div class="codehilite"><pre><span></span><span class="n">关闭trace和track方法</span><span class="w"></span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">httpd</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">httpd</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">添加</span><span class="w"></span>
+<span class="n">TraceEnable</span><span class="w"> </span><span class="k">Off</span><span class="w"></span>
+<span class="n">RewriteEngine</span><span class="w"> </span><span class="k">on</span><span class="w"></span>
+<span class="n">RewriteCond</span><span class="w"> </span><span class="o">%</span><span class="err">{</span><span class="n">REQUEST_METHOD</span><span class="err">}</span><span class="w"> </span><span class="o">^</span><span class="p">(</span><span class="n">TRACE</span><span class="o">|</span><span class="n">TRACK</span><span class="p">)</span><span class="w"></span>
+<span class="n">RewriteRule</span><span class="w"> </span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="o">[</span><span class="n">F</span><span class="o">]</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="apache_4">apache优化</h2>
+<div class="codehilite"><pre><span></span><span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">httpd</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">httpd</span>.<span class="nv">conf</span>
+<span class="nv">MPM</span> 有两种工作方式：<span class="mi">1</span>、<span class="nv">worker</span> 线程 
+         <span class="mi">2</span>、<span class="nv">prefork</span> 进程时（一个连接产生一个进程）
+
+解压     <span class="nv">tar</span> <span class="nv">fzxv</span> <span class="nv">httperf</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">9</span>.<span class="mi">0</span>
+    <span class="nv">cd</span> <span class="nv">httperf</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">9</span>.<span class="mi">0</span>
+    .<span class="o">/</span><span class="nv">configure</span> <span class="o">&amp;&amp;</span> <span class="nv">make</span> <span class="o">&amp;&amp;</span> <span class="nv">make</span> <span class="nv">install</span>
+    <span class="nv">vim</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">wsesslog</span>
+    #<span class="nv">session</span> <span class="mi">1</span> <span class="nv">definition</span> 定义一个<span class="nv">session</span>，即一个来的访问操作
+    <span class="o">/</span><span class="nv">index</span>.<span class="nv">html</span>
+        <span class="o">/</span><span class="nv">cs</span>.<span class="nv">jpg</span>
+    <span class="o">/</span><span class="nv">b</span>.<span class="nv">html</span>
+        <span class="o">/</span><span class="nv">x</span>.<span class="nv">jgp</span>
+
+通过脚本可以判定出热点网页：
+<span class="nv">awk</span> <span class="o">-</span><span class="nv">F</span> \<span class="s2">&quot;</span><span class="s"> &#39;{print $2}&#39; /var/log/httpd/access_log | awk &#39;{print $2}&#39; | grep &#39;html$&#39; | </span>
+<span class="nv">sort</span> <span class="o">|</span> <span class="nv">uniq</span> <span class="o">-</span><span class="nv">c</span> <span class="o">|</span> <span class="nv">sort</span> <span class="o">-</span><span class="nv">nr</span> <span class="o">|</span> <span class="nv">head</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">10</span> 
+<span class="nv">awk</span> <span class="s1">&#39;</span><span class="s"> $7 ~ &quot;html$&quot; {print $7} </span><span class="s1">&#39;</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">httpd</span><span class="o">/</span><span class="nv">access_log</span> <span class="o">|</span> <span class="nv">sort</span> <span class="o">|</span> <span class="nv">uniq</span> <span class="o">-</span><span class="nv">c</span> <span class="o">|</span> 
+<span class="nv">sort</span> <span class="o">-</span><span class="nv">nr</span> <span class="o">|</span> <span class="nv">head</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">10</span>
+
+规则    
+<span class="nv">httperf</span> <span class="o">--</span><span class="nv">hog</span>（优化参数） <span class="o">--</span><span class="nv">server</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">18</span>.<span class="mi">199</span><span class="ss">(</span>被测试的主机<span class="ss">)</span> <span class="o">--</span><span class="nv">rate</span><span class="ss">(</span>测试的频率<span class="ss">)</span> <span class="mi">1</span> <span class="o">--</span><span class="nv">wsesslog</span><span class="o">=</span><span class="mi">4</span>,<span class="mi">1</span><span class="ss">(</span><span class="nv">thinktime</span><span class="ss">)</span>,
+<span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">wesslog</span>  
+<span class="nv">Reply</span> <span class="nv">time</span>[<span class="nv">ms</span>]:<span class="nv">response</span>  <span class="nv">transfer</span> 
+
+压缩
+<span class="o">&lt;</span><span class="nv">Ifmodule</span> <span class="nv">mod_deflate</span>.<span class="nv">c</span><span class="o">&gt;</span>
+<span class="nv">DeflateCompressionLevel</span> <span class="mi">6</span>
+<span class="nv">AddOutputFilterByType</span> <span class="nv">DEFLATE</span> <span class="nv">text</span><span class="o">/</span><span class="nv">html</span>
+<span class="o">&lt;/</span><span class="nv">Ifmodule</span><span class="o">&gt;</span>
+
+
+
+并发量  
+<span class="mi">1</span>、连接进程数的多少
+<span class="mi">2</span>、<span class="nv">netstat</span> <span class="o">-</span><span class="nv">ant</span> <span class="o">|</span> <span class="nv">grep</span> <span class="o">-</span><span class="nv">i</span> <span class="s2">&quot;</span><span class="s">estab</span><span class="s2">&quot;</span> <span class="o">|</span> <span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span> 处于<span class="nv">estab</span>状态的数量
+<span class="mi">3</span>、凡是与<span class="mi">80</span>端口有关的都算是并发
+<span class="mi">4</span>、<span class="nv">syn</span> <span class="nv">estalished</span>
+
+<span class="nv">Reply</span> <span class="nv">status</span>
+<span class="mi">2</span> 代表正常
+<span class="mi">3</span> 代表重定向
+<span class="mi">4</span> 页面无法请求
+<span class="mi">5</span> 服务器资源不足
+
+<span class="nv">apache</span>的<span class="nv">worker</span>模式（如果想用线程方式，建议去用<span class="nv">nginx</span>）
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysconfig</span><span class="o">/</span><span class="nv">httpd</span>
+<span class="nv">HTTPD</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">httpd</span>.<span class="nv">worker</span>
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">inint</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">httpd</span> <span class="nv">restart</span>
+
+<span class="nv">ps</span> <span class="o">-</span><span class="nv">eo</span> <span class="nv">nlwp</span>,<span class="nv">pid</span>,<span class="nv">user</span>,<span class="nv">comm</span> <span class="o">|</span> <span class="nv">grep</span> <span class="nv">apache</span>
+
+<span class="nv">nlwp</span> 产看当前进程中有多少个线程
+<span class="nv">apache</span>自身
+<span class="mi">1</span>、日志（可以连接到<span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">null</span>）
+<span class="mi">2</span>、文件描述符（限制进程使用的数是<span class="mi">1024</span>）
+<span class="mi">3</span>、<span class="nv">mkdir</span> <span class="o">-</span><span class="nv">pv</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">mm</span>
+   <span class="nv">mount</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">size</span><span class="o">=</span><span class="mi">500</span><span class="nv">M</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">tmpfs</span> <span class="nv">none</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">mm</span>  
+   <span class="mi">500</span><span class="nv">M</span> 内存到这个目下，以后在对数据处理时，就相当于往内存中写，而这些数据不会因清空缓存
+   而数据丢失，而是相当于做了一个
+   预热（保证数据都在内存中,把内存当作硬盘来用）
+
+<span class="nv">apache</span>与<span class="nv">I</span><span class="o">/</span><span class="nv">O</span>
+<span class="mi">1</span>、挂载的时候加上 <span class="nv">notime</span>
+<span class="mi">2</span>、<span class="nv">BI</span><span class="o">/</span><span class="nv">O</span>（电梯层：整合、排序 ）层用<span class="nv">deadline</span> 时时性比较好
+<span class="mi">3</span>、分<span class="nv">raid</span>
+
+<span class="nv">apache</span>与<span class="nv">Memory</span>
+单个<span class="nv">apache</span>对内存的使用情况
+<span class="nv">awk</span> <span class="s1">&#39;</span><span class="s"> $3 ~ &quot;kB&quot; { sum[$1] += $2 } END {for (key in sum) print key,sum[key]&quot;KB&quot;}</span><span class="s1">&#39;</span> <span class="nv">smaps</span>
+<span class="mi">1</span>、与调用的模快有关 <span class="nv">LoadModule</span>
+<span class="mi">2</span>、与进程数多少有关
+
+<span class="nv">apache</span>网络 
+<span class="nv">httpd</span>协议的最重要参数 
+<span class="mi">1</span>、<span class="nv">http</span>的连线超时时间  <span class="nb">Timeout</span> 默认<span class="mi">10</span><span class="nv">S</span>
+<span class="mi">2</span>、<span class="nv">KeepAlive</span> <span class="nv">on</span>  占用的是内存
+   <span class="nv">KeepAlive</span> <span class="nv">Tmieout</span> <span class="mi">15</span> 
+   解决<span class="nv">Time_wait</span>数量多的时候
+   <span class="nv">echo</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">tcp_tw_recycle</span>
+   <span class="nv">echo</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">tcp_tw_reuse</span>
+   注：短时间内不会有请求页面的时候，不需要开启。通常情况下静态页面开启
+网络数据进行压缩，用<span class="nv">CPU</span>来换取带宽
+注：建议大家用<span class="nv">apache</span>作动态页面
+<span class="nv">wiki</span>.<span class="nv">nginx</span>.<span class="nv">org</span> <span class="nv">nginx</span>优化
+
+<span class="nv">php</span>优化调整（都与开发进行沟通）
+
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">php</span>.<span class="nv">ini</span>
+<span class="nv">max_execution_time</span> <span class="o">=</span> <span class="mi">600</span><span class="c1">;     最大运行时间，最多占用600S</span>
+<span class="nv">max_input_time</span> <span class="o">=</span> <span class="mi">600</span><span class="c1">;          最大超时时间</span>
+<span class="nv">memory_limit</span> <span class="o">=</span> <span class="mi">128</span><span class="nv">M</span>           内存限制
+<span class="o">-</span><span class="nv">output_buffering</span> <span class="o">=</span> <span class="mi">4096</span>      数据发送之前需要多少缓存
+
+<span class="nv">opcode</span> 操作码
+软件 <span class="nv">xpc</span> <span class="nv">apc</span>
+首先保证安装<span class="nv">PHP</span>: <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">php</span> <span class="o">-</span><span class="nv">y</span>
+安装:<span class="nv">rpm</span> <span class="o">-</span><span class="nv">ivh</span> <span class="nv">php</span><span class="o">-</span><span class="nv">eaccelerator</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">9</span>.<span class="mi">5</span>.<span class="mi">2</span><span class="o">-</span><span class="mi">2</span>.<span class="nv">el5</span>.<span class="nv">i386</span>.<span class="nv">rpm</span> 
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">php</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">eaccelerator</span>.<span class="nv">ini</span>
+<span class="nv">eaccelerator</span>.<span class="nv">shm_sime</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">0</span><span class="s2">&quot;</span>   系统默认的内存 <span class="nv">ipcs</span> <span class="o">-</span><span class="nv">l</span>  
+<span class="nv">eaccelerator</span>.<span class="nv">shm_ttl</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">3600</span><span class="s2">&quot;</span> 缓存时间
+<span class="nv">eaccelerator</span>.<span class="nv">allowed_admin_path</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">/var/www/html/control.php 指定管理页面</span>
+<span class="nv">eaccelerator</span>.<span class="nv">cache_dir</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">/var/cache/php-eaccelerator</span><span class="s2">&quot;</span> 缓存的磁盘路径
+<span class="nv">cp</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">doc</span><span class="o">/</span><span class="nv">php</span><span class="o">-</span><span class="nv">eaccelerator</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">9</span>.<span class="mi">5</span>.<span class="mi">2</span><span class="o">/</span><span class="nv">control</span>.<span class="nv">php</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">www</span><span class="o">/</span><span class="nv">html</span> 拷贝模板
+测试:<span class="nv">ab</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">100</span> <span class="o">-</span><span class="nv">c</span> <span class="mi">10</span> <span class="nv">http</span>:<span class="o">//</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">18</span>.<span class="mi">199</span><span class="o">/</span><span class="nv">time</span>.<span class="nv">php</span>
+关闭缓存再进行测试，比较两次测试里面的时间
+
+
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">security</span><span class="o">/</span><span class="nv">limits</span>.<span class="nv">conf</span>
+<span class="o">*</span> <span class="nv">soft</span> <span class="nv">nofile</span> <span class="mi">102400</span>
+<span class="o">*</span> <span class="nv">soft</span> <span class="nv">nofile</span> <span class="mi">102400</span>
+<span class="nv">su</span> <span class="o">-</span>
+<span class="nv">ulimit</span> <span class="o">-</span><span class="nv">SHn</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="k">include</span><span class="o">/</span><span class="nv">bits</span><span class="o">/</span><span class="nv">typesizes</span>.<span class="nv">h</span>
+#<span class="nv">define</span> <span class="nv">__FD_SETSIZE</span>            <span class="mi">102400</span>
+
+<span class="nv">cd</span> <span class="nv">httperf</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">9</span>.<span class="mi">0</span>
+.<span class="o">/</span><span class="nv">configure</span> <span class="o">&amp;&amp;</span> <span class="nv">make</span> <span class="o">&amp;&amp;</span> <span class="nv">make</span> <span class="nv">install</span>
+
+测试
+<span class="mi">1</span>、考虑你的并发量：
+<span class="nv">httperf</span> <span class="o">--</span><span class="nv">hog</span> <span class="o">--</span><span class="nv">server</span><span class="o">=</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">18</span>.<span class="mi">199</span> <span class="o">--</span><span class="nv">rate</span> <span class="mi">500</span> <span class="o">--</span><span class="nv">wsesslog</span><span class="o">=</span><span class="mi">5000000</span>,<span class="mi">1</span>,<span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">wesslog</span>
+<span class="mi">2</span>、<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">httpd</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">httpd</span>.<span class="nv">conf</span>
+   <span class="o">&lt;</span><span class="nv">IfModule</span> <span class="nv">prefork</span>.<span class="nv">c</span><span class="o">&gt;</span>
+    <span class="nv">StartServers</span>       <span class="mi">80</span>
+    <span class="nv">MinSpareServers</span>    <span class="mi">50</span>
+    <span class="nv">MaxSpareServers</span>   <span class="mi">200</span>
+    <span class="nv">ServerLimit</span>       <span class="mi">500</span>
+    <span class="nv">MaxClients</span>        <span class="mi">500</span>
+    <span class="nv">MaxRequestsPerChild</span>  <span class="mi">4000</span>
+   <span class="o">&lt;/</span><span class="nv">IfModule</span><span class="o">&gt;</span>
+<span class="mi">3</span>、<span class="nv">apache</span>测试脚本 在被测试的机器上运行
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">net</span>
+<span class="nv">netstat</span> <span class="o">-</span><span class="nv">ant</span><span class="o">|</span><span class="nv">awk</span> <span class="s1">&#39;</span><span class="s">$1 ~ &quot;^tcp&quot; {sum[$NF] += 1} END {for (key in sum) print key,sum[key]}</span><span class="s1">&#39;</span>
+
+    <span class="nv">chmod</span> <span class="o">+</span><span class="nv">x</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">net</span>
+    <span class="nv">watch</span> <span class="o">-</span><span class="nv">n</span> <span class="mi">1</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">net</span>
+<span class="mi">4</span>、    <span class="nv">netstat</span> <span class="o">-</span><span class="nv">ant</span> <span class="o">|</span> <span class="nv">grep</span> <span class="mi">18</span>.<span class="mi">113</span><span class="ss">(</span>用来测试的机器<span class="ss">)</span> <span class="o">|</span> <span class="nv">grep</span> <span class="o">-</span><span class="nv">i</span> <span class="s1">&#39;</span><span class="s">syn_recv</span><span class="s1">&#39;</span> <span class="o">|</span> <span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span>
+    <span class="nv">netstat</span> <span class="o">-</span><span class="nv">ant</span> <span class="o">|</span> <span class="nv">grep</span> <span class="mi">18</span>.<span class="mi">113</span><span class="ss">(</span>用来测试的机器<span class="ss">)</span> <span class="o">|</span> <span class="nv">grep</span> <span class="o">-</span><span class="nv">i</span> <span class="s1">&#39;</span><span class="s">established</span><span class="s1">&#39;</span> <span class="o">|</span> <span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span>
+    <span class="nv">top</span>  <span class="nv">load</span> <span class="nv">average</span>
+    <span class="nv">free</span> <span class="o">-</span><span class="nv">m</span>
+注：将测试主机和被测试主机的文件描述符都改成 <span class="mi">102400</span>
+并发：<span class="nv">avg</span>        <span class="mi">14</span>
+     进程数     <span class="mi">8900</span>
+     进程数＋<span class="nv">established</span>   <span class="mi">8900</span>
+     进程数＋<span class="nv">established</span>＋<span class="nv">syn_baklog</span>  大约<span class="mi">3</span>万多
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../nginx2/" title="nginx2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                nginx2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../saltstack/" title="saltstack" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                saltstack
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

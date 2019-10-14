@@ -1,0 +1,1833 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>python-other - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#web" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                python-other
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link md-tabs__link--active">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        python-other
+      </label>
+    
+    <a href="./" title="python-other" class="md-nav__link md-nav__link--active">
+      python-other
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web压侧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    一行python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    斐波那契数列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    迭代器生成器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    执行系统命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric" class="md-nav__link">
+    fabric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    嵌套函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipconf" class="md-nav__link">
+    pip.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    小技巧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    流量转换
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    web压侧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    一行python
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    斐波那契数列
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    迭代器生成器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    执行系统命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric" class="md-nav__link">
+    fabric
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    嵌套函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipconf" class="md-nav__link">
+    pip.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    小技巧
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    流量转换
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>python-other</h1>
+                
+                <h2 id="web">web压侧</h2>
+<div class="codehilite"><pre><span></span><span class="c1"># coding=utf-8</span>
+<span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">urllib2</span>
+<span class="kn">import</span> <span class="nn">cookielib</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">Queue</span> <span class="kn">import</span> <span class="n">Queue</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">THREAD_NUM</span> <span class="o">=</span> <span class="mi">100</span>        <span class="c1"># 并发线程总数</span>
+<span class="n">ONE_WORKER_NUM</span> <span class="o">=</span> <span class="mi">10000</span>      <span class="c1"># 每个线程的循环次数</span>
+<span class="n">LOOP_SLEEP</span> <span class="o">=</span> <span class="mf">0.5</span>        <span class="c1"># 每次请求时间间隔(秒)</span>
+<span class="c1"># 出错数</span>
+<span class="n">ERROR_NUM</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="n">requrl</span> <span class="o">=</span> <span class="s2">&quot;http://cs.dachuizichan.com/login.do&quot;</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;loginid&#39;</span><span class="p">:</span><span class="s1">&#39;17326800227&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;password&#39;</span><span class="p">:</span><span class="s1">&#39;111111&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;rand&#39;</span><span class="p">:</span><span class="s1">&#39;1111&#39;</span>
+<span class="p">}</span>
+<span class="n">test_data_urlencode</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Host&quot;</span> <span class="p">:</span> <span class="s2">&quot;cs.dachuizichan.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Referer&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://cs.dachuizichan.com/manage/frame.do&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)</span>
+      <span class="n">Chrome</span><span class="o">/</span><span class="mf">54.0</span><span class="o">.</span><span class="mf">2840.71</span> <span class="n">Safari</span><span class="o">/</span><span class="mf">537.36</span><span class="s2">&quot;,</span>
+    <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span>
+<span class="p">}</span>
+<span class="n">cookieJar</span> <span class="o">=</span> <span class="n">cookielib</span><span class="o">.</span><span class="n">CookieJar</span><span class="p">()</span>
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPCookieProcessor</span><span class="p">(</span><span class="n">cookieJar</span><span class="p">))</span>
+
+
+<span class="n">req</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">requrl</span><span class="p">,</span> <span class="n">test_data_urlencode</span><span class="p">,</span><span class="n">header</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+<span class="c1"># for key in header:</span>
+<span class="c1">#     req.add_header(key, header[key])</span>
+
+<span class="k">def</span> <span class="nf">doWork</span><span class="p">(</span><span class="n">index</span><span class="p">):</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">result2</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;http://cs.dachuizichan.com/manage/myDebtor/list.do&quot;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">result2</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">URLError</span><span class="p">,</span><span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;[&quot;</span><span class="o">+</span><span class="n">t</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;] &quot;</span>
+        <span class="k">print</span> <span class="n">e</span>
+        <span class="k">global</span> <span class="n">ERROR_NUM</span>
+        <span class="n">ERROR_NUM</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">working</span><span class="p">():</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">currentThread</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s2">&quot;[&quot;</span><span class="o">+</span><span class="n">t</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;] Sub Thread Begin&quot;</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">ONE_WORKER_NUM</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">doWork</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="n">LOOP_SLEEP</span><span class="p">)</span>
+
+    <span class="k">print</span> <span class="s2">&quot;[&quot;</span><span class="o">+</span> <span class="n">t</span><span class="o">.</span><span class="n">name</span><span class="o">+</span><span class="s2">&quot;] Sub Thread End&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1">#doWork(0)</span>
+    <span class="c1">#return</span>
+
+    <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">Threads</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># 创建线程</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">THREAD_NUM</span><span class="p">):</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">working</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;T&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">setDaemon</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">Threads</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">Threads</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">Threads</span><span class="p">:</span>
+        <span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+    <span class="k">print</span> <span class="s2">&quot;main thread end&quot;</span>
+
+    <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s2">&quot;========================================&quot;</span>
+    <span class="c1">#print &quot;URL:&quot;, PERF_TEST_URL</span>
+    <span class="k">print</span> <span class="s2">&quot;任务数量:&quot;</span><span class="p">,</span> <span class="n">THREAD_NUM</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">ONE_WORKER_NUM</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">THREAD_NUM</span><span class="o">*</span><span class="n">ONE_WORKER_NUM</span>
+    <span class="k">print</span> <span class="s2">&quot;总耗时(秒):&quot;</span><span class="p">,</span> <span class="n">t2</span><span class="o">-</span><span class="n">t1</span>
+    <span class="k">print</span> <span class="s2">&quot;每次请求耗时(秒):&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">THREAD_NUM</span><span class="o">*</span><span class="n">ONE_WORKER_NUM</span><span class="p">)</span>
+    <span class="k">print</span> <span class="s2">&quot;每秒承载请求数:&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">((</span><span class="n">t2</span><span class="o">-</span><span class="n">t1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">THREAD_NUM</span><span class="o">*</span><span class="n">ONE_WORKER_NUM</span><span class="p">))</span>
+    <span class="k">print</span> <span class="s2">&quot;错误数量:&quot;</span><span class="p">,</span> <span class="n">ERROR_NUM</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+
+<h2 id="python">一行python</h2>
+<div class="codehilite"><pre><span></span>打印心形
+<span class="nv">print</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>.<span class="nv">join</span><span class="ss">(</span>[<span class="s1">&#39;&#39;</span>.<span class="nv">join</span><span class="ss">(</span>[<span class="ss">(</span><span class="s1">&#39;</span><span class="s">PYTHON!</span><span class="s1">&#39;</span>[<span class="ss">(</span><span class="nv">x</span><span class="o">-</span><span class="nv">y</span><span class="ss">)</span><span class="o">%</span><span class="mi">7</span>]<span class="k">if</span><span class="ss">((</span><span class="nv">x</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">05</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="ss">(</span><span class="nv">y</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">1</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="ss">)</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="ss">(</span><span class="nv">x</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">05</span><span class="ss">)</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="ss">(</span><span class="nv">y</span><span class="o">*</span><span class="mi">0</span>.<span class="mi">1</span><span class="ss">)</span><span class="o">**</span><span class="mi">3</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="k">else</span><span class="s1">&#39;</span><span class="s"> </span><span class="s1">&#39;</span><span class="ss">)</span>
+<span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="o">-</span><span class="mi">30</span>,<span class="mi">30</span><span class="ss">)</span>]<span class="ss">)</span><span class="k">for</span> <span class="nv">y</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">15</span>,<span class="o">-</span><span class="mi">15</span>,<span class="o">-</span><span class="mi">1</span><span class="ss">)</span>]<span class="ss">)</span>
+
+<span class="mi">99</span>乘法表
+<span class="nv">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>.<span class="nv">join</span><span class="ss">(</span>[<span class="s1">&#39;</span><span class="s"> </span><span class="s1">&#39;</span>.<span class="nv">join</span><span class="ss">(</span>[<span class="s1">&#39;</span><span class="s">%s*%s=%-2s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="ss">(</span><span class="nv">y</span>,<span class="nv">x</span>,<span class="nv">x</span><span class="o">*</span><span class="nv">y</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">y</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">1</span>,<span class="nv">x</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span>]<span class="ss">)</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">range</span><span class="ss">(</span><span class="mi">1</span>,<span class="mi">10</span><span class="ss">)</span>]<span class="ss">)</span>
+
+斐波那契数列
+<span class="nv">print</span> [<span class="nv">x</span>[<span class="mi">0</span>] <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> [  <span class="ss">(</span><span class="nv">a</span>[<span class="nv">i</span>][<span class="mi">0</span>], <span class="nv">a</span>.<span class="nv">append</span><span class="ss">((</span><span class="nv">a</span>[<span class="nv">i</span>][<span class="mi">1</span>], <span class="nv">a</span>[<span class="nv">i</span>][<span class="mi">0</span>]<span class="o">+</span><span class="nv">a</span>[<span class="nv">i</span>][<span class="mi">1</span>]<span class="ss">)))</span> <span class="k">for</span> <span class="nv">a</span> <span class="nv">in</span> <span class="ss">(</span>[[<span class="mi">1</span>,<span class="mi">1</span>]], <span class="ss">)</span> <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">xrange</span><span class="ss">(</span><span class="mi">100</span><span class="ss">)</span> ]]
+
+<span class="mi">8</span>皇后
+<span class="nv">_</span><span class="o">=</span>[<span class="nv">__import__</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">sys</span><span class="s1">&#39;</span><span class="ss">)</span>.<span class="nv">stdout</span>.<span class="nv">write</span><span class="ss">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>.<span class="nv">join</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">.</span><span class="s1">&#39;</span> <span class="o">*</span> <span class="nv">i</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="s">Q</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="s">.</span><span class="s1">&#39;</span> <span class="o">*</span> <span class="ss">(</span><span class="mi">8</span><span class="o">-</span><span class="nv">i</span><span class="o">-</span><span class="mi">1</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">vec</span><span class="ss">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s">===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="ss">)</span> <span class="k">for</span> <span class="nv">vec</span> 
+<span class="nv">in</span> <span class="nv">__import__</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">itertools</span><span class="s1">&#39;</span><span class="ss">)</span>.<span class="nv">permutations</span><span class="ss">(</span><span class="nv">xrange</span><span class="ss">(</span><span class="mi">8</span><span class="ss">))</span> <span class="k">if</span> <span class="mi">8</span> <span class="o">==</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">set</span><span class="ss">(</span><span class="nv">vec</span>[<span class="nv">i</span>]<span class="o">+</span><span class="nv">i</span> <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">xrange</span><span class="ss">(</span><span class="mi">8</span><span class="ss">)))</span> <span class="o">==</span> 
+<span class="nv">len</span><span class="ss">(</span><span class="nv">set</span><span class="ss">(</span><span class="nv">vec</span>[<span class="nv">i</span>]<span class="o">-</span><span class="nv">i</span> <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">xrange</span><span class="ss">(</span><span class="mi">8</span><span class="ss">)))</span>]
+
+打印自己
+<span class="nv">_</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">_=%r;print _%%_</span><span class="s1">&#39;</span><span class="c1">;print _%_</span>
+<span class="nv">print</span><span class="ss">(</span><span class="nv">lambda</span> <span class="nv">x</span>:<span class="nv">x</span><span class="o">+</span><span class="nv">str</span><span class="ss">((</span><span class="nv">x</span>,<span class="ss">)))(</span><span class="s1">&#39;</span><span class="s">print(lambda x:x+str((x,)))</span><span class="s1">&#39;</span>,<span class="ss">)</span>
+</pre></div>
+
+
+<h2 id="_1">斐波那契数列</h2>
+<div class="codehilite"><pre><span></span><span class="c1"># coding:utf-8</span>
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;公式法&quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="nb">pow</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">pow</span><span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="nb">pow</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)))</span>
+<span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;累加，使用之前计算的数&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="n">firstnum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">secondnum</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">fibnum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">fibnum</span> <span class="o">=</span> <span class="n">firstnum</span> <span class="o">+</span> <span class="n">secondnum</span>
+        <span class="n">firstnum</span> <span class="p">,</span><span class="n">secondnum</span> <span class="o">=</span> <span class="n">secondnum</span><span class="p">,</span> <span class="n">fibnum</span>
+        <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fibnum</span>
+<span class="k">def</span> <span class="nf">fib3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;列表计算追加，简洁&quot;&quot;&quot;</span>
+    <span class="n">begin</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">begin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">begin</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">begin</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">begin</span>
+<span class="k">def</span> <span class="nf">fib4</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;递归计算&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">fib4</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib4</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># fib1 fib2 fib4</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">fib4</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="c1"># fib3</span>
+<span class="k">print</span> <span class="n">fib3</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="_2">迭代器生成器</h2>
+<div class="codehilite"><pre><span></span>在了解<span class="nv">Python</span>的数据结构时，容器<span class="ss">(</span><span class="nv">container</span><span class="ss">)</span>、可迭代对象<span class="ss">(</span><span class="nv">iterable</span><span class="ss">)</span>、迭代器<span class="ss">(</span><span class="nv">iterator</span><span class="ss">)</span>、生成器<span class="ss">(</span><span class="nv">generator</span><span class="ss">)</span>、
+列表<span class="o">/</span>集合<span class="o">/</span>字典推导式<span class="ss">(</span><span class="nv">list</span>,<span class="nv">set</span>,<span class="nv">dict</span> <span class="nv">comprehension</span><span class="ss">)</span>众多概念参杂在一起，难免让初学者一头雾水，我将用一篇文章试
+图将这些概念以及它们之间的关系捋清楚。
+
+<span class="nv">relations</span>
+
+容器<span class="ss">(</span><span class="nv">container</span><span class="ss">)</span>
+容器是一种把多个元素组织在一起的数据结构，容器中的元素可以逐个地迭代获取，可以用<span class="nv">in</span>, <span class="nv">not</span> <span class="nv">in</span>关键字判断元素是否包含在容器中。
+通常这类数据结构把所有的元素存储在内存中（也有一些特列并不是所有的元素都放在内存）在<span class="nv">Python</span>中，常见的容器对象有：
+
+<span class="nv">list</span>, <span class="nv">deque</span>, ....
+<span class="nv">set</span>, <span class="nv">frozensets</span>, ....
+<span class="nv">dict</span>, <span class="nv">defaultdict</span>, <span class="nv">OrderedDict</span>, <span class="nv">Counter</span>, ....
+<span class="nv">tuple</span>, <span class="nv">namedtuple</span>, …
+<span class="nv">str</span>
+容器比较容易理解，因为你就可以把它看作是一个盒子、一栋房子、一个柜子，里面可以塞任何东西。从技术角度来说，当它可以用来询问
+某个元素是否包含在其中时，那么这个对象就可以认为是一个容器，比如 <span class="nv">list</span>，<span class="nv">set</span>，<span class="nv">tuples</span>都是容器对象：
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">1</span> <span class="nv">in</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]      # <span class="nv">lists</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">4</span> <span class="nv">not</span> <span class="nv">in</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">1</span> <span class="nv">in</span> {<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>}      # <span class="nv">sets</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">4</span> <span class="nv">not</span> <span class="nv">in</span> {<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>}
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">1</span> <span class="nv">in</span> <span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span><span class="ss">)</span>      # <span class="nv">tuples</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">assert</span> <span class="mi">4</span> <span class="nv">not</span> <span class="nv">in</span> <span class="ss">(</span><span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span><span class="ss">)</span>
+询问某元素是否在<span class="nv">dict</span>中用<span class="nv">dict</span>的中<span class="nv">key</span>：
+
+<span class="nv">d</span> <span class="o">=</span> {<span class="mi">1</span>: <span class="s1">&#39;</span><span class="s">foo</span><span class="s1">&#39;</span>, <span class="mi">2</span>: <span class="s1">&#39;</span><span class="s">bar</span><span class="s1">&#39;</span>, <span class="mi">3</span>: <span class="s1">&#39;</span><span class="s">qux</span><span class="s1">&#39;</span>}
+<span class="nv">assert</span> <span class="mi">1</span> <span class="nv">in</span> <span class="nv">d</span>
+<span class="nv">assert</span> <span class="s1">&#39;</span><span class="s">foo</span><span class="s1">&#39;</span> <span class="nv">not</span> <span class="nv">in</span> <span class="nv">d</span>  # <span class="s1">&#39;</span><span class="s">foo</span><span class="s1">&#39;</span> 不是<span class="nv">dict</span>中的元素
+尽管绝大多数容器都提供了某种方式来获取其中的每一个元素，但这并不是容器本身提供的能力，而是可迭代对象赋予了容器这种能力，
+当然并不是所有的容器都是可迭代的，比如：<span class="nv">Bloom</span> <span class="nv">filter</span>，虽然<span class="nv">Bloom</span> <span class="nv">filter</span>可以用来检测某个元素是否包含在容器中，但是并不能从
+容器中获取其中的每一个值，因为<span class="nv">Bloom</span> <span class="nv">filter</span>压根就没把元素存储在容器中，而是通过一个散列函数映射成一个值保存在数组中。
+可迭代对象<span class="ss">(</span><span class="nv">iterable</span><span class="ss">)</span>
+刚才说过，很多容器都是可迭代对象，此外还有更多的对象同样也是可迭代对象，比如处于打开状态的<span class="nv">files</span>，<span class="nv">sockets</span>等等。但凡是可以
+返回一个迭代器的对象都可称之为可迭代对象，听起来可能有点困惑，没关系，先看一个例子：
+
+<span class="nv">x</span> <span class="o">=</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]
+<span class="nv">y</span> <span class="o">=</span> <span class="nv">iter</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="nv">z</span> <span class="o">=</span> <span class="nv">iter</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>          <span class="mi">1</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>          <span class="mi">2</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">z</span><span class="ss">)</span>          <span class="mi">1</span>
+<span class="nv">type</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+<span class="o">&lt;</span><span class="nv">class</span> <span class="s1">&#39;</span><span class="s">list</span><span class="s1">&#39;</span><span class="o">&gt;&gt;&gt;&gt;</span> <span class="nv">type</span><span class="ss">(</span><span class="nv">y</span><span class="ss">)</span>
+<span class="o">&lt;</span><span class="nv">class</span> <span class="s1">&#39;</span><span class="s">list_iterator</span><span class="s1">&#39;</span><span class="o">&gt;</span>
+这里<span class="nv">x</span>是一个可迭代对象，可迭代对象和容器一样是一种通俗的叫法，并不是指某种具体的数据类型，<span class="nv">list</span>是可迭代对象，<span class="nv">dict</span>是可迭代对象，
+<span class="nv">set</span>也是可迭代对象。<span class="nv">y</span>和<span class="nv">z</span>是两个独立的迭代器，迭代器内部持有一个状态，该状态用于记录当前迭代所在的位置，以方便下次迭代的时候获
+取正确的元素。迭代器有一种具体的迭代器类型，比如<span class="nv">list_iterator</span>，<span class="nv">set_iterator</span>。可迭代对象实现了<span class="nv">__iter__</span>和<span class="nv">__next__</span>方法
+（<span class="nv">python2</span>中是<span class="k">next</span>方法，<span class="nv">python3</span>是<span class="nv">__next__</span>方法），这两个方法对应内置函数<span class="nv">iter</span><span class="ss">()</span>和<span class="k">next</span><span class="ss">()</span>。<span class="nv">__iter__</span>方法返回可迭代对象本身，
+这使得他既是一个可迭代对象同时也是一个迭代器。
+
+当运行代码：
+
+<span class="nv">x</span> <span class="o">=</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]
+<span class="k">for</span> <span class="nv">elem</span> <span class="nv">in</span> <span class="nv">x</span>:
+    ...
+实际执行情况是：
+
+<span class="nv">iterable</span><span class="o">-</span><span class="nv">vs</span><span class="o">-</span><span class="nv">iterator</span>.<span class="nv">png</span>
+
+反编译该段代码，你可以看到解释器显示地调用<span class="nv">GET_ITER</span>指令，相当于调用<span class="nv">iter</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>，<span class="nv">FOR_ITER</span>指令就是调用<span class="k">next</span><span class="ss">()</span>方法，不断地获
+取迭代器中的下一个元素，但是你没法直接从指令中看出来，因为他被解释器优化过了。
+
+<span class="nv">import</span> <span class="nv">dis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">x</span> <span class="o">=</span> [<span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>]
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">dis</span>.<span class="nv">dis</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">for _ in x: pass</span><span class="s1">&#39;</span><span class="ss">)</span>
+  <span class="mi">1</span>           <span class="mi">0</span> <span class="nv">SETUP_LOOP</span>              <span class="mi">14</span> <span class="ss">(</span><span class="nv">to</span> <span class="mi">17</span><span class="ss">)</span>
+              <span class="mi">3</span> <span class="nv">LOAD_NAME</span>                <span class="mi">0</span> <span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>
+              <span class="mi">6</span> <span class="nv">GET_ITER</span>
+        <span class="o">&gt;&gt;</span>    <span class="mi">7</span> <span class="nv">FOR_ITER</span>                 <span class="mi">6</span> <span class="ss">(</span><span class="nv">to</span> <span class="mi">16</span><span class="ss">)</span>
+             <span class="mi">10</span> <span class="nv">STORE_NAME</span>               <span class="mi">1</span> <span class="ss">(</span><span class="nv">_</span><span class="ss">)</span>
+             <span class="mi">13</span> <span class="nv">JUMP_ABSOLUTE</span>            <span class="mi">7</span>
+        <span class="o">&gt;&gt;</span>   <span class="mi">16</span> <span class="nv">POP_BLOCK</span>
+        <span class="o">&gt;&gt;</span>   <span class="mi">17</span> <span class="nv">LOAD_CONST</span>               <span class="mi">0</span> <span class="ss">(</span><span class="nv">None</span><span class="ss">)</span>
+             <span class="mi">20</span> <span class="nv">RETURN_VALUE</span>
+迭代器<span class="ss">(</span><span class="nv">iterator</span><span class="ss">)</span>
+
+那么什么迭代器呢？它是一个带状态的对象，他能在你调用<span class="k">next</span><span class="ss">()</span>方法的时候返回容器中的下一个值，任何实现了<span class="nv">__next__</span><span class="ss">()</span>
+（<span class="nv">python2</span>中实现<span class="k">next</span><span class="ss">()</span>）方法的对象都是迭代器，至于它是如何实现的这并不重要。
+
+所以，迭代器就是实现了工厂模式的对象，它在你每次你询问要下一个值的时候给你返回。有很多关于迭代器的例子，比如
+<span class="nv">itertools</span>函数返回的都是迭代器对象。
+
+生成无限序列：
+
+<span class="nv">from</span> <span class="nv">itertools</span> <span class="nv">import</span>  <span class="nv">count</span>
+<span class="nv">counter</span>  <span class="o">=</span> <span class="nv">count</span><span class="ss">(</span><span class="nv">start</span><span class="o">=</span><span class="mi">13</span><span class="ss">)</span>
+<span class="nv">print</span> <span class="k">next</span><span class="ss">(</span><span class="nv">counter</span><span class="ss">)</span>   # <span class="mi">13</span>
+<span class="nv">print</span> <span class="k">next</span><span class="ss">(</span><span class="nv">counter</span><span class="ss">)</span>   # <span class="mi">14</span>
+<span class="nv">from</span> <span class="nv">itertools</span> <span class="nv">import</span> <span class="nv">cycle</span>
+<span class="nv">colors</span> <span class="o">=</span> <span class="nv">cycle</span><span class="ss">(</span>[<span class="s1">&#39;</span><span class="s">red</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">white</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">blue</span><span class="s1">&#39;</span>]<span class="ss">)</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">colors</span><span class="ss">)</span>  # <span class="s1">&#39;</span><span class="s">red</span><span class="s1">&#39;</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">colors</span><span class="ss">)</span>  # <span class="s1">&#39;</span><span class="s">white</span><span class="s1">&#39;</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">colors</span><span class="ss">)</span>  # <span class="s1">&#39;</span><span class="s">blue</span><span class="s1">&#39;</span>
+<span class="k">next</span><span class="ss">(</span><span class="nv">colors</span><span class="ss">)</span>  # <span class="s1">&#39;</span><span class="s">red</span><span class="s1">&#39;</span>
+<span class="nv">from</span> <span class="nv">itertools</span> <span class="nv">import</span> <span class="nv">islice</span>
+<span class="nv">limited</span> <span class="o">=</span> <span class="nv">islice</span><span class="ss">(</span><span class="nv">colors</span>,<span class="mi">0</span>,<span class="mi">4</span><span class="ss">)</span>
+<span class="nv">print</span> <span class="nv">list</span><span class="ss">(</span><span class="nv">limited</span><span class="ss">)</span>
+#  [<span class="s1">&#39;</span><span class="s">white</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">blue</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">red</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">white</span><span class="s1">&#39;</span>]
+
+为了更直观地感受迭代器内部的执行过程，我们自定义一个迭代器，以斐波那契数列为例：
+
+
+<span class="nv">class</span> <span class="nv">Fib</span>:
+    <span class="nv">def</span> <span class="nv">__init__</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+        <span class="nv">self</span>.<span class="nv">prev</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nv">self</span>.<span class="nv">curr</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nv">def</span> <span class="nv">__iter__</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+        <span class="k">return</span> <span class="nv">self</span>
+    <span class="nv">def</span> <span class="k">next</span><span class="ss">(</span><span class="nv">self</span><span class="ss">)</span>:
+        <span class="nv">value</span> <span class="o">=</span> <span class="nv">self</span>.<span class="nv">curr</span>
+        <span class="nv">self</span>.<span class="nv">curr</span> <span class="o">+=</span> <span class="nv">self</span>.<span class="nv">prev</span>
+        <span class="nv">self</span>.<span class="nv">prev</span> <span class="o">=</span> <span class="nv">value</span>
+        <span class="k">return</span> <span class="nv">value</span>
+<span class="nv">f</span> <span class="o">=</span> <span class="nv">Fib</span><span class="ss">()</span>
+<span class="nv">print</span> <span class="nv">list</span><span class="ss">(</span><span class="nv">islice</span><span class="ss">(</span><span class="nv">f</span>,<span class="mi">0</span>,<span class="mi">10</span><span class="ss">))</span>
+<span class="nv">Fib</span>既是一个可迭代对象（因为它实现了<span class="nv">__iter__</span>方法），又是一个迭代器（因为实现了<span class="k">next</span>方法）。实例变量<span class="nv">prev</span>和<span class="nv">curr</span>用户维护迭
+代器内部的状态。每次调用<span class="k">next</span><span class="ss">()</span>方法的时候做两件事：
+
+为下一次调用<span class="k">next</span><span class="ss">()</span>方法修改状态
+为当前这次调用生成返回结果
+迭代器就像一个懒加载的工厂，等到有人需要的时候才给它生成值返回，没调用的时候就处于休眠状态等待下一次调用。
+
+生成器<span class="ss">(</span><span class="nv">generator</span><span class="ss">)</span>
+生成器算得上是<span class="nv">Python</span>语言中最吸引人的特性之一，生成器其实是一种特殊的迭代器，不过这种迭代器更加优雅。它不需要再像上面的
+类一样写<span class="nv">__iter__</span><span class="ss">()</span>和<span class="nv">__next__</span><span class="ss">()</span>方法了，只需要一个<span class="nv">yiled</span>关键字。 生成器一定是迭代器（反之不成立），因此任何生成器也是以一
+种懒加载的模式生成值。用生成器来实现斐波那契数列的例子是：
+
+<span class="nv">def</span> <span class="nv">fib</span><span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>:
+    <span class="nv">prev</span>, <span class="nv">curr</span> <span class="o">=</span> <span class="mi">0</span>, <span class="mi">1</span>
+    <span class="k">while</span> <span class="nv">prev</span> <span class="o">&lt;</span> <span class="nv">n</span>:
+        <span class="nv">yield</span> <span class="nv">curr</span>
+        <span class="nv">prev</span>, <span class="nv">curr</span> <span class="o">=</span> <span class="nv">curr</span>, <span class="nv">curr</span> <span class="o">+</span> <span class="nv">prev</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nv">print</span> [<span class="nv">x</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">fib</span><span class="ss">(</span><span class="mi">10</span><span class="ss">)</span>]
+[<span class="mi">1</span>, <span class="mi">1</span>, <span class="mi">2</span>, <span class="mi">3</span>, <span class="mi">5</span>, <span class="mi">8</span>, <span class="mi">13</span>, <span class="mi">21</span>, <span class="mi">34</span>, <span class="mi">55</span>]
+<span class="nv">fib</span>就是一个普通的<span class="nv">python</span>函数，它特需的地方在于函数体中没有<span class="k">return</span>关键字，函数的返回值是一个生成器对象。当执行<span class="nv">f</span><span class="o">=</span><span class="nv">fib</span><span class="ss">()</span>返回
+的是一个生成器对象，此时函数体中的代码并不会执行，只有显示或隐示地调用<span class="k">next</span>的时候才会真正执行里面的代码。
+
+生成器在<span class="nv">Python</span>中是一个非常强大的编程结构，可以用更少地中间变量写流式代码，此外，相比其它容器对象它更能节省内存和<span class="nv">CPU</span>，当然
+它可以用更少的代码来实现相似的功能。现在就可以动手重构你的代码了，但凡看到类似：
+
+<span class="nv">def</span> <span class="nv">something</span><span class="ss">()</span>:
+    <span class="nb">result</span> <span class="o">=</span> []    <span class="k">for</span> ... <span class="nv">in</span> ...:
+        <span class="nb">result</span>.<span class="nv">append</span><span class="ss">(</span><span class="nv">x</span><span class="ss">)</span>    <span class="k">return</span> <span class="nb">result</span>
+都可以用生成器函数来替换：
+
+<span class="nv">def</span> <span class="nv">iter_something</span><span class="ss">()</span>:<span class="k">for</span> ... <span class="nv">in</span> ...:        <span class="nv">yield</span> <span class="nv">x</span>
+生成器表达式<span class="ss">(</span><span class="nv">generator</span> <span class="nv">expression</span><span class="ss">)</span>
+生成器表达式是列表推倒式的生成器版本，看起来像列表推导式，但是它返回的是一个生成器对象而不是列表对象。
+
+
+<span class="nv">a</span> <span class="o">=</span> <span class="ss">(</span><span class="nv">x</span><span class="o">*</span><span class="nv">x</span> <span class="k">for</span> <span class="nv">x</span> <span class="nv">in</span> <span class="nv">xrange</span><span class="ss">(</span><span class="mi">10</span><span class="ss">))</span>
+<span class="nv">print</span> <span class="nv">type</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span>
+# <span class="o">&lt;</span><span class="nv">type</span> <span class="s1">&#39;</span><span class="s">generator</span><span class="s1">&#39;</span><span class="o">&gt;</span>
+<span class="nv">print</span> <span class="nv">sum</span><span class="ss">(</span><span class="nv">a</span><span class="ss">)</span>
+# <span class="mi">285</span>
+</pre></div>
+
+
+<h2 id="_3">执行系统命令</h2>
+<div class="codehilite"><pre><span></span><span class="n">commands</span>
+<span class="kn">import</span> <span class="nn">commands</span>
+<span class="n">commands</span><span class="o">.</span><span class="n">getstatusoutput</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>         <span class="err">返回</span><span class="p">(</span><span class="n">status</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+<span class="n">commands</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>                   <span class="err">只返回输出结果</span>
+<span class="n">os</span>
+<span class="kn">import</span> <span class="nn">os</span> 
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;echo </span><span class="se">\&quot;</span><span class="s2">Hello World</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="ow">or</span>
+<span class="k">print</span> <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;ls -lt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="err">传</span><span class="n">shell</span><span class="err">的参数</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">var</span><span class="o">=</span><span class="mi">123</span><span class="err">或</span><span class="n">var</span><span class="o">=</span><span class="s1">&#39;123&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;var&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">var</span><span class="p">)</span> <span class="c1">#environ的键值必须是字符串</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;echo $var&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">var</span><span class="o">=</span><span class="s1">&#39;123&#39;</span>
+<span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="s1">&#39;wc -c&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="fabric">fabric</h2>
+<div class="codehilite"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fabric</span>
+<span class="n">fab</span> <span class="o">-</span><span class="n">f</span> <span class="n">fabfile</span> <span class="o">-</span><span class="n">l</span>  <span class="err">显示定义好的任务函数名</span>
+<span class="n">fab</span> <span class="o">-</span><span class="n">f</span> <span class="n">fabfile</span> <span class="n">func</span>  <span class="err">执行相应函数</span>
+
+<span class="err">文件打包上传</span><span class="o">---------------------------------------</span>
+<span class="c1">#!/usr/bin/env python</span>
+<span class="c1">#coding:utf-8</span>
+<span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.context_managers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.contrib.console</span> <span class="kn">import</span> <span class="n">confirm</span>
+<span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span>
+<span class="n">env</span><span class="o">.</span><span class="n">hosts</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;192.168.1.21&#39;</span><span class="p">,</span><span class="s1">&#39;192.168.1.22&#39;</span><span class="p">]</span>
+<span class="n">env</span><span class="o">.</span><span class="n">password</span><span class="o">=</span><span class="s1">&#39;LKs934jh3&#39;</span>
+<span class="nd">@task</span>
+<span class="nd">@runs_once</span>
+<span class="k">def</span> <span class="nf">tar_task</span><span class="p">():</span>    <span class="c1">#本地打包任务函数，只限执行一次</span>
+    <span class="k">with</span> <span class="n">lcd</span><span class="p">(</span><span class="s2">&quot;/data/logs&quot;</span><span class="p">):</span>
+        <span class="n">local</span><span class="p">(</span><span class="s2">&quot;tar -czf access.tar.gz access.log&quot;</span><span class="p">)</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">put_task</span><span class="p">():</span>    <span class="c1">#上传文件任务函数</span>
+    <span class="n">run</span><span class="p">(</span><span class="s2">&quot;mkdir -p /data/logs&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="s2">&quot;/data/logs&quot;</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>    <span class="c1">#put（上传）出现异常时继续执行，非终止</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">put</span><span class="p">(</span><span class="s2">&quot;/data/logs/access.tar.gz&quot;</span><span class="p">,</span> <span class="s2">&quot;/data/logs/access.tar.gz&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">failed</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">confirm</span><span class="p">(</span><span class="s2">&quot;put file failed, Continue[Y/N]?&quot;</span><span class="p">):</span>
+            <span class="n">abort</span><span class="p">(</span><span class="s2">&quot;Aborting file put task!&quot;</span><span class="p">)</span>    <span class="c1">#出现异常时，确认用户是否继续，（Y继续）</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">check_task</span><span class="p">():</span>    <span class="c1">#校验文件任务函数</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>        <span class="c1">#本地local命令需要配置capture=True才能捕获返回值</span>
+        <span class="n">lmd5</span><span class="o">=</span><span class="n">local</span><span class="p">(</span><span class="s2">&quot;md5sum /data/logs/access.tar.gz&quot;</span><span class="p">,</span><span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">rmd5</span><span class="o">=</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;md5sum /data/logs/access.tar.gz&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">lmd5</span><span class="o">==</span><span class="n">rmd5</span><span class="p">:</span>    <span class="c1">#对比本地及远程文件md5信息</span>
+        <span class="k">print</span> <span class="s2">&quot;OK&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s2">&quot;ERROR&quot;</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">go</span><span class="p">():</span>
+        <span class="n">tar_task</span><span class="p">()</span>
+        <span class="n">put_task</span><span class="p">()</span>
+        <span class="n">check_task</span><span class="p">()</span>
+<span class="n">LNMP</span><span class="err">安装</span><span class="o">--------------------------------------------------</span>
+<span class="c1">#!/usr/bin/env python</span>
+<span class="c1">#coding:utf-8</span>
+<span class="kn">from</span> <span class="nn">fabric.colors</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span>
+<span class="n">env</span><span class="o">.</span><span class="n">roledefs</span> <span class="o">=</span> <span class="p">{</span>    <span class="c1">#定义业务角色分组</span>
+    <span class="s1">&#39;webservers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;192.168.1.21&#39;</span><span class="p">,</span> <span class="s1">&#39;192.168.1.22&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;dbservers&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;192.168.1.23&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">env</span><span class="o">.</span><span class="n">passwords</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;root@192.168.1.21:22&#39;</span><span class="p">:</span> <span class="s1">&#39;SJk348ygd&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;root@192.168.1.22:22&#39;</span><span class="p">:</span> <span class="s1">&#39;KSh458j4f&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;root@192.168.1.23:22&#39;</span><span class="p">:</span> <span class="s1">&#39;KSdu43598&#39;</span>
+<span class="p">}</span>
+<span class="nd">@roles</span><span class="p">(</span><span class="s1">&#39;webservers&#39;</span><span class="p">)</span>    <span class="c1">#webtask任务函数引用&#39;webservers&#39;角色修饰符</span>
+<span class="k">def</span> <span class="nf">webtask</span><span class="p">():</span>    <span class="c1">#部署nginx php php-fpm等环境</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;Install nginx php php-fpm...&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;yum -y install nginx&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;yum -y install php-fpm php-mysql php-mbstring php-xml php-mcrypt php-gd&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;chkconfig --levels 235 php-fpm on&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;chkconfig --levels 235 nginx on&quot;</span><span class="p">)</span>
+<span class="nd">@roles</span><span class="p">(</span><span class="s1">&#39;dbservers&#39;</span><span class="p">)</span>    <span class="c1"># dbtask任务函数引用&#39;dbservers&#39;角色修饰符</span>
+<span class="k">def</span> <span class="nf">dbtask</span><span class="p">():</span>    <span class="c1">#部署mysql环境</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;Install Mysql...&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;yum -y install mysql mysql-server&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;chkconfig --levels 235 mysqld on&quot;</span><span class="p">)</span>
+<span class="nd">@roles</span> <span class="p">(</span><span class="s1">&#39;webservers&#39;</span><span class="p">,</span> <span class="s1">&#39;dbservers&#39;</span><span class="p">)</span> <span class="c1"># publictask任务函数同时引用两个角色修饰符</span>
+<span class="k">def</span> <span class="nf">publictask</span><span class="p">():</span>    <span class="c1">#部署公共类环境，如epel、ntp等</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;Install epel ntp...&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm&quot;</span><span class="p">)</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;yum -y install ntp&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">deploy</span><span class="p">():</span> <span class="c1">#以实现不同角色执行不同的任务函数</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">publictask</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">webtask</span><span class="p">)</span>
+    <span class="n">execute</span><span class="p">(</span><span class="n">dbtask</span><span class="p">)</span>
+
+
+<span class="err">代码发布</span><span class="o">--------------------------------------------------</span>
+<span class="c1">#!/usr/bin/env python</span>
+<span class="c1">#coding:utf-8</span>
+<span class="kn">from</span> <span class="nn">fabric.api</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.colors</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.context_managers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fabric.contrib.console</span> <span class="kn">import</span> <span class="n">confirm</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">env</span><span class="o">.</span><span class="n">user</span><span class="o">=</span><span class="s1">&#39;root&#39;</span>
+<span class="n">env</span><span class="o">.</span><span class="n">hosts</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;192.168.1.21&#39;</span><span class="p">,</span><span class="s1">&#39;192.168.1.22&#39;</span><span class="p">]</span>
+<span class="n">env</span><span class="o">.</span><span class="n">password</span><span class="o">=</span><span class="s1">&#39;LKs934jh3&#39;</span>
+<span class="n">env</span><span class="o">.</span><span class="n">project_dev_source</span> <span class="o">=</span> <span class="s1">&#39;/data/dev/Lwebadmin/&#39;</span>    <span class="c1">#开发机项目主目录</span>
+<span class="n">env</span><span class="o">.</span><span class="n">project_tar_source</span> <span class="o">=</span> <span class="s1">&#39;/data/dev/releases/&#39;</span>    <span class="c1">#开发机项目压缩包存储目录</span>
+<span class="n">env</span><span class="o">.</span><span class="n">project_pack_name</span> <span class="o">=</span> <span class="s1">&#39;release&#39;</span>    <span class="c1">#项目压缩包名前缀，文件名为release.tar.gz</span>
+<span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span> <span class="o">=</span> <span class="s1">&#39;/data/www/Lwebadmin/&#39;</span>    <span class="c1">#项目生产环境主目录</span>
+<span class="n">env</span><span class="o">.</span><span class="n">deploy_release_dir</span> <span class="o">=</span> <span class="s1">&#39;releases&#39;</span>    <span class="c1">#项目发布目录，位于主目录下面</span>
+<span class="n">env</span><span class="o">.</span><span class="n">deploy_current_dir</span> <span class="o">=</span> <span class="s1">&#39;current&#39;</span>    <span class="c1">#对外服务的当前版本软链接</span>
+<span class="n">env</span><span class="o">.</span><span class="n">deploy_version</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;v2&quot;</span>    <span class="c1">#版本号</span>
+<span class="nd">@runs_once</span>
+<span class="k">def</span> <span class="nf">input_versionid</span><span class="p">():</span>    <span class="c1">#获得用户输入的版本号，以便做版本回滚操作</span>
+    <span class="k">return</span> <span class="n">prompt</span><span class="p">(</span><span class="s2">&quot;please input project rollback version ID:&quot;</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nd">@task</span>
+<span class="nd">@runs_once</span>
+<span class="k">def</span> <span class="nf">tar_source</span><span class="p">():</span>    <span class="c1">#打包本地项目主目录，并将压缩包存储到本地压缩包目录</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;Creating source package...&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">lcd</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">project_dev_source</span><span class="p">):</span>
+        <span class="n">local</span><span class="p">(</span><span class="s2">&quot;tar -czf </span><span class="si">%s</span><span class="s2">.tar.gz .&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">project_tar_source</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">project_pack_name</span><span class="p">))</span>
+    <span class="k">print</span> <span class="n">green</span><span class="p">(</span><span class="s2">&quot;Creating source package success!&quot;</span><span class="p">)</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">put_package</span><span class="p">():</span>    <span class="c1">#上传任务函数</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;Start put package...&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span><span class="o">+</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_release_dir</span><span class="p">):</span>
+            <span class="n">run</span><span class="p">(</span><span class="s2">&quot;mkdir </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_version</span><span class="p">))</span>    <span class="c1">#创建版本目录</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">deploy_full_path</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_release_dir</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_version</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>    <span class="c1">#上传项目压缩包至此目录</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">put</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">project_tar_source</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">project_pack_name</span> <span class="o">+</span><span class="s2">&quot;.tar.gz&quot;</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_full_path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">failed</span> <span class="ow">and</span> <span class="n">no</span><span class="p">(</span><span class="s2">&quot;put file failed, Continue[Y/N]?&quot;</span><span class="p">):</span>
+        <span class="n">abort</span><span class="p">(</span><span class="s2">&quot;Aborting file put task!&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">cd</span><span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_full_path</span><span class="p">):</span>   <span class="c1">#成功解压后删除压缩包</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;tar -zxvf </span><span class="si">%s</span><span class="s2">.tar.gz&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">project_pack_name</span><span class="p">))</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;rm -rf </span><span class="si">%s</span><span class="s2">.tar.gz&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">project_pack_name</span><span class="p">))</span>
+    <span class="k">print</span> <span class="n">green</span><span class="p">(</span><span class="s2">&quot;Put &amp; untar package success!&quot;</span><span class="p">)</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">make_symlink</span><span class="p">():</span>    <span class="c1">#为当前版本目录做软链接</span>
+    <span class="k">print</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&quot;update current symlink&quot;</span><span class="p">)</span>
+    <span class="n">env</span><span class="o">.</span><span class="n">deploy_full_path</span><span class="o">=</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_release_dir</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span><span class="o">+</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_version</span>
+    <span class="k">with</span> <span class="n">settings</span><span class="p">(</span><span class="n">warn_only</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>    <span class="c1">#删除软链接，重新创建并指定软链源目录，新版本生效</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;rm -rf </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_current_dir</span><span class="p">))</span>
+        <span class="n">run</span><span class="p">(</span><span class="s2">&quot;ln -s </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">env</span><span class="o">.</span><span class="n">deploy_full_path</span><span class="p">,</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_project_root</span> <span class="o">+</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_current_dir</span><span class="p">))</span>   
+        <span class="c1">#删除软链接，重新创建并指定软链源目录，新版本生效</span>
+    <span class="k">print</span> <span class="n">green</span><span class="p">(</span><span class="s2">&quot;rollback success!&quot;</span><span class="p">)</span>
+<span class="nd">@task</span>
+<span class="k">def</span> <span class="nf">go</span><span class="p">():</span>    <span class="c1">#自动化程序版本发布入口函数</span>
+    <span class="n">tar_source</span><span class="p">()</span>
+    <span class="n">put_package</span><span class="p">()</span>
+    <span class="n">make_symlink</span><span class="p">()</span>
+</pre></div>
+
+
+<h2 id="_4">嵌套函数</h2>
+<div class="codehilite"><pre><span></span><span class="err">闭包</span><span class="n">closures</span>
+<span class="err">函数套函数</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="k">def</span> <span class="nf">hl</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+        <span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+        <span class="k">print</span> <span class="n">begin</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+        <span class="k">print</span> <span class="n">end</span>
+        <span class="k">print</span> <span class="s2">&quot;cost:&quot;</span><span class="p">,</span><span class="n">end</span> <span class="o">-</span> <span class="n">begin</span>
+    <span class="k">return</span> <span class="n">end</span> <span class="o">-</span> <span class="n">begin</span>
+<span class="k">return</span> <span class="n">wrap</span>
+<span class="k">def</span> <span class="nf">t</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+     <span class="n">hl</span><span class="p">(</span><span class="n">t</span><span class="p">)()</span>
+
+<span class="err">装饰器</span>
+<span class="err">函数执行前扩展一些函数、执行后扩展一些函数</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="k">def</span> <span class="nf">hl</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+        <span class="n">begin</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+        <span class="k">print</span> <span class="n">begin</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+        <span class="k">print</span> <span class="n">end</span>
+        <span class="k">print</span> <span class="s2">&quot;cost:&quot;</span><span class="p">,</span><span class="n">end</span> <span class="o">-</span> <span class="n">begin</span>
+        <span class="k">return</span> <span class="n">end</span> <span class="o">-</span> <span class="n">begin</span>
+    <span class="k">return</span> <span class="n">wrap</span>
+<span class="nd">@hl</span>
+<span class="k">def</span> <span class="nf">t</span><span class="p">():</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">t</span><span class="p">()</span>
+
+<span class="c1">##############################</span>
+<span class="k">def</span> <span class="nf">mb</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;b&gt;&#39;</span> <span class="o">+</span> <span class="n">func</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&lt;/b&gt;&#39;</span>
+    <span class="k">return</span> <span class="n">wrap</span>
+<span class="k">def</span> <span class="nf">mi</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;i&gt;&#39;</span> <span class="o">+</span> <span class="n">func</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;&lt;/i&gt;&#39;</span>
+    <span class="k">return</span> <span class="n">wrap</span>
+<span class="nd">@mb</span>
+<span class="nd">@mi</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">hello</span><span class="p">())</span>
+</pre></div>
+
+
+<h2 id="pipconf">pip.conf</h2>
+<div class="codehilite"><pre><span></span><span class="err">#$</span><span class="n">HOME</span><span class="o">/</span><span class="p">.</span><span class="n">pip</span><span class="o">/</span><span class="n">pip</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">global</span><span class="o">]</span><span class="w"></span>
+<span class="k">index</span><span class="o">-</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="p">.</span><span class="n">douban</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">simple</span><span class="w"></span>
+<span class="o">[</span><span class="n">install</span><span class="o">]</span><span class="w"></span>
+<span class="n">trusted</span><span class="o">-</span><span class="k">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pypi</span><span class="p">.</span><span class="n">douban</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+<span class="n">或者</span><span class="w"></span>
+<span class="o">[</span><span class="n">global</span><span class="o">]</span><span class="w"></span>
+<span class="k">index</span><span class="o">-</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">aliyun</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span><span class="w"></span>
+<span class="o">[</span><span class="n">install</span><span class="o">]</span><span class="w"></span>
+<span class="n">trusted</span><span class="o">-</span><span class="k">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mirrors</span><span class="p">.</span><span class="n">aliyun</span><span class="p">.</span><span class="n">com</span><span class="w"></span>
+
+<span class="n">windows设置HOME变量</span><span class="err">，</span><span class="n">放到</span><span class="o">%</span><span class="n">HOME</span><span class="o">%/</span><span class="n">pip</span><span class="o">/</span><span class="n">pip</span><span class="p">.</span><span class="n">ini</span><span class="w"></span>
+
+<span class="n">单次使用</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">Jinja2</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="p">.</span><span class="n">douban</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">simple</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="_5">小技巧</h2>
+<div class="codehilite"><pre><span></span>    <span class="s s-Atom">交换变量</span>
+
+        <span class="s s-Atom">x</span> <span class="o">=</span> <span class="mi">6</span>
+        <span class="s s-Atom">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+        <span class="s s-Atom">x</span><span class="p">,</span> <span class="s s-Atom">y</span> <span class="o">=</span> <span class="s s-Atom">y</span><span class="p">,</span> <span class="s s-Atom">x</span>
+
+        <span class="s s-Atom">print</span> <span class="s s-Atom">x</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">5</span>
+        <span class="s s-Atom">print</span> <span class="s s-Atom">y</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">6</span>
+
+
+
+    <span class="s s-Atom">if</span> <span class="s s-Atom">语句在行内</span>
+        <span class="s s-Atom">作用相当于</span> <span class="nv">C</span><span class="o">/</span><span class="nv">Java</span> <span class="s s-Atom">的三目运算符</span>
+
+        <span class="s s-Atom">a</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span> <span class="s s-Atom">if</span> <span class="nv">True</span> <span class="s s-Atom">else</span> <span class="s2">&quot;World&quot;</span>
+        <span class="s s-Atom">b</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span> <span class="s s-Atom">if</span> <span class="nv">False</span> <span class="s s-Atom">else</span> <span class="s2">&quot;World&quot;</span>
+
+        <span class="s s-Atom">print</span> <span class="s s-Atom">a</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="nv">Hello</span>
+        <span class="s s-Atom">print</span> <span class="s s-Atom">b</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="nv">World</span>
+
+
+    <span class="s s-Atom">连接</span>
+        <span class="s s-Atom">#</span> <span class="s s-Atom">列表、元组</span> <span class="s s-Atom">拼接</span>
+        <span class="s s-Atom">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Packers&quot;</span><span class="p">,</span> <span class="s2">&quot;49ers&quot;</span><span class="p">]</span>
+        <span class="s s-Atom">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">]</span>
+        <span class="s s-Atom">print</span> <span class="s s-Atom">nfc</span> <span class="o">+</span> <span class="s s-Atom">afc</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="p">[</span><span class="s s-Atom">&#39;Packers&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;49ers&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;Ravens&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;Patriots&#39;</span><span class="p">]</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">字符串</span> <span class="s s-Atom">拼接</span>
+        <span class="s s-Atom">print</span> <span class="nf">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; world&quot;</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">1</span> <span class="s s-Atom">world</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">数值的这种写法，我还不清楚是什么</span><span class="p">,</span> <span class="s s-Atom">会当成字符串处理，却又不是真正的字符串</span>
+        <span class="s s-Atom">print</span> <span class="err">`</span><span class="mi">1</span><span class="err">`</span> <span class="o">+</span> <span class="s2">&quot; world&quot;</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">1</span> <span class="s s-Atom">world</span>
+
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">python2</span><span class="p">.</span><span class="s s-Atom">x</span> <span class="s s-Atom">的</span> <span class="s s-Atom">print</span> <span class="s s-Atom">可以这样打印多个不同类型的内容</span>
+        <span class="s s-Atom">print</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">1</span> <span class="s s-Atom">world</span>
+        <span class="s s-Atom">print</span> <span class="s s-Atom">nfc</span><span class="p">,</span> <span class="mi">1</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="p">[</span><span class="s s-Atom">&#39;Packers&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;49ers&#39;</span><span class="p">]</span> <span class="mi">1</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">python3</span><span class="p">.</span><span class="s s-Atom">x</span> <span class="s s-Atom">的</span> <span class="s s-Atom">print</span> <span class="nf">可以这样打印多个不同类型的内容</span><span class="p">(</span><span class="s s-Atom">效果同上面</span> <span class="mf">2.</span><span class="s s-Atom">x</span> <span class="s s-Atom">的</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span> <span class="s s-Atom">end=&#39; &#39;</span><span class="p">)</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">1</span> <span class="s s-Atom">world</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">nfc</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s s-Atom">end=&#39; &#39;</span><span class="p">)</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="p">[</span><span class="s s-Atom">&#39;Packers&#39;</span><span class="p">,</span> <span class="s s-Atom">&#39;49ers&#39;</span><span class="p">]</span> <span class="mi">1</span>
+
+
+    <span class="nf">序列</span><span class="p">(</span><span class="s s-Atom">包括:列表、元组、字符串</span><span class="p">)</span>
+
+    <span class="s s-Atom">带索引的</span> <span class="s s-Atom">序列</span> <span class="nf">迭代</span><span class="p">(</span><span class="s s-Atom">很实用的获取索引的写法</span><span class="p">)</span>
+
+        <span class="s s-Atom">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Packers&quot;</span><span class="p">,</span> <span class="s2">&quot;49ers&quot;</span><span class="p">,</span> <span class="s2">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">]</span>
+        <span class="s s-Atom">for</span> <span class="s s-Atom">index</span><span class="p">,</span> <span class="s s-Atom">team</span> <span class="s s-Atom">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">)</span><span class="s s-Atom">:</span>
+            <span class="s s-Atom">print</span> <span class="s s-Atom">index</span><span class="p">,</span> <span class="s s-Atom">team</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">打印如:</span><span class="mi">0</span> <span class="nv">Packers</span>
+
+    <span class="s s-Atom">序列</span> <span class="s s-Atom">的乘法</span>
+        <span class="s s-Atom">items</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">items</span><span class="p">)</span>
+
+    <span class="s s-Atom">序列</span> <span class="s s-Atom">拼接为字符串</span>
+        <span class="s s-Atom">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Packers&quot;</span><span class="p">,</span> <span class="s2">&quot;49ers&quot;</span><span class="p">,</span> <span class="s2">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">]</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">))</span>
+
+    <span class="s s-Atom">序列</span> <span class="s s-Atom">的子集</span>
+        <span class="s s-Atom">teams</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Packers&quot;</span><span class="p">,</span> <span class="s2">&quot;49ers&quot;</span><span class="p">,</span> <span class="s2">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">]</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>     <span class="s s-Atom">#</span> <span class="nf">最后两项</span><span class="p">(</span><span class="s s-Atom">负数表示倒数几项</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">[</span><span class="s s-Atom">:</span><span class="p">])</span>      <span class="s s-Atom">#</span> <span class="s s-Atom">复制一份</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">[</span><span class="s s-Atom">::-</span><span class="mi">1</span><span class="p">])</span>   <span class="s s-Atom">#</span> <span class="s s-Atom">反序</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">[</span><span class="s s-Atom">::</span><span class="mi">2</span><span class="p">])</span>    <span class="s s-Atom">#</span> <span class="s s-Atom">奇数项</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s s-Atom">teams</span><span class="p">[</span><span class="mi">1</span><span class="s s-Atom">::</span><span class="mi">2</span><span class="p">])</span>   <span class="s s-Atom">#</span> <span class="s s-Atom">偶数项</span>
+
+
+    <span class="s s-Atom">数值比较</span>
+        <span class="s s-Atom">这是我见过诸多语言中很少有的如此棒的简便法</span>
+
+        <span class="s s-Atom">x</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="s s-Atom">if</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="s s-Atom">x</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="s s-Atom">:</span>
+           <span class="s s-Atom">print</span> <span class="s s-Atom">x</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">2</span>
+
+        <span class="s s-Atom">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="s s-Atom">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="s s-Atom">:</span>
+           <span class="s s-Atom">print</span> <span class="s s-Atom">x</span> <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span><span class="mi">2</span>
+
+
+    <span class="s s-Atom">同时迭代两个列表</span>
+
+        <span class="s s-Atom">nfc</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Packers&quot;</span><span class="p">,</span> <span class="s2">&quot;49ers&quot;</span><span class="p">]</span>
+        <span class="s s-Atom">afc</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Ravens&quot;</span><span class="p">,</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">]</span>
+        <span class="s s-Atom">for</span> <span class="s s-Atom">teama</span><span class="p">,</span> <span class="s s-Atom">teamb</span> <span class="s s-Atom">in</span> <span class="nf">zip</span><span class="p">(</span><span class="s s-Atom">nfc</span><span class="p">,</span> <span class="s s-Atom">afc</span><span class="p">)</span><span class="s s-Atom">:</span>
+             <span class="s s-Atom">print</span> <span class="s s-Atom">teama</span> <span class="o">+</span> <span class="s2">&quot; vs. &quot;</span> <span class="o">+</span> <span class="s s-Atom">teamb</span>
+        <span class="s s-Atom">#</span> <span class="s s-Atom">打印1:</span> <span class="nv">Packers</span> <span class="s s-Atom">vs</span><span class="p">.</span> <span class="nv">Ravens</span>
+        <span class="s s-Atom">#</span> <span class="s s-Atom">打印2:</span> <span class="mi">49</span><span class="s s-Atom">ers</span> <span class="s s-Atom">vs</span><span class="p">.</span> <span class="nv">Patriots</span>
+
+
+    <span class="mi">60</span><span class="s s-Atom">个字符解决FizzBuzz</span>
+        <span class="s s-Atom">前段时间Jeff</span> <span class="nv">Atwood</span> <span class="s s-Atom">推广了一个简单的编程练习叫FizzBuzz，问题引用如下：</span>
+        <span class="s s-Atom">写一个程序，打印数字1到100，3的倍数打印“</span><span class="nv">Fizz</span><span class="s s-Atom">”来替换这个数，5的倍数打印“</span><span class="nv">Buzz</span><span class="s s-Atom">”，对于既是3的倍数又是5的倍数的数字打印“</span><span class="nv">FizzBuzz</span><span class="s s-Atom">”。</span>
+
+        <span class="s s-Atom">这里就是一个简短的，有意思的方法解决这个问题：</span>
+        <span class="s s-Atom">for</span> <span class="s s-Atom">x</span> <span class="s s-Atom">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">101</span><span class="p">)</span><span class="s s-Atom">:print</span><span class="s2">&quot;fizz&quot;</span><span class="p">[</span><span class="s s-Atom">x</span><span class="c1">%3*4::]+&quot;buzz&quot;[x%5*4::]or x</span>
+
+
+    <span class="nv">False</span> <span class="o">==</span> <span class="nv">True</span>
+        <span class="s s-Atom">比起实用技术来说这是一个很有趣的事，在python中</span><span class="p">,</span> <span class="nv">True</span> <span class="s s-Atom">和</span> <span class="nv">False</span> <span class="nf">是全局变量</span><span class="p">(</span><span class="s s-Atom">值允许改变</span><span class="p">)</span><span class="s s-Atom">，因此：</span>
+
+        <span class="nv">False</span> <span class="o">=</span> <span class="nv">True</span>
+        <span class="s s-Atom">if</span> <span class="nv">False</span><span class="s s-Atom">:</span>
+           <span class="s s-Atom">print</span> <span class="s2">&quot;Hello&quot;</span>
+        <span class="nn">else</span><span class="p">:</span>
+           <span class="s s-Atom">print</span> <span class="s2">&quot;World&quot;</span>
+        <span class="s s-Atom">#</span> <span class="s s-Atom">打印:</span> <span class="nv">Hello</span>
+</pre></div>
+
+
+<h2 id="_6">流量转换</h2>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">def</span> <span class="nf">convertBytes</span><span class="p">(</span><span class="nb">bytes</span><span class="p">,</span> <span class="n">lst</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">lst</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Bytes&#39;</span><span class="p">,</span> <span class="s1">&#39;KB&#39;</span><span class="p">,</span> <span class="s1">&#39;MB&#39;</span><span class="p">,</span> <span class="s1">&#39;GB&#39;</span><span class="p">,</span> <span class="s1">&#39;TB&#39;</span><span class="p">,</span> <span class="s1">&#39;PB&#39;</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span> <span class="c1"># 舍弃小数点，取小</span>
+             <span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">bytes</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span> <span class="c1"># 求对数(对数：若 a**b = N 则 b 叫做以 a 为底 N 的对数)</span>
+            <span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s1">&#39;</span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">%</span> <span class="p">(</span><span class="nb">bytes</span><span class="o">/</span><span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python-web/" title="python-web" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                python-web
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../nginx/" title="nginx" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                nginx
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

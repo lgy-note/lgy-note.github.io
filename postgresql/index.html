@@ -1,0 +1,1391 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>postgresql - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                postgresql
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link md-tabs__link--active">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        postgresql
+      </label>
+    
+    <a href="./" title="postgresql" class="md-nav__link md-nav__link--active">
+      postgresql
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    多实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pg" class="md-nav__link">
+    pg同步
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pg_1" class="md-nav__link">
+    pg安装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    多实例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pg" class="md-nav__link">
+    pg同步
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pg_1" class="md-nav__link">
+    pg安装
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>postgresql</h1>
+                
+                <h2 id="_1">多实例</h2>
+<div class="codehilite"><pre><span></span><span class="n">PostgreSQL</span><span class="err">是支持多实例的，下面我们介绍启动两个实例的方法。首先新建两个数据文件目录：</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">PostgreSQL</span><span class="o">/</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="k">data</span><span class="o">/</span>
+<span class="n">mkdir</span> <span class="n">pgdata1</span>
+<span class="n">mkdir</span> <span class="n">pgdata2</span>
+<span class="n">chown</span> <span class="n">postgres</span> <span class="n">pgdata1</span>
+<span class="n">chown</span> <span class="n">postgres</span> <span class="n">pgdata2</span>
+<span class="err">然后新建两个实例：</span>
+
+<span class="n">su</span> <span class="n">postgres</span>
+<span class="n">initdb</span> <span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">PostgreSQL</span><span class="o">/</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">pgdata1</span> <span class="c1">--locale=zh_CN.UTF8</span>
+<span class="n">initdb</span> <span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">PostgreSQL</span><span class="o">/</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">pgdata2</span> <span class="c1">--locale=zh_CN.UTF8</span>
+<span class="err">修改</span><span class="n">pgdata1</span><span class="err">和</span><span class="n">pgdata2</span><span class="err">目录下的</span><span class="n">postgresql</span><span class="p">.</span><span class="n">conf</span><span class="err">文件中的</span><span class="n">port</span><span class="err">参数，分别将其值设置为</span><span class="mi">5433</span><span class="err">和</span><span class="mi">5434</span><span class="err">，下一步就可以启动两个实例了，命令如下：</span>
+
+<span class="n">pg_ctl</span> <span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">PostgreSQL</span><span class="o">/</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">pgdata1</span> <span class="k">start</span>
+<span class="n">pg_ctl</span> <span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">PostgreSQL</span><span class="o">/</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">pgdata2</span> <span class="k">start</span>
+<span class="err">进入两个实例分别使用如下命令：</span>
+
+<span class="n">psql</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5433</span>
+<span class="n">psql</span> <span class="o">-</span><span class="n">p</span> <span class="mi">5434</span>
+
+<span class="err">来源：</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mos</span><span class="p">.</span><span class="n">meituan</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="mi">33</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="k">source</span><span class="o">-</span><span class="n">based</span><span class="o">-</span><span class="n">installation</span><span class="o">/</span>
+</pre></div>
+
+
+<h2 id="pg">pg同步</h2>
+<div class="codehilite"><pre><span></span><span class="err">数据库的热备归档</span><span class="o">+</span><span class="err">流复制模式配置</span>
+
+
+<span class="err">首先先做主备数据库之间的信任关系，使两台服务器之间互相访问不需要密码验证。</span>
+<span class="err">主服务器上</span> <span class="err">在</span><span class="n">root</span>
+<span class="n">postgresql</span> <span class="err">两个用户下分别生成证书</span>
+
+<span class="err">在主机</span><span class="n">A</span><span class="err">上执行如下命令来生成配对密钥：</span>
+
+<span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> 
+
+<span class="err">按照提示操作，注意，不要输入</span><span class="n">passphrase</span><span class="err">。提示信息如下</span>
+<span class="n">Generating</span> <span class="n">public</span><span class="o">/</span><span class="n">private</span> <span class="n">rsa</span> <span class="n">key</span> <span class="n">pair</span><span class="p">.</span>
+<span class="n">Enter</span> <span class="n">file</span> <span class="k">in</span> <span class="n">which</span> <span class="n">to</span> <span class="n">save</span> <span class="n">the</span> <span class="n">key</span> <span class="p">(</span><span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">)</span><span class="o">:</span> 
+<span class="n">Enter</span> <span class="n">passphrase</span> <span class="p">(</span><span class="n">empty</span> <span class="k">for</span> <span class="n">no</span> <span class="n">passphrase</span><span class="p">)</span><span class="o">:</span> 
+<span class="n">Enter</span> <span class="n">same</span> <span class="n">passphrase</span> <span class="nl">again</span><span class="p">:</span> 
+<span class="n">Your</span> <span class="n">identification</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="k">in</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span>
+<span class="n">Your</span> <span class="n">public</span> <span class="n">key</span> <span class="n">has</span> <span class="n">been</span> <span class="n">saved</span> <span class="k">in</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span><span class="p">.</span>
+<span class="n">The</span> <span class="n">key</span> <span class="n">fingerprint</span> <span class="nl">is</span><span class="p">:</span>
+<span class="nl">ff</span><span class="p">:</span><span class="mi">8</span><span class="nl">e</span><span class="p">:</span><span class="mi">85</span><span class="o">:</span><span class="mi">68</span><span class="o">:</span><span class="mi">85</span><span class="o">:</span><span class="mi">94</span><span class="o">:</span><span class="mi">7</span><span class="nl">c</span><span class="p">:</span><span class="mi">2</span><span class="nl">c</span><span class="p">:</span><span class="mi">46</span><span class="o">:</span><span class="nl">b1</span><span class="p">:</span><span class="nl">e5</span><span class="p">:</span><span class="mi">2</span><span class="nl">d</span><span class="p">:</span><span class="mi">41</span><span class="o">:</span><span class="mi">5</span><span class="nl">c</span><span class="p">:</span><span class="nl">e8</span><span class="p">:</span><span class="mi">9</span><span class="n">b</span>  <span class="n">root</span><span class="p">@</span><span class="n">localhost</span><span class="p">.</span><span class="n">domain</span>
+
+
+
+<span class="err">将</span> <span class="p">.</span><span class="n">ssh</span> <span class="err">目录中的</span> <span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="err">文件复制到</span> <span class="err">主机</span><span class="n">B</span> <span class="err">的</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span> <span class="err">目录中，并改名为</span>  <span class="n">authorized_keys</span><span class="err">。</span>
+
+<span class="n">scp</span> <span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="mf">192.168.2.91</span><span class="o">:/</span><span class="n">root</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+
+<span class="err">备注：</span><span class="n">scp</span> <span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="n">postgres</span><span class="mf">@192.168.2.92</span><span class="o">:/</span><span class="n">home</span><span class="o">/</span><span class="n">postgres</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+
+<span class="err">以后从</span><span class="n">A</span><span class="err">主机</span><span class="n">scp</span><span class="err">到</span><span class="n">B</span><span class="err">主机就不需要密码了。</span>
+
+
+
+
+<span class="err">使用上面的操作，反过来再建立</span><span class="n">B</span><span class="err">连接</span><span class="n">A</span><span class="err">不需要密码验证，方法是把</span><span class="n">B</span><span class="err">的公钥</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="err">改名放到</span><span class="n">A</span><span class="err">的</span><span class="p">.</span><span class="n">ssh</span><span class="err">目录下。</span>
+
+<span class="err">如果用户名不相同，需要把访问者用户的公钥放到被访问者服务器用户目录下的</span><span class="p">.</span><span class="n">ssh</span><span class="err">目录，并把公钥</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span><span class="err">的内容添加到</span>
+<span class="n">authorized_keys</span> <span class="err">用户中。</span>
+
+<span class="n">cat</span> <span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="o">&gt;&gt;</span> <span class="err">目录</span><span class="o">/</span><span class="n">authorized_keys</span>
+
+
+<span class="err">主库操作：</span>
+
+<span class="err">修改：</span><span class="n">vim</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">pgsql</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">pg_hba</span><span class="p">.</span><span class="n">conf</span>
+
+<span class="err">添加：</span>
+
+<span class="n">local</span>    <span class="n">all</span>            <span class="n">all</span>                                     <span class="n">trust</span>
+<span class="n">host</span>    <span class="n">all</span>             <span class="n">all</span>             <span class="mf">127.0.0.1</span><span class="o">/</span><span class="mi">32</span>            <span class="n">trust</span>
+<span class="cp"># IPv6 local connections:</span>
+<span class="n">host</span>    <span class="n">all</span>             <span class="n">all</span>             <span class="mf">192.168.2.0</span><span class="o">/</span><span class="mi">24</span>          <span class="n">trust</span>
+<span class="cp"># Allow replication connections from localhost, by a user with the</span>
+<span class="cp"># replication privilege.</span>
+<span class="n">host</span>    <span class="n">replication</span>     <span class="n">postgres</span>        <span class="mf">192.168.2.0</span><span class="o">/</span><span class="mi">24</span>          <span class="n">trust</span>
+<span class="n">host</span>    <span class="n">replication</span>     <span class="n">postgres</span>        <span class="o">::</span><span class="mi">1</span><span class="o">/</span><span class="mi">128</span>                 <span class="n">trust</span>
+
+
+<span class="err">编辑</span><span class="n">vim</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">pgsql</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">postgresql</span><span class="p">.</span><span class="n">conf</span>
+
+<span class="n">max_wal_senders</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">wal_keep_segments</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">wal_sender_timeout</span> <span class="o">=</span> <span class="mi">60</span><span class="n">s</span>
+<span class="n">hot_standby</span> <span class="o">=</span> <span class="n">on</span>
+<span class="n">log_destination</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">stderr</span><span class="err">&#39;</span>
+<span class="n">logging_collector</span> <span class="o">=</span> <span class="n">on</span>
+<span class="n">log_directory</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">pg_log</span><span class="err">&#39;</span>
+<span class="n">log_filename</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">postgresql</span><span class="o">-%</span><span class="n">Y</span><span class="o">-%</span><span class="n">m</span><span class="o">-%</span><span class="n">d_</span><span class="o">%</span><span class="n">H</span><span class="o">%</span><span class="n">M</span><span class="o">%</span><span class="n">S</span><span class="p">.</span><span class="n">log</span><span class="err">&#39;</span>
+<span class="n">log_file_mode</span> <span class="o">=</span> <span class="mo">0600</span>
+<span class="n">log_rotation_age</span> <span class="o">=</span> <span class="mi">1</span><span class="n">d</span>
+<span class="n">log_rotation_size</span> <span class="o">=</span> <span class="mi">20</span><span class="n">MB</span>
+<span class="n">client_min_messages</span> <span class="o">=</span> <span class="n">notice</span>
+<span class="n">log_min_messages</span> <span class="o">=</span> <span class="n">warning</span>
+<span class="n">log_min_error_statement</span> <span class="o">=</span> <span class="n">error</span>
+<span class="n">log_min_duration_statement</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">shared_preload_libraries</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">pg_stat_statements</span><span class="err">&#39;</span>
+<span class="n">pg_stat_statements</span><span class="p">.</span><span class="n">max</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">pg_stat_statements</span><span class="p">.</span><span class="n">track</span> <span class="o">=</span> <span class="n">top</span>
+<span class="n">pg_stat_statements</span><span class="p">.</span><span class="n">track_utility</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="n">pg_stat_statements</span><span class="p">.</span><span class="n">save</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="n">log_checkpoints</span> <span class="o">=</span> <span class="n">on</span>
+<span class="n">log_connections</span> <span class="o">=</span> <span class="n">on</span>
+<span class="n">log_lock_waits</span> <span class="o">=</span> <span class="n">on</span>
+<span class="n">log_statement</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">ddl</span><span class="err">&#39;</span>
+<span class="n">log_timezone</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">PRC</span><span class="err">&#39;</span>
+
+
+<span class="err">在</span><span class="o">/</span><span class="n">data</span><span class="err">目录下创建存放归档日志的目录</span>
+
+<span class="n">mkdir</span> <span class="n">archivedir</span>
+
+<span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">archivedir</span>
+
+
+
+<span class="err">创建存储数据库基础备份的目录</span><span class="o">/</span><span class="n">data</span>
+
+<span class="n">mkidr</span> <span class="n">pgbackup</span>
+
+<span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">pgbackup</span>
+
+
+<span class="err">以上操作完毕后，重启</span><span class="n">postgresql</span><span class="err">数据库。</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">postgresql</span> <span class="n">restart</span>
+<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">pgsql</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">pg_ctl</span> <span class="n">restart</span> <span class="o">-</span><span class="n">D</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">pgsql</span><span class="o">/</span><span class="n">data</span><span class="o">/</span>
+
+
+<span class="err">创建数据库基础本分：</span>
+
+<span class="err">进入</span><span class="n">postgresql</span> <span class="err">用户：</span>
+
+<span class="n">su</span> <span class="o">-</span><span class="n">l</span> <span class="n">postgres</span>
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="o">~</span><span class="p">]</span><span class="err">$</span> <span class="n">psql</span>
+
+<span class="n">postgres</span><span class="o">=</span><span class="err">#</span> <span class="n">SELECT</span> <span class="n">pg_start_backup</span><span class="p">(</span><span class="err">&#39;</span><span class="n">basebak20151209</span><span class="err">&#39;</span><span class="p">);</span>
+
+<span class="n">pg_start_backup</span>
+
+<span class="o">-----------------</span>
+
+<span class="mi">0</span><span class="o">/</span><span class="mi">8000028</span>
+
+<span class="p">(</span><span class="mi">1</span> <span class="n">row</span><span class="p">)</span>
+
+
+<span class="n">postgres</span><span class="o">=</span><span class="err">#</span> <span class="err">\</span><span class="n">q</span>
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="o">~</span><span class="p">]</span><span class="err">$</span> <span class="n">exit</span>
+
+<span class="p">[</span><span class="n">root</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="n">data</span><span class="p">]</span><span class="err">#</span> <span class="n">cd</span> <span class="n">pgbackup</span><span class="o">/</span>
+
+<span class="p">[</span><span class="n">root</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="n">pgbackup</span><span class="p">]</span><span class="err">#</span> <span class="n">tar</span> <span class="n">zvcf</span> <span class="n">base201510_data</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">data</span> <span class="err">复制数据库数据目录并压缩成文件</span>
+
+<span class="p">[</span><span class="n">root</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="n">data</span><span class="p">]</span><span class="err">#</span> <span class="n">su</span> <span class="o">-</span><span class="n">l</span> <span class="n">postgres</span>
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="o">~</span><span class="p">]</span><span class="err">$</span> <span class="n">psql</span>
+
+<span class="n">postgres</span><span class="o">=</span><span class="err">#</span> <span class="n">SELECT</span> <span class="n">pg_stop_backup</span><span class="p">();</span>
+
+<span class="nl">NOTICE</span><span class="p">:</span> <span class="n">pg_stop_backup</span> <span class="n">complete</span><span class="p">,</span> <span class="n">all</span> <span class="n">required</span> <span class="n">WAL</span> <span class="n">segments</span> <span class="n">have</span> <span class="n">been</span> <span class="n">archived</span>
+
+<span class="n">pg_stop_backup</span>
+
+<span class="o">----------------</span>         
+
+<span class="mi">0</span><span class="o">/</span><span class="mi">8000230</span>
+
+<span class="p">(</span><span class="mi">1</span> <span class="n">row</span><span class="p">)</span>
+
+
+<span class="n">postgres</span><span class="o">=</span><span class="err">#</span> <span class="err">\</span><span class="n">q</span>
+
+
+
+
+<span class="p">[</span><span class="n">root</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="n">data</span><span class="p">]</span><span class="err">#</span> <span class="n">cd</span> <span class="n">pgbackup</span><span class="o">/</span>
+
+<span class="p">[</span><span class="n">root</span><span class="p">@</span><span class="n">AY131021150028549089Z</span> <span class="n">pgbackup</span><span class="p">]</span><span class="err">#</span> <span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">base20131112_data</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span>
+
+
+
+
+    <span class="err">备库上的操作：</span>
+
+<span class="err">在</span><span class="o">/</span><span class="n">data</span><span class="err">下创建</span> <span class="n">pgbackup</span><span class="err">目录</span>
+
+<span class="n">mkdir</span> <span class="n">archivedir</span>
+
+<span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">archivedir</span>
+
+
+<span class="err">创建存储数据库基础备份的目录</span>
+
+<span class="n">mkdir</span> <span class="n">pgbackup</span>
+
+<span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">pgbackup</span>
+
+
+<span class="err">以上操作完毕后，停止</span><span class="n">postgresql</span><span class="err">数据库。</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">postgresql</span> <span class="n">stop</span> <span class="err">停止当前备用数据库的运行</span>
+<span class="n">su</span>
+
+
+<span class="n">su</span> <span class="o">-</span><span class="n">l</span> <span class="n">postgres</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">pgbackup</span>
+
+<span class="n">scp</span> <span class="mf">192.168.2.91</span><span class="o">:/</span><span class="n">data</span><span class="o">/</span><span class="n">pgbackup</span><span class="o">/</span><span class="n">base20131112_data</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="p">.</span><span class="o">/</span>  <span class="err">复制主库的基本库备份文件</span>
+
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150027813b05Z</span> <span class="n">pgbackup</span><span class="p">]</span><span class="err">$</span> <span class="n">tar</span> <span class="n">zvxf</span> <span class="n">base20131112_data</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">C</span> <span class="p">..</span><span class="o">/</span>  <span class="err">解压缩并复制到备库数据目录中去</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">pg_xlog</span>
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150027813b05Z</span> <span class="n">pg_xlog</span><span class="p">]</span><span class="err">$</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="mi">0</span><span class="o">*</span>
+
+<span class="p">[</span><span class="n">postgres</span><span class="p">@</span><span class="n">AY131021150027813b05Z</span> <span class="n">archive_status</span><span class="p">]</span><span class="err">$</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="mi">0</span><span class="o">*</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">data</span>
+
+<span class="n">rm</span> <span class="n">postmaster</span><span class="p">.</span><span class="n">pid</span>
+
+<span class="n">cp</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">pgsql</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">recovery</span><span class="p">.</span><span class="n">conf</span><span class="p">.</span><span class="n">sample</span> <span class="p">.</span><span class="o">/</span><span class="n">recovery</span><span class="p">.</span><span class="n">conf</span>
+
+
+
+
+<span class="err">编辑</span><span class="n">recover</span><span class="p">.</span><span class="n">conf</span><span class="err">文件</span>
+
+<span class="n">restore_command</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">scp</span> <span class="mf">10.161.166.25</span><span class="o">:/</span><span class="n">data</span><span class="o">/</span><span class="n">archivedir</span><span class="o">/%</span><span class="n">f</span> <span class="s">&quot;%p&quot;</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span><span class="err">&#39;</span>
+
+<span class="n">recovery_target_timeline</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">latest</span><span class="err">&#39;</span>
+
+<span class="n">standby_mode</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">on</span><span class="err">&#39;</span>
+
+<span class="n">primary_conninfo</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">host</span><span class="o">=</span><span class="mf">172.31.2.150</span> <span class="n">port</span><span class="o">=</span><span class="mi">5432</span> <span class="n">user</span><span class="o">=</span><span class="n">postgres</span><span class="err">&#39;</span>
+
+<span class="n">trigger_file</span> <span class="o">=</span> <span class="err">&#39;</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">trigger_file0</span><span class="err">&#39;</span>
+
+
+<span class="n">chown</span> <span class="n">postgres</span><span class="p">.</span><span class="n">postgres</span> <span class="n">recovery</span><span class="p">.</span><span class="n">conf</span><span class="err">权限</span>
+
+<span class="err">修改完成后，重启数据库</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">postgres</span> <span class="n">start</span>
+</pre></div>
+
+
+<h2 id="pg_1">pg安装</h2>
+<div class="codehilite"><pre><span></span><span class="nv">yum</span> <span class="nv">install</span> <span class="nv">postgresql</span><span class="o">-</span><span class="nv">server</span> <span class="nv">postgresql</span> <span class="o">-</span><span class="nv">y</span>
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">postgresql</span> <span class="nv">initdb</span>
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">postgresql</span> <span class="nv">restart</span>
+<span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">pgsql</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">postgresql</span>.<span class="nv">conf</span>  配置文件
+<span class="nv">vim</span>  <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">pgsql</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">pg_hba</span>.<span class="nv">conf</span> 添加，可以远程访问
+<span class="nv">host</span>    <span class="nv">all</span>    <span class="nv">all</span>    <span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">0</span><span class="o">/</span><span class="mi">0</span>    <span class="nv">md5</span>
+
+<span class="nv">su</span> <span class="o">-</span> <span class="nv">postgres</span>
+<span class="nv">psql</span>  登录
+
+第一件事是使用\<span class="nv">password</span>命令，为<span class="nv">postgres</span>用户设置一个密码。
+\<span class="nv">password</span> <span class="nv">postgres</span>
+第二件事是创建数据库用户<span class="nv">dbuser</span>（刚才创建的是<span class="nv">Linux</span>系统用户），并设置密码。
+<span class="nv">CREATE</span> <span class="nv">USER</span> <span class="nv">dbuser</span> <span class="nv">WITH</span> <span class="nv">PASSWORD</span> <span class="s1">&#39;</span><span class="s">password</span><span class="s1">&#39;</span><span class="c1">;</span>
+第三件事是创建用户数据库，这里为<span class="nv">exampledb</span>，并指定所有者为<span class="nv">dbuser</span>。
+<span class="nv">CREATE</span> <span class="nv">DATABASE</span> <span class="nv">exampledb</span> <span class="nv">OWNER</span> <span class="nv">dbuser</span><span class="c1">;</span>
+第四件事是将<span class="nv">exampledb</span>数据库的所有权限都赋予<span class="nv">dbuser</span>，否则<span class="nv">dbuser</span>只能登录控制台，没有任何数据库操作权限。
+<span class="nv">GRANT</span> <span class="nv">ALL</span> <span class="nv">PRIVILEGES</span> <span class="nv">ON</span> <span class="nv">DATABASE</span> <span class="nv">exampledb</span> <span class="nv">to</span> <span class="nv">dbuser</span><span class="c1">;</span>
+最后，使用\<span class="nv">q</span>命令退出控制台（也可以直接按<span class="nv">ctrl</span><span class="o">+</span><span class="nv">D</span>）。
+\<span class="nv">q</span>
+第二种方法，使用<span class="nv">shell</span>命令行。
+添加新用户和新数据库，除了在<span class="nv">PostgreSQL</span>控制台内，还可以在<span class="nv">shell</span>命令行下完成。这是因为<span class="nv">PostgreSQL</span>提供了
+命令行程序<span class="nv">createuser</span>和<span class="nv">createdb</span>。还是以新建用户<span class="nv">dbuser</span>和数据库<span class="nv">exampledb</span>为例。
+首先，创建数据库用户<span class="nv">dbuser</span>，并指定其为超级用户。
+<span class="nv">sudo</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">postgres</span> <span class="nv">createuser</span> <span class="o">--</span><span class="nv">superuser</span> <span class="nv">dbuser</span>
+然后，登录数据库控制台，设置<span class="nv">dbuser</span>用户的密码，完成后退出控制台。
+<span class="nv">sudo</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">postgres</span> <span class="nv">psql</span>
+\<span class="nv">password</span> <span class="nv">dbuser</span>
+\<span class="nv">q</span>
+接着，在<span class="nv">shell</span>命令行下，创建数据库<span class="nv">exampledb</span>，并指定所有者为<span class="nv">dbuser</span>。
+<span class="nv">sudo</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">postgres</span> <span class="nv">createdb</span> <span class="o">-</span><span class="nv">O</span> <span class="nv">dbuser</span> <span class="nv">exampledb</span>
+三、登录数据库
+添加新用户和新数据库以后，就要以新用户的名义登录数据库，这时使用的是<span class="nv">psql</span>命令。
+<span class="nv">psql</span> <span class="o">-</span><span class="nv">U</span> <span class="nv">dbuser</span> <span class="o">-</span><span class="nv">d</span> <span class="nv">exampledb</span> <span class="o">-</span><span class="nv">h</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">5432</span>
+上面命令的参数含义如下：<span class="o">-</span><span class="nv">U</span>指定用户，<span class="o">-</span><span class="nv">d</span>指定数据库，<span class="o">-</span><span class="nv">h</span>指定服务器，<span class="o">-</span><span class="nv">p</span>指定端口。
+输入上面命令以后，系统会提示输入<span class="nv">dbuser</span>用户的密码。输入正确，就可以登录控制台了。
+<span class="nv">psql</span>命令存在简写形式。如果当前<span class="nv">Linux</span>系统用户，同时也是<span class="nv">PostgreSQL</span>用户，则可以省略用户名（<span class="o">-</span><span class="nv">U</span>参数的部分）。举
+例来说，我的<span class="nv">Linux</span>系统用户名为<span class="nv">ruanyf</span>，且<span class="nv">PostgreSQL</span>数据库存在同名用户，则我以<span class="nv">ruanyf</span>身份登录<span class="nv">Linux</span>系统后，
+可以直接使用下面的命令登录数据库，且不需要密码。
+<span class="nv">psql</span> <span class="nv">exampledb</span>
+此时，如果<span class="nv">PostgreSQL</span>内部还存在与当前系统用户同名的数据库，则连数据库名都可以省略。比如，假定存在一个叫做<span class="nv">ruanyf</span>
+的数据库，则直接键入<span class="nv">psql</span>就可以登录该数据库。
+<span class="nv">psql</span>
+另外，如果要恢复外部数据，可以使用下面的命令。
+<span class="nv">psql</span> <span class="nv">exampledb</span> <span class="o">&lt;</span> <span class="nv">exampledb</span>.<span class="nv">sql</span>
+四、控制台命令
+除了前面已经用到的\<span class="nv">password</span>命令（设置密码）和\<span class="nv">q</span>命令（退出）以外，控制台还提供一系列其他命令。
+\<span class="nv">h</span>：查看<span class="nv">SQL</span>命令的解释，比如\<span class="nv">h</span> <span class="nv">select</span>。
+\?：查看<span class="nv">psql</span>命令列表。
+\<span class="nv">l</span>：列出所有数据库。
+\<span class="nv">c</span> [<span class="nv">database_name</span>]：连接其他数据库。
+\<span class="nv">d</span>：列出当前数据库的所有表格。
+\<span class="nv">d</span> [<span class="nv">table_name</span>]：列出某一张表格的结构。
+\<span class="nv">du</span>：列出所有用户。
+\<span class="nv">e</span>：打开文本编辑器。
+\<span class="nv">conninfo</span>：列出当前数据库和连接的信息。
+五、数据库操作
+基本的数据库操作，就是使用一般的<span class="nv">SQL</span>语言。
+# 创建新表
+<span class="nv">CREATE</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span><span class="ss">(</span><span class="nv">name</span> <span class="nv">VARCHAR</span><span class="ss">(</span><span class="mi">20</span><span class="ss">)</span>, <span class="nv">signup_date</span> <span class="nv">DATE</span><span class="ss">)</span><span class="c1">;</span>
+# 插入数据
+<span class="nv">INSERT</span> <span class="nv">INTO</span> <span class="nv">user_tbl</span><span class="ss">(</span><span class="nv">name</span>, <span class="nv">signup_date</span><span class="ss">)</span> <span class="nv">VALUES</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">张三</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">2013-12-22</span><span class="s1">&#39;</span><span class="ss">)</span><span class="c1">;</span>
+# 选择记录
+<span class="nv">SELECT</span> <span class="o">*</span> <span class="nv">FROM</span> <span class="nv">user_tbl</span><span class="c1">;</span>
+# 更新数据
+<span class="nv">UPDATE</span> <span class="nv">user_tbl</span> <span class="nv">set</span> <span class="nv">name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">李四</span><span class="s1">&#39;</span> <span class="nv">WHERE</span> <span class="nv">name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">张三</span><span class="s1">&#39;</span><span class="c1">;</span>
+# 删除记录
+<span class="nv">DELETE</span> <span class="nv">FROM</span> <span class="nv">user_tbl</span> <span class="nv">WHERE</span> <span class="nv">name</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">李四</span><span class="s1">&#39;</span> <span class="c1">;</span>
+# 添加栏位
+<span class="nv">ALTER</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span> <span class="nv">ADD</span> <span class="nv">email</span> <span class="nv">VARCHAR</span><span class="ss">(</span><span class="mi">40</span><span class="ss">)</span><span class="c1">;</span>
+# 更新结构
+<span class="nv">ALTER</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span> <span class="nv">ALTER</span> <span class="nv">COLUMN</span> <span class="nv">signup_date</span> <span class="nv">SET</span> <span class="nv">NOT</span> <span class="nv">NULL</span><span class="c1">;</span>
+# 更名栏位
+<span class="nv">ALTER</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span> <span class="nv">RENAME</span> <span class="nv">COLUMN</span> <span class="nv">signup_date</span> <span class="nv">TO</span> <span class="nv">signup</span><span class="c1">;</span>
+# 删除栏位
+<span class="nv">ALTER</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span> <span class="nv">DROP</span> <span class="nv">COLUMN</span> <span class="nv">email</span><span class="c1">;</span>
+# 表格更名
+<span class="nv">ALTER</span> <span class="nv">TABLE</span> <span class="nv">user_tbl</span> <span class="nv">RENAME</span> <span class="nv">TO</span> <span class="nv">backup_tbl</span><span class="c1">;</span>
+# 删除表格
+<span class="nv">DROP</span> <span class="nv">TABLE</span> <span class="k">IF</span> <span class="nv">EXISTS</span> <span class="nv">backup_tbl</span><span class="c1">;</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../hadoop/" title="hadoop" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                hadoop
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../open-falcon/" title="open-falcon" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                open-falcon
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1854 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>tcp-issue - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#tcp" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                tcp-issue
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        tcp-issue
+      </label>
+    
+    <a href="./" title="tcp-issue" class="md-nav__link md-nav__link--active">
+      tcp-issue
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP状态变迁
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#too-many-open-files" class="md-nav__link">
+    Too many open files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time_wait" class="md-nav__link">
+    time_wait过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#last_ack" class="md-nav__link">
+    last_ack过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close_wait" class="md-nav__link">
+    close_wait过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find_wait1" class="md-nav__link">
+    find_wait1过多
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP状态变迁
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#too-many-open-files" class="md-nav__link">
+    Too many open files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time_wait" class="md-nav__link">
+    time_wait过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#last_ack" class="md-nav__link">
+    last_ack过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close_wait" class="md-nav__link">
+    close_wait过多
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find_wait1" class="md-nav__link">
+    find_wait1过多
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>tcp-issue</h1>
+                
+                <h2 id="tcp">TCP状态变迁</h2>
+<p>在Web性能优化中，我们经常会调整很多TCP相关的性能参数，那么今天我们深入理解一下TCP协议的
+11种状态变迁。我相信大家已经对于TCP连接的三次握手和四次挥手，并不陌生。在这其中TCP定义了
+11种状态，下面我们来看看TCP的状态转换。</p>
+<p>TCP状态变迁图</p>
+<p><img alt="" src="../assets/tcp1.png" /></p>
+<p><img alt="" src="../assets/tcp2.png" /></p>
+<p>首先，在开始理解这个TCP状态转换图之前，我们需要明确，在实际情况下我们的Web服务器，
+会同时充当两种角色：</p>
+<p>充当服务器端的角色：就是作为Web服务器，等待客户端来进行请求。</p>
+<p>充当客户端的角色：Web服务器作为请求的客户端请求后端的Redis或者MySQL等，或者请求其它
+互联网上的服务。如果是作为反向代理，那么会请求后端的其它Web服务器。</p>
+<p>备注：客户端和服务器端都可以主动发起关闭。</p>
+<p>三次握手的状态变迁</p>
+<p>要搞明白一个HTTP请求的时候，在TCP层面的11种状态转换，那么就需要我们的思路在客户端和
+服务器端两种角色之间不停的变换。</p>
+<p>客户端：</p>
+<p>我们先从实线开始看，实线是客户端的状态变迁、虚线是服务器端的状态变迁。所以先看图的右半侧。</p>
+<p>CLOSED：作为起始状态。</p>
+<p>SYN_SENT：（CLOSED-&gt;SYN_SENT）</p>
+<p>当某个应用进程在CLOSED状态下执行主动打开时，那就开始了TCP的三次握手，TCP将发送一个SYN，
+然后这个客户端的状态由CLOSE转换为SYN_SENT状态。</p>
+<p>注意，我们先不要考虑服务器端的状态，我们继续看客户端。</p>
+<p>ESTABLISHED：（SYN_SENT-&gt; ESTABLISHED）</p>
+<p>那么这个时候根据TCP的三次握手，服务器端会发送一个带ACK的SYN给客户端，那么客户端收到后，
+会发送一个ACK给服务器端，这个时候客户端的状态就会从SYN_SENT转换为ESTABLISHED，那么
+这个状态我们应该非常熟悉，因为这个是数据传送发生的一个状态，表示已经建立TCP连接，并且
+可以进行数据传送。可以看到图中标注的是收：SYN，ACK 发：ACK。</p>
+<p>服务器端：</p>
+<p>请注意！先不要往看ESTABLISHED以下的状态转换，我们现在马上把视角转换到服务器端，看看
+服务器端在刚才的过程中都经历了哪些状态，我们需要看图的左半侧。</p>
+<p>LISTEN：</p>
+<p>比如我们客户端请求的是一个Web服务器，例如是Nginx服务，它监听在80端口，那么此时的TCP
+状态为LISTEN，注意服务器端的起始状态也是CLOSE。</p>
+<p>SYN_RCVD：(LISTEN-&gt;SYN_RCVD)</p>
+<p>好的，现在处于LISTEN状态的Nginx服务器收到了客户端发过来的SYN，然后自身状态从LISTEN转换为
+SYN_RCVD，我们想想此时客户端处于什么状态，与之相对应的SYN_SENT。服务器端是收SYN，
+发送SYN和ACK给客户端。</p>
+<p>ESTABLISHED：（SYN_RCVD&gt; ESTABLISHED）</p>
+<p>服务器端发送完毕SYN和ACK后，客户端会返回一个ACK，那么当服务器端接收到这个ACK后，
+状态从SYN_RCVD转换到了ESTABLISHED。</p>
+<p>好的，我们刚才已经详细说明了，在TCP建立连接过程中，客户端和服务器端的状态转换，
+先不要继续往下看这个大图，我们在通过下面的小图按照TCP三次握手的方式，再次来梳理一下流程。</p>
+<p><img alt="" src="../assets/tcp3.png" /></p>
+<p>客户端执行主动打开，发送seq=x。SYN标志位置为1。状态从CLOSED到SYN_SENT。</p>
+<p>服务器端被动打开，从CLOSED到LISTEND，收到客户端的SYN后，TCP标志位SYN、AC都置为1，
+然后回复确认号ack=x+1，同时也发送一个序列号seq=y。状态从LISTEN转换为SYN_RCVD。</p>
+<p>客户端收到服务器端的确认后，将TCP标志位ACK置为1，确认号是ack=y+1，发送序号seq=x+1，
+此时进入ESTABLISHEN状态</p>
+<p>服务器收到客户端发的信息后，也进入EXTABLISHED状态。</p>
+<p>TCP四次挥手的连接状态：</p>
+<div class="codehilite"><pre><span></span> <span class="err">我们需要继续看这个状态转换的大图，这次我们要从</span><span class="n">ESTABLISHED</span><span class="err">开始往下看。这次我们还是</span>
+ <span class="err">从客户端开始看。</span>
+</pre></div>
+
+
+<p>客户端FIN_WAIT_1:（ESTABLISHED-&gt;FIN_WAIT_1）：客户端在ESTABLISHED的状态下，
+发送FIN给服务器端要求关闭连接，这个时候，客户端的状态从ESTABLISHED转换为FIN_WAIT_1。</p>
+<p>服务器端CLOSE_WAIT：(ESTABLISHED-&gt;CLOSE_WAIT)好的，我们先将客户端的状态暂停下，
+回过来头来看服务器端，那么服务器端收到客户端发过来的FIN后，立即发送一个ACK确认，然后状态从ESTABLISHED转换到了CLOSE_WAIT。</p>
+<p>客户端FIN_WAIT_2：(FIN_WAIT_1-&gt;FIN_WAIT_2)好的，我们再回来到客户端，
+刚才服务器端给他发了一个ACK，也就是它收到了客户端的FIN的报文，这个时候，客户端马上从
+FIN_WAIT_1转换到FIN_WAIT_2。</p>
+<p>服务端LAST_ACK:(CLOSE_WAIT-&gt;LAST_ACK)</p>
+<p>好的注意此时客户端不能再给服务端发送任何的数据了，但是服务端能给客户端发。此时就是我们
+说的“半关闭”状态。那么此时服务端在干啥呢，他通知上层应用，比如HTTP，关闭连接，当上层
+的数据发送完毕后，通知TCP说可以释放连接了，此时服务端给客户端发送一个FIN。然后自己从
+CLOSE_WAIT状态转换为了LAST_ACK状态。那么如果上层应用吃吃不关闭呢？大家考虑下回发生什么。</p>
+<p>客户端TIME_WAIT：（FIN_WAIT_2-&gt;TIME_WAIT）刚才服务器端给客户端发送了一个
+FIN后进入到了LAST_ACK的状态，那么客户端收到这个FIN后，从FIN_WAIT_2转换为TIME_WAIT。
+注意同时客户端会发回一个ACK给服务器端。</p>
+<p>服务器端CLOSED：(LAST_ACK-&gt;CLOSED)我们先不管客户端，现在服务器端收到刚才客户端
+发送的ACK后，状态从LAST_ACK转换为了CLOSED状态。好的，服务端这边完事了。</p>
+<p>客户端：客户端还在TIME_WAIT呢。我们去看看它。</p>
+<p>TIME_WAIT状态有两个存在的理由：</p>
+<p>可靠地实现TCP全双工连接的终止；</p>
+<p>允许老的重复分节在网络中消逝。</p>
+<p>那么在Linux下，这个状态要持续60秒，然后客户端的状态变换为CLOSED。</p>
+<p><img alt="" src="../assets/tcp4.png" /></p>
+<p>注意：还有同时打开和同时关闭等特殊情况这里没有列举。你现在可以对着小图，在脑海里在
+梳理一遍四次挥手的时候客户端和服务器端的状态变换。今天的分享先到这里，后面我们有
+文章，重点分析TIME_WAIT状态和调优。</p>
+<h2 id="too-many-open-files">Too many open files</h2>
+<div class="codehilite"><pre><span></span><span class="nv">java</span>.<span class="nv">net</span>.<span class="nv">SocketException</span>: <span class="nv">Too</span> <span class="nv">many</span> <span class="nv">open</span> <span class="nv">files</span>
+ <span class="nv">at</span> <span class="nv">java</span>.<span class="nv">net</span>.<span class="nv">Socket</span>.<span class="nv">createImpl</span><span class="ss">(</span><span class="nv">Socket</span>.<span class="nv">java</span>:<span class="mi">388</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">java</span>.<span class="nv">net</span>.<span class="nv">Socket</span>.<span class="k">connect</span><span class="ss">(</span><span class="nv">Socket</span>.<span class="nv">java</span>:<span class="mi">517</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">java</span>.<span class="nv">net</span>.<span class="nv">Socket</span>.<span class="k">connect</span><span class="ss">(</span><span class="nv">Socket</span>.<span class="nv">java</span>:<span class="mi">469</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">NetworkClient</span>.<span class="nv">doConnect</span><span class="ss">(</span><span class="nv">NetworkClient</span>.<span class="nv">java</span>:<span class="mi">163</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">http</span>.<span class="nv">HttpClient</span>.<span class="nv">openServer</span><span class="ss">(</span><span class="nv">HttpClient</span>.<span class="nv">java</span>:<span class="mi">394</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">http</span>.<span class="nv">HttpClient</span>.<span class="nv">openServer</span><span class="ss">(</span><span class="nv">HttpClient</span>.<span class="nv">java</span>:<span class="mi">529</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">http</span>.<span class="nv">HttpClient</span>.<span class="o">&lt;</span><span class="nv">init</span><span class="o">&gt;</span><span class="ss">(</span><span class="nv">HttpClient</span>.<span class="nv">java</span>:<span class="mi">233</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">http</span>.<span class="nv">HttpClient</span>.<span class="nv">New</span><span class="ss">(</span><span class="nv">HttpClient</span>.<span class="nv">java</span>:<span class="mi">306</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">http</span>.<span class="nv">HttpClient</span>.<span class="nv">New</span><span class="ss">(</span><span class="nv">HttpClient</span>.<span class="nv">java</span>:<span class="mi">323</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">protocol</span>.<span class="nv">http</span>.<span class="nv">HttpURLConnection</span>.<span class="nv">getNewHttpClient</span><span class="ss">(</span><span class="nv">HttpURLConnection</span>.<span class="nv">java</span>:<span class="mi">852</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">protocol</span>.<span class="nv">http</span>.<span class="nv">HttpURLConnection</span>.<span class="nv">plainConnect</span><span class="ss">(</span><span class="nv">HttpURLConnection</span>.<span class="nv">java</span>:<span class="mi">793</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">protocol</span>.<span class="nv">http</span>.<span class="nv">HttpURLConnection</span>.<span class="k">connect</span><span class="ss">(</span><span class="nv">HttpURLConnection</span>.<span class="nv">java</span>:<span class="mi">718</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">sun</span>.<span class="nv">net</span>.<span class="nv">www</span>.<span class="nv">protocol</span>.<span class="nv">http</span>.<span class="nv">HttpURLConnection</span>.<span class="nv">getOutputStream</span><span class="ss">(</span><span class="nv">HttpURLConnection</span>.<span class="nv">java</span>:<span class="mi">896</span><span class="ss">)</span>
+ <span class="nv">at</span> <span class="nv">a8</span>.<span class="nv">mms</span>.<span class="nv">util</span>.<span class="nv">Tools</span>.<span class="nv">postObject</span><span class="ss">(</span><span class="nv">Tools</span>.<span class="nv">java</span>:<span class="mi">301</span><span class="ss">)</span> 情景描述：系统产生大量“<span class="nv">Too</span> <span class="nv">many</span> <span class="nv">open</span> <span class="nv">files</span>” 
+原因分析：在服务器与客户端通信过程中，因服务器发生了<span class="nv">socket</span>未关导致的<span class="nv">closed_wait</span>发生，致使监听<span class="nv">port</span>打开的句柄数到了<span class="mi">1024</span>个，
+且均处于<span class="nv">close_wait</span>的状态，最终造成配置的<span class="nv">port</span>被占满出现“<span class="nv">Too</span> <span class="nv">many</span> <span class="nv">open</span> <span class="nv">files</span>”，无法再进行通信。 
+<span class="nv">close_wait</span>状态出现的原因是被动关闭方未关闭<span class="nv">socket</span>造成，如附件图所示： 
+
+解决办法：有两种措施可行 
+一、解决： 
+原因是因为调用<span class="nv">ServerSocket</span>类的<span class="nv">accept</span><span class="ss">()</span>方法和<span class="nv">Socket</span>输入流的<span class="nv">read</span><span class="ss">()</span>方法时会引起线程阻塞，所以应该用<span class="nv">setSoTimeout</span><span class="ss">()</span>方法设置
+超时（缺省的设置是<span class="mi">0</span>，即超时永远不会发生）；超时的判断是累计式的，一次设置后，每次调用引起的阻塞时间都从该值中扣除，直至另一次
+超时设置或有超时异常抛出。 
+比如，某种服务需要三次调用<span class="nv">read</span><span class="ss">()</span>，超时设置为<span class="mi">1</span>分钟，那么如果某次服务三次<span class="nv">read</span><span class="ss">()</span>调用的总时间超过<span class="mi">1</span>分钟就会有异常抛出，如果要在同
+一个<span class="nv">Socket</span>上反复进行这种服务，就要在每次服务之前设置一次超时。 
+二、规避： 
+调整系统参数，包括句柄相关参数和<span class="nv">TCP</span><span class="o">/</span><span class="nv">IP</span>的参数； 
+
+注意： 
+<span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">fs</span><span class="o">/</span><span class="nv">file</span><span class="o">-</span><span class="nv">max</span> 是整个系统可以打开的文件数的限制，由<span class="nv">sysctl</span>.<span class="nv">conf</span>控制； 
+<span class="nv">ulimit</span>修改的是当前<span class="nv">shell</span>和它的子进程可以打开的文件数的限制，由<span class="nv">limits</span>.<span class="nv">conf</span>控制； 
+<span class="nv">lsof</span>是列出系统所占用的资源,但是这些资源不一定会占用打开文件号的；比如：共享内存,信号量,消息队列,内存映射等,虽然占用了这些资源,
+但不占用打开文件号； 
+因此，需要调整的是当前用户的子进程打开的文件数的限制，即<span class="nv">limits</span>.<span class="nv">conf</span>文件的配置； 
+如果<span class="nv">cat</span> <span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">fs</span><span class="o">/</span><span class="nv">file</span><span class="o">-</span><span class="nv">max</span>值为<span class="mi">65536</span>或甚至更大，不需要修改该值； 
+若<span class="nv">ulimit</span> <span class="o">-</span><span class="nv">a</span> ；其<span class="nv">open</span> <span class="nv">files</span>参数的值小于<span class="mi">4096</span>（默认是<span class="mi">1024</span><span class="ss">)</span>, 则采用如下方法修改<span class="nv">open</span> <span class="nv">files</span>参数值为<span class="mi">8192</span>；方法如下： 
+<span class="mi">1</span>.使用<span class="nv">root</span>登陆，修改文件<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">security</span><span class="o">/</span><span class="nv">limits</span>.<span class="nv">conf</span> 
+<span class="nv">vi</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">security</span><span class="o">/</span><span class="nv">limits</span>.<span class="nv">conf</span> 添加 
+<span class="nv">xxx</span> <span class="o">-</span> <span class="nv">nofile</span> <span class="mi">8192</span> 
+<span class="nv">xxx</span> 是一个用户，如果是想所有用户生效的话换成 <span class="o">*</span> ，设置的数值与硬件配置有关，别设置太大了。 
+#<span class="o">&lt;</span><span class="nv">domain</span><span class="o">&gt;</span>      <span class="o">&lt;</span><span class="nv">type</span><span class="o">&gt;</span>     <span class="o">&lt;</span><span class="nv">item</span><span class="o">&gt;</span>         <span class="o">&lt;</span><span class="nv">value</span><span class="o">&gt;</span> 
+
+<span class="o">*</span>         <span class="nv">soft</span>    <span class="nv">nofile</span>    <span class="mi">8192</span> 
+<span class="o">*</span>         <span class="nv">hard</span>    <span class="nv">nofile</span>    <span class="mi">8192</span> 
+
+#所有的用户每个进程可以使用<span class="mi">8192</span>个文件描述符。 
+<span class="mi">2</span>.使这些限制生效 
+确定文件<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">pam</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">login</span> 和<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">pam</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">sshd</span>包含如下行： 
+<span class="nv">session</span> <span class="nv">required</span> <span class="nv">pam_limits</span>.<span class="nv">so</span> 
+然后用户重新登陆一下即可生效。 
+<span class="mi">3</span>. 在<span class="nv">bash</span>下可以使用<span class="nv">ulimit</span> <span class="o">-</span><span class="nv">a</span> 参看是否已经修改： 
+
+一、 修改方法：（暂时生效,重新启动服务器后,会还原成默认值） 
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_time</span><span class="o">=</span><span class="mi">600</span>   
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_probes</span><span class="o">=</span><span class="mi">2</span> 
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_intvl</span><span class="o">=</span><span class="mi">2</span> 
+
+注意：<span class="nv">Linux</span>的内核参数调整的是否合理要注意观察，看业务高峰时候效果如何。 
+
+二、 若做如上修改后，可起作用；则做如下修改以便永久生效。 
+<span class="nv">vi</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysctl</span>.<span class="nv">conf</span> 
+
+若配置文件中不存在如下信息，则添加： 
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_time</span> <span class="o">=</span> <span class="mi">1800</span> 
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_probes</span> <span class="o">=</span> <span class="mi">3</span> 
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_intvl</span> <span class="o">=</span> <span class="mi">15</span> 
+
+编辑完 <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysctl</span>.<span class="nv">conf</span>,要重启<span class="nv">network</span> 才会生效 
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">rc</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">network</span> <span class="nv">restart</span> 
+然后，执行<span class="nv">sysctl</span>命令使修改生效，基本上就算完成了。 
+
+<span class="o">------------------------------------------------------------</span> 
+修改原因： 
+
+当客户端因为某种原因先于服务端发出了<span class="nv">FIN</span>信号，就会导致服务端被动关闭，若服务端不主动关闭<span class="nv">socket</span>发<span class="nv">FIN</span>给<span class="nv">Client</span>，此时服务端<span class="nv">Socket</span>
+会处于<span class="nv">CLOSE_WAIT</span>状态（而不是<span class="nv">LAST_ACK</span>状态）。通常来说，一个<span class="nv">CLOSE_WAIT</span>会维持至少<span class="mi">2</span>个小时的时间（系统默认超时时间的是<span class="mi">7200</span>秒，
+也就是<span class="mi">2</span>小时）。如果服务端程序因某个原因导致系统造成一堆<span class="nv">CLOSE_WAIT</span>消耗资源，那么通常是等不到释放那一刻，系统就已崩溃。因此，
+解决这个问题的方法还可以通过修改<span class="nv">TCP</span><span class="o">/</span><span class="nv">IP</span>的参数来缩短这个时间，于是修改<span class="nv">tcp_keepalive_</span><span class="o">*</span>系列参数： 
+<span class="nv">tcp_keepalive_time</span>： 
+<span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">tcp_keepalive_time</span> 
+<span class="nv">INTEGER</span>，默认值是<span class="mi">7200</span><span class="ss">(</span><span class="mi">2</span>小时<span class="ss">)</span> 
+当<span class="nv">keepalive</span>打开的情况下，<span class="nv">TCP</span>发送<span class="nv">keepalive</span>消息的频率。建议修改值为<span class="mi">1800</span>秒。 
+
+<span class="nv">tcp_keepalive_probes</span>：<span class="nv">INTEGER</span> 
+<span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">tcp_keepalive_probes</span> 
+<span class="nv">INTEGER</span>，默认值是<span class="mi">9</span> 
+<span class="nv">TCP</span>发送<span class="nv">keepalive</span>探测以确定该连接已经断开的次数。<span class="ss">(</span>注意:保持连接仅在<span class="nv">SO_KEEPALIVE</span>套接字选项被打开是才发送.次数默认不需要修改,
+当然根据情形也可以适当地缩短此值.设置为<span class="mi">5</span>比较合适<span class="ss">)</span> 
+
+<span class="nv">tcp_keepalive_intvl</span>：<span class="nv">INTEGER</span> 
+<span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">sys</span><span class="o">/</span><span class="nv">net</span><span class="o">/</span><span class="nv">ipv4</span><span class="o">/</span><span class="nv">tcp_keepalive_intvl</span> 
+<span class="nv">INTEGER</span>，默认值为<span class="mi">75</span> 
+当探测没有确认时，重新发送探测的频度。探测消息发送的频率（在认定连接失效之前，发送多少个<span class="nv">TCP</span>的<span class="nv">keepalive</span>探测包）。
+乘以<span class="nv">tcp_keepalive_probes</span>就得到对于从开始探测以来没有响应的连接杀除的时间。默认值为<span class="mi">75</span>秒，也就是没有活动的连接将在
+大约<span class="mi">11</span>分钟以后将被丢弃。<span class="ss">(</span>对于普通应用来说,这个值有一些偏大,可以根据需要改小.特别是<span class="nv">web</span>类服务器需要改小该值,<span class="mi">15</span>是个比较合适的值<span class="ss">)</span> 
+
+【检测办法】 
+<span class="mi">1</span>. 系统不再出现“<span class="nv">Too</span> <span class="nv">many</span> <span class="nv">open</span> <span class="nv">files</span>”报错现象。 
+
+<span class="mi">2</span>. 处于<span class="nv">TIME_WAIT</span>状态的<span class="nv">sockets</span>不会激长。 
+
+在 <span class="nv">Linux</span> 上可用以下语句看了一下服务器的<span class="nv">TCP</span>状态<span class="ss">(</span>连接状态数量统计<span class="ss">)</span>： 
+
+<span class="nv">netstat</span> <span class="o">-</span><span class="nv">n</span> <span class="o">|</span> <span class="nv">awk</span> <span class="s1">&#39;</span><span class="s">/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}</span><span class="s1">&#39;</span> 
+
+返回结果范例如下： 
+
+<span class="nv">ESTABLISHED</span> <span class="mi">1423</span> 
+<span class="nv">FIN_WAIT1</span> <span class="mi">1</span> 
+<span class="nv">FIN_WAIT2</span> <span class="mi">262</span> 
+<span class="nv">SYN_SENT</span> <span class="mi">1</span> 
+<span class="nv">TIME_WAIT</span> <span class="mi">962</span> <span class="nv">ulimit</span> <span class="o">-</span><span class="nv">a</span>  指令可查询系统的文件等限制设置数值
+</pre></div>
+
+
+<h2 id="time_wait">time_wait过多</h2>
+<div class="codehilite"><pre><span></span><span class="nv">vi</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysctl</span>.<span class="nv">conf</span>
+编辑<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">sysctl</span>.<span class="nv">conf</span>文件，增加三行：
+引用
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_syncookies</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_tw_reuse</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_tw_recycle</span> <span class="o">=</span> <span class="mi">1</span>
+说明：
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_syncookies</span> <span class="o">=</span> <span class="mi">1</span> 表示开启<span class="nv">SYN</span> <span class="nv">Cookies</span>。当出现<span class="nv">SYN</span>等待队列溢出时，启用<span class="nv">cookies</span>来处理，可防范少量<span class="nv">SYN</span>攻击，
+默认为<span class="mi">0</span>，表示关闭；
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_tw_reuse</span> <span class="o">=</span> <span class="mi">1</span> 表示开启重用。允许将<span class="nv">TIME</span><span class="o">-</span><span class="k">WAIT</span> <span class="nv">sockets</span>重新用于新的<span class="nv">TCP</span>连接，默认为<span class="mi">0</span>，表示关闭；
+<span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_tw_recycle</span> <span class="o">=</span> <span class="mi">1</span> 表示开启<span class="nv">TCP</span>连接中<span class="nv">TIME</span><span class="o">-</span><span class="k">WAIT</span> <span class="nv">sockets</span>的快速回收，默认为<span class="mi">0</span>，表示关闭。
+再执行以下命令，让修改结果立即生效：
+<span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">sysctl</span> <span class="o">-</span><span class="nv">p</span>
+</pre></div>
+
+
+<h2 id="last_ack">last_ack过多</h2>
+<div class="codehilite"><pre><span></span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="ss">&quot;:&quot;</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">6</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"> </span>
+
+<span class="w">  </span><span class="mi">7</span><span class="w"> </span><span class="n">CLOSING</span><span class="w">     </span>
+<span class="mi">6838</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">1037</span><span class="w"> </span><span class="n">FIN_WAIT1</span><span class="w"></span>
+
+<span class="mi">357</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w">   </span>
+<span class="mi">5830</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w">      </span>
+
+<span class="mi">276</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w">    </span>
+
+<span class="w"> </span><span class="mi">71</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w">   </span>
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"></span>
+
+<span class="n">看看系统状态</span><span class="err">，</span><span class="n">性能都花在系统中断和上下文切换</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">vmstat</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="n">procs</span><span class="w"> </span><span class="c1">-----------memory---------- ---swap-- -----io---- --system-- -----cpu------</span>
+
+<span class="n">r</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">swpd</span><span class="w"> </span><span class="k">free</span><span class="w"> </span><span class="n">buff</span><span class="w"> </span><span class="n">cache</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">bi</span><span class="w"> </span><span class="n">bo</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">cs</span><span class="w"> </span><span class="n">us</span><span class="w"> </span><span class="n">sy</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="n">wa</span><span class="w"> </span><span class="n">st</span><span class="w"></span>
+
+<span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3091812</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3091812</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">13750</span><span class="w"> </span><span class="mi">3174</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">94</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3091936</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">13666</span><span class="w"> </span><span class="mi">3057</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">94</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3092060</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="mi">13749</span><span class="w"> </span><span class="mi">3030</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3092060</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">13822</span><span class="w"> </span><span class="mi">3144</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3092060</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">13390</span><span class="w"> </span><span class="mi">2961</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="mi">95</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">3092060</span><span class="w"> </span><span class="mi">363032</span><span class="w"> </span><span class="mi">284132</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">13541</span><span class="w"> </span><span class="mi">3182</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="mi">94</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="n">查看socket队列信息</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sar</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="n">SOCK</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+
+<span class="n">Linux</span><span class="w"> </span><span class="mf">2.6.18</span><span class="o">-</span><span class="mf">53.1.13</span><span class="p">.</span><span class="n">el5PAE</span><span class="w"> </span><span class="p">(</span><span class="n">ccsafe</span><span class="p">)</span><span class="w"> </span><span class="mi">10</span><span class="o">/</span><span class="mi">21</span><span class="o">/</span><span class="mi">2008</span><span class="w"></span>
+
+<span class="mi">06</span><span class="err">:</span><span class="mi">31</span><span class="err">:</span><span class="mi">43</span><span class="w"> </span><span class="n">PM</span><span class="w"> </span><span class="n">totsck</span><span class="w"> </span><span class="n">tcpsck</span><span class="w"> </span><span class="n">udpsck</span><span class="w"> </span><span class="n">rawsck</span><span class="w"> </span><span class="n">ip</span><span class="o">-</span><span class="n">frag</span><span class="w"> </span><span class="n">tcp</span><span class="o">-</span><span class="n">tw</span><span class="w"></span>
+
+<span class="mi">06</span><span class="err">:</span><span class="mi">31</span><span class="err">:</span><span class="mi">48</span><span class="w"> </span><span class="n">PM</span><span class="w"> </span><span class="mi">6951</span><span class="w"> </span><span class="mi">13868</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">430</span><span class="w"></span>
+
+<span class="nl">Average</span><span class="p">:</span><span class="w"> </span><span class="mi">6951</span><span class="w"> </span><span class="mi">13868</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">430</span><span class="w"></span>
+
+<span class="n">根据TCP状态的变化过程来分析</span><span class="err">，</span><span class="n">LAST_ACK属于被动关闭连接过程中的状态</span><span class="w"></span>
+
+<span class="n">ESTABLISHED</span><span class="o">-&gt;</span><span class="n">CLOSE_WAIT</span><span class="o">-&gt;</span><span class="err">（</span><span class="n">发送ACK</span><span class="err">）</span><span class="o">-&gt;</span><span class="n">LAST_ACK</span><span class="o">-&gt;</span><span class="p">(</span><span class="n">发送FIN</span><span class="o">+</span><span class="n">接收ACK</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">CLOSED</span><span class="w"></span>
+
+<span class="n">现在状态都堆积到LAST_ACK</span><span class="err">，</span><span class="n">初步判断问题从上下两个状态着手</span><span class="w"></span>
+
+<span class="n">调节一下LAST_ACK时间</span><span class="p">...</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">last_ack</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">netfilter</span><span class="p">.</span><span class="n">ip_conntrack_tcp_timeout_last_ack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">netfilter</span><span class="p">.</span><span class="n">ip_conntrack_tcp_timeout_last_ack</span><span class="o">=</span><span class="mi">10</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">netfilter</span><span class="p">.</span><span class="n">ip_conntrack_tcp_timeout_last_ack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">5.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">6</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">9</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">6420</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">693</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">391</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">5081</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">203</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">66</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">检查一下LAST_ACK所对应的应用</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="ss">&quot;LAST_ACK&quot;</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">49</span><span class="o">-</span><span class="mi">75</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="ss">&quot;:&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">f1</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">-</span><span class="n">nr</span><span class="w"> </span><span class="c1">--key=1,7|head -5</span>
+
+<span class="mi">101</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">46</span><span class="w"> </span><span class="mf">222.75.65.69</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">31</span><span class="w"> </span><span class="mf">221.0.91.118</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="mf">222.210.8.160</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">22</span><span class="w"> </span><span class="mf">60.161.81.28</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">an</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="ss">&quot;220.160.210.6&quot;</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">17280</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52787</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">14401</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52513</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">14401</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52769</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">14401</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52768</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">8184</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52515</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">14401</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52514</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">tcp</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">8184</span><span class="w"> </span><span class="mf">10.1.1.145</span><span class="err">:</span><span class="mi">80</span><span class="w"> </span><span class="mf">220.160.210.6</span><span class="err">:</span><span class="mi">52781</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="n">是TCP80端口的应用</span><span class="err">，</span><span class="n">调节一下nginx的keepalive时间</span><span class="p">...</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+
+<span class="mi">2008</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">21</span><span class="w"> </span><span class="mi">19</span><span class="err">:</span><span class="mi">15</span><span class="err">:</span><span class="mi">31</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="mi">21352</span><span class="n">#0</span><span class="err">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">syntax</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">ok</span><span class="w"></span>
+
+<span class="mi">2008</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">21</span><span class="w"> </span><span class="mi">19</span><span class="err">:</span><span class="mi">15</span><span class="err">:</span><span class="mi">31</span><span class="w"> </span><span class="o">[</span><span class="n">info</span><span class="o">]</span><span class="w"> </span><span class="mi">21352</span><span class="n">#0</span><span class="err">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">nginx</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">tested</span><span class="w"> </span><span class="n">successfully</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="n">aux</span><span class="o">|</span><span class="n">egrep</span><span class="w"> </span><span class="s1">&#39;(PID|nginx)&#39;</span><span class="w"></span>
+
+<span class="k">USER</span><span class="w"> </span><span class="n">PID</span><span class="w"> </span><span class="o">%</span><span class="n">CPU</span><span class="w"> </span><span class="o">%</span><span class="n">MEM</span><span class="w"> </span><span class="n">VSZ</span><span class="w"> </span><span class="n">RSS</span><span class="w"> </span><span class="n">TTY</span><span class="w"> </span><span class="n">STAT</span><span class="w"> </span><span class="k">START</span><span class="w"> </span><span class="nc">TIME</span><span class="w"> </span><span class="n">COMMAND</span><span class="w"></span>
+
+<span class="n">root</span><span class="w"> </span><span class="mi">8290</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">7572</span><span class="w"> </span><span class="mi">1124</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">Ss</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="mi">00</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8291</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mi">19704</span><span class="w"> </span><span class="mi">13776</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">71</span><span class="err">:</span><span class="mi">35</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8292</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="mi">17604</span><span class="w"> </span><span class="mi">11680</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">77</span><span class="err">:</span><span class="mi">26</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8293</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="mf">0.4</span><span class="w"> </span><span class="mi">22528</span><span class="w"> </span><span class="mi">16636</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">58</span><span class="err">:</span><span class="mi">13</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8294</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.4</span><span class="w"> </span><span class="mi">24944</span><span class="w"> </span><span class="mi">19020</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">94</span><span class="err">:</span><span class="mi">07</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8295</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="mi">27496</span><span class="w"> </span><span class="mi">21508</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">84</span><span class="err">:</span><span class="mi">41</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8296</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="mi">13388</span><span class="w"> </span><span class="mi">7496</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">84</span><span class="err">:</span><span class="mi">14</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8297</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">9196</span><span class="w"> </span><span class="mi">3268</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">58</span><span class="err">:</span><span class="mi">21</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">nobody</span><span class="w"> </span><span class="mi">8298</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="mf">0.2</span><span class="w"> </span><span class="mi">15392</span><span class="w"> </span><span class="mi">9504</span><span class="w"> </span><span class="vm">?</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="n">Oct04</span><span class="w"> </span><span class="mi">75</span><span class="err">:</span><span class="mi">16</span><span class="w"> </span><span class="nl">nginx</span><span class="p">:</span><span class="w"> </span><span class="n">worker</span><span class="w"> </span><span class="n">process</span><span class="w"></span>
+
+<span class="n">root</span><span class="w"> </span><span class="mi">21354</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span><span class="mi">3896</span><span class="w"> </span><span class="mi">720</span><span class="w"> </span><span class="n">pts</span><span class="o">/</span><span class="mi">0</span><span class="w"> </span><span class="n">S</span><span class="o">+</span><span class="w"> </span><span class="mi">19</span><span class="err">:</span><span class="mi">15</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="mi">00</span><span class="w"> </span><span class="n">egrep</span><span class="w"> </span><span class="p">(</span><span class="n">PID</span><span class="o">|</span><span class="n">nginx</span><span class="p">)</span><span class="w"></span>
+
+<span class="err">（</span><span class="n">动态加载新配置</span><span class="err">）</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="k">kill</span><span class="w"> </span><span class="o">-</span><span class="n">HUP</span><span class="w"> </span><span class="mi">8290</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="w"> </span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="mi">1138</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+
+<span class="mi">7161</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">1427</span><span class="w"> </span><span class="n">FIN_WAIT1</span><span class="w"></span>
+
+<span class="mi">396</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">5740</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">350</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="mi">148</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="ss">&quot;:&quot;</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="w"> </span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="mi">1151</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+
+<span class="mi">8506</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">1452</span><span class="w"> </span><span class="n">FIN_WAIT1</span><span class="w"></span>
+
+<span class="mi">666</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w">   </span>
+<span class="mi">6568</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w">      </span>
+
+<span class="mi">429</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w">    </span>
+
+<span class="w"> </span><span class="mi">92</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w">   </span>
+<span class="p">...</span><span class="w"></span>
+
+<span class="n">LAST_ACK不下</span><span class="err">，</span><span class="n">而且CLOSING</span><span class="w"> </span><span class="n">和FIN_WAIT突增</span><span class="w"></span>
+
+<span class="n">着重看看可影响主动断开TCP连接时几个参数</span><span class="w"></span>
+
+<span class="nl">tcp_keepalive_intvl</span><span class="p">:</span><span class="n">探测消息发送的频率</span><span class="w"></span>
+
+<span class="nl">tcp_keepalive_probes</span><span class="p">:</span><span class="n">TCP发送keepalive探测以确定该连接已经断开的次数</span><span class="w"></span>
+
+<span class="nl">tcp_keepalive_time</span><span class="p">:</span><span class="n">当keepalive打开的情况下</span><span class="err">，</span><span class="n">TCP发送keepalive消息的频率</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_keepalive</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_probes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span><span class="w"></span>
+
+<span class="nl">tcp_retries2</span><span class="p">:</span><span class="n">在丢弃激活</span><span class="p">(</span><span class="n">已建立通讯状况</span><span class="p">)</span><span class="n">的TCP连接之前</span><span class="err">﹐</span><span class="n">需要进行多少次重试</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_retries</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_retries2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_retries1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+
+<span class="n">加速处理那些等待ACK的LAST_ACK</span><span class="err">，</span><span class="n">减少等待ACK的LAST_ACK的重试次数</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_retries2</span><span class="o">=</span><span class="mi">5</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_retries2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+
+<span class="n">减少keepalive发送的频率</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="w"> </span><span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="o">=</span><span class="mi">15</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"></span>
+
+<span class="n">排除syncookies的影响</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">ec</span><span class="w"></span>
+
+<span class="n">echo</span><span class="w"> </span><span class="ss">&quot;0&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_syncookies</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;1&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_syncookies</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_keepalive</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_probes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">160</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">syncookies</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_syncookies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="n">延长keepalive检测周期</span><span class="err">，</span><span class="n">保留ESTABLISHED数量</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;1800&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_keepalive_time</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;5&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_keepalive_probes</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;15&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_keepalive_intvl</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_keepalive</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_probes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1800</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="mi">363</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5145</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">1073</span><span class="w"> </span><span class="n">FIN_WAIT1</span><span class="w"></span>
+
+<span class="mi">174</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">6042</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">301</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">85</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">LAST_ACK不下</span><span class="err">，</span><span class="n">但是CLOSING有所回落</span><span class="w"></span>
+
+<span class="nl">tcp_orphan_retries</span><span class="p">:</span><span class="n">在近端丢弃TCP连接之前</span><span class="err">﹐</span><span class="n">要进行多少次重试</span><span class="err">。</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_orphan</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_orphan_retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="n">关键</span><span class="err">，</span><span class="n">丢TCP太频繁了</span><span class="err">，</span><span class="n">以至于后勤都跟不上</span><span class="err">。</span><span class="n">设置丢弃之前的重试次数</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;3&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_orphan_retries</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">24</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5422</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">279</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">214</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1966</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">269</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">74</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">上下调节该值</span><span class="err">，</span><span class="n">找个合适的临界点</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;7&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_orphan_retries</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="mi">175</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5373</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">436</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">209</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">3184</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">283</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="mi">110</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">恢复</span><span class="err">，</span><span class="n">同时FIN_WAIT1的值过高</span><span class="err">。</span><span class="n">考虑减少tcp_fin_timeout时间</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;2&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_orphan_retries</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">tcp_fin</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_fin_timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;5&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_fin_timeout</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5665</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">145</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">141</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1068</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">287</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">68</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">相比FIN_WAIT</span><span class="err">，</span><span class="n">SYN_RECV的值偏高</span><span class="err">。</span><span class="n">加大发送synack的质量</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">synack</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_synack_retries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;2&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_synack_retries</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5317</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">200</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">158</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1001</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">303</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">78</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">a</span><span class="o">|</span><span class="n">grep</span><span class="w"> </span><span class="n">keepalive</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_intvl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_probes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_keepalive_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1800</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">7</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5356</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">175</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">136</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1045</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">345</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">64</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">减少keepalive的检测周期</span><span class="err">，</span><span class="n">LAST_ACK上升</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;10&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_keepalive_intvl</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;1&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_synack_retries</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="err">!</span><span class="n">wat</span><span class="w"></span>
+
+<span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">13</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5605</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">212</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">131</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1143</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">252</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">79</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="n">恢复</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;15&quot;</span><span class="w"> </span><span class="o">&gt;/</span><span class="k">proc</span><span class="o">/</span><span class="n">sys</span><span class="o">/</span><span class="n">net</span><span class="o">/</span><span class="n">ipv4</span><span class="o">/</span><span class="n">tcp_keepalive_intvl</span><span class="w"></span>
+
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">14</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">5862</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">230</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">205</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+<span class="mi">1064</span><span class="w"> </span><span class="n">LAST_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">244</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">59</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"> </span><span class="n">watch</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="ss">&quot;netstat -ant|fgrep &quot;</span><span class="err">:</span><span class="ss">&quot;|cut -b 77-90|sort |uniq -c&quot;</span><span class="w"></span>
+
+<span class="k">Every</span><span class="w"> </span><span class="mf">10.0</span><span class="nl">s</span><span class="p">:</span><span class="w"> </span><span class="n">netstat</span><span class="w"> </span><span class="o">-</span><span class="n">ant</span><span class="o">|</span><span class="n">fgrep</span><span class="w"> </span><span class="err">:</span><span class="o">|</span><span class="n">cut</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="mi">77</span><span class="o">-</span><span class="mi">90</span><span class="o">|</span><span class="n">sort</span><span class="w"> </span><span class="o">|</span><span class="n">uniq</span><span class="w"> </span><span class="o">-</span><span class="n">c</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="k">CLOSE</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">26</span><span class="w"> </span><span class="n">CLOSING</span><span class="w"></span>
+<span class="mi">6712</span><span class="w"> </span><span class="n">ESTABLISHED</span><span class="w"></span>
+
+<span class="mi">270</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT1</span><span class="w"></span>
+
+<span class="mi">230</span><span class="w"> </span><span class="n">FIN</span><span class="err">\</span><span class="n">_WAIT2</span><span class="w"></span>
+
+<span class="mi">994</span><span class="w"> </span><span class="k">LAST</span><span class="err">\</span><span class="n">_ACK</span><span class="w"></span>
+
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="n">LISTEN</span><span class="w"></span>
+
+<span class="mi">254</span><span class="w"> </span><span class="n">SYN</span><span class="err">\</span><span class="n">_RECV</span><span class="w"></span>
+
+<span class="w"> </span><span class="mi">73</span><span class="w"> </span><span class="nc">TIME</span><span class="err">\</span><span class="n">_WAIT</span><span class="w"></span>
+<span class="o">[</span><span class="n">root@ccsafe ~</span><span class="o">]</span><span class="err">#</span><span class="w"></span>
+
+<span class="n">目前LAST_ACK占ESTABLISHED的量在15</span><span class="o">%</span><span class="n">左右</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="close_wait">close_wait过多</h2>
+<div class="codehilite"><pre><span></span><span class="nv">netstat</span> <span class="o">-</span><span class="nv">n</span> <span class="o">|</span> <span class="nv">awk</span> <span class="s1">&#39;</span><span class="s">/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}</span><span class="s1">&#39;</span>
+<span class="nv">LAST_ACK</span> <span class="mi">1</span>
+<span class="nv">SYN_RECV</span> <span class="mi">15</span>
+<span class="nv">CLOSE_WAIT</span> <span class="mi">7729</span>
+<span class="nv">ESTABLISHED</span> <span class="mi">471</span>
+<span class="nv">FIN_WAIT1</span> <span class="mi">3</span>
+<span class="nv">FIN_WAIT2</span> <span class="mi">52</span>
+<span class="nv">SYN_SENT</span> <span class="mi">1</span>
+<span class="nv">TIME_WAIT</span> <span class="mi">725</span>
+要解决这个问题的可以修改系统的参数，系统默认超时时间的是<span class="mi">7200</span>秒，也就是<span class="mi">2</span>小时。
+默认如下：
+<span class="nv">tcp_keepalive_time</span> <span class="o">=</span> <span class="mi">7200</span> <span class="nv">seconds</span> <span class="ss">(</span><span class="mi">2</span> <span class="nv">hours</span><span class="ss">)</span>
+<span class="nv">tcp_keepalive_probes</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="nv">tcp_keepalive_intvl</span> <span class="o">=</span> <span class="mi">75</span> <span class="nv">seconds</span>
+意思是如果某个<span class="nv">TCP</span>连接在<span class="nv">idle</span> <span class="mi">2</span>个小时后,内核才发起<span class="nv">probe</span>.如果<span class="nv">probe</span> <span class="mi">9</span>次<span class="ss">(</span>每次<span class="mi">75</span>秒<span class="ss">)</span>不成功,内核才彻底放弃,认为该连接已失效
+修改后
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_time</span><span class="o">=</span><span class="mi">30</span>
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_probes</span><span class="o">=</span><span class="mi">2</span>
+<span class="nv">sysctl</span> <span class="o">-</span><span class="nv">w</span> <span class="nv">net</span>.<span class="nv">ipv4</span>.<span class="nv">tcp_keepalive_intvl</span><span class="o">=</span><span class="mi">2</span>
+经过这个修改后，服务器会在短时间里回收没有关闭的<span class="nv">tcp</span>连接
+</pre></div>
+
+
+<h2 id="find_wait1">find_wait1过多</h2>
+<div class="codehilite"><pre><span></span><span class="n">fin_wait1</span><span class="err">过多</span>
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">tcp_orphan_retries</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="err">默认值是</span><span class="mi">7</span><span class="err">，在近端丢弃</span><span class="n">TCP</span><span class="err">链接前，要进行多少次重试，默认值为</span><span class="mi">7</span><span class="err">个，相当于</span><span class="mi">50</span><span class="err">秒</span><span class="o">-</span><span class="mi">16</span><span class="err">分钟，视</span><span class="n">RTO</span><span class="err">而定。</span>
+<span class="err">如果系统是负载很大的</span><span class="n">web</span><span class="err">服务器，那么也许需要降低该值，这类</span><span class="n">sockets</span><span class="err">可能会耗费大量的资源。</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../netdata/" title="netdata" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                netdata
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../git-svn/" title="git-svn" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                git-svn
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

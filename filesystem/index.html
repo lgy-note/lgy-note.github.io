@@ -1,0 +1,1373 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>filesystem - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#glusterfs" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                filesystem
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link md-tabs__link--active">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        filesystem
+      </label>
+    
+    <a href="./" title="filesystem" class="md-nav__link md-nav__link--active">
+      filesystem
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glusterfs" class="md-nav__link">
+    GlusterFs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceph" class="md-nav__link">
+    ceph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moosefs" class="md-nav__link">
+    MooseFS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#glusterfs" class="md-nav__link">
+    GlusterFs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ceph" class="md-nav__link">
+    ceph
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moosefs" class="md-nav__link">
+    MooseFS
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>filesystem</h1>
+                
+                <h2 id="glusterfs">GlusterFs</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span>、部署，不适合小文件，特别是大量小文件，图片等
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">docs</span>.<span class="nv">gluster</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">en</span><span class="o">/</span><span class="nv">latest</span><span class="o">/</span><span class="nv">Quick</span><span class="o">-</span><span class="nv">Start</span><span class="o">-</span><span class="nv">Guide</span><span class="o">/</span><span class="nv">Quickstart</span><span class="o">/</span>
+
+至少需要两个节点，<span class="nv">hosts</span>文件有<span class="nv">ip</span>对应
+
+准备磁盘
+<span class="nv">mkfs</span>.<span class="nv">xfs</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">size</span><span class="o">=</span><span class="mi">512</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">sdb</span>
+<span class="nv">mkdir</span> <span class="o">-</span><span class="nv">p</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">brick1</span>
+<span class="nv">echo</span> <span class="s1">&#39;</span><span class="s">/dev/sdb /data/brick1 xfs defaults 1 2</span><span class="s1">&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">fstab</span>
+<span class="nv">mount</span> <span class="o">-</span><span class="nv">a</span> <span class="o">&amp;&amp;</span> <span class="nv">mount</span>
+<span class="nv">mkdir</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">centos</span><span class="o">-</span><span class="nv">release</span><span class="o">-</span><span class="nv">gluster</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">glusterfs</span><span class="o">-</span><span class="nv">server</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">systemctl</span> <span class="nv">enable</span> <span class="nv">glusterd</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">glusterd</span>
+<span class="nv">systemctl</span> <span class="nv">status</span> <span class="nv">glusterd</span>
+
+<span class="nv">server1</span> 运行 <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">server2</span>
+<span class="nv">server2</span> 运行 <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">server1</span>
+
+复制卷，性能较低
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">create</span> <span class="nv">gv0</span> <span class="nv">replica</span> <span class="mi">2</span> <span class="nv">server1</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span> <span class="nv">server2</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">start</span> <span class="nv">gv0</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">info</span> 有 <span class="nv">Status</span>: <span class="nv">Started</span>
+
+纠删码卷，类似<span class="nv">raid5</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">create</span> <span class="nv">gv0</span> <span class="nv">disperse</span> <span class="mi">3</span> <span class="nv">redundancy</span> <span class="mi">1</span> <span class="nv">cnd01tfilel0</span>{<span class="mi">1</span>,<span class="mi">2</span>,<span class="mi">3</span>}:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv5</span>
+
+还需要大量测试验证：奇数冗余删除硬盘时<span class="mi">20</span><span class="nv">s</span>无法写入，性能变的不稳定（<span class="mi">10</span><span class="nv">M</span><span class="o">-</span><span class="mi">40</span><span class="nv">M</span>）
+偶数冗余删除硬盘时性能，功能无影响，读写正常
+
+<span class="nv">disperse</span>：每个<span class="nv">Dispersed</span> <span class="nv">Set</span>的<span class="nv">bricks</span>总数，如若未指定，则<span class="nv">volume</span>创建命令中列出的所有<span class="nv">bricks</span>同属于一个<span class="nv">Dispersed</span> <span class="nv">Set</span>；
+<span class="nv">redundancy</span>：为冗余度，决定多少<span class="nv">brick</span>可以<span class="nv">interrupting</span>，并且也决定卷的可用空间，当<span class="nv">redundancy</span>未指定时，默认为<span class="mi">1</span>；
+
+<span class="nv">glusterfs</span> <span class="nv">volume</span>创建命令中存在<span class="nv">disperse</span><span class="o">-</span><span class="nv">data</span>参数，为卷的创建提供了更加灵活的方式，与前两者关系为：
+<span class="nv">disperse</span><span class="o">-</span><span class="nv">data</span> <span class="o">=</span><span class="nv">disperse</span> <span class="o">-</span> <span class="nv">redundancy</span>
+通常，应用程序的<span class="nv">IO</span>块大小为<span class="mi">2</span>的幂次，如<span class="mi">4</span><span class="nv">k</span>、<span class="mi">64</span><span class="nv">k</span>、<span class="mi">1</span><span class="nv">M</span>等，建议在进行<span class="nv">volume</span> 创建时，<span class="nv">disperse</span><span class="o">-</span><span class="nv">data</span>值的配置为<span class="mi">2</span>的次幂，与业务的<span class="nv">IO</span>块大小相匹配，避免<span class="nv">RMW</span>操作的出现，从而提升存储系统性能。
+
+
+客户端
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">gluster</span>.<span class="nv">readthedocs</span>.<span class="nv">io</span><span class="o">/</span><span class="nv">en</span><span class="o">/</span><span class="nv">latest</span><span class="o">/</span><span class="nv">Administrator</span><span class="o">%</span><span class="mi">20</span><span class="nv">Guide</span><span class="o">/</span><span class="nv">Setting</span><span class="o">%</span><span class="mi">20</span><span class="nv">Up</span><span class="o">%</span><span class="mi">20</span><span class="nv">Clients</span><span class="o">/</span>
+
+# <span class="nv">mount</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">glusterfs</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">backupvolfile</span><span class="o">-</span><span class="nv">server</span><span class="o">=</span><span class="nv">volfile_server2</span>,<span class="nv">use</span><span class="o">-</span><span class="nv">readdirp</span><span class="o">=</span><span class="nv">no</span>,<span class="nv">volfile</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">fetch</span><span class="o">-</span><span class="nv">attempts</span><span class="o">=</span><span class="mi">2</span>,<span class="nv">log</span><span class="o">-</span><span class="nv">level</span><span class="o">=</span><span class="nv">WARNING</span>,<span class="nv">log</span><span class="o">-</span><span class="nv">file</span><span class="o">=/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">gluster</span>.<span class="nv">log</span> <span class="nv">server1</span>:<span class="o">/</span><span class="nv">test</span><span class="o">-</span><span class="nv">volume</span> <span class="o">/</span><span class="nv">mnt</span><span class="o">/</span><span class="nv">glusterfs</span>
+
+如果<span class="nv">backupvolfile</span><span class="o">-</span><span class="nv">server</span>在安装<span class="nv">fuse</span>客户端时添加了选项，则当第一个<span class="nv">volfile</span>服务器出现故障时，
+<span class="nv">backupvolfile</span><span class="o">-</span><span class="nv">serveroption</span>中指定的服务器 将用作<span class="nv">volfile</span>服务器来安装客户端。
+在<span class="nv">volfile</span><span class="o">-</span><span class="nv">max</span><span class="o">-</span><span class="nv">fetch</span><span class="o">-</span><span class="nv">attempts</span><span class="o">=</span><span class="nv">X</span>选项中，指定在装入卷时尝试获取卷文件的尝试次数。
+当您安装具有多个<span class="nv">IP</span>地址的服务器或为服务器名配置循环<span class="nv">DNS</span>时，此选项很有用。
+如果<span class="nv">use</span><span class="o">-</span><span class="nv">readdirp</span>设置为<span class="nv">ON</span>，则强制在<span class="nv">fuse</span>内核模块中使用<span class="nv">readdirp</span>模式
+
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">centos</span><span class="o">-</span><span class="nv">release</span><span class="o">-</span><span class="nv">gluster</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">glusterfs</span><span class="o">-</span><span class="nv">client</span> <span class="nv">fio</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">mount</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">glusterfs</span> <span class="nv">server1</span>:<span class="o">/</span><span class="nv">gv0</span> <span class="o">/</span><span class="nv">mnt</span>
+测试 <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> `<span class="nv">seq</span> <span class="o">-</span><span class="nv">w</span> <span class="mi">1</span> <span class="mi">100</span>`<span class="c1">; do cp -rp /var/log/messages /mnt/copy-test-$i; done</span>
+     <span class="nv">ls</span> <span class="o">-</span><span class="nv">lA</span> <span class="o">/</span><span class="nv">mnt</span> <span class="o">|</span> <span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span>
+<span class="nv">fio</span> <span class="o">--</span><span class="nv">direct</span><span class="o">=</span><span class="mi">1</span> <span class="o">--</span><span class="nv">rw</span><span class="o">=</span><span class="nv">rw</span> <span class="o">--</span><span class="nv">bs</span><span class="o">=</span><span class="mi">1</span><span class="nv">m</span> <span class="o">--</span><span class="nv">size</span><span class="o">=</span><span class="mi">1</span><span class="nv">g</span> <span class="o">--</span><span class="nv">numjobs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="nv">group_reporting</span> <span class="o">--</span><span class="nv">name</span><span class="o">=</span><span class="nv">test</span><span class="o">-</span><span class="nv">rw</span>
+
+服务端会有文件 <span class="nv">ls</span> <span class="o">-</span><span class="nv">lA</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+
+<span class="mi">2</span>、扩容可能会影响性能,如果<span class="nv">volume</span>是<span class="mi">2</span>个备份，主机数为<span class="mi">2</span>的倍数
+<span class="nv">server1</span> 运行 <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">server3</span>
+             <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">server4</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">add</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">gv0</span>  <span class="nv">server3</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span> <span class="nv">server4</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+
+分配数据  <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">rebalance</span> <span class="nv">gv0</span> <span class="nv">start</span>    
+状态     <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">rebalance</span> <span class="nv">gv0</span> <span class="nv">status</span>
+
+<span class="mi">3</span>、故障处理
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">docs</span>.<span class="nv">gluster</span>.<span class="nv">org</span><span class="o">/</span><span class="nv">en</span><span class="o">/</span><span class="nv">latest</span><span class="o">/</span><span class="nv">Administrator</span><span class="o">%</span><span class="mi">20</span><span class="nv">Guide</span><span class="o">/</span><span class="nv">Managing</span><span class="o">%</span><span class="mi">20</span><span class="nv">Volumes</span><span class="o">/</span>#<span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span>
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">blog</span>.<span class="mi">51</span><span class="nv">cto</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">cmdschool</span><span class="o">/</span><span class="mi">1908647</span>
+
+恢复故障<span class="nv">brick</span>方法
+
+<span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">1</span> 结束故障<span class="nv">brick</span>的进程
+
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">status</span>
+
+<span class="nv">Gluster</span> <span class="nv">process</span>                             <span class="nv">TCP</span> <span class="nv">Port</span>  <span class="nv">RDMA</span> <span class="nv">Port</span>  <span class="nv">Online</span>  <span class="nv">Pid</span>
+<span class="nv">Brick</span> <span class="nv">cnd01tfilel01</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>      <span class="mi">49153</span>     <span class="mi">0</span>          <span class="nv">Y</span>       <span class="mi">1838</span> 
+<span class="nv">Brick</span> <span class="nv">cnd01tfilel02</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>      <span class="mi">49153</span>     <span class="mi">0</span>          <span class="nv">Y</span>       <span class="mi">1719</span> 
+<span class="nv">Brick</span> <span class="nv">cnd01tfilel03</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>      <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>        <span class="nv">N</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>  
+<span class="nv">Brick</span> <span class="nv">cnd01tfilel04</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>      <span class="mi">49152</span>     <span class="mi">0</span>          <span class="nv">Y</span>       <span class="mi">4489</span> 
+<span class="nv">Self</span><span class="o">-</span><span class="nv">heal</span> <span class="nv">Daemon</span> <span class="nv">on</span> <span class="nv">localhost</span>               <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>        <span class="nv">Y</span>       <span class="mi">3718</span> 
+<span class="nv">Self</span><span class="o">-</span><span class="nv">heal</span> <span class="nv">Daemon</span> <span class="nv">on</span> <span class="nv">cnd01tfilel03</span>           <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>        <span class="nv">Y</span>       <span class="mi">1315</span> 
+<span class="nv">Self</span><span class="o">-</span><span class="nv">heal</span> <span class="nv">Daemon</span> <span class="nv">on</span> <span class="nv">cnd01tfilel04</span>           <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>        <span class="nv">Y</span>       <span class="mi">5633</span> 
+<span class="nv">Self</span><span class="o">-</span><span class="nv">heal</span> <span class="nv">Daemon</span> <span class="nv">on</span> <span class="nv">cnd01tfilel02</span>           <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>       <span class="nv">N</span><span class="o">/</span><span class="nv">A</span>        <span class="nv">Y</span>       <span class="mi">2913</span>
+注：如果状态<span class="nv">Online</span>项为“<span class="nv">N</span>”的<span class="nv">GH01</span>存在<span class="nv">PID</span>号（不显示<span class="nv">N</span><span class="o">/</span><span class="nv">A</span>）应当使用如下命令结束掉进程方可继续下面步骤。
+
+<span class="nv">kill</span> <span class="o">-</span><span class="mi">15</span> <span class="nv">pid</span>
+
+<span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">2</span> 创建新的数据目录
+<span class="nv">mkfs</span>.<span class="nv">xfs</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">size</span><span class="o">=</span><span class="mi">512</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">sdb</span> <span class="o">-</span><span class="nv">f</span>
+编辑<span class="nv">fstab</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">fstab</span>
+去掉注释：
+<span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">sdb</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span> <span class="nv">xfs</span> <span class="nv">defaults</span> <span class="mi">1</span> <span class="mi">2</span>
+<span class="nv">mount</span> <span class="o">-</span><span class="nv">a</span>
+
+增加新的数据存放文件夹（不可以与之前目录一样）
+<span class="nv">mkdir</span> <span class="o">-</span><span class="nv">p</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv2</span>
+
+<span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">3</span> 查询故障节点的备份节点<span class="ss">(</span><span class="nv">gh02</span><span class="ss">)</span>目录的扩展属性
+正常机器 <span class="nv">getfattr</span> <span class="o">-</span><span class="nv">d</span> <span class="o">-</span><span class="nv">m</span>. <span class="o">-</span><span class="nv">e</span> <span class="nv">hex</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+<span class="nv">getfattr</span>: <span class="nv">Removing</span> <span class="nv">leading</span> <span class="s1">&#39;</span><span class="s">/</span><span class="s1">&#39;</span> <span class="nv">from</span> <span class="nv">absolute</span> <span class="nv">path</span> <span class="nv">names</span>
+# <span class="nv">file</span>: <span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+<span class="nv">trusted</span>.<span class="nv">gfid</span><span class="o">=</span><span class="mi">0</span><span class="nv">x00000000000000000000000000000001</span>
+<span class="nv">trusted</span>.<span class="nv">glusterfs</span>.<span class="nv">dht</span><span class="o">=</span><span class="mi">0</span><span class="nv">x0000000100000000000000007ffffffe</span>
+<span class="nv">trusted</span>.<span class="nv">glusterfs</span>.<span class="nv">volume</span><span class="o">-</span><span class="nv">id</span><span class="o">=</span><span class="mi">0</span><span class="nv">xbe45c8bbf3a64dd9a1d735a9b9073268</span>
+
+<span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">4</span> 挂载卷并触发自愈
+<span class="mi">1</span>）将卷挂到<span class="nv">mnt</span>目录下
+<span class="nv">mount</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">glusterfs</span> <span class="nv">cnd01tfilel01</span>:<span class="o">/</span><span class="nv">gv0</span> <span class="o">/</span><span class="nv">mnt</span>
+<span class="mi">2</span>）新建一个卷中不存在的目录并删除
+<span class="nv">mkdir</span> <span class="o">/</span><span class="nv">mnt</span><span class="o">/</span><span class="nv">testDir001</span>
+<span class="nv">rmdir</span> <span class="o">/</span><span class="nv">mnt</span><span class="o">/</span><span class="nv">testDir001</span>
+<span class="mi">3</span>）设置扩展属性触发自愈
+<span class="nv">setfattr</span> <span class="o">-</span><span class="nv">n</span> <span class="nv">trusted</span>.<span class="nv">non</span><span class="o">-</span><span class="nv">existent</span><span class="o">-</span><span class="nv">key</span> <span class="o">-</span><span class="nv">v</span> <span class="nv">abc</span> <span class="o">/</span><span class="nv">mnt</span>
+<span class="nv">setfattr</span> <span class="o">-</span><span class="nv">x</span> <span class="nv">trusted</span>.<span class="nv">non</span><span class="o">-</span><span class="nv">existent</span><span class="o">-</span><span class="nv">key</span> <span class="o">/</span><span class="nv">mnt</span>
+
+<span class="mi">2</span>）检查卷的状态是否显示需要替换
+
+<span class="nv">In</span> <span class="nv">GlusterH01</span>:
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">heal</span> <span class="nv">gv0</span> <span class="nv">info</span>
+显示如下：
+<span class="nv">Brick</span> <span class="nv">cnd01tfilel03</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span>
+<span class="nv">Status</span>: <span class="nv">Transport</span> <span class="nv">endpoint</span> <span class="nv">is</span> <span class="nv">not</span> <span class="nv">connected</span>
+<span class="nv">Number</span> <span class="nv">of</span> <span class="nv">entries</span>: <span class="o">-</span>
+注：状态提示传输端点未连接（第<span class="mi">2</span>行）
+
+<span class="mi">2</span>.<span class="mi">9</span>.<span class="mi">6</span> 使用强制提交完成操作
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">gv0</span> <span class="nv">cnd01tfilel03</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span> <span class="nv">cnd01tfilel03</span>:<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv2</span> <span class="nv">commit</span> <span class="nv">force</span>
+<span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span>: <span class="nv">success</span>: <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">commit</span> <span class="nv">force</span> <span class="nv">operation</span> <span class="nv">successful</span>
+
+<span class="nv">brick</span>状态 <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">status</span>
+自愈的进度 <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">heal</span> <span class="nv">gv0</span> <span class="nv">info</span>
+
+注：也可以将数据恢复到另外一台服务器，详细命令如下（可选）：
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">GH05</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">gv0</span> <span class="nv">GH01</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span> <span class="nv">GH05</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span><span class="nv">gv0</span> <span class="nv">commit</span>
+
+<span class="mi">4</span>、主机故障，无法恢复时
+找一台完全一样的机器，至少要保证硬盘数量和大小一致，安装系统，配置和故障机同样的 <span class="nv">IP</span>，安装 <span class="nv">gluster</span> 软件，
+保证配置一样，在其他健康节点上执行命令 <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">status</span>，查看故障服务器的 <span class="nv">uuid</span>
+
+如果是主机名，保证<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">hosts</span>文件正常, 解析正常
+[<span class="nv">root</span>@<span class="nv">mystorage2</span> <span class="o">~</span>]# <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">status</span>
+<span class="nv">Number</span> <span class="nv">of</span> <span class="nv">Peers</span>: <span class="mi">3</span>
+
+<span class="nv">Hostname</span>: <span class="nv">mystorage3</span>
+<span class="nv">Uuid</span>: <span class="mi">36</span><span class="nv">e4c45c</span><span class="o">-</span><span class="mi">466</span><span class="nv">f</span><span class="o">-</span><span class="mi">47</span><span class="nv">b0</span><span class="o">-</span><span class="nv">b829</span><span class="o">-</span><span class="nv">dcd4a69ca2e7</span>
+<span class="nv">State</span>: <span class="nv">Peer</span> <span class="nv">in</span> <span class="nv">Cluster</span> <span class="ss">(</span><span class="nv">Connected</span><span class="ss">)</span>
+
+<span class="nv">Hostname</span>: <span class="nv">mystorage4</span>
+<span class="nv">Uuid</span>: <span class="nv">c607f6c2</span><span class="o">-</span><span class="nv">bdcb</span><span class="o">-</span><span class="mi">4768</span><span class="o">-</span><span class="nv">bc82</span><span class="o">-</span><span class="mi">4</span><span class="nv">bc2243b1b7a</span>
+<span class="nv">State</span>: <span class="nv">Peer</span> <span class="nv">in</span> <span class="nv">Cluster</span> <span class="ss">(</span><span class="nv">Connected</span><span class="ss">)</span>
+
+<span class="nv">Hostname</span>: <span class="nv">mystorage1</span>
+<span class="nv">Uuid</span>: <span class="mi">6</span><span class="nv">e6a84af</span><span class="o">-</span><span class="nv">ac7a</span><span class="o">-</span><span class="mi">44</span><span class="nv">eb</span><span class="o">-</span><span class="mi">85</span><span class="nv">c9</span><span class="o">-</span><span class="mi">50</span><span class="nv">f1f46acef1</span>
+<span class="nv">State</span>: <span class="nv">Peer</span> <span class="nv">in</span> <span class="nv">Cluster</span> <span class="ss">(</span><span class="nv">Disconnected</span><span class="ss">)</span>
+修改新加机器的 <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">glusterd</span><span class="o">/</span><span class="nv">glusterd</span>.<span class="nv">info</span> 和 故障机器一样
+
+[<span class="nv">root</span>@<span class="nv">mystorage1</span> <span class="o">~</span>]# <span class="nv">cat</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">glusterd</span><span class="o">/</span><span class="nv">glusterd</span>.<span class="nv">info</span>
+<span class="nv">UUID</span><span class="o">=</span><span class="mi">6</span><span class="nv">e6a84af</span><span class="o">-</span><span class="nv">ac7a</span><span class="o">-</span><span class="mi">44</span><span class="nv">eb</span><span class="o">-</span><span class="mi">85</span><span class="nv">c9</span><span class="o">-</span><span class="mi">50</span><span class="nv">f1f46acef1</span>
+<span class="nv">operating</span><span class="o">-</span><span class="nv">version</span><span class="o">=</span><span class="mi">40100</span>  和其他机器一样
+
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">glusterd</span> 
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">status</span> 如果状态不是<span class="nv">Peer</span> <span class="nv">in</span> <span class="nv">Cluster</span> <span class="ss">(</span><span class="nv">Connected</span><span class="ss">)</span> ,执行 <span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="nv">gfserver03</span>加入集群
+
+就会自动开始同步，但在同步的时候会影响整个系统的性能。
+手动同步 <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">heal</span> <span class="nv">gv2</span> <span class="nv">full</span>
+
+可以查看状态 <span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">heal</span> <span class="nv">gv2</span> <span class="nv">info</span>
+
+
+<span class="mi">5</span>、其他常用命令
+删除卷
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">stop</span> <span class="nv">img</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">delete</span> <span class="nv">img</span>
+将机器移出集群
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">detach</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">102</span>
+只允许<span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">0</span>.<span class="mi">0</span>的网络访问<span class="nv">glusterfs</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">set</span> <span class="nv">img</span> <span class="nv">auth</span>.<span class="nv">allow</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="o">*</span>
+加入新的机器并添加到卷里<span class="ss">(</span>由于副本数设置为<span class="mi">2</span>,至少要添加<span class="mi">2</span>（<span class="mi">4</span>、<span class="mi">6</span>、<span class="mi">8</span>..）台机器<span class="ss">)</span>
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">105</span>
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">106</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">add</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">105</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">106</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span>
+收缩卷
+# 收缩卷前<span class="nv">gluster</span>需要先移动数据到其他位置
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">remove</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">102</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">start</span>
+# 查看迁移状态
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">remove</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">102</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">status</span>
+# 迁移完成后提交
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">remove</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">102</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">commit</span>
+迁移卷
+# 将<span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>的数据迁移到,先将<span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">107</span>加入集群
+<span class="nv">gluster</span> <span class="nv">peer</span> <span class="nv">probe</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">107</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">107</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">start</span>
+# 查看迁移状态<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">107</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">status</span>
+#数据迁移完毕后提交<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">107</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">commit</span>
+# 如果机器<span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>出现故障已经不能运行,执行强制提交然后要求<span class="nv">gluster</span>马上执行一次同步
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">replace</span><span class="o">-</span><span class="nv">brick</span> <span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">101</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="mi">172</span>.<span class="mi">28</span>.<span class="mi">26</span>.<span class="mi">102</span>:<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">gluster</span><span class="o">/</span><span class="nv">img</span> <span class="nv">commit</span> <span class="o">-</span><span class="nv">force</span>
+<span class="nv">gluster</span> <span class="nv">volume</span> <span class="nv">heal</span> <span class="nv">imgs</span> <span class="nv">full</span>
+</pre></div>
+
+
+<h2 id="ceph">ceph</h2>
+<div class="codehilite"><pre><span></span><span class="nv">http</span>:<span class="o">//</span><span class="nv">docs</span>.<span class="nv">ceph</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">docs</span><span class="o">/</span><span class="nv">master</span><span class="o">/</span>
+
+<span class="nv">ceph</span>清理, 慎用<span class="o">!!</span>
+# <span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">purge</span> <span class="nv">node1</span> <span class="nv">node2</span> ...
+# <span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">purgedata</span> <span class="nv">node1</span> <span class="nv">node2</span> ...
+
+<span class="nv">cat</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">yum</span>.<span class="nv">repos</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">ceph</span>.<span class="nv">repo</span>
+[<span class="nv">Ceph</span>]
+<span class="nv">name</span><span class="o">=</span><span class="nv">Ceph</span> <span class="nv">packages</span> <span class="k">for</span> <span class="mh">$ba</span><span class="nv">search</span>
+<span class="nv">baseurl</span><span class="o">=</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">mimic</span><span class="o">/</span><span class="nv">el7</span><span class="o">/</span><span class="mh">$ba</span><span class="nv">search</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">type</span><span class="o">=</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">md</span>
+<span class="nv">gpgkey</span><span class="o">=</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">keys</span><span class="o">/</span><span class="nv">release</span>.<span class="nv">asc</span>
+<span class="nv">priority</span><span class="o">=</span><span class="mi">1</span>
+
+[<span class="nv">Ceph</span><span class="o">-</span><span class="nv">noarch</span>]
+<span class="nv">name</span><span class="o">=</span><span class="nv">Ceph</span> <span class="nv">noarch</span> <span class="nv">packages</span>
+<span class="nv">baseurl</span><span class="o">=</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">mimic</span><span class="o">/</span><span class="nv">el7</span><span class="o">/</span><span class="nv">noarch</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">type</span><span class="o">=</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">md</span>
+<span class="nv">gpgkey</span><span class="o">=</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">keys</span><span class="o">/</span><span class="nv">release</span>.<span class="nv">asc</span>
+<span class="nv">priority</span><span class="o">=</span><span class="mi">1</span>
+
+[<span class="nv">ceph</span><span class="o">-</span><span class="nv">source</span>]
+<span class="nv">name</span><span class="o">=</span><span class="nv">Ceph</span> <span class="nv">source</span> <span class="nv">packages</span>
+<span class="nv">baseurl</span><span class="o">=</span><span class="nv">http</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">mimic</span><span class="o">/</span><span class="nv">el7</span><span class="o">/</span><span class="nv">SRPMS</span>
+<span class="nv">enabled</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="mi">1</span>
+<span class="nv">type</span><span class="o">=</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">md</span>
+<span class="nv">gpgkey</span><span class="o">=</span><span class="nv">https</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">aliyun</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">keys</span><span class="o">/</span><span class="nv">release</span>.<span class="nv">asc</span>
+<span class="nv">priority</span><span class="o">=</span><span class="mi">1</span>
+
+部署节点
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="o">-</span><span class="nv">y</span>
+<span class="nv">ssh</span><span class="o">-</span><span class="nv">keygen</span>
+<span class="nv">ssh</span><span class="o">-</span><span class="nv">copy</span><span class="o">-</span><span class="nv">id</span> <span class="nv">hostname</span>
+所有节点
+<span class="nv">yum</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">install</span> <span class="nv">ceph</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">radosgw</span>
+
+部署节点
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">new</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node1</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node2</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node3</span>
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">install</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node1</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node2</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node3</span>
+
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">mon</span> <span class="nv">create</span><span class="o">-</span><span class="nv">initial</span>
+当成功执行上面命令的时候，在本地目录下会生成如下文件：
+<span class="nv">ceph</span>.<span class="nv">client</span>.<span class="nv">admin</span>.<span class="nv">keyring</span>
+<span class="nv">ceph</span>.<span class="nv">bootstrap</span><span class="o">-</span><span class="nv">osd</span>.<span class="nv">keyring</span>
+<span class="nv">ceph</span>.<span class="nv">bootstrap</span><span class="o">-</span><span class="nv">mds</span>.<span class="nv">keyring</span>
+
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">admin</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node1</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node2</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node3</span>
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">mgr</span> <span class="nv">create</span> <span class="nv">node1</span>  高于<span class="nv">luminous12</span>.<span class="nv">x</span> 的版本添加
+
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">osd</span> <span class="nv">create</span> <span class="o">--</span><span class="nv">data</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">vdb</span> <span class="nv">node1</span>
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">osd</span> <span class="nv">create</span> <span class="o">--</span><span class="nv">data</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">vdb</span> <span class="nv">node2</span>
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">osd</span> <span class="nv">create</span> <span class="o">--</span><span class="nv">data</span> <span class="o">/</span><span class="nv">dev</span><span class="o">/</span><span class="nv">vdb</span> <span class="nv">node3</span>
+
+查看状态
+<span class="nv">ceph</span> <span class="nv">health</span> <span class="nv">detail</span>
+<span class="nv">ceph</span> <span class="o">-</span><span class="nv">s</span>
+
+创建一个<span class="nv">metadata</span>服务器
+<span class="nv">ceph</span><span class="o">-</span><span class="nv">deploy</span> <span class="nv">mds</span> <span class="nv">create</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">node1</span>
+官方建议目前即使在生产环境中只是用一台<span class="nv">metadata</span>服务器也是可以的
+但并不是不可以使用多台<span class="nv">metadata</span>服务器，只不过是那种情况下将缺少商业支持。
+
+<span class="nv">http</span>:<span class="o">//</span><span class="nv">docs</span>.<span class="nv">ceph</span>.<span class="nv">org</span>.<span class="nv">cn</span><span class="o">/</span><span class="nv">cephfs</span><span class="o">/</span><span class="nv">createfs</span><span class="o">/</span>   <span class="nv">pg_num</span><span class="o">=</span><span class="mi">100</span>
+$ <span class="nv">ceph</span> <span class="nv">osd</span> <span class="nv">pool</span> <span class="nv">create</span> <span class="nv">cephfs_data</span> <span class="o">&lt;</span><span class="nv">pg_num</span><span class="o">&gt;</span>
+$ <span class="nv">ceph</span> <span class="nv">osd</span> <span class="nv">pool</span> <span class="nv">create</span> <span class="nv">cephfs_metadata</span> <span class="o">&lt;</span><span class="nv">pg_num</span><span class="o">&gt;</span>
+$ <span class="nv">ceph</span> <span class="nv">fs</span> <span class="nv">new</span> <span class="nv">cephfs</span> <span class="nv">cephfs_metadata</span> <span class="nv">cephfs_data</span>
+
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">ceph</span><span class="o">/</span><span class="nv">ceph</span>.<span class="nv">client</span>.<span class="nv">admin</span>.<span class="nv">keyring</span> 认证信息
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">ceph</span><span class="o">-</span><span class="nv">fuse</span>
+<span class="nv">mount</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">ceph</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">41</span>.<span class="mi">31</span>:<span class="mi">6789</span>:<span class="o">/</span> <span class="o">/</span><span class="nv">mnt</span> <span class="o">-</span><span class="nv">o</span> <span class="nv">name</span><span class="o">=</span><span class="nv">admin</span>,<span class="nv">secret</span><span class="o">=</span><span class="nv">passwd</span> 内核空间挂载
+或者 <span class="nv">ceph</span><span class="o">-</span><span class="nv">fuse</span> <span class="o">-</span><span class="nv">m</span> {<span class="nv">ip</span><span class="o">-</span><span class="nv">address</span><span class="o">-</span><span class="nv">of</span><span class="o">-</span><span class="nv">monitor</span>}:<span class="mi">6789</span> <span class="o">/</span><span class="nv">mnt</span><span class="o">/</span><span class="nv">ceph</span>    用户空间挂载
+</pre></div>
+
+
+<h2 id="moosefs">MooseFS</h2>
+<div class="codehilite"><pre><span></span><span class="nv">https</span>:<span class="o">//</span><span class="nv">moosefs</span>.<span class="nv">com</span>
+
+<span class="mi">1</span>、安装
+<span class="nv">Add</span> <span class="nv">the</span> <span class="nv">key</span>:
+# <span class="nv">curl</span> <span class="s2">&quot;</span><span class="s">https://ppa.moosefs.com/RPM-GPG-KEY-MooseFS</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">pki</span><span class="o">/</span><span class="nv">rpm</span><span class="o">-</span><span class="nv">gpg</span><span class="o">/</span><span class="nv">RPM</span><span class="o">-</span><span class="nv">GPG</span><span class="o">-</span><span class="nv">KEY</span><span class="o">-</span><span class="nv">MooseFS</span>
+
+<span class="nv">Add</span> <span class="nv">an</span> <span class="nv">appropriate</span> <span class="nv">repository</span> <span class="nv">entry</span>:
+# <span class="nv">curl</span> <span class="s2">&quot;</span><span class="s">http://ppa.moosefs.com/MooseFS-3-el7.repo</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">yum</span>.<span class="nv">repos</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">MooseFS</span>.<span class="nv">repo</span>
+<span class="k">then</span> <span class="nv">install</span> <span class="nv">appropriate</span> <span class="nv">MooseFS</span> <span class="nv">components</span>:
+
+<span class="k">For</span> <span class="nv">Master</span> <span class="nv">Servers</span>:
+# <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">master</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">cgi</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">cgiserv</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">cli</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">master</span>
+
+<span class="k">For</span> <span class="nv">Metaloggers</span>:
+# <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">metalogger</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">mfs</span><span class="o">/</span><span class="nv">mfsmetalogger</span>.<span class="nv">cfg</span>
+<span class="nv">MASTER_HOST</span> <span class="o">=</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">41</span>.<span class="mi">31</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">metalogger</span>
+
+<span class="k">For</span> <span class="nv">Chunkservers</span>:
+# <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">chunkserver</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">mfs</span><span class="o">/</span><span class="nv">mfschunkserver</span>.<span class="nv">cfg</span>
+<span class="nv">MASTER_HOST</span> <span class="o">=</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">41</span>.<span class="mi">31</span>
+<span class="nv">vim</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">mfs</span><span class="o">/</span><span class="nv">mfshdd</span>.<span class="nv">cfg</span>
+<span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span>
+<span class="nv">chown</span> <span class="nv">mfs</span>.<span class="nv">mfs</span> <span class="o">/</span><span class="nv">bricks</span><span class="o">/</span><span class="nv">brick1</span><span class="o">/</span>
+<span class="nv">systemctl</span> <span class="nv">start</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">chunkserver</span>
+
+<span class="k">For</span> <span class="nv">Clients</span>:
+# <span class="nv">yum</span> <span class="nv">install</span> <span class="nv">moosefs</span><span class="o">-</span><span class="nv">client</span>
+<span class="nv">mkdir</span> <span class="o">/</span><span class="nv">mfsdata</span>
+<span class="nv">mfsmount</span> <span class="o">/</span><span class="nv">mfsdata</span> <span class="o">-</span><span class="nv">H</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">41</span>.<span class="mi">31</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../disk/" title="disk" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                disk
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../source/" title="source" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                source
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

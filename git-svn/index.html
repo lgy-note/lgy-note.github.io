@@ -1,0 +1,1593 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>git-svn - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ant" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                git-svn
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link md-tabs__link--active">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        git-svn
+      </label>
+    
+    <a href="./" title="git-svn" class="md-nav__link md-nav__link--active">
+      git-svn
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ant" class="md-nav__link">
+    ant编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    gitlab安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab_1" class="md-nav__link">
+    gitlab邮件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-clean" class="md-nav__link">
+    git clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins" class="md-nav__link">
+    jenkins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn" class="md-nav__link">
+    svn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn-http" class="md-nav__link">
+    svn http访问
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn_1" class="md-nav__link">
+    svn备份
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ant" class="md-nav__link">
+    ant编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    gitlab安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab_1" class="md-nav__link">
+    gitlab邮件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-clean" class="md-nav__link">
+    git clean
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins" class="md-nav__link">
+    jenkins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn" class="md-nav__link">
+    svn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn-http" class="md-nav__link">
+    svn http访问
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#svn_1" class="md-nav__link">
+    svn备份
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>git-svn</h1>
+                
+                <h2 id="ant">ant编译</h2>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="c">&lt;!-- 定义一个工程，默认任务为warFile。 --&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">name=</span><span class="s">&quot;Visit&quot;</span> <span class="na">default=</span><span class="s">&quot;warFile&quot;</span> <span class="na">basedir=</span><span class="s">&quot;.&quot;</span><span class="nt">&gt;</span>
+
+    <span class="c">&lt;!-- 定义属性，打成war包的名称。 --&gt;</span>
+    <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;warFileName&quot;</span> <span class="na">value=</span><span class="s">&quot;CuiShou.war&quot;</span><span class="nt">&gt;&lt;/property&gt;</span>
+
+    <span class="c">&lt;!-- 定义路径，编译java文件时用到的jar包。 --&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">&quot;project.lib&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;fileset</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/WebRoot/WEB-INF/lib&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;include</span> <span class="na">name=</span><span class="s">&quot;**/*.jar&quot;/</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/fileset&gt;</span>
+        <span class="nt">&lt;fileset</span> <span class="na">dir=</span><span class="s">&quot;/usr/local/tomcat_pingtai/lib&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;include</span> <span class="na">name=</span><span class="s">&quot;**/*.jar&quot;/</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/fileset&gt;</span>
+    <span class="nt">&lt;/path&gt;</span>
+
+    <span class="c">&lt;!-- 定义任务，清空任务：清空原有的class文件，创建新的build路径。 --&gt;</span>
+    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;clean&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;delete</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/build&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;mkdir</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/build&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/target&gt;</span>
+
+    <span class="c">&lt;!-- 定义任务，编译src文件夹中的java文件，编译后的class文件放到创建的文件夹下。 --&gt;</span>
+    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;compile&quot;</span> <span class="na">depends=</span><span class="s">&quot;clean&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;javac</span> <span class="na">srcdir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/src&quot;</span> <span class="na">destdir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/build&quot;</span> <span class="na">includeantruntime=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;compilerarg</span> <span class="na">line=</span><span class="s">&quot;-encoding UTF-8&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;classpath</span> <span class="na">refid=</span><span class="s">&quot;project.lib&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/classpath&gt;</span>
+            <span class="nt">&lt;compilerarg</span> <span class="na">value=</span><span class="s">&quot;-XDignore.symbol.file&quot;/</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/javac&gt;</span>
+        <span class="nt">&lt;copy</span> <span class="na">todir =</span> <span class="err">&quot;${basedir}/build&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;fileset</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/src&quot;</span> <span class="na">excludes=</span><span class="s">&quot;**/*.java&quot;</span><span class="nt">&gt;&lt;/fileset&gt;</span>   复制哪里的文件，根据实际更改
+            <span class="nt">&lt;fileset</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/resources&quot;</span><span class="nt">&gt;&lt;include</span> <span class="na">name=</span><span class="s">&quot;**/**.*&quot;</span> <span class="nt">/&gt;&lt;/fileset&gt;</span>
+        <span class="nt">&lt;/copy&gt;</span>
+    <span class="nt">&lt;/target&gt;</span>
+
+    <span class="c">&lt;!-- 定义默认任务，将class文件集合成jar包。 --&gt;</span>
+    <span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;warFile&quot;</span> <span class="na">depends=</span><span class="s">&quot;compile&quot;</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- 删除原有war包。 --&gt;</span>
+        <span class="nt">&lt;delete</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/</span><span class="cp">${</span><span class="n">warFileName</span><span class="cp">}</span><span class="s">&quot;</span> <span class="nt">/&gt;</span>
+        <span class="c">&lt;!-- 建立新war包。 --&gt;</span>
+        <span class="nt">&lt;war</span> <span class="na">destfile=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/</span><span class="cp">${</span><span class="n">warFileName</span><span class="cp">}</span><span class="s">&quot;</span> <span class="na">webxml=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/WebRoot/WEB-INF/web.xml&quot;</span><span class="nt">&gt;</span>
+            <span class="c">&lt;!-- 将非jar和非class文件拷贝到war包的对应路径下。 --&gt;</span>
+            <span class="nt">&lt;fileset</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/WebRoot&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;include</span> <span class="na">name=</span><span class="s">&quot;**/**.*&quot;</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;exclude</span> <span class="na">name=</span><span class="s">&quot;**/*.jar&quot;/</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;exclude</span> <span class="na">name=</span><span class="s">&quot;**/*.class&quot;/</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/fileset&gt;</span>
+            <span class="c">&lt;!-- 将jar和class文件拷贝到war包的对应路径下。 --&gt;</span>
+            <span class="nt">&lt;lib</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/WebRoot/WEB-INF/lib&quot;</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;classes</span> <span class="na">dir=</span><span class="s">&quot;</span><span class="cp">${</span><span class="n">basedir</span><span class="cp">}</span><span class="s">/build&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/war&gt;</span>
+    <span class="nt">&lt;/target&gt;</span>
+
+<span class="nt">&lt;/project&gt;</span>
+</pre></div>
+
+
+<h2 id="gitlab">gitlab安装</h2>
+<div class="codehilite"><pre><span></span><span class="nv">gitlab</span>
+<span class="nv">https</span>:<span class="o">//</span><span class="nv">about</span>.<span class="nv">gitlab</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">downloads</span><span class="o">/</span>#<span class="nv">centos6</span>
+
+<span class="nv">yum</span> <span class="nv">install</span> <span class="nv">curl</span> <span class="nv">openssh</span><span class="o">-</span><span class="nv">server</span> <span class="nv">postfix</span> <span class="nv">cronie</span>
+<span class="nv">service</span> <span class="nv">postfix</span> <span class="nv">start</span>
+<span class="nv">chkconfig</span> <span class="nv">postfix</span> <span class="nv">on</span>
+<span class="nv">lokkit</span> <span class="o">-</span><span class="nv">s</span> <span class="nv">http</span> <span class="o">-</span><span class="nv">s</span> <span class="nv">ssh</span>
+<span class="nv">wget</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">mirrors</span>.<span class="nv">tuna</span>.<span class="nv">tsinghua</span>.<span class="nv">edu</span>.<span class="nv">cn</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">ce</span><span class="o">/</span><span class="nv">yum</span><span class="o">/</span><span class="nv">el6</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">ce</span><span class="o">-</span><span class="mi">8</span>.<span class="mi">9</span>.<span class="mi">8</span><span class="o">-</span><span class="nv">ce</span>.<span class="mi">0</span>.<span class="nv">el6</span>.<span class="nv">x86_64</span>.<span class="nv">rpm</span>
+<span class="nv">rpm</span> <span class="o">-</span><span class="nv">i</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ce</span><span class="o">-</span><span class="nv">XXX</span>.<span class="nv">rpm</span>
+<span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+
+
+默认账号
+<span class="nv">Username</span>: <span class="nv">root</span>
+<span class="nv">Password</span>: <span class="mi">5</span><span class="nv">iveL</span><span class="o">!</span><span class="nv">fe</span>
+
+
+<span class="nv">gitlab</span> <span class="o">+</span> <span class="nv">ldap</span>
+
+在<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">rb</span> 追加<span class="nv">ldap</span>配置 
+# <span class="k">For</span> <span class="nv">omnibus</span> <span class="nv">packages</span>
+<span class="nv">gitlab_rails</span>[<span class="s1">&#39;</span><span class="s">ldap_enabled</span><span class="s1">&#39;</span>] <span class="o">=</span> <span class="nv">true</span>
+<span class="nv">gitlab_rails</span>[<span class="s1">&#39;</span><span class="s">ldap_servers</span><span class="s1">&#39;</span>] <span class="o">=</span> <span class="nv">YAML</span>.<span class="nv">load</span> <span class="o">&lt;&lt;-</span><span class="nv">EOS</span> # <span class="nv">remember</span> <span class="nv">to</span> <span class="nv">close</span> <span class="nv">this</span> <span class="nv">block</span> <span class="nv">with</span> <span class="s1">&#39;</span><span class="s">EOS</span><span class="s1">&#39;</span> <span class="nv">below</span>
+<span class="nv">main</span>: # <span class="s1">&#39;</span><span class="s">main</span><span class="s1">&#39;</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">GitLab</span> <span class="s1">&#39;</span><span class="s">provider ID</span><span class="s1">&#39;</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">LDAP</span> <span class="nv">server</span>
+  <span class="nv">label</span>: <span class="s1">&#39;</span><span class="s">LDAP</span><span class="s1">&#39;</span>
+  <span class="nv">host</span>: <span class="s1">&#39;</span><span class="s">ldap_server_IP</span><span class="s1">&#39;</span>
+  <span class="nv">port</span>: <span class="mi">389</span>
+  <span class="nv">uid</span>: <span class="s1">&#39;</span><span class="s">uid</span><span class="s1">&#39;</span>
+  <span class="nv">method</span>: <span class="s1">&#39;</span><span class="s">plain</span><span class="s1">&#39;</span> # <span class="s2">&quot;</span><span class="s">tls</span><span class="s2">&quot;</span> <span class="nv">or</span> <span class="s2">&quot;</span><span class="s">ssl</span><span class="s2">&quot;</span> <span class="nv">or</span> <span class="s2">&quot;</span><span class="s">plain</span><span class="s2">&quot;</span>
+  <span class="nv">allow_username_or_email_login</span>: <span class="nv">true</span>
+  <span class="nv">bind_dn</span>: <span class="s1">&#39;</span><span class="s">cn=xxx,dc=xxx,dc=com</span><span class="s1">&#39;</span>
+  <span class="nv">password</span>: <span class="s1">&#39;</span><span class="s">PASSWPRD</span><span class="s1">&#39;</span>
+  <span class="nv">active_directory</span>: <span class="nv">false</span>
+  <span class="nv">base</span>: <span class="s1">&#39;</span><span class="s">ou=xxx,dc=xxx,dc=com</span><span class="s1">&#39;</span>
+  <span class="nv">user_filter</span>: <span class="s1">&#39;&#39;</span>
+<span class="nv">EOS</span>
+使配置生效
+
+#<span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+至此<span class="nv">gitlab</span> 安装集成<span class="nv">ldap</span>完成
+
+
+<span class="nv">ldap</span>登陆报错日志位置 <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">rails</span><span class="o">/</span><span class="nv">production</span>.<span class="nv">log</span>
+
+<span class="nv">gitlab</span>服务启动关闭及重启
+
+<span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">start</span><span class="o">|</span><span class="nv">stop</span><span class="o">|</span><span class="nv">restart</span>
+需要注意的是修改过<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">rb</span> 后 需要执行 
+
+#<span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+<span class="nv">ps</span> 这个命令会执行<span class="nv">chef</span>将<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">rb</span>添加的参数加入 <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">rails</span><span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">yml</span>
+
+<span class="o">---------------------------</span>
+
+<span class="nv">Gitlab</span> 汉化及维护
+
+由于服务对象是广大师生，为了降低新手上手的难度，所有进行汉化也是非常有必要的。好在国内有人已经进行了这方面的工作，我们
+只需要共享其成果即可（欢迎向原项目提交高质量翻译）。
+
+首先确认版本：
+
+<span class="nv">sudo</span> <span class="nv">cat</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">embedded</span><span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">rails</span><span class="o">/</span><span class="nv">VERSION</span>
+并确认当前汉化版本的 <span class="nv">VERSION</span> 是否相同，当前最新的汉化版本为 <span class="mi">8</span>.<span class="mi">6</span> 。
+如果安装版本小于当前汉化版本，请先升级。如果安装版本大于当前汉化版本，请在本项目中提交新的 <span class="nv">issue</span>。
+如果版本相同，首先在本地 <span class="nv">clone</span> 仓库。
+
+# <span class="nv">GitLab</span>.<span class="nv">com</span> 仓库
+<span class="nv">git</span> <span class="nv">clone</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">gitlab</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">larryli</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">git</span>
+
+# 或 <span class="nv">Coding</span>.<span class="nv">net</span> 镜像
+<span class="nv">git</span> <span class="nv">clone</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">git</span>.<span class="nv">coding</span>.<span class="nv">net</span><span class="o">/</span><span class="nv">larryli</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">git</span>
+根据我的测试， <span class="nv">Coding</span>.<span class="nv">net</span> 的镜像不完整，<span class="nv">clone</span> 之后无法 <span class="nv">checkout</span>
+然后比较汉化分支和原分支，导出 <span class="nv">patch</span> 用的 <span class="nv">diff</span> 文件。
+
+# <span class="mi">8</span>.<span class="mi">1</span> 版本的汉化补丁
+<span class="nv">git</span> <span class="nv">diff</span> <span class="nv">origin</span><span class="o">/</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="nv">stable</span>..<span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="nv">zh</span> <span class="o">&gt;</span> ..<span class="o">/</span><span class="mi">8</span>.<span class="mi">6</span>.<span class="nv">diff</span>
+然后上传 <span class="mi">8</span>.<span class="mi">6</span>.<span class="nv">diff</span> 文件到服务器。
+
+# 停止 <span class="nv">gitlab</span>
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">stop</span>
+<span class="nv">sudo</span> <span class="nv">patch</span> <span class="o">-</span><span class="nv">d</span> <span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">embedded</span><span class="o">/</span><span class="nv">service</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">rails</span> <span class="o">-</span><span class="nv">p1</span> <span class="o">&lt;</span> <span class="mi">8</span>.<span class="mi">6</span>.<span class="nv">diff</span>
+确定没有 .<span class="nv">rej</span> 文件，重启 <span class="nv">GitLab</span> 即可。
+
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">start</span>
+如果汉化中出现问题，请重新安装 <span class="nv">GitLab</span>（注意备份数据）。
+
+<span class="nv">Gitlab</span> 运维
+
+管理
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">start</span>   # 启动所有 <span class="nv">gitlab</span> 组件
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">stop</span>   # 停止所有 <span class="nv">gitlab</span> 组件
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">restart</span>  # 重启所有 <span class="nv">gitlab</span> 组件
+备份
+
+备份<span class="nv">GitLab</span> <span class="nv">repositories</span> <span class="nv">and</span> <span class="nv">GitLab</span> <span class="nv">metadata</span>
+在 <span class="nv">crontab</span> 中加入如下命令：
+
+<span class="mi">0</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">-</span><span class="nv">rake</span> <span class="nv">gitlab</span>:<span class="nv">backup</span>:<span class="nv">create</span>
+恢复
+
+首先进入备份 <span class="nv">gitlab</span> 的目录，这个目录是配置文件中的<span class="nv">gitlab_rails</span>[<span class="s1">&#39;</span><span class="s">backup_path</span><span class="s1">&#39;</span>]，默认为<span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">backups</span>。
+
+然后停止 <span class="nv">unicorn</span> 和 <span class="nv">sidekiq</span> ，保证数据库没有新的连接，不会有写数据情况。
+
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">stop</span> <span class="nv">unicorn</span>
+# <span class="nv">ok</span>: <span class="nv">down</span>: <span class="nv">unicorn</span>: <span class="mi">0</span><span class="nv">s</span>, <span class="nv">normally</span> <span class="nv">up</span>
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">stop</span> <span class="nv">sidekiq</span>
+# <span class="nv">ok</span>: <span class="nv">down</span>: <span class="nv">sidekiq</span>: <span class="mi">0</span><span class="nv">s</span>, <span class="nv">normally</span> <span class="nv">up</span>
+然后恢复数据，<span class="mi">1406691018</span>为备份文件的时间戳
+
+<span class="nv">gitlab</span><span class="o">-</span><span class="nv">rake</span> <span class="nv">gitlab</span>:<span class="nv">backup</span>:<span class="nv">restore</span> <span class="nv">BACKUP</span><span class="o">=</span><span class="mi">1406691018</span>
+修改数据存储地址
+
+默认情况下，<span class="nv">gitlab</span> 将数据存储在<span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">git</span><span class="o">-</span><span class="nv">data</span>目录下，受限于分区情况<span class="o">&amp;</span>方便管理，我们需要将数据迁移到别的目录下。
+
+无需数据迁移
+如果还没有投入使用，则可以直接在配置文件中添加：
+
+<span class="nv">git_data_dir</span> <span class="s2">&quot;</span><span class="s">/path/to/git-data</span><span class="s2">&quot;</span>
+然后执行：
+
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+就可以生效了。
+
+进行数据迁移
+如果已经有数据了，则需要进行迁移。
+
+首先需要暂停服务，避免用户在迁移期间读写数据：
+
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">stop</span>
+然后使用<span class="nv">rsync</span>数据进行迁移：
+
+注意前一个地址不需要<span class="o">/</span>，后一个地址需要<span class="o">/</span>，且只需要迁移<span class="nv">repositories</span>目录即可
+<span class="nv">sudo</span> <span class="nv">rsync</span> <span class="o">-</span><span class="nv">av</span> <span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">opt</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">git</span><span class="o">-</span><span class="nv">data</span><span class="o">/</span><span class="nv">repositories</span> <span class="o">/</span><span class="nv">path</span><span class="o">/</span><span class="nv">to</span><span class="o">/</span><span class="nv">git</span><span class="o">-</span><span class="nv">data</span><span class="o">/</span>
+然后运行配置工具以更新并重启服务：
+
+官网文档是先更新配置再启动服务，但我在使用中发现先更新配置会提示无法连接上服务器，出现这种问题时可以先启动服务再更新配置。
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">start</span>
+最后不要忘了在网页端确认数据的地址是否正确。
+
+关于权限问题
+在使用中，我一开始创建了一个<span class="nv">gitlabhq</span>用户并创建了一个文件夹，然后修改地址，服务正常启动后提示<span class="mi">500</span>。
+后来使用<span class="nv">root</span>账户在<span class="o">/</span><span class="nv">home</span>下直接创建文件夹解决了这个问题。
+如果有遇到类似问题的，可以尝试用<span class="nv">root</span>创建目录。
+监听<span class="nv">IPv6</span>
+
+教育网拥有得天独厚的<span class="nv">IPv6</span>资源，所以为我们的<span class="nv">gitlab</span>服务添加<span class="nv">IPv6</span>支持很有必要。
+
+修改<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">gitlab</span><span class="o">/</span><span class="nv">gitlab</span>.<span class="nv">rb</span>文件中的：
+
+# <span class="nv">nginx</span>[<span class="s1">&#39;</span><span class="s">listen_addresses</span><span class="s1">&#39;</span>] <span class="o">=</span> [<span class="s1">&#39;</span><span class="s">*</span><span class="s1">&#39;</span>]
+为
+
+<span class="nv">nginx</span>[<span class="s1">&#39;</span><span class="s">listen_addresses</span><span class="s1">&#39;</span>] <span class="o">=</span> [<span class="s1">&#39;</span><span class="s">*</span><span class="s1">&#39;</span>, <span class="s1">&#39;</span><span class="s">[::]</span><span class="s1">&#39;</span>]
+然后执行
+
+<span class="nv">sudo</span> <span class="nv">gitlab</span><span class="o">-</span><span class="nv">ctl</span> <span class="nv">reconfigure</span>
+然后就可以通过<span class="nv">IPv6</span>访问了。
+</pre></div>
+
+
+<h2 id="gitlab_1">gitlab邮件</h2>
+<div class="codehilite"><pre><span></span><span class="err">配置</span><span class="n">SMTP</span><span class="err">发送邮件配置，使用</span><span class="mi">163</span><span class="err">邮箱。</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">gitlab</span><span class="o">/</span><span class="n">gitlab</span><span class="p">.</span><span class="n">rb</span>                           
+<span class="cp"># Change the external_url to the address your users will type in their browserexternal_url &#39;http:</span><span class="c1">//xxhost.com&#39;</span>
+<span class="cp">#Sending application email via SMTP</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_enable</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_address</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;smtp.163.com&quot;</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_port</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_user_name</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;xxuser@163.com&quot;</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_password</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;xxpassword&quot;</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_domain</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;163.com&quot;</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_authentication</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="o">:</span><span class="n">login</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">smtp_enable_starttls_auto</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">true</span>
+<span class="cp">##修改gitlab配置的发信人</span>
+<span class="n">gitlab_rails</span><span class="p">[</span><span class="err">&#39;</span><span class="n">gitlab_email_from</span><span class="err">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;xxuser@163.com&quot;</span>
+<span class="n">user</span><span class="p">[</span><span class="s">&quot;git_user_email&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;xxuser@163.com&quot;</span>
+<span class="err">（网易服务器</span><span class="n">smtp</span><span class="err">机器要求身份验证帐号和发信帐号必须一致，如果用户在发送邮件时，身份验证帐号和发件人帐号是不同的，因此拒绝发送。）</span>
+
+<span class="n">gitlab</span><span class="o">-</span><span class="n">ctl</span> <span class="n">reconfigure</span>  <span class="err">配置生效</span>
+<span class="n">gitlab</span><span class="o">-</span><span class="n">ctl</span> <span class="n">tail</span>  <span class="err">查看相关日志</span>
+</pre></div>
+
+
+<h2 id="git">git</h2>
+<div class="codehilite"><pre><span></span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">liaoxuefeng</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">wiki</span><span class="o">/</span><span class="mi">0013739516305929606</span><span class="n">dd18361248578c67b8067c8c017b000</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--global user.name name</span>
+<span class="n">git</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--global user.email email</span>
+
+<span class="n">获取远程仓库并合并</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">pull</span><span class="w"> </span><span class="nl">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">XX</span><span class="o">-</span><span class="n">net</span><span class="o">/</span><span class="n">XX</span><span class="o">-</span><span class="n">Net</span><span class="p">.</span><span class="n">git</span><span class="w"> </span><span class="n">master</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s1">&#39;net&#39;</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="n">master</span><span class="p">(</span><span class="n">第一次上传</span><span class="p">)</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="n">之后上传</span><span class="p">)</span><span class="w"></span>
+
+<span class="p">.</span><span class="n">gitignore文件不起作用时清理cache</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="c1">--cached .</span>
+<span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s1">&#39;update .gitignore&#39;</span><span class="w"></span>
+
+
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">curl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">expat</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">gettext</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">zlib</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">#依赖</span><span class="w"></span>
+
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">git</span><span class="w"></span>
+
+<span class="n">创建版本库</span><span class="w"></span>
+<span class="n">mkdir</span><span class="w"> </span><span class="n">learngit</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="n">learngit</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">init</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">readme</span><span class="p">.</span><span class="n">txt</span><span class="w"> </span><span class="n">#把文件添加到仓库</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="ss">&quot;wrote a readme file&quot;</span><span class="w"> </span><span class="n">#把文件提交到仓库</span><span class="w"></span>
+
+
+<span class="n">git</span><span class="w"> </span><span class="n">status</span><span class="w">        </span><span class="n">#仓库当前的状态</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="n">#就是查看difference</span><span class="err">，</span><span class="n">显示的格式正是Unix通用的diff格式</span><span class="w"></span>
+
+<span class="n">版本回退</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="nf">log</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">reset</span><span class="w"> </span><span class="c1">--hard commit开头 #版本号没必要写全，前几位就可以了</span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">reflog</span><span class="w"></span>
+<span class="mi">54</span><span class="n">edaa9</span><span class="w"> </span><span class="n">HEAD</span><span class="err">@{</span><span class="mi">2</span><span class="err">}:</span><span class="w"> </span><span class="k">commit</span><span class="err">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="mi">967</span><span class="n">d2cd</span><span class="w"> </span><span class="n">HEAD</span><span class="err">@{</span><span class="mi">3</span><span class="err">}:</span><span class="w"> </span><span class="k">commit</span><span class="err">:</span><span class="w"> </span><span class="n">m</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">reset</span><span class="w"> </span><span class="c1">--hard 54edaa9</span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">checkout其实是用版本库里的版本替换工作区的版本</span><span class="err">，</span><span class="n">无论工作区是修改还是删除</span><span class="err">，</span><span class="n">都可以</span><span class="err">“</span><span class="n">一键还原</span><span class="err">”</span><span class="w"></span>
+
+<span class="n">分支</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="n">dev</span><span class="w">   </span><span class="n">#创建dev分支</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="n">#切换dev分支</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">branch</span><span class="w">       </span><span class="n">#查看当前分支</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="w">  </span><span class="n">创建</span><span class="o">+</span><span class="n">切换分支</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">master</span><span class="w"> </span><span class="n">切换回master分支</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="k">merge</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="n">把dev分支的工作成果合并到master分支</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">dev</span><span class="w"> </span><span class="n">删除dev分支</span><span class="w"></span>
+
+
+<span class="n">搭建Git服务器</span><span class="w"></span>
+<span class="n">安装git</span><span class="w"></span>
+<span class="n">useradd</span><span class="w"> </span><span class="n">git</span><span class="w"></span>
+<span class="n">收集所有客户端的公钥</span><span class="err">，</span><span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub文件</span><span class="err">，</span><span class="n">把所有公钥导入到</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys文件里</span><span class="err">，</span><span class="n">一行一个</span><span class="err">。</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">srv</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="c1">--bare sample.git</span>
+<span class="n">git</span><span class="w"> </span><span class="n">init</span><span class="w"></span>
+<span class="n">chown</span><span class="w"> </span><span class="o">-</span><span class="n">R</span><span class="w"> </span><span class="nl">git</span><span class="p">:</span><span class="n">git</span><span class="w"> </span><span class="n">sample</span><span class="p">.</span><span class="n">git</span><span class="w"></span>
+<span class="n">修改</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">passwd</span><span class="w"> </span><span class="nl">git</span><span class="p">:</span><span class="nl">x</span><span class="p">:</span><span class="mi">1001</span><span class="err">:</span><span class="mi">1001</span><span class="err">:</span><span class="p">,,,</span><span class="err">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="nl">git</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span><span class="w"></span>
+
+<span class="n">git</span><span class="w"> </span><span class="n">clone</span><span class="w"> </span><span class="n">git</span><span class="nv">@server</span><span class="err">:</span><span class="o">/</span><span class="n">srv</span><span class="o">/</span><span class="n">sample</span><span class="p">.</span><span class="n">git</span><span class="w"> </span><span class="n">#克隆git库</span><span class="w"></span>
+<span class="n">git</span><span class="w"> </span><span class="n">pull</span><span class="w"> </span><span class="n">#更新git库</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="git-clean">git clean</h2>
+<div class="codehilite"><pre><span></span><span class="err">清除历史记录</span> <span class="err">并创建新项目</span>
+
+<span class="mi">1</span><span class="err">、</span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="p">.</span><span class="n">git</span>
+
+<span class="mi">2</span><span class="err">、</span>
+<span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="k">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;Initial commit&quot;</span>
+
+<span class="mi">3</span><span class="err">、</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="k">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">github</span><span class="o">-</span><span class="n">uri</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="c1">--force origin master</span>
+</pre></div>
+
+
+<h2 id="jenkins">jenkins</h2>
+<div class="codehilite"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pkg</span><span class="o">.</span><span class="n">jenkins</span><span class="o">-</span><span class="n">ci</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span>
+
+<span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">jenkins</span><span class="o">.</span><span class="n">repo</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pkg</span><span class="o">.</span><span class="n">jenkins</span><span class="o">-</span><span class="n">ci</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">jenkins</span><span class="o">.</span><span class="n">repo</span>
+<span class="n">rpm</span> <span class="o">--</span><span class="kn">import</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="n">pkg</span><span class="o">.</span><span class="n">jenkins</span><span class="o">-</span><span class="n">ci</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">redhat</span><span class="o">/</span><span class="n">jenkins</span><span class="o">-</span><span class="n">ci</span><span class="o">.</span><span class="n">org</span><span class="o">.</span><span class="n">key</span>
+<span class="n">yum</span> <span class="n">install</span> <span class="n">java</span> <span class="n">jenkins</span>
+
+<span class="n">jenkins</span><span class="err">的邮件报警发件人要和管理邮箱一样</span>
+
+<span class="err">构建后脚本（例子）</span>
+
+<span class="c1">#!/bin/bash</span>
+
+<span class="p">[</span> <span class="err">!</span> <span class="o">-</span><span class="n">d</span> <span class="o">../</span><span class="n">package</span> <span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">mkdir</span> <span class="o">../</span><span class="n">package</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">zcf</span> <span class="o">../</span><span class="n">package</span><span class="o">/</span><span class="err">$</span><span class="n">JOB_NAME</span><span class="o">-</span><span class="err">$</span><span class="n">tag</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">.</span>
+</pre></div>
+
+
+<h2 id="svn">svn</h2>
+<div class="codehilite"><pre><span></span><span class="o">.</span> <span class="mf">1.</span>  <span class="err">安装</span>  <span class="n">SVN</span> <span class="err">（</span><span class="mi">3</span> <span class="mi">3</span>  <span class="err">台主机上都执行</span> <span class="err">）</span> <span class="err">【默认端口：</span> <span class="mi">3690</span> <span class="err">】</span>
+<span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">subversion</span>
+<span class="o">.</span> <span class="mf">2.</span>  <span class="err">创建目录并初始化</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">pv</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span>
+<span class="n">svnadmin</span> <span class="n">create</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span> <span class="c1">#初始化SVN的仓库，用于存放代码</span>
+<span class="o">.</span> <span class="mf">3.</span>  <span class="err">准备代码</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">pv</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="p">{</span><span class="n">trunk</span><span class="p">,</span><span class="n">branches</span><span class="p">,</span><span class="n">tags</span><span class="p">}</span> <span class="c1">#创建主干、分支、里程碑目录</span>
+<span class="n">echo</span> <span class="n">csn</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="n">a</span><span class="o">.</span><span class="n">html</span>
+<span class="o">.</span> <span class="mf">4.</span>  <span class="err">导入代码</span>
+<span class="n">svn</span> <span class="kn">import</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">www</span><span class="o">/</span> <span class="nb">file</span><span class="p">:</span><span class="o">///</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">www</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;project D&#39;</span>
+<span class="c1">#将/tmp/www目录的代码导入到/tmp/svn/www 里，并标识为project D</span>
+<span class="o">.</span> <span class="mf">5.</span>  <span class="err">修改启动配置文件</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">svnserve</span>
+<span class="o">.</span> <span class="mf">6.</span>  <span class="err">启动服务</span>
+<span class="n">service</span> <span class="n">svnserve</span> <span class="n">start</span>
+<span class="o">.</span> <span class="mf">7.</span>  <span class="err">开启上传权限（</span><span class="c1"># # 默认任何人都可以下载，但无上传权限 ）</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">svnserve</span><span class="o">.</span><span class="n">conf</span> <span class="err">（</span> <span class="err">配置文件必须顶到行首</span> <span class="err">）</span>
+<span class="c1">#取消以上四行的注释</span>
+<span class="o">.</span> <span class="mf">8.</span>  <span class="err">添加上传用户身份</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">passwd</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">client</span> <span class="c1">#添加用户格式：用户名 = 密码</span>
+<span class="o">.</span> <span class="mf">9.</span>  <span class="err">代码同步</span>
+<span class="c1">#客户端下载代码</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span> <span class="c1">#代码下载目录</span>
+<span class="n">svn</span> <span class="n">checkout</span> <span class="n">svn</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">38.1</span><span class="o">/</span><span class="n">www</span>
+<span class="c1">#客户端上传代码</span>
+<span class="n">echo</span> <span class="n">upload_test</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="n">b</span><span class="o">.</span><span class="n">html</span>
+<span class="n">svn</span> <span class="n">add</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">trunk</span><span class="o">/</span><span class="n">b</span><span class="o">.</span><span class="n">html</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">www</span><span class="o">/</span> <span class="c1">#代码同步到本地的根目录（工作副本）</span>
+<span class="n">svn</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="err">‘</span><span class="n">version2</span><span class="err">’</span>
+<span class="c1">#需进入同步目录中（工作副本），提交上传，并标识version2</span>
+<span class="mf">10.</span> <span class="err">版本更新</span>
+<span class="n">svn</span> <span class="n">update</span>
+<span class="err">结合</span>  <span class="n">Apache</span>
+<span class="o">.</span> <span class="mf">1.</span>  <span class="err">安装</span> <span class="n">e</span> <span class="n">Apache</span>  <span class="err">模块</span>
+<span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">mod_dav_svn</span>
+<span class="o">.</span> <span class="mf">2.</span>  <span class="err">修改配置文件（</span> <span class="err">末行添加，根据仓库所在路径编辑</span> <span class="err">）</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">httpd</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">subversion</span><span class="o">.</span><span class="n">conf</span>
+<span class="o">&lt;</span><span class="n">Location</span> <span class="o">/&gt;</span>
+<span class="n">DAV</span> <span class="n">svn</span>
+<span class="n">SVNPath</span>  <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span> <span class="c1"># # 初始化目录（仓库）</span>
+<span class="o">&lt;/</span><span class="n">Location</span><span class="o">&gt;</span>
+<span class="o">.</span> <span class="mf">3.</span>  <span class="err">启动</span> <span class="n">d</span> <span class="n">httpd</span>  <span class="err">服务</span>
+<span class="n">service</span> <span class="n">httpd</span> <span class="n">restart</span>
+<span class="o">.</span> <span class="mf">4.</span>  <span class="err">浏览器下载代码</span>
+<span class="n">N</span> <span class="n">SVN</span>  <span class="err">备份</span>
+<span class="n">svnadmin</span> <span class="n">hotcopy</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">bak</span>
+<span class="n">N</span> <span class="n">SVN</span>  <span class="err">的钩子联动</span>
+<span class="o">.</span> <span class="mf">1.</span>  <span class="err">复制钩子模板</span>
+<span class="n">cp</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">commit</span><span class="o">.</span><span class="n">tmpl</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">commit</span>
+<span class="o">.</span> <span class="mf">2.</span>  <span class="err">编辑模板，</span> <span class="err">注释掉最后一行</span> <span class="err">，并加入以下命令，达到更新联动的效果</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">commit</span>
+<span class="n">ssh</span> <span class="n">root</span><span class="nd">@192.168.38.2</span> <span class="o">-</span><span class="n">C</span> <span class="err">“</span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">www</span><span class="o">/</span> <span class="o">&amp;&amp;</span> <span class="n">svn</span> <span class="n">update</span><span class="err">”</span>
+<span class="err">或</span>
+<span class="n">echo</span> <span class="err">“$</span><span class="n">REPOS</span><span class="o">=</span><span class="err">“$</span><span class="mi">1</span><span class="err">”</span><span class="p">;</span><span class="err">$</span><span class="n">REV</span><span class="s2">&quot;=“$2””| mutt -s &#39;update code&#39;</span>
+<span class="n">abc</span><span class="nd">@163.com</span><span class="p">;</span><span class="n">ssh</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">38.2</span> <span class="err">“</span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">www</span><span class="o">/</span> <span class="o">&amp;&amp;</span> <span class="n">svn</span> <span class="n">update</span><span class="err">”</span>
+<span class="o">.</span> <span class="mf">3.</span>  <span class="err">为钩子模板添加可执行权限</span>
+<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">hooks</span><span class="o">/</span><span class="n">post</span><span class="o">-</span><span class="n">commit</span>
+<span class="c1"># # 查看 x selinux  状态</span>
+<span class="n">sestatus</span>
+</pre></div>
+
+
+<h2 id="svn-http">svn http访问</h2>
+<div class="codehilite"><pre><span></span>https://docs.bitnami.com/virtual-machine/components/subversion/
+
+yum install mod_dav_svn
+# svnadmin create stuff  
+# chown -R apache.apache stuff/
+
+修改/etc/httpd/conf.d/subversion.conf
+<span class="nt">&lt;Location</span> <span class="err">/repos</span><span class="nt">&gt;</span>  
+   DAV svn  
+   SVNParentPath /var/www/svn  
+      AuthType Basic # 使用基本认证方式，即用户名、密码认证  
+      AuthName &quot;Authorization Realm&quot; # 在认证对话框中出现的提示信息  
+      AuthUserFile /etc/svn/svnusers.conf # 指定存放用户名信息的文件路径  
+      Require valid-user # 限定只有用户输入正确的用户名和密码后才能访问该标签所指向的路径  
+<span class="nt">&lt;/Location&gt;</span> 
+
+# mkdir -p /etc/svn/  
+# htpasswd -c /etc/svn/svnusers.conf admin 
+
+/etc/init.d/httpd restart  
+</pre></div>
+
+
+<h2 id="svn_1">svn备份</h2>
+<div class="codehilite"><pre><span></span><span class="err">直接复制</span><span class="n">svn</span><span class="err">目录</span>
+<span class="n">svnadmin</span> <span class="n">recover</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">repos</span>  <span class="err">将版本库数据库恢复到稳定状态</span>
+
+<span class="o">===================</span>
+<span class="n">svnlook</span> <span class="n">youngest</span> <span class="n">sinacuishou</span><span class="o">/</span>    <span class="err">查看到目前为止最新的版本号</span>
+
+<span class="n">svnadmin</span> <span class="n">dump</span> <span class="n">sinacuishou</span><span class="o">/</span> <span class="o">&gt;</span> <span class="n">sinacuishou_svn</span><span class="p">.</span><span class="n">dumpfile</span> <span class="err">导出</span>
+
+<span class="n">svnadmin</span> <span class="k">load</span> <span class="n">sinacuishou</span><span class="o">/</span> <span class="o">&lt;</span> <span class="n">sinacuishou_svn</span><span class="p">.</span><span class="n">dumpfile</span>  <span class="err">倒入</span>
+
+<span class="n">svnadmin</span> <span class="n">dump</span> <span class="n">myrepos</span> <span class="err">–</span><span class="n">r</span> <span class="mi">23</span> <span class="o">&gt;</span><span class="n">rev</span><span class="o">-</span><span class="mi">23</span><span class="p">.</span><span class="n">dumpfile</span>           <span class="o">//</span><span class="err">将</span><span class="n">version23</span><span class="err">导出</span>
+<span class="n">svnadmin</span> <span class="n">dump</span> <span class="n">myrepos</span> <span class="err">–</span><span class="n">r</span> <span class="mi">100</span><span class="p">:</span><span class="mi">200</span> <span class="o">&gt;</span><span class="n">rev</span><span class="o">-</span><span class="mi">100</span><span class="o">-</span><span class="mi">200</span><span class="p">.</span><span class="n">dumpfile</span>  <span class="o">//</span><span class="err">将</span><span class="n">version100</span><span class="o">~</span><span class="mi">200</span><span class="err">导出</span>
+<span class="err">对比较大的库可以分解成几个文件导出，便于备份</span>
+<span class="o">-</span><span class="n">r</span> <span class="err">指定版本</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../tcp-issue/" title="tcp-issue" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                tcp-issue
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../vpn/" title="vpn" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                vpn
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

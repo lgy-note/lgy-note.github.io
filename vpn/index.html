@@ -1,0 +1,1232 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>vpn - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#openvpn" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                vpn
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link md-tabs__link--active">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        vpn
+      </label>
+    
+    <a href="./" title="vpn" class="md-nav__link md-nav__link--active">
+      vpn
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openvpn" class="md-nav__link">
+    openvpn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pptpd" class="md-nav__link">
+    pptpd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadowsocks" class="md-nav__link">
+    shadowsocks
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openvpn" class="md-nav__link">
+    openvpn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pptpd" class="md-nav__link">
+    pptpd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shadowsocks" class="md-nav__link">
+    shadowsocks
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>vpn</h1>
+                
+                <h2 id="openvpn">openvpn</h2>
+<div class="codehilite"><pre><span></span><span class="n">客户端</span><span class="w">   </span><span class="mf">192.168.1.0</span><span class="o">/</span><span class="mi">24</span><span class="w"> </span>
+<span class="n">vpn服务端分配</span><span class="w"> </span><span class="mf">10.8.0.0</span><span class="o">/</span><span class="mi">24</span><span class="w">   </span><span class="n">服务端内网</span><span class="w">  </span><span class="mf">192.168.9.0</span><span class="o">/</span><span class="mi">24</span><span class="w">    </span><span class="n">一定不能和客户端内网一样</span><span class="w"></span>
+
+<span class="n">客户端要连服务端内网其他服务器需要加路由</span><span class="w"></span>
+<span class="n">route</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="o">-</span><span class="n">net</span><span class="w"> </span><span class="mf">10.8.0.0</span><span class="w"> </span><span class="n">netmask</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"> </span><span class="n">gw</span><span class="w"> </span><span class="n">vpn服务器的192</span><span class="mf">.168.9.0</span><span class="o">/</span><span class="mi">24</span><span class="n">段的IP</span><span class="w"></span>
+
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openvpn</span><span class="w"> </span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="w"> </span><span class="o">-</span><span class="n">y</span><span class="w"></span>
+
+<span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">easy</span><span class="o">-</span><span class="n">rsa</span><span class="o">/</span><span class="mi">3</span><span class="w"></span>
+<span class="n">vim</span><span class="w"> </span><span class="n">vars</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_COUNTRY</span><span class="o">=</span><span class="ss">&quot;CN&quot;</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_PROVINCE</span><span class="o">=</span><span class="ss">&quot;SH&quot;</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_CITY</span><span class="o">=</span><span class="ss">&quot;ShangHai&quot;</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_ORG</span><span class="o">=</span><span class="ss">&quot;Company&quot;</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_EMAIL</span><span class="o">=</span><span class="ss">&quot;liangguangyu@dachuizichan.com&quot;</span><span class="w"></span>
+<span class="n">export</span><span class="w"> </span><span class="n">KEY_OU</span><span class="o">=</span><span class="ss">&quot;MyOrganization&quot;</span><span class="w"></span>
+
+<span class="n">source</span><span class="w"> </span><span class="n">vars</span><span class="w"></span>
+
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">init</span><span class="o">-</span><span class="n">pki</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">初始化证书目录pki</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">ca</span><span class="w"> </span><span class="n">nopass</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">创建根证书</span><span class="err">，</span><span class="n">提示输入Common</span><span class="w"> </span><span class="n">Name</span><span class="err">，</span><span class="n">名称随意</span><span class="err">，</span><span class="n">但是不能和服务端证书或客户端证书名称相同</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">pki</span><span class="o">/</span><span class="n">ca</span><span class="p">.</span><span class="n">crt</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">gen</span><span class="o">-</span><span class="n">dh</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">生成Diffle</span><span class="w"> </span><span class="n">Human参数</span><span class="err">，</span><span class="n">它能保证密钥在网络中安全传输</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">pki</span><span class="o">/</span><span class="n">dh</span><span class="p">.</span><span class="n">pem</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="w"></span>
+
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="k">full</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="n">nopass</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">server是服务端证书名称</span><span class="err">，</span><span class="n">可以用其它名称</span><span class="w"></span>
+
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="k">full</span><span class="w"> </span><span class="n">npt02</span><span class="w"> </span><span class="n">nopass</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">client是客户端名称</span><span class="w"> </span><span class="n">每个客户端生成一个</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="k">full</span><span class="w"> </span><span class="n">nix02</span><span class="w"> </span><span class="n">nopass</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">easyrsa</span><span class="w"> </span><span class="n">build</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="k">full</span><span class="w"> </span><span class="n">nix22</span><span class="w"> </span><span class="n">nopass</span><span class="w">  </span><span class="n">名字和</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ccd</span><span class="w"> </span><span class="n">里面文件对应</span><span class="w"></span>
+
+<span class="n">cd</span><span class="w"> </span><span class="n">pki</span><span class="o">/</span><span class="n">private</span><span class="o">/</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="w"> </span><span class="n">已经有的可以不覆盖</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="n">pki</span><span class="o">/</span><span class="n">issued</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cp</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="w"> </span>
+<span class="n">cp</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">-</span><span class="mf">2.4.5</span><span class="o">/</span><span class="n">sample</span><span class="o">/</span><span class="n">sample</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">files</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="n">conf</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="n">conf</span><span class="w"></span>
+<span class="k">local</span><span class="w"> </span><span class="n">ip</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">填服务器真实IP</span><span class="w"></span>
+<span class="n">port</span><span class="w"> </span><span class="mi">1194</span><span class="w"></span>
+<span class="n">proto</span><span class="w"> </span><span class="n">tcp</span><span class="w"></span>
+<span class="n">dev</span><span class="w"> </span><span class="n">tun</span><span class="w"></span>
+<span class="n">ca</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ca</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="n">cert</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="k">key</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">server</span><span class="p">.</span><span class="k">key</span><span class="w"></span>
+<span class="n">dh</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">dh</span><span class="p">.</span><span class="n">pem</span><span class="w"></span>
+<span class="n">server</span><span class="w"> </span><span class="mf">10.8.0.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">给客户端分配的IP段</span><span class="w"></span>
+
+<span class="n">client</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">dir</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ccd</span><span class="w"></span>
+<span class="n">route</span><span class="w"> </span><span class="mf">192.168.69.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+<span class="n">route</span><span class="w"> </span><span class="mf">192.168.73.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+<span class="n">route</span><span class="w"> </span><span class="mf">192.168.81.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+<span class="n">push</span><span class="w"> </span><span class="ss">&quot;route 192.168.69.0 255.255.255.0&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">重定向客户端网关</span><span class="w"></span>
+<span class="n">push</span><span class="w"> </span><span class="ss">&quot;route 192.168.73.0 255.255.255.0&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">重定向客户端网关</span><span class="w"></span>
+<span class="n">push</span><span class="w"> </span><span class="ss">&quot;route 192.168.81.0 255.255.255.0&quot;</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">重定向客户端网关</span><span class="w"></span>
+<span class="n">#duplicate</span><span class="o">-</span><span class="n">cn</span><span class="w"> </span><span class="n">允许客户使用一样的client</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+
+<span class="n">client</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">client</span><span class="w"></span>
+<span class="n">keepalive</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="mi">120</span><span class="w"></span>
+<span class="n">comp</span><span class="o">-</span><span class="n">lzo</span><span class="w"></span>
+<span class="nf">max</span><span class="o">-</span><span class="n">clients</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="k">user</span><span class="w"> </span><span class="n">nobody</span><span class="w"></span>
+<span class="k">group</span><span class="w"> </span><span class="n">nobody</span><span class="w"></span>
+<span class="n">persist</span><span class="o">-</span><span class="k">key</span><span class="w"></span>
+<span class="n">persist</span><span class="o">-</span><span class="n">tun</span><span class="w"></span>
+<span class="n">status</span><span class="w"> </span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="n">openvpn</span><span class="o">-</span><span class="n">status</span><span class="p">.</span><span class="nf">log</span><span class="w"></span>
+<span class="nf">log</span><span class="w"> </span><span class="o">/</span><span class="nf">var</span><span class="o">/</span><span class="nf">log</span><span class="o">/</span><span class="n">openvpn</span><span class="p">.</span><span class="nf">log</span><span class="w"></span>
+<span class="n">verb</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">日志等级</span><span class="w"></span>
+
+<span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ccd</span><span class="o">/</span><span class="n">npt02</span><span class="w">   </span><span class="n">#客户端网络信息</span><span class="w"></span>
+<span class="n">iroute</span><span class="w"> </span><span class="mf">192.168.69.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ccd</span><span class="o">/</span><span class="n">nix02</span><span class="w"></span>
+<span class="n">iroute</span><span class="w"> </span><span class="mf">192.168.73.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openvpn</span><span class="o">/</span><span class="n">ccd</span><span class="o">/</span><span class="n">npt22</span><span class="w"></span>
+<span class="n">iroute</span><span class="w"> </span><span class="mf">192.168.81.0</span><span class="w"> </span><span class="mf">255.255.255.0</span><span class="w"></span>
+
+
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">ip_forward</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysctl</span><span class="p">.</span><span class="n">conf</span><span class="w">   </span><span class="n">sysctl</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w">   </span><span class="n">要内网互通每个都需要配置ip转发</span><span class="w"></span>
+<span class="n">iptables</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">nat</span><span class="w"> </span><span class="o">-</span><span class="n">A</span><span class="w"> </span><span class="n">POSTROUTING</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="mf">10.8.0.0</span><span class="o">/</span><span class="mi">24</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">eth0</span><span class="w"> </span><span class="o">-</span><span class="n">j</span><span class="w"> </span><span class="n">MASQUERADE</span><span class="w">  </span><span class="n">tun0的数据转发到eth0</span><span class="err">（</span><span class="mf">192.168.9.0</span><span class="o">/</span><span class="mi">24</span><span class="err">）</span><span class="w"></span>
+<span class="n">service</span><span class="w"> </span><span class="n">iptables</span><span class="w"> </span><span class="k">save</span><span class="w"></span>
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">openvpn</span><span class="w"> </span><span class="k">start</span><span class="w"></span>
+
+<span class="n">客户端</span><span class="w"></span>
+<span class="n">从服务器拷贝ca</span><span class="p">.</span><span class="n">crt</span><span class="w"> </span><span class="n">nix02</span><span class="p">.</span><span class="n">crt</span><span class="w">  </span><span class="n">nix02</span><span class="p">.</span><span class="k">key</span><span class="w">  </span><span class="n">到客户端</span><span class="p">.</span><span class="n">每个客户端的</span><span class="w"> </span><span class="n">nix02</span><span class="p">.</span><span class="n">crt</span><span class="w">  </span><span class="n">nix02</span><span class="p">.</span><span class="n">key不通</span><span class="w"></span>
+<span class="n">dacui</span><span class="p">.</span><span class="n">ovpn</span><span class="w"> </span><span class="n">内容</span><span class="err">：</span><span class="w"> </span>
+<span class="n">client</span><span class="w"></span>
+<span class="n">proto</span><span class="w"> </span><span class="n">tcp</span><span class="w"></span>
+<span class="n">dev</span><span class="w"> </span><span class="n">tun</span><span class="w"></span>
+<span class="n">remote</span><span class="w"> </span><span class="n">服务器ip</span><span class="w"> </span><span class="mi">11947</span><span class="w"></span>
+<span class="n">persist</span><span class="o">-</span><span class="k">key</span><span class="w"></span>
+<span class="n">persist</span><span class="o">-</span><span class="n">tun</span><span class="w"></span>
+<span class="n">comp</span><span class="o">-</span><span class="n">lzo</span><span class="w"></span>
+<span class="n">ca</span><span class="w"> </span><span class="n">ca</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="n">cert</span><span class="w"> </span><span class="n">nix02</span><span class="p">.</span><span class="n">crt</span><span class="w"></span>
+<span class="k">key</span><span class="w"> </span><span class="n">nix02</span><span class="p">.</span><span class="k">key</span><span class="w"></span>
+<span class="n">verb</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+
+<span class="n">windows客户端</span><span class="w"> </span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Program</span><span class="w"> </span><span class="n">Files</span><span class="err">\</span><span class="n">OpenVPN</span><span class="err">\</span><span class="n">config</span><span class="err">\</span><span class="n">目录下</span><span class="w"></span>
+
+<span class="n">启动客户端</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="pptpd">pptpd</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">ppp</span> <span class="n">pptpd</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">pptpd</span><span class="p">.</span><span class="n">conf</span>
+<span class="n">localip</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span>
+<span class="n">remoteip</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">100</span><span class="o">-</span><span class="mi">200</span>
+<span class="err">上面的</span><span class="n">IP</span><span class="err">地址是可以随便填的，</span><span class="n">ABC</span><span class="err">三类的内网地址都可以，主要兼顾其他地方的</span><span class="n">IP</span><span class="err">配置，不要出现</span><span class="n">IP</span><span class="err">冲突就可以了，后面的</span><span class="n">remoteip</span><span class="err">，</span>
+<span class="err">默认从第一个</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">100</span><span class="err">开始分配给客户，</span><span class="n">localip</span><span class="err">表示分配给服务器的内部网关地址。</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ppp</span><span class="o">/</span><span class="n">pptpd</span><span class="o">-</span><span class="k">options</span>
+<span class="n">ms</span><span class="o">-</span><span class="n">dns</span> <span class="mi">202</span><span class="p">.</span><span class="mi">96</span><span class="p">.</span><span class="mi">128</span><span class="p">.</span><span class="mi">86</span>
+<span class="n">ms</span><span class="o">-</span><span class="n">dns</span> <span class="mi">202</span><span class="p">.</span><span class="mi">96</span><span class="p">.</span><span class="mi">128</span><span class="p">.</span><span class="mi">166</span>
+<span class="err">这里配置成客户端所在地的</span><span class="n">DNS</span><span class="err">就好了</span>
+
+<span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ppp</span><span class="o">/</span><span class="n">chap</span><span class="o">-</span><span class="n">secrets</span>
+<span class="err">依次为：账号，协议，密码，</span><span class="n">ip</span><span class="err">地址</span>
+<span class="n">chap</span><span class="o">-</span><span class="n">secret</span>
+
+<span class="n">service</span> <span class="n">pptpd</span> <span class="k">start</span>
+<span class="n">chkconfig</span> <span class="n">pptpd</span> <span class="k">on</span>
+<span class="err">日志</span> <span class="err">在</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">messages</span>
+
+
+<span class="n">net</span><span class="p">.</span><span class="n">ipv4</span><span class="p">.</span><span class="n">ip_forward</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sysctl</span> <span class="o">-</span><span class="n">p</span>
+
+<span class="n">pptp</span><span class="err">需要用到的端口</span>
+<span class="n">pptp</span><span class="err">使用到的端口只有一个，那就是</span><span class="mi">1723</span><span class="err">，网上有很多误人子弟的文章还说要开</span><span class="mi">47</span><span class="err">端口，真是坑爹，因为</span><span class="n">GRE</span><span class="err">协议号是</span><span class="mi">47</span><span class="err">，并不代表需要开</span><span class="mi">47</span><span class="err">端口，</span>
+<span class="err">因此如果是要映射端口的话，</span><span class="mi">1723</span><span class="err">就完全够了，不要信网上的某些教程</span><span class="p">,</span><span class="err">如果使用了</span><span class="n">iptable</span><span class="err">来作为防火墙，需要加入规则</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="c1">--dport 1723 -j ACCEPT</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">INPUT</span> <span class="o">-</span><span class="n">p</span> <span class="mi">47</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>
+<span class="err">如果是在内网中，需要网关转发，那么网关需要如下配置：</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">PREROUTING</span> <span class="o">-</span><span class="n">i</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="c1">--dport 1723 -j DNAT --to SERVER_IP</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">PREROUTING</span> <span class="o">-</span><span class="n">i</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">p</span> <span class="mi">47</span> <span class="o">-</span><span class="n">j</span> <span class="n">DNAT</span> <span class="c1">--to SERVER_IP</span>
+
+<span class="err">配置防火墙转发</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">POSTROUTING</span> <span class="o">-</span><span class="n">o</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">j</span> <span class="n">MASQUERADE</span>
+<span class="err">或</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">t</span> <span class="n">nat</span> <span class="o">-</span><span class="n">A</span> <span class="n">POSTROUTING</span> <span class="o">-</span><span class="n">s</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-</span><span class="n">o</span> <span class="n">eth0</span> <span class="o">-</span><span class="n">j</span> <span class="n">SNAT</span> <span class="c1">--to 115.115.115.115</span>
+<span class="err">其中第一种比较简单，自动伪装</span><span class="n">ip</span><span class="err">，第二种的</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span><span class="err">指的是</span><span class="n">VPN</span><span class="err">虚拟内网，而</span><span class="mi">115</span><span class="p">.</span><span class="mi">115</span><span class="p">.</span><span class="mi">115</span><span class="p">.</span><span class="mi">115</span><span class="err">代表外网地址，进行</span><span class="n">NAT</span><span class="err">。如果</span><span class="n">VPN</span><span class="err">服务器是</span>
+<span class="err">用来代理上网的，仅有上面的配置会出现访问网站缓慢的情况，需要手动修改一下转发包的</span><span class="n">mss</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">FORWARD</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="c1">--syn -s 10.0.0.0/24 -j TCPMSS --set-mss 1356</span>
+
+<span class="err">这样就不会出现打不开网页的问题了，最后可以保存一下防火墙。</span>
+
+<span class="err">访问限制</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">FORWARD</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">-</span><span class="n">s</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-</span><span class="n">d</span> <span class="mi">180</span><span class="p">.</span><span class="mi">97</span><span class="p">.</span><span class="mi">163</span><span class="p">.</span><span class="mi">157</span> <span class="o">-</span><span class="n">j</span> <span class="n">ACCEPT</span>  <span class="err">只允许访问</span><span class="mi">180</span><span class="p">.</span><span class="mi">97</span><span class="p">.</span><span class="mi">163</span><span class="p">.</span><span class="mi">157</span>
+<span class="n">iptables</span> <span class="o">-</span><span class="n">A</span> <span class="k">FORWARD</span> <span class="o">-</span><span class="n">p</span> <span class="n">tcp</span> <span class="o">-</span><span class="n">s</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">24</span> <span class="o">-</span><span class="n">j</span> <span class="k">DROP</span>
+</pre></div>
+
+
+<h2 id="shadowsocks">shadowsocks</h2>
+<p>https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/</p>
+<p>centos6</p>
+<div class="codehilite"><pre><span></span><span class="k">[librehat-shadowsocks]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">Copr repo for shadowsocks owned by librehat</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://copr-be.cloud.fedoraproject.org/results/librehat/shadowsocks/epel-6-$basearch/</span>
+<span class="na">type</span><span class="o">=</span><span class="s">rpm-md</span>
+<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">True</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">https://copr-be.cloud.fedoraproject.org/results/librehat/shadowsocks/pubkey.gpg</span>
+<span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">enabled_metadata</span><span class="o">=</span><span class="s">1</span>
+</pre></div>
+
+
+<p>centos7</p>
+<div class="codehilite"><pre><span></span><span class="k">[librehat-shadowsocks]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">Copr repo for shadowsocks owned by librehat</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://copr-be.cloud.fedoraproject.org/results/librehat/shadowsocks/epel-7-$basearch/</span>
+<span class="na">type</span><span class="o">=</span><span class="s">rpm-md</span>
+<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">True</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">https://copr-be.cloud.fedoraproject.org/results/librehat/shadowsocks/pubkey.gpg</span>
+<span class="na">repo_gpgcheck</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">enabled_metadata</span><span class="o">=</span><span class="s">1</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../git-svn/" title="git-svn" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                git-svn
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../shell/" title="shell" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                shell
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

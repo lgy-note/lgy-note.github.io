@@ -1,0 +1,1227 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>bind - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#bind" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                bind
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        bind
+      </label>
+    
+    <a href="./" title="bind" class="md-nav__link md-nav__link--active">
+      bind
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind-edns" class="md-nav__link">
+    bind edns
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind-edns" class="md-nav__link">
+    bind edns
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>bind</h1>
+                
+                <h2 id="bind">bind</h2>
+<div class="codehilite"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">bind</span> <span class="n">bind</span><span class="o">-</span><span class="n">utils</span> <span class="o">-</span><span class="n">y</span>
+
+<span class="err">修改主配置</span>
+
+<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">named</span><span class="p">.</span><span class="n">conf</span>
+
+<span class="k">listen</span><span class="o">-</span><span class="k">on</span> <span class="n">port</span> <span class="mi">53</span> <span class="err">{</span><span class="k">any</span><span class="p">;</span><span class="err">}</span><span class="p">;</span>
+
+<span class="o">//</span><span class="err">将监听的地址改为</span><span class="k">any</span><span class="p">,</span><span class="err">监听本机的所有地址。</span>
+
+<span class="k">listen</span><span class="o">-</span><span class="k">on</span><span class="o">-</span><span class="n">v6</span> <span class="n">port</span> <span class="mi">53</span> <span class="err">{</span><span class="k">any</span><span class="p">;</span><span class="err">}</span><span class="p">;</span>
+
+<span class="n">allow</span><span class="o">-</span><span class="n">query</span>     <span class="err">{</span> <span class="k">any</span><span class="p">;</span> <span class="err">}</span><span class="p">;</span>
+
+<span class="o">//</span><span class="err">改为</span><span class="k">any</span><span class="p">,</span><span class="err">允许任意主机查询</span>
+
+<span class="k">zone</span> <span class="ss">&quot;xx.com&quot;</span> <span class="k">IN</span> <span class="err">{</span>   
+
+    <span class="k">type</span> <span class="n">master</span><span class="p">;</span>
+
+    <span class="n">file</span> <span class="ss">&quot;xx.com.zone&quot;</span><span class="p">;</span>
+
+    <span class="n">allow</span><span class="o">-</span><span class="k">update</span> <span class="err">{</span> <span class="k">none</span><span class="p">;</span> <span class="err">}</span><span class="p">;</span>
+
+<span class="err">}</span><span class="p">;</span>
+
+<span class="o">//</span><span class="err">添加正向解析区域</span> <span class="n">xx</span><span class="p">.</span><span class="n">com</span>
+
+<span class="o">//</span><span class="err">使用</span><span class="n">file</span> <span class="err">参数指出该区域的数据库文件（默认</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span><span class="err">目录下，根据主配置文件的参数决定）</span>
+
+<span class="err">修改</span><span class="k">zone</span><span class="err">文件</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span>
+
+<span class="n">cp</span> <span class="n">named</span><span class="p">.</span><span class="n">localhost</span> <span class="n">xx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="k">zone</span>
+
+<span class="n">chmod</span> <span class="mi">644</span> <span class="n">xx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="k">zone</span> <span class="o">//</span><span class="err">使</span><span class="n">named</span><span class="err">用户拥有读取的权限</span>
+
+<span class="n">vi</span> <span class="n">xx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="k">zone</span>  <span class="o">//</span><span class="err">编辑数据库文件，设置解析条目</span>
+
+
+    <span class="n">NS</span>      <span class="o">@</span>
+
+    <span class="n">A</span>       <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">128</span><span class="p">.</span><span class="mi">133</span>
+
+    <span class="n">AAAA</span>    <span class="p">::</span><span class="mi">1</span>
+
+
+<span class="n">www</span>     <span class="n">A</span>       <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">128</span><span class="p">.</span><span class="mi">133</span>
+
+<span class="o">*</span><span class="p">.</span><span class="n">ic</span>        <span class="n">A</span>       <span class="mi">10</span><span class="p">.</span><span class="mi">215</span><span class="p">.</span><span class="mi">105</span><span class="p">.</span><span class="mi">7</span>
+
+<span class="n">statics</span><span class="p">.</span><span class="n">ic</span>    <span class="n">A</span>       <span class="mi">10</span><span class="p">.</span><span class="mi">215</span><span class="p">.</span><span class="mi">105</span><span class="p">.</span><span class="mi">7</span>
+
+<span class="o">//</span><span class="err">格式如图所示。</span>   <span class="n">A</span> <span class="err">对应</span> <span class="n">IPv4</span><span class="err">的解析条目</span>   <span class="n">AAAA</span><span class="err">对应</span><span class="n">IPv6</span><span class="err">的解析条目。</span>
+
+<span class="o">//</span><span class="err">注意不可缺少</span>
+
+
+    <span class="n">A</span>       <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">128</span><span class="p">.</span><span class="mi">133</span>
+
+    <span class="n">AAAA</span>    <span class="p">::</span><span class="mi">1</span>
+
+
+<span class="err">不能缺少没有主机名的这两项，否则会造成服务无法启动。逆向解析数据库也是如此。</span>
+
+<span class="err">创建逆向解析条目和数据库</span>
+
+<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">named</span><span class="p">.</span><span class="n">rfc1912</span><span class="p">.</span><span class="n">zones</span>  <span class="o">//</span><span class="err">编辑</span><span class="n">DNS</span><span class="err">辅配置文件</span>
+
+<span class="o">//</span><span class="err">参考末尾的逆向解析条目，创建自己的逆向解析。</span>
+
+<span class="k">zone</span> <span class="ss">&quot;128.168.192.in-addr.arpa&quot;</span> <span class="k">IN</span> <span class="err">{</span>
+
+    <span class="k">type</span> <span class="n">master</span><span class="p">;</span>
+
+    <span class="n">file</span> <span class="ss">&quot;128.168.192.zone&quot;</span><span class="p">;</span>
+
+    <span class="n">allow</span><span class="o">-</span><span class="k">update</span> <span class="err">{</span> <span class="k">none</span><span class="p">;</span> <span class="err">}</span><span class="p">;</span>
+
+
+<span class="err">}</span><span class="p">;</span>
+
+<span class="o">//</span><span class="err">注意格式问题，比如</span><span class="n">IP</span><span class="err">地址点分十进制的格式，每个十进制为一个整体，倒着书写，且不写主机位。</span>
+
+<span class="o">//</span><span class="err">“</span><span class="p">.</span><span class="k">in</span><span class="o">-</span><span class="n">addr</span><span class="p">.</span><span class="n">arpa</span><span class="err">”</span> <span class="err">为逆向解析的固定格式</span>  <span class="err">不能写错。</span>
+
+<span class="o">//</span><span class="err">数据库文件可以新建，也可以使用正向的数据库，在其中添加逆向的条目。</span>
+
+<span class="o">//</span><span class="err">注意权限问题。</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span>
+
+<span class="n">cp</span> <span class="n">named</span><span class="p">.</span><span class="n">localhost</span> <span class="mi">128</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">192</span><span class="p">.</span><span class="k">zone</span>
+
+<span class="n">chmod</span> <span class="mi">644</span> <span class="mi">128</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">192</span><span class="p">.</span><span class="k">zone</span>
+
+<span class="err">编辑逆向解析条目</span>
+
+<span class="n">vi</span> <span class="mi">128</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="mi">192</span><span class="p">.</span><span class="k">zone</span>
+
+<span class="mi">133</span>     <span class="n">PTR</span> <span class="n">www</span><span class="p">.</span><span class="n">xx</span><span class="p">.</span><span class="n">com</span><span class="p">.</span>
+
+<span class="o">//</span><span class="err">此为逆向解析的条目格式</span>
+
+<span class="err">不能缺少没有主机名的这两项，否则会造成服务无法启动。逆向解析数据库也是如此。</span>
+
+<span class="err">重启服务，进行检测</span>
+
+<span class="n">service</span> <span class="n">named</span> <span class="k">restart</span>
+</pre></div>
+
+
+<h2 id="bind-edns">bind edns</h2>
+<div class="codehilite"><pre><span></span><span class="nl">https</span><span class="p">:</span><span class="c1">//blog.gnuers.org/?p=1379</span>
+
+<span class="n">yum</span> <span class="n">install</span> <span class="n">GeoIP</span> <span class="n">GeoIP</span><span class="o">-</span><span class="n">devel</span>
+<span class="p">.</span><span class="o">/</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bind9</span><span class="mf">.12.0</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">geoip</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">GeoIP</span><span class="o">/</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">threads</span>
+<span class="n">make</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">install</span>
+<span class="p">.</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">rndc</span><span class="o">-</span><span class="n">confgen</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">urandom</span> <span class="o">&gt;</span> <span class="n">etc</span><span class="o">/</span><span class="n">rndc</span><span class="p">.</span><span class="n">conf</span>
+
+<span class="n">dig</span><span class="err">测试</span> <span class="n">dig</span><span class="err">在源码编译目录下的</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">bind</span><span class="o">-</span><span class="mf">9.12.1</span><span class="o">-</span><span class="n">P2</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">dig</span><span class="o">/</span><span class="n">dig</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">dig</span><span class="o">/</span><span class="n">dig</span> <span class="mf">@127.0.0.1</span> <span class="n">a</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">com</span> <span class="o">+</span><span class="n">subnet</span><span class="o">=</span><span class="mf">172.1.1.1</span><span class="o">/</span><span class="mi">24</span>
+<span class="err">含有</span><span class="n">OPT</span> <span class="n">PSEUDOSECTION</span><span class="err">表示支持</span><span class="n">edns</span>
+
+<span class="n">acl</span> <span class="n">zone1</span> <span class="p">{</span> <span class="n">ecs</span> <span class="mf">10.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span>  <span class="mf">10.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span> <span class="p">};</span>
+<span class="n">acl</span> <span class="n">zone2</span> <span class="p">{</span> <span class="n">ecs</span> <span class="mf">172.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span><span class="mf">172.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span> <span class="p">};</span>
+<span class="n">acl</span> <span class="n">ecs</span><span class="o">-</span><span class="n">zone1</span> <span class="p">{</span> <span class="n">ecs</span> <span class="mf">10.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span>  <span class="p">};</span>
+<span class="n">acl</span> <span class="n">ecs</span><span class="o">-</span><span class="n">zone2</span> <span class="p">{</span> <span class="n">ecs</span> <span class="mf">172.0.0.0</span><span class="o">/</span><span class="mi">8</span><span class="p">;};</span>
+<span class="n">view</span>  <span class="s">&quot;ecs-zone1&quot;</span> <span class="p">{</span> <span class="n">match</span><span class="o">-</span><span class="n">clients</span>  <span class="p">{</span><span class="n">ecs</span><span class="o">-</span><span class="n">zone1</span><span class="p">;};</span> <span class="n">zone</span> <span class="s">&quot;test.org&quot;</span> <span class="p">{</span> <span class="n">type</span> <span class="n">master</span><span class="p">;</span> <span class="n">file</span> <span class="s">&quot;ecszone/test.org&quot;</span> <span class="p">;};</span> <span class="p">};</span>
+<span class="n">view</span>  <span class="s">&quot;ecs-zone2&quot;</span> <span class="p">{</span> <span class="n">match</span><span class="o">-</span><span class="n">clients</span>  <span class="p">{</span><span class="n">ecs</span><span class="o">-</span><span class="n">zone2</span><span class="p">;};</span> <span class="n">zone</span> <span class="s">&quot;test.org&quot;</span> <span class="p">{</span> <span class="n">type</span> <span class="n">master</span><span class="p">;</span> <span class="n">file</span> <span class="s">&quot;ecszone2/test.org&quot;</span> <span class="p">;};</span> <span class="p">};</span>
+<span class="n">view</span>  <span class="s">&quot;zone1&quot;</span> <span class="p">{</span> <span class="n">match</span><span class="o">-</span><span class="n">clients</span>  <span class="p">{</span><span class="n">zone1</span><span class="p">;};</span> <span class="n">zone</span> <span class="s">&quot;test.org&quot;</span> <span class="p">{</span> <span class="n">type</span> <span class="n">master</span><span class="p">;</span> <span class="n">file</span> <span class="s">&quot;zone/test.org&quot;</span> <span class="p">;};</span> <span class="p">};</span>
+<span class="n">view</span>  <span class="s">&quot;zone2&quot;</span> <span class="p">{</span> <span class="n">match</span><span class="o">-</span><span class="n">clients</span>  <span class="p">{</span><span class="n">zone2</span><span class="p">;};</span> <span class="n">zone</span> <span class="s">&quot;test.org&quot;</span> <span class="p">{</span> <span class="n">type</span> <span class="n">master</span><span class="p">;</span> <span class="n">file</span> <span class="s">&quot;zone2/test.org&quot;</span> <span class="p">;};</span> <span class="p">};</span>
+
+<span class="n">dig</span> <span class="mf">@10.10.0.15</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>
+<span class="n">dig</span> <span class="mf">@172.18.0.6</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>
+<span class="n">dig</span> <span class="mf">@10.10.0.15</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>  <span class="o">+</span><span class="n">subnet</span><span class="o">=</span><span class="mf">172.1.1.1</span><span class="o">/</span><span class="mi">24</span>
+<span class="n">dig</span> <span class="mf">@10.10.0.15</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>  <span class="o">+</span><span class="n">subnet</span><span class="o">=</span><span class="mf">10.1.1.1</span><span class="o">/</span><span class="mi">24</span>
+<span class="n">dig</span> <span class="mf">@172.18.0.6</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>  <span class="o">+</span><span class="n">subnet</span><span class="o">=</span><span class="mf">10.1.1.1</span><span class="o">/</span><span class="mi">24</span>
+<span class="n">dig</span> <span class="mf">@172.18.0.6</span> <span class="n">test100</span><span class="p">.</span><span class="n">test</span><span class="p">.</span><span class="n">org</span>  <span class="o">+</span><span class="n">subnet</span><span class="o">=</span><span class="mf">172.1.1.1</span><span class="o">/</span><span class="mi">24</span>
+
+<span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">named</span>
+<span class="cp">#!/bin/bash </span>
+<span class="cp"># named a network name service. </span>
+<span class="cp"># chkconfig: 345 35 75 </span>
+<span class="cp"># description: a name server</span>
+
+<span class="n">PIDFILE</span><span class="o">=</span><span class="err">&#39;</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">named</span><span class="o">/</span><span class="n">named</span><span class="p">.</span><span class="n">pid</span><span class="err">&#39;</span>
+<span class="n">BASEDIR</span><span class="o">=</span><span class="err">&#39;</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bind9</span><span class="mf">.12.0</span><span class="err">&#39;</span>
+<span class="k">if</span> <span class="p">[</span> <span class="err">`</span><span class="kt">id</span> <span class="o">-</span><span class="n">u</span><span class="err">`</span> <span class="o">-</span><span class="n">ne</span> <span class="mi">0</span> <span class="p">];</span> <span class="n">then</span>
+    <span class="n">echo</span> <span class="s">&quot;ERROR:For bind to port 53,must run as root.&quot;</span> 
+    <span class="n">exit</span> <span class="mi">1</span>
+<span class="n">fi</span>
+<span class="k">case</span> <span class="s">&quot;$1&quot;</span> <span class="k">in</span>
+<span class="n">start</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">x</span> <span class="err">$</span><span class="n">BASEDIR</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">named</span> <span class="p">];</span> <span class="n">then</span>
+        <span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">PIDFILE</span> <span class="p">];</span> <span class="n">then</span>
+            <span class="n">echo</span> <span class="err">&#39;</span><span class="n">BIND9</span> <span class="n">already</span> <span class="n">started</span><span class="err">&#39;</span>
+        <span class="k">else</span>
+            <span class="err">$</span><span class="n">BASEDIR</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">named</span> <span class="o">-</span><span class="n">u</span> <span class="n">named</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">named</span><span class="p">.</span><span class="n">conf</span>  <span class="o">&amp;&amp;</span> <span class="n">echo</span> <span class="p">.</span> <span class="o">&amp;&amp;</span> <span class="n">echo</span> <span class="err">&#39;</span><span class="n">BIND9</span> <span class="n">server</span> <span class="n">started</span><span class="err">&#39;</span> 
+        <span class="n">fi</span>
+    <span class="n">fi</span>
+<span class="p">;;</span>
+<span class="n">stop</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">e</span> <span class="err">$</span><span class="n">PIDFILE</span> <span class="p">];</span> <span class="n">then</span>
+        <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="err">`</span><span class="n">cat</span> <span class="err">$</span><span class="n">PIDFILE</span><span class="err">`</span> <span class="o">&amp;&amp;</span> <span class="n">echo</span> <span class="p">.</span> <span class="o">&amp;&amp;</span> <span class="n">echo</span> <span class="err">&#39;</span><span class="n">BIND9</span> <span class="n">server</span> <span class="n">stopped</span><span class="err">&#39;</span> 
+    <span class="k">else</span>
+        <span class="n">echo</span> <span class="err">&#39;</span><span class="n">BIND9</span> <span class="n">already</span> <span class="n">stopped</span><span class="err">&#39;</span>
+    <span class="n">fi</span>
+    <span class="n">rm</span> <span class="err">$</span><span class="n">PIDFILE</span> <span class="o">-</span><span class="n">f</span>
+<span class="p">;;</span>
+<span class="n">restart</span><span class="p">)</span>
+    <span class="n">echo</span> <span class="p">.</span> 
+    <span class="n">echo</span> <span class="s">&quot;Restart BIND9 server&quot;</span> 
+    <span class="err">$</span><span class="mi">0</span> <span class="n">stop</span>
+    <span class="n">sleep</span> <span class="mi">3</span>
+    <span class="err">$</span><span class="mi">0</span> <span class="n">start</span>
+<span class="p">;;</span>
+<span class="n">reload</span><span class="p">)</span>
+    <span class="err">$</span><span class="n">BASEDIR</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">rndc</span> <span class="n">reload</span>
+<span class="p">;;</span>
+<span class="n">status</span><span class="p">)</span>
+    <span class="err">$</span><span class="n">BASEDIR</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">rndc</span> <span class="n">status</span>
+<span class="p">;;</span>
+<span class="o">*</span><span class="p">)</span>
+<span class="n">echo</span> <span class="s">&quot;$0 start | stop | restart |reload |status&quot;</span> 
+<span class="p">;;</span>
+<span class="n">esac</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../varnish/" title="varnish" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                varnish
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../lvs/" title="lvs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                lvs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

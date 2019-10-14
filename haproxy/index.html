@@ -1,0 +1,2281 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>haproxy - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#haproxy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                haproxy
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link md-tabs__link--active">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        haproxy
+      </label>
+    
+    <a href="./" title="haproxy" class="md-nav__link md-nav__link--active">
+      haproxy
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#haproxy" class="md-nav__link">
+    haproxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-log" class="md-nav__link">
+    check log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keepalived" class="md-nav__link">
+    keepalived
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#haproxy" class="md-nav__link">
+    haproxy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-log" class="md-nav__link">
+    check log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keepalived" class="md-nav__link">
+    keepalived
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>haproxy</h1>
+                
+                <h2 id="haproxy">haproxy</h2>
+<div class="codehilite"><pre><span></span><span class="err">一、</span><span class="n">HAProxy</span><span class="err">简介</span>
+
+
+<span class="n">HAProxy</span><span class="err">提供高可用性、负载均衡以及基于</span><span class="n">TCP</span><span class="err">和</span><span class="n">HTTP</span><span class="err">应用的代理，支持虚拟主机，它是免费、快速并且可靠的一种解决方案。</span>
+<span class="n">HAProxy</span><span class="err">特别适用于那些负载特大的</span><span class="n">web</span><span class="err">站点，这些站点通常又需要会话保持或七层处理。</span><span class="n">HAProxy</span><span class="err">运行在时下的硬件上，</span>
+<span class="err">完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中，</span> <span class="err">同时可以保护你的</span><span class="n">web</span><span class="err">服务器不被</span>
+<span class="err">暴露到网络上。</span>
+
+<span class="n">HAProxy</span><span class="err">实现了一种事件驱动、单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制</span> <span class="err">、系统调度器限制</span>
+<span class="err">以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户端</span><span class="p">(</span><span class="n">User</span><span class="o">-</span><span class="n">Space</span><span class="p">)</span> <span class="err">实现所有这些任务，</span>
+<span class="err">所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以</span> 
+<span class="err">使每个</span><span class="n">CPU</span><span class="err">时间片</span><span class="p">(</span><span class="n">Cycle</span><span class="p">)</span><span class="err">做更多的工作。</span>
+
+<span class="err">————百度百科</span>
+
+
+
+
+
+<span class="n">HAProxy</span><span class="err">是免费、极速且可靠的用于为</span><span class="n">TCP</span><span class="err">和基于</span><span class="n">HTTP</span><span class="err">应用程序提供高可用、负载均衡和代理服务的解决方案，尤其适用于高负载且需要持久连接</span>
+<span class="err">或</span><span class="mi">7</span><span class="err">层处理机制的</span><span class="n">web</span><span class="err">站点。</span>
+
+<span class="n">HAProxy</span><span class="err">目前主要有两个版本：</span>
+
+<span class="mf">1.4</span><span class="err">——提供较好的弹性：衍生于</span><span class="mf">1.2</span><span class="err">版本，并提供了额外的新特性，其中大多数是期待已久的。</span>
+    <span class="err">客户端侧的长连接</span><span class="p">(</span><span class="n">client</span><span class="o">-</span><span class="n">side</span> <span class="n">keep</span><span class="o">-</span><span class="n">alive</span><span class="p">)</span>
+    <span class="n">TCP</span><span class="err">加速</span><span class="p">(</span><span class="n">TCP</span> <span class="n">speedups</span><span class="p">)</span>
+    <span class="err">响应池</span><span class="p">(</span><span class="n">response</span> <span class="n">buffering</span><span class="p">)</span>
+    <span class="n">RDP</span><span class="err">协议</span>
+    <span class="err">基于源的粘性</span><span class="p">(</span><span class="n">source</span><span class="o">-</span><span class="n">based</span> <span class="n">stickiness</span><span class="p">)</span>
+    <span class="err">更好的统计数据接口</span><span class="p">(</span><span class="n">a</span> <span class="n">much</span> <span class="n">better</span> <span class="n">stats</span> <span class="n">interfaces</span><span class="p">)</span>
+    <span class="err">更详细的健康状态检测机制</span><span class="p">(</span><span class="n">more</span> <span class="n">verbose</span> <span class="n">health</span> <span class="n">checks</span><span class="p">)</span>
+    <span class="err">基于流量的健康评估机制</span><span class="p">(</span><span class="n">traffic</span><span class="o">-</span><span class="n">based</span> <span class="n">health</span><span class="p">)</span>
+    <span class="err">支持</span><span class="n">HTTP</span><span class="err">认证</span>
+    <span class="err">服务器管理命令行接口</span><span class="p">(</span><span class="n">server</span> <span class="n">management</span> <span class="n">from</span> <span class="n">the</span> <span class="n">CLI</span><span class="p">)</span>
+    <span class="err">基于</span><span class="n">ACL</span><span class="err">的持久性</span><span class="p">(</span><span class="n">ACL</span><span class="o">-</span><span class="n">based</span> <span class="n">persistence</span><span class="p">)</span>
+    <span class="err">日志分析器</span>
+
+<span class="mf">1.3</span><span class="err">——内容交换和超强负载：衍生于</span><span class="mf">1.2</span><span class="err">版本，并提供了额外的新特性。</span>
+    <span class="err">内容交换</span><span class="p">(</span><span class="n">content</span> <span class="n">switching</span><span class="p">)</span><span class="err">：基于任何请求标准挑选服务器池；</span>
+    <span class="n">ACL</span><span class="err">：编写内容交换规则；</span>
+    <span class="err">负载均衡算法</span><span class="p">(</span><span class="n">load</span><span class="o">-</span><span class="n">balancing</span> <span class="n">algorithms</span><span class="p">)</span><span class="err">：更多的算法支持；</span>
+    <span class="err">内容探测</span><span class="p">(</span><span class="n">content</span> <span class="n">inspection</span><span class="p">)</span><span class="err">：阻止非授权协议；</span>
+    <span class="err">透明代理</span><span class="p">(</span><span class="n">transparent</span> <span class="n">proxy</span><span class="p">)</span><span class="err">：在</span><span class="n">Linux</span><span class="err">系统上允许使用客户端</span><span class="n">IP</span><span class="err">直接连入服务器；</span>
+    <span class="err">内核</span><span class="n">TCP</span><span class="err">拼接</span><span class="p">(</span><span class="n">kernel</span> <span class="n">TCP</span> <span class="n">splicing</span><span class="p">)</span><span class="err">：无</span><span class="k">copy</span><span class="err">方式在客户端和服务端之间转发数据以实现数</span><span class="n">G</span><span class="err">级别的数据速率；</span>
+    <span class="err">分层设计</span><span class="p">(</span><span class="n">layered</span> <span class="n">design</span><span class="p">)</span><span class="err">：分别实现套接字、</span><span class="n">TCP</span><span class="err">、</span><span class="n">HTTP</span><span class="err">处理以提供更好的健壮性、更快的处理机制及便捷的演进能力；</span>
+    <span class="err">快速、公平调度器</span><span class="p">(</span><span class="n">fast</span> <span class="n">and</span> <span class="n">fair</span> <span class="n">scheduler</span><span class="p">)</span><span class="err">：为某些任务指定优先级可实现理好的</span><span class="n">QoS</span><span class="err">；</span>
+    <span class="err">会话速率限制</span><span class="p">(</span><span class="n">session</span> <span class="n">rate</span> <span class="n">limiting</span><span class="p">)</span><span class="err">：适用于托管环境；</span>
+
+
+<span class="err">支持的平台及</span><span class="n">OS</span><span class="err">：</span>
+    <span class="n">x86</span><span class="err">、</span><span class="n">x86_64</span><span class="err">、</span><span class="n">Alpha</span><span class="err">、</span><span class="n">SPARC</span><span class="err">、</span><span class="n">MIPS</span><span class="err">及</span><span class="n">PARISC</span><span class="err">平台上的</span><span class="n">Linux</span> <span class="mf">2.4</span><span class="err">；</span>
+    <span class="n">x86</span><span class="err">、</span><span class="n">x86_64</span><span class="err">、</span><span class="n">ARM</span> <span class="p">(</span><span class="n">ixp425</span><span class="p">)</span><span class="err">及</span><span class="n">PPC64</span><span class="err">平台上的</span><span class="n">Linux2</span><span class="mf">.6</span><span class="err">；</span>
+    <span class="n">UltraSPARC</span> <span class="mi">2</span><span class="err">和</span><span class="mi">3</span><span class="err">上的</span><span class="n">Sloaris</span> <span class="mi">8</span><span class="o">/</span><span class="mi">9</span><span class="err">；</span>
+    <span class="n">Opteron</span><span class="err">和</span><span class="n">UltraSPARC</span><span class="err">平台上的</span><span class="n">Solaris</span> <span class="mi">10</span><span class="err">；</span>
+    <span class="n">x86</span><span class="err">平台上的</span><span class="n">FreeBSD</span> <span class="mf">4.1</span><span class="o">-</span><span class="mi">8</span><span class="err">；</span>
+    <span class="n">i386</span><span class="p">,</span> <span class="n">amd64</span><span class="p">,</span> <span class="n">macppc</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">sparc64</span><span class="err">和</span><span class="n">VAX</span><span class="err">平台上的</span><span class="n">OpenBSD</span> <span class="mf">3.1</span><span class="o">-</span><span class="n">current</span><span class="err">；</span>
+
+<span class="err">若要获得最高性能，需要在</span><span class="n">Linux</span> <span class="mf">2.6</span><span class="err">或打了</span><span class="n">epoll</span><span class="err">补丁的</span><span class="n">Linux</span> <span class="mf">2.4</span><span class="err">上运行</span><span class="n">haproxy</span> <span class="mf">1.2.5</span><span class="err">以上的版本。</span><span class="n">haproxy</span> <span class="mf">1.1</span><span class="n">l</span><span class="err">默认使用的</span>
+<span class="n">polling</span><span class="err">系统为</span><span class="n">select</span><span class="p">()</span><span class="err">，其处理的文件数达数千个时性能便会急剧下降。</span><span class="mf">1.2</span><span class="err">和</span><span class="mf">1.3</span><span class="err">版本默认的为</span><span class="n">poll</span><span class="p">()</span><span class="err">，在有些操作系统上可会也</span>
+<span class="err">会有性能方面的问题，但在</span><span class="n">Solaris</span><span class="err">上表现相当不错。</span><span class="n">HAProxy</span> <span class="mf">1.3</span><span class="err">在</span><span class="n">Linux</span> <span class="mf">2.6</span><span class="err">及打了</span><span class="n">epoll</span><span class="err">补丁的</span><span class="n">Linux</span> <span class="mf">2.4</span><span class="err">上默认使用</span><span class="n">epoll</span><span class="err">，</span>
+<span class="err">在</span><span class="n">FreeBSD</span><span class="err">上使用</span><span class="n">kqueue</span><span class="err">，这两种机制在任何负载上都能提供恒定的性能表现。</span>
+
+<span class="err">在较新版本的</span><span class="n">Linux</span> <span class="mf">2.6</span><span class="p">(</span><span class="o">&gt;=</span><span class="mf">2.6.27.19</span><span class="p">)</span><span class="err">上，</span><span class="n">HAProxy</span><span class="err">还能够使用</span><span class="n">splice</span><span class="p">()</span><span class="err">系统调用在接口间无复制地转发任何数据，这甚至可以达到</span><span class="mi">10</span><span class="n">Gbps</span><span class="err">的性能。</span>
+
+<span class="err">基于以上事实，在</span><span class="n">x86</span><span class="err">或</span><span class="n">x86_64</span><span class="err">平台上，要获取最好性能的负载均衡器，建议按顺序考虑以下方案。</span>
+    <span class="n">Linux</span> <span class="mf">2.6.32</span><span class="err">及之后版本上运行</span><span class="n">HAProxy</span> <span class="mf">1.4</span><span class="err">；</span>
+    <span class="err">打了</span><span class="n">epoll</span><span class="err">补丁的</span><span class="n">Linux</span> <span class="mf">2.4</span><span class="err">上运行</span><span class="n">HAProxy</span> <span class="mf">1.4</span><span class="err">；</span>
+    <span class="n">FreeBSD</span><span class="err">上运行</span><span class="n">HAProxy</span> <span class="mf">1.4</span><span class="err">；</span>
+    <span class="n">Solaris</span> <span class="mi">10</span><span class="err">上运行</span><span class="n">HAProxy</span> <span class="mf">1.4</span><span class="err">；</span>
+
+
+<span class="err">性能</span>
+
+<span class="n">HAProxy</span><span class="err">借助于</span><span class="n">OS</span><span class="err">上几种常见的技术来实现性能的最大化。</span>
+    <span class="err">单进程、事件驱动模型显著降低了上下文切换的开销及内存占用。</span>
+    <span class="n">O</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="err">事件检查器</span><span class="p">(</span><span class="n">event</span> <span class="n">checker</span><span class="p">)</span><span class="err">允许其在高并发连接中对任何连接的任何事件实现即时探测。</span>
+    <span class="err">在任何可用的情况下，单缓冲</span><span class="p">(</span><span class="n">single</span> <span class="n">buffering</span><span class="p">)</span><span class="err">机制能以不复制任何数据的方式完成读写操作，这会节约大量的</span><span class="n">CPU</span><span class="err">时钟周期及内存带宽；</span>
+    <span class="err">借助于</span><span class="n">Linux</span> <span class="mf">2.6</span> <span class="p">(</span><span class="o">&gt;=</span> <span class="mf">2.6.27.19</span><span class="p">)</span><span class="err">上的</span><span class="n">splice</span><span class="p">()</span><span class="err">系统调用，</span><span class="n">HAProxy</span><span class="err">可以实现零复制转发</span><span class="p">(</span><span class="n">Zero</span><span class="o">-</span><span class="k">copy</span> <span class="n">forwarding</span><span class="p">)</span><span class="err">，</span>
+    <span class="err">在</span><span class="n">Linux</span> <span class="mf">3.5</span><span class="err">及以上的</span><span class="n">OS</span><span class="err">中还可以实现零复制启动</span><span class="p">(</span><span class="n">zero</span><span class="o">-</span><span class="n">starting</span><span class="p">)</span><span class="err">；</span>
+    <span class="n">MRU</span><span class="err">内存分配器在固定大小的内存池中可实现即时内存分配，这能够显著减少创建一个会话的时长；</span>
+    <span class="err">树型存储：侧重于使用作者多年前开发的弹性二叉树，实现了以</span><span class="n">O</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">N</span><span class="p">))</span><span class="err">的低开销来保持计时器命令、保持运行队列命令及管理轮询</span>
+    <span class="err">及最少连接队列；</span>
+    <span class="err">优化的</span><span class="n">HTTP</span><span class="err">首部分析：优化的首部分析功能避免了在</span><span class="n">HTTP</span><span class="err">首部分析过程中重读任何内存区域；</span>
+    <span class="err">精心地降低了昂贵的系统调用，大部分工作都在用户空间完成，如时间读取、缓冲聚合及文件描述符的启用和禁用等；</span>
+
+<span class="err">所有的这些细微之处的优化实现了在中等规模负载之上依然有着相当低的</span><span class="n">CPU</span><span class="err">负载，甚至于在非常高的负载场景中，</span><span class="mi">5</span><span class="o">%</span><span class="err">的用户空间占用率和</span>
+<span class="mi">95</span><span class="o">%</span><span class="err">的系统空间占用率也是非常普遍的现象，这意味着</span><span class="n">HAProxy</span><span class="err">进程消耗比系统空间消耗低</span><span class="mi">20</span><span class="err">倍以上。因此，对</span><span class="n">OS</span><span class="err">进行性能调优是非常重要的</span>
+<span class="err">。即使用户空间的占用率提高一倍，其</span><span class="n">CPU</span><span class="err">占用率也仅为</span><span class="mi">10</span><span class="o">%</span><span class="err">，这也解释了为何</span><span class="mi">7</span><span class="err">层处理对性能影响有限这一现象。由此，在高端系统上</span><span class="n">HAProxy</span>
+<span class="err">的</span><span class="mi">7</span><span class="err">层性能可轻易超过硬件负载均衡设备。</span>
+
+<span class="err">在生产环境中，在</span><span class="mi">7</span><span class="err">层处理上使用</span><span class="n">HAProxy</span><span class="err">作为昂贵的高端硬件负载均衡设备故障故障时的紧急解决方案也时长可见。硬件负载均衡设备在“报文”</span>
+<span class="err">级别处理请求，这在支持跨报文请求</span><span class="p">(</span><span class="n">request</span> <span class="n">across</span> <span class="n">multiple</span> <span class="n">packets</span><span class="p">)</span><span class="err">有着较高的难度，并且它们不缓冲任何数据，因此有着较长的响应时间。</span>
+<span class="err">对应地，软件负载均衡设备使用</span><span class="n">TCP</span><span class="err">缓冲，可建立极长的请求，且有着较大的响应时间。</span>
+
+<span class="err">可以从三个因素来评估负载均衡器的性能：</span>
+    <span class="err">会话率</span>
+    <span class="err">会话并发能力</span>
+    <span class="err">数据率</span>
+
+
+<span class="err">二、配置</span><span class="n">HAProxy</span>
+
+<span class="mf">2.1</span> <span class="err">配置文件格式</span>
+
+<span class="n">HAProxy</span><span class="err">的配置处理</span><span class="mi">3</span><span class="err">类来主要参数来源：</span>
+    <span class="err">——最优先处理的命令行参数，</span>
+    <span class="err">——“</span><span class="n">global</span><span class="err">”配置段，用于设定全局配置参数；</span>
+    <span class="err">——</span><span class="n">proxy</span><span class="err">相关配置段，如“</span><span class="n">defaults</span><span class="err">”、“</span><span class="n">listen</span><span class="err">”、“</span><span class="n">frontend</span><span class="err">”和“</span><span class="n">backend</span><span class="err">”；</span>
+
+<span class="mf">2.2</span> <span class="err">时间格式</span>
+
+<span class="err">一些包含了值的参数表示时间，如超时时长。这些值一般以毫秒为单位，但也可以使用其它的时间单位后缀。</span>
+    <span class="nl">us</span><span class="p">:</span> <span class="err">微秒</span><span class="p">(</span><span class="n">microseconds</span><span class="p">)</span><span class="err">，即</span><span class="mi">1</span><span class="o">/</span><span class="mi">1000000</span><span class="err">秒；</span>
+    <span class="nl">ms</span><span class="p">:</span> <span class="err">毫秒</span><span class="p">(</span><span class="n">milliseconds</span><span class="p">)</span><span class="err">，即</span><span class="mi">1</span><span class="o">/</span><span class="mi">1000</span><span class="err">秒；</span>
+    <span class="nl">s</span><span class="p">:</span> <span class="err">秒</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span><span class="err">；</span>
+    <span class="nl">m</span><span class="p">:</span> <span class="err">分钟</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="err">；</span>
+    <span class="n">h</span><span class="err">：小时</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="err">；</span>
+    <span class="nl">d</span><span class="p">:</span> <span class="err">天</span><span class="p">(</span><span class="n">days</span><span class="p">)</span><span class="err">；</span>
+
+<span class="mf">2.3</span> <span class="err">例子</span>
+
+<span class="err">下面的例子配置了一个监听在所有接口的</span><span class="mi">80</span><span class="err">端口上</span><span class="n">HTTP</span> <span class="n">proxy</span><span class="err">服务，它转发所有的请求至后端监听在</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8000</span><span class="err">上的</span><span class="s">&quot;server&quot;</span><span class="err">。</span>
+
+    <span class="n">global</span>
+        <span class="n">daemon</span>
+        <span class="n">maxconn</span> <span class="mi">25600</span>
+
+    <span class="n">defaults</span>
+        <span class="n">mode</span> <span class="n">http</span>
+        <span class="n">timeout</span> <span class="n">connect</span> <span class="mi">5000</span><span class="n">ms</span>
+        <span class="n">timeout</span> <span class="n">client</span> <span class="mi">50000</span><span class="n">ms</span>
+        <span class="n">timeout</span> <span class="n">server</span> <span class="mi">50000</span><span class="n">ms</span>
+
+    <span class="n">frontend</span> <span class="n">http</span><span class="o">-</span><span class="k">in</span>
+        <span class="n">bind</span> <span class="o">*:</span><span class="mi">80</span>
+        <span class="n">default_backend</span> <span class="n">servers</span>
+
+    <span class="n">backend</span> <span class="n">servers</span>
+        <span class="n">server</span> <span class="n">server1</span> <span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">8080</span> <span class="n">maxconn</span> <span class="mi">32</span>
+
+<span class="mf">2.4</span> <span class="err">全局配置</span>
+
+<span class="err">“</span><span class="n">global</span><span class="err">”配置中的参数为进程级别的参数，且通常与其运行的</span><span class="n">OS</span><span class="err">相关。</span>
+
+ <span class="o">*</span> <span class="err">进程管理及安全相关的参数</span>
+   <span class="o">-</span> <span class="n">chroot</span> <span class="o">&lt;</span><span class="n">jail</span> <span class="n">dir</span><span class="o">&gt;</span><span class="err">：修改</span><span class="n">haproxy</span><span class="err">的工作目录至指定的目录并在放弃权限之前执行</span><span class="n">chroot</span><span class="p">()</span><span class="err">操作，可以提升</span><span class="n">haproxy</span><span class="err">的安全级别，</span>
+   <span class="err">不过需要注意的是要确保指定的目录为空目录且任何用户均不能有写权限；</span>
+   <span class="o">-</span> <span class="n">daemon</span><span class="err">：让</span><span class="n">haproxy</span><span class="err">以守护进程的方式工作于后台，其等同于“</span><span class="o">-</span><span class="n">D</span><span class="err">”选项的功能，当然，也可以在命令行中以“</span><span class="o">-</span><span class="n">db</span><span class="err">”选项将其禁用；</span>
+   <span class="o">-</span> <span class="n">gid</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：以指定的</span><span class="n">GID</span><span class="err">运行</span><span class="n">haproxy</span><span class="err">，建议使用专用于运行</span><span class="n">haproxy</span><span class="err">的</span><span class="n">GID</span><span class="err">，以免因权限问题带来风险；</span>
+   <span class="o">-</span> <span class="n">group</span> <span class="o">&lt;</span><span class="n">group</span> <span class="n">name</span><span class="o">&gt;</span><span class="err">：同</span><span class="n">gid</span><span class="err">，不过指定的组名；</span>
+   <span class="o">-</span> <span class="n">log</span>  <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">facility</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">max</span> <span class="n">level</span> <span class="p">[</span><span class="n">min</span> <span class="n">level</span><span class="p">]]</span><span class="err">：定义全局的</span><span class="n">syslog</span><span class="err">服务器，最多可以定义两个；</span>
+   <span class="o">-</span> <span class="n">log</span><span class="o">-</span><span class="n">send</span><span class="o">-</span><span class="n">hostname</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">]</span><span class="err">：在</span><span class="n">syslog</span><span class="err">信息的首部添加当前主机名，可以为“</span><span class="n">string</span><span class="err">”指定的名称，也可以缺省使用当前主机名；</span>
+   <span class="o">-</span> <span class="n">nbproc</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：指定启动的</span><span class="n">haproxy</span><span class="err">进程个数，只能用于守护进程模式的</span><span class="n">haproxy</span><span class="err">；默认只启动一个进程，鉴于调试困难等多方面的原因，</span>
+   <span class="err">一般只在单进程仅能打开少数文件描述符的场景中才使用多进程模式；</span>
+   <span class="o">-</span> <span class="n">pidfile</span><span class="err">：</span>
+   <span class="o">-</span> <span class="n">uid</span><span class="err">：以指定的</span><span class="n">UID</span><span class="err">身份运行</span><span class="n">haproxy</span><span class="err">进程；</span>
+   <span class="o">-</span> <span class="n">ulimit</span><span class="o">-</span><span class="n">n</span><span class="err">：设定每进程所能够打开的最大文件描述符数目，默认情况下其会自动进行计算，因此不推荐修改此选项；</span>
+   <span class="o">-</span> <span class="n">user</span><span class="err">：同</span><span class="n">uid</span><span class="err">，但使用的是用户名；</span>
+   <span class="o">-</span> <span class="n">stats</span><span class="err">：</span>
+   <span class="o">-</span> <span class="n">node</span><span class="err">：定义当前节点的名称，用于</span><span class="n">HA</span><span class="err">场景中多</span><span class="n">haproxy</span><span class="err">进程共享同一个</span><span class="n">IP</span><span class="err">地址时；</span>
+   <span class="o">-</span> <span class="n">description</span><span class="err">：当前实例的描述信息；</span>
+
+ <span class="o">*</span> <span class="err">性能调整相关的参数</span>
+   <span class="o">-</span> <span class="n">maxconn</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定每个</span><span class="n">haproxy</span><span class="err">进程所接受的最大并发连接数，其等同于命令行选项“</span><span class="o">-</span><span class="n">n</span><span class="err">”；“</span><span class="n">ulimit</span> <span class="o">-</span><span class="n">n</span><span class="err">”自动计算的结果正是参照此</span>
+   <span class="err">参数设定的；</span>
+   <span class="o">-</span> <span class="n">maxpipes</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：</span><span class="n">haproxy</span><span class="err">使用</span><span class="n">pipe</span><span class="err">完成基于内核的</span><span class="n">tcp</span><span class="err">报文重组，此选项则用于设定每进程所允许使用的最大</span><span class="n">pipe</span><span class="err">个数；每个</span><span class="n">pipe</span><span class="err">会</span>
+   <span class="err">打开两个文件描述符，因此，“</span><span class="n">ulimit</span> <span class="o">-</span><span class="n">n</span><span class="err">”自动计算时会根据需要调大此值；默认为</span><span class="n">maxconn</span><span class="o">/</span><span class="mi">4</span><span class="err">，其通常会显得过大；</span>
+   <span class="o">-</span> <span class="n">noepoll</span><span class="err">：在</span><span class="n">Linux</span><span class="err">系统上禁用</span><span class="n">epoll</span><span class="err">机制；</span>
+   <span class="o">-</span> <span class="n">nokqueue</span><span class="err">：在</span><span class="n">BSE</span><span class="err">系统上禁用</span><span class="n">kqueue</span><span class="err">机制；</span>
+   <span class="o">-</span> <span class="n">nopoll</span><span class="err">：禁用</span><span class="n">poll</span><span class="err">机制；</span>
+   <span class="o">-</span> <span class="n">nosepoll</span><span class="err">：在</span><span class="n">Linux</span><span class="err">禁用启发式</span><span class="n">epoll</span><span class="err">机制；</span>
+   <span class="o">-</span> <span class="n">nosplice</span><span class="err">：禁止在</span><span class="n">Linux</span><span class="err">套接字上使用内核</span><span class="n">tcp</span><span class="err">重组，这会导致更多的</span><span class="n">recv</span><span class="o">/</span><span class="n">send</span><span class="err">系统调用；不过，在</span><span class="n">Linux</span> <span class="mf">2.6.25</span><span class="o">-</span><span class="mi">28</span><span class="err">系列的内核上，</span>
+   <span class="n">tcp</span><span class="err">重组功能有</span><span class="n">bug</span><span class="err">存在；</span>
+   <span class="o">-</span> <span class="n">spread</span><span class="o">-</span><span class="n">checks</span> <span class="o">&lt;</span><span class="mf">0..50</span><span class="p">,</span> <span class="k">in</span> <span class="n">percent</span><span class="o">&gt;</span><span class="err">：在</span><span class="n">haproxy</span><span class="err">后端有着众多服务器的场景中，在精确的时间间隔后统一对众服务器进行健康状况</span>
+   <span class="err">检查可能会带来意外问题；此选项用于将其检查的时间间隔长度上增加或减小一定的随机时长；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">bufsize</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定</span><span class="n">buffer</span><span class="err">的大小，同样的内存条件小，较小的值可以让</span><span class="n">haproxy</span><span class="err">有能力接受更多的并发连接，较大的值可以</span>
+   <span class="err">让某些应用程序使用较大的</span><span class="n">cookie</span><span class="err">信息；默认为</span><span class="mi">16384</span><span class="err">，其可以在编译时修改，不过强烈建议使用默认值；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">chksize</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定检查缓冲区的大小，单位为字节；更大的值有助于在较大的页面中完成基于字符串或模式的文本查找，</span>
+   <span class="err">但也会占用更多的系统资源；不建议修改；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">maxaccept</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定</span><span class="n">haproxy</span><span class="err">进程内核调度运行时一次性可以接受的连接的个数，较大的值可以带来较大的吞吐率，</span>
+   <span class="err">默认在单进程模式下为</span><span class="mi">100</span><span class="err">，多进程模式下为</span><span class="mi">8</span><span class="err">，设定为</span><span class="o">-</span><span class="mi">1</span><span class="err">可以禁止此限制；一般不建议修改；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">maxpollevents</span>  <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定一次系统调用可以处理的事件最大数，默认值取决于</span><span class="n">OS</span><span class="err">；其值小于</span><span class="mi">200</span><span class="err">时可节约带宽，</span>
+   <span class="err">但会略微增大网络延迟，而大于</span><span class="mi">200</span><span class="err">时会降低延迟，但会稍稍增加网络带宽的占用量；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">maxrewrite</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定为首部重写或追加而预留的缓冲空间，建议使用</span><span class="mi">1024</span><span class="err">左右的大小；在需要使用更大的空间时，</span>
+   <span class="n">haproxy</span><span class="err">会自动增加其值；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">rcvbuf</span><span class="p">.</span><span class="n">client</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">rcvbuf</span><span class="p">.</span><span class="n">server</span> <span class="o">&lt;</span><span class="n">number</span><span class="o">&gt;</span><span class="err">：设定内核套接字中服务端或客户端接收缓冲的大小，单位为字节；强烈推荐使用默认值；</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">sndbuf</span><span class="p">.</span><span class="n">client</span><span class="err">：</span>
+   <span class="o">-</span> <span class="n">tune</span><span class="p">.</span><span class="n">sndbuf</span><span class="p">.</span><span class="n">server</span><span class="err">：</span>
+
+ <span class="o">*</span> <span class="n">Debug</span><span class="err">相关的参数</span>
+   <span class="o">-</span> <span class="n">debug</span>
+   <span class="o">-</span> <span class="n">quiet</span>
+
+<span class="mf">2.5</span> <span class="err">代理</span>
+
+<span class="err">代理相关的配置可以如下配置段中。</span>
+
+ <span class="o">-</span> <span class="n">defaults</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+ <span class="o">-</span> <span class="n">frontend</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+ <span class="o">-</span> <span class="n">backend</span>  <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+ <span class="o">-</span> <span class="n">listen</span>   <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+
+ <span class="err">“</span><span class="n">defaults</span><span class="err">”段用于为所有其它配置段提供默认参数，这配置默认配置参数可由下一个“</span><span class="n">defaults</span><span class="err">”所重新设定。</span>
+
+ <span class="err">“</span><span class="n">frontend</span><span class="err">”段用于定义一系列监听的套接字，这些套接字可接受客户端请求并与之建立连接。</span>
+
+ <span class="err">“</span><span class="n">backend</span><span class="err">”段用于定义一系列“后端”服务器，代理将会将对应客户端的请求转发至这些服务器。</span>
+
+ <span class="err">“</span><span class="n">listen</span><span class="err">”段通过关联“前端”和“后端”定义了一个完整的代理，通常只对</span><span class="n">TCP</span><span class="err">流量有用。</span>
+
+ <span class="err">所有代理的名称只能使用大写字母、小写字母、数字、</span><span class="o">-</span><span class="p">(</span><span class="err">中线</span><span class="p">)</span><span class="err">、</span><span class="n">_</span><span class="p">(</span><span class="err">下划线</span><span class="p">)</span><span class="err">、</span><span class="p">.(</span><span class="err">点号</span><span class="p">)</span><span class="err">和</span><span class="o">:</span><span class="p">(</span><span class="err">冒号</span><span class="p">)</span><span class="err">。此外，</span><span class="n">ACL</span><span class="err">名称会区分字母大小写。</span>
+
+
+
+<span class="err">三、配置文件中的关键字参考</span>
+
+<span class="mf">3.1</span> <span class="n">balance</span>
+
+<span class="n">balance</span> <span class="o">&lt;</span><span class="n">algorithm</span><span class="o">&gt;</span> <span class="p">[</span> <span class="o">&lt;</span><span class="n">arguments</span><span class="o">&gt;</span> <span class="p">]</span>
+<span class="n">balance</span> <span class="n">url_param</span> <span class="o">&lt;</span><span class="n">param</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">check_post</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">max_wait</span><span class="o">&gt;</span><span class="p">]]</span>
+
+<span class="err">定义负载均衡算法，可用于“</span><span class="n">defaults</span><span class="err">”、“</span><span class="n">listen</span><span class="err">”和“</span><span class="n">backend</span><span class="err">”。</span><span class="o">&lt;</span><span class="n">algorithm</span><span class="o">&gt;</span><span class="err">用于在负载均衡场景中挑选一个</span><span class="n">server</span><span class="err">，其仅应用于持久信息</span>
+<span class="err">不可用的条件下或需要将一个连接重新派发至另一个服务器时。支持的算法有：</span>
+
+    <span class="n">roundrobin</span><span class="err">：基于权重进行轮叫，在服务器的处理时间保持均匀分布时，这是最平衡、最公平的算法。此算法是动态的，这表示其权重可以在</span>
+    <span class="err">运行时进行调整，不过，在设计上，每个后端服务器仅能最多接受</span><span class="mi">4128</span><span class="err">个连接；</span>
+    <span class="k">static</span><span class="o">-</span><span class="n">rr</span><span class="err">：基于权重进行轮叫，与</span><span class="n">roundrobin</span><span class="err">类似，但是为静态方法，在运行时调整其服务器权重不会生效；不过，其在后端服务器连接数</span>
+    <span class="err">上没有限制；</span>
+    <span class="n">leastconn</span><span class="err">：新的连接请求被派发至具有最少连接数目的后端服务器；在有着较长时间会话的场景中推荐使用此算法，如</span><span class="n">LDAP</span><span class="err">、</span><span class="n">SQL</span><span class="err">等，其并不</span>
+    <span class="err">太适用于较短会话的应用层协议，如</span><span class="n">HTTP</span><span class="err">；此算法是动态的，可以在运行时调整其权重；</span>
+    <span class="n">source</span><span class="err">：将请求的源地址进行</span><span class="n">hash</span><span class="err">运算，并由后端服务器的权重总数相除后派发至某匹配的服务器；这可以使得同一个客户端</span><span class="n">IP</span><span class="err">的请求始终被</span>
+    <span class="err">派发至某特定的服务器；不过，当服务器权重总数发生变化时，如某服务器宕机或添加了新的服务器，许多客户端的请求可能会被派发至与此</span>
+    <span class="err">前请求不同的服务器；常用于负载均衡无</span><span class="n">cookie</span><span class="err">功能的基于</span><span class="n">TCP</span><span class="err">的协议；其默认为静态，不过也可以使用</span><span class="n">hash</span><span class="o">-</span><span class="n">type</span><span class="err">修改此特性；</span>
+    <span class="n">uri</span><span class="err">：对</span><span class="n">URI</span><span class="err">的左半部分</span><span class="p">(</span><span class="err">“问题”标记之前的部分</span><span class="p">)</span><span class="err">或整个</span><span class="n">URI</span><span class="err">进行</span><span class="n">hash</span><span class="err">运算，并由服务器的总权重相除后派发至某匹配的服务器；这可以使得对</span>
+    <span class="err">同一个</span><span class="n">URI</span><span class="err">的请求总是被派发至某特定的服务器，除非服务器的权重总数发生了变化；此算法常用于代理缓存或反病毒代理以提高缓存的命中率</span>
+    <span class="err">；需要注意的是，此算法仅应用于</span><span class="n">HTTP</span><span class="err">后端服务器场景；其默认为静态算法，不过也可以使用</span><span class="n">hash</span><span class="o">-</span><span class="n">type</span><span class="err">修改此特性；</span>
+    <span class="n">url_param</span><span class="err">：通过</span><span class="o">&lt;</span><span class="n">argument</span><span class="o">&gt;</span><span class="err">为</span><span class="n">URL</span><span class="err">指定的参数在每个</span><span class="n">HTTP</span> <span class="n">GET</span><span class="err">请求中将会被检索；如果找到了指定的参数且其通过等于号“</span><span class="o">=</span><span class="err">”被赋予了一个</span>
+    <span class="err">值，那么此值将被执行</span><span class="n">hash</span><span class="err">运算并被服务器的总权重相除后派发至某匹配的服务器；此算法可以通过追踪请求中的用户标识进而确保同一个用</span>
+    <span class="err">户</span><span class="n">ID</span><span class="err">的请求将被送往同一个特定的服务器，除非服务器的总权重发生了变化；如果某请求中没有出现指定的参数或其没有有效值，则使用轮叫</span>
+    <span class="err">算法对相应请求进行调度；此算法默认为静态的，不过其也可以使用</span><span class="n">hash</span><span class="o">-</span><span class="n">type</span><span class="err">修改此特性；</span>
+    <span class="n">hdr</span><span class="p">(</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">)</span><span class="err">：对于每个</span><span class="n">HTTP</span><span class="err">请求，通过</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">指定的</span><span class="n">HTTP</span><span class="err">首部将会被检索；如果相应的首部没有出现或其没有有效值，则使用轮叫算法对</span>
+    <span class="err">相应请求进行调度；其有一个可选选项“</span><span class="n">use_domain_only</span><span class="err">”，可在指定检索类似</span><span class="n">Host</span><span class="err">类的首部时仅计算域名部分</span><span class="p">(</span><span class="err">比如通过</span><span class="n">www</span><span class="p">.</span><span class="n">magedu</span><span class="p">.</span><span class="n">com</span>
+    <span class="err">来说，仅计算</span><span class="n">magedu</span><span class="err">字符串的</span><span class="n">hash</span><span class="err">值</span><span class="p">)</span><span class="err">以降低</span><span class="n">hash</span><span class="err">算法的运算量；此算法默认为静态的，不过其也可以使用</span><span class="n">hash</span><span class="o">-</span><span class="n">type</span><span class="err">修改此特性；</span>
+    <span class="n">rdp</span><span class="o">-</span><span class="n">cookie</span>
+    <span class="n">rdp</span><span class="o">-</span><span class="n">cookie</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="err">：</span>
+
+<span class="mf">3.2</span> <span class="n">bind</span>
+
+<span class="n">bind</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="p">]</span><span class="o">:&lt;</span><span class="n">port_range</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="p">...]</span>
+<span class="n">bind</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="p">]</span><span class="o">:&lt;</span><span class="n">port_range</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="p">...]</span> <span class="n">interface</span> <span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span>
+
+<span class="err">此指令仅能用于</span><span class="n">frontend</span><span class="err">和</span><span class="n">listen</span><span class="err">区段，用于定义一个或几个监听的套接字。</span>
+
+<span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="err">：可选选项，其可以为主机名、</span><span class="n">IPv4</span><span class="err">地址、</span><span class="n">IPv6</span><span class="err">地址或</span><span class="o">*</span><span class="err">；省略此选项、将其指定为</span><span class="o">*</span><span class="err">或</span><span class="mf">0.0.0.0</span><span class="err">时，将监听当前系统的所有</span><span class="n">IPv4</span><span class="err">地址；</span>
+<span class="o">&lt;</span><span class="n">port_range</span><span class="o">&gt;</span><span class="err">：可以是一个特定的</span><span class="n">TCP</span><span class="err">端口，也可是一个端口范围</span><span class="p">(</span><span class="err">如</span><span class="mi">5005</span><span class="o">-</span><span class="mi">5010</span><span class="p">)</span><span class="err">，代理服务器将通过指定的端口来接收客户端请求；需要注意的是，</span>
+<span class="err">每组监听的套接字</span><span class="o">&lt;</span><span class="nl">address</span><span class="p">:</span><span class="n">port</span><span class="o">&gt;</span><span class="err">在同一个实例上只能使用一次，而且小于</span><span class="mi">1024</span><span class="err">的端口需要有特定权限的用户才能使用，这可能需要通过</span><span class="n">uid</span><span class="err">参数</span>
+<span class="err">来定义；</span>
+<span class="o">&lt;</span><span class="n">interface</span><span class="o">&gt;</span><span class="err">：指定物理接口的名称，仅能在</span><span class="n">Linux</span><span class="err">系统上使用；其不能使用接口别名，而仅能使用物理接口名称，而且只有管理有权限指定绑定的</span>
+<span class="err">物理接口；</span>
+
+<span class="mf">3.3</span> <span class="n">mode</span>
+
+<span class="n">mode</span> <span class="p">{</span> <span class="n">tcp</span><span class="o">|</span><span class="n">http</span><span class="o">|</span><span class="n">health</span> <span class="p">}</span>
+
+<span class="err">设定实例的运行模式或协议。当实现内容交换时，前端和后端必须工作于同一种模式</span><span class="p">(</span><span class="err">一般说来都是</span><span class="n">HTTP</span><span class="err">模式</span><span class="p">)</span><span class="err">，否则将无法启动实例。</span>
+
+<span class="n">tcp</span><span class="err">：实例运行于纯</span><span class="n">TCP</span><span class="err">模式，在客户端和服务器端之间将建立一个全双工的连接，且不会对</span><span class="mi">7</span><span class="err">层报文做任何类型的检查；此为默认模式，通常用于</span>
+<span class="n">SSL</span><span class="err">、</span><span class="n">SSH</span><span class="err">、</span><span class="n">SMTP</span><span class="err">等应用；</span>
+<span class="n">http</span><span class="err">：实例运行于</span><span class="n">HTTP</span><span class="err">模式，客户端请求在转发至后端服务器之前将被深度分析，所有不与</span><span class="n">RFC</span><span class="err">格式兼容的请求都会被拒绝；</span>
+<span class="n">health</span><span class="err">：实例工作于</span><span class="n">health</span><span class="err">模式，其对入站请求仅响应“</span><span class="n">OK</span><span class="err">”信息并关闭连接，且不会记录任何日志信息；此模式将用于响应外部组件的健康状态检查</span>
+<span class="err">请求；目前业讲，此模式已经废弃，因为</span><span class="n">tcp</span><span class="err">或</span><span class="n">http</span><span class="err">模式中的</span><span class="n">monitor</span><span class="err">关键字可完成类似功能；</span>
+
+<span class="mf">3.4</span> <span class="n">hash</span><span class="o">-</span><span class="n">type</span>
+
+<span class="n">hash</span><span class="o">-</span><span class="n">type</span> <span class="o">&lt;</span><span class="n">method</span><span class="o">&gt;</span>
+
+<span class="err">定义用于将</span><span class="n">hash</span><span class="err">码映射至后端服务器的方法；其不能用于</span><span class="n">frontend</span><span class="err">区段；可用方法有</span><span class="n">map</span><span class="o">-</span><span class="n">based</span><span class="err">和</span><span class="n">consistent</span><span class="err">，在大多数场景下推荐使用默认的</span>
+<span class="n">map</span><span class="o">-</span><span class="n">based</span><span class="err">方法。</span>
+
+<span class="n">map</span><span class="o">-</span><span class="n">based</span><span class="err">：</span><span class="n">hash</span><span class="err">表是一个包含了所有在线服务器的静态数组。其</span><span class="n">hash</span><span class="err">值将会非常平滑，会将权重考虑在列，但其为静态方法，对在线服务器的权重</span>
+<span class="err">进行调整将不会生效，这意味着其不支持慢速启动。此外，挑选服务器是根据其在数组中的位置进行的，因此，当一台服务器宕机或添加了一台新的服</span>
+<span class="err">务器时，大多数连接将会被重新派发至一个与此前不同的服务器上，对于缓存服务器的工作场景来说，此方法不甚适用。</span>
+<span class="n">consistent</span><span class="err">：</span><span class="n">hash</span><span class="err">表是一个由各服务器填充而成的树状结构；基于</span><span class="n">hash</span><span class="err">键在</span><span class="n">hash</span><span class="err">树中查找相应的服务器时，最近的服务器将被选中。此方法是动</span>
+<span class="err">态的，支持在运行时修改服务器权重，因此兼容慢速启动的特性。添加一个新的服务器时，仅会对一小部分请求产生影响，因此，尤其适用于后端服</span>
+<span class="err">务器为</span><span class="n">cache</span><span class="err">的场景。不过，此算法不甚平滑，派发至各服务器的请求未必能达到理想的均衡效果，因此，可能需要不时的调整服务器的权重以获得</span>
+<span class="err">更好的均衡性。</span>
+
+<span class="mf">3.5</span> <span class="n">log</span>
+
+<span class="n">log</span> <span class="n">global</span>
+<span class="n">log</span> <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">facility</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">level</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">minlevel</span><span class="o">&gt;</span><span class="p">]]</span>
+
+<span class="err">为每个实例启用事件和流量日志，因此可用于所有区段。每个实例最多可以指定两个</span><span class="n">log</span><span class="err">参数，不过，如果使用了“</span><span class="n">log</span> <span class="n">global</span><span class="err">”且</span><span class="s">&quot;global&quot;</span><span class="err">段已经定</span>
+<span class="err">了两个</span><span class="n">log</span><span class="err">参数时，多余了</span><span class="n">log</span><span class="err">参数将被忽略。</span>
+
+<span class="n">global</span><span class="err">：当前实例的日志系统参数同</span><span class="s">&quot;global&quot;</span><span class="err">段中的定义时，将使用此格式；每个实例仅能定义一次“</span><span class="n">log</span> <span class="n">global</span><span class="err">”语句，且其没有任何额外参数；</span>
+<span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="err">：定义日志发往的位置，其格式之一可以为</span><span class="o">&lt;</span><span class="nl">IPv4_address</span><span class="p">:</span><span class="n">PORT</span><span class="o">&gt;</span><span class="err">，其中的</span><span class="n">port</span><span class="err">为</span><span class="n">UDP</span><span class="err">协议端口，默认为</span><span class="mi">514</span><span class="err">；格式之二为</span><span class="n">Unix</span><span class="err">套接字文</span>
+<span class="err">件路径，但需要留心</span><span class="n">chroot</span><span class="err">应用及用户的读写权限；</span>
+<span class="o">&lt;</span><span class="n">facility</span><span class="o">&gt;</span><span class="err">：可以为</span><span class="n">syslog</span><span class="err">系统的标准</span><span class="n">facility</span><span class="err">之一；</span>
+<span class="o">&lt;</span><span class="n">level</span><span class="o">&gt;</span><span class="err">：定义日志级别，即输出信息过滤器，默认为所有信息；指定级别时，所有等于或高于此级别的日志信息将会被发送；</span>
+
+<span class="mf">3.6</span> <span class="n">maxconn</span>
+
+<span class="n">maxconn</span> <span class="o">&lt;</span><span class="n">conns</span><span class="o">&gt;</span>
+
+<span class="err">设定一个前端的最大并发连接数，因此，其不能用于</span><span class="n">backend</span><span class="err">区段。对于大型站点来说，可以尽可能提高此值以便让</span><span class="n">haproxy</span><span class="err">管理连接队列，从而避免</span>
+<span class="err">无法应答用户请求。当然，此最大值不能超出“</span><span class="n">global</span><span class="err">”段中的定义。此外，需要留心的是，</span><span class="n">haproxy</span><span class="err">会为每个连接维持两个缓冲，每个缓冲的大小</span>
+<span class="err">为</span><span class="mi">8</span><span class="n">KB</span><span class="err">，再加上其它的数据，每个连接将大约占用</span><span class="mi">17</span><span class="n">KB</span><span class="err">的</span><span class="n">RAM</span><span class="err">空间。这意味着经过适当优化后，有着</span><span class="mi">1</span><span class="n">GB</span><span class="err">的可用</span><span class="n">RAM</span><span class="err">空间时将能维护</span><span class="mi">40000</span><span class="o">-</span><span class="mi">50000</span><span class="err">并发</span>
+<span class="err">连接。</span>
+
+<span class="err">如果为</span><span class="o">&lt;</span><span class="n">conns</span><span class="o">&gt;</span><span class="err">指定了一个过大值，极端场景下，其最终占据的空间可能会超出当前主机的可用内存，这可能会带来意想不到的结果；因此，将其设定</span>
+<span class="err">了一个可接受值方为明智决定。其默认为</span><span class="mi">2000</span><span class="err">。</span>
+
+<span class="mf">3.7</span> <span class="n">default_backend</span>
+
+<span class="n">default_backend</span> <span class="o">&lt;</span><span class="n">backend</span><span class="o">&gt;</span>
+
+<span class="err">在没有匹配的</span><span class="s">&quot;use_backend&quot;</span><span class="err">规则时为实例指定使用的默认后端，因此，其不可应用于</span><span class="n">backend</span><span class="err">区段。在</span><span class="s">&quot;frontend&quot;</span><span class="err">和</span><span class="s">&quot;backend&quot;</span><span class="err">之间进行内容交换</span>
+<span class="err">时，通常使用</span><span class="s">&quot;use-backend&quot;</span><span class="err">定义其匹配规则；而没有被规则匹配到的请求将由此参数指定的后端接收。</span>
+
+<span class="o">&lt;</span><span class="n">backend</span><span class="o">&gt;</span><span class="err">：指定使用的后端的名称；</span>
+
+<span class="err">使用案例：</span>
+
+<span class="n">use_backend</span>     <span class="n">dynamic</span>  <span class="k">if</span>  <span class="n">url_dyn</span>
+<span class="n">use_backend</span>     <span class="k">static</span>   <span class="k">if</span>  <span class="n">url_css</span> <span class="n">url_img</span> <span class="n">extension_img</span>
+<span class="n">default_backend</span> <span class="n">dynamic</span>
+
+<span class="mf">3.8</span> <span class="n">server</span>
+
+<span class="n">server</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="p">[</span><span class="o">:</span><span class="n">port</span><span class="p">]</span> <span class="p">[</span><span class="n">param</span><span class="o">*</span><span class="p">]</span>
+
+<span class="err">为后端声明一个</span><span class="n">server</span><span class="err">，因此，不能用于</span><span class="n">defaults</span><span class="err">和</span><span class="n">frontend</span><span class="err">区段。</span>
+
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">：为此服务器指定的内部名称，其将出现在日志及警告信息中；如果设定了</span><span class="s">&quot;http-send-server-name&quot;</span><span class="err">，它还将被添加至发往此服务器的请求</span>
+<span class="err">首部中；</span>
+<span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="err">：此服务器的的</span><span class="n">IPv4</span><span class="err">地址，也支持使用可解析的主机名，只不过在启动时需要解析主机名至相应的</span><span class="n">IPv4</span><span class="err">地址；</span>
+<span class="p">[</span><span class="o">:</span><span class="n">port</span><span class="p">]</span><span class="err">：指定将连接请求所发往的此服务器时的目标端口，其为可选项；未设定时，将使用客户端请求时的同一相端口；</span>
+<span class="p">[</span><span class="n">param</span><span class="o">*</span><span class="p">]</span><span class="err">：为此服务器设定的一系参数；其可用的参数非常多，具体请参考官方文档中的说明，下面仅说明几个常用的参数；</span>
+
+<span class="err">服务器或默认服务器参数：</span>
+<span class="n">backup</span><span class="err">：设定为备用服务器，仅在负载均衡场景中的其它</span><span class="n">server</span><span class="err">均不可用于启用此</span><span class="n">server</span><span class="err">；</span>
+<span class="n">check</span><span class="err">：启动对此</span><span class="n">server</span><span class="err">执行健康状态检查，其可以借助于额外的其它参数完成更精细的设定，如：</span>
+    <span class="n">inter</span> <span class="o">&lt;</span><span class="n">delay</span><span class="o">&gt;</span><span class="err">：设定健康状态检查的时间间隔，单位为毫秒，默认为</span><span class="mi">2000</span><span class="err">；也可以使用</span><span class="n">fastinter</span><span class="err">和</span><span class="n">downinter</span><span class="err">来根据服务器端状态优化此时</span>
+    <span class="err">间延迟；</span>
+    <span class="n">rise</span> <span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="err">：设定健康状态检查中，某离线的</span><span class="n">server</span><span class="err">从离线状态转换至正常状态需要成功检查的次数；</span>
+    <span class="n">fall</span> <span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="err">：确认</span><span class="n">server</span><span class="err">从正常状态转换为不可用状态需要检查的次数；</span>
+<span class="n">cookie</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="err">：为指定</span><span class="n">server</span><span class="err">设定</span><span class="n">cookie</span><span class="err">值，此处指定的值将在请求入站时被检查，第一次为此值挑选的</span><span class="n">server</span><span class="err">将在后续的请求中被选中，其目</span>
+<span class="err">的在于实现持久连接的功能；</span>
+<span class="n">maxconn</span> <span class="o">&lt;</span><span class="n">maxconn</span><span class="o">&gt;</span><span class="err">：指定此服务器接受的最大并发连接数；如果发往此服务器的连接数目高于此处指定的值，其将被放置于请求队列，以等待其它</span>
+<span class="err">连接被释放；</span>
+<span class="n">maxqueue</span> <span class="o">&lt;</span><span class="n">maxqueue</span><span class="o">&gt;</span><span class="err">：设定请求队列的最大长度；</span>
+<span class="n">observe</span> <span class="o">&lt;</span><span class="n">mode</span><span class="o">&gt;</span><span class="err">：通过观察服务器的通信状况来判定其健康状态，默认为禁用，其支持的类型有“</span><span class="n">layer4</span><span class="err">”和“</span><span class="n">layer7</span><span class="err">”，“</span><span class="n">layer7</span><span class="err">”仅能用于</span><span class="n">http</span><span class="err">代</span>
+<span class="err">理场景；</span>
+<span class="n">redir</span> <span class="o">&lt;</span><span class="n">prefix</span><span class="o">&gt;</span><span class="err">：启用重定向功能，将发往此服务器的</span><span class="n">GET</span><span class="err">和</span><span class="n">HEAD</span><span class="err">请求均以</span><span class="mi">302</span><span class="err">状态码响应；需要注意的是，在</span><span class="n">prefix</span><span class="err">后面不能使用</span><span class="o">/</span><span class="err">，且不能使用</span>
+<span class="err">相对地址，以免造成循环；例如：</span>
+    <span class="n">server</span> <span class="n">srv1</span> <span class="mf">172.16.100.6</span><span class="o">:</span><span class="mi">80</span> <span class="n">redir</span> <span class="nl">http</span><span class="p">:</span><span class="c1">//imageserver.magedu.com check</span>
+<span class="n">weight</span> <span class="o">&lt;</span><span class="n">weight</span><span class="o">&gt;</span><span class="err">：权重，默认为</span><span class="mi">1</span><span class="err">，最大值为</span><span class="mi">256</span><span class="err">，</span><span class="mi">0</span><span class="err">表示不参与负载均衡；</span>
+<span class="err">检查方法：</span>
+<span class="n">option</span> <span class="n">httpchk</span>
+<span class="n">option</span> <span class="n">httpchk</span> <span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span>
+<span class="n">option</span> <span class="n">httpchk</span> <span class="o">&lt;</span><span class="n">method</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span>
+<span class="n">option</span> <span class="n">httpchk</span> <span class="o">&lt;</span><span class="n">method</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">uri</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="err">：不能用于</span><span class="n">frontend</span><span class="err">段，例如：</span>
+
+<span class="n">backend</span> <span class="n">https_relay</span>
+    <span class="n">mode</span> <span class="n">tcp</span>
+    <span class="n">option</span> <span class="n">httpchk</span> <span class="n">OPTIONS</span> <span class="o">*</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span><span class="err">\</span><span class="n">r</span><span class="err">\</span><span class="nl">nHost</span><span class="p">:</span><span class="err">\</span> <span class="n">www</span><span class="p">.</span><span class="n">magedu</span><span class="p">.</span><span class="n">com</span>
+    <span class="n">server</span> <span class="n">apache1</span> <span class="mf">192.168.1.1</span><span class="o">:</span><span class="mi">443</span> <span class="n">check</span> <span class="n">port</span> <span class="mi">80</span>
+
+
+
+<span class="err">使用案例：</span>
+<span class="n">server</span> <span class="n">first</span>  <span class="mf">172.16.100.7</span><span class="o">:</span><span class="mi">1080</span> <span class="n">cookie</span> <span class="n">first</span>  <span class="n">check</span> <span class="n">inter</span> <span class="mi">1000</span>
+<span class="n">server</span> <span class="n">second</span> <span class="mf">172.16.100.8</span><span class="o">:</span><span class="mi">1080</span> <span class="n">cookie</span> <span class="n">second</span> <span class="n">check</span> <span class="n">inter</span> <span class="mi">1000</span>
+
+<span class="mf">3.9</span> <span class="n">capture</span> <span class="n">request</span> <span class="n">header</span>
+
+<span class="n">capture</span> <span class="n">request</span> <span class="n">header</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">len</span> <span class="o">&lt;</span><span class="n">length</span><span class="o">&gt;</span>
+
+<span class="err">捕获并记录指定的请求首部最近一次出现时的第一个值，仅能用于“</span><span class="n">frontend</span><span class="err">”和“</span><span class="n">listen</span><span class="err">”区段。捕获的首部值使用花括号</span><span class="p">{}</span><span class="err">括起来后添加进日志中。</span>
+<span class="err">如果需要捕获多个首部值，它们将以指定的次序出现在日志文件中，并以竖线“</span><span class="o">|</span><span class="err">”作为分隔符。不存在的首部记录为空字符串，最常需要捕获的首部包</span>
+<span class="err">括在虚拟主机环境中使用的“</span><span class="n">Host</span><span class="err">”、上传请求首部中的“</span><span class="n">Content</span><span class="o">-</span><span class="n">length</span><span class="err">”、快速区别真实用户和网络机器人的“</span><span class="n">User</span><span class="o">-</span><span class="n">agent</span><span class="err">”，以及代理环境中记录</span>
+<span class="err">真实请求来源的“</span><span class="n">X</span><span class="o">-</span><span class="n">Forward</span><span class="o">-</span><span class="n">For</span><span class="err">”。</span>
+
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">：要捕获的首部的名称，此名称不区分字符大小写，但建议与它们出现在首部中的格式相同，比如大写首字母。需要注意的是，记录在日志中</span>
+<span class="err">的是首部对应的值，而非首部名称。</span>
+<span class="o">&lt;</span><span class="n">length</span><span class="o">&gt;</span><span class="err">：指定记录首部值时所记录的精确长度，超出的部分将会被忽略。</span>
+
+<span class="err">可以捕获的请求首部的个数没有限制，但每个捕获最多只能记录</span><span class="mi">64</span><span class="err">个字符。为了保证同一个</span><span class="n">frontend</span><span class="err">中日志格式的统一性，首部捕获仅能在</span>
+<span class="n">frontend</span><span class="err">中定义。</span>
+
+<span class="mf">3.10</span> <span class="n">capture</span> <span class="n">response</span> <span class="n">header</span>
+
+<span class="n">capture</span> <span class="n">response</span> <span class="n">header</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">len</span> <span class="o">&lt;</span><span class="n">length</span><span class="o">&gt;</span>
+
+<span class="err">捕获并记录响应首部，其格式和要点同请求首部。</span>
+
+<span class="mf">3.11</span> <span class="n">stats</span> <span class="n">enable</span>
+
+<span class="err">启用基于程序编译时默认设置的统计报告，不能用于“</span><span class="n">frontend</span><span class="err">”区段。只要没有另外的其它设定，它们就会使用如下的配置：</span>
+
+  <span class="o">-</span> <span class="n">stats</span> <span class="nl">uri</span>   <span class="p">:</span> <span class="o">/</span><span class="n">haproxy</span><span class="o">?</span><span class="n">stats</span>
+  <span class="o">-</span> <span class="n">stats</span> <span class="nl">realm</span> <span class="p">:</span> <span class="s">&quot;HAProxy Statistics&quot;</span>
+  <span class="o">-</span> <span class="n">stats</span> <span class="nl">auth</span>  <span class="p">:</span> <span class="n">no</span> <span class="n">authentication</span>
+  <span class="o">-</span> <span class="n">stats</span> <span class="nl">scope</span> <span class="p">:</span> <span class="n">no</span> <span class="n">restriction</span>
+
+<span class="err">尽管“</span><span class="n">stats</span> <span class="n">enable</span><span class="err">”一条就能够启用统计报告，但还是建议设定其它所有的参数，以免其依赖于默认设定而带来非期后果。下面是一个配置案例。</span>
+
+  <span class="n">backend</span> <span class="n">public_www</span>
+    <span class="n">server</span> <span class="n">websrv1</span> <span class="mf">172.16.100.11</span><span class="o">:</span><span class="mi">80</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span>
+    <span class="n">stats</span> <span class="n">scope</span>   <span class="p">.</span>
+    <span class="n">stats</span> <span class="n">uri</span>     <span class="o">/</span><span class="n">haproxyadmin</span><span class="o">?</span><span class="n">stats</span>
+    <span class="n">stats</span> <span class="n">realm</span>   <span class="n">Haproxy</span><span class="err">\</span> <span class="n">Statistics</span>
+    <span class="n">stats</span> <span class="n">auth</span>    <span class="nl">statsadmin</span><span class="p">:</span><span class="n">password</span>
+    <span class="n">stats</span> <span class="n">auth</span>    <span class="nl">statsmaster</span><span class="p">:</span><span class="n">password</span>
+
+<span class="mf">3.12</span> <span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span>
+
+<span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span>
+
+<span class="err">启用统计报告并隐藏</span><span class="n">HAProxy</span><span class="err">版本报告，不能用于“</span><span class="n">frontend</span><span class="err">”区段。默认情况下，统计页面会显示一些有用信息，包括</span><span class="n">HAProxy</span><span class="err">的版本号，然而，</span>
+<span class="err">向所有人公开</span><span class="n">HAProxy</span><span class="err">的精确版本号是非常有风险的，因为它能帮助恶意用户快速定位版本的缺陷和漏洞。尽管“</span><span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span><span class="err">”一条就能</span>
+<span class="err">够启用统计报告，但还是建议设定其它所有的参数，以免其依赖于默认设定而带来非期后果。具体请参照“</span><span class="n">stats</span> <span class="n">enable</span><span class="err">”一节的说明。</span>
+
+<span class="mf">3.13</span> <span class="n">stats</span> <span class="n">realm</span>
+
+<span class="n">stats</span> <span class="n">realm</span> <span class="o">&lt;</span><span class="n">realm</span><span class="o">&gt;</span>
+
+<span class="err">启用统计报告并高精认证领域，不能用于“</span><span class="n">frontend</span><span class="err">”区段。</span><span class="n">haproxy</span><span class="err">在读取</span><span class="n">realm</span><span class="err">时会将其视作一个单词，因此，中间的任何空白字符都必须使用</span>
+<span class="err">反斜线进行转义。此参数仅在与“</span><span class="n">stats</span> <span class="n">auth</span><span class="err">”配置使用时有意义。</span>
+
+<span class="o">&lt;</span><span class="n">realm</span><span class="o">&gt;</span><span class="err">：实现</span><span class="n">HTTP</span><span class="err">基本认证时显示在浏览器中的领域名称，用于提示用户输入一个用户名和密码。</span>
+
+<span class="err">尽管“</span><span class="n">stats</span> <span class="n">realm</span><span class="err">”一条就能够启用统计报告，但还是建议设定其它所有的参数，以免其依赖于默认设定而带来非期后果。具体请</span>
+<span class="err">参照“</span><span class="n">stats</span> <span class="n">enable</span><span class="err">”一节的说明。</span>
+
+<span class="mf">3.14</span> <span class="n">stats</span> <span class="n">scope</span>
+
+<span class="n">stats</span> <span class="n">scope</span> <span class="p">{</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">|</span> <span class="s">&quot;.&quot;</span> <span class="p">}</span>
+
+<span class="err">启用统计报告并限定报告的区段，不能用于“</span><span class="n">frontend</span><span class="err">”区段。当指定此语句时，统计报告将仅显示其列举出区段的报告信息，所有其它区段的信息</span>
+<span class="err">将被隐藏。如果需要显示多个区段的统计报告，此语句可以定义多次。需要注意的是，区段名称检测仅仅是以字符串比较的方式进行，它不会真检测</span>
+<span class="err">指定的区段是否真正存在。</span>
+
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">：可以是一个“</span><span class="n">listen</span><span class="err">”、“</span><span class="n">frontend</span><span class="err">”或“</span><span class="n">backend</span><span class="err">”区段的名称，而“</span><span class="p">.</span><span class="err">”则表示</span><span class="n">stats</span> <span class="n">scope</span><span class="err">语句所定义的当前区段。</span>
+
+<span class="err">尽管“</span><span class="n">stats</span> <span class="n">scope</span><span class="err">”一条就能够启用统计报告，但还是建议设定其它所有的参数，以免其依赖于默认设定而带来非期后果。下面是一个配置案例。</span>
+
+<span class="n">backend</span> <span class="n">private_monitoring</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">uri</span>     <span class="o">/</span><span class="n">haproxyadmin</span><span class="o">?</span><span class="n">stats</span>
+    <span class="n">stats</span> <span class="n">refresh</span> <span class="mi">10</span><span class="n">s</span>
+
+<span class="mf">3.15</span> <span class="n">stats</span> <span class="n">auth</span>
+
+<span class="n">stats</span> <span class="n">auth</span> <span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;:&lt;</span><span class="n">passwd</span><span class="o">&gt;</span>
+
+<span class="err">启用带认证的统计报告功能并授权一个用户帐号，其不能用于“</span><span class="n">frontend</span><span class="err">”区段。</span>
+
+<span class="o">&lt;</span><span class="n">user</span><span class="o">&gt;</span><span class="err">：授权进行访问的用户名；</span>
+<span class="o">&lt;</span><span class="n">passwd</span><span class="o">&gt;</span><span class="err">：此用户的访问密码，明文格式；</span>
+
+<span class="err">此语句将基于默认设定启用统计报告功能，并仅允许其定义的用户访问，其也可以定义多次以授权多个用户帐号。可以结合“</span><span class="n">stats</span> <span class="n">realm</span><span class="err">”参数在</span>
+<span class="err">提示用户认证时给出一个领域说明信息。在使用非法用户访问统计功能时，其将会响应一个“</span><span class="mi">401</span> <span class="n">Forbidden</span><span class="err">”页面。其认证方式为</span><span class="n">HTTP</span> <span class="n">Basic</span><span class="err">认证，</span>
+<span class="err">密码传输会以明文方式进行，因此，配置文件中也使用明文方式存储以说明其非保密信息故此不能相同于其它关键性帐号的密码。</span>
+
+<span class="err">尽管“</span><span class="n">stats</span> <span class="n">auth</span><span class="err">”一条就能够启用统计报告，但还是建议设定其它所有的参数，以免其依赖于默认设定而带来非期后果。</span>
+
+<span class="mf">3.16</span> <span class="n">stats</span> <span class="n">admin</span>
+
+<span class="n">stats</span> <span class="n">admin</span> <span class="p">{</span> <span class="k">if</span> <span class="o">|</span> <span class="n">unless</span> <span class="p">}</span> <span class="o">&lt;</span><span class="n">cond</span><span class="o">&gt;</span>
+
+<span class="err">在指定的条件满足时启用统计报告页面的管理级别功能，它允许通过</span><span class="n">web</span><span class="err">接口启用或禁用服务器，不过，基于安全的角度考虑，统计报告页面应该尽</span>
+<span class="err">可能为只读的。此外，如果启用了</span><span class="n">HAProxy</span><span class="err">的多进程模式，启用此管理级别将有可能导致异常行为。</span>
+
+<span class="err">目前来说，</span><span class="n">POST</span><span class="err">请求方法被限制于仅能使用缓冲区减去保留部分之外的空间，因此，服务器列表不能过长，否则，此请求将无法正常工作。因此，</span>
+<span class="err">建议一次仅调整少数几个服务器。下面是两个案例，第一个限制了仅能在本机打开报告页面时启用管理级别功能，第二个定义了仅允许通过认证的</span>
+<span class="err">用户使用管理级别功能。</span>
+
+<span class="n">backend</span> <span class="n">stats_localhost</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">admin</span> <span class="k">if</span> <span class="n">LOCALHOST</span>
+
+<span class="n">backend</span> <span class="n">stats_auth</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">auth</span>  <span class="nl">haproxyadmin</span><span class="p">:</span><span class="n">password</span>
+    <span class="n">stats</span> <span class="n">admin</span> <span class="k">if</span> <span class="nb">TRUE</span>
+
+<span class="mf">3.17</span> <span class="n">option</span> <span class="n">httplog</span>
+
+<span class="n">option</span> <span class="n">httplog</span> <span class="p">[</span> <span class="n">clf</span> <span class="p">]</span>
+
+<span class="err">启用记录</span><span class="n">HTTP</span><span class="err">请求、会话状态和计时器的功能。</span>
+
+<span class="n">clf</span><span class="err">：使用</span><span class="n">CLF</span><span class="err">格式来代替</span><span class="n">HAProxy</span><span class="err">默认的</span><span class="n">HTTP</span><span class="err">格式，通常在使用仅支持</span><span class="n">CLF</span><span class="err">格式的特定日志分析器时才需要使用此格式。</span>
+
+<span class="err">默认情况下，日志输入格式非常简陋，因为其仅包括源地址、目标地址和实例名称，而“</span><span class="n">option</span> <span class="n">httplog</span><span class="err">”参数将会使得日志格式变得丰富许多，</span>
+<span class="err">其通常包括但不限于</span><span class="n">HTTP</span><span class="err">请求、连接计时器、会话状态、连接数、捕获的首部及</span><span class="n">cookie</span><span class="err">、“</span><span class="n">frontend</span><span class="err">”、“</span><span class="n">backend</span><span class="err">”及服务器名称，当然也包括源地址</span>
+<span class="err">和端口号等。</span>
+
+<span class="mf">3.18</span> <span class="n">option</span> <span class="n">logasap</span>
+     <span class="n">no</span> <span class="n">option</span> <span class="n">logasap</span>
+
+<span class="n">option</span> <span class="n">logasap</span>
+<span class="n">no</span> <span class="n">option</span> <span class="n">logasap</span>
+
+<span class="err">启用或禁用提前将</span><span class="n">HTTP</span><span class="err">请求记入日志，不能用于“</span><span class="n">backend</span><span class="err">”区段。</span>
+
+<span class="err">默认情况下，</span><span class="n">HTTP</span><span class="err">请求是在请求结束时进行记录以便能将其整体传输时长和字节数记入日志，由此，传较大的对象时，其记入日志的时长可能会略有延</span>
+<span class="err">迟。“</span><span class="n">option</span> <span class="n">logasap</span><span class="err">”参数能够在服务器发送</span><span class="n">complete</span><span class="err">首部时即时记录日志，只不过，此时将不记录整体传输时长和字节数。此情形下，捕获</span>
+<span class="err">“</span><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="err">”响应首部来记录传输的字节数是一个较好选择。下面是一个例子。</span>
+
+  <span class="n">listen</span> <span class="n">http_proxy</span> <span class="mf">0.0.0.0</span><span class="o">:</span><span class="mi">80</span>
+      <span class="n">mode</span> <span class="n">http</span>
+      <span class="n">option</span> <span class="n">httplog</span>
+      <span class="n">option</span> <span class="n">logasap</span>
+      <span class="n">log</span> <span class="mf">172.16.100.9</span> <span class="n">local2</span>
+
+
+<span class="mf">3.19</span> <span class="n">option</span> <span class="n">forwardfor</span>
+
+<span class="n">option</span> <span class="n">forwardfor</span> <span class="p">[</span> <span class="n">except</span> <span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="n">header</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="p">]</span> <span class="p">[</span> <span class="k">if</span><span class="o">-</span><span class="n">none</span> <span class="p">]</span>
+
+<span class="err">允许在发往服务器的请求首部中插入“</span><span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span><span class="err">”首部。</span>
+
+<span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="err">：可选参数，当指定时，源地址为匹配至此网络中的请求都禁用此功能。</span>
+<span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">：可选参数，可使用一个自定义的首部，如“</span><span class="n">X</span><span class="o">-</span><span class="n">Client</span><span class="err">”来替代“</span><span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span><span class="err">”。有些独特的</span><span class="n">web</span><span class="err">服务器的确需要用于一个独特的首部。</span>
+<span class="k">if</span><span class="o">-</span><span class="n">none</span><span class="err">：仅在此首部不存在时才将其添加至请求报文问道中。</span>
+
+<span class="n">HAProxy</span><span class="err">工作于反向代理模式，其发往服务器的请求中的客户端</span><span class="n">IP</span><span class="err">均为</span><span class="n">HAProxy</span><span class="err">主机的地址而非真正客户端的地址，这会使得服务器端的日志信息记录</span>
+<span class="err">不了真正的请求来源，“</span><span class="n">X</span><span class="o">-</span><span class="n">Forwarded</span><span class="o">-</span><span class="n">For</span><span class="err">”首部则可用于解决此问题。</span><span class="n">HAProxy</span><span class="err">可以向每个发往服务器的请求上添加此首部，并以客户端</span><span class="n">IP</span><span class="err">为其</span><span class="n">value</span><span class="err">。</span>
+
+<span class="err">需要注意的是，</span><span class="n">HAProxy</span><span class="err">工作于隧道模式，其仅检查每一个连接的第一个请求，因此，仅第一个请求报文被附加此首部。如果想为每一个请求都附加</span>
+<span class="err">此首部，请确保同时使用了“</span><span class="n">option</span> <span class="n">httpclose</span><span class="err">”、“</span><span class="n">option</span> <span class="n">forceclose</span><span class="err">”和“</span><span class="n">option</span> <span class="n">http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">close</span><span class="err">”几个</span><span class="n">option</span><span class="err">。</span>
+
+<span class="err">下面是一个例子。</span>
+
+<span class="n">frontend</span> <span class="n">www</span>
+    <span class="n">mode</span> <span class="n">http</span>
+    <span class="n">option</span> <span class="n">forwardfor</span> <span class="n">except</span> <span class="mf">127.0.0.1</span>
+
+<span class="mf">3.20</span> <span class="n">errorfile</span>
+
+<span class="n">errorfile</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span>
+
+<span class="err">在用户请求不存在的页面时，返回一个页面文件给客户端而非由</span><span class="n">haproxy</span><span class="err">生成的错误代码；可用于所有段中。</span>
+
+<span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="err">：指定对</span><span class="n">HTTP</span><span class="err">的哪些状态码返回指定的页面；这里可用的状态码有</span><span class="mi">200</span><span class="err">、</span><span class="mi">400</span><span class="err">、</span><span class="mi">403</span><span class="err">、</span><span class="mi">408</span><span class="err">、</span><span class="mi">500</span><span class="err">、</span><span class="mi">502</span><span class="err">、</span><span class="mi">503</span><span class="err">和</span><span class="mi">504</span><span class="err">；</span>
+<span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span><span class="err">：指定用于响应的页面文件；</span>
+
+<span class="err">例如：</span>
+<span class="n">errorfile</span> <span class="mi">400</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">errorpages</span><span class="o">/</span><span class="mi">400</span><span class="n">badreq</span><span class="p">.</span><span class="n">http</span>
+<span class="n">errorfile</span> <span class="mi">403</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">errorpages</span><span class="o">/</span><span class="mf">403f</span><span class="n">orbid</span><span class="p">.</span><span class="n">http</span>
+<span class="n">errorfile</span> <span class="mi">503</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">errorpages</span><span class="o">/</span><span class="mi">503</span><span class="n">sorry</span><span class="p">.</span><span class="n">http</span>
+
+<span class="mf">3.21</span> <span class="n">errorloc</span> <span class="err">和</span> <span class="n">errorloc302</span> 
+
+<span class="n">errorloc</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span>
+<span class="n">errorloc302</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span>
+
+
+<span class="err">请求错误时，返回一个</span><span class="n">HTTP</span><span class="err">重定向至某</span><span class="n">URL</span><span class="err">的信息；可用于所有配置段中。</span>
+
+<span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="err">：指定对</span><span class="n">HTTP</span><span class="err">的哪些状态码返回指定的页面；这里可用的状态码有</span><span class="mi">200</span><span class="err">、</span><span class="mi">400</span><span class="err">、</span><span class="mi">403</span><span class="err">、</span><span class="mi">408</span><span class="err">、</span><span class="mi">500</span><span class="err">、</span><span class="mi">502</span><span class="err">、</span><span class="mi">503</span><span class="err">和</span><span class="mi">504</span><span class="err">；</span>
+<span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span><span class="err">：</span><span class="n">Location</span><span class="err">首部中指定的页面位置的具体路径，可以是在当前服务器上的页面的相对路径，也可以使用绝对路径；需要注意的是，</span>
+<span class="err">如果</span><span class="n">URI</span><span class="err">自身错误时产生某特定状态码信息的话，有可能会导致循环定向；</span>
+
+<span class="err">需要留意的是，这两个关键字都会返回</span><span class="mi">302</span><span class="err">状态吗，这将使得客户端使用同样的</span><span class="n">HTTP</span><span class="err">方法获取指定的</span><span class="n">URL</span><span class="err">，对于非</span><span class="n">GET</span><span class="err">法的场景</span><span class="p">(</span><span class="err">如</span><span class="n">POST</span><span class="p">)</span><span class="err">来说会</span>
+<span class="err">产生问题，因为返回客户的</span><span class="n">URL</span><span class="err">是不允许使用</span><span class="n">GET</span><span class="err">以外的其它方法的。如果的确有这种问题，可以使用</span><span class="n">errorloc303</span><span class="err">来返回</span><span class="mi">303</span><span class="err">状态码给客户端。</span>
+
+<span class="mf">3.22</span> <span class="n">errorloc303</span>
+
+<span class="n">errorloc303</span> <span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span>
+
+<span class="err">请求错误时，返回一个</span><span class="n">HTTP</span><span class="err">重定向至某</span><span class="n">URL</span><span class="err">的信息给客户端；可用于所有配置段中。</span>
+
+<span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="err">：指定对</span><span class="n">HTTP</span><span class="err">的哪些状态码返回指定的页面；这里可用的状态码有</span><span class="mi">400</span><span class="err">、</span><span class="mi">403</span><span class="err">、</span><span class="mi">408</span><span class="err">、</span><span class="mi">500</span><span class="err">、</span><span class="mi">502</span><span class="err">、</span><span class="mi">503</span><span class="err">和</span><span class="mi">504</span><span class="err">；</span>
+<span class="o">&lt;</span><span class="n">url</span><span class="o">&gt;</span><span class="err">：</span><span class="n">Location</span><span class="err">首部中指定的页面位置的具体路径，可以是在当前服务器上的页面的相对路径，也可以使用绝对路径；需要注意的是，</span>
+<span class="err">如果</span><span class="n">URI</span><span class="err">自身错误时产生某特定状态码信息的话，有可能会导致循环定向；</span>
+
+<span class="err">例如：</span>
+
+<span class="n">backend</span> <span class="n">webserver</span>
+  <span class="n">server</span> <span class="mf">172.16.100.6</span> <span class="mf">172.16.100.6</span><span class="o">:</span><span class="mi">80</span> <span class="n">check</span> <span class="n">maxconn</span> <span class="mi">3000</span> <span class="n">cookie</span> <span class="n">srv01</span>
+  <span class="n">server</span> <span class="mf">172.16.100.7</span> <span class="mf">172.16.100.7</span><span class="o">:</span><span class="mi">80</span> <span class="n">check</span> <span class="n">maxconn</span> <span class="mi">3000</span> <span class="n">cookie</span> <span class="n">srv02</span>
+  <span class="n">errorloc</span> <span class="mi">403</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">errorpages</span><span class="o">/</span><span class="n">sorry</span><span class="p">.</span><span class="n">htm</span>
+  <span class="n">errorloc</span> <span class="mi">503</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">errorpages</span><span class="o">/</span><span class="n">sorry</span><span class="p">.</span><span class="n">htm</span>
+
+
+
+
+
+<span class="err">一个配置示例：</span>
+<span class="cp">#---------------------------------------------------------------------</span>
+<span class="cp"># Global settings</span>
+<span class="cp">#---------------------------------------------------------------------</span>
+<span class="n">global</span>
+    <span class="cp"># to have these messages end up in /var/log/haproxy.log you will</span>
+    <span class="cp"># need to:</span>
+    <span class="cp">#</span>
+    <span class="cp"># 1) configure syslog to accept network log events.  This is done</span>
+    <span class="cp">#    by adding the &#39;-r&#39; option to the SYSLOGD_OPTIONS in</span>
+    <span class="cp">#    /etc/sysconfig/syslog</span>
+    <span class="cp">#</span>
+    <span class="cp"># 2) configure local2 events to go to the /var/log/haproxy.log</span>
+    <span class="cp">#   file. A line like the following can be added to</span>
+    <span class="cp">#   /etc/sysconfig/syslog</span>
+    <span class="cp">#</span>
+    <span class="cp">#    local2.*                       /var/log/haproxy.log</span>
+    <span class="cp">#</span>
+    <span class="n">log</span>         <span class="mf">127.0.0.1</span> <span class="n">local2</span>
+
+    <span class="n">chroot</span>      <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">haproxy</span>
+    <span class="n">pidfile</span>     <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">haproxy</span><span class="p">.</span><span class="n">pid</span>
+    <span class="n">maxconn</span>     <span class="mi">4000</span>
+    <span class="n">user</span>        <span class="n">haproxy</span>
+    <span class="n">group</span>       <span class="n">haproxy</span>
+    <span class="n">daemon</span>
+
+<span class="n">defaults</span>
+    <span class="n">mode</span>                    <span class="n">http</span>
+    <span class="n">log</span>                     <span class="n">global</span>
+    <span class="n">option</span>                  <span class="n">httplog</span>
+    <span class="n">option</span>                  <span class="n">dontlognull</span>
+    <span class="n">option</span> <span class="n">http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">close</span>
+    <span class="n">option</span> <span class="n">forwardfor</span>       <span class="n">except</span> <span class="mf">127.0.0.0</span><span class="o">/</span><span class="mi">8</span>
+    <span class="n">option</span>                  <span class="n">redispatch</span>
+    <span class="n">retries</span>                 <span class="mi">3</span>
+    <span class="n">timeout</span> <span class="n">http</span><span class="o">-</span><span class="n">request</span>    <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">queue</span>           <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">connect</span>         <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">client</span>          <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">server</span>          <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">http</span><span class="o">-</span><span class="n">keep</span><span class="o">-</span><span class="n">alive</span> <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">check</span>           <span class="mi">10</span><span class="n">s</span>
+    <span class="n">maxconn</span>                 <span class="mi">30000</span>
+
+<span class="n">listen</span> <span class="n">stats</span>
+    <span class="n">mode</span> <span class="n">http</span>
+    <span class="n">bind</span> <span class="mf">0.0.0.0</span><span class="o">:</span><span class="mi">1080</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span>
+    <span class="n">stats</span> <span class="n">uri</span>     <span class="o">/</span><span class="n">haproxyadmin</span><span class="o">?</span><span class="n">stats</span>
+    <span class="n">stats</span> <span class="n">realm</span>   <span class="n">Haproxy</span><span class="err">\</span> <span class="n">Statistics</span>
+    <span class="n">stats</span> <span class="n">auth</span>    <span class="nl">admin</span><span class="p">:</span><span class="n">admin</span>
+    <span class="n">stats</span> <span class="n">admin</span> <span class="k">if</span> <span class="nb">TRUE</span>
+
+
+<span class="n">frontend</span> <span class="n">http</span><span class="o">-</span><span class="k">in</span>
+    <span class="n">bind</span> <span class="o">*:</span><span class="mi">80</span>
+    <span class="n">mode</span> <span class="n">http</span>
+    <span class="n">log</span> <span class="n">global</span>
+    <span class="n">option</span> <span class="n">httpclose</span>
+    <span class="n">option</span> <span class="n">logasap</span>
+    <span class="n">option</span> <span class="n">dontlognull</span>
+    <span class="n">capture</span> <span class="n">request</span>  <span class="n">header</span> <span class="n">Host</span> <span class="n">len</span> <span class="mi">20</span>
+    <span class="n">capture</span> <span class="n">request</span>  <span class="n">header</span> <span class="n">Referer</span> <span class="n">len</span> <span class="mi">60</span>
+    <span class="n">default_backend</span> <span class="n">servers</span>
+
+<span class="n">frontend</span> <span class="n">healthcheck</span>
+    <span class="nl">bind</span> <span class="p">:</span><span class="mi">1099</span>
+    <span class="n">mode</span> <span class="n">http</span>
+    <span class="n">option</span> <span class="n">httpclose</span>
+    <span class="n">option</span> <span class="n">forwardfor</span>
+    <span class="n">default_backend</span> <span class="n">servers</span>
+
+<span class="n">backend</span> <span class="n">servers</span>
+    <span class="n">balance</span> <span class="n">roundrobin</span>
+    <span class="n">server</span> <span class="n">websrv1</span> <span class="mf">192.168.10.11</span><span class="o">:</span><span class="mi">80</span> <span class="n">check</span> <span class="n">maxconn</span> <span class="mi">2000</span>
+    <span class="n">server</span> <span class="n">websrv2</span> <span class="mf">192.168.10.12</span><span class="o">:</span><span class="mi">80</span> <span class="n">check</span> <span class="n">maxconn</span> <span class="mi">2000</span>
+
+
+
+
+
+<span class="err">负载均衡</span><span class="n">MySQL</span><span class="err">服务的配置示例</span>
+
+<span class="cp">#---------------------------------------------------------------------</span>
+<span class="cp"># Global settings</span>
+<span class="cp">#---------------------------------------------------------------------</span>
+<span class="n">global</span>
+    <span class="cp"># to have these messages end up in /var/log/haproxy.log you will</span>
+    <span class="cp"># need to:</span>
+    <span class="cp">#</span>
+    <span class="cp"># 1) configure syslog to accept network log events.  This is done</span>
+    <span class="cp">#    by adding the &#39;-r&#39; option to the SYSLOGD_OPTIONS in</span>
+    <span class="cp">#    /etc/sysconfig/syslog</span>
+    <span class="cp">#</span>
+    <span class="cp"># 2) configure local2 events to go to the /var/log/haproxy.log</span>
+    <span class="cp">#   file. A line like the following can be added to</span>
+    <span class="cp">#   /etc/sysconfig/syslog</span>
+    <span class="cp">#</span>
+    <span class="cp">#    local2.*                       /var/log/haproxy.log</span>
+    <span class="cp">#</span>
+    <span class="n">log</span>         <span class="mf">127.0.0.1</span> <span class="n">local2</span>
+
+    <span class="n">chroot</span>      <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">haproxy</span>
+    <span class="n">pidfile</span>     <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">haproxy</span><span class="p">.</span><span class="n">pid</span>
+    <span class="n">maxconn</span>     <span class="mi">4000</span>
+    <span class="n">user</span>        <span class="n">haproxy</span>
+    <span class="n">group</span>       <span class="n">haproxy</span>
+    <span class="n">daemon</span>
+
+<span class="n">defaults</span>
+    <span class="n">mode</span>                    <span class="n">tcp</span>
+    <span class="n">log</span>                     <span class="n">global</span>
+    <span class="n">option</span>                  <span class="n">httplog</span>
+    <span class="n">option</span>                  <span class="n">dontlognull</span>
+    <span class="n">retries</span>                 <span class="mi">3</span>
+    <span class="n">timeout</span> <span class="n">http</span><span class="o">-</span><span class="n">request</span>    <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">queue</span>           <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">connect</span>         <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">client</span>          <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">server</span>          <span class="mi">1</span><span class="n">m</span>
+    <span class="n">timeout</span> <span class="n">http</span><span class="o">-</span><span class="n">keep</span><span class="o">-</span><span class="n">alive</span> <span class="mi">10</span><span class="n">s</span>
+    <span class="n">timeout</span> <span class="n">check</span>           <span class="mi">10</span><span class="n">s</span>
+    <span class="n">maxconn</span>                 <span class="mi">600</span>
+
+<span class="n">listen</span> <span class="n">stats</span>
+    <span class="n">mode</span> <span class="n">http</span>
+    <span class="n">bind</span> <span class="mf">0.0.0.0</span><span class="o">:</span><span class="mi">1080</span>
+    <span class="n">stats</span> <span class="n">enable</span>
+    <span class="n">stats</span> <span class="n">hide</span><span class="o">-</span><span class="n">version</span>
+    <span class="n">stats</span> <span class="n">uri</span>     <span class="o">/</span><span class="n">haproxyadmin</span><span class="o">?</span><span class="n">stats</span>
+    <span class="n">stats</span> <span class="n">realm</span>   <span class="n">Haproxy</span><span class="err">\</span> <span class="n">Statistics</span>
+    <span class="n">stats</span> <span class="n">auth</span>    <span class="nl">admin</span><span class="p">:</span><span class="n">admin</span>
+    <span class="n">stats</span> <span class="n">admin</span> <span class="k">if</span> <span class="nb">TRUE</span>
+
+
+<span class="n">frontend</span> <span class="n">mysql</span>
+    <span class="n">bind</span> <span class="o">*:</span><span class="mi">3306</span>
+    <span class="n">mode</span> <span class="n">tcp</span>
+    <span class="n">log</span> <span class="n">global</span>
+    <span class="n">default_backend</span> <span class="n">mysqlservers</span>
+
+<span class="n">backend</span> <span class="n">mysqlservers</span>
+    <span class="n">balance</span> <span class="n">leastconn</span>
+    <span class="n">server</span> <span class="n">dbsrv1</span> <span class="mf">192.168.10.11</span><span class="o">:</span><span class="mi">3306</span> <span class="n">check</span> <span class="n">port</span> <span class="mi">3306</span> <span class="n">intval</span> <span class="mi">2</span> <span class="n">rise</span> <span class="mi">1</span> <span class="n">fall</span> <span class="mi">2</span> <span class="n">maxconn</span> <span class="mi">300</span>
+    <span class="n">server</span> <span class="n">dbsrv2</span> <span class="mf">192.168.10.12</span><span class="o">:</span><span class="mi">3306</span> <span class="n">check</span> <span class="n">port</span> <span class="mi">3306</span> <span class="n">intval</span> <span class="mi">2</span> <span class="n">rise</span> <span class="mi">1</span> <span class="n">fall</span> <span class="mi">2</span> <span class="n">maxconn</span> <span class="mi">300</span>
+</pre></div>
+
+
+<h2 id="install">install</h2>
+<p><a href="http://www.haproxy.org/download/1.7/src/haproxy-1.7.10.tar.gz">http://www.haproxy.org/download/1.7/src/haproxy-1.7.10.tar.gz</a></p>
+<p>tar -zxf haproxy-1.7.10.tar.gz &amp;&amp; cd haproxy-1.7.10</p>
+<p>grep '- linux' README   根据内核确定编译的参数 TARGET=</p>
+<p>make TARGET=linux2628 prefix=/usr/local/haproxy</p>
+<p>make install PREFIX=/usr/local/haproxy</p>
+<p>#修改两个配置</p>
+<p>/etc/security/limits.conf  添加以下配置重启</p>
+<p>* soft    nofile  2097152</p>
+<p>* hard    nofile  2097152</p>
+<p>* soft    nproc   65535</p>
+<p>* hard    nproc   65535</p>
+<p>* soft    memlock 1048576</p>
+<p>* hard    memlock 1048576</p>
+<p>/etc/sysctl.conf  修改</p>
+<p>fs.nr_open = 2097152</p>
+<p>fs.file-max = 2097152</p>
+<h2 id="log">log</h2>
+<div class="codehilite"><pre><span></span><span class="mi">1</span><span class="err">、</span><span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">haproxy</span><span class="o">/</span><span class="n">haproxy</span><span class="p">.</span><span class="n">conf</span>
+<span class="k">global</span>
+ <span class="n">log</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span> <span class="n">local3</span>     <span class="o">#</span><span class="n">local3</span><span class="err">是</span>
+ <span class="err">对应于</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rsyslog</span><span class="p">.</span><span class="n">conf</span><span class="err">中的配置，默认回收</span><span class="n">info</span><span class="err">的日志级别</span>
+ <span class="n">maxconn</span> <span class="mi">1024</span>
+ <span class="k">user</span> <span class="n">haproxy</span>
+ <span class="k">group</span> <span class="n">haproxy</span>
+ <span class="n">daemon</span>
+ <span class="n">pidfile</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">haproxy</span><span class="p">.</span><span class="n">pid</span>
+<span class="k">defaults</span>
+ <span class="k">mode</span> <span class="n">http</span>
+ <span class="n">log</span> <span class="k">global</span>
+ <span class="k">option</span> <span class="n">httplog</span>
+ <span class="k">option</span> <span class="n">dontlognull</span>
+ <span class="k">option</span> <span class="n">http</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="k">close</span>
+ <span class="k">option</span> <span class="n">forwardfor</span> <span class="k">except</span> <span class="mi">127</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span><span class="mi">8</span>
+ <span class="n">retries</span> <span class="mi">2</span>
+ <span class="k">option</span> <span class="n">redispatch</span>
+ <span class="n">maxconn</span> <span class="mi">1024</span>
+<span class="mi">2</span><span class="err">、编辑系统日志配置</span>
+<span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rsyslog</span><span class="p">.</span><span class="n">conf</span>
+<span class="err">默认有下面的设置，会读取</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rsyslog</span><span class="p">.</span><span class="n">d</span><span class="cm">/*.conf目录下的配置文件</span>
+<span class="cm">$IncludeConfig /etc/rsyslog.d/*.conf</span>
+<span class="cm">为haproxy创建一个独立的配置文件</span>
+
+<span class="cm">vim  /etc/rsyslog.d/haproxy.conf</span>
+<span class="cm">$ModLoad imudp</span>
+<span class="cm">$UDPServerRun 514</span>
+<span class="cm">local3.*     /var/log/haproxy.log</span>
+<span class="cm">#如果不加下面的的配置则除了在/var/log/haproxy.log中写入日志外，也会写入message文件</span>
+<span class="cm">&amp;~</span>
+<span class="cm">3、配置rsyslog的主配置文件，开启远程日志</span>
+<span class="cm">vim /etc/sysconfig/rsyslog</span>
+<span class="cm">SYSLOGD_OPTIONS=”-c 2 -r -m 0″</span>
+<span class="cm">#-c 2 使用兼容模式，默认是 -c 5</span>
+<span class="cm">#-r 开启远程日志</span>
+<span class="cm">#-m 0 标记时间戳。单位是分钟，为0时，表示禁用该功能</span>
+
+<span class="cm">配置完成后重启haproxy和rsyslog服务</span>
+<span class="cm">/etc/init.d/rsyslog restart</span>
+<span class="cm">/etc/init.d/haproxy restart</span>
+</pre></div>
+
+
+<h2 id="check-log">check log</h2>
+<div class="codehilite"><pre><span></span>健康检查日志
+
+<span class="nv">global</span>
+    <span class="nv">log</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span> <span class="nv">local3</span>
+<span class="nv">defaults</span>
+    <span class="nv">mode</span> <span class="nv">http</span>
+    <span class="nv">log</span><span class="o">-</span><span class="nv">format</span> <span class="o">%</span>{<span class="o">+</span><span class="nv">Q</span>}<span class="nv">o</span>\ <span class="o">%</span>{<span class="o">-</span><span class="nv">Q</span>}<span class="nv">ci</span>\ [<span class="o">%</span><span class="nv">T</span>]\ <span class="o">%</span><span class="nv">r</span>\ <span class="o">%</span><span class="nv">ST</span>\ <span class="o">%</span><span class="nv">B</span>\ <span class="o">%</span><span class="nv">cp</span>\ <span class="o">%</span><span class="nv">ms</span>\ <span class="o">%</span><span class="nv">ft</span>\ <span class="o">%</span><span class="nv">b</span>\ <span class="o">%</span><span class="nv">s</span>\ \<span class="o">%</span><span class="nv">Tq</span>\ <span class="o">%</span><span class="nv">Tw</span>\ <span class="o">%</span><span class="nv">Tc</span>\ <span class="o">%</span><span class="nv">Tr</span>\ <span class="o">%</span><span class="nv">Tt</span>\ <span class="o">%</span><span class="nv">tsc</span>\ <span class="o">%</span><span class="nv">ac</span>\ <span class="o">%</span><span class="nv">fc</span>\ <span class="o">%</span><span class="nv">bc</span>\ <span class="o">%</span><span class="nv">sc</span>\ <span class="o">%</span><span class="nv">rc</span>\ <span class="o">%</span><span class="nv">sq</span>\ <span class="o">%</span><span class="nv">bq</span>\ <span class="o">%</span><span class="nv">hrl</span>\ <span class="o">%</span><span class="nv">hsl</span>
+    <span class="nv">option</span> <span class="nv">log</span><span class="o">-</span><span class="nv">health</span><span class="o">-</span><span class="nv">checks</span>
+    <span class="nv">option</span> <span class="nv">httpclose</span>
+    <span class="nv">option</span> <span class="nv">forwardfor</span>
+
+在<span class="nv">front</span>和<span class="nv">backend</span>中可以单独添加
+
+ <span class="nv">log</span> <span class="nv">global</span> 开启日志
+
+在<span class="nv">backend</span>中添加不显示访问日志，显示检查后端日志
+
+<span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">rsyslog</span>.<span class="nv">conf</span>配置一样
+
+<span class="nv">cat</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="k">logrotate</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">haproxy</span>
+<span class="o">/</span><span class="nv">var</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">haproxy</span>.<span class="nv">log</span> {
+   <span class="nv">copytruncate</span>
+   <span class="nv">daily</span>
+   <span class="nv">dateext</span> 
+   <span class="nv">rotate</span> <span class="mi">7</span>
+   <span class="nv">missingok</span>
+   <span class="nv">notifempty</span>
+}
+</pre></div>
+
+
+<h2 id="service">service</h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/sh</span>
+<span class="c1">#</span>
+<span class="c1"># chkconfig: - 85 15</span>
+<span class="c1">#</span>
+<span class="c1"># description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \</span>
+<span class="c1">#              for high availability environments.</span>
+<span class="c1"># processname: haproxy</span>
+<span class="c1"># config: /usr/local/haproxy/conf/haproxy.cfg</span>
+<span class="c1"># pidfile: /var/run/haproxy.pid</span>
+<span class="c1">#</span>
+<span class="c1"># Version: 20150901</span>
+
+<span class="k">if</span> <span class="o">[</span> -f /etc/init.d/functions <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    . /etc/init.d/functions
+<span class="k">elif</span> <span class="o">[</span> -f /etc/rc.d/init.d/functions <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    . /etc/rc.d/init.d/functions
+<span class="k">else</span>
+    <span class="nb">exit</span> <span class="m">0</span>
+<span class="k">fi</span>
+
+<span class="nv">conf</span><span class="o">=</span>/usr/local/haproxy/conf/haproxy.cfg
+
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$conf</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[31m config file not exist! \033[0m&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+<span class="nv">error</span><span class="o">=</span><span class="k">$(</span>grep <span class="nb">bind</span> <span class="nv">$conf</span> <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> awk <span class="s1">&#39;$1!=1{print $3}&#39;</span><span class="k">)</span>
+
+<span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$error</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[31m vip is duplicate, please check: \033[0m&quot;</span>
+    <span class="k">for</span> vip in <span class="nv">$error</span>
+    <span class="k">do</span>
+        <span class="nb">echo</span> -e <span class="s2">&quot;\033[31m \t</span><span class="nv">$vip</span><span class="s2"> \033[0m&quot;</span>
+    <span class="k">done</span>
+<span class="k">else</span>
+    <span class="nb">echo</span> -e <span class="s2">&quot;\033[32m \t vip is not duplicate \033[0m&quot;</span>
+<span class="k">fi</span>
+
+
+<span class="c1">#BASENAME=&#39;haproxy&#39;</span>
+<span class="nv">BASENAME</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$0</span><span class="sb">`</span>
+<span class="nv">HAproxy_path_conf</span><span class="o">=</span><span class="s2">&quot;/usr/local/haproxy/conf&quot;</span>
+<span class="nv">HAproxy_path_sbin</span><span class="o">=</span><span class="s2">&quot;/usr/local/haproxy/sbin&quot;</span>
+
+<span class="k">if</span> <span class="o">[</span> -L <span class="nv">$0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nv">BASENAME</span><span class="o">=</span><span class="sb">`</span>find <span class="nv">$0</span> -name <span class="nv">$BASENAME</span> -printf %1<span class="sb">`</span>
+    <span class="nv">BASENAME</span><span class="o">=</span><span class="sb">`</span>basename <span class="nv">$BASENAME</span><span class="sb">`</span>
+<span class="k">fi</span>
+
+<span class="o">[</span> -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg <span class="o">]</span> <span class="o">||</span> <span class="nb">exit</span> <span class="m">1</span>
+
+<span class="nv">RETVAL</span><span class="o">=</span><span class="m">0</span>
+
+start<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -c -q -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Errors found in configuration file, check it with </span><span class="nv">$BASENAME</span><span class="s2"> check&quot;</span>
+    <span class="k">return</span> <span class="m">1</span>
+    <span class="k">fi</span>
+
+    <span class="nb">echo</span> -n <span class="s2">&quot;Starting </span><span class="nv">$BASENAME</span><span class="s2">:&quot;</span>
+    daemon <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -D -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg -p /var/run/<span class="nv">$BASENAME</span>.pid
+    <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
+    <span class="nb">echo</span> 
+    <span class="o">[</span> <span class="nv">$RETVAL</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> touch /var/lock/subsys/<span class="nv">$BASENAME</span>
+    <span class="k">return</span> <span class="nv">$RETVAL</span>
+<span class="o">}</span>
+
+stop<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">echo</span> -n <span class="s2">&quot;Shutting down </span><span class="nv">$BASENAME</span><span class="s2">: &quot;</span>
+    killproc <span class="nv">$BASENAME</span> -USR1
+    <span class="nv">RETVAL</span><span class="o">=</span><span class="nv">$?</span>
+    <span class="nb">echo</span>
+    <span class="o">[</span> <span class="nv">$RETVAL</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -f /var/lock/subsys/<span class="nv">$BASENAME</span>
+    <span class="o">[</span> <span class="nv">$RETVAL</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -f /var/run/<span class="nv">$BASENAME</span>.pid
+    <span class="k">return</span> <span class="nv">$RETVAL</span>
+<span class="o">}</span>
+
+restart<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -c -q -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Errors found in configuration file, check it with </span><span class="nv">$BASENAME</span><span class="s2"> check&quot;</span>
+    <span class="k">return</span> <span class="m">1</span>
+    <span class="k">fi</span>
+    stop
+    sleep <span class="m">1</span>
+    start
+<span class="o">}</span>
+
+reload<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -c -q -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -ne <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;Errors found in configuration file, check it with &#39;</span><span class="nv">$BASENAME</span><span class="s2"> check&#39;.&quot;</span>
+        <span class="k">return</span> <span class="m">1</span>
+    <span class="k">fi</span>
+    <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -D -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg -p /var/run/<span class="nv">$BASENAME</span>.pid -sf <span class="k">$(</span>cat /var/run/<span class="nv">$BASENAME</span>.pid<span class="k">)</span>
+    <span class="nb">echo</span> <span class="s1">&#39;HAproxy is reloaded...&#39;</span>
+<span class="o">}</span>
+
+status<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">p_count</span><span class="o">=</span><span class="k">$(</span>ps -ef <span class="p">|</span> grep haproxy <span class="p">|</span> grep -v grep <span class="p">|</span> wc -l<span class="k">)</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$p_count</span> -ge <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;/var/run/</span><span class="nv">$BASENAME</span><span class="s2">.pid&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+            <span class="nb">echo</span> <span class="s1">&#39;haproxy is running...&#39;</span>
+        <span class="k">else</span>
+            <span class="nb">echo</span> <span class="s1">&#39;haproxy is stopping...&#39;</span>
+        <span class="k">fi</span>
+    <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s1">&#39;haproxy is stopping...&#39;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+
+check<span class="o">()</span> <span class="o">{</span>
+  <span class="nv">$HAproxy_path_sbin</span>/<span class="nv">$BASENAME</span> -c -q -V -f <span class="nv">$HAproxy_path_conf</span>/<span class="nv">$BASENAME</span>.cfg
+<span class="o">}</span>
+
+<span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> in
+    start<span class="o">)</span>
+    start
+    <span class="p">;;</span>
+    stop<span class="o">)</span>
+    stop
+    <span class="p">;;</span>
+    restart<span class="o">)</span>
+    restart
+    <span class="p">;;</span>
+    status<span class="o">)</span>
+    status
+    <span class="p">;;</span>
+    reload<span class="o">)</span>
+    reload
+    <span class="p">;;</span>
+    check<span class="o">)</span>
+    check
+    <span class="p">;;</span>
+    *<span class="o">)</span>
+    <span class="nb">echo</span> $<span class="s2">&quot;Usage: </span><span class="nv">$BASENAME</span><span class="s2"> {start|stop|restart|status|reload|check}&quot;</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">esac</span>
+
+<span class="nb">exit</span> <span class="nv">$?</span>
+</pre></div>
+</td></tr></table>
+
+<h2 id="keepalived">keepalived</h2>
+<div class="codehilite"><pre><span></span><span class="nv">keepalived</span>.<span class="nv">conf</span>
+
+<span class="o">!</span> <span class="nv">Configuration</span> <span class="nv">File</span> <span class="k">for</span> <span class="nv">keepalived</span>
+
+<span class="nv">vrrp_script</span> <span class="nv">chk_http_port</span> {
+        <span class="nv">script</span> <span class="s2">&quot;</span><span class="s">/etc/keepalived/check_haproxy.sh</span><span class="s2">&quot;</span>
+        <span class="nv">interval</span> <span class="mi">2</span>
+        <span class="nv">weight</span> <span class="mi">2</span>
+
+
+}
+<span class="nv">global_defs</span> {
+   <span class="nv">notification_email</span> {
+        <span class="nv">test</span>
+   }
+   <span class="nv">router_id</span> <span class="nv">test_haproxy</span>
+}
+
+<span class="nv">vrrp_instance</span> <span class="nv">VI_1</span> {
+    <span class="nv">state</span> <span class="nv">BACKUP</span> 
+    <span class="nv">interface</span> <span class="nv">eth1</span>
+    <span class="nv">virtual_router_id</span> <span class="mi">27</span>
+    <span class="nv">priority</span> <span class="mi">100</span>
+    <span class="nv">nopreempt</span>
+    <span class="nv">advert_int</span> <span class="mi">1</span>
+ <span class="nv">garp_master_delay</span> <span class="mi">1</span>
+    <span class="nv">authentication</span> {
+        <span class="nv">auth_type</span> <span class="nv">PASS</span>
+        <span class="nv">auth_pass</span> <span class="mi">1111</span>
+    }
+    <span class="nv">virtual_ipaddress</span> {
+
+        <span class="mi">10</span>.<span class="mi">141</span>.<span class="mi">10</span>.<span class="mi">111</span>  <span class="nv">dev</span> <span class="nv">eth1</span> <span class="nv">scope</span> <span class="nv">global</span> #<span class="nv">test</span> <span class="nv">VIP</span>
+
+}
+   <span class="nv">track_script</span> {
+        <span class="nv">chk_http_port</span>
+   }
+}
+
+
+
+<span class="nv">cat</span> <span class="nv">check_haproxy</span>.<span class="nv">sh</span> 
+#<span class="o">!/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">bash</span>
+<span class="nv">SendMailProgram</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">sendEmail</span>
+
+
+<span class="nv">A</span><span class="o">=</span>`<span class="nv">ps</span> <span class="o">-</span><span class="nv">C</span> <span class="nv">haproxy</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">header</span> <span class="o">|</span><span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span>`
+<span class="k">if</span> [ <span class="mh">$A</span> <span class="o">-</span><span class="nv">eq</span> <span class="mi">0</span> ]<span class="c1">;then</span>
+        #<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">haproxy</span><span class="o">/</span><span class="nv">sbin</span><span class="o">/</span><span class="nv">haproxy</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">haproxy</span><span class="o">/</span><span class="nv">conf</span><span class="o">/</span><span class="nv">haproxy</span>.<span class="nv">cfg</span>
+        <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">haproxy</span> <span class="nv">restart</span>
+        <span class="nv">sleep</span> <span class="mi">2</span>
+        <span class="k">if</span> [ `<span class="nv">ps</span> <span class="o">-</span><span class="nv">C</span> <span class="nv">haproxy</span> <span class="o">--</span><span class="nv">no</span><span class="o">-</span><span class="nv">header</span> <span class="o">|</span><span class="nv">wc</span> <span class="o">-</span><span class="nv">l</span>` <span class="o">-</span><span class="nv">eq</span> <span class="mi">0</span> ]<span class="c1">;then</span>
+                <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">init</span>.<span class="nv">d</span><span class="o">/</span><span class="nv">keepalived</span> <span class="nv">restart</span>
+                <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">sendEmail</span> <span class="o">-</span><span class="nv">f</span>  ${<span class="nv">MailFrom</span>[@]} <span class="o">-</span><span class="nv">t</span> ${<span class="nv">MailTo</span>[@]}   <span class="o">-</span><span class="nv">s</span> $<span class="nv">MailServer</span> <span class="o">-</span><span class="nv">u</span> <span class="s2">&quot;</span><span class="s">ERROR: [$(hostname)] keepalived haproxy switch</span><span class="s2">&quot;</span> <span class="o">-</span><span class="nv">xu</span> $<span class="nv">MailUser</span> <span class="o">-</span><span class="nv">xp</span> $<span class="nv">MailPass</span> <span class="o">-</span><span class="nv">m</span> <span class="s2">&quot;</span><span class="s">[$(hostname)] keepalived haproxy switch. Please check!!!!!</span><span class="s2">&quot;</span>
+
+
+
+        <span class="nv">fi</span>
+<span class="nv">fi</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../trafficserver/" title="trafficserver" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                trafficserver
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../docker/" title="docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                docker
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

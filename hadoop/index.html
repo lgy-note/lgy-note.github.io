@@ -1,0 +1,1753 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>hadoop - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#hadoop" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                hadoop
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link md-tabs__link--active">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mongodb/" title="mongodb" class="md-nav__link">
+      mongodb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        hadoop
+      </label>
+    
+    <a href="./" title="hadoop" class="md-nav__link md-nav__link--active">
+      hadoop
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop" class="md-nav__link">
+    hadoop性能测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark" class="md-nav__link">
+    spark变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namenode-ha" class="md-nav__link">
+    双namenode ha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    测试例子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop_1" class="md-nav__link">
+    hadoop安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nativecodeloader" class="md-nav__link">
+    nativecodeloader警告
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambrai" class="md-nav__link">
+    ambrai快速部署
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop" class="md-nav__link">
+    hadoop性能测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spark" class="md-nav__link">
+    spark变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#namenode-ha" class="md-nav__link">
+    双namenode ha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    测试例子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hadoop_1" class="md-nav__link">
+    hadoop安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nativecodeloader" class="md-nav__link">
+    nativecodeloader警告
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ambrai" class="md-nav__link">
+    ambrai快速部署
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>hadoop</h1>
+                
+                <h2 id="hadoop">hadoop性能测试</h2>
+<div class="codehilite"><pre><span></span>测试<span class="nv">hdfs</span>写
+<span class="nv">hadoop</span> <span class="nv">jar</span> <span class="nv">share</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">/</span><span class="nv">mapreduce</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">-</span><span class="nv">mapreduce</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">jobclient</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">7</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">tests</span>.<span class="nv">jar</span>  <span class="nv">TestDFSIO</span>  
+<span class="o">-</span><span class="nv">write</span> <span class="o">-</span><span class="nv">nrFiles</span> <span class="mi">10</span> <span class="o">-</span><span class="nv">fileSize</span> <span class="mi">1000</span>
+测试<span class="nv">hdfs</span>读
+<span class="nv">hadoop</span> <span class="nv">jar</span> <span class="nv">share</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">/</span><span class="nv">mapreduce</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">-</span><span class="nv">mapreduce</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">jobclient</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">7</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">tests</span>.<span class="nv">jar</span>  <span class="nv">TestDFSIO</span>  
+<span class="o">-</span><span class="nv">read</span> <span class="o">-</span><span class="nv">nrFiles</span> <span class="mi">10</span> <span class="o">-</span><span class="nv">fileSize</span> <span class="mi">1000</span>
+清理数据
+<span class="nv">hadoop</span> <span class="nv">jar</span> <span class="nv">share</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">/</span><span class="nv">mapreduce</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">-</span><span class="nv">mapreduce</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">jobclient</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">7</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">tests</span>.<span class="nv">jar</span>  <span class="nv">TestDFSIO</span>  <span class="o">-</span><span class="nv">clean</span>
+
+<span class="nv">Total</span> <span class="nv">MBytes</span> <span class="nv">processed</span> ： 总共需要写入的数据量 <span class="mi">100</span><span class="nv">MB</span>
+<span class="nv">Throughput</span> <span class="nv">mb</span><span class="o">/</span><span class="nv">sec</span> ：总共需要写入的数据量<span class="o">/</span>（每个<span class="nv">map</span>任务实际写入数据的执行时间之和（这个时间会远小于
+<span class="nv">Test</span> <span class="k">exec</span> <span class="nv">time</span> <span class="nv">sec</span>））＝＝》<span class="mi">100</span><span class="o">/</span><span class="ss">(</span><span class="nv">map1</span>写时间<span class="o">+</span><span class="nv">map2</span>写时间<span class="o">+</span>...<span class="ss">)</span>
+<span class="nv">Average</span> <span class="nv">IO</span> <span class="nv">rate</span> <span class="nv">mb</span><span class="o">/</span><span class="nv">sec</span> ：（每个<span class="nv">map</span>需要写入的数据量<span class="o">/</span>每个<span class="nv">map</span>任务实际写入数据的执行时间）之和<span class="o">/</span>任务数
+＝＝》<span class="ss">(</span><span class="mi">20</span><span class="o">/</span><span class="nv">map1</span>写时间＋<span class="mi">20</span><span class="o">/</span><span class="nv">map2</span>写时间<span class="o">+</span>...<span class="ss">)</span><span class="o">/</span><span class="mi">1000</span>，所以这个值跟上面一个值总是存在差异。
+<span class="nv">IO</span> <span class="nv">rate</span> <span class="nv">std</span> <span class="nv">deviation</span> ：上一个值的标准差
+<span class="nv">Test</span> <span class="k">exec</span> <span class="nv">time</span> <span class="nv">sec</span> ：整个<span class="nv">job</span>的执行时间
+
+
+<span class="nv">mapreduces</span>测试
+<span class="nv">hadoop</span> <span class="nv">jar</span> <span class="nv">share</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">/</span><span class="nv">mapreduce</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">-</span><span class="nv">mapreduce</span><span class="o">-</span><span class="nv">client</span><span class="o">-</span><span class="nv">jobclient</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">7</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">tests</span>.<span class="nv">jar</span> <span class="nv">mrbench</span> 
+<span class="o">-</span><span class="nv">baseDir</span> <span class="o">/</span><span class="nv">tmp</span><span class="o">/</span><span class="nv">mrbench</span> <span class="o">-</span><span class="nv">maps</span> <span class="mi">100</span> <span class="o">-</span><span class="nv">reduces</span> <span class="mi">100</span> <span class="o">-</span><span class="nv">numRuns</span> <span class="mi">1</span>
+</pre></div>
+
+
+<h2 id="spark">spark变量</h2>
+<div class="codehilite"><pre><span></span><span class="n">spark</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">spark</span><span class="o">-</span><span class="n">env</span><span class="p">.</span><span class="n">sh</span>
+
+<span class="n">SPARK_WORKER_MEMORY</span><span class="o">=</span><span class="mi">6</span><span class="k">g</span>
+<span class="n">SPARK_WORKER_CORES</span><span class="o">=</span><span class="mi">8</span>
+<span class="n">SPARK_SSH_OPTS</span><span class="o">=</span><span class="ss">&quot;-p 27005&quot;</span>
+<span class="n">export</span> <span class="n">JAVA_HOME</span><span class="o">=</span><span class="ss">&quot;/usr/java/jre1.8.0_121/&quot;</span>
+</pre></div>
+
+
+<h2 id="namenode-ha">双namenode ha</h2>
+<div class="codehilite"><pre><span></span><span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">blog</span><span class="p">.</span><span class="s s-Atom">csdn</span><span class="p">.</span><span class="s s-Atom">net</span><span class="o">/</span><span class="s s-Atom">carl810224</span><span class="o">/</span><span class="s s-Atom">article</span><span class="o">/</span><span class="s s-Atom">details</span><span class="o">/</span><span class="mi">52160418</span>
+<span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">blog</span><span class="p">.</span><span class="s s-Atom">leanote</span><span class="p">.</span><span class="s s-Atom">com</span><span class="o">/</span><span class="s s-Atom">post</span><span class="o">/</span><span class="s s-Atom">lh1649896772@</span><span class="mf">163.</span><span class="s s-Atom">com</span><span class="o">/</span><span class="nv">Hadoop</span>
+<span class="c1">%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA%EF%BC%88%E6%B5%8B%E8%AF%95%EF%BC%89</span>
+
+
+
+<span class="nv">Hadoop0</span>           <span class="nv">JDK</span><span class="o">/</span><span class="nv">Zookeeper</span><span class="o">/</span><span class="nv">Hadoop</span>   <span class="s s-Atom">namenode</span><span class="o">/</span><span class="s s-Atom">zkfc</span><span class="o">/</span><span class="s s-Atom">journalnode</span><span class="o">/</span><span class="s s-Atom">resourcemanager</span><span class="o">/</span><span class="nv">QuoqumPeerMain</span>
+<span class="nv">Hadoop1</span>          <span class="nv">JDK</span><span class="o">/</span><span class="nv">Zookeeper</span><span class="o">/</span><span class="nv">Hadoop</span>                      <span class="s s-Atom">namenode</span><span class="o">/</span><span class="s s-Atom">zkfc</span><span class="o">/</span><span class="s s-Atom">journalnode</span><span class="o">/</span><span class="s s-Atom">resourcemanager</span><span class="o">/</span><span class="nv">QuoqumPeerMain</span>
+<span class="nv">Hadoop2</span>        <span class="nv">JDK</span><span class="o">/</span><span class="nv">Zookeeper</span><span class="o">/</span><span class="nv">Hadoop</span>
+<span class="s s-Atom">datanode</span><span class="o">//</span><span class="s s-Atom">journalnode</span><span class="o">/</span><span class="s s-Atom">nodemanager</span><span class="o">/</span><span class="nv">QuoqumPeerMain</span>
+
+<span class="s s-Atom">wget</span> <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">mirrors</span><span class="p">.</span><span class="s s-Atom">aliyun</span><span class="p">.</span><span class="s s-Atom">com</span><span class="o">/</span><span class="s s-Atom">apache</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="p">.</span><span class="s s-Atom">tar</span><span class="p">.</span><span class="s s-Atom">gz</span>
+<span class="s s-Atom">cd</span> <span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span>
+<span class="s s-Atom">cp</span> <span class="s s-Atom">conf</span><span class="o">/</span><span class="s s-Atom">zoo_sample</span><span class="p">.</span><span class="s s-Atom">cfg</span>  <span class="s s-Atom">conf</span><span class="o">/</span><span class="s s-Atom">zoo</span><span class="p">.</span><span class="s s-Atom">cfg</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">conf</span><span class="o">/</span><span class="s s-Atom">zoo</span><span class="p">.</span><span class="s s-Atom">cfg</span>
+<span class="s s-Atom">tickTime</span><span class="o">=</span><span class="mi">2000</span>   <span class="s s-Atom">//客户端心跳时间（毫秒）</span>
+<span class="s s-Atom">initLimit</span><span class="o">=</span><span class="mi">10</span>     <span class="s s-Atom">//循序心跳间隔的最大时间</span>
+<span class="s s-Atom">syncLimit</span><span class="o">=</span><span class="mi">5</span>     <span class="s s-Atom">//同步时限</span>
+<span class="s s-Atom">dataDir=/usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">data</span>   <span class="s s-Atom">//数据存储目录</span>
+<span class="s s-Atom">dataLogDir=/usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">log</span>   <span class="s s-Atom">//数据日志存储目录</span>
+<span class="s s-Atom">clientPort</span><span class="o">=</span><span class="mi">2181</span>     <span class="s s-Atom">//端口号</span>
+<span class="s s-Atom">maxClientCnxns</span><span class="o">=</span><span class="mi">2000</span>    <span class="s s-Atom">//连接zookeeper的最大数量</span>
+<span class="s s-Atom">server</span><span class="mf">.1</span><span class="o">=</span><span class="s s-Atom">hadoop0:</span><span class="mi">2888</span><span class="s s-Atom">:</span><span class="mi">3888</span>     <span class="s s-Atom">//设置zookeeper的节点</span>
+<span class="s s-Atom">server</span><span class="mf">.2</span><span class="o">=</span><span class="s s-Atom">hadoop1:</span><span class="mi">2888</span><span class="s s-Atom">:</span><span class="mi">3888</span>
+<span class="s s-Atom">server</span><span class="mf">.3</span><span class="o">=</span><span class="s s-Atom">hadoop2:</span><span class="mi">2888</span><span class="s s-Atom">:</span><span class="mi">3888</span>
+
+<span class="s s-Atom">mkdir</span> <span class="o">-</span><span class="s s-Atom">p</span> <span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">log</span>
+<span class="s s-Atom">echo</span> <span class="s s-Atom">&#39;1&#39;</span> <span class="o">&gt;</span> <span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">myid</span>  <span class="s s-Atom">其它两个节点后分别修改内容为2和3，以此类推</span>
+<span class="s s-Atom">启动命令</span>  <span class="p">.</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">zkServer</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span>
+
+<span class="s s-Atom">修改hadoop配置文件</span>
+<span class="s s-Atom">cd</span> <span class="s s-Atom">hadoop</span><span class="o">-</span><span class="mf">2.7.0</span><span class="o">/</span><span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">/</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">hadoop</span><span class="o">-</span><span class="s s-Atom">env</span><span class="p">.</span><span class="s s-Atom">sh</span>
+<span class="s s-Atom">按如下内容进行配置（具体配置情况需按照生产环境和条件进行配置）:</span>
+<span class="s s-Atom">export</span> <span class="nv">JAVA_HOME</span><span class="s s-Atom">=/home</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">/</span><span class="s s-Atom">apache</span><span class="o">/</span><span class="s s-Atom">jdk1</span><span class="mf">.8.0</span><span class="k">_</span><span class="mi">101</span>    <span class="s s-Atom">//设置jdk路径</span>
+<span class="s s-Atom">export</span> <span class="nv">HADOOP_SSH_OPTS</span><span class="s s-Atom">=</span><span class="s2">&quot;-p 27005&quot;</span>   <span class="s s-Atom">ssh端口</span>
+<span class="s s-Atom">export</span> <span class="nv">HADOOP_HEAPSIZE</span><span class="o">=</span><span class="mi">1024</span>      <span class="s s-Atom">//设置Hadoop位置文本的大小</span>
+<span class="s s-Atom">export</span> <span class="nv">HADOOP_NAMENODE_OPTS</span><span class="s s-Atom">=</span><span class="s2">&quot;-Xmx1024m</span>
+<span class="s2">-Dhadoop.security.logger=${HADOOP_SECURITY_LOGGER:-INFO,RFAS}</span>
+<span class="s2">-Dhdfs.audit.logger=${HDFS_AUDIT_LOGGER:-INFO,NullAppender} $HADOOP_NAMENODE_OPTS&quot;</span>     
+<span class="s s-Atom">//设置Namenode内存大小，此处根据实际情况设定其大小</span>
+<span class="s s-Atom">export</span> <span class="nv">HADOOP_DATANODE_OPTS</span><span class="s s-Atom">=</span><span class="s2">&quot;-Xmx1024m</span>
+<span class="s2">-Dhadoop.security.logger=ERROR,RFAS $HADOOP_DATANODE_OPTS   //设置Datanode内存大小</span>
+<span class="s2">export HADOOP_PORTMAP_OPTS=&quot;</span><span class="o">-</span><span class="nv">Xmx1024m</span> <span class="err">$</span><span class="nv">HADOOP_PORTMAP_OPTS</span><span class="err">&quot;</span>   <span class="s s-Atom">//修改至1024m</span>
+
+<span class="s s-Atom">指定slaves</span>
+<span class="s s-Atom">vi</span> <span class="s s-Atom">etc</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">/</span><span class="s s-Atom">slaves</span>
+<span class="s s-Atom">hadoop1</span>
+<span class="s s-Atom">hadoop2</span>
+
+<span class="s s-Atom">配置core</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="nn">xml</span><span class="p">:</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">core</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span>
+<span class="o">&lt;</span><span class="s s-Atom">configuration</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定hdfs的nameservices名称为mycluster，与hdfs</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml的HA配</span>
+<span class="nf">置相同</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">fs</span><span class="p">.</span><span class="s s-Atom">defaultFS&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="nn">hdfs</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">mycluster&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">设置zookeeper集群的配置和端口</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">zookeeper</span><span class="p">.</span><span class="s s-Atom">quorum&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span> <span class="s s-Atom">hadoop0:</span><span class="mi">2181</span><span class="p">,</span><span class="s s-Atom">hadoop1:</span><span class="mi">2181</span><span class="p">,</span><span class="s s-Atom">hadoop2:</span><span class="mi">2181</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">指定缓存文件存储的路径和大小（可以设置的大一些，单位：字节）</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">hadoop</span><span class="p">.</span><span class="s s-Atom">tmp</span><span class="p">.</span><span class="s s-Atom">dir&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">-</span><span class="mf">2.7.0</span><span class="o">/</span><span class="s s-Atom">tmp&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">io</span><span class="p">.</span><span class="s s-Atom">file</span><span class="p">.</span><span class="s s-Atom">buffer</span><span class="p">.</span><span class="s s-Atom">size&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">131072</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置hdfs文件被永久删除前保留的时间（单位：分钟），默认值为0，表明垃圾回收站功能关闭</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">fs</span><span class="p">.</span><span class="s s-Atom">trash</span><span class="p">.</span><span class="s s-Atom">interval&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">10080</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;/configuration</span><span class="o">&gt;</span>
+
+<span class="s s-Atom">配置hdfs</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="nn">xml</span><span class="p">:</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">hdfs</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span>
+<span class="o">&lt;</span><span class="s s-Atom">configuration</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">数据备份的个数</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">replication&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">1</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">关闭权限验证</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">permissions</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">false&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">开启WebHDFS功能（基于REST的接口服务）</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">webhdfs</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+ <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">//////////////以下为HDFS</span> <span class="nv">HA的配置</span><span class="s s-Atom">//////////////</span> <span class="p">--&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">指定hdfs的nameservices名称为mycluster</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">nameservices&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">mycluster&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定mycluster的两个namenode的名称分别为nn1</span><span class="p">,</span><span class="nf">nn2</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">namenodes</span><span class="p">.</span><span class="s s-Atom">mycluster&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">nn1</span><span class="p">,</span><span class="s s-Atom">nn2&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+ <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">配置nn1</span><span class="p">,</span><span class="nf">nn2的rpc通信端口</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">rpc</span><span class="o">-</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">mycluster</span><span class="p">.</span><span class="s s-Atom">nn1&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span> <span class="s s-Atom">hadoop0:</span><span class="mi">8020</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">rpc</span><span class="o">-</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">mycluster</span><span class="p">.</span><span class="s s-Atom">nn2&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span> <span class="s s-Atom">hadoop1:</span><span class="mi">8020</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">配置nn1</span><span class="p">,</span><span class="nf">nn2的http通信端口</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">http</span><span class="o">-</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">mycluster</span><span class="p">.</span><span class="s s-Atom">nn1&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0:</span><span class="mi">50070</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">http</span><span class="o">-</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">mycluster</span><span class="p">.</span><span class="s s-Atom">nn2&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop1:</span><span class="mi">50070</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定namenode元数据存储在journalnode中的路径</span><span class="p">,</span><span class="nf">至少3个journalnode</span><span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">shared</span><span class="p">.</span><span class="s s-Atom">edits</span><span class="p">.</span><span class="s s-Atom">dir&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span> <span class="nn">qjournal</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">hadoop0:</span><span class="mi">8485</span><span class="p">;</span><span class="s s-Atom">hadoop1:</span><span class="mi">8485</span><span class="p">;</span><span class="s s-Atom">hadoop2:</span><span class="mi">8485</span><span class="o">/</span><span class="s s-Atom">mycluster&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定HDFS客户端连接active</span> <span class="nf">namenode的java类</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">client</span><span class="p">.</span><span class="s s-Atom">failover</span><span class="p">.</span><span class="s s-Atom">proxy</span><span class="p">.</span><span class="s s-Atom">provider</span><span class="p">.</span><span class="s s-Atom">mycluster&lt;/name</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">org</span><span class="p">.</span><span class="s s-Atom">apache</span><span class="p">.</span><span class="s s-Atom">hadoop</span><span class="p">.</span><span class="s s-Atom">hdfs</span><span class="p">.</span><span class="s s-Atom">server</span><span class="p">.</span><span class="s s-Atom">namenode</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="nv">ConfiguredFailoverProxyProvider</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置隔离机制为ssh</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">fencing</span><span class="p">.</span><span class="s s-Atom">methods&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="nf">sshfence</span><span class="p">(</span><span class="nn">spark</span><span class="p">:</span><span class="mi">27005</span><span class="p">)</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>    <span class="s s-Atom">用户名和ssh端口</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">指定秘钥的位置</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">fencing</span><span class="p">.</span><span class="s s-Atom">ssh</span><span class="p">.</span><span class="s s-Atom">private</span><span class="o">-</span><span class="s s-Atom">key</span><span class="o">-</span><span class="s s-Atom">files&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value&gt;/root/.ssh</span><span class="o">/</span><span class="s s-Atom">id_dsa&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">指定journalnode日志文件存储的路径</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">journalnode</span><span class="p">.</span><span class="s s-Atom">edits</span><span class="p">.</span><span class="s s-Atom">dir&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value&gt;/usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">-</span><span class="mf">2.7.0</span><span class="o">/</span><span class="s s-Atom">tmp</span><span class="o">/</span><span class="s s-Atom">journal&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">开启自动故障转移</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">automatic</span><span class="o">-</span><span class="s s-Atom">failover</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;/configuration</span><span class="o">&gt;</span>
+
+<span class="s s-Atom">配置mapred</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="nn">xml</span><span class="p">:</span>
+<span class="s s-Atom">cp</span> <span class="s s-Atom">mapred</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span><span class="p">.</span><span class="s s-Atom">template</span> <span class="s s-Atom">mapred</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">mapred</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span>
+<span class="o">&lt;</span><span class="s s-Atom">configuration</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">指定MapReduce计算框架使用YARN</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">framework</span><span class="p">.</span><span class="s s-Atom">name&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">yarn&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定jobhistory</span> <span class="nf">server的rpc地址</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">jobhistory</span><span class="p">.</span><span class="s s-Atom">address&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0:</span><span class="mi">10020</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定jobhistory</span> <span class="nf">server的http地址</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">jobhistory</span><span class="p">.</span><span class="s s-Atom">webapp</span><span class="p">.</span><span class="s s-Atom">address&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0:</span><span class="mi">19888</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">开启uber模式（针对小作业的优化）</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">job</span><span class="p">.</span><span class="s s-Atom">ubertask</span><span class="p">.</span><span class="s s-Atom">enable&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置启动uber模式的最大map数</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">job</span><span class="p">.</span><span class="s s-Atom">ubertask</span><span class="p">.</span><span class="s s-Atom">maxmaps&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">3</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置启动uber模式的最大reduce数</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce</span><span class="p">.</span><span class="s s-Atom">job</span><span class="p">.</span><span class="s s-Atom">ubertask</span><span class="p">.</span><span class="s s-Atom">maxreduces&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">1</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;/configuration</span><span class="o">&gt;</span>
+
+<span class="s s-Atom">配置yarn</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml文件:</span>
+<span class="s s-Atom">vim</span> <span class="s s-Atom">yarn</span><span class="o">-</span><span class="s s-Atom">site</span><span class="p">.</span><span class="s s-Atom">xml</span>
+<span class="o">&lt;</span><span class="s s-Atom">configuration</span><span class="o">&gt;</span>
+<span class="nv">NodeManager上运行的附属服务</span><span class="s s-Atom">，需配置成mapreduce_shuffle才可运行MapReduce程序</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">nodemanager</span><span class="p">.</span><span class="s s-Atom">aux</span><span class="o">-</span><span class="s s-Atom">services&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">mapreduce_shuffle&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">配置Web</span> <span class="nv">Application</span> <span class="nv">Proxy安全代理</span><span class="nf">（防止yarn被攻击）</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">web</span><span class="o">-</span><span class="s s-Atom">proxy</span><span class="p">.</span><span class="s s-Atom">address&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop1:</span><span class="mi">8888</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">开启日志</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">log</span><span class="o">-</span><span class="s s-Atom">aggregation</span><span class="o">-</span><span class="s s-Atom">enable&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置nodemanager可用的资源内存</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">nodemanager</span><span class="p">.</span><span class="s s-Atom">resource</span><span class="p">.</span><span class="s s-Atom">memory</span><span class="o">-</span><span class="s s-Atom">mb&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">4096</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置nodemanager可用的资源CPU</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">nodemanager</span><span class="p">.</span><span class="s s-Atom">resource</span><span class="p">.</span><span class="s s-Atom">cpu</span><span class="o">-</span><span class="s s-Atom">vcores&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mi">4</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">//////////////以下为YARN</span> <span class="nv">HA的配置</span><span class="s s-Atom">//////////////</span> <span class="p">--&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">开启YARN</span> <span class="nv">HA</span> <span class="p">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">启用自动故障转移</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">automatic</span><span class="o">-</span><span class="s s-Atom">failover</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">指定YARN</span> <span class="nv">HA的名称</span> <span class="p">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">cluster</span><span class="o">-</span><span class="s s-Atom">id&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">yarncluster&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">指定两个resourcemanager的名称</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">ha</span><span class="p">.</span><span class="s s-Atom">rm</span><span class="o">-</span><span class="s s-Atom">ids&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">rm1</span><span class="p">,</span><span class="s s-Atom">rm2&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置rm1，rm2的主机</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">hostname</span><span class="p">.</span><span class="s s-Atom">rm1&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">hostname</span><span class="p">.</span><span class="s s-Atom">rm2&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop1&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置YARN的http端口</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">webapp</span><span class="p">.</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">rm1&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0:</span><span class="mi">8088</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">webapp</span><span class="p">.</span><span class="s s-Atom">address</span><span class="p">.</span><span class="s s-Atom">rm2&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop1:</span><span class="mi">8088</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置zookeeper的地址</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">zk</span><span class="o">-</span><span class="s s-Atom">address&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">hadoop0:</span><span class="mi">2181</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置zookeeper的存储位置</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">zk</span><span class="o">-</span><span class="s s-Atom">state</span><span class="o">-</span><span class="s s-Atom">store</span><span class="p">.</span><span class="s s-Atom">parent</span><span class="o">-</span><span class="s s-Atom">path&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value&gt;/rmstore&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">开启yarn</span> <span class="s s-Atom">resourcemanager</span> <span class="nf">restart</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">recovery</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="nf">配置resourcemanager的状态存储到zookeeper中</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">store</span><span class="p">.</span><span class="s s-Atom">class&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">org</span><span class="p">.</span><span class="s s-Atom">apache</span><span class="p">.</span><span class="s s-Atom">hadoop</span><span class="p">.</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">server</span><span class="p">.</span><span class="s s-Atom">resourcemanager</span><span class="p">.</span><span class="s s-Atom">recovery</span><span class="p">.</span><span class="nv">ZKRMStateStore</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">开启yarn</span> <span class="s s-Atom">nodemanager</span> <span class="nf">restart</span> <span class="o">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">nodemanager</span><span class="p">.</span><span class="s s-Atom">recovery</span><span class="p">.</span><span class="s s-Atom">enabled&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="s s-Atom">true&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;</span><span class="p">!</span><span class="s s-Atom">--</span> <span class="s s-Atom">配置nodemanager</span> <span class="nv">IPC的通信端口</span> <span class="p">--&gt;</span>
+  <span class="o">&lt;</span><span class="s s-Atom">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">name</span><span class="o">&gt;</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">nodemanager</span><span class="p">.</span><span class="s s-Atom">address&lt;/name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="s s-Atom">value</span><span class="o">&gt;</span><span class="mf">0.0.0.0</span><span class="s s-Atom">:</span><span class="mi">45454</span><span class="s s-Atom">&lt;/value</span><span class="o">&gt;</span>
+  <span class="s s-Atom">&lt;/property</span><span class="o">&gt;</span>
+<span class="s s-Atom">&lt;/configuration</span><span class="o">&gt;</span>
+
+<span class="nv">Hadoop集群初始化</span>
+<span class="s s-Atom">zookeeper</span>
+<span class="s s-Atom">echo</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">myid</span>
+<span class="s s-Atom">echo</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">myid</span>
+<span class="s s-Atom">echo</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span><span class="s s-Atom">data</span><span class="o">/</span><span class="s s-Atom">myid</span>
+
+<span class="s s-Atom">在所有节点上启动zookeeper集群：cd</span> <span class="o">/</span><span class="s s-Atom">usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">zookeeper</span><span class="o">-</span><span class="mf">3.4.6</span><span class="o">/</span> <span class="s s-Atom">&amp;&amp;</span> <span class="p">.</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">zkServer</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span>
+            <span class="s s-Atom">查看zookeeper状态:</span>  <span class="p">.</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">zkServer</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">status</span>
+
+<span class="s s-Atom">在hadoop0上格式化zkfc：</span>     <span class="p">.</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">hdfs</span> <span class="s s-Atom">zkfc</span> <span class="o">-</span><span class="s s-Atom">formatZK</span>
+<span class="s s-Atom">在所有节点上启动journalnode：</span><span class="p">.</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">-</span><span class="s s-Atom">daemon</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span> <span class="s s-Atom">journalnode</span>
+
+<span class="s s-Atom">在Hadoop0</span> <span class="s s-Atom">格式化hdfs</span>   <span class="p">.</span><span class="o">/</span><span class="s s-Atom">bin</span><span class="o">/</span><span class="s s-Atom">hdfs</span> <span class="s s-Atom">namenode</span> <span class="o">-</span><span class="s s-Atom">format</span>
+<span class="s s-Atom">将格式化后hadoop0节点nameode元数据目录复制到hadoop1节点</span>
+<span class="s s-Atom">scp</span> <span class="o">-</span><span class="s s-Atom">r</span> <span class="s s-Atom">tmp</span><span class="o">/</span><span class="s s-Atom">dfs</span> <span class="s s-Atom">hadoop1:/usr</span><span class="o">/</span><span class="s s-Atom">local</span><span class="o">/</span><span class="s s-Atom">hadoop</span><span class="o">-</span><span class="mf">2.7.0</span><span class="o">/</span><span class="s s-Atom">tmp</span><span class="o">/</span>
+
+<span class="s s-Atom">启动hadoop集群</span>
+<span class="s s-Atom">先每个节点ssh一般，接受key</span>
+<span class="s s-Atom">在hadoop0启动dfs：</span><span class="p">.</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">start</span><span class="o">-</span><span class="s s-Atom">dfs</span><span class="p">.</span><span class="s s-Atom">sh</span>
+<span class="s s-Atom">会开启以下进程：</span>
+<span class="nf">namenode</span>                              <span class="p">(</span><span class="s s-Atom">hadoop0</span><span class="p">,</span><span class="s s-Atom">hadoop1</span><span class="p">)</span>
+<span class="nf">journalnode</span>                            <span class="p">(</span><span class="s s-Atom">hadoop0</span><span class="p">,</span><span class="s s-Atom">hadoop1</span><span class="p">,</span><span class="s s-Atom">hadoop2</span><span class="p">)</span>
+<span class="nv">DFSZKFailoverController</span>                             <span class="p">(</span><span class="s s-Atom">hadoop0</span><span class="p">,</span><span class="s s-Atom">hadoop1</span><span class="p">)</span>
+<span class="nf">datanode</span>                                <span class="p">(</span><span class="s s-Atom">hadoop1</span><span class="p">,</span><span class="s s-Atom">hadoop2</span><span class="p">)</span>  <span class="s s-Atom">slave文件指定的</span>
+
+<span class="s s-Atom">在hadoop1启动YARN</span>  <span class="p">.</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">start</span><span class="o">-</span><span class="s s-Atom">yarn</span><span class="p">.</span><span class="s s-Atom">sh</span>
+<span class="nf">执行后在hadoop1启动ResourceManager</span>  <span class="p">(</span><span class="s s-Atom">hadoop1</span><span class="p">,</span><span class="s s-Atom">hadoop2</span><span class="p">)</span> <span class="s s-Atom">启动NodeManager</span>
+
+<span class="s s-Atom">在hadoop0启动容灾的ResourceManager</span>  <span class="p">.</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">yarn</span><span class="o">-</span><span class="s s-Atom">daemon</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span> <span class="s s-Atom">resourcemanager</span>
+
+<span class="s s-Atom">在hadoop1启动YARN的安全代理</span>
+<span class="s s-Atom">yarn</span><span class="o">-</span><span class="s s-Atom">daemon</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span> <span class="s s-Atom">proxyserver</span>
+<span class="s s-Atom">注：proxyserver充当防火墙的角色，提高访问集群的安全性</span>
+
+<span class="s s-Atom">在hadoop0启动YARN的历史任务</span> <span class="p">.</span><span class="o">/</span><span class="s s-Atom">sbin</span><span class="o">/</span><span class="s s-Atom">mr</span><span class="o">-</span><span class="s s-Atom">jobhistory</span><span class="o">-</span><span class="s s-Atom">daemon</span><span class="p">.</span><span class="s s-Atom">sh</span> <span class="s s-Atom">start</span> <span class="s s-Atom">historyserver</span>
+<span class="s s-Atom">查看namenode状态</span>  <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">hadoop0:</span><span class="mi">50070</span>     <span class="nn">http</span><span class="p">:</span><span class="o">//</span><span class="s s-Atom">hadoop1:</span><span class="mi">50070</span>
+</pre></div>
+
+
+<h2 id="_1">测试例子</h2>
+<div class="codehilite"><pre><span></span><span class="err">测试</span><span class="n">wordcount</span>
+<span class="n">vi</span> <span class="n">a</span><span class="p">.</span><span class="n">txt</span>
+<span class="n">hello</span> <span class="n">you</span>
+<span class="n">hello</span> <span class="n">me</span>
+
+<span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="o">/</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">hdfs</span> <span class="n">dfs</span> <span class="o">-</span><span class="n">put</span> <span class="n">a</span><span class="p">.</span><span class="n">txt</span> <span class="o">/</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">hdfs</span> <span class="n">dfs</span> <span class="o">-</span><span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="k">out</span><span class="o">/</span>   <span class="err">删除之前的结果</span> 
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">hadoop</span> <span class="n">jar</span> <span class="k">share</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">mapreduce</span><span class="o">/</span><span class="n">hadoop</span><span class="o">-</span><span class="n">mapreduce</span><span class="o">-</span><span class="n">examples</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="n">jar</span> <span class="n">wordcount</span> <span class="o">/</span><span class="n">a</span><span class="p">.</span><span class="n">txt</span> <span class="o">/</span><span class="k">out</span>
+<span class="p">.</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">hdfs</span> <span class="n">dfs</span> <span class="o">-</span><span class="nb">text</span> <span class="o">/</span><span class="k">out</span><span class="o">/</span><span class="n">part</span><span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="mi">00000</span>  <span class="err">查看结果</span>
+</pre></div>
+
+
+<h2 id="hadoop_1">hadoop安装</h2>
+<div class="codehilite"><pre><span></span><span class="err">真实服务器</span><span class="n">hadoop</span><span class="err">集群所有需要配置</span><span class="n">ssh</span><span class="err">互信</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span>
+<span class="n">ssh</span><span class="o">-</span><span class="k">copy</span><span class="o">-</span><span class="kt">id</span> <span class="o">-</span><span class="n">i</span> <span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="err">&#39;</span><span class="o">-</span><span class="n">p</span> <span class="mi">27005</span> <span class="n">root</span><span class="mf">@192.168.3.129</span><span class="err">&#39;</span>
+
+
+<span class="err">需要先构建一个</span><span class="n">hadoop</span><span class="err">的基础镜像，使用</span><span class="n">dockerfile</span><span class="err">文件方式进行构建。</span>
+<span class="err">先构建一个具备</span><span class="n">ssh</span><span class="err">功能的镜像，方便后期使用。（但是这样对于容器的安全性会有影响）</span>
+<span class="err">注意：这个镜像中的</span><span class="n">root</span><span class="err">用户的密码是</span><span class="n">root</span>
+<span class="cp">#http:</span><span class="c1">//mirrors.aliyun.com/apache/hadoop/core/hadoop-2.7.0/hadoop-2.7.0.tar.gz</span>
+
+<span class="n">FROM</span> <span class="n">daocloud</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="nl">centos</span><span class="p">:</span><span class="mi">6</span>
+<span class="n">EXPOSE</span> <span class="mi">22</span>
+<span class="n">ENV</span> <span class="n">JAVA_HOME</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">jre</span><span class="o">-</span><span class="mf">1.8.0</span><span class="o">-</span><span class="n">openjdk</span><span class="p">.</span><span class="n">x86_64</span><span class="o">/</span>
+<span class="n">ADD</span> <span class="n">epel</span><span class="o">-</span><span class="mf">6.</span><span class="n">repo</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="p">.</span><span class="n">repos</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">epel</span><span class="p">.</span><span class="n">repo</span>
+<span class="n">RUN</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">supervisor</span> <span class="n">java</span><span class="o">-</span><span class="mf">1.8.0</span><span class="o">-</span><span class="n">openjdk</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span> <span class="n">openssh</span><span class="o">-</span><span class="n">clients</span> <span class="n">rsync</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">RUN</span> <span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="err">&#39;</span><span class="n">s</span><span class="o">/</span><span class="n">UsePAM</span> <span class="n">yes</span><span class="o">/</span><span class="n">UsePAM</span> <span class="n">no</span><span class="o">/</span><span class="n">g</span><span class="err">&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">sshd_config</span>
+<span class="n">RUN</span> <span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">dsa</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_host_dsa_key</span>
+<span class="n">RUN</span> <span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssh</span><span class="o">/</span><span class="n">ssh_host_rsa_key</span>
+<span class="n">RUN</span> <span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">dsa</span> <span class="o">-</span><span class="n">P</span> <span class="err">&#39;&#39;</span> <span class="o">-</span><span class="n">f</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_dsa</span>
+<span class="n">RUN</span> <span class="n">cat</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_dsa</span><span class="p">.</span><span class="n">pub</span> <span class="o">&gt;&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+<span class="n">RUN</span> <span class="n">echo</span> <span class="s">&quot;root:root&quot;</span> <span class="o">|</span> <span class="n">chpasswd</span>
+<span class="n">COPY</span> <span class="n">supervisord</span><span class="p">.</span><span class="n">conf</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">supervisord</span><span class="p">.</span><span class="n">conf</span>
+<span class="n">ADD</span> <span class="n">hadoop</span><span class="o">-</span><span class="mf">2.7.0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span>
+<span class="n">CMD</span> <span class="p">[</span><span class="s">&quot;/usr/bin/supervisord&quot;</span><span class="p">]</span>
+
+<span class="n">supervisord</span><span class="p">.</span><span class="n">conf</span><span class="err">关键配置</span>
+<span class="p">[</span><span class="n">supervisord</span><span class="p">]</span>
+<span class="n">nodaemon</span><span class="o">=</span><span class="nb">true</span>   <span class="err">前台模式</span>
+<span class="p">[</span><span class="nl">program</span><span class="p">:</span><span class="n">sshd</span><span class="p">]</span>
+<span class="n">command</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">sshd</span> <span class="err">–</span><span class="n">D</span>
+
+
+<span class="err">准备搭建一个具有三个节点的集群，一主两从</span>
+<span class="err">主节点：</span><span class="n">hadoop0</span> <span class="n">ip</span><span class="err">：</span><span class="mf">192.168.2.10</span>
+<span class="err">从节点</span><span class="mi">1</span><span class="err">：</span><span class="n">hadoop1</span> <span class="n">ip</span><span class="err">：</span><span class="mf">192.168.2.11</span>
+<span class="err">从节点</span><span class="mi">2</span><span class="err">：</span><span class="n">hadoop2</span> <span class="n">ip</span><span class="err">：</span><span class="mf">192.168.2.12</span>
+
+<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">hosts</span>
+<span class="mf">172.17.0.119</span>    <span class="n">hadoop0</span>
+<span class="mf">172.17.0.120</span>    <span class="n">hadoop1</span>
+<span class="mf">172.17.0.121</span>    <span class="n">hadoop2</span>
+
+<span class="err">修改</span><span class="n">hadoop</span><span class="err">配置</span>
+<span class="err">进入到</span> <span class="n">etc</span><span class="o">/</span><span class="n">hadoop</span><span class="err">目录</span>
+<span class="err">指定</span><span class="n">slaves</span>
+<span class="n">vi</span> <span class="n">etc</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">slaves</span>
+<span class="n">hadoop1</span>
+<span class="n">hadoop2</span>
+
+<span class="err">修改目录下的配置文件</span><span class="n">core</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span><span class="err">、</span><span class="n">hdfs</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span><span class="err">、</span><span class="n">yarn</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span><span class="err">、</span><span class="n">mapred</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="n">hadoop</span><span class="o">-</span><span class="n">env</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">export</span> <span class="n">JAVA_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">jvm</span><span class="o">/</span><span class="n">jre</span><span class="o">-</span><span class="mf">1.8.0</span><span class="o">-</span><span class="n">openjdk</span><span class="p">.</span><span class="n">x86_64</span><span class="o">/</span>
+
+<span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="n">core</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">fs</span><span class="p">.</span><span class="n">defaultFS</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="nl">hdfs</span><span class="p">:</span><span class="c1">//hadoop0:9000&lt;/value&gt;</span>
+        <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">hadoop</span><span class="p">.</span><span class="n">tmp</span><span class="p">.</span><span class="n">dir</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">hadoop</span><span class="o">/</span><span class="n">tmp</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+         <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+                 <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">fs</span><span class="p">.</span><span class="n">trash</span><span class="p">.</span><span class="n">interval</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+                 <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="mi">1440</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="n">hdfs</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="p">.</span><span class="n">replication</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">dfs</span><span class="p">.</span><span class="n">permissions</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="nb">false</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="n">yarn</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">yarn</span><span class="p">.</span><span class="n">nodemanager</span><span class="p">.</span><span class="n">aux</span><span class="o">-</span><span class="n">services</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="n">mapreduce_shuffle</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">yarn</span><span class="p">.</span><span class="n">log</span><span class="o">-</span><span class="n">aggregation</span><span class="o">-</span><span class="n">enable</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="nb">true</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="err">修改文件名：</span><span class="n">cp</span> <span class="n">mapred</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span><span class="p">.</span><span class="n">template</span> <span class="n">mapred</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">vi</span> <span class="n">mapred</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">mapreduce</span><span class="p">.</span><span class="n">framework</span><span class="p">.</span><span class="n">name</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="n">yarn</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="err">指定</span><span class="n">resourcemanager</span><span class="err">的地址，修改文件</span><span class="n">yarn</span><span class="o">-</span><span class="n">site</span><span class="p">.</span><span class="n">xml</span>
+<span class="o">&lt;</span><span class="n">property</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">hostname</span> <span class="n">of</span> <span class="n">the</span> <span class="n">RM</span><span class="p">.</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">yarn</span><span class="p">.</span><span class="n">resourcemanager</span><span class="p">.</span><span class="n">hostname</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="n">hadoop0</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">property</span><span class="o">&gt;</span>
+
+<span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="err">格式化</span>
+<span class="err">进入到</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">hadoop</span><span class="err">目录下</span>
+<span class="mi">1</span><span class="err">、执行格式化命令</span>
+
+<span class="n">bin</span><span class="o">/</span><span class="n">hdfs</span> <span class="n">namenode</span> <span class="err">–</span><span class="n">format</span>   <span class="err">会清空</span><span class="n">hdfs</span><span class="err">所有数据，第一次配置运行</span>
+<span class="err">注意：在执行的时候会报错，是因为缺少</span><span class="n">which</span><span class="err">命令，安装即可</span>
+
+<span class="err">执行下面命令安装</span>
+<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">which</span>
+
+<span class="err">格式化操作不能重复执行。如果一定要重复格式化，带参数</span><span class="o">-</span><span class="n">force</span><span class="err">即可。</span>
+<span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="err">启动伪分布</span><span class="n">hadoop</span>
+<span class="err">命令：</span><span class="n">sbin</span><span class="o">/</span><span class="n">start</span><span class="o">-</span><span class="n">all</span><span class="p">.</span><span class="n">sh</span>
+<span class="err">第一次启动的过程中需要输入</span><span class="n">yes</span><span class="err">确认一下。</span>
+
+<span class="err">使用</span><span class="n">jps</span><span class="err">，检查进程是否正常启动？能看到下面几个进程表示伪分布启动成功</span>
+<span class="n">hadoop0</span>
+<span class="mi">4643</span> <span class="n">Jps</span>
+<span class="mi">4073</span> <span class="n">NameNode</span>
+<span class="mi">4216</span> <span class="n">SecondaryNameNode</span>
+<span class="mi">4381</span> <span class="n">ResourceManager</span>
+
+<span class="n">hadoop1</span>
+<span class="mi">456</span> <span class="n">NodeManager</span>
+<span class="mi">589</span> <span class="n">Jps</span>
+<span class="mi">388</span> <span class="n">DataNode</span>
+
+<span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="err">停止伪分布</span><span class="n">hadoop</span>
+<span class="err">命令：</span><span class="n">sbin</span><span class="o">/</span><span class="n">stop</span><span class="o">-</span><span class="n">all</span><span class="p">.</span><span class="n">sh</span>
+
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">hadoop0</span> <span class="o">--</span><span class="n">hostname</span> <span class="n">hadoop0</span> <span class="o">-</span><span class="n">p</span> <span class="mi">50070</span><span class="o">:</span><span class="mi">50070</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8088</span><span class="o">:</span><span class="mi">8088</span> <span class="nl">hadoop</span><span class="p">:</span><span class="n">v3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">supervisord</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">hadoop1</span> <span class="o">--</span><span class="n">hostname</span> <span class="n">hadoop1</span> <span class="nl">hadoop</span><span class="p">:</span><span class="n">v3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">supervisord</span>
+<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">name</span> <span class="n">hadoop2</span> <span class="o">--</span><span class="n">hostname</span> <span class="n">hadoop2</span> <span class="nl">hadoop</span><span class="p">:</span><span class="n">v3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">supervisord</span>
+</pre></div>
+
+
+<h2 id="nativecodeloader">nativecodeloader警告</h2>
+<div class="codehilite"><pre><span></span><span class="nv">WARN</span> <span class="nv">util</span>.<span class="nv">NativeCodeLoader</span>: <span class="nv">Unable</span> <span class="nv">to</span> <span class="nv">load</span> <span class="nv">native</span><span class="o">-</span><span class="nv">hadoop</span> <span class="nv">library</span> <span class="k">for</span> <span class="nv">your</span> <span class="nv">platform</span>.
+
+直接在<span class="nv">log4j</span>日志中去除告警信息。在<span class="o">//</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">5</span>.<span class="mi">2</span><span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">hadoop</span><span class="o">/</span><span class="nv">log4j</span>.<span class="nv">properties</span>文件中添加
+<span class="nv">log4j</span>.<span class="nv">logger</span>.<span class="nv">org</span>.<span class="nv">apache</span>.<span class="nv">hadoop</span>.<span class="nv">util</span>.<span class="nv">NativeCodeLoader</span><span class="o">=</span><span class="nv">ERROR</span>
+</pre></div>
+
+
+<h2 id="ambrai">ambrai快速部署</h2>
+<div class="codehilite"><pre><span></span><span class="nv">Ambari</span>是 <span class="nv">Apache</span> <span class="nv">Software</span> <span class="nv">Foundation</span> 中的一个顶级项目。<span class="nv">Ambari</span>可以创建、管理、监控 <span class="nv">Hadoop</span> 的集群。
+包括整个<span class="nv">Hadoop</span>生态圈（例如 <span class="nv">Hive</span>，<span class="nv">Hbase</span>，<span class="nv">Sqoop</span>，<span class="nv">Zookeeper</span> 等）。无论是初学者像快速部署一套<span class="nv">Hadoop</span>环境，
+还是用于生产的自动化部署，<span class="nv">Ambari</span>都可以满足。
+     你可以在官网<span class="nv">http</span>:<span class="o">//</span><span class="nv">ambari</span>.<span class="nv">apache</span>.<span class="nv">org</span><span class="o">/</span>获取最新的<span class="nv">Ambari</span>的内容，目前<span class="nv">Ambari</span>还支持流行的 <span class="nv">Spark</span>，<span class="nv">Storm</span> 
+     等计算框架，<span class="nv">Kafka</span>消息队列、以及资源调度平台 <span class="nv">YARN</span> 等。
+    <span class="nv">Ambari</span> 自身也是一个分布式架构的软件，主要由两部分组成：<span class="nv">Ambari</span> <span class="nv">Server</span> 和 <span class="nv">Ambari</span> <span class="nv">Agent</span>。我们可以通过 
+    <span class="nv">Ambari</span> <span class="nv">Server</span> 通知 <span class="nv">Ambari</span> <span class="nv">Agent</span> 安装对应的软件；甚至连<span class="nv">Ambari</span> <span class="nv">Agent</span>我们都可以在<span class="nv">Web</span>界面上来进行安装和部署。
+    <span class="nv">Ambari</span> <span class="nv">Agent</span> 会定时地发送各个机器每个项目组件的当前状态给 <span class="nv">Ambari</span> <span class="nv">Server</span>，并在<span class="nv">Web</span>界面上进行展示汇总，
+    方面我们及时掌握集群状态。
+
+基础环境准备
+    本次实验环境还是使用两台虚拟机来实现，有条件的读者建议使用三台虚拟机来做。首先我们要实现
+    <span class="nv">Ambari</span> <span class="nv">Server</span>到各个节点之间的<span class="nv">SSH</span>无密码登录。
+在所有节点都执行<span class="nv">ssh</span><span class="o">-</span><span class="nv">keygen</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">rsa</span> 生成<span class="nv">Key</span>
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">ssh</span><span class="o">-</span><span class="nv">keygen</span> <span class="o">-</span><span class="nv">t</span> <span class="nv">rsa</span>
+<span class="nv">Generating</span> <span class="nv">public</span><span class="o">/</span><span class="nv">private</span> <span class="nv">rsa</span> <span class="nv">key</span> <span class="nv">pair</span>.
+<span class="nv">Enter</span> <span class="nv">file</span> <span class="nv">in</span> <span class="nv">which</span> <span class="nv">to</span> <span class="nv">save</span> <span class="nv">the</span> <span class="nv">key</span> <span class="ss">(</span><span class="o">/</span><span class="nv">root</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">id_rsa</span><span class="ss">)</span>: 
+<span class="nv">Enter</span> <span class="nv">passphrase</span> <span class="ss">(</span><span class="nv">empty</span> <span class="k">for</span> <span class="nv">no</span> <span class="nv">passphrase</span><span class="ss">)</span>: 
+<span class="nv">Enter</span> <span class="nv">same</span> <span class="nv">passphrase</span> <span class="nv">again</span>: 
+<span class="nv">Your</span> <span class="nv">identification</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">saved</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">root</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">id_rsa</span>.
+<span class="nv">Your</span> <span class="nv">public</span> <span class="nv">key</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">saved</span> <span class="nv">in</span> <span class="o">/</span><span class="nv">root</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">id_rsa</span>.<span class="nv">pub</span>.
+    虽然除了<span class="nv">Server</span>端之外其它节点可以不执行，但是<span class="nv">ssh</span><span class="o">-</span><span class="nv">keygen</span>命令会帮我们创建相应的目录并设置权限，不在需要我们手动操作。
+
+将<span class="nv">Ambari</span> <span class="nv">Server</span>的公钥<span class="nv">scp</span>到其它节点上
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">scp</span> .<span class="nv">ssh</span><span class="o">/</span><span class="nv">id_rsa</span>.<span class="nv">pub</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">56</span>.<span class="mi">12</span>:<span class="o">/</span><span class="nv">root</span><span class="o">/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">authorized_keys</span>
+设置权限
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node2</span> <span class="o">~</span>]# <span class="nv">chmod</span> <span class="mi">600</span> <span class="o">~/</span>.<span class="nv">ssh</span><span class="o">/</span><span class="nv">authorized_keys</span>
+测试连接
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">ssh</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">56</span>.<span class="mi">12</span>
+<span class="nv">Last</span> <span class="nv">login</span>: <span class="nv">Sat</span> <span class="nv">Apr</span>  <span class="mi">2</span> <span class="mi">16</span>:<span class="mi">42</span>:<span class="mi">46</span> <span class="mi">2016</span> <span class="nv">from</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">56</span>.<span class="mi">1</span>[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node2</span> <span class="o">~</span>]#
+设置完毕无密码登录后，我们就可以开始部署<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>了。
+
+安装<span class="nv">jdk</span>
+    由于<span class="nv">ambari</span>安装过程中的<span class="nv">jdk</span>下载比较缓慢，所以我们可以直接使用<span class="nv">yum</span>仓库里面的<span class="nv">openjdk</span>
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">yum</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">java</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">0</span>
+部署<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+    <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>的部署比较简单，很多实用实用默认即是最好的选择。
+安装<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+[<span class="nv">root</span>@<span class="nv">test</span><span class="o">-</span><span class="nv">node3</span> <span class="o">~</span>]# <span class="nv">cd</span> <span class="o">/</span><span class="nv">etc</span><span class="o">/</span><span class="nv">yum</span>.<span class="nv">repos</span>.<span class="nv">d</span><span class="o">/</span>
+# <span class="nv">wget</span> <span class="nv">http</span>:<span class="o">//</span><span class="nv">public</span><span class="o">-</span><span class="nv">repo</span><span class="o">-</span><span class="mi">1</span>.<span class="nv">hortonwor</span> ... .<span class="nv">repo</span># <span class="nv">yum</span> <span class="nv">install</span> <span class="o">-</span><span class="nv">y</span> <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+
+注意：在国内的用户要有心里准备，<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>这个包有<span class="mi">354</span><span class="nv">M</span>，下载比较慢。
+
+设置<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+
+    安装完毕后，需要使用<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">setup</span>命令进行设置，均可以使用默认设置，直接回车即可。
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">setup</span>
+<span class="nv">Using</span> <span class="nv">python</span>  <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">python2</span>
+<span class="nv">Setup</span> <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+<span class="nv">Checking</span> <span class="nv">SELinux</span>...
+<span class="nv">SELinux</span> <span class="nv">status</span> <span class="nv">is</span> <span class="s1">&#39;</span><span class="s">disabled</span><span class="s1">&#39;</span>
+<span class="nv">Customize</span> <span class="nv">user</span> <span class="nv">account</span> <span class="k">for</span> <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">daemon</span> [<span class="nv">y</span><span class="o">/</span><span class="nv">n</span>] <span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>? 
+<span class="nv">Adjusting</span> <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">permissions</span> <span class="nv">and</span> <span class="nv">ownership</span>...
+<span class="nv">Checking</span> <span class="nv">firewall</span> <span class="nv">status</span>...
+<span class="nv">Redirecting</span> <span class="nv">to</span> <span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">systemctl</span> <span class="nv">status</span>  <span class="nv">iptables</span>.<span class="nv">service</span>
+
+<span class="nv">Checking</span> <span class="nv">JDK</span>...[<span class="mi">1</span>] <span class="nv">Oracle</span> <span class="nv">JDK</span> <span class="mi">1</span>.<span class="mi">8</span> <span class="o">+</span> <span class="nv">Java</span> <span class="nv">Cryptography</span> <span class="nv">Extension</span> <span class="ss">(</span><span class="nv">JCE</span><span class="ss">)</span> <span class="nv">Policy</span> <span class="nv">Files</span> <span class="mi">8</span>[<span class="mi">2</span>] <span class="nv">Oracle</span> <span class="nv">JDK</span> <span class="mi">1</span>.<span class="mi">7</span> 
+<span class="o">+</span> <span class="nv">Java</span> <span class="nv">Cryptography</span> <span class="nv">Extension</span> <span class="ss">(</span><span class="nv">JCE</span><span class="ss">)</span> <span class="nv">Policy</span> <span class="nv">Files</span> <span class="mi">7</span>[<span class="mi">3</span>] <span class="nv">Custom</span> <span class="nv">JDK</span>
+<span class="o">===========================================================================</span>
+<span class="nv">Enter</span> <span class="nv">choice</span> <span class="ss">(</span><span class="mi">1</span><span class="ss">)</span>: <span class="mi">3</span>
+<span class="nv">WARNING</span>: <span class="nv">JDK</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">installed</span> <span class="nv">on</span> <span class="nv">all</span> <span class="nv">hosts</span> <span class="nv">and</span> <span class="nv">JAVA_HOME</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">valid</span> <span class="nv">on</span> <span class="nv">all</span> <span class="nv">hosts</span>.
+<span class="nv">WARNING</span>: <span class="nv">JCE</span> <span class="nv">Policy</span> <span class="nv">files</span> <span class="nv">are</span> <span class="nv">required</span> <span class="k">for</span> <span class="nv">configuring</span> <span class="nv">Kerberos</span> <span class="nv">security</span>. <span class="k">If</span> <span class="nv">you</span> <span class="nv">plan</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">Kerberos</span>,
+<span class="nv">please</span> <span class="nv">make</span> <span class="nv">sure</span> <span class="nv">JCE</span> <span class="nv">Unlimited</span> <span class="nv">Strength</span> <span class="nv">Jurisdiction</span> <span class="nv">Policy</span> <span class="nv">Files</span> <span class="nv">are</span> <span class="nv">valid</span> <span class="nv">on</span> <span class="nv">all</span> <span class="nv">hosts</span>.
+<span class="nv">Path</span> <span class="nv">to</span> <span class="nv">JAVA_HOME</span>: <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">jvm</span><span class="o">/</span><span class="nv">java</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">openjdk</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">0</span>.<span class="mi">77</span><span class="o">-</span><span class="mi">0</span>.<span class="nv">b03</span>.<span class="nv">el7_2</span>.<span class="nv">x86_64</span><span class="o">/</span><span class="nv">jre</span><span class="o">/</span>
+<span class="nv">Validating</span> <span class="nv">JDK</span> <span class="nv">on</span> <span class="nv">Ambari</span> <span class="nv">Server</span>...<span class="nv">done</span>.
+<span class="nv">Completing</span> <span class="nv">setup</span>...
+<span class="nv">Configuring</span> <span class="nv">database</span>...
+<span class="nv">Enter</span> <span class="nv">advanced</span> <span class="nv">database</span> <span class="nv">configuration</span> [<span class="nv">y</span><span class="o">/</span><span class="nv">n</span>] <span class="ss">(</span><span class="nv">n</span><span class="ss">)</span>?
+<span class="nv">Configuring</span> <span class="nv">database</span>...
+<span class="nv">Default</span> <span class="nv">properties</span> <span class="nv">detected</span>. <span class="nv">Using</span> <span class="nv">built</span><span class="o">-</span><span class="nv">in</span> <span class="nv">database</span>.
+<span class="nv">Configuring</span> <span class="nv">ambari</span> <span class="nv">database</span>...
+<span class="nv">Checking</span> <span class="nv">PostgreSQL</span>...
+<span class="nv">Running</span> <span class="nv">initdb</span>: <span class="nv">This</span> <span class="nv">may</span> <span class="nv">take</span> <span class="nv">upto</span> <span class="nv">a</span> <span class="nv">minute</span>.
+<span class="nv">Initializing</span> <span class="nv">database</span> ... <span class="nv">OK</span>
+<span class="nv">About</span> <span class="nv">to</span> <span class="nv">start</span> <span class="nv">PostgreSQL</span>
+<span class="nv">Configuring</span> <span class="nv">local</span> <span class="nv">database</span>...
+<span class="nv">Connecting</span> <span class="nv">to</span> <span class="nv">local</span> <span class="nv">database</span>...<span class="nv">done</span>.
+<span class="nv">Configuring</span> <span class="nv">PostgreSQL</span>...
+<span class="nv">Restarting</span> <span class="nv">PostgreSQL</span>
+<span class="nv">Extracting</span> <span class="nv">system</span> <span class="nv">views</span>...
+<span class="nv">ambari</span><span class="o">-</span><span class="nv">admin</span><span class="o">-</span><span class="mi">2</span>.<span class="mi">2</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1310</span>.<span class="nv">jar</span>
+......
+<span class="nv">Adjusting</span> <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">permissions</span> <span class="nv">and</span> <span class="nv">ownership</span>...
+<span class="nv">Ambari</span> <span class="nv">Server</span> <span class="s1">&#39;</span><span class="s">setup</span><span class="s1">&#39;</span> <span class="nv">completed</span> <span class="nv">successfully</span>.
+
+<span class="mi">1</span><span class="ss">)</span>    检测<span class="nv">SELinux2</span><span class="ss">)</span>    询问是否自定义用户，默认否<span class="o">-</span>（可以安装完毕之后再进行用户管理。）<span class="mi">3</span><span class="ss">)</span>    检测<span class="nv">iptables</span>选择<span class="nv">JDK</span>版本，
+默认<span class="nv">Oracle</span> <span class="nv">JDK</span> <span class="mi">1</span>.<span class="mi">8</span>。如果你已经安装了<span class="nv">jdk</span>，可以选择自定义<span class="nv">jdk</span>。如果你是<span class="nv">yum</span>安装的<span class="nv">openjdk</span>，那么路径位于
+<span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">jvm</span><span class="o">/</span><span class="nv">java</span><span class="o">-</span><span class="mi">1</span>.<span class="mi">8</span>.<span class="mi">0</span><span class="o">-</span><span class="nv">openjdk</span><span class="o">-</span><span class="nv">xxx</span>.<span class="nv">x86_64</span><span class="o">/</span><span class="nv">jre</span><span class="o">/</span><span class="mi">4</span><span class="ss">)</span>    目录下。<span class="mi">5</span><span class="ss">)</span>    询问是否打开高级的数据库配置，默认<span class="o">-</span>否
+
+启动<span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span>
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">ambari</span><span class="o">-</span><span class="nv">server</span> <span class="nv">start</span>
+查看监听端口
+[<span class="nv">root</span>@<span class="nv">linux</span><span class="o">-</span><span class="nv">node1</span> <span class="o">~</span>]# <span class="nv">netstat</span> <span class="o">-</span><span class="nv">ntlp</span> <span class="o">|</span> <span class="nv">grep</span> <span class="mi">8080</span>
+<span class="nv">tcp6</span>       <span class="mi">0</span>      <span class="mi">0</span> :::<span class="mi">8080</span>                 :::<span class="o">*</span>                    <span class="nv">LISTEN</span>      <span class="mi">24168</span><span class="o">/</span><span class="nv">java</span>
+
+访问<span class="nv">ambari</span> <span class="nv">server</span>
+
+现在可以在浏览器访问你的<span class="nv">ambari</span> <span class="nv">server</span>了。注意端口是<span class="mi">8080</span>。
+<span class="nv">http</span>:<span class="o">//</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">56</span>.<span class="mi">11</span>:<span class="mi">8080</span><span class="o">/</span>
+
+默认的用户名和密码都是<span class="nv">admin</span>
+
+
+创建<span class="nv">Hadoop</span>集群
+
+登录 <span class="nv">Ambari</span> 之后，点击按钮“<span class="nv">Launch</span> <span class="nv">Install</span> <span class="nv">Wizard</span>”，就可以开始创建属于自己的大数据平台。
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../mongodb/" title="mongodb" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                mongodb
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../postgresql/" title="postgresql" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                postgresql
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

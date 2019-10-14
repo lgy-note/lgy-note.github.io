@@ -1,0 +1,1429 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+    
+    
+      
+        <title>mongodb - mkdocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#authschema" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="mkdocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              mkdocs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                mongodb
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../python-base/" class="md-tabs__link">
+          python
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../nginx/" class="md-tabs__link">
+          service
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mysql/" class="md-tabs__link md-tabs__link--active">
+          database
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../open-falcon/" class="md-tabs__link">
+          monitor
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tcp-issue/" class="md-tabs__link">
+          basis
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="mkdocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    mkdocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="home" class="md-nav__link">
+      home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-base/" title="python-base" class="md-nav__link">
+      python-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib/" title="python-lib" class="md-nav__link">
+      python-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-lib2/" title="python-lib2" class="md-nav__link">
+      python-lib2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-web/" title="python-web" class="md-nav__link">
+      python-web
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python-other/" title="python-other" class="md-nav__link">
+      python-other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      service
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        service
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx/" title="nginx" class="md-nav__link">
+      nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nginx2/" title="nginx2" class="md-nav__link">
+      nginx2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../apache/" title="apache" class="md-nav__link">
+      apache
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../saltstack/" title="saltstack" class="md-nav__link">
+      saltstack
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tomcat/" title="tomcat" class="md-nav__link">
+      tomcat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="ansible" class="md-nav__link">
+      ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../trafficserver/" title="trafficserver" class="md-nav__link">
+      trafficserver
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../haproxy/" title="haproxy" class="md-nav__link">
+      haproxy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="docker" class="md-nav__link">
+      docker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../varnish/" title="varnish" class="md-nav__link">
+      varnish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bind/" title="bind" class="md-nav__link">
+      bind
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lvs/" title="lvs" class="md-nav__link">
+      lvs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log-analysis/" title="log-analysis" class="md-nav__link">
+      log-analysis
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      database
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        database
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql/" title="mysql" class="md-nav__link">
+      mysql
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mysql2/" title="mysql2" class="md-nav__link">
+      mysql2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../memcached/" title="memcached" class="md-nav__link">
+      memcached
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../redis/" title="redis" class="md-nav__link">
+      redis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        mongodb
+      </label>
+    
+    <a href="./" title="mongodb" class="md-nav__link md-nav__link--active">
+      mongodb
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authschema" class="md-nav__link">
+    authSchema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    集群认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    集群安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongo" class="md-nav__link">
+    mongo命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shard" class="md-nav__link">
+    缩减shard集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webmongo" class="md-nav__link">
+    web管理mongo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hadoop/" title="hadoop" class="md-nav__link">
+      hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postgresql/" title="postgresql" class="md-nav__link">
+      postgresql
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      monitor
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        monitor
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../open-falcon/" title="open-falcon" class="md-nav__link">
+      open-falcon
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix/" title="zabbix" class="md-nav__link">
+      zabbix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../zabbix2/" title="zabbix2" class="md-nav__link">
+      zabbix2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../netdata/" title="netdata" class="md-nav__link">
+      netdata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      basis
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        basis
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tcp-issue/" title="tcp-issue" class="md-nav__link">
+      tcp-issue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-svn/" title="git-svn" class="md-nav__link">
+      git-svn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../vpn/" title="vpn" class="md-nav__link">
+      vpn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shell/" title="shell" class="md-nav__link">
+      shell
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../disk/" title="disk" class="md-nav__link">
+      disk
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../filesystem/" title="filesystem" class="md-nav__link">
+      filesystem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../source/" title="source" class="md-nav__link">
+      source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../command/" title="command" class="md-nav__link">
+      command
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-base/" title="linux-base" class="md-nav__link">
+      linux-base
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-soft/" title="linux-soft" class="md-nav__link">
+      linux-soft
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="other" class="md-nav__link">
+      other
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authschema" class="md-nav__link">
+    authSchema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    集群认证
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    集群安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mongo" class="md-nav__link">
+    mongo命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shard" class="md-nav__link">
+    缩减shard集群
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webmongo" class="md-nav__link">
+    web管理mongo
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>mongodb</h1>
+                
+                <h2 id="authschema">authSchema</h2>
+<div class="codehilite"><pre><span></span><span class="n">下载了最新mongodb3</span><span class="mf">.03</span><span class="n">版本</span><span class="err">，</span><span class="n">当使用</span><span class="c1">--auth 参数命令行开启mongodb用户认证时遇到很多问题，现总结如下：</span>
+<span class="err">（</span><span class="n">百度上搜到的基本都是老版本的</span><span class="err">，</span><span class="n">看到db</span><span class="p">.</span><span class="n">addUser的就是</span><span class="err">，</span><span class="n">请忽略</span><span class="err">）</span><span class="w"></span>
+<span class="n">Windows下我做了一个bat文件</span><span class="err">，</span><span class="n">用来启动mongodb</span><span class="err">，</span><span class="n">命令行如下</span><span class="err">：</span><span class="w"></span>
+<span class="n">mongod</span><span class="w"> </span><span class="c1">--dbpath db\data --port 27017 --directoryperdb --logpath db\logs\mongodb.log --logappend --auth</span>
+<span class="n">最后的参数就是开启和关闭认证</span><span class="err">，</span><span class="n">如果是conf配置文件</span><span class="err">，</span><span class="n">应该是auth</span><span class="o">=</span><span class="n">true或false</span><span class="w"></span>
+<span class="mi">1</span><span class="err">，</span><span class="n">首先关闭认证</span><span class="err">，</span><span class="n">也就是不带</span><span class="c1">--auth参数，启动mongodb</span>
+<span class="mi">2</span><span class="err">，</span><span class="n">使用命令行进入mongodb目录</span><span class="err">，</span><span class="n">输入mongo命令</span><span class="err">，</span><span class="n">默认进入test数据库</span><span class="w"></span>
+<span class="mi">3</span><span class="err">，</span><span class="k">use</span><span class="w"> </span><span class="n">userdb</span><span class="w">  </span><span class="n">切换到自己的数据库</span><span class="err">，</span><span class="n">输入db</span><span class="err">，</span><span class="n">显示userdb</span><span class="w"></span>
+<span class="mi">4</span><span class="err">，</span><span class="n">创建用户</span><span class="err">，</span><span class="n">角色为dbOwner</span><span class="err">，</span><span class="n">数据库为userdb</span><span class="err">，</span><span class="n">命令行应该是db</span><span class="p">.</span><span class="n">createUser</span><span class="p">(</span><span class="err">{</span><span class="k">user</span><span class="err">:</span><span class="s1">&#39;myuser&#39;</span><span class="p">,</span><span class="nl">pwd</span><span class="p">:</span><span class="s1">&#39;123456&#39;</span><span class="p">,</span><span class="nl">roles</span><span class="p">:</span><span class="w"></span>
+<span class="o">[</span><span class="n">{role:&#39;dbOwner&#39;,db:&#39;userdb&#39;}</span><span class="o">]</span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+<span class="mi">5</span><span class="err">，</span><span class="n">切换到admin数据库</span><span class="err">，</span><span class="k">use</span><span class="w"> </span><span class="k">admin</span><span class="err">，</span><span class="n">db</span><span class="w"> </span><span class="err">，</span><span class="n">显示admin</span><span class="err">，</span><span class="n">db</span><span class="p">.</span><span class="n">shutdownServer</span><span class="p">()</span><span class="n">关闭服务器</span><span class="err">，</span><span class="n">填上认证参数</span><span class="err">，</span><span class="n">启动mongodb</span><span class="err">；</span><span class="w"></span>
+<span class="n">以前的版本此时使用mongovue就可以使用myuser登录到userdb数据库上了</span><span class="err">，</span><span class="n">但是3</span><span class="mf">.0.3</span><span class="n">版本不行</span><span class="err">，</span><span class="n">打开mongodb</span><span class="p">.</span><span class="n">log文件发现如下错误</span><span class="w"></span>
+
+<span class="n">authenticate</span><span class="w"> </span><span class="nl">db</span><span class="p">:</span><span class="w"> </span><span class="n">userdb</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">authenticate</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nl">nonce</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;xxx&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">user</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;myuser&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">key</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;xxx&quot;</span><span class="w"> </span><span class="err">}</span><span class="w"></span>
+<span class="mi">2015</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">02</span><span class="nl">T09</span><span class="p">:</span><span class="mi">57</span><span class="err">:</span><span class="mf">18.877</span><span class="o">+</span><span class="mi">0800</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="n">ACCESS</span><span class="w">   </span><span class="o">[</span><span class="n">conn2</span><span class="o">]</span><span class="w"> </span><span class="n">Failed</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">authenticate</span><span class="w"> </span><span class="n">myuser</span><span class="nv">@userdb</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">mechanism</span><span class="w"> </span>
+<span class="n">MONGODB</span><span class="o">-</span><span class="nl">CR</span><span class="p">:</span><span class="w"> </span><span class="n">AuthenticationFailed</span><span class="w"> </span><span class="n">MONGODB</span><span class="o">-</span><span class="n">CR</span><span class="w"> </span><span class="n">credentials</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">document</span><span class="w"></span>
+
+
+<span class="n">此1</span><span class="o">-</span><span class="mi">5</span><span class="n">步骤针对是3</span><span class="mf">.0.3</span><span class="n">以前版本已经ok</span><span class="err">，</span><span class="n">如果是3</span><span class="mf">.0.3</span><span class="err">，</span><span class="n">mongodb加入了SCRAM</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="n">校验方式</span><span class="err">，</span><span class="n">需要第三方工具配合进行验证</span><span class="err">，</span><span class="w"></span>
+<span class="n">下面给出具体解决办法</span><span class="err">：</span><span class="w"></span>
+<span class="n">首先关闭认证</span><span class="err">，</span><span class="n">修改system</span><span class="p">.</span><span class="n">version文档里面的authSchema版本为3</span><span class="err">，</span><span class="n">初始安装时候应该是5</span><span class="err">，</span><span class="n">命令行如下</span><span class="err">：</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="k">admin</span><span class="w"></span>
+<span class="n">switched</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="k">admin</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w">  </span><span class="nf">var</span><span class="w"> </span><span class="k">schema</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="k">system</span><span class="p">.</span><span class="n">version</span><span class="p">.</span><span class="n">findOne</span><span class="p">(</span><span class="err">{</span><span class="ss">&quot;_id&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;authSchema&quot;</span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">schema</span><span class="p">.</span><span class="n">currentVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="mi">3</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="k">system</span><span class="p">.</span><span class="n">version</span><span class="p">.</span><span class="k">save</span><span class="p">(</span><span class="k">schema</span><span class="p">)</span><span class="w"></span>
+<span class="n">WriteResult</span><span class="p">(</span><span class="err">{</span><span class="w"> </span><span class="ss">&quot;nMatched&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;nUpserted&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;nModified&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">不过如果你现在开启认证</span><span class="err">，</span><span class="n">仍然会提示AuthenticationFailed</span><span class="w"> </span><span class="n">MONGODB</span><span class="o">-</span><span class="n">CR</span><span class="w"> </span><span class="n">credentials</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">document</span><span class="w"></span>
+<span class="n">原因是原来创建的用户已经使用了SCRAM</span><span class="o">-</span><span class="n">SHA</span><span class="o">-</span><span class="mi">1</span><span class="n">认证方式</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="k">admin</span><span class="w"></span>
+<span class="n">switched</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="k">admin</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="k">system</span><span class="p">.</span><span class="n">users</span><span class="p">.</span><span class="n">find</span><span class="p">()</span><span class="w"></span>
+<span class="o">[</span><span class="n">...</span><span class="o">]</span><span class="w"></span>
+<span class="err">{</span><span class="w"> </span><span class="ss">&quot;_id&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;userdb.myuser&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;user&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;myuser&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;db&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;userdb&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;credentials&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="ss">&quot;SCRAM-SHA-1&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"></span>
+<span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="ss">&quot;iterationCount&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;salt&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;XXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;storedKey&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span>
+<span class="w"> </span><span class="ss">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;serverKey&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;XXXXXXXXXXXXXXXXXXXXXXXXXXX&quot;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w"> </span>
+<span class="w"> </span><span class="ss">&quot;roles&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n"> { &quot;role&quot; : &quot;dbOwner&quot;, &quot;db&quot; : &quot;userdb&quot; } </span><span class="o">]</span><span class="w"> </span><span class="err">}</span><span class="w"></span>
+
+<span class="n">解决方式就是删除刚刚创建的用户</span><span class="err">，</span><span class="n">重新重建即可</span><span class="err">：</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="k">use</span><span class="w"> </span><span class="n">userdb</span><span class="w"></span>
+<span class="n">switched</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">db</span><span class="w"> </span><span class="n">userdb</span><span class="w"></span>
+<span class="o">&gt;</span><span class="w"> </span><span class="n">db</span><span class="p">.</span><span class="n">dropUser</span><span class="p">(</span><span class="ss">&quot;myuser&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="k">true</span><span class="w"></span>
+<span class="o">&gt;</span><span class="n">db</span><span class="p">.</span><span class="n">createUser</span><span class="p">(</span><span class="err">{</span><span class="k">user</span><span class="err">:</span><span class="s1">&#39;myuser&#39;</span><span class="p">,</span><span class="nl">pwd</span><span class="p">:</span><span class="s1">&#39;123456&#39;</span><span class="p">,</span><span class="nl">roles</span><span class="p">:</span><span class="o">[</span><span class="n">{role:&#39;dbOwner&#39;,db:&#39;userdb&#39;}</span><span class="o">]</span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+<span class="n">然后关闭服务器</span><span class="err">，</span><span class="n">开启认证</span><span class="err">，</span><span class="n">重启服务器</span><span class="err">，</span><span class="n">用mongovue连接</span><span class="err">，</span><span class="n">一切OK</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="_1">集群认证</h2>
+<div class="codehilite"><pre><span></span>继<span class="nv">mongodb3</span>.<span class="mi">2</span>复制集和<span class="nv">shard</span>集群之后的用户认证登陆。
+<span class="mi">1</span>：关于<span class="nv">mongos</span>登录权限认证配置
+
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">keyfile</span>]$ <span class="nv">openssl</span> <span class="nv">rand</span> <span class="o">-</span><span class="nv">base64</span> <span class="mi">741</span> <span class="o">&gt;</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">keyfile</span><span class="o">/</span><span class="nv">zxl</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">keyfile</span>]$ <span class="nv">chmod</span> <span class="mi">600</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">keyfile</span><span class="o">/</span><span class="nv">zxl</span>
+<span class="mi">2</span>：把<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">keyfile</span><span class="o">/</span><span class="nv">zxl</span>文件拷贝到各个机器<span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">keyfile</span><span class="o">/</span>目录下即可
+切记属主和组以及文件权限<span class="mi">600</span>
+<span class="mi">3</span>：创建用户
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">config</span>]$ <span class="nv">mongo</span> <span class="o">--</span><span class="nv">port</span> <span class="mi">10005</span>
+<span class="nv">MongoDB</span> <span class="nv">shell</span> <span class="nv">version</span>: <span class="mi">3</span>.<span class="mi">2</span>.<span class="mi">3</span>
+<span class="nv">connecting</span> <span class="nv">to</span>: <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">test</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">use</span> <span class="nv">admin</span>
+<span class="nv">switched</span> <span class="nv">to</span> <span class="nv">db</span> <span class="nv">admin</span>
+<span class="nv">db</span>.<span class="nv">createUser</span><span class="ss">(</span>
+  {
+    <span class="nv">user</span>: <span class="s2">&quot;</span><span class="s">zxl</span><span class="s2">&quot;</span>,
+    <span class="nv">pwd</span>: <span class="s2">&quot;</span><span class="s">123</span><span class="s2">&quot;</span>,
+    <span class="nv">roles</span>: [ { <span class="nv">role</span>: <span class="s2">&quot;</span><span class="s">userAdminAnyDatabase</span><span class="s2">&quot;</span>, <span class="nv">db</span>: <span class="s2">&quot;</span><span class="s">admin</span><span class="s2">&quot;</span> } ]
+  }
+<span class="ss">)</span>
+<span class="nv">db</span>.<span class="nv">createUser</span><span class="ss">(</span> {
+    <span class="nv">user</span>: <span class="s2">&quot;</span><span class="s">zxl</span><span class="s2">&quot;</span>,
+    <span class="nv">pwd</span>: <span class="s2">&quot;</span><span class="s">123</span><span class="s2">&quot;</span>,
+    <span class="nv">roles</span>: [ { <span class="nv">role</span>: <span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span>, <span class="nv">db</span>: <span class="s2">&quot;</span><span class="s">admin</span><span class="s2">&quot;</span> } ]
+}<span class="ss">)</span><span class="c1">;</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">db</span>.<span class="nv">auth</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">zxl</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">123</span><span class="s1">&#39;</span><span class="ss">)</span>
+注：<span class="nv">userAdminAnyDatabase</span>：只在<span class="nv">admin</span>数据库中可用，赋予用户所有数据库的<span class="nv">userAdmin</span>权限，<span class="nv">root</span>：
+只在<span class="nv">admin</span>数据库中可用。超级账号，超级权限，其实 创建一个<span class="nv">userAdminAnyDatabase</span>角色就可以，然后可以创建<span class="nv">N</span>个用户角色。。。
+<span class="mi">4</span>：关闭三台机器上的<span class="nv">mongod</span>和<span class="nv">configsvr</span>以及<span class="nv">mongos</span>服务
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">keyfile</span>]$ <span class="nv">netstat</span> <span class="o">-</span><span class="nv">ntpl</span><span class="o">|</span><span class="nv">grep</span> <span class="nv">mongo</span><span class="o">|</span><span class="nv">awk</span> <span class="s1">&#39;</span><span class="s">{print $NF}</span><span class="s1">&#39;</span><span class="o">|</span><span class="nv">awk</span> <span class="o">-</span><span class="nv">F</span><span class="s1">&#39;</span><span class="s">/</span><span class="s1">&#39;</span> <span class="s1">&#39;</span><span class="s">{print $1}</span><span class="s1">&#39;</span><span class="o">|</span><span class="nv">xargs</span> <span class="nv">kill</span>
+<span class="mi">5</span>：修改三台机器上的<span class="nv">shard1</span>.<span class="nv">conf</span>、<span class="nv">shard2</span>.<span class="nv">conf</span>、<span class="nv">shard3</span>.<span class="nv">conf</span>、<span class="nv">configsvr</span>.<span class="nv">conf</span>、<span class="nv">mongos</span>.<span class="nv">conf</span>配置文件中的内容，
+分别去掉注释内容即可
+#<span class="nv">security</span>:
+#  <span class="nv">keyFile</span>: <span class="s2">&quot;</span><span class="s">/data/keyfile/zxl</span><span class="s2">&quot;</span>
+#  <span class="nv">clusterAuthMode</span>: <span class="s2">&quot;</span><span class="s">keyFile</span><span class="s2">&quot;</span>
+去掉注释
+<span class="nv">security</span>:
+  <span class="nv">keyFile</span>: <span class="s2">&quot;</span><span class="s">/data/keyfile/zxl</span><span class="s2">&quot;</span>
+  <span class="nv">clusterAuthMode</span>: <span class="s2">&quot;</span><span class="s">keyFile</span><span class="s2">&quot;</span>
+启动三台机器上的<span class="nv">shard1</span>、<span class="nv">shard2</span>、<span class="nv">shard3</span>以及<span class="nv">configsvr</span>和<span class="nv">mongos</span>节点
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="o">~</span>]$ <span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">shard1</span>.<span class="nv">conf</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="o">~</span>]$ <span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">shard2</span>.<span class="nv">conf</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="o">~</span>]$ <span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">shard3</span>.<span class="nv">conf</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">logs</span>]$ <span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">configsvr</span>.<span class="nv">conf</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">logs</span>]$ <span class="nv">mongos</span> <span class="o">-</span><span class="nv">f</span> <span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span><span class="o">/</span><span class="nv">mongos</span>.<span class="nv">conf</span>
+登录<span class="nv">mongos</span>
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">config</span>]$ <span class="nv">mongo</span> <span class="o">--</span><span class="nv">port</span> <span class="mi">10005</span>
+<span class="nv">MongoDB</span> <span class="nv">shell</span> <span class="nv">version</span>: <span class="mi">3</span>.<span class="mi">2</span>.<span class="mi">3</span>
+<span class="nv">connecting</span> <span class="nv">to</span>: <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">test</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">use</span> <span class="nv">admin</span>
+<span class="nv">switched</span> <span class="nv">to</span> <span class="nv">db</span> <span class="nv">admin</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">db</span>.<span class="nv">auth</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">zxl</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">123</span><span class="s1">&#39;</span><span class="ss">)</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">sh</span>.<span class="nv">enableSharding</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">av</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">//</span>启用<span class="nv">shard</span>分片
+{ <span class="s2">&quot;</span><span class="s">ok</span><span class="s2">&quot;</span> : <span class="mi">1</span> }
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">sh</span>.<span class="nv">shardCollection</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">av.xxoo</span><span class="s2">&quot;</span>,{<span class="nv">name</span>:<span class="mi">1</span>}<span class="ss">)</span><span class="o">//</span>设置集合的名字以及字段，默认自动建立索引，<span class="nv">av</span>库，<span class="nv">xxoo</span>集合
+{ <span class="s2">&quot;</span><span class="s">collectionsharded</span><span class="s2">&quot;</span> : <span class="s2">&quot;</span><span class="s">av.xxoo</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">ok</span><span class="s2">&quot;</span> : <span class="mi">1</span> }
+
+
+总结内容如下：
+系统时间和防火墙，切记
+#<span class="nv">security</span>.<span class="nv">keyFile</span>： 格式与<span class="nv">security</span>.<span class="nv">authorization</span>相同，功能与<span class="o">--</span><span class="nv">keyFile</span>相同。
+<span class="o">--</span><span class="nv">keyFile</span> <span class="o">&lt;</span><span class="nv">file</span><span class="o">&gt;</span>: 主要用于分片集群与副本集相互之间的授权使用，在单机情况下只要用到<span class="nv">auth</span>，
+如果是在集群<span class="ss">(</span>分片<span class="o">+</span>副本集<span class="ss">)</span>环境下，就必须要用到该参数；
+因为之前我就创建了一个<span class="nv">userAdminAnyDatabase</span>角色，所以创建一个<span class="nv">root</span>角色的账户。如下
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">config</span>]$ <span class="nv">mongo</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">75</span>.<span class="mi">128</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">admin</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">zxl</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">123</span> <span class="o">--</span><span class="nv">authenticationDatabase</span> <span class="nv">admin</span>
+<span class="nv">MongoDB</span> <span class="nv">shell</span> <span class="nv">version</span>: <span class="mi">3</span>.<span class="mi">2</span>.<span class="mi">3</span>
+<span class="nv">connecting</span> <span class="nv">to</span>: <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">75</span>.<span class="mi">128</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">admin</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="k">show</span> <span class="nv">dbs</span>
+<span class="nv">ad</span>      <span class="mi">0</span>.<span class="mi">000</span><span class="nv">GB</span>
+<span class="nv">admin</span>   <span class="mi">0</span>.<span class="mi">000</span><span class="nv">GB</span>
+<span class="nv">config</span>  <span class="mi">0</span>.<span class="mi">001</span><span class="nv">GB</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">db</span>.<span class="nv">createUser</span><span class="ss">(</span>{<span class="nv">user</span>: <span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span>,<span class="nv">pwd</span>: <span class="s2">&quot;</span><span class="s">123456</span><span class="s2">&quot;</span>,<span class="nv">roles</span>: [ <span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span> ]}<span class="ss">)</span>
+<span class="nv">Successfully</span> <span class="nv">added</span> <span class="nv">user</span>: { <span class="s2">&quot;</span><span class="s">user</span><span class="s2">&quot;</span> : <span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span>, <span class="s2">&quot;</span><span class="s">roles</span><span class="s2">&quot;</span> : [ <span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span> ] }
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="nv">db</span>.<span class="nv">auth</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">root</span><span class="s2">&quot;</span>,<span class="s2">&quot;</span><span class="s">123456</span><span class="s2">&quot;</span><span class="ss">)</span>
+<span class="nv">mongos</span><span class="o">&gt;</span>
+<span class="nv">bye</span>
+认证登陆
+[<span class="nv">mongodb</span>@<span class="nv">node1</span> <span class="nv">config</span>]$ <span class="nv">mongo</span> <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">75</span>.<span class="mi">128</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">admin</span> <span class="o">-</span><span class="nv">u</span> <span class="nv">root</span> <span class="o">-</span><span class="nv">p</span> <span class="mi">123456</span> <span class="o">--</span><span class="nv">authenticationDatabase</span>
+<span class="nv">MongoDB</span> <span class="nv">shell</span> <span class="nv">version</span>: <span class="mi">3</span>.<span class="mi">2</span>.<span class="mi">3</span>
+<span class="nv">connecting</span> <span class="nv">to</span>: <span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">75</span>.<span class="mi">128</span>:<span class="mi">10005</span><span class="o">/</span><span class="nv">admin</span>
+<span class="nv">mongos</span><span class="o">&gt;</span> <span class="k">show</span> <span class="nv">dbs</span>
+<span class="nv">ad</span>      <span class="mi">0</span>.<span class="mi">000</span><span class="nv">GB</span>
+<span class="nv">admin</span>   <span class="mi">0</span>.<span class="mi">000</span><span class="nv">GB</span>
+<span class="nv">av</span>      <span class="mi">0</span>.<span class="mi">000</span><span class="nv">GB</span>
+<span class="nv">config</span>  <span class="mi">0</span>.<span class="mi">001</span><span class="nv">GB</span>
+</pre></div>
+
+
+<h2 id="_2">集群安装</h2>
+<div class="codehilite"><pre><span></span><span class="nv">https</span>:<span class="o">//</span><span class="nv">www</span>.<span class="nv">mongodb</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">download</span><span class="o">-</span><span class="nv">center</span>#<span class="nv">community</span>
+
+下载后解压 三台服务器都配置
+
+<span class="nv">mkdir</span> <span class="nv">conf</span> <span class="nv">data</span> <span class="nv">log</span> <span class="nv">pid</span>
+
+<span class="nv">cat</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">shard11</span>.<span class="nv">conf</span>
+<span class="nv">dbpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">shard11</span>
+<span class="nv">logpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">shard11</span>.<span class="nv">log</span>
+<span class="nv">pidfilepath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">pid</span><span class="o">/</span><span class="nv">shard11</span>.<span class="nv">pid</span>
+<span class="nv">directoryperdb</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">logappend</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">replSet</span><span class="o">=</span><span class="nv">shard1</span>
+<span class="nv">port</span><span class="o">=</span><span class="mi">10011</span>
+<span class="nv">fork</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">shardsvr</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">journal</span><span class="o">=</span><span class="nv">true</span>
+
+
+<span class="nv">cat</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">shard21</span>.<span class="nv">conf</span>
+<span class="nv">dbpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">shard21</span>
+<span class="nv">logpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">shard21</span>.<span class="nv">log</span>
+<span class="nv">pidfilepath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">pid</span><span class="o">/</span><span class="nv">shard21</span>.<span class="nv">pid</span>
+<span class="nv">directoryperdb</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">logappend</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">replSet</span><span class="o">=</span><span class="nv">shard2</span>
+<span class="nv">port</span><span class="o">=</span><span class="mi">10021</span>
+<span class="nv">fork</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">shardsvr</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">journal</span><span class="o">=</span><span class="nv">true</span>
+
+<span class="nv">cat</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">conf</span>
+<span class="nv">dbpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">data</span><span class="o">/</span><span class="nv">config</span>
+<span class="nv">logpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">log</span>
+<span class="nv">pidfilepath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">pid</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">pid</span>
+<span class="nv">directoryperdb</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">logappend</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">port</span><span class="o">=</span><span class="mi">10031</span>
+<span class="nv">fork</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">configsvr</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">replSet</span><span class="o">=</span><span class="nv">configRS</span>
+<span class="nv">journal</span><span class="o">=</span><span class="nv">true</span>
+
+<span class="nv">cat</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">route</span>.<span class="nv">conf</span>
+<span class="nv">configdb</span><span class="o">=</span><span class="nv">configRS</span><span class="o">/</span><span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">5</span>:<span class="mi">10031</span>,<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">6</span>:<span class="mi">10031</span>,<span class="mi">192</span>.<span class="mi">168</span>.<span class="mi">1</span>.<span class="mi">2</span>:<span class="mi">10031</span>
+<span class="nv">pidfilepath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">pid</span><span class="o">/</span><span class="nv">route</span>.<span class="nv">pid</span>
+<span class="nv">port</span><span class="o">=</span><span class="mi">10040</span>
+<span class="nv">logpath</span><span class="o">=/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">local</span><span class="o">/</span><span class="nv">mongodb</span><span class="o">/</span><span class="nv">log</span><span class="o">/</span><span class="nv">route</span>.<span class="nv">log</span>
+<span class="nv">logappend</span><span class="o">=</span><span class="nv">true</span>
+<span class="nv">fork</span><span class="o">=</span><span class="nv">true</span>
+
+在每一台服务器分别启动配置服务器
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">config</span>.<span class="nv">conf</span>
+
+连接到任意一台配置服务器上
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongo</span> <span class="o">--</span><span class="nv">port</span> <span class="mi">10031</span> <span class="o">--</span><span class="nv">host</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+创建配置服务器副本集    <span class="nv">host</span>为其他服务器的 <span class="nv">config</span>角色
+<span class="nv">rs</span>.<span class="nv">initiate</span><span class="ss">(</span>{<span class="nv">_id</span>:<span class="s2">&quot;</span><span class="s">configRS</span><span class="s2">&quot;</span>,<span class="nv">configsvr</span>:<span class="nv">true</span>,<span class="nv">members</span>:[{<span class="nv">_id</span>:<span class="mi">0</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.5:10031</span><span class="s2">&quot;</span>},
+{<span class="nv">_id</span>:<span class="mi">1</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.6:10031</span><span class="s2">&quot;</span>},{<span class="nv">_id</span>:<span class="mi">2</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.2:10031</span><span class="s2">&quot;</span>}]}<span class="ss">)</span>
+
+在每一台服务器分别启动分片及副本集   可以有多个<span class="nv">shard</span>分片
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">shard11</span>.<span class="nv">conf</span> 
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongod</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">shard21</span>.<span class="nv">conf</span>
+
+连接任意一台分片服务器
+<span class="nv">shard1</span>
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongo</span> <span class="o">--</span><span class="nv">port</span> <span class="mi">10011</span> <span class="o">--</span><span class="nv">host</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+运行  <span class="nv">rs</span>.<span class="nv">initiate</span><span class="ss">(</span>{<span class="nv">_id</span>:<span class="s2">&quot;</span><span class="s">shard1</span><span class="s2">&quot;</span>,<span class="nv">members</span>:[{<span class="nv">_id</span>:<span class="mi">0</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.5:10011</span><span class="s2">&quot;</span>},{<span class="nv">_id</span>:<span class="mi">1</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.6:10011</span><span class="s2">&quot;</span>},
+{<span class="nv">_id</span>:<span class="mi">2</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.2:10011</span><span class="s2">&quot;</span>}]}<span class="ss">)</span>    <span class="nv">arbiterOnly</span>:<span class="nv">true</span> 参数为角色是仲裁节点
+
+<span class="nv">shard2</span>
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongo</span> <span class="o">--</span><span class="nv">port</span> <span class="mi">10021</span> <span class="o">--</span><span class="nv">host</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span>
+运行 <span class="nv">rs</span>.<span class="nv">initiate</span><span class="ss">(</span>{<span class="nv">_id</span>:<span class="s2">&quot;</span><span class="s">shard2</span><span class="s2">&quot;</span>,<span class="nv">members</span>:[{<span class="nv">_id</span>:<span class="mi">0</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.5:10021</span><span class="s2">&quot;</span>},{<span class="nv">_id</span>:<span class="mi">1</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.6:10021</span><span class="s2">&quot;</span>},
+{<span class="nv">_id</span>:<span class="mi">2</span>,<span class="nv">host</span>:<span class="s2">&quot;</span><span class="s">192.168.1.2:10021</span><span class="s2">&quot;</span>}]}<span class="ss">)</span>
+
+
+在每一台服务器分别启动路由服务 
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongos</span> <span class="o">-</span><span class="nv">f</span> <span class="nv">conf</span><span class="o">/</span><span class="nv">route</span>.<span class="nv">conf</span>
+.<span class="o">/</span><span class="nv">bin</span><span class="o">/</span><span class="nv">mongos</span>  <span class="o">--</span><span class="nv">host</span> <span class="mi">127</span>.<span class="mi">0</span>.<span class="mi">0</span>.<span class="mi">1</span><span class="o">--</span><span class="nv">port</span> <span class="mi">10040</span>
+<span class="nv">use</span> <span class="nv">admin</span>
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span>{<span class="nv">addshard</span>:<span class="s2">&quot;</span><span class="s">shard1/192.168.1.5:10011,192.168.1.6:10011,192.168.1.2:10011</span><span class="s2">&quot;</span>}<span class="ss">)</span>
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span>{<span class="nv">addshard</span>:<span class="s2">&quot;</span><span class="s">shard2/192.168.1.5:10021,192.168.1.6:10021,192.168.1.2:10021</span><span class="s2">&quot;</span>}<span class="ss">)</span>
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span>{ <span class="nv">listshards</span>:<span class="mi">1</span> }<span class="ss">)</span>  查看配置是否生效<span class="ss">(</span>仲裁不被列出 <span class="ss">)</span>
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span>{<span class="nv">enablesharding</span>:<span class="s2">&quot;</span><span class="s">friends</span><span class="s2">&quot;</span>}<span class="ss">)</span><span class="c1">;   # friends 库开启shard</span>
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span> { <span class="nv">shardcollection</span> : <span class="s2">&quot;</span><span class="s">friends.user</span><span class="s2">&quot;</span>,<span class="nv">key</span> : {<span class="nv">id</span>: <span class="mi">1</span>},<span class="nv">unique</span> : <span class="nv">true</span> } <span class="ss">)</span>  # <span class="nv">user</span> 表来做分片,
+片键为 <span class="nv">id</span> 且唯一  <span class="sc">#1</span>个分片 保存了<span class="mi">1</span>条，另一个分片保存了剩下的所有记录
+<span class="nv">db</span>.<span class="nv">runCommand</span><span class="ss">(</span> { <span class="nv">shardcollection</span> : <span class="s2">&quot;</span><span class="s">friends.user</span><span class="s2">&quot;</span>,<span class="nv">key</span> : {<span class="nv">id</span>: <span class="s2">&quot;</span><span class="s">hashed</span><span class="s2">&quot;</span>} } <span class="ss">)</span>        #保证数据分布均衡
+
+插入数据测试
+<span class="nv">use</span> <span class="nv">runoob</span>  建立库
+<span class="nv">db</span>.<span class="nv">runoob</span>.<span class="nv">insert</span><span class="ss">(</span>{<span class="s2">&quot;</span><span class="s">name</span><span class="s2">&quot;</span>:<span class="s2">&quot;</span><span class="s">菜鸟教程</span><span class="s2">&quot;</span>}<span class="ss">)</span>
+<span class="k">show</span> <span class="nv">dbs</span>
+<span class="nv">db</span>.<span class="nv">runoob</span>.<span class="nv">find</span><span class="ss">()</span><span class="c1">;  列出数据</span>
+
+<span class="nv">rs</span>.<span class="nv">status</span><span class="ss">()</span>  <span class="nv">shard</span> <span class="nv">config</span> 执行
+<span class="nv">db</span>.<span class="nv">status</span><span class="ss">()</span>  <span class="nv">route</span>执行
+</pre></div>
+
+
+<h2 id="mongo">mongo命令</h2>
+<div class="codehilite"><pre><span></span><span class="err">以下实例我们创建了数据库</span> <span class="n">runoob</span><span class="p">:</span>
+<span class="o">&gt;</span> <span class="n">use</span> <span class="n">runoob</span>
+<span class="n">switched</span> <span class="n">to</span> <span class="n">db</span> <span class="n">runoob</span>
+<span class="o">&gt;</span> <span class="n">db</span>
+<span class="n">runoob</span>
+<span class="o">&gt;</span>
+<span class="err">如果你想查看所有数据库，可以使用</span> <span class="n">show</span> <span class="n">dbs</span> <span class="err">命令：</span>
+<span class="o">&gt;</span> <span class="n">show</span> <span class="n">dbs</span>
+<span class="n">local</span>  <span class="mf">0.078</span><span class="n">GB</span>
+<span class="n">test</span>   <span class="mf">0.078</span><span class="n">GB</span>
+<span class="o">&gt;</span>
+<span class="err">可以看到，我们刚创建的数据库</span> <span class="n">runoob</span> <span class="err">并不在数据库的列表中，</span> <span class="err">要显示它，我们需要向</span> <span class="n">runoob</span> <span class="err">数据库插入一些数据。</span>
+<span class="o">&gt;</span> <span class="n">db</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">insert</span><span class="p">({</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;菜鸟教程&quot;</span><span class="p">})</span>       <span class="n">collection</span><span class="err">集合插入数据</span>
+<span class="n">WriteResult</span><span class="p">({</span> <span class="s2">&quot;nInserted&quot;</span> <span class="p">:</span> <span class="mi">1</span> <span class="p">})</span>
+<span class="o">&gt;</span> <span class="n">show</span> <span class="n">dbs</span>
+<span class="n">local</span>   <span class="mf">0.078</span><span class="n">GB</span>
+<span class="n">runoob</span>  <span class="mf">0.078</span><span class="n">GB</span>
+<span class="n">test</span>    <span class="mf">0.078</span><span class="n">GB</span>
+<span class="o">&gt;</span>
+<span class="n">MongoDB</span> <span class="err">中默认的数据库为</span> <span class="n">test</span><span class="err">，如果你没有创建新的数据库，集合将存放在</span> <span class="n">test</span> <span class="err">数据库中。</span>
+
+
+<span class="err">导入导出</span>
+<span class="n">dos2unix</span> <span class="n">e_client_order</span><span class="o">.</span><span class="n">json</span>
+<span class="n">sed</span> <span class="s1">&#39;s/},/}</span><span class="se">\n</span><span class="s1">/g&#39;</span> <span class="n">e_client_order</span><span class="o">.</span><span class="n">json</span>  <span class="o">&gt;</span> <span class="mf">1.j</span><span class="n">son</span>
+<span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">mongoimport</span> <span class="o">--</span><span class="n">db</span> <span class="n">weituofang</span> <span class="o">--</span><span class="n">collection</span> <span class="n">lecture</span> <span class="o">--</span><span class="nb">file</span> <span class="mf">1.j</span><span class="n">son</span> <span class="o">--</span><span class="n">port</span> <span class="mi">10040</span>
+
+
+<span class="o">./</span><span class="nb">bin</span><span class="o">/</span><span class="n">mongoexport</span> <span class="o">-</span><span class="n">d</span> <span class="n">weituofang</span> <span class="o">-</span><span class="n">c</span> <span class="n">yinghui1</span> <span class="o">-</span><span class="n">o</span> <span class="n">yinghui1</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">port</span> <span class="mi">10040</span>
+</pre></div>
+
+
+<h2 id="shard">缩减shard集群</h2>
+<div class="codehilite"><pre><span></span><span class="n">MongoDB中缩减Shard集群</span><span class="p">(</span><span class="n">删除一个Shard</span><span class="p">)</span><span class="c1">--删除一个分片</span>
+<span class="n">关键字</span><span class="err">：</span><span class="n">MongoDB中缩减Shard集群</span><span class="p">(</span><span class="n">删除一个Shard</span><span class="p">)</span><span class="c1">--删除一个分片</span>
+
+<span class="n">对MongoDB的Shard集群来说</span><span class="err">，</span><span class="n">添加一个分片很简单</span><span class="err">，</span><span class="n">AddShard就可以了</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">但是缩减集群</span><span class="p">(</span><span class="n">删除分片</span><span class="p">)</span><span class="n">这种一般很少用到</span><span class="err">。</span><span class="n">由于某服务器挂了</span><span class="err">，</span><span class="n">所以想送修之前必须把它上面的数据自动迁移到其他Shard上</span><span class="err">。</span><span class="w"></span>
+
+<span class="n">以下内容翻译自</span><span class="err">：</span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">mongodb</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">manual</span><span class="o">/</span><span class="n">tutorial</span><span class="o">/</span><span class="n">remove</span><span class="o">-</span><span class="n">shards</span><span class="o">-</span><span class="k">from</span><span class="o">-</span><span class="n">cluster</span><span class="o">/</span><span class="w"></span>
+
+<span class="mi">1</span><span class="err">、</span><span class="n">执行RemoveShard命令</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">runCommand</span><span class="p">(</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">removeshard</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;your_shard_name&quot;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="err">{</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;draining started successfully&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">state</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;started&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">shard</span><span class="w"> </span><span class="err">:</span><span class="ss">&quot;mongodb0&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="w"> </span>
+<span class="err">“</span><span class="n">注意</span><span class="err">：</span><span class="n">该命令至少执行两次才能成功删除</span><span class="err">，</span><span class="n">执行到state为completed才真正删除</span><span class="err">，</span><span class="n">否则就是没用删除成功</span><span class="err">，</span><span class="w"></span>
+<span class="n">该分片处于</span><span class="ss">&quot;draining&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">true状态</span><span class="err">，</span><span class="n">该状态下不但该分片没用删除成功</span><span class="err">，</span><span class="n">而且还影响接下来删除其他分片操作</span><span class="err">，</span><span class="w"></span>
+<span class="n">遇到该状态再执行一次removeshard即可</span><span class="err">，</span><span class="n">最好就是删除分片时一直重复执行删除命令</span><span class="err">，</span><span class="n">直到state为completed</span><span class="err">；</span><span class="w"></span>
+
+<span class="n">还有一个需要注意的地方就是</span><span class="err">：</span><span class="n">被成功删除的分片如果想要再加入集群时</span><span class="err">，</span><span class="n">必须将data数据目录清理干净才可以再加入集群</span><span class="err">，</span><span class="w"></span>
+<span class="n">否则即使能加入成功也不会存储数据</span><span class="err">，</span><span class="n">集合都不会被创建</span><span class="w"></span>
+
+<span class="n">另外</span><span class="err">：</span><span class="n">在删除分片的时有可能整个过程出现无限</span><span class="ss">&quot;draining&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="n">true状态</span><span class="err">，</span><span class="n">等多久还是这样</span><span class="err">，</span><span class="n">而且分片上面的块一个</span><span class="w"></span>
+<span class="n">都没有移动到别的分片</span><span class="err">，</span><span class="n">解决办法是</span><span class="err">：</span><span class="n">在config的config数据库的shard集合中找到该分片的信息</span><span class="err">，</span><span class="n">并将draining字段</span><span class="w"></span>
+<span class="n">由True改为False</span><span class="p">,</span><span class="n">再继续试着删除操作</span><span class="err">”</span><span class="w"></span>
+
+<span class="n">上面这句会立即返回</span><span class="err">，</span><span class="n">实际在后台执行</span><span class="err">。</span><span class="w"></span>
+
+<span class="mi">2</span><span class="err">、</span><span class="n">查看迁移状态</span><span class="w"></span>
+<span class="n">我们可以反复执行上面语句</span><span class="err">，</span><span class="n">查看执行结果</span><span class="err">。</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">runCommand</span><span class="p">(</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">removeshard</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;your_shard_name&quot;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">msg</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;draining ongoing&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
+<span class="k">state</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;ongoing&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nl">remaining</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">chunks</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w"> </span><span class="n">dbs</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="p">,</span><span class="w"> </span><span class="nl">ok</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="w"></span>
+<span class="n">从上面可以看到</span><span class="err">，</span><span class="n">正在迁移</span><span class="err">，</span><span class="n">还剩下42块没迁移完</span><span class="err">。</span><span class="w"></span>
+<span class="n">当remain为0之后</span><span class="err">，</span><span class="n">这一步就结束了</span><span class="err">。</span><span class="w"></span>
+
+<span class="mi">3</span><span class="err">、</span><span class="n">移出非Shard数据</span><span class="err">（</span><span class="n">如果开始就知道是primary可以直接执行</span><span class="w"> </span><span class="n">步骤3和4即可</span><span class="err">，</span><span class="mi">1</span><span class="n">和2不需要执行</span><span class="err">）</span><span class="w"></span>
+<span class="n">如果你要删除的Shard分片恰好是primary</span><span class="err">，</span><span class="n">那么执行这一步</span><span class="err">，</span><span class="n">否则请跳过</span><span class="err">！</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">runCommand</span><span class="p">(</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">movePrimary</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;数据库名称&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">to</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;分片名称&quot;</span><span class="w"> </span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+
+<span class="n">这次就不是立即返回了</span><span class="err">，</span><span class="n">需要很久</span><span class="err">，</span><span class="n">然后会返回如下</span><span class="err">：</span><span class="w"></span>
+<span class="err">{</span><span class="w"> </span><span class="ss">&quot;primary&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;mongodb1&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;ok&quot;</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="w"></span>
+
+<span class="mi">4</span><span class="err">、</span><span class="n">最后的清理</span><span class="w"></span>
+<span class="n">上面步骤都完成后</span><span class="err">，</span><span class="n">还需要再执行一次RemoveShard</span><span class="err">，</span><span class="n">清理残余数据</span><span class="err">。</span><span class="w"></span>
+<span class="n">db</span><span class="p">.</span><span class="n">runCommand</span><span class="p">(</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="nl">removeshard</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;mongodb0&quot;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="n">执行成功后</span><span class="err">，</span><span class="n">会如下结果</span><span class="err">：</span><span class="w"></span>
+<span class="err">{</span><span class="w"> </span><span class="nl">msg</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;remove shard completed succesfully&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nl">stage</span><span class="p">:</span><span class="w"> </span><span class="ss">&quot;completed&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">host</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;mongodb0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">}</span><span class="w"></span>
+
+<span class="n">显示completed后</span><span class="err">，</span><span class="n">就可以安心的关闭mongod的进程了</span><span class="err">。</span><span class="w"></span>
+<span class="n">来源</span><span class="err">：</span><span class="w"> </span><span class="nl">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="p">.</span><span class="n">myexception</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="k">go</span><span class="o">/</span><span class="mf">1862417.</span><span class="n">html</span><span class="w"></span>
+</pre></div>
+
+
+<h2 id="webmongo">web管理mongo</h2>
+<div class="codehilite"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">iwind</span><span class="o">/</span><span class="n">rockmongo</span>
+
+<span class="err">安装</span><span class="n">lamp</span>
+<span class="err">和</span>  <span class="n">yum</span> <span class="n">install</span> <span class="n">php</span><span class="o">-</span><span class="n">pecl</span><span class="o">-</span><span class="n">mongo</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">ww</span><span class="o">/</span><span class="n">html</span>
+<span class="err">下载解压</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">iwind</span><span class="o">/</span><span class="n">rockmongo</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">master</span><span class="p">.</span><span class="n">zip</span>
+
+<span class="n">vim</span> <span class="n">rockmongo</span><span class="o">-</span><span class="n">master</span><span class="o">/</span><span class="n">config</span><span class="p">.</span><span class="n">php</span>  <span class="err">修改连接的</span><span class="n">mongo</span>
+
+<span class="err">访问</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ip</span><span class="o">/</span><span class="n">rockmongo</span><span class="o">-</span><span class="n">master</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">php</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../redis/" title="redis" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                redis
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../hadoop/" title="hadoop" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                hadoop
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
